@@ -42,8 +42,8 @@ Der Workflow braucht einen Anthropic-API-Key. Einmalig anlegen:
 - Name: `ANTHROPIC_API_KEY`
 - Value: dein Anthropic-API-Key
 
-Modellwahl: Standard ist `claude-opus-5`. Für geringere Kosten die `MODEL`-Zeile im Workflow
-einkommentieren (z. B. `claude-haiku-4-5`).
+Modellwahl: Der Workflow nutzt `claude-haiku-4-5` (günstig, für die Zusammenfassung ausreichend).
+Ändern über die `MODEL:`-Zeile im Workflow bzw. das Standardmodell in `scripts/update_studies.py`.
 
 ## Einmalige Einrichtung
 

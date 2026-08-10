@@ -24,7 +24,7 @@ import requests
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 TERM = '"health services research"'
-MODEL = os.environ.get("MODEL", "claude-opus-5")  # z. B. "claude-haiku-4-5" fuer geringere Kosten
+MODEL = os.environ.get("MODEL", "claude-haiku-4-5")  # Standard: guenstig; via MODEL-env aenderbar
 INDEX = "index.html"
 
 START = "// === STUDIES-BLOCK-START (wird woechentlich vom Cloud-Agenten ersetzt) ==="
@@ -107,11 +107,13 @@ def fetch_pubmed() -> str:
 
 def pick_studies(abstracts: str) -> list[dict]:
     client = anthropic.Anthropic()
+    # Nur strukturierte Ausgabe erzwingen (kein effort/thinking), damit es auch
+    # mit guenstigen Modellen wie claude-haiku-4-5 laeuft (die effort/thinking
+    # nicht unterstuetzen).
     resp = client.messages.create(
         model=MODEL,
         max_tokens=8000,
-        thinking={"type": "disabled"},
-        output_config={"effort": "low", "format": {"type": "json_schema", "schema": SCHEMA}},
+        output_config={"format": {"type": "json_schema", "schema": SCHEMA}},
         system=SYSTEM,
         messages=[{"role": "user", "content": USER_TEMPLATE.format(abstracts=abstracts)}],
     )
