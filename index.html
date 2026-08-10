@@ -230,6 +230,19 @@
   .foot-inner strong{ color:var(--ink-soft); font-weight:600; }
   .foot-inner a{ color:var(--brand); text-decoration:none; }
   .foot-inner a:hover{ text-decoration:underline; }
+  .attrib{ color:var(--ink-soft); font-weight:600; margin-top:4px; }
+  .legal{ display:grid; gap:8px; margin-top:2px; }
+  .legal details{ border:1px solid var(--line); border-radius:9px; background:var(--card); overflow:hidden; }
+  .legal summary{ cursor:pointer; padding:10px 13px; font-weight:600; color:var(--ink-soft); font-size:13px; list-style:none; }
+  .legal summary::-webkit-details-marker{ display:none; }
+  .legal summary::before{ content:"\25B8\00a0"; color:var(--ink-faint); }
+  .legal details[open] summary::before{ content:"\25BE\00a0"; }
+  .legal details[open] summary{ border-bottom:1px solid var(--line); }
+  .legal .legal-body{ padding:10px 14px 14px; font-size:12px; line-height:1.55; color:var(--ink-soft); }
+  .legal .legal-body h4{ margin:11px 0 2px; font-size:12px; color:var(--ink); font-weight:700; }
+  .legal .legal-body h4:first-child{ margin-top:0; }
+  .legal .legal-body p{ margin:3px 0; }
+  .legal .legal-body a{ color:var(--brand); word-break:break-word; }
 
   @media (max-width:560px){
     .masthead-inner{ padding:26px 0 22px; }
@@ -288,7 +301,42 @@
     <div><strong>Hinweis zu Lizenzen.</strong> Mit <span style="color:var(--accent)">Lizenz</span> markierte Quellen (z. B. Web of Science, Scopus, Embase, CINAHL) sind kostenpflichtig — der Zugang läuft meist über Ihre Bibliothek/Institution. Der Link führt zur Startseite bzw. zum institutionellen Login.</div>
     <div><strong>Portal statt Live-Suche.</strong> Einige Angebote (LIVIVO, DRKS, GBE-Bund, Fachinstitute) nutzen eine App-Oberfläche ohne direkte Such-URL oder sind Themenportale — dort ist der Suchbegriff nach dem Öffnen einzugeben.</div>
     <div><strong>Vollständigkeit.</strong> Keine Einzelseite kann sämtliche Artikel „aller Datenbanken" enthalten — das verhindern Lizenz- und Technikgrenzen. Dieses Portal bündelt stattdessen die maßgeblichen Suchen, sodass eine Recherche systematisch über alle relevanten Quellen laufen kann.</div>
-    <div class="mono" style="color:var(--ink-faint); font-size:12px; margin-top:4px;">Zusammengestellt für die Recherche zur Versorgungsforschung · Stand 2026</div>
+    <div class="attrib">Ein Angebot von „Monitor Versorgungsforschung" · eRelation AG – Content in Health</div>
+
+    <div class="legal">
+      <details>
+        <summary>Impressum</summary>
+        <div class="legal-body">
+          <h4>Angaben gemäß § 5 DDG und § 18 Abs. 2 MStV</h4>
+          <p>eRelation AG – Content in Health<br>Johannes-von-Hanstein-Str. 2<br>53115 Bonn, Deutschland</p>
+          <p>Vertreten durch den Vorstand: Peter Stegmaier (Vorsitzender)</p>
+          <p>Telefon: +49 228 76 36 80-30<br>Fax: +49 228 76 36 80-01<br>E-Mail: info@m-vf.de</p>
+          <p>Registergericht: Amtsgericht Bonn · Registernummer: HRB 9392</p>
+          <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Peter Stegmaier (Anschrift wie oben, stegmaier@m-vf.de)</p>
+          <p>Herausgeber: Prof. Dr. Reinhold Roski · Chefredaktion: Peter Stegmaier</p>
+          <p>Dieses Rechercheportal ist ein Angebot von „Monitor Versorgungsforschung".</p>
+        </div>
+      </details>
+      <details>
+        <summary>Datenschutzhinweise</summary>
+        <div class="legal-body">
+          <h4>1. Verantwortlicher</h4>
+          <p>eRelation AG – Content in Health, vertreten durch Peter Stegmaier, Johannes-von-Hanstein-Str. 2, 53115 Bonn. Kontakt siehe Impressum.</p>
+          <h4>2. Charakter dieses Angebots</h4>
+          <p>Dieses Portal ist eine statische Informationsseite. Es setzt keine Cookies, nutzt keine Analyse- oder Tracking-Dienste, versendet keinen Newsletter und bietet keine Eingabeformulare. Personenbezogene Daten der Nutzerinnen und Nutzer werden durch das Portal selbst nicht erhoben oder gespeichert.</p>
+          <h4>3. Hosting (GitHub Pages)</h4>
+          <p>Die Auslieferung erfolgt über GitHub Pages (GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Dabei verarbeitet GitHub technisch notwendige Zugriffsdaten (u. a. IP-Adresse, Datum und Uhrzeit, angeforderte Datei, Browsertyp) in Server-Logdateien zum sicheren Betrieb. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Näheres im <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>. Die Übermittlung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln.</p>
+          <h4>4. Externe Links</h4>
+          <p>Das Portal verlinkt auf externe Datenbanken, Studien und Institutionen (z. B. PubMed, Cochrane, LIVIVO). Mit dem Anklicken verlassen Sie dieses Angebot; die aufgerufenen Anbieter erhalten Ihre IP-Adresse und ggf. weitere Daten und verarbeiten diese nach ihren eigenen Bestimmungen. Hierfür sind die jeweiligen Anbieter verantwortlich.</p>
+          <h4>5. Ihre Rechte</h4>
+          <p>Sie haben das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21 DSGVO) sowie das Recht auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO). Zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW).</p>
+          <h4>6. Stand</h4>
+          <p>Stand: August 2026.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="mono" style="color:var(--ink-faint); font-size:12px; margin-top:4px;">Zusammengestellt für die Recherche zur Versorgungsforschung · Ein Angebot von Monitor Versorgungsforschung · 2026</div>
   </div>
 </footer>
 
