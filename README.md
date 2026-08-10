@@ -17,7 +17,42 @@ https://<DEIN-GITHUB-NAME>.github.io/versorgungsforschung-portal/
 
 Diese URL ist stabil und ändert sich nicht.
 
-## Automatische tägliche Aktualisierung (GitHub Actions)
+## Lokales Update (Windows, empfohlen)
+
+`scripts/update-studies.ps1` erledigt alles auf dem eigenen Rechner — keine GitHub Actions,
+kein Repo-Secret, kein Python nötig (nur Windows PowerShell + git):
+
+1. PubMed abrufen (E-utilities, nach Datum),
+2. per Claude-API 6 Studien auswählen und auf Deutsch zusammenfassen,
+3. Marker-Block in `index.html` ersetzen (inkl. Zeitstempel „Zuletzt aktualisiert"),
+4. committen und pushen — GitHub Pages veröffentlicht automatisch.
+
+**Einmalig:** Anthropic-API-Key als Umgebungsvariable hinterlegen (PowerShell, dauerhaft):
+
+```powershell
+[Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY','<DEIN-KEY>','User')
+```
+
+Danach PowerShell neu öffnen. **Ausführen:** `scripts\Studien-aktualisieren.cmd` doppelklicken, oder:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\update-studies.ps1
+```
+
+Modell: Standard `claude-haiku-4-5`; über die Umgebungsvariable `MODEL` änderbar.
+
+**Täglich automatisch (Aufgabenplanung):**
+
+```powershell
+$exe = "powershell.exe"
+$arg = '-NoProfile -ExecutionPolicy Bypass -File "<REPO-PFAD>\scripts\update-studies.ps1"'
+schtasks /Create /TN "VF-Portal Studien-Update" /TR "$exe $arg" /SC DAILY /ST 08:00 /F
+```
+
+Bei Fehlern (PubMed nicht erreichbar, API-Fehler, Marker fehlt) bricht das Skript ab und
+lässt `index.html` unverändert — es entsteht kein kaputter Commit.
+
+## Alternative: tägliche Aktualisierung per GitHub Actions
 
 Der Workflow `.github/workflows/update-studies.yml` läuft **täglich (06:00 UTC)** — und kann
 über **Actions → „Studien-Update (täglich)" → Run workflow** jederzeit manuell gestartet werden.
