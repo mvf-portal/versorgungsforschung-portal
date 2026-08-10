@@ -289,7 +289,7 @@
   <aside class="studies">
     <div class="studies-head">
       <div class="studies-title"><span class="dot"></span>Neueste Studien &amp; Ergebnisse</div>
-      <div class="studies-sub">Quelle: <b>PubMed</b>, nach Datum sortiert · jede Studie mit deutscher Zusammenfassung · <b id="snapDate">Momentaufnahme</b></div>
+      <div class="studies-sub">Quelle: <b>PubMed</b>, nach Datum sortiert · jede Studie mit deutscher Zusammenfassung · Zuletzt aktualisiert: <b id="snapDate">Momentaufnahme</b></div>
     </div>
     <div class="studies-list" id="studiesList"></div>
     <p class="studies-note">Momentaufnahme, kein Live-Feed. Die Liste wird täglich automatisch aus PubMed aktualisiert (geplanter Cloud-Agent, Veröffentlichung über GitHub Pages).</p>
@@ -421,43 +421,43 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (wird woechentlich vom Cloud-Agenten ersetzt) ===
-const SNAP_DATE = "Stand 9. Aug. 2026";
+const SNAP_DATE = "10. Aug. 2026, 13:41 Uhr";
 const STUDIES = [
   {
-    journal:"BMC Health Services Research", year:"2026", pmid:"42571012",
-    title:"Determinanten der Teilnahme am Mammographie-Screening (Ankara, Türkei)",
-    sum:"Querschnittstudie zu Faktoren, die die Inanspruchnahme der Brustkrebs-Früherkennung bei Frauen beeinflussen.",
-    result:"Frauen, die Screening-Programme kannten, nahmen 8,5-mal häufiger teil; nach früherer anderer Krebsfrüherkennung 5,5-mal häufiger; eine chronische Erkrankung verdoppelte die Chance. Bekanntheit und Aufklärung sind die zentralen Hebel."
+    journal:"Pharmacoepidemiology and Drug Safety", year:"2026", pmid:"42571911",
+    title:"ConcePTION-Algorithmus: Schwangerschaften in Routinedaten erkennen",
+    sum:"Entwicklung und Anwendung eines Algorithmus, der Schwangerschaften in bevölkerungsbezogenen Gesundheitsdatenbanken identifiziert.",
+    result:"Über 10 europäische Datenbanken wurden rund 2,7 Mio. Schwangerschaften erkannt; 50–83 % endeten in Lebendgeburten, 4–10 % in Fehlgeburten. Das Gestationsalter war für 6–89 % der Datensätze schätzbar (RMSE 17–50 Tage). Das verbessert die Nutzung von Routinedaten für die Arzneimittelsicherheit in der Schwangerschaft."
   },
   {
-    journal:"BMC Health Services Research", year:"2026", pmid:"42571003",
-    title:"Therapieunterbrechende Systemfehler der Heim-Peritonealdialyse (HomeChoice-Cycler)",
-    sum:"Analyse technischer Fehler bei der Heimdialyse und ihrer Häufigkeit im Versorgungsalltag.",
-    result:"49 verschiedene Fehlertypen in 138 Vorfällen; Druckkammer-Fehler machten 21,7 % aus; Fehler traten in unter 0,25 % der Behandlungssitzungen auf. Die Heimtechnik ist überwiegend zuverlässig; einzelne Fehlerquellen sind gezielt adressierbar."
+    journal:"Cancer Epidemiology", year:"2026", pmid:"42551070",
+    title:"Wartezeit von Diagnose bis Operation beim Zervixkarzinom",
+    sum:"Kohortenstudie zum Zusammenhang zwischen dem Intervall Diagnose–Operation und dem Gesamtüberleben.",
+    result:"Bei 1.501 Patientinnen (mediane Wartezeit 80 Tage) war ein sehr kurzes Intervall (2–6 Wochen) mit erhöhtem Sterberisiko verbunden (HR 2,33; 95%-KI 1,14–4,77) gegenüber 10–14 Wochen; das Muster war U-förmig. Sowohl sehr kurze als auch sehr lange Wartezeiten erscheinen ungünstig."
   },
   {
     journal:"GeroScience", year:"2026", pmid:"42570194",
-    title:"Orale Antikoagulation und neu auftretende Demenz bei Vorhofflimmern",
-    sum:"Real-World-Kohortenstudie zum Zusammenhang zwischen Art des Gerinnungshemmers und Demenzrisiko.",
-    result:"DOAK gingen mit geringerem Demenzrisiko einher (HR 0,63; 95%-KI 0,56–0,70), Warfarin mit höherem Risiko (HR 1,31; 95%-KI 1,16–1,49). Die Wirkstoffwahl könnte für die kognitive Langzeitprognose bedeutsam sein."
+    title:"Orale Antikoagulation und Demenz bei Vorhofflimmern",
+    sum:"Bevölkerungsbezogene Kohortenstudie zum Zusammenhang zwischen Art des Gerinnungshemmers und neu auftretender Demenz.",
+    result:"Bei 21.671 Personen (Ø 74 Jahre, 6 Jahre Nachbeobachtung) ging die Einnahme von DOAK mit geringerem Demenzrisiko einher (HR 0,63; 95%-KI 0,56–0,70), Warfarin mit höherem Risiko (HR 1,31; 95%-KI 1,16–1,49). Die Wirkstoffwahl könnte für die kognitive Langzeitprognose bedeutsam sein."
   },
   {
-    journal:"Journal of Cancer Survivorship", year:"2026", pmid:"42570052",
-    title:"Adhärenz zu Bewegungsleitlinien bei US-Krebsüberlebenden",
-    sum:"Auswertung landesweiter Surveydaten zur Einhaltung der Empfehlungen für körperliche Aktivität über die Zeit.",
-    result:"Die Adhärenz stieg von 9,2 % (2010) auf 22,0 % (2015) und fiel bis 2020 wieder auf 8,7 %. Anhaltend niedrige, zuletzt rückläufige Werte weisen auf Versorgungslücken in der Bewegungsförderung hin."
+    journal:"BMC Health Services Research", year:"2026", pmid:"42571012",
+    title:"Teilnahme am Mammographie-Screening (Ankara, Türkei)",
+    sum:"Querschnittstudie zu Faktoren, die die Inanspruchnahme der Brustkrebs-Früherkennung beeinflussen.",
+    result:"Unter 718 Frauen erhöhte die Kenntnis der Screening-Programme die Teilnahme um das 8,5-Fache, eine frühere andere Früherkennung um das 5,5-Fache und eine chronische Erkrankung um das 2,0-Fache (Nagelkerke R² = 0,465). Bekanntheit und Aufklärung sind zentrale Hebel."
   },
   {
-    journal:"Gynecologic Oncology", year:"2026", pmid:"42570385",
-    title:"Lebensqualität nach risikoreduzierender Hysterektomie",
-    sum:"Untersuchung der gesundheitsbezogenen Lebensqualität (Nutzwerte) nach vorbeugender Gebärmutterentfernung.",
-    result:"Mittlere Nutzwerte lagen je nach Eingriff und Zeitpunkt zwischen 0,670 und 0,942, mit signifikanten Gruppenunterschieden (p < 0,001). Art und Zeitpunkt des Eingriffs beeinflussen die Lebensqualität deutlich."
+    journal:"BMC Health Services Research", year:"2026", pmid:"42571003",
+    title:"Systemfehler der Heim-Peritonealdialyse (HomeChoice-Cycler)",
+    sum:"Analyse therapieunterbrechender technischer Fehler bei der Heimdialyse und ihrer Häufigkeit.",
+    result:"Dokumentiert wurden 49 Fehlertypen in 138 Vorfällen (2015–2023): Druckkammer 21,7 %, Luft im Schlauchsystem 19,6 %, Digitalboard/EEPROM 17,4 %, Energie/Akku 16,7 %. Einzelne Fehlerquellen lassen sich damit gezielt adressieren."
   },
   {
     journal:"Tobacco Use Insights", year:"2026", pmid:"42571166",
-    title:"Aufhörversuche beim Shisha-Rauchen junger Erwachsener in Deutschland",
-    sum:"Befragung zu Aufhörverhalten und dessen Prädiktoren bei jungen Shisha-Rauchenden in Deutschland.",
-    result:"Nur 14,6 % (95%-KI 11,9–17,8) hatten je einen Aufhörversuch unternommen; die wahrgenommene Abhängigkeit war der einzige signifikante Prädiktor. Präventions- und Entwöhnungsangebote erreichen die Gruppe bislang kaum."
+    title:"Aufhörversuche beim Shisha-Rauchen (Deutschland)",
+    sum:"Online-Befragung zu Aufhörverhalten und dessen Einflussfaktoren bei jungen Shisha-Rauchenden.",
+    result:"Von 504 Rauchenden (Median 24 Jahre) hatten nur 14,6 % (95%-KI 11,9–17,8) je einen Aufhörversuch unternommen; wer die eigene Abhängigkeit für unwahrscheinlich hielt, versuchte es häufiger (OR 2,05; 95%-KI 1,26–3,32). Entwöhnungsangebote erreichen die Gruppe bislang kaum."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
