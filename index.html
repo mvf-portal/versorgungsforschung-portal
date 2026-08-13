@@ -371,7 +371,7 @@
     </div>
     <div class="studies-list" id="studiesList"></div>
 
-    <details class="archive" id="archive">
+    <details class="archive" id="archive" open>
       <summary id="archiveSummary">Ältere Suchergebnisse</summary>
       <div class="archive-body" id="archiveBody">
         <p class="arch-status">Wird geladen …</p>
@@ -627,8 +627,8 @@ STUDIES.forEach(s=>{
 });
 
 // ---- Ordner „Ältere Suchergebnisse" ----
-// Wird absichtlich erst beim Aufklappen geladen: die Seite selbst bleibt dadurch
-// eine einzige Datei ohne Zusatzanfragen, das Archiv darf beliebig wachsen.
+// Standardmaessig aufgeklappt. Das Archiv liegt in einer eigenen Datei, damit
+// index.html nicht mit jedem Tag weiterwaechst; geladen wird es einmal pro Aufruf.
 const archiveEl = document.getElementById('archive');
 const archiveBody = document.getElementById('archiveBody');
 const archiveSummary = document.getElementById('archiveSummary');
@@ -640,8 +640,8 @@ function datumLang(iso){
   return parseInt(p[2],10)+'. '+MONATE[parseInt(p[1],10)-1]+' '+p[0];
 }
 
-archiveEl.addEventListener('toggle', ()=>{
-  if(!archiveEl.open || archivGeladen) return;
+function ladeArchiv(){
+  if(archivGeladen) return;
   archivGeladen = true;
   fetch('studien-archiv.json', {cache:'no-cache'})
     .then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); })
@@ -674,7 +674,12 @@ archiveEl.addEventListener('toggle', ()=>{
       archiveBody.innerHTML = '<p class="arch-status">Archiv konnte nicht geladen werden. '
         + 'Bitte später erneut versuchen.</p>';
     });
-});
+}
+
+// Beim Laden holen (der Ordner ist offen); zusaetzlich beim Aufklappen,
+// falls er zuvor geschlossen wurde oder der erste Versuch fehlschlug.
+archiveEl.addEventListener('toggle', ()=>{ if(archiveEl.open) ladeArchiv(); });
+if(archiveEl.open) ladeArchiv();
 
 // ---- search wiring ----
 const input = document.getElementById('q');
