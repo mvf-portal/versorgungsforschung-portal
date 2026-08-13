@@ -174,6 +174,33 @@ Wieder einschalten geht an derselben Stelle.
 
 ---
 
+## Optional: lokal testen (Windows)
+
+Das Skript lässt sich auch auf dem eigenen Rechner ausführen — praktisch, um eine Änderung
+auszuprobieren, ohne auf den nächsten Actions-Lauf zu warten.
+
+Einmalig die Pakete installieren. `tzdata` ist unter Windows **zwingend**: anders als Linux
+bringt Windows keine Zeitzonendatenbank mit, und ohne das Paket scheitert der Zeitstempel
+mit `ZoneInfoNotFoundError`.
+
+```powershell
+py -m pip install --user "anthropic>=0.40" requests tzdata
+```
+
+Dann in PowerShell — der Key gilt nur für dieses Fenster und wird nirgends gespeichert:
+
+```powershell
+cd C:\Users\Stegmaier\Documents\versorgungsforschung-portal
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+py scripts\update_studies.py
+```
+
+Das Skript verändert nur `index.html`; es committet und pusht **nicht**. Ergebnis ansehen mit
+`git diff`, danach entweder übernehmen (`git add index.html; git commit -m "Studien-Update";
+git push`) oder verwerfen (`git checkout index.html`).
+
+---
+
 ## Wie es intern funktioniert
 
 - **`scripts/update_studies.py`** erledigt die Arbeit: PubMed abfragen (mit drei Wiederholversuchen),
