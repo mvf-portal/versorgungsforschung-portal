@@ -1,0 +1,65 @@
+name: Studien-Update (täglich)
+
+# 06:00 UTC = 08:00 Uhr Berlin (Sommerzeit) bzw. 07:00 Uhr (Winterzeit).
+# GitHub führt geplante Läufe bei hoher Last mit einigen Minuten Verzögerung aus.
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:        # erlaubt manuelles Starten über die Actions-Oberfläche
+
+permissions:
+  contents: write           # GITHUB_TOKEN darf index.html zurück ins Repo pushen
+  pages: write              # erlaubt das explizite Anstoßen des Pages-Builds (letzter Schritt)
+
+concurrency:
+  group: studien-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Repo auschecken
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Abhängigkeiten installieren
+        run: pip install --quiet "anthropic>=0.40" requests tzdata
+
+      - name: Studienliste aktualisieren
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MODEL: claude-haiku-4-5          # günstiges Modell; z. B. claude-sonnet-5 für mehr Qualität
+          # SEARCH_TERM: '"health services research"'   # optional: anderer Suchbegriff
+        run: python scripts/update_studies.py
+
+      - name: Committen & pushen (nur bei Änderung)
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain index.html)" ]; then
+            echo "Keine Änderung – nichts zu committen."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name  "VF-Portal Bot"
+          git config user.email "stegmaier@m-vf.de"
+          git add index.html
+          git commit -m "Studien-Update $(TZ=Europe/Berlin date +%d.%m.%Y)"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Pushes mit dem GITHUB_TOKEN lösen nicht zuverlässig einen Pages-Build aus.
+      # Deshalb stoßen wir ihn explizit an; schlägt das fehl, ist der Lauf trotzdem OK
+      # (der Build kommt dann über den normalen Push-Mechanismus).
+      - name: GitHub-Pages-Build anstoßen
+        if: steps.commit.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
