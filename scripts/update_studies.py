@@ -13,19 +13,25 @@ unveraendert und der Workflow schlaegt sichtbar fehl (kein kaputter Commit).
 from __future__ import annotations
 
 import datetime as dt
+import html
 import json
 import os
 import re
 import sys
+import time
 from zoneinfo import ZoneInfo
 
 import anthropic
 import requests
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
-TERM = '"health services research"'
+TERM = os.environ.get("SEARCH_TERM", '"health services research"')
 MODEL = os.environ.get("MODEL", "claude-haiku-4-5")  # Standard: guenstig; via MODEL-env aenderbar
 INDEX = "index.html"
+
+# NCBI bittet bei automatisierten Zugriffen um Tool-Kennung und Kontaktadresse.
+NCBI_TOOL = "versorgungsforschung-portal"
+NCBI_EMAIL = os.environ.get("NCBI_EMAIL", "stegmaier@m-vf.de")
 
 START = "// === STUDIES-BLOCK-START (wird woechentlich vom Cloud-Agenten ersetzt) ==="
 END = "// === STUDIES-BLOCK-ENDE ==="
@@ -86,22 +92,39 @@ Gib ausschliesslich das geforderte JSON zurueck.
 """
 
 
+def _get(path: str, params: dict, timeout: int) -> requests.Response:
+    """GET mit drei Versuchen - PubMed ist gelegentlich kurz nicht erreichbar."""
+    params = {**params, "tool": NCBI_TOOL, "email": NCBI_EMAIL}
+    last: Exception | None = None
+    for attempt in range(3):
+        try:
+            r = requests.get(f"{EUTILS}/{path}", params=params, timeout=timeout)
+            r.raise_for_status()
+            return r
+        except requests.RequestException as exc:
+            last = exc
+            if attempt < 2:
+                wait = 5 * (attempt + 1)
+                print(f"PubMed-Abruf fehlgeschlagen ({exc}); neuer Versuch in {wait}s ...")
+                time.sleep(wait)
+    raise RuntimeError(f"PubMed nicht erreichbar: {last}")
+
+
 def fetch_pubmed() -> str:
-    r = requests.get(
-        f"{EUTILS}/esearch.fcgi",
-        params={"db": "pubmed", "term": TERM, "sort": "date", "retmax": "25", "retmode": "json"},
+    r = _get(
+        "esearch.fcgi",
+        {"db": "pubmed", "term": TERM, "sort": "date", "retmax": "25", "retmode": "json"},
         timeout=30,
     )
-    r.raise_for_status()
     ids = r.json().get("esearchresult", {}).get("idlist", [])
     if not ids:
         raise RuntimeError("esearch lieferte keine PMIDs")
-    r2 = requests.get(
-        f"{EUTILS}/efetch.fcgi",
-        params={"db": "pubmed", "id": ",".join(ids), "rettype": "abstract", "retmode": "text"},
+    print(f"{len(ids)} PMIDs gefunden.")
+    r2 = _get(
+        "efetch.fcgi",
+        {"db": "pubmed", "id": ",".join(ids), "rettype": "abstract", "retmode": "text"},
         timeout=60,
     )
-    r2.raise_for_status()
     return r2.text
 
 
@@ -128,8 +151,15 @@ def build_block(studies: list[dict]) -> str:
     now = dt.datetime.now(ZoneInfo("Europe/Berlin"))
     snap = f"{now.day}. {MONTHS[now.month]} {now.year}, {now:%H:%M} Uhr"
 
-    def js(v: str) -> str:  # sichere JS-String-Literale (JSON-Strings sind gueltiges JS)
-        return json.dumps(v, ensure_ascii=False)
+    def js(v: str) -> str:
+        """Sicheres JS-String-Literal MIT HTML-Escaping.
+
+        Zwei Ebenen muessen stimmen: index.html setzt die Werte per innerHTML ein,
+        deshalb wird zuerst HTML-maskiert (& < >), damit ein Zeichen wie < im
+        generierten Text das Markup nicht zerlegt. json.dumps erzeugt danach ein
+        gueltiges JS-Literal (Anfuehrungszeichen, Backslashes, Zeilenumbrueche).
+        """
+        return json.dumps(html.escape(v, quote=False), ensure_ascii=False)
 
     items = []
     for s in studies:
@@ -141,9 +171,10 @@ def build_block(studies: list[dict]) -> str:
             f"    result:{js(s['result'])}\n"
             "  }"
         )
+    # SNAP_DATE wird per textContent gesetzt, nicht per innerHTML -> kein HTML-Escaping.
     return (
         f"{START}\n"
-        f"const SNAP_DATE = {js(snap)};\n"
+        f"const SNAP_DATE = {json.dumps(snap, ensure_ascii=False)};\n"
         "const STUDIES = [\n"
         + ",\n".join(items)
         + ",\n];\n"
