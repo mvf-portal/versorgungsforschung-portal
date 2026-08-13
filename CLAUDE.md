@@ -57,6 +57,14 @@ const STUDIES = [ … ];
 
 Studien-Updates ersetzen **ausschließlich** diesen Bereich (beide Marker-Zeilen bleiben stehen). Alles andere — CSS, `DB`, `CATS`, Footer, Impressum — bleibt unangetastet. `SNAP_DATE` erscheint sichtbar als „Zuletzt aktualisiert" und muss bei jedem Update auf den aktuellen Zeitpunkt gesetzt werden (Format `"TT. Mon. JJJJ, HH:MM Uhr"`, deutsche Monatsabkürzung).
 
+### Archiv „Ältere Suchergebnisse"
+
+`studien-archiv.json` im Wurzelverzeichnis ist die **vollständige Historie** aller je gezeigten Studien — ein flaches Array mit `pmid`, `journal`, `year`, `title`, `sum`, `result` und `aufgenommen` (ISO-Datum der ersten Sichtung). Dedupliziert über die PMID; das früheste Aufnahmedatum bleibt erhalten.
+
+Die einzige Stelle, an der die Seite **nachlädt**: Der `<details>`-Ordner unter dem Studien-Frame holt die Datei per `fetch` — aber erst beim Aufklappen. Dadurch bleibt `index.html` schlank, während das Archiv beliebig wachsen darf. Beim Rendern werden die aktuell angezeigten PMIDs ausgeblendet, gruppiert wird nach `aufgenommen` (neueste zuerst).
+
+`update_studies.py` schreibt die Datei bei jedem Lauf fort; der Workflow committet sie zusammen mit `index.html`.
+
 ### Studien aktualisieren
 
 **Automatisch, täglich** — das ist der aktive Weg: `.github/workflows/update-studies.yml` läuft um 06:00 UTC (und per *Run workflow* manuell), ruft `scripts/update_studies.py` auf → PubMed → Claude-API (`claude-haiku-4-5`, Secret `ANTHROPIC_API_KEY`) → Marker-Block ersetzen → commit & push. Einrichtung dokumentiert in `EINRICHTUNG-GITHUB-ACTIONS.md`.

@@ -42,14 +42,14 @@ jobs:
       - name: Committen & pushen (nur bei Änderung)
         id: commit
         run: |
-          if [ -z "$(git status --porcelain index.html)" ]; then
+          if [ -z "$(git status --porcelain index.html studien-archiv.json)" ]; then
             echo "Keine Änderung – nichts zu committen."
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name  "VF-Portal Bot"
           git config user.email "stegmaier@m-vf.de"
-          git add index.html
+          git add index.html studien-archiv.json
           git commit -m "Studien-Update $(TZ=Europe/Berlin date +%d.%m.%Y)"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"

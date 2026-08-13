@@ -35,6 +35,8 @@ NCBI_EMAIL = os.environ.get("NCBI_EMAIL", "stegmaier@m-vf.de")
 
 START = "// === STUDIES-BLOCK-START (wird woechentlich vom Cloud-Agenten ersetzt) ==="
 END = "// === STUDIES-BLOCK-ENDE ==="
+ARCHIVE = "studien-archiv.json"   # Vollstaendige Historie; die Seite laedt sie fuer den Ordner
+                                  # "Aeltere Suchergebnisse" nach und blendet die aktuellen aus.
 
 MONTHS = {1: "Jan.", 2: "Feb.", 3: "März", 4: "Apr.", 5: "Mai", 6: "Juni",
           7: "Juli", 8: "Aug.", 9: "Sept.", 10: "Okt.", 11: "Nov.", 12: "Dez."}
@@ -182,10 +184,44 @@ def build_block(studies: list[dict]) -> str:
     )
 
 
+def update_archive(studies: list[dict]) -> int:
+    """Nimmt die aktuellen Studien ins Archiv auf. Rueckgabe: Gesamtzahl im Archiv.
+
+    Dedupliziert ueber die PMID; das zuerst gesehene Aufnahmedatum bleibt erhalten,
+    damit eine Studie nicht bei jedem Lauf nach vorne rutscht.
+    """
+    try:
+        with open(ARCHIVE, encoding="utf-8") as f:
+            entries = json.load(f)
+    except FileNotFoundError:
+        entries = []
+
+    known = {e["pmid"] for e in entries}
+    heute = dt.datetime.now(ZoneInfo("Europe/Berlin")).strftime("%Y-%m-%d")
+    neu = 0
+    for s in studies:
+        if s["pmid"] in known:
+            continue
+        entries.append({
+            "pmid": s["pmid"], "journal": s["journal"], "year": s["year"],
+            "title": s["title"], "sum": s["sum"], "result": s["result"],
+            "aufgenommen": heute,
+        })
+        known.add(s["pmid"])
+        neu += 1
+
+    entries.sort(key=lambda e: (e["aufgenommen"], e["pmid"]), reverse=True)
+    with open(ARCHIVE, "w", encoding="utf-8") as f:
+        json.dump(entries, f, ensure_ascii=False, indent=1)
+    print(f"Archiv: {neu} neu, {len(entries)} gesamt.")
+    return len(entries)
+
+
 def main() -> int:
     abstracts = fetch_pubmed()
     studies = pick_studies(abstracts)
     block = build_block(studies)
+    update_archive(studies)
 
     with open(INDEX, encoding="utf-8") as f:
         html = f.read()
