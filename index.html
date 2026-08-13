@@ -113,12 +113,28 @@
     padding:0 20px; cursor:pointer; white-space:nowrap;
     display:flex; align-items:center; justify-content:center; gap:7px; transition:filter .15s;
     min-height:46px;  /* Touch-Ziel, wenn die Buttons auf schmalen Displays umbrechen */
-    flex:1 1 auto;    /* nutzt die Zeilenbreite, statt schmal links zu kleben */
+    flex:0 1 auto;    /* natuerliche Breite: das Suchfeld soll den Platz bekommen */
+  }
+  /* Auf sehr schmalen Displays darf die Beschriftung umbrechen, statt zu ueberlaufen. */
+  @media (max-width:560px){
+    .btn-go{ white-space:normal; flex:1 1 100%; padding:10px 16px; }
+    .btn-select{ max-width:none; flex:1 1 auto; }
   }
   :root[data-theme="dark"] .btn-go{ color:#04211f; }
   @media (prefers-color-scheme:dark){ .btn-go{ color:#04211f; } }
   :root[data-theme="light"] .btn-go{ color:#fff; }
   .btn-go:hover{ filter:brightness(1.12); }
+  .btn-select{
+    background:var(--card); border:1.5px solid var(--line); border-radius:11px;
+    color:var(--ink-soft); font-family:inherit; font-size:14px; font-weight:600;
+    padding:0 12px; cursor:pointer; min-height:46px; max-width:230px;
+    transition:border-color .15s, color .15s;
+  }
+  .btn-select:hover{ border-color:var(--brand); color:var(--brand); }
+  .btn-select:disabled{ opacity:.45; cursor:not-allowed; }
+  .btn-select:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+  .btn-select optgroup{ font-weight:700; color:var(--ink); }
+  .btn-select option{ font-weight:500; color:var(--ink); }
   .btn-go:disabled{ opacity:.45; cursor:not-allowed; filter:none; }
   .btn-go:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
 
@@ -284,9 +300,12 @@
       <div class="search-row">
         <div class="search-field">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-          <input id="q" type="search" autocomplete="off" spellcheck="false" value="health services research" placeholder="z. B. Versorgungsforschung, patient-reported outcomes …">
+          <input id="q" type="search" autocomplete="off" spellcheck="false" value="Primärversorgung" placeholder="z. B. Primärversorgung, integrierte Versorgung, health services research …">
         </div>
-        <button class="btn-go" id="go" type="button" title="Öffnet die PubMed-Suche in einem neuen Tab (oder Eingabetaste drücken)">In PubMed suchen ↗</button>
+        <button class="btn-go" id="go" type="button" title="Öffnet das Archiv von Monitor Versorgungsforschung in einem neuen Tab (oder Eingabetaste drücken)">In Monitor Versorgungsforschung suchen ↗</button>
+        <select class="btn-select" id="pick" aria-label="Andere Datenbank mit diesem Suchbegriff öffnen" title="Andere Datenbank mit diesem Suchbegriff öffnen">
+          <option value="">Andere Datenbank …</option>
+        </select>
         <button class="btn-clear" id="clear" type="button">Leeren</button>
       </div>
       <div class="chips" id="chips">
@@ -565,6 +584,7 @@ STUDIES.forEach(s=>{
 const input = document.getElementById('q');
 const hint = document.getElementById('searchHint');
 const goBtn = document.getElementById('go');
+const picker = document.getElementById('pick');
 function apply(){
   const term = input.value.trim();
   const enc = encodeURIComponent(term || '');
@@ -585,22 +605,42 @@ function apply(){
   // sichtbare Rueckmeldung: sonst wirkt das Tippen wirkungslos
   const liveCount = cardIndex.filter(c=>c.type==='live').length;
   hint.textContent = term
-    ? liveCount+' Live-Suchen auf „'+term+'“ eingestellt · Datenbank anklicken oder Enter drücken'
+    ? liveCount+' Live-Suchen auf „'+term+'“ eingestellt · Enter öffnet Monitor Versorgungsforschung, das Menü jede andere'
     : 'Suchbegriff eingeben — die Datenbank-Links stellen sich automatisch darauf ein';
   goBtn.disabled = !term;
+  picker.disabled = !term;
 }
 
-// Enter und der Button öffnen die Leitdatenbank (PubMed) direkt.
-const PRIMARY = DB.find(x=>x.n.indexOf('PubMed / MEDLINE')===0) || DB.find(x=>x.t==='live');
-function openPrimary(){
+// Enter und der Button öffnen das Archiv von Monitor Versorgungsforschung.
+const PRIMARY = DB.find(x=>x.n==='Monitor Versorgungsforschung') || DB.find(x=>x.t==='live');
+function openSearch(tpl){
   const term = input.value.trim();
   if(!term){ input.focus(); return; }
-  window.open(PRIMARY.u.replace('%s', encodeURIComponent(term)), '_blank', 'noopener');
+  window.open(tpl.replace('%s', encodeURIComponent(term)), '_blank', 'noopener');
 }
 
+// Auswahlmenü mit allen übrigen Live-Suchen füllen, nach Kategorie gruppiert.
+CATS.forEach(cat=>{
+  const items = DB.filter(x=>x.c===cat.id && x.t==='live' && x!==PRIMARY);
+  if(!items.length) return;
+  const grp = document.createElement('optgroup');
+  grp.label = cat.name;
+  items.forEach(x=>{
+    const opt = document.createElement('option');
+    opt.value = x.u; opt.textContent = x.n;
+    grp.appendChild(opt);
+  });
+  picker.appendChild(grp);
+});
+picker.addEventListener('change', ()=>{
+  const tpl = picker.value;
+  picker.selectedIndex = 0;   // Menü zurücksetzen, damit dieselbe Auswahl erneut möglich ist
+  if(tpl) openSearch(tpl);
+});
+
 input.addEventListener('input', apply);
-input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); openPrimary(); } });
-goBtn.addEventListener('click', openPrimary);
+input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); openSearch(PRIMARY.u); } });
+goBtn.addEventListener('click', ()=>openSearch(PRIMARY.u));
 document.getElementById('clear').addEventListener('click', ()=>{ input.value=''; input.focus(); apply(); });
 
 // chips
