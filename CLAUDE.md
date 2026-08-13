@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 „Knowledge-Hub Versorgungsforschung" — ein Rechercheportal für Versorgungsforschung / Health Services Research. Ein Angebot von **Monitor Versorgungsforschung** (Betreiber: eRelation AG – Content in Health, Bonn).
 
-Live: https://mvf-portal.github.io/versorgungsforschung-portal/
+Live: https://wissen.m-vf.de/
 
 Projektsprache ist **Deutsch** — Oberfläche, Inhalte, Commit-Messages und Code-Kommentare.
 
@@ -18,10 +18,12 @@ Projektsprache ist **Deutsch** — Oberfläche, Inhalte, Commit-Messages und Cod
 |---|---|
 | Lokal ansehen | `index.html` direkt im Browser öffnen (kein Server nötig) |
 | Deployen | Commit auf `main` pushen — GitHub Pages baut automatisch (~1 Min) |
-| Live prüfen | `curl -s "https://mvf-portal.github.io/versorgungsforschung-portal/?cb=$(date +%s)"` — Cache-Buster nötig, sonst kommt die alte Fassung |
+| Live prüfen | `curl -s "https://wissen.m-vf.de/?cb=$(date +%s)"` — Cache-Buster nötig, sonst kommt die alte Fassung |
 | Pages-Build-Status | `gh api repos/mvf-portal/versorgungsforschung-portal/pages/builds/latest` |
 
-`gh` liegt unter `C:\Program Files\GitHub CLI\gh.exe` (nicht im PATH) und ist als `mvf-portal` angemeldet. Das Token hat **keinen `workflow`-Scope** — Dateien unter `.github/workflows/` lassen sich damit nicht pushen.
+`gh` liegt unter `C:\Program Files\GitHub CLI\gh.exe` (nicht im PATH) und ist als `mvf-portal` angemeldet; Scopes: `repo`, `workflow`, `gist`, `read:org`.
+
+Die Seite läuft unter der eigenen Domain **`wissen.m-vf.de`** (CNAME-Datei im Repo-Wurzelverzeichnis, HTTPS erzwungen). Die alte Adresse `mvf-portal.github.io/versorgungsforschung-portal/` leitet dauerhaft dorthin um.
 
 ## Architektur: datengetriebenes Rendering
 
@@ -57,9 +59,11 @@ Studien-Updates ersetzen **ausschließlich** diesen Bereich (beide Marker-Zeilen
 
 ### Studien aktualisieren
 
-Der vorgesehene Weg ist der Slash-Command **`/studien-update`** (liegt unter `~/.claude/commands/studien-update.md`): PubMed E-utilities abrufen → 6 Studien mit konkreten quantitativen Ergebnissen auswählen → deutsche Zusammenfassungen schreiben → Marker-Block ersetzen → committen und pushen. Kein API-Key, kein Skript.
+**Automatisch, täglich** — das ist der aktive Weg: `.github/workflows/update-studies.yml` läuft um 06:00 UTC (und per *Run workflow* manuell), ruft `scripts/update_studies.py` auf → PubMed → Claude-API (`claude-haiku-4-5`, Secret `ANTHROPIC_API_KEY`) → Marker-Block ersetzen → commit & push. Einrichtung dokumentiert in `EINRICHTUNG-GITHUB-ACTIONS.md`.
 
-Die Dateien unter `scripts/` (`update_studies.py`, `update-studies.ps1`, `Studien-aktualisieren.cmd`) sind eine **ungenutzte Alternative**, die einen `ANTHROPIC_API_KEY` erwartet. Der Nutzer hat sich bewusst gegen den API-Weg entschieden — nicht als Standardpfad vorschlagen.
+**Manuell auf Zuruf** — der Slash-Command **`/studien-update`** (`~/.claude/commands/studien-update.md`): Claude recherchiert und formuliert selbst im Chat, ohne API-Key. Nützlich für Sonderfälle (anderer Suchbegriff, Zwischenstand), ersetzt aber nicht die Automatik.
+
+`scripts/update-studies.ps1` und `scripts/Studien-aktualisieren.cmd` sind eine ältere lokale PowerShell-Variante und werden von der Automatik nicht verwendet.
 
 ## Fallstricke
 

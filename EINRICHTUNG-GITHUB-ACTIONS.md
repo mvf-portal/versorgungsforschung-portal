@@ -119,7 +119,7 @@ gh run watch --repo mvf-portal/versorgungsforschung-portal
 
 1. **Commit:** Auf der Startseite des Repos sollte der jüngste Commit
    „Studien-Update TT.MM.JJJJ" von *VF-Portal Bot* stammen.
-2. **Live-Seite:** https://mvf-portal.github.io/versorgungsforschung-portal/ öffnen und im
+2. **Live-Seite:** https://wissen.m-vf.de/ öffnen und im
    rechten Frame den Eintrag „Zuletzt aktualisiert" prüfen.
    Falls noch der alte Stand erscheint: mit **Strg + F5** neu laden — der Browser hält die
    alte Fassung im Cache.
