@@ -28,12 +28,60 @@ der Website liefert immer den aktuellen Stand.
 
 ---
 
+---
+
+## Vorab: die Anmeldung auf monitor-versorgungsforschung.de
+
+Der Hub zeigt in der rechten Spalte einen Kasten **„Studien-Newsletter"**. Der Knopf
+darin führt auf die MVF-Startseite:
+
+```
+https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&utm_medium=referral&utm_campaign=studien-newsletter#studien-newsletter
+```
+
+Bewusst liegt **kein Formular auf dem Hub**: Er erhebt keine personenbezogenen Daten,
+und das soll so bleiben. Einwilligung, Double-Opt-in und Abmeldung verwaltet MVF.
+
+### Was auf der MVF-Seite einzurichten ist
+
+In der rechten Seitenleiste steht bereits das Formular des allgemeinen Newsletters
+(WPForms-Widget, Überschrift „Newsletter"). Darunter kommt ein **zweites Formular**:
+
+1. **Neues WPForms-Formular** anlegen, Überschrift **„Studien-Newsletter"**, mit
+   E-Mail-Feld und DSGVO-Kasten — analog zum bestehenden.
+2. **Anker-ID vergeben:** Das umgebende Element braucht
+   ```html
+   id="studien-newsletter"
+   ```
+   Genau darauf zeigt der Link vom Hub. Fehlt die ID, landen Interessierte oben auf
+   der Startseite und müssen die Seitenleiste selbst suchen — es ist also nichts
+   kaputt, aber unbequem. **Die ID bitte nicht umbenennen**, sonst muss der Hub
+   nachgezogen werden.
+3. **Mit Mailchimp verbinden** und die Anmeldungen mit einem **Tag oder einer Gruppe**
+   `Studien-Newsletter` versehen.
+4. **Double-Opt-in** aktivieren.
+
+> ### Der wichtigste Punkt
+>
+> Die RSS-Kampagne muss an ein **Segment** gehen, das auf diesen Tag gefiltert ist —
+> nicht an die gesamte Audience. Sonst erhalten alle MVF-Abonnenten täglich die
+> Studienauswahl, obwohl sie nur den allgemeinen Newsletter bestellt haben. Das wäre
+> nicht nur lästig, sondern mangels Einwilligung auch rechtlich angreifbar.
+>
+> In Mailchimp: **Audience → Segments → Create segment**, Bedingung
+> *Tags → contains → Studien-Newsletter*. Dieses Segment in Schritt 1 unten als
+> Empfänger wählen.
+
+---
+
 ## Schritt 1: Kampagne anlegen
 
 1. In Mailchimp auf **Campaigns → Create → Email**.
 2. Reiter **Automated**, dann **Share blog updates** wählen.
    (Das ist Mailchimps Bezeichnung für eine RSS-Kampagne; ein Blog ist dafür nicht nötig.)
-3. Kampagnennamen vergeben, z. B. `MVF Studien-Newsletter`, und die Zielliste auswählen.
+3. Kampagnennamen vergeben, z. B. `MVF Studien-Newsletter`.
+4. Als Empfänger das **Segment `Studien-Newsletter`** wählen — nicht die gesamte
+   Audience (siehe Kasten oben).
 
 ## Schritt 2: Feed und Sendezeit
 
