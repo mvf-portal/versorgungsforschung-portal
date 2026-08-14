@@ -344,7 +344,7 @@
     <h1 class="serif">Versorgungsforschung
       <span class="sub">Health Services Research &amp; Health Care Research — ein Zugang zu allen wichtigen Datenbanken</span>
     </h1>
-    <p class="lede">Ein Suchbegriff, alle Quellen. Gib unten einen Begriff ein — jede Datenbankkarte öffnet damit direkt die passende Live-Suche in einem neuen Tab. Deutschsprachige und internationale Fachdatenbanken, Evidenzsynthesen, Open-Access-Discovery, Studienregister und Institutionen an einem Ort. Jeden Tag werden die Suchergebnisse automatisch aktualisiert.</p>
+    <p class="lede">Ein Suchbegriff, alle Quellen. Gib unten einen Begriff ein — jede Datenbankkarte öffnet damit direkt die passende Live-Suche in einem neuen Tab. Deutschsprachige und internationale Fachdatenbanken, Evidenzsynthesen, Open-Access-Discovery, Studienregister, Institutionen und Wege zum Volltext an einem Ort. Jeden Tag werden die Suchergebnisse automatisch aktualisiert.</p>
 
     <div class="panel">
       <label class="panel-label" for="q">Suchbegriff — gilt für alle Live-Suchen</label>
@@ -454,9 +454,10 @@ const CATS = [
   {id:"biblio", h:190, num:"02", name:"Bibliografische Datenbanken (international)"},
   {id:"evidenz", h:262, num:"03", name:"Systematische Reviews & Evidenzsynthesen"},
   {id:"openaccess", h:150, num:"04", name:"Open Access & Discovery"},
-  {id:"register", h:212, num:"05", name:"Studien- & Reviewregister"},
-  {id:"policy", h:338, num:"06", name:"Health Services Research & Gesundheitspolitik"},
-  {id:"preprint", h:46, num:"07", name:"Preprints & Graue Literatur"},
+  {id:"volltext", h:100, num:"05", name:"Volltext beschaffen"},
+  {id:"register", h:212, num:"06", name:"Studien- & Reviewregister"},
+  {id:"policy", h:338, num:"07", name:"Health Services Research & Gesundheitspolitik"},
+  {id:"preprint", h:46, num:"08", name:"Preprints & Graue Literatur"},
 ];
 
 // type: "live" = URL-Suche mit %s | "portal" = feste URL | "lic" = lizenzpflichtig (feste URL)
@@ -504,13 +505,20 @@ const DB = [
   {c:"deutsch", n:"Versorgungsatlas (Zi)", d:"Regionale Analysen zur ambulanten Versorgung (Zentralinstitut für die KV).", t:"portal", u:"https://www.versorgungsatlas.de/"},
   {c:"deutsch", n:"WIdO", d:"Wissenschaftliches Institut der AOK — Versorgungsdaten & Reporte (Arzneimittel, Pflege).", t:"portal", u:"https://www.wido.de/"},
 
-  // 5 — Register
+  // 5 — Volltext beschaffen (legale Wege zum Volltext hinter der Bezahlschranke)
+  {c:"volltext", n:"Nationallizenzen (DFG)", d:"DFG-finanzierte Lizenzen für Zeitschriftenarchive und E-Books. Privatpersonen mit Wohnsitz in Deutschland können sich kostenlos registrieren.", t:"live", u:"https://www.nationallizenzen.de/@@search?SearchableText=%s"},
+  {c:"volltext", n:"Unpaywall", d:"Findet legale Open-Access-Fassungen zu einer DOI — über 50 Mio. Volltexte aus Repositorien und Verlagen. DOI nach dem Öffnen eingeben.", t:"portal", u:"https://unpaywall.org/"},
+  {c:"volltext", n:"Open Access Button", d:"Sucht frei zugängliche Fassungen und fordert sie bei Bedarf direkt beim Autor an. DOI oder Titel nach dem Öffnen eingeben.", t:"portal", u:"https://openaccessbutton.org/"},
+  {c:"volltext", n:"subito", d:"Direktlieferdienst wissenschaftlicher Bibliotheken — Aufsätze und Bücher kostenpflichtig, aber schnell und lizenzkonform.", t:"live", u:"https://search.subito-doc.de/vufind/Search/Results?lookfor=%s&type=AllFields"},
+  {c:"volltext", n:"Fernleihe (K10plus)", d:"Verbundkatalog mit Bestandsnachweis: zeigt, welche Bibliothek den Titel führt — Bestellung über die eigene Bibliothek.", t:"live", u:"https://opac.k10plus.de/DB=2.299/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=%s"},
+
+  // 6 — Register
   {c:"register", n:"ClinicalTrials.gov", d:"Weltweit größtes Register klinischer Studien (NLM).", t:"live", u:"https://clinicaltrials.gov/search?term=%s"},
   {c:"register", n:"DRKS", d:"Deutsches Register Klinischer Studien — Begriff nach Öffnen eingeben.", t:"portal", u:"https://drks.de/"},
   {c:"register", n:"WHO ICTRP", d:"International Clinical Trials Registry Platform — Meta-Suche über alle Register.", t:"portal", u:"https://trialsearch.who.int/"},
   {c:"register", n:"EU Clinical Trials Register", d:"Klinische Arzneimittelstudien in der EU/EWR.", t:"live", u:"https://www.clinicaltrialsregister.eu/ctr-search/search?query=%s"},
 
-  // 6 — HSR & Policy
+  // 7 — HSR & Policy
   {c:"policy", n:"AHRQ", d:"US Agency for Healthcare Research and Quality — Leitinstitution der HSR.", t:"portal", u:"https://www.ahrq.gov/"},
   {c:"policy", n:"HSRProj (NLM)", d:"Register laufender Health-Services-Research-Projekte.", t:"portal", u:"https://hsrproject.nlm.nih.gov/"},
   {c:"policy", n:"WHO IRIS", d:"Institutionelles Repositorium der Weltgesundheitsorganisation.", t:"live", u:"https://iris.who.int/discover?query=%s"},
@@ -520,7 +528,7 @@ const DB = [
   {c:"policy", n:"NICE", d:"UK-Institut für klinische Exzellenz — Leitlinien & Bewertungen.", t:"live", u:"https://www.nice.org.uk/search?q=%s"},
   {c:"policy", n:"Health Affairs", d:"Führende Fachzeitschrift für Gesundheitspolitik & -versorgung.", t:"portal", u:"https://www.healthaffairs.org/"},
 
-  // 7 — Preprints & Grau
+  // 8 — Preprints & Grau
   {c:"preprint", n:"medRxiv", d:"Preprint-Server für die medizinischen & Gesundheitswissenschaften.", t:"live", u:"https://www.medrxiv.org/search/%s"},
   {c:"preprint", n:"OSF", d:"Open Science Framework — Preprints, Daten & Projektmaterialien.", t:"live", u:"https://osf.io/search/?q=%s"},
   {c:"preprint", n:"SSRN", d:"Social Science Research Network mit Health-Economics/Policy-Reihen.", t:"portal", u:"https://www.ssrn.com/index.cfm/en/"},
