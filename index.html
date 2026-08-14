@@ -455,7 +455,7 @@
         <p><b>Hinweis zu Lizenzen.</b> Mit <span style="color:var(--accent)">Lizenz</span> markierte Quellen (z. B. Web of Science, Scopus, Embase, CINAHL) sind kostenpflichtig — der Zugang läuft meist über Ihre Bibliothek/Institution. Der Link führt zur Startseite bzw. zum institutionellen Login.</p>
         <p><b>Portal statt Live-Suche.</b> Einige Angebote (LIVIVO, DRKS, GBE-Bund, Fachinstitute) nutzen eine App-Oberfläche ohne direkte Such-URL oder sind Themenportale — dort ist der Suchbegriff nach dem Öffnen einzugeben.</p>
         <p><b>Vollständigkeit.</b> Keine Einzelseite kann sämtliche Artikel „aller Datenbanken" enthalten — das verhindern Lizenz- und Technikgrenzen. Dieses Portal bündelt stattdessen die maßgeblichen Suchen, sodass eine Recherche systematisch über alle relevanten Quellen laufen kann.</p>
-        <p><b>Aktualität.</b> Bei den Suchergebnissen handelt es sich um eine Momentaufnahme, um keinen Live-Feed. Die Liste wird täglich automatisch aus PubMed aktualisiert (geplanter Cloud-Agent, Veröffentlichung über GitHub Pages).</p>
+        <p><b>Aktualität.</b> Bei den Suchergebnissen handelt es sich um eine Momentaufnahme, um keinen Live-Feed. Die Liste wird jeden Morgen um 6 Uhr automatisch aus PubMed geholt, auf Deutsch zusammengefasst und neu veröffentlicht.</p>
       </div>
       <div class="meta-row">
         <span class="dot"></span>
@@ -635,7 +635,7 @@ const DB = [
 ];
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
-// === STUDIES-BLOCK-START (wird woechentlich vom Cloud-Agenten ersetzt) ===
+// === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
 const SNAP_DATE = "14. Aug. 2026, 09:17 Uhr";
 const STUDIES = [
   {

@@ -33,7 +33,7 @@ INDEX = "index.html"
 NCBI_TOOL = "versorgungsforschung-portal"
 NCBI_EMAIL = os.environ.get("NCBI_EMAIL", "stegmaier@m-vf.de")
 
-START = "// === STUDIES-BLOCK-START (wird woechentlich vom Cloud-Agenten ersetzt) ==="
+START = "// === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ==="
 END = "// === STUDIES-BLOCK-ENDE ==="
 ARCHIVE = "studien-archiv.json"   # Vollstaendige Historie; die Seite laedt sie fuer den Ordner
                                   # "Aeltere Suchergebnisse" nach und blendet die aktuellen aus.

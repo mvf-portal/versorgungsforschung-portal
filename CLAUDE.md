@@ -49,7 +49,7 @@ Eine neue Datenbank mit Suchunterstützung aufzunehmen heißt also: einen `DB`-E
 ### Marker-Block — die einzige maschinell editierte Stelle
 
 ```js
-// === STUDIES-BLOCK-START (wird woechentlich vom Cloud-Agenten ersetzt) ===
+// === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
 const SNAP_DATE = "…";
 const STUDIES = [ … ];
 // === STUDIES-BLOCK-ENDE ===
@@ -85,7 +85,7 @@ Einrichtung und Kampagnenvorlage: `NEWSLETTER-MAILCHIMP.md` und `newsletter/mail
 
 ### Studien aktualisieren
 
-**Automatisch, täglich** — das ist der aktive Weg: `.github/workflows/update-studies.yml` läuft um 06:00 UTC (und per *Run workflow* manuell), ruft `scripts/update_studies.py` auf → PubMed → Claude-API (`claude-haiku-4-5`, Secret `ANTHROPIC_API_KEY`) → Marker-Block ersetzen → commit & push. Einrichtung dokumentiert in `EINRICHTUNG-GITHUB-ACTIONS.md`.
+**Automatisch, täglich** — das ist der aktive Weg: `.github/workflows/update-studies.yml` läuft um 04:00 UTC — das sind 06:00 Uhr deutscher Sommerzeit, 05:00 Uhr Winterzeit — (und per *Run workflow* manuell), ruft `scripts/update_studies.py` auf → PubMed → Claude-API (`claude-haiku-4-5`, Secret `ANTHROPIC_API_KEY`) → Marker-Block ersetzen → commit & push. Einrichtung dokumentiert in `EINRICHTUNG-GITHUB-ACTIONS.md`.
 
 **Manuell auf Zuruf** — der Slash-Command **`/studien-update`** (`~/.claude/commands/studien-update.md`): Claude recherchiert und formuliert selbst im Chat, ohne API-Key. Nützlich für Sonderfälle (anderer Suchbegriff, Zwischenstand), ersetzt aber nicht die Automatik.
 
