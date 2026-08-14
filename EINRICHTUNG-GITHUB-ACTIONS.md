@@ -12,14 +12,14 @@ veröffentlicht sie über GitHub Pages.
 ## Was passiert später jeden Tag?
 
 ```
-06:00 UTC  →  PubMed abfragen        (neueste Treffer zu "health services research")
+04:00 UTC  →  PubMed abfragen        (neueste Treffer zu "health services research")
            →  Claude auswählen        (6 Studien mit konkreten Ergebnissen, deutsche Texte)
            →  index.html aktualisieren (nur der Studien-Block + Zeitstempel)
            →  committen & pushen      (nur wenn sich wirklich etwas geändert hat)
            →  GitHub Pages baut       (~1 Minute später ist es live)
 ```
 
-06:00 UTC entspricht **08:00 Uhr** deutscher Sommerzeit bzw. **07:00 Uhr** Winterzeit.
+04:00 UTC entspricht **06:00 Uhr** deutscher Sommerzeit bzw. **05:00 Uhr** Winterzeit.
 GitHub startet geplante Läufe bei hoher Auslastung mit einigen Minuten Verzögerung —
 das ist normal und unkritisch.
 
@@ -152,9 +152,9 @@ Alle Stellschrauben stehen im Abschnitt `env:` der Workflow-Datei.
 **Uhrzeit ändern** — der `cron`-Ausdruck steht in **UTC**, nicht in deutscher Zeit:
 
 ```yaml
-- cron: "0 6 * * *"     # täglich 06:00 UTC  = 08:00 Uhr Sommerzeit
-- cron: "30 4 * * *"    # täglich 04:30 UTC  = 06:30 Uhr Sommerzeit
-- cron: "0 6 * * 1"     # nur montags        (wieder wöchentlich)
+- cron: "0 4 * * *"     # täglich 04:00 UTC  = 06:00 Uhr Sommerzeit  (aktuell eingestellt)
+- cron: "30 5 * * *"    # täglich 05:30 UTC  = 07:30 Uhr Sommerzeit
+- cron: "0 4 * * 1"     # nur montags        (wieder wöchentlich)
 ```
 
 **Anderes Modell** — mehr Qualität gegen etwas höhere Kosten:
