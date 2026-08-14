@@ -144,7 +144,7 @@ def build_feed(entries: list[dict]) -> str:
 # ----------------------------------------------------------------- Downloads
 
 KOPFTEXT = ("Ein Service der Knowledge-Datenbank von Monitor Versorgungsforschung. "
-            "Täglich automatisiert KI-kuratiert aus PubMed.")
+            "Täglich automatisiert KI-kuratiert aus PubMed und auf Deutsch übersetzt.")
 LOGO = "logo/mvf-logo.png"
 
 SPALTEN = ["Aufgenommen", "Autor", "Publiziert am", "Journal", "Jahr", "Titel",
