@@ -464,9 +464,9 @@
         <span class="chips-label">Schnellwahl:</span>
       </div>
       <div class="hints">
+        <p><b>Vollständigkeit.</b> Auch dieses Portal kann nicht sämtliche Artikel „aller Datenbanken" enthalten — das verhindern Lizenz- und Technikgrenzen. Es bündelt stattdessen die maßgeblichen Suchen, sodass eine Recherche systematisch über alle relevanten Quellen laufen kann.</p>
+        <p><b>Portal vs. Live-Suche.</b> Von den derzeit <b id="cntGesamt"></b> eingebundenen Quellen unterstützen <b id="cntLive"></b> die Direktsuche; sie sind auf der Seite als „Live-Suche" gekennzeichnet. Weitere <b id="cntPortal"></b> sind als „Portal" markiert: Angebote wie LIVIVO, das DRKS oder die WHO-Plattform ICTRP erlauben technisch keine verlinkbaren Ergebnisadressen. Der Klick führt dort auf die Startseite — der Suchbegriff ist anschließend von Hand einzugeben.</p>
         <p><b>Hinweis zu Lizenzen.</b> Mit <span style="color:var(--accent)">Lizenz</span> markierte Quellen (z. B. Web of Science, Scopus, Embase, CINAHL) sind kostenpflichtig — der Zugang läuft meist über Ihre Bibliothek/Institution. Der Link führt zur Startseite bzw. zum institutionellen Login.</p>
-        <p><b>Portal statt Live-Suche.</b> Einige Angebote (LIVIVO, DRKS, GBE-Bund, Fachinstitute) nutzen eine App-Oberfläche ohne direkte Such-URL oder sind Themenportale — dort ist der Suchbegriff nach dem Öffnen einzugeben.</p>
-        <p><b>Vollständigkeit.</b> Keine Einzelseite kann sämtliche Artikel „aller Datenbanken" enthalten — das verhindern Lizenz- und Technikgrenzen. Dieses Portal bündelt stattdessen die maßgeblichen Suchen, sodass eine Recherche systematisch über alle relevanten Quellen laufen kann.</p>
       </div>
       <div class="meta-row">
         <span class="dot"></span>
@@ -753,6 +753,11 @@ CATS.forEach(cat=>{
 });
 
 document.getElementById('dbCount').textContent = DB.length;
+// Die Zahlen im Hinweis 'Portal vs. Live-Suche' aus DB zaehlen, nicht fest
+// eintragen - sonst veralten sie beim naechsten neuen Eintrag unbemerkt.
+document.getElementById('cntGesamt').textContent = DB.length;
+document.getElementById('cntLive').textContent   = DB.filter(x=>x.t==='live').length;
+document.getElementById('cntPortal').textContent = DB.filter(x=>x.t==='portal').length;
 
 // ---- Studien-Frame rendern ----
 document.getElementById('snapDate').textContent = SNAP_DATE;
