@@ -144,6 +144,57 @@ def fetch_pubmed() -> str:
     return r2.text
 
 
+MONATE_NUM = {"Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
+               "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}
+
+
+def _datum_teile(roh: str) -> tuple[int, str]:
+    """PubMed-Datum -> (Genauigkeit, deutsche Schreibweise).
+
+    Genauigkeit 3 = Tag, 2 = Monat, 1 = Jahr, 0 = unbrauchbar.
+    """
+    if not roh:
+        return (0, "")
+    m = re.match(r"^(\d{4})(?:\s+([A-Za-z]{3})[a-z]*)?(?:\s+(\d{1,2}))?", roh.strip())
+    if not m:
+        return (0, "")
+    jahr, mon, tag = m.group(1), m.group(2), m.group(3)
+    if mon and mon[:3] in MONATE_NUM:
+        nr = MONATE_NUM[mon[:3]]
+        if tag:
+            return (3, f"{int(tag):02d}.{nr:02d}.{jahr}")
+        return (2, f"{MONTHS[nr]} {jahr}")
+    return (1, jahr)
+
+
+def fetch_meta(pmids: list[str]) -> dict[str, dict]:
+    """Autor und Publikationsdatum ueber esummary holen.
+
+    Bewusst nicht vom Sprachmodell erraten lassen: Das sind harte Fakten.
+    sortpubdate wird ignoriert - PubMed setzt dort bei reinen Monatsangaben
+    den 1. ein, was einen Tag vortaeuschen wuerde. Genommen wird die
+    genaueste ECHTE Angabe aus pubdate und epubdate.
+    """
+    r = _get("esummary.fcgi",
+             {"db": "pubmed", "retmode": "json", "id": ",".join(pmids)},
+             timeout=60)
+    roh = r.json().get("result", {})
+    aus: dict[str, dict] = {}
+    for pmid in pmids:
+        e = roh.get(pmid)
+        if not e or "error" in e:
+            continue
+        namen = e.get("authors") or []
+        erster = e.get("sortfirstauthor") or (namen[0]["name"] if namen else "")
+        autor = f"{erster} et al." if erster and len(namen) > 1 else erster
+        datum = max(_datum_teile(e.get("pubdate", "")),
+                    _datum_teile(e.get("epubdate", "")),
+                    key=lambda x: x[0])[1]
+        aus[pmid] = {"author": autor, "pubdate": datum}
+    print(f"Metadaten zu {len(aus)}/{len(pmids)} PMIDs geladen.")
+    return aus
+
+
 def pick_studies(abstracts: str) -> list[dict]:
     client = anthropic.Anthropic()
     # Nur strukturierte Ausgabe erzwingen (kein effort/thinking), damit es auch
@@ -182,6 +233,7 @@ def build_block(studies: list[dict]) -> str:
         items.append(
             "  {\n"
             f"    journal:{js(s['journal'])}, year:{js(s['year'])}, pmid:{js(s['pmid'])},\n"
+            f"    author:{js(s.get('author', ''))}, pubdate:{js(s.get('pubdate', ''))},\n"
             f"    title:{js(s['title'])},\n"
             f"    sum:{js(s['sum'])},\n"
             f"    result:{js(s['result'])}\n"
@@ -218,6 +270,7 @@ def update_archive(studies: list[dict]) -> int:
             continue
         entries.append({
             "pmid": s["pmid"], "journal": s["journal"], "year": s["year"],
+            "author": s.get("author", ""), "pubdate": s.get("pubdate", ""),
             "title": s["title"], "sum": s["sum"], "result": s["result"],
             "aufgenommen": heute,
         })
@@ -234,6 +287,9 @@ def update_archive(studies: list[dict]) -> int:
 def main() -> int:
     abstracts = fetch_pubmed()
     studies = pick_studies(abstracts)
+    meta = fetch_meta([s["pmid"] for s in studies])
+    for s in studies:
+        s.update(meta.get(s["pmid"], {"author": "", "pubdate": ""}))
     block = build_block(studies)
     update_archive(studies)
 

@@ -91,6 +91,35 @@ Einrichtung und Kampagnenvorlage: `NEWSLETTER-MAILCHIMP.md` und `newsletter/mail
 
 `scripts/update-studies.ps1` und `scripts/Studien-aktualisieren.cmd` sind eine ältere lokale PowerShell-Variante und werden von der Automatik nicht verwendet.
 
+## Gestaltung: das Erscheinungsbild von m-vf.de
+
+Der Hub übernimmt seit August 2026 Schrift und Farben von **monitor-versorgungsforschung.de** (die Kurzadresse `m-vf.de` leitet dorthin um).
+
+| Merkmal | Wert | Herkunft |
+|---|---|---|
+| Schrift | **Lato** 300/400/700 | dieselbe wie auf m-vf.de, dort ebenfalls selbst gehostet |
+| Hausfarbe | `#0051A1` | Kopfbereich und Akzente der MVF-Seite |
+| Handlungsfarbe | `#BE9E53` | die goldenen Knöpfe („Abonnieren", „Alle News") |
+| Seitengrund | `#EDF2FA` | Flächenfarbe der MVF-Seite |
+| Eckradien | 5–6 px | MVF nutzt 5–6 px |
+
+Das Logo (`logo/mvf-logo.png`) besteht aus **genau zwei Farben**: Blau `#0060A0` und Gold `#C0A060` — es bestätigt die Palette.
+
+**Regeln, die nicht beiläufig gebrochen werden sollten:**
+
+- **Nur Lato.** Keine zweite Schriftfamilie. Die Klasse `.mono` erzeugt ihren technischen Charakter über `font-variant-numeric:tabular-nums`, nicht über eine Monospace-Schrift; `.serif` ist auf `inherit` gesetzt. MVF nutzt durchgängig Lato, auch in Überschriften.
+- **Schriften liegen in `fonts/` und werden selbst ausgeliefert.** Kein Google Fonts: Das wäre ein Verbindungsaufbau zu Dritten und widerspräche den Datenschutzhinweisen. MVF macht es genauso.
+- **Nur die Stärken 300/400/700 existieren.** Zwischenstärken wie 600 lässt der Browser auf 700 einrasten — deshalb überall direkt 700 setzen.
+- **Gold nur auf Knöpfen.** Als kleine Textfarbe erreicht `#BE9E53` nur 3,0:1. Aus demselben Grund trägt die Knopfschrift auf Gold **dunkles** `#2A2207` (6,2:1) und nicht Weiß — die MVF-Seite selbst nutzt dort Weiß mit 2,6:1, das wird bewusst nicht übernommen.
+- **Das Logo wird im Dark Mode nicht umgefärbt**, sondern auf eine weiße Fläche gestellt. Ein `filter:invert` würde den Goldanteil der Wortmarke tilgen.
+- **Kategorien tragen alle die Hausfarbe.** Das `--h`-System in `CATS` besteht weiter, wird aber von `.cat{ --cat:var(--brand); }` überschrieben — ein Regenbogen widerspräche der Zweifarbigkeit. Eine Zeile genügt, um die Farbcodierung zurückzuholen.
+
+## Studienfelder: `author` und `pubdate`
+
+Beide stammen **nicht vom Sprachmodell**, sondern aus PubMeds `esummary` (`fetch_meta()` in `update_studies.py`) — es sind Fakten, keine Interpretation.
+
+Beim Datum wird die **genaueste echte** Angabe aus `pubdate` und `epubdate` genommen. `sortpubdate` ist bewusst ungenutzt: Bei reinen Monatsangaben setzt PubMed dort den 1. ein und täuscht damit einen Tag vor. Fehlt der Tag, steht `Aug. 2026` statt eines erfundenen Datums.
+
 ## Fallstricke
 
 - **Kein HTML-Escaping.** Alle Inhalte werden per `innerHTML`-Stringkonkatenation eingesetzt. Texte mit `<`, `>` oder `&` zerlegen das Markup — beim Anlegen von `DB`- oder `STUDIES`-Einträgen vermeiden bzw. maskieren.

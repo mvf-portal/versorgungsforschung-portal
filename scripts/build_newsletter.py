@@ -87,8 +87,11 @@ def item_html(e: dict) -> str:
     pubmed = utm(f"https://pubmed.ncbi.nlm.nih.gov/{e['pmid']}/", "email", "studie")
     # Journal und Jahr stehen bereits im <title> des Items (und damit in jeder
     # Mailchimp-Vorlage ueber der Zusammenfassung) - hier nicht wiederholen.
+    kopf = "  ·  ".join(x for x in (e.get("author"), e.get("pubdate")) if x)
     return (
-        f'<p style="margin:0 0 10px;font:15px Georgia,serif;color:#333;">'
+        (f'<p style="margin:0 0 8px;font:italic 13px Georgia,serif;color:#666;">'
+         f'{escape(kopf)}</p>' if kopf else '')
+        + f'<p style="margin:0 0 10px;font:15px Georgia,serif;color:#333;">'
         f'{escape(e["sum"])}</p>'
         f'<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">'
         f'<tr><td style="background:#f4f6f4;border-left:3px solid #5a7d3a;padding:10px 14px;'
@@ -140,11 +143,17 @@ def build_feed(entries: list[dict]) -> str:
 
 # ----------------------------------------------------------------- Downloads
 
-SPALTEN = ["Aufgenommen", "Journal", "Jahr", "Titel", "Fragestellung", "Ergebnis", "PMID", "PubMed-Link"]
+KOPFTEXT = ("Ein Service der Knowledge-Datenbank von Monitor Versorgungsforschung. "
+            "Täglich automatisiert KI-kuratiert aus PubMed.")
+LOGO = "logo/mvf-logo.png"
+
+SPALTEN = ["Aufgenommen", "Autor", "Publiziert am", "Journal", "Jahr", "Titel",
+           "Fragestellung", "Ergebnis", "PMID", "PubMed-Link"]
 
 
 def zeile(e: dict) -> list[str]:
-    return [e["aufgenommen"], e["journal"], e["year"], e["title"], e["sum"],
+    return [e["aufgenommen"], e.get("author", ""), e.get("pubdate", ""),
+            e["journal"], e["year"], e["title"], e["sum"],
             e["result"], e["pmid"], f"https://pubmed.ncbi.nlm.nih.gov/{e['pmid']}/"]
 
 
@@ -153,6 +162,10 @@ def write_csv(pfad: str, entries: list[dict]) -> None:
     # Spalten und stellt Umlaute richtig dar.
     buf = io.StringIO(newline="")
     w = csv.writer(buf, delimiter=";", quoting=csv.QUOTE_MINIMAL, lineterminator="\r\n")
+    # Eine Tabelle kann kein Logo aufnehmen - deshalb nur der Kopftext,
+    # abgesetzt durch eine Leerzeile.
+    w.writerow([KOPFTEXT])
+    w.writerow([])
     w.writerow(SPALTEN)
     for e in entries:
         w.writerow(zeile(e))
@@ -185,7 +198,7 @@ def normalize_docx(pfad: str, when: dt.datetime) -> None:
 def write_docx(pfad: str, entries: list[dict], titel: str, stand: str,
                zeitpunkt: dt.datetime) -> None:
     from docx import Document
-    from docx.shared import Pt, RGBColor
+    from docx.shared import Inches, Pt, RGBColor
 
     doc = Document()
     doc.core_properties.title = titel
@@ -194,6 +207,13 @@ def write_docx(pfad: str, entries: list[dict], titel: str, stand: str,
     doc.core_properties.created = zeitpunkt.replace(tzinfo=None)
     doc.core_properties.modified = zeitpunkt.replace(tzinfo=None)
     doc.core_properties.revision = 1
+
+    if os.path.exists(LOGO):
+        doc.add_picture(LOGO, width=Inches(1.9))
+    pk = doc.add_paragraph()
+    rk = pk.add_run(KOPFTEXT)
+    rk.font.size = Pt(9.5)
+    rk.font.color.rgb = RGBColor(0x00, 0x51, 0xA1)
 
     doc.add_heading(titel, level=0)
     p = doc.add_paragraph()
@@ -212,7 +232,8 @@ def write_docx(pfad: str, entries: list[dict], titel: str, stand: str,
         doc.add_heading(e["title"], level=2)
 
         q = doc.add_paragraph()
-        rq = q.add_run(f'{e["journal"]} {e["year"]}  ·  PMID {e["pmid"]}')
+        teile = [x for x in (e.get("author"), e["journal"], e.get("pubdate") or e["year"]) if x]
+        rq = q.add_run("  ·  ".join(teile) + f'  ·  PMID {e["pmid"]}')
         rq.italic = True
         rq.font.size = Pt(9)
         rq.font.color.rgb = RGBColor(0x66, 0x66, 0x66)
