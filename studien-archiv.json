@@ -1,5 +1,50 @@
 [
  {
+  "pmid": "42594509",
+  "journal": "J Am Med Dir Assoc",
+  "year": "2026",
+  "title": "Dokumentationslücke bei eingeschränkter Gelenkbeweglichkeit in Pflegeheimen",
+  "sum": "Die Studie untersuchte die Dokumentation von Gelenkbewegungseinschränkungen und schmerzenden Gelenken bei Pflegeheimbewohnern im Vergleich zur standardisierten klinischen Untersuchung.",
+  "result": "Bei 69% der Bewohner wurde eine eingeschränkte Gelenkbeweglichkeit festgestellt, aber nur in 4% der Fälle dokumentiert. Die Hüftbeweglichkeit war in 51% der Fälle limitiert, wurde aber in keinem Fall dokumentiert. Bewohner mit nicht dokumentierten Bewegungseinschränkungen zeigten signifikant höhere funktionelle Abhängigkeit beim Umlagern (p < 0,001).",
+  "aufgenommen": "2026-08-14"
+ },
+ {
+  "pmid": "42594259",
+  "journal": "JMIR Diabetes",
+  "year": "2026",
+  "title": "Emotionale Belastung durch Alarme bei Diabetes-Technologien",
+  "sum": "Die Studie verglich die Alarmhäufigkeit, emotionale Belastung und Verhaltensreaktionen auf Alarme zwischen Nutzern von kontinuierlichen Glukosemessgeräten, sensorunterstützten Pumpen und automatisierten Insulinabgabesystemen.",
+  "result": "Von 838 Befragten berichteten Nutzer von automatisierten Systemen die höchste Alarmfrequenz (49% mehrmals täglich vs. 35% bzw. 32% in anderen Gruppen, p < 0,001). Nach Adjustment zeigte sich ein erhöhtes Risiko für häufige Alarme (OR 1,98, 95% KI 1,48–2,65) und Überkorrektionen bei niedriger Glukose (OR 1,61, 95% KI 1,20–2,15) bei automatisierten Systemen.",
+  "aufgenommen": "2026-08-14"
+ },
+ {
+  "pmid": "42593670",
+  "journal": "Pharmacoecon Open",
+  "year": "2026",
+  "title": "Chronic Kidney Disease Care Model zur Verbesserung von Patientenergebnissen",
+  "sum": "Die Studie beschreibt ein Entscheidungsmodell zur Quantifizierung von Managementstrategien bei chronischer Nierenerkrankung und deren Kosteneffektivität in den USA.",
+  "result": "Unter Standardbehandlung werden 15% der Patienten von Ursachen unabhängig von Nierenerkrankung sterben (nach durchschnittlich 12 Jahren). Mit optimierter Behandlung erhöht sich dieser Anteil auf 20% (nach 14 Jahren). Leitliniengerechte Behandlung ohne Verzögerung führt zu 0,68 QALYs Lebenszeitgewinn bei Kosten von 47.800 USD pro Patient.",
+  "aufgenommen": "2026-08-14"
+ },
+ {
+  "pmid": "42593400",
+  "journal": "Med Care",
+  "year": "2026",
+  "title": "Algorithmen zur Identifikation klinisch beabsichtigter Medikamentenabsetzungen",
+  "sum": "Die Studie entwickelte algorithmische Verfahren zur Identifikation absichtlicher Medikamentenabsetzungen mittels Textsuche und klinischen Daten für fünf Arzneimittelgruppen.",
+  "result": "Für die Validierungsstichproben betrugen Sensitivität und Spezifität für den vollständigen Algorithmus: orale Antidiabetika 80% und 85% (n=467), Statine 75% und 95% (n=282), Antihypertensiva 82% und 75% (n=599), Blasen-Antimuscarinergika 77% und 80% (n=80), Antikoagulanzien 74% und 78% (n=160).",
+  "aufgenommen": "2026-08-14"
+ },
+ {
+  "pmid": "42591500",
+  "journal": "Front Pediatr",
+  "year": "2026",
+  "title": "Mechanisch beatmete Kinder in pädiatrischen vs. allgemeinen Intensivstationen in Japan",
+  "sum": "Die Studie verglich klinische Ergebnisse mechanisch beatmeter Kinder in spezialisierten pädiatrischen Intensivstationen (PICU) versus allgemeinen Intensivstationen (GICU).",
+  "result": "Von 48.106 Patienten wurden 36% auf PICUs behandelt. Nach Propensity-Score-Analyse zeigte PICU-Versorgung signifikant niedrigere Krankenhaussterblichkeit (2,73% vs. 3,42%; OR 0,79, 95% KI 0,69–0,91; p = 0,001), aber längere Gesamtaufenthalte (22,74 vs. 22,13 Tage; p < 0,001).",
+  "aufgenommen": "2026-08-14"
+ },
+ {
   "pmid": "42589943",
   "journal": "J Clin Med",
   "year": "2026",

@@ -506,43 +506,43 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (wird woechentlich vom Cloud-Agenten ersetzt) ===
-const SNAP_DATE = "13. Aug. 2026, 15:14 Uhr";
+const SNAP_DATE = "14. Aug. 2026, 09:17 Uhr";
 const STUDIES = [
   {
+    journal:"J Am Med Dir Assoc", year:"2026", pmid:"42594509",
+    title:"Dokumentationslücke bei eingeschränkter Gelenkbeweglichkeit in Pflegeheimen",
+    sum:"Die Studie untersuchte die Dokumentation von Gelenkbewegungseinschränkungen und schmerzenden Gelenken bei Pflegeheimbewohnern im Vergleich zur standardisierten klinischen Untersuchung.",
+    result:"Bei 69% der Bewohner wurde eine eingeschränkte Gelenkbeweglichkeit festgestellt, aber nur in 4% der Fälle dokumentiert. Die Hüftbeweglichkeit war in 51% der Fälle limitiert, wurde aber in keinem Fall dokumentiert. Bewohner mit nicht dokumentierten Bewegungseinschränkungen zeigten signifikant höhere funktionelle Abhängigkeit beim Umlagern (p &lt; 0,001)."
+  },
+  {
+    journal:"JMIR Diabetes", year:"2026", pmid:"42594259",
+    title:"Emotionale Belastung durch Alarme bei Diabetes-Technologien",
+    sum:"Die Studie verglich die Alarmhäufigkeit, emotionale Belastung und Verhaltensreaktionen auf Alarme zwischen Nutzern von kontinuierlichen Glukosemessgeräten, sensorunterstützten Pumpen und automatisierten Insulinabgabesystemen.",
+    result:"Von 838 Befragten berichteten Nutzer von automatisierten Systemen die höchste Alarmfrequenz (49% mehrmals täglich vs. 35% bzw. 32% in anderen Gruppen, p &lt; 0,001). Nach Adjustment zeigte sich ein erhöhtes Risiko für häufige Alarme (OR 1,98, 95% KI 1,48–2,65) und Überkorrektionen bei niedriger Glukose (OR 1,61, 95% KI 1,20–2,15) bei automatisierten Systemen."
+  },
+  {
+    journal:"Pharmacoecon Open", year:"2026", pmid:"42593670",
+    title:"Chronic Kidney Disease Care Model zur Verbesserung von Patientenergebnissen",
+    sum:"Die Studie beschreibt ein Entscheidungsmodell zur Quantifizierung von Managementstrategien bei chronischer Nierenerkrankung und deren Kosteneffektivität in den USA.",
+    result:"Unter Standardbehandlung werden 15% der Patienten von Ursachen unabhängig von Nierenerkrankung sterben (nach durchschnittlich 12 Jahren). Mit optimierter Behandlung erhöht sich dieser Anteil auf 20% (nach 14 Jahren). Leitliniengerechte Behandlung ohne Verzögerung führt zu 0,68 QALYs Lebenszeitgewinn bei Kosten von 47.800 USD pro Patient."
+  },
+  {
+    journal:"Med Care", year:"2026", pmid:"42593400",
+    title:"Algorithmen zur Identifikation klinisch beabsichtigter Medikamentenabsetzungen",
+    sum:"Die Studie entwickelte algorithmische Verfahren zur Identifikation absichtlicher Medikamentenabsetzungen mittels Textsuche und klinischen Daten für fünf Arzneimittelgruppen.",
+    result:"Für die Validierungsstichproben betrugen Sensitivität und Spezifität für den vollständigen Algorithmus: orale Antidiabetika 80% und 85% (n=467), Statine 75% und 95% (n=282), Antihypertensiva 82% und 75% (n=599), Blasen-Antimuscarinergika 77% und 80% (n=80), Antikoagulanzien 74% und 78% (n=160)."
+  },
+  {
+    journal:"Front Pediatr", year:"2026", pmid:"42591500",
+    title:"Mechanisch beatmete Kinder in pädiatrischen vs. allgemeinen Intensivstationen in Japan",
+    sum:"Die Studie verglich klinische Ergebnisse mechanisch beatmeter Kinder in spezialisierten pädiatrischen Intensivstationen (PICU) versus allgemeinen Intensivstationen (GICU).",
+    result:"Von 48.106 Patienten wurden 36% auf PICUs behandelt. Nach Propensity-Score-Analyse zeigte PICU-Versorgung signifikant niedrigere Krankenhaussterblichkeit (2,73% vs. 3,42%; OR 0,79, 95% KI 0,69–0,91; p = 0,001), aber längere Gesamtaufenthalte (22,74 vs. 22,13 Tage; p &lt; 0,001)."
+  },
+  {
     journal:"J Clin Med", year:"2026", pmid:"42589943",
-    title:"Assoziation von Türen-zu-Ballon-Zeit mit Komplikationen und Krankenhausaufenthalts-dauer bei STEMI-Patienten",
-    sum:"Diese prospektive Beobachtungsstudie untersuchte, ob die Türen-zu-Ballon-Zeit (D2B) bei ST-Hebungs-Myokardinfarkt (STEMI) postoperative Komplikationen und Krankenhausaufenthaltsauer vorhersagt.",
-    result:"Eine verzögerte D2B-Zeit (≥2 h) war mit 2,22-fach erhöhtem Komplikationsrisiko assoziiert; jede zusätzliche Stunde Verzögerung führte zu 0,294 Tagen mehr Krankenhausaufenthalt. Ein Median D2B von 108 Minuten wurde beobachtet (IQR 65–395)."
-  },
-  {
-    journal:"Healthcare (Basel)", year:"2026", pmid:"42588405",
-    title:"Simulation der Effekte von Mindestfallzahl-Schwellenwerten auf die geografische Erreichbarkeit neurochirurgischer Kliniken in Deutschland",
-    sum:"Diese Simulationsstudie untersuchte die Auswirkungen unterschiedlicher Mindestfallzahl-Schwellenwerte auf die geografische Erreichbarkeit neurochirurgischer Versorgung in Deutschland.",
-    result:"Basale Erreichbarkeit innerhalb 40 Minuten Fahrtzeit (A2N40) betrug 66,6 % der Fläche und 84,7 % der Bevölkerung. Eine Erhöhung um einen Perzentilpunkt der Fallzahl-Schwelle reduzierte A2N40 um durchschnittlich 0,70 Prozentpunkte, was etwa 305.000 zusätzliche Menschen betrifft."
-  },
-  {
-    journal:"Healthcare (Basel)", year:"2026", pmid:"42588304",
-    title:"Evaluation eines Stärkenbasierten Resilienz-Programms auf Widerstandskraft, wahrgenommenen Stress und depressive Symptome bei Schülern in Thailand",
-    sum:"Diese quasi-experimentelle Single-Group-Studie evaluierte ein sechswöchiges Resilienz-Programm bei 26 sekundarschul-Schülern mit Messungen zu Baseline, direkt nach Intervention und nach einem Monat.",
-    result:"Resilienz stieg von M=64,00 (Baseline) auf M=76,46 (direkt post) und M=78,19 (ein Monat später; p&lt;0,001, η²=0,752). Wahrgenommener Stress sank von M=20,62 auf M=13,04 und M=9,62 (p&lt;0,001, η²=0,808). Depressive Symptome sanken von M=7,27 auf M=5,81 und M=4,88 (p&lt;0,001, η²=0,371)."
-  },
-  {
-    journal:"BMJ Open Qual", year:"2026", pmid:"42586586",
-    title:"Verkürzung der postoperativen Aufenthaltsdauer bei Kaiserschnitt: eine systemische Qualitätsverbesserungs-Initiative",
-    sum:"Diese Single-Center-QI-Initiative untersuchte, ob ein bundled Intervention zur Verkürzung der Aufenthaltsdauer nach unkompliziertem Kaiserschnitt ohne Sicherheitskompromisse möglich ist.",
-    result:"Die Entlassungsquote bis postoperativer Tag 3 (POD3) stieg von 80,0 % (Baseline) auf 84,5 % gesamt und auf 92,5 % nach vollständiger Interventions-Implementierung. Kosteneinsparungen betrugen SGD 70.884; kein signifikanter Anstieg von 30-Tage-Readmissionen."
-  },
-  {
-    journal:"J Infect Chemother", year:"2026", pmid:"42586261",
-    title:"Entwicklung und Validierung des N-DROP-Scores zur Vorhersage der 30-Tage-Sterblichkeit bei Pflegeheim-assoziierten Pneumonien",
-    sum:"Diese Studie entwickelte mittels LASSO-Regression ein verbessertes Modell zur Vorhersage der in-Hospital-Sterblichkeit bei Pflegeheim-assoziierten Pneumonien (NHCAP) basierend auf Faktoren jenseits des klassischen A-DROP-Scores.",
-    result:"Die 30-Tage-Sterblichkeit in 116.185 Patienten betrug 11,7 %. Der N-DROP-Score zeigte verbesserte Diskriminationsfähigkeit (C-Statistik 0,746; 95 % KI 0,734–0,757) gegenüber A-DROP (0,708; 95 % KI 0,695–0,720; p&lt;0,001)."
-  },
-  {
-    journal:"Health Serv Res", year:"2026", pmid:"42584215",
-    title:"Effekt von Wert-basierten Zahlungsmodellen in der Primärversorgung auf unnötige Diagnostik bei Medicaid-Versicherten in North Carolina",
-    sum:"Diese Differenz-in-Differenzen-Studie untersuchte die Auswirkung des Advanced Medical Home-Programms (AMH) auf die Nutzung von Low-Value-Care-Services bei 1,34 Millionen Medicaid-Beneficiaries.",
-    result:"Baseline Low-Value-Care-Raten waren ähnlich zwischen AMH-Tier-3- und Vergleichspraxen (z. B. Fußabdruck-Bildgebung 31,2 % vs. 28,9 %). Obwohl Raten im Zeitverlauf sanken, waren adjustierte Differenz-in-Differenzen-Schätzungen klein und statistisch nicht signifikant für alle untersuchten Low-Value-Outcomes."
+    title:"Türöffnung-zu-Ballon-Verzögerung bei ST-Elevation Myokardinfarkt",
+    sum:"Die Studie untersuchte die Assoziation zwischen Türöffnung-zu-Ballon-Zeit und Komplikationen sowie Krankenhausverweildauer bei STEMI-Patienten.",
+    result:"Der Median der Türöffnung-zu-Ballon-Zeit betrug 108 Minuten (IQR 65–395). Verzögerung (≥2 Stunden) war mit 2,22-fach erhöhtem Komplikationsrisiko assoziiert (vs. &lt;2 Stunden). Jede zusätzliche Stunde Verzögerung führte zu 0,294 Tagen längerer Krankenhausverweildauer. Patienten mit HTN und DM hatten 1,24- bzw. 1,18-fach erhöhtes Komplikationsrisiko."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
