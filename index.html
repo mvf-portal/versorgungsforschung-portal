@@ -433,9 +433,9 @@
           <h4>2. Charakter dieses Angebots</h4>
           <p>Dieses Portal ist eine statische Informationsseite. Es setzt keine Cookies, nutzt keine Analyse- oder Tracking-Dienste, versendet keinen Newsletter und bietet keine Eingabeformulare. Personenbezogene Daten der Nutzerinnen und Nutzer werden durch das Portal selbst nicht erhoben oder gespeichert.</p>
           <h4>3. Hosting (GitHub Pages)</h4>
-          <p>Die Auslieferung erfolgt über GitHub Pages (GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Dabei verarbeitet GitHub technisch notwendige Zugriffsdaten (u. a. IP-Adresse, Datum und Uhrzeit, angeforderte Datei, Browsertyp) in Server-Logdateien zum sicheren Betrieb. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Näheres im <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>. Die Übermittlung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln.</p>
+          <p>Die Auslieferung erfolgt über GitHub Pages (GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Dabei verarbeitet GitHub technisch notwendige Zugriffsdaten (u. a. IP-Adresse, Datum und Uhrzeit, angeforderte Datei, Browsertyp) in Server-Logdateien zum sicheren Betrieb. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Näheres im <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>. Die Übermittlung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln.</p>
           <h4>4. Externe Links</h4>
-          <p>Das Portal verlinkt auf externe Datenbanken, Studien und Institutionen (z. B. PubMed, Cochrane, LIVIVO). Mit dem Anklicken verlassen Sie dieses Angebot; die aufgerufenen Anbieter erhalten Ihre IP-Adresse und ggf. weitere Daten und verarbeiten diese nach ihren eigenen Bestimmungen. Hierfür sind die jeweiligen Anbieter verantwortlich.</p>
+          <p>Das Portal verlinkt auf externe Datenbanken, Studien und Institutionen (z. B. PubMed, Cochrane, LIVIVO). Mit dem Anklicken verlassen Sie dieses Angebot; die aufgerufenen Anbieter erhalten Ihre IP-Adresse, die Angabe, dass Sie von diesem Portal kommen (Referrer), und ggf. weitere Daten und verarbeiten diese nach ihren eigenen Bestimmungen. Hierfür sind die jeweiligen Anbieter verantwortlich.</p>
           <h4>5. Ihre Rechte</h4>
           <p>Sie haben das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21 DSGVO) sowie das Recht auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO). Zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW).</p>
           <h4>6. Stand</h4>
@@ -492,7 +492,7 @@ const DB = [
   {c:"openaccess", n:"Zenodo", d:"Offenes Repositorium (CERN) für Artikel, Daten & Preprints.", t:"live", u:"https://zenodo.org/search?q=%s"},
 
   // 4 — Deutschsprachig
-  {c:"deutsch", n:"Monitor Versorgungsforschung", d:"Deutsche Fachzeitschrift für Politik, Praxis & Forschung der Versorgung — durchsuchbares Facharchiv.", t:"live", u:"https://www.monitor-versorgungsforschung.de/?s=%s"},
+  {c:"deutsch", n:"Monitor Versorgungsforschung", d:"Deutsche Fachzeitschrift für Politik, Praxis & Forschung der Versorgung — durchsuchbares Facharchiv.", t:"live", u:"https://www.monitor-versorgungsforschung.de/?s=%s&utm_source=knowledge-hub&utm_medium=referral&utm_campaign=wissen-portal"},
   {c:"deutsch", n:"DNVF", d:"Deutsches Netzwerk Versorgungsforschung — Fachgesellschaft, Kongresse & Memoranden.", t:"live", u:"https://www.dnvf.de/suche.html?keywords=%s"},
   {c:"deutsch", n:"LIVIVO (ZB MED)", d:"Größtes deutschsprachiges Suchportal der Lebenswissenschaften — Begriff nach Öffnen eingeben.", t:"portal", u:"https://www.livivo.de/"},
   {c:"deutsch", n:"German Medical Science (GMS)", d:"Open-Access-Portal deutscher medizinischer Fachgesellschaften (AWMF/ZB MED/DIMDI).", t:"portal", u:"https://www.egms.de/"},
@@ -612,7 +612,7 @@ CATS.forEach(cat=>{
 
   items.forEach(x=>{
     const a = document.createElement('a');
-    a.className='card'; a.target='_blank'; a.rel='noopener noreferrer';
+    a.className='card'; a.target='_blank'; a.rel='noopener';
     const badge = x.t==='live' ? '<span class="badge live">Live-Suche</span>'
                 : x.t==='lic' ? '<span class="badge lic">Lizenz</span>'
                 : '<span class="badge portal">Portal</span>';
@@ -642,10 +642,10 @@ STUDIES.forEach(s=>{
   art.innerHTML =
     '<div class="study-top"><span class="study-journal">'+s.journal+'</span>'+
     '<span class="study-year">'+s.year+'</span></div>'+
-    '<a class="study-title" href="'+url+'" target="_blank" rel="noopener noreferrer">'+s.title+'</a>'+
+    '<a class="study-title" href="'+url+'" target="_blank" rel="noopener">'+s.title+'</a>'+
     '<p class="study-sum">'+s.sum+'</p>'+
     '<div class="study-result"><span class="rlabel">Ergebnis</span>'+s.result+'</div>'+
-    '<a class="study-src" href="'+url+'" target="_blank" rel="noopener noreferrer">PubMed · PMID '+s.pmid+' ↗</a>';
+    '<a class="study-src" href="'+url+'" target="_blank" rel="noopener">PubMed · PMID '+s.pmid+' ↗</a>';
   studiesList.appendChild(art);
 });
 
@@ -761,7 +761,7 @@ function ladeArchiv(){
           return '<div class="arch-item">'
                + '<div class="arch-top"><span class="arch-journal">'+e.journal+'</span>'
                + '<span class="arch-year">'+e.year+'</span></div>'
-               + '<a class="arch-title" href="'+url+'" target="_blank" rel="noopener noreferrer">'+e.title+'</a>'
+               + '<a class="arch-title" href="'+url+'" target="_blank" rel="noopener">'+e.title+'</a>'
                + '<p class="arch-result">'+e.result+'</p></div>';
         }).join('');
         return '<div class="arch-day"><div class="arch-date">'+datumLang(tag)
