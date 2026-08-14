@@ -30,7 +30,7 @@ jobs:
           python-version: "3.12"
 
       - name: Abhängigkeiten installieren
-        run: pip install --quiet "anthropic>=0.40" requests tzdata
+        run: pip install --quiet "anthropic>=0.40" requests tzdata python-docx
 
       - name: Studienliste aktualisieren
         env:
@@ -39,17 +39,24 @@ jobs:
           # SEARCH_TERM: '"health services research"'   # optional: anderer Suchbegriff
         run: python scripts/update_studies.py
 
+      # Baut RSS-Feed (Mailchimp) und Download-Dateien aus dem Archiv.
+      # Braucht weder API-Key noch Netz – liest nur studien-archiv.json.
+      - name: Newsletter-Feed & Downloads erzeugen
+        run: python scripts/build_newsletter.py
+
       - name: Committen & pushen (nur bei Änderung)
         id: commit
+        env:
+          DATEIEN: index.html studien-archiv.json studien-feed.xml download
         run: |
-          if [ -z "$(git status --porcelain index.html studien-archiv.json)" ]; then
+          if [ -z "$(git status --porcelain $DATEIEN)" ]; then
             echo "Keine Änderung – nichts zu committen."
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name  "VF-Portal Bot"
           git config user.email "stegmaier@m-vf.de"
-          git add index.html studien-archiv.json
+          git add $DATEIEN
           git commit -m "Studien-Update $(TZ=Europe/Berlin date +%d.%m.%Y)"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"

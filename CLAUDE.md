@@ -65,6 +65,24 @@ Die einzige Stelle, an der die Seite **nachlädt**: Der `<details>`-Ordner unter
 
 `update_studies.py` schreibt die Datei bei jedem Lauf fort; der Workflow committet sie zusammen mit `index.html`.
 
+### Newsletter-Feed & Download-Dateien
+
+`scripts/build_newsletter.py` erzeugt aus `studien-archiv.json` fünf Dateien, die der Workflow mitcommittet:
+
+| Datei | Zweck |
+|---|---|
+| `studien-feed.xml` | RSS 2.0 für Mailchimps RSS-to-Email. Ein `<item>` je Studie, **GUID = PMID** — dadurch versendet Mailchimp keine Studie doppelt. |
+| `download/studien-aktuell.{docx,csv}` | nur der jüngste Tag |
+| `download/studien-archiv.{docx,csv}` | der vollständige Bestand |
+
+Das Skript liest **nur** das Archiv — kein API-Key, kein Netz. Es ist deshalb jederzeit einzeln aufrufbar (`py scripts/build_newsletter.py`, benötigt `python-docx`).
+
+**Die Ausgabe ist bewusst deterministisch:** Alle Zeitstempel — `lastBuildDate`, der „Stand" im Word-Dokument, die Metadaten und sogar die ZIP-Einträge des docx (`normalize_docx()`) — werden aus dem Archivinhalt abgeleitet, nicht aus der Systemuhr. Zwei Läufe erzeugen bitgleiche Dateien. Ohne das entstünde täglich ein Commit samt Pages-Build, auch an Tagen ohne neue Studien. **Wer hier Zeitstempel einführt, bricht diese Eigenschaft.**
+
+Das `pubDate` eines Items zieht den Rang sekundenweise **ab**: Mailchimp sortiert nach `pubDate`, die erste Studie der Tagesauswahl braucht also den spätesten Zeitstempel.
+
+Einrichtung und Kampagnenvorlage: `NEWSLETTER-MAILCHIMP.md` und `newsletter/mailchimp-vorlage.html`. Die Vorlage ist Tabellen-Layout mit Inline-Styles — Outlook rendert mit der Word-Engine und kann kein modernes CSS. Sichtbarer Text dort **mit echten Umlauten** (die ASCII-Umschreibungen in den Python-Kommentaren sind eine Code-Konvention und gehören nicht in Lesertext).
+
 ### Studien aktualisieren
 
 **Automatisch, täglich** — das ist der aktive Weg: `.github/workflows/update-studies.yml` läuft um 06:00 UTC (und per *Run workflow* manuell), ruft `scripts/update_studies.py` auf → PubMed → Claude-API (`claude-haiku-4-5`, Secret `ANTHROPIC_API_KEY`) → Marker-Block ersetzen → commit & push. Einrichtung dokumentiert in `EINRICHTUNG-GITHUB-ACTIONS.md`.
