@@ -87,6 +87,20 @@ Fuer jede Studie:
 - result: Deutsch, die konkreten Zahlen/Befunde + ein kurzer Einordnungssatz.
   Deutsches Zahlenformat mit Komma (z. B. 0,63).
 
+WICHTIG - Fachterminologie: Etablierte englische Fachbegriffe NICHT eindeutschen.
+Sie sind auch im deutschen Fachdeutsch stehende Begriffe; eine woertliche Uebersetzung
+wirkt unprofessionell und erschwert das Wiederfinden. Beispiele fuer Begriffe, die
+englisch bleiben: Door-to-Balloon-Zeit, Patient-Reported Outcomes, Shared Decision
+Making, Case Management, Disease Management, Public Health, Screening, Follow-up,
+Outcome, Adherence, Value-Based Care, Hazard Ratio, Odds Ratio, Confounder, Baseline,
+Setting, Cluster. Gaengige Abkuerzungen ebenfalls unveraendert lassen: STEMI, COPD,
+ICU, PROM, DRG, ACSC.
+Faustregel: Wuerde eine deutsche Fachzeitschrift wie Monitor Versorgungsforschung den
+Begriff englisch stehen lassen, dann tue es auch. Im Zweifel englisch belassen und bei
+Bedarf eine kurze deutsche Erlaeuterung in Klammern ergaenzen.
+Umgekehrt gilt: Wo es ein gebraeuchliches deutsches Fachwort gibt (Verweildauer,
+Hausarztkontakt, Nutzenbewertung, Fallzahl), dieses verwenden.
+
 Gib ausschliesslich das geforderte JSON zurueck.
 
 === ABSTRACTS ===
