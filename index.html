@@ -220,6 +220,19 @@
   a.study-src:hover{ color:var(--brand); }
   .studies-note{ font-size:11px; color:var(--ink-faint); line-height:1.45; padding:2px 2px 0; flex:0 0 auto; }
 
+  /* ---------- Download-Leisten ---------- */
+  .dl-row{ display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-top:10px; }
+  .dl-label{ font-size:11px; color:var(--ink-faint); }
+  .dl-btn{
+    font-size:11.5px; font-family:inherit; font-weight:600; color:var(--ink-soft);
+    background:var(--card-2); border:1px solid var(--line); border-radius:7px;
+    padding:5px 10px; cursor:pointer; transition:border-color .14s, color .14s;
+  }
+  .dl-btn:hover:not(:disabled){ border-color:var(--brand); color:var(--brand); }
+  .dl-btn:disabled{ opacity:.4; cursor:not-allowed; }
+  .dl-btn:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+  .archive .dl-row{ margin:0; padding:10px 14px 4px; border-bottom:1px solid var(--line-soft); }
+
   /* ---------- Ordner „Ältere Suchergebnisse" ---------- */
   .archive{
     margin-top:10px; border:1px solid var(--line); border-radius:11px;
@@ -368,11 +381,21 @@
     <div class="studies-head">
       <div class="studies-title"><span class="dot"></span>Neueste Studien &amp; Ergebnisse</div>
       <div class="studies-sub">Quelle: <b>PubMed</b>, nach Datum sortiert · jede Studie mit deutscher Zusammenfassung · Zuletzt aktualisiert: <b id="snapDate">Momentaufnahme</b></div>
+      <div class="dl-row">
+        <span class="dl-label">Download:</span>
+        <button class="dl-btn" id="dlAktuellDoc" type="button" title="Als Word-Dokument herunterladen">⤓ Word</button>
+        <button class="dl-btn" id="dlAktuellCsv" type="button" title="Als Tabelle für Excel herunterladen">⤓ Excel</button>
+      </div>
     </div>
     <div class="studies-list" id="studiesList"></div>
 
     <details class="archive" id="archive" open>
       <summary id="archiveSummary">Ältere Suchergebnisse</summary>
+      <div class="dl-row">
+        <span class="dl-label">Download:</span>
+        <button class="dl-btn" id="dlArchivDoc" type="button" disabled title="Als Word-Dokument herunterladen">⤓ Word</button>
+        <button class="dl-btn" id="dlArchivCsv" type="button" disabled title="Als Tabelle für Excel herunterladen">⤓ Excel</button>
+      </div>
       <div class="archive-body" id="archiveBody">
         <p class="arch-status">Wird geladen …</p>
       </div>
@@ -626,6 +649,82 @@ STUDIES.forEach(s=>{
   studiesList.appendChild(art);
 });
 
+// ---- Download der Studienlisten (Word / Excel) ----
+// Bewusst ohne Fremdbibliothek: Word oeffnet HTML mit der Endung .doc,
+// Excel oeffnet CSV mit Semikolon und UTF-8-BOM. Die Seite bleibt eigenstaendig.
+
+// Die Texte liegen HTML-maskiert vor (z. B. "p &lt; 0,001"), weil sie per innerHTML
+// eingesetzt werden. Fuer Dateien muss das zurueckverwandelt werden.
+function alsKlartext(v){
+  const t = document.createElement('textarea');
+  t.innerHTML = (v == null ? '' : String(v));
+  return t.value;
+}
+function pubmedUrl(pmid){ return 'https://pubmed.ncbi.nlm.nih.gov/' + pmid + '/'; }
+function htmlEsc(v){
+  return alsKlartext(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function dateiStempel(){
+  const d = new Date(), p = n => String(n).padStart(2,'0');
+  return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate());
+}
+function speichern(dateiname, inhalt, mime){
+  const url = URL.createObjectURL(new Blob([inhalt], {type: mime}));
+  const a = document.createElement('a');
+  a.href = url; a.download = dateiname; a.style.display = 'none';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url), 2000);
+}
+
+function baueCSV(liste, mitDatum){
+  const feld = v => '"' + alsKlartext(v).replace(/"/g,'""') + '"';
+  const kopf = (mitDatum ? ['Aufgenommen am'] : [])
+    .concat(['Journal','Jahr','Titel','Fragestellung','Ergebnis','PMID','PubMed-Link']);
+  const zeilen = [kopf.map(feld).join(';')];
+  liste.forEach(s=>{
+    zeilen.push((mitDatum ? [s.aufgenommen || ''] : [])
+      .concat([s.journal, s.year, s.title, s.sum, s.result, s.pmid, pubmedUrl(s.pmid)])
+      .map(feld).join(';'));
+  });
+  // Das BOM explizit als Escape-Sequenz: als wortwoertliches Zeichen ginge es
+  // beim Speichern unsichtbar verloren. Ohne BOM zeigt deutsches Excel Umlaute falsch.
+  return '\uFEFF' + zeilen.join('\r\n');
+}
+
+function baueDoc(titel, untertitel, liste, mitDatum){
+  const eintraege = liste.map(s =>
+      '<h2 style="font-size:13pt;margin:16pt 0 2pt">' + htmlEsc(s.title) + '</h2>'
+    + '<p style="margin:0 0 5pt;color:#555"><i>' + htmlEsc(s.journal) + '</i> ' + htmlEsc(s.year)
+    + (mitDatum && s.aufgenommen ? ' &middot; aufgenommen am ' + htmlEsc(s.aufgenommen) : '') + '</p>'
+    + '<p style="margin:0 0 5pt">' + htmlEsc(s.sum) + '</p>'
+    + '<p style="margin:0 0 5pt"><b>Ergebnis:</b> ' + htmlEsc(s.result) + '</p>'
+    + '<p style="margin:0 0 12pt;font-size:9pt">PMID ' + htmlEsc(s.pmid) + ' &ndash; '
+    + '<a href="' + pubmedUrl(s.pmid) + '">' + pubmedUrl(s.pmid) + '</a></p>'
+  ).join('');
+  return '<html xmlns:o="urn:schemas-microsoft-com:office:office" '
+    + 'xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
+    + '<head><meta charset="utf-8"><title>' + htmlEsc(titel) + '</title></head>'
+    + '<body style="font-family:Calibri,Arial,sans-serif;font-size:11pt">'
+    + '<h1 style="font-size:16pt;margin:0 0 3pt">' + htmlEsc(titel) + '</h1>'
+    + '<p style="margin:0 0 16pt;color:#555">' + htmlEsc(untertitel) + '</p>'
+    + eintraege
+    + '<p style="margin-top:20pt;font-size:8.5pt;color:#777">Quelle: Knowledge-Hub '
+    + 'Versorgungsforschung, wissen.m-vf.de &ndash; ein Angebot von Monitor Versorgungsforschung. '
+    + 'Studiendaten aus PubMed (U.S. National Library of Medicine).</p></body></html>';
+}
+
+const DOC_MIME = 'application/msword';
+const CSV_MIME = 'text/csv;charset=utf-8';
+
+document.getElementById('dlAktuellDoc').addEventListener('click', ()=>{
+  speichern('MVF-Knowledge-Hub_Neueste-Studien_'+dateiStempel()+'.doc',
+    baueDoc('Neueste Studien & Ergebnisse', 'Stand: '+alsKlartext(SNAP_DATE), STUDIES, false), DOC_MIME);
+});
+document.getElementById('dlAktuellCsv').addEventListener('click', ()=>{
+  speichern('MVF-Knowledge-Hub_Neueste-Studien_'+dateiStempel()+'.csv',
+    baueCSV(STUDIES, false), CSV_MIME);
+});
+
 // ---- Ordner „Ältere Suchergebnisse" ----
 // Standardmaessig aufgeklappt. Das Archiv liegt in einer eigenen Datei, damit
 // index.html nicht mit jedem Tag weiterwaechst; geladen wird es einmal pro Aufruf.
@@ -633,6 +732,7 @@ const archiveEl = document.getElementById('archive');
 const archiveBody = document.getElementById('archiveBody');
 const archiveSummary = document.getElementById('archiveSummary');
 let archivGeladen = false;
+let archivListe = [];   // gefilterte Liste fuer den Download
 
 const MONATE = ['Jan.','Feb.','März','Apr.','Mai','Juni','Juli','Aug.','Sept.','Okt.','Nov.','Dez.'];
 function datumLang(iso){
@@ -668,6 +768,9 @@ function ladeArchiv(){
              + ' · '+tage[tag].length+' Studien</div>'+items+'</div>';
       }).join('');
       archiveSummary.textContent = 'Ältere Suchergebnisse ('+aeltere.length+')';
+      archivListe = aeltere;
+      document.getElementById('dlArchivDoc').disabled = false;
+      document.getElementById('dlArchivCsv').disabled = false;
     })
     .catch(()=>{
       archivGeladen = false;   // beim naechsten Aufklappen erneut versuchen
@@ -680,6 +783,18 @@ function ladeArchiv(){
 // falls er zuvor geschlossen wurde oder der erste Versuch fehlschlug.
 archiveEl.addEventListener('toggle', ()=>{ if(archiveEl.open) ladeArchiv(); });
 if(archiveEl.open) ladeArchiv();
+
+document.getElementById('dlArchivDoc').addEventListener('click', ()=>{
+  if(!archivListe.length) return;
+  speichern('MVF-Knowledge-Hub_Aeltere-Suchergebnisse_'+dateiStempel()+'.doc',
+    baueDoc('Ältere Suchergebnisse', archivListe.length+' Studien, nach Aufnahmetag sortiert',
+            archivListe, true), DOC_MIME);
+});
+document.getElementById('dlArchivCsv').addEventListener('click', ()=>{
+  if(!archivListe.length) return;
+  speichern('MVF-Knowledge-Hub_Aeltere-Suchergebnisse_'+dateiStempel()+'.csv',
+    baueCSV(archivListe, true), CSV_MIME);
+});
 
 // ---- search wiring ----
 const input = document.getElementById('q');
