@@ -445,7 +445,7 @@
         <img src="logo/mvf-logo.png" width="1236" height="327" alt="Monitor Versorgungsforschung">
       </a>
     </div>
-    <p class="lede">Ein Suchbegriff, alle Quellen. Geben Sie bitte unten einen Begriff ein — jede Datenbankkarte öffnet damit direkt die passende Live-Suche in einem neuen Tab. Deutschsprachige und internationale Fachdatenbanken, Evidenzsynthesen, Open-Access-Discovery, Studienregister, Institutionen und Wege zum Volltext an einem Ort. Jeden Tag werden die Suchergebnisse automatisch aktualisiert. Kuratiert von einer KI für die tägliche Recherchearbeit. Ein Service von Monitor Versorgungsforschung.</p>
+    <p class="lede">Ein Suchbegriff, alle Datenbanken. Geben Sie bitte unten einen Begriff ein — jede Datenbankkarte öffnet damit direkt die passende Live-Suche in einem neuen Tab. Deutschsprachige und internationale Fachdatenbanken, Evidenzsynthesen, Open-Access-Discovery, Studienregister, Institutionen und Wege zum Volltext an einem Ort. Jeden Tag werden die Suchergebnisse automatisch aktualisiert. Kuratiert von einer KI für die tägliche Recherchearbeit. Ein Service von Monitor Versorgungsforschung.</p>
 
     <div class="panel">
       <label class="panel-label" for="q">Suchbegriff — gilt für alle Live-Suchen</label>
@@ -464,9 +464,9 @@
         <span class="chips-label">Schnellwahl:</span>
       </div>
       <div class="hints">
-        <p><b>Vollständigkeit.</b> Auch dieses Portal kann nicht sämtliche Artikel „aller Datenbanken" enthalten — das verhindern Lizenz- und Technikgrenzen. Es bündelt stattdessen die maßgeblichen Suchen, sodass eine Recherche systematisch über alle relevanten Quellen laufen kann.</p>
-        <p><b>Portal vs. Live-Suche.</b> Von den derzeit <b id="cntGesamt"></b> eingebundenen Quellen unterstützen <b id="cntLive"></b> die Direktsuche; sie sind auf der Seite als „Live-Suche" gekennzeichnet. Weitere <b id="cntPortal"></b> sind als „Portal" markiert: Angebote wie LIVIVO, das DRKS oder die WHO-Plattform ICTRP erlauben technisch keine verlinkbaren Ergebnisadressen. Der Klick führt dort auf die Startseite — der Suchbegriff ist anschließend von Hand einzugeben.</p>
-        <p><b>Hinweis zu Lizenzen.</b> Mit <span style="color:var(--accent)">Lizenz</span> markierte Quellen (z. B. Web of Science, Scopus, Embase, CINAHL) sind kostenpflichtig — der Zugang läuft meist über Ihre Bibliothek/Institution. Der Link führt zur Startseite bzw. zum institutionellen Login.</p>
+        <p><b>Vollständigkeit.</b> Auch dieses Portal kann nicht sämtliche Artikel „aller Datenbanken" enthalten — das verhindern Lizenz- und Technikgrenzen. Es bündelt stattdessen die maßgeblichen Suchen, sodass eine Recherche systematisch über alle relevanten Datenbanken laufen kann.</p>
+        <p><b>Portal vs. Live-Suche.</b> Von den derzeit <b id="cntGesamt"></b> eingebundenen Datenbanken unterstützen <b id="cntLive"></b> die Direktsuche; sie sind auf der Seite als „Live-Suche" gekennzeichnet. Weitere <b id="cntPortal"></b> sind als „Portal" markiert: Angebote wie LIVIVO, das DRKS oder die WHO-Plattform ICTRP erlauben technisch keine verlinkbaren Ergebnisadressen. Der Klick führt dort auf die Startseite — der Suchbegriff ist anschließend von Hand einzugeben.</p>
+        <p><b>Hinweis zu Lizenzen.</b> Mit <span style="color:var(--accent)">Lizenz</span> markierte Datenbanken (z. B. Web of Science, Scopus, Embase, CINAHL) sind kostenpflichtig — der Zugang läuft meist über Ihre Bibliothek/Institution. Der Link führt zur Startseite bzw. zum institutionellen Login.</p>
       </div>
       <div class="meta-row">
         <span class="dot"></span>
@@ -487,7 +487,7 @@
     <div class="studies-head">
       <div class="studies-title"><span class="dot"></span>Aktuelle Studien des heutigen Tages</div>
       <div class="studies-hint">Bei den Suchergebnissen handelt es sich um eine Momentaufnahme, um keinen Live-Feed. Die Liste wird jeden Morgen um 6 Uhr automatisch aus PubMed geholt, auf Deutsch zusammengefasst und neu veröffentlicht.</div>
-      <div class="studies-sub">Quelle: <b>PubMed</b>, nach Datum sortiert · jede Studie mit deutscher Zusammenfassung · Zuletzt aktualisiert: <b id="snapDate">Momentaufnahme</b></div>
+      <div class="studies-sub">Datenbank: <b>PubMed</b>, nach Datum sortiert · jede Studie mit deutscher Zusammenfassung · Zuletzt aktualisiert: <b id="snapDate">Momentaufnahme</b></div>
       <div class="dl-row">
         <span class="dl-label">Download:</span>
         <button class="dl-btn" id="dlAktuellDoc" type="button" title="Als Word-Dokument herunterladen">⤓ Word</button>
@@ -561,7 +561,7 @@
 
 <script>
 const CATS = [
-  {id:"deutsch", h:28, num:"01", name:"Deutschsprachige Quellen & Institutionen"},
+  {id:"deutsch", h:28, num:"01", name:"Deutschsprachige Datenbanken & Institutionen"},
   {id:"biblio", h:190, num:"02", name:"Bibliografische Datenbanken (international)"},
   {id:"evidenz", h:262, num:"03", name:"Systematische Reviews & Evidenzsynthesen"},
   {id:"openaccess", h:150, num:"04", name:"Open Access & Discovery"},
@@ -728,7 +728,7 @@ CATS.forEach(cat=>{
   sec.innerHTML =
     '<div class="cat-head"><span class="cat-num mono">'+cat.num+'</span>'+
     '<h2 class="serif">'+cat.name+'</h2>'+
-    '<span class="cat-count">'+items.length+' Quellen</span></div>'+
+    '<span class="cat-count">'+items.length+' Datenbanken</span></div>'+
     '<div class="grid"></div>';
   const grid = sec.querySelector('.grid');
 
