@@ -147,12 +147,12 @@ KOPFTEXT = ("Ein Service der Knowledge-Datenbank von Monitor Versorgungsforschun
             "Täglich automatisiert KI-kuratiert aus PubMed und auf Deutsch übersetzt.")
 LOGO = "logo/mvf-logo.png"
 
-SPALTEN = ["Aufgenommen", "Autor", "Publiziert am", "Journal", "Jahr", "Titel",
+SPALTEN = ["Aufgenommen", "Autor", "Publiziert am", "In PubMed seit", "Journal", "Jahr", "Titel",
            "Fragestellung", "Ergebnis", "PMID", "PubMed-Link"]
 
 
 def zeile(e: dict) -> list[str]:
-    return [e["aufgenommen"], e.get("author", ""), e.get("pubdate", ""),
+    return [e["aufgenommen"], e.get("author", ""), e.get("pubdate", ""), e.get("added", ""),
             e["journal"], e["year"], e["title"], e["sum"],
             e["result"], e["pmid"], f"https://pubmed.ncbi.nlm.nih.gov/{e['pmid']}/"]
 

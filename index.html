@@ -236,6 +236,14 @@
   }
   .studies-title{ display:flex; align-items:center; gap:9px; font-weight:600; font-size:16px; letter-spacing:-.01em; }
   .studies-title .dot{ width:8px; height:8px; }
+  /* Meldung ueber den letzten Lauf. Zwei Faelle mit eigener Farbe:
+     "nichts Neues" ist normal (neutral), ein ausgefallener Lauf nicht (Warnfarbe). */
+  .studies-status{
+    font-size:11.5px; line-height:1.4; margin-top:7px; padding:6px 9px;
+    border-radius:5px; border-left:3px solid var(--ink-faint);
+    background:var(--card-2); color:var(--ink-soft);
+  }
+  .studies-status[data-art="ausfall"]{ border-left-color:var(--action-deep); }
   .studies-hint{ font-size:11.5px; color:var(--ink-faint); margin-top:7px; line-height:1.45; }
   .studies-sub{ font-size:12px; color:var(--ink-faint); margin-top:6px; padding-top:6px;
                 border-top:1px solid var(--line-soft); line-height:1.4; }
@@ -258,6 +266,7 @@
   .study-year{ font-size:11px; color:var(--ink-faint); font-variant-numeric:tabular-nums;
                flex:0 0 auto; white-space:nowrap; }
   .study-author{ font-size:11.5px; color:var(--ink-faint); line-height:1.3; margin-top:-3px; }
+  .study-added{ font-size:10.5px; color:var(--ink-faint); line-height:1.3; margin-top:-3px; opacity:.85; }
   a.study-title{ font-size:14.5px; font-weight:600; color:var(--ink); text-decoration:none; line-height:1.32; letter-spacing:-.005em; }
   a.study-title:hover{ color:var(--brand); text-decoration:underline; }
   .study-sum{ font-size:13px; color:var(--ink-soft); line-height:1.46; margin:0; }
@@ -487,7 +496,8 @@
 
   <aside class="studies">
     <div class="studies-head">
-      <div class="studies-title"><span class="dot"></span>Aktuelle Studien des heutigen Tages</div>
+      <div class="studies-title"><span class="dot"></span>Neu in PubMed</div>
+      <div class="studies-status" id="studiesStatus" hidden></div>
       <div class="studies-hint">Bei den Suchergebnissen handelt es sich um eine Momentaufnahme, um keinen Live-Feed. Die Liste wird jeden Morgen um 6 Uhr automatisch aus PubMed geholt, auf Deutsch zusammengefasst und neu veröffentlicht.</div>
       <div class="studies-sub">Datenbank: <b>PubMed</b>, nach Datum sortiert · jede Studie mit deutscher Zusammenfassung · Zuletzt aktualisiert: <b id="snapDate">Momentaufnahme</b></div>
       <div class="dl-row">
@@ -655,6 +665,7 @@ const STUDIES = [
   {
     journal:"Open Heart", year:"2026", pmid:"42601168",
     author:"Frost L et al.", pubdate:"14.08.2026",
+    added:"14.08.2026",
     title:"Elektrische Kardioversion bei Vorhofflimmern: nationale Trends in Dänemark 2010-2022",
     sum:"Die Studie untersuchte zeitliche Trends in der Nutzung von elektrischer Kardioversion bei Patienten mit Vorhofflimmern in Dänemark über 12 Jahre.",
     result:"Die Gesamtzahl der Kardioversionen pro Jahr stieg von 2204 (2010) auf 8300 (2022) um das Vierfache; die altersadjustierte und geschlechterstandardisierte Rate sank jedoch von 449,5 auf 316,6 pro 1000 Personenjahre im ersten Jahr nach Diagnose, was auf eine gezieltere Einsatzweise hindeutet."
@@ -662,6 +673,7 @@ const STUDIES = [
   {
     journal:"JMIR Rehabilitation and Assistive Technology", year:"2026", pmid:"42600137",
     author:"Rosario B et al.", pubdate:"14.08.2026",
+    added:"14.08.2026",
     title:"Machbarkeit von S-Patch versus 24-Stunden-Holter bei älteren Erwachsenen mit Stürzen: randomisierte Crossover-Pilotstudie",
     sum:"Die Studie verglich Machbarkeit, Verträglichkeit und Adhärenz eines neuen tragbaren EKG-Geräts (S-Patch) mit Standard-Holter-Monitoring bei älteren Patienten mit Sturzrisiko.",
     result:"Bei 70 Patienten (45,7% mit kognitiver Beeinträchtigung) zeigte S-Patch längere durchschnittliche Tragedauer (&gt;60 Stunden, signifikant länger wenn zuerst angewendet: 68,8 vs. 62,9 Stunden; p=0,04) mit vergleichbaren Arrhythmie-Erkennungsraten und guter Verträglichkeit auch bei kognitiv beeinträchtigten Patienten."
@@ -669,13 +681,23 @@ const STUDIES = [
   {
     journal:"Int J Qual Health Care", year:"2026", pmid:"42599219",
     author:"Mutashar A et al.", pubdate:"14.08.2026",
+    added:"14.08.2026",
     title:"Entwicklung konsensbasierter Sicherheits- und Qualitäsindikatoren für sicheren Opioid-Einsatz in Krankenhäusern mittels modifizierter Delphi-Methode",
     sum:"Die Studie entwickelte einen Katalog von Indikatoren zur Überwachung der Sicherheit und Qualität des Opioid-Einsatzes in australischen Krankenhäusern durch ein multidisziplinäres Expertengremium.",
     result:"Von 34 bewerteten Indikatoren erreichten 17 Konsens für Wichtigkeit und Durchführbarkeit (Antwortquoten: Round 1 91%, Treffen 50%, Round 2 77%), was ein praktikables Werkzeug zur Verbesserung der Opioid-Medikamentensicherheit ermöglicht."
   },
   {
+    journal:"J Global Health", year:"2026", pmid:"42596889",
+    author:"Huang Y et al.", pubdate:"14.08.2026",
+    added:"14.08.2026",
+    title:"Rolle von Life's Essential 8 in der Assoziation von Nachtschichtarbeit mit kardiovaskulären Erkrankungen: prospektive UK-Biobank-Kohorte",
+    sum:"Die Studie untersuchte die Assoziation zwischen Nachtschichtarbeit und kardiovaskulären Erkrankungen sowie die vermittelnde Rolle des Life's Essential 8-Lebensstilscores bei 131.844 Erwerbstätigen.",
+    result:"Über einen Median-Follow-up von 13,78 Jahren entwickelten 29,7% kardiovaskuläre Erkrankungen und 4,2% starben; Patienten mit permanenten Nachtschichten hatten erhöhtes Risiko für kardiovaskuläre Erkrankungen (HR=1,24; 95% CI 1,18-1,31), Gesamtmortalität (HR=1,23; 95% CI 1,07-1,41) und Myokardinfarkt (HR=1,29; 95% CI 1,09-1,51); Life's Essential 8 vermittelte 39,2% der kardiovaskulären Assoziation und 33,1% der Mortalität."
+  },
+  {
     journal:"BMC Health Services Research", year:"2026", pmid:"42596005",
     author:"Kanter J et al.", pubdate:"24.07.2026",
+    added:"14.08.2026",
     title:"Implementierung eines umfassenden Sichelzellzentrums führt zu verbessertem Zugang und reduzierter Notfallversorgung",
     sum:"Die Studie evaluierte die Auswirkungen der Implementierung eines multidisziplinären erwachsenen Sichelzellzentrums auf Ambulanznutzung und Notfallverlagerung in Alabama.",
     result:"Die ambulante Klinikpopulation wuchs um mehr als das Dreifache auf 810 Patienten (2024), Infusions-Therapiebesuche stiegen um das Fünfzehnfache; durchschnittliche acute-care-Besuche pro Person/Jahr sanken signifikant von 2,11 auf 1,26 (p&lt;0,001), während routinemäßige ambulante Besuche von 2,65 auf 5,32 stiegen."
@@ -683,17 +705,11 @@ const STUDIES = [
   {
     journal:"Resuscitation Plus", year:"2026", pmid:"42598112",
     author:"Chee DS et al.", pubdate:"22.07.2026",
+    added:"14.08.2026",
     title:"Inzidenz, Ätiologien und Überlebensoutcomes von pädiatrischen außerklinischen Herzstillständen in Singapur",
     sum:"Die Studie beschrieb Inzidenz, Ursachen und Überlebensraten von Herzstillständen bei Kindern in Singapur von 2010-2021 mittels der PAROS-Registry.",
     result:"Von 414 Patienten betrug die Gesamtinzidenz 4,62 pro 100.000 Personenjahre (höchste Rate bei Säuglingen &lt;1 Jahr: 33,5 pro 100.000), Bystander-CPR-Rate 64,5%, häufigste Ursachen Atemwegsobstruktion (21%), Ertrinken (20,2%) und Trauma (18,5%); 30-Tage-Überlebensrate 11,1%, gutes neurologisches Ergebnis (CPC 1-2) 8,0% mit Verbesserung 2019-2021 (aOR 4,34; 95% CI 1,09-17,22; p=0,037)."
-  },
-  {
-    journal:"J Global Health", year:"2026", pmid:"42596889",
-    author:"Huang Y et al.", pubdate:"14.08.2026",
-    title:"Rolle von Life's Essential 8 in der Assoziation von Nachtschichtarbeit mit kardiovaskulären Erkrankungen: prospektive UK-Biobank-Kohorte",
-    sum:"Die Studie untersuchte die Assoziation zwischen Nachtschichtarbeit und kardiovaskulären Erkrankungen sowie die vermittelnde Rolle des Life's Essential 8-Lebensstilscores bei 131.844 Erwerbstätigen.",
-    result:"Über einen Median-Follow-up von 13,78 Jahren entwickelten 29,7% kardiovaskuläre Erkrankungen und 4,2% starben; Patienten mit permanenten Nachtschichten hatten erhöhtes Risiko für kardiovaskuläre Erkrankungen (HR=1,24; 95% CI 1,18-1,31), Gesamtmortalität (HR=1,23; 95% CI 1,07-1,41) und Myokardinfarkt (HR=1,29; 95% CI 1,09-1,51); Life's Essential 8 vermittelte 39,2% der kardiovaskulären Assoziation und 33,1% der Mortalität."
-  },
+  }
 ];
 // === STUDIES-BLOCK-ENDE ===
 
@@ -763,6 +779,42 @@ document.getElementById('cntPortal').textContent = DB.filter(x=>x.t==='portal').
 
 // ---- Studien-Frame rendern ----
 document.getElementById('snapDate').textContent = SNAP_DATE;
+
+// ---- Meldung ueber den letzten Lauf -------------------------------------
+// Drei Faelle sollen unterscheidbar sein:
+//   1. alles normal              -> keine Meldung
+//   2. Lauf war da, nichts Neues -> neutraler Hinweis (SNAP_STATUS)
+//   3. Lauf ausgefallen          -> Warnhinweis (Zeitstempel zu alt)
+// Fall 3 erkennt die Seite selbst: SNAP_DATE wird bei jedem erfolgreichen Lauf
+// neu gesetzt. Ist er aelter als 30 Stunden, kann kein Lauf stattgefunden haben.
+(function(){
+  const el = document.getElementById('studiesStatus');
+  if(!el) return;
+  const MON = {'Jan':0,'Feb':1,'März':2,'Apr':3,'Mai':4,'Juni':5,
+               'Juli':6,'Aug':7,'Sept':8,'Okt':9,'Nov':10,'Dez':11};
+  // Format: "15. Aug. 2026, 07:01 Uhr"
+  const m = /^(\d{1,2})\.\s*([^\s.]+)\.?\s*(\d{4}),\s*(\d{1,2}):(\d{2})/.exec(SNAP_DATE || '');
+  let stunden = null;
+  if(m && MON[m[2]] !== undefined){
+    const d = new Date(+m[3], MON[m[2]], +m[1], +m[4], +m[5]);
+    stunden = (Date.now() - d.getTime()) / 36e5;
+  }
+  const status = (typeof SNAP_STATUS !== 'undefined') ? SNAP_STATUS : 'neu';
+
+  if(stunden !== null && stunden > 30){
+    const tage = Math.floor(stunden / 24);
+    el.dataset.art = 'ausfall';
+    el.textContent = 'Die automatische Aktualisierung ist ausgefallen — die Liste '
+      + 'stammt vom ' + SNAP_DATE.replace(/,.*/, '') + (tage >= 1 ? ' (vor ' + tage + ' Tag' + (tage>1?'en':'') + ')' : '')
+      + '. Ursache ist eine technische Störung, nicht fehlende Studien.';
+    el.hidden = false;
+  } else if(status === 'unveraendert'){
+    el.dataset.art = 'unveraendert';
+    el.textContent = 'Der heutige Abgleich lief planmäßig, PubMed hat aber keine '
+      + 'neuen passenden Studien geliefert. Die Liste ist deshalb unverändert.';
+    el.hidden = false;
+  }
+})();
 const studiesList = document.getElementById('studiesList');
 STUDIES.forEach(s=>{
   const art = document.createElement('article');
@@ -770,10 +822,15 @@ STUDIES.forEach(s=>{
   const url = 'https://pubmed.ncbi.nlm.nih.gov/' + s.pmid + '/';
   art.innerHTML =
     '<div class="study-top"><span class="study-journal">'+s.journal+'</span>'+
-    // Vollstaendiges Publikationsdatum, sofern PubMed eines kennt - sonst das Jahr.
+    // Publikationsdatum, sofern PubMed eines kennt - sonst das Jahr.
     '<span class="study-year">'+(s.pubdate || s.year)+'</span></div>'+
     '<a class="study-title" href="'+url+'" target="_blank" rel="noopener">'+s.title+'</a>'+
     (s.author ? '<div class="study-author">'+s.author+'</div>' : '')+
+    // Das Aufnahmedatum erklaert, warum aeltere Publikationsdaten in einer
+    // taeglichen Liste auftauchen: Ausgewaehlt wird nach dem Tag, an dem
+    // PubMed den Eintrag aufnimmt - der liegt oft Wochen nach dem Erscheinen.
+    (s.added && s.added !== s.pubdate
+       ? '<div class="study-added">in PubMed seit '+s.added+'</div>' : '')+
     '<p class="study-sum">'+s.sum+'</p>'+
     '<div class="study-result"><span class="rlabel">Ergebnis</span>'+s.result+'</div>'+
     '<a class="study-src" href="'+url+'" target="_blank" rel="noopener">PubMed · PMID '+s.pmid+' ↗</a>';
@@ -829,13 +886,13 @@ const DL_KOPFTEXT = 'Ein Service der Knowledge-Datenbank von Monitor Versorgungs
 function baueCSV(liste, mitDatum){
   const feld = v => '"' + alsKlartext(v).replace(/"/g,'""') + '"';
   const kopf = (mitDatum ? ['Aufgenommen am'] : [])
-    .concat(['Autor','Publiziert am','Journal','Jahr','Titel','Fragestellung','Ergebnis','PMID','PubMed-Link']);
+    .concat(['Autor','Publiziert am','In PubMed seit','Journal','Jahr','Titel','Fragestellung','Ergebnis','PMID','PubMed-Link']);
   // Eine Tabelle kann kein Logo aufnehmen - deshalb nur der Kopftext, gefolgt
   // von einer Leerzeile, damit die Spaltenueberschriften klar abgesetzt sind.
   const zeilen = [feld(DL_KOPFTEXT), '', kopf.map(feld).join(';')];
   liste.forEach(s=>{
     zeilen.push((mitDatum ? [s.aufgenommen || ''] : [])
-      .concat([s.author || '', s.pubdate || '', s.journal, s.year, s.title, s.sum, s.result, s.pmid, pubmedUrl(s.pmid)])
+      .concat([s.author || '', s.pubdate || '', s.added || '', s.journal, s.year, s.title, s.sum, s.result, s.pmid, pubmedUrl(s.pmid)])
       .map(feld).join(';'));
   });
   // Das BOM explizit als Escape-Sequenz: als wortwoertliches Zeichen ginge es
@@ -850,6 +907,7 @@ function baueDoc(titel, untertitel, liste, mitDatum){
     + '<p style="margin:0 0 5pt;color:#555">'
     + (s.author ? htmlEsc(s.author) + ' &middot; ' : '')
     + '<i>' + htmlEsc(s.journal) + '</i> &middot; ' + htmlEsc(s.pubdate || s.year)
+    + (s.added && s.added !== s.pubdate ? ' (in PubMed seit ' + htmlEsc(s.added) + ')' : '')
     + (mitDatum && s.aufgenommen ? ' &middot; aufgenommen am ' + htmlEsc(s.aufgenommen) : '') + '</p>'
     + '<p style="margin:0 0 5pt">' + htmlEsc(s.sum) + '</p>'
     + '<p style="margin:0 0 5pt"><b>Ergebnis:</b> ' + htmlEsc(s.result) + '</p>'
@@ -877,7 +935,7 @@ const CSV_MIME = 'text/csv;charset=utf-8';
 
 document.getElementById('dlAktuellDoc').addEventListener('click', ()=>{
   speichern('MVF-Knowledge-Hub_Neueste-Studien_'+dateiStempel()+'.doc',
-    baueDoc('Aktuelle Studien des heutigen Tages', 'Stand: '+alsKlartext(SNAP_DATE), STUDIES, false), DOC_MIME);
+    baueDoc('Neu in PubMed — Studien der Versorgungsforschung', 'Stand: '+alsKlartext(SNAP_DATE), STUDIES, false), DOC_MIME);
 });
 document.getElementById('dlAktuellCsv').addEventListener('click', ()=>{
   speichern('MVF-Knowledge-Hub_Neueste-Studien_'+dateiStempel()+'.csv',

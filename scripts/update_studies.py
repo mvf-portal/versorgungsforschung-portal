@@ -167,6 +167,23 @@ def _datum_teile(roh: str) -> tuple[int, str]:
     return (1, jahr)
 
 
+def _sortschluessel(e: dict) -> str:
+    """ISO-Datum zum Sortieren - aus den Rohfeldern, nicht aus dem Anzeigetext.
+
+    Fehlt der Tag, wird der 1. angenommen: nur zum Sortieren, angezeigt wird
+    weiterhin die unvollstaendige Angabe.
+    """
+    for feld in ("epubdate", "pubdate"):
+        m = re.match(r"^(\d{4})(?:\s+([A-Za-z]{3}))?(?:\s+(\d{1,2}))?", (e.get(feld) or "").strip())
+        if m:
+            jahr = m.group(1)
+            mon = MONATE_NUM.get((m.group(2) or "")[:3], 0)
+            tag = int(m.group(3) or 1)
+            if mon:
+                return f"{jahr}-{mon:02d}-{tag:02d}"
+    return (e.get("sortpubdate") or "").replace("/", "-")[:10]
+
+
 def fetch_meta(pmids: list[str]) -> dict[str, dict]:
     """Autor und Publikationsdatum ueber esummary holen.
 
@@ -187,10 +204,21 @@ def fetch_meta(pmids: list[str]) -> dict[str, dict]:
         namen = e.get("authors") or []
         erster = e.get("sortfirstauthor") or (namen[0]["name"] if namen else "")
         autor = f"{erster} et al." if erster and len(namen) > 1 else erster
-        datum = max(_datum_teile(e.get("pubdate", "")),
-                    _datum_teile(e.get("epubdate", "")),
-                    key=lambda x: x[0])[1]
-        aus[pmid] = {"author": autor, "pubdate": datum}
+        genauigkeit, datum = max(_datum_teile(e.get("pubdate", "")),
+                                 _datum_teile(e.get("epubdate", "")),
+                                 key=lambda x: x[0])
+        # Tag, an dem PubMed den Eintrag aufgenommen hat. Danach waehlt esearch
+        # aus - er liegt oft Wochen nach dem Erscheinen und erklaert, warum die
+        # Publikationsdaten springen.
+        aufnahme = ""
+        for h in e.get("history", []):
+            if h.get("pubstatus") == "entrez":
+                d = h.get("date", "")[:10].split("/")
+                if len(d) == 3:
+                    aufnahme = f"{d[2]}.{d[1]}.{d[0]}"
+                break
+        aus[pmid] = {"author": autor, "pubdate": datum,
+                     "added": aufnahme, "_sort": _sortschluessel(e)}
     print(f"Metadaten zu {len(aus)}/{len(pmids)} PMIDs geladen.")
     return aus
 
@@ -214,7 +242,7 @@ def pick_studies(abstracts: str) -> list[dict]:
     return studies
 
 
-def build_block(studies: list[dict]) -> str:
+def build_block(studies: list[dict], status: str = "neu") -> str:
     now = dt.datetime.now(ZoneInfo("Europe/Berlin"))
     snap = f"{now.day}. {MONTHS[now.month]} {now.year}, {now:%H:%M} Uhr"
 
@@ -234,6 +262,7 @@ def build_block(studies: list[dict]) -> str:
             "  {\n"
             f"    journal:{js(s['journal'])}, year:{js(s['year'])}, pmid:{js(s['pmid'])},\n"
             f"    author:{js(s.get('author', ''))}, pubdate:{js(s.get('pubdate', ''))},\n"
+            f"    added:{js(s.get('added', ''))},\n"
             f"    title:{js(s['title'])},\n"
             f"    sum:{js(s['sum'])},\n"
             f"    result:{js(s['result'])}\n"
@@ -243,6 +272,10 @@ def build_block(studies: list[dict]) -> str:
     return (
         f"{START}\n"
         f"const SNAP_DATE = {json.dumps(snap, ensure_ascii=False)};\n"
+        # "neu" = die Auswahl hat sich geaendert, "unveraendert" = der Lauf lief,
+        # PubMed hatte aber nichts Neues. Die Seite unterscheidet das vom
+        # technischen Ausfall - dann bleibt SNAP_DATE einfach alt stehen.
+        f"const SNAP_STATUS = {json.dumps(status, ensure_ascii=False)};\n"
         "const STUDIES = [\n"
         + ",\n".join(items)
         + ",\n];\n"
@@ -271,6 +304,7 @@ def update_archive(studies: list[dict]) -> int:
         entries.append({
             "pmid": s["pmid"], "journal": s["journal"], "year": s["year"],
             "author": s.get("author", ""), "pubdate": s.get("pubdate", ""),
+            "added": s.get("added", ""),
             "title": s["title"], "sum": s["sum"], "result": s["result"],
             "aufgenommen": heute,
         })
@@ -289,12 +323,27 @@ def main() -> int:
     studies = pick_studies(abstracts)
     meta = fetch_meta([s["pmid"] for s in studies])
     for s in studies:
-        s.update(meta.get(s["pmid"], {"author": "", "pubdate": ""}))
-    block = build_block(studies)
-    update_archive(studies)
+        s.update(meta.get(s["pmid"], {"author": "", "pubdate": "", "added": "", "_sort": ""}))
+
+    # Nach Publikationsdatum absteigend. Vorher bestimmte das Sprachmodell die
+    # Reihenfolge - es kann aus einem Abstract kein verlaessliches Datum lesen,
+    # weshalb aeltere Studien zwischen neueren standen.
+    studies.sort(key=lambda s: s.get("_sort") or "", reverse=True)
 
     with open(INDEX, encoding="utf-8") as f:
         html = f.read()
+
+    # Hat sich die Auswahl ueberhaupt geaendert? Ein Lauf ohne neue Studien ist
+    # kein Fehler - die Seite soll das aber sagen koennen.
+    vorher = set(re.findall(r'pmid:"(\d+)"', html))
+    jetzt = {s["pmid"] for s in studies}
+    status = "neu" if jetzt != vorher else "unveraendert"
+    print(f"Auswahl: {status} ({len(jetzt - vorher)} neue PMIDs).")
+
+    for s in studies:
+        s.pop("_sort", None)
+    block = build_block(studies, status)
+    update_archive(studies)
 
     pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.DOTALL)
     if not pattern.search(html):

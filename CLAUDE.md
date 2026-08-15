@@ -114,11 +114,36 @@ Das Logo (`logo/mvf-logo.png`) besteht aus **genau zwei Farben**: Blau `#0060A0`
 - **Das Logo wird im Dark Mode nicht umgefärbt**, sondern auf eine weiße Fläche gestellt. Ein `filter:invert` würde den Goldanteil der Wortmarke tilgen.
 - **Kategorien tragen alle die Hausfarbe.** Das `--h`-System in `CATS` besteht weiter, wird aber von `.cat{ --cat:var(--brand); }` überschrieben — ein Regenbogen widerspräche der Zweifarbigkeit. Eine Zeile genügt, um die Farbcodierung zurückzuholen.
 
-## Studienfelder: `author` und `pubdate`
+## Studienfelder: `author`, `pubdate`, `added`
 
-Beide stammen **nicht vom Sprachmodell**, sondern aus PubMeds `esummary` (`fetch_meta()` in `update_studies.py`) — es sind Fakten, keine Interpretation.
+Alle drei stammen **nicht vom Sprachmodell**, sondern aus PubMeds `esummary` (`fetch_meta()` in `update_studies.py`) — es sind Fakten, keine Interpretation.
 
-Beim Datum wird die **genaueste echte** Angabe aus `pubdate` und `epubdate` genommen. `sortpubdate` ist bewusst ungenutzt: Bei reinen Monatsangaben setzt PubMed dort den 1. ein und täuscht damit einen Tag vor. Fehlt der Tag, steht `Aug. 2026` statt eines erfundenen Datums.
+Beim Publikationsdatum wird die **genaueste echte** Angabe aus `pubdate` und `epubdate` genommen. `sortpubdate` ist bewusst ungenutzt: Bei reinen Monatsangaben setzt PubMed dort den 1. ein und täuscht damit einen Tag vor. Fehlt der Tag, steht `Aug. 2026` statt eines erfundenen Datums.
+
+### Zwei Daten, die nicht verwechselt werden dürfen
+
+| Feld | Bedeutung |
+|---|---|
+| `pubdate` | wann die Studie **erschienen** ist |
+| `added` | wann **PubMed sie aufgenommen** hat (`history`, `pubstatus: entrez`) |
+
+`esearch` wählt mit `sort=date` nach dem **Aufnahmedatum** aus — nicht nach dem Erscheinungsdatum. Beide liegen oft Wochen auseinander: Eine am 24.07. erschienene Arbeit kann erst am 14.08. in PubMed landen. Deshalb enthält eine Tagesauswahl regelmäßig ältere Publikationsdaten; das ist **kein Fehler**. Die Karte blendet `added` nur ein, wenn es von `pubdate` abweicht — sonst wäre es Rauschen.
+
+Zum Sortieren dient `_sortschluessel()` (ISO-Datum aus den Rohfeldern), **nicht** der deutsche Anzeigetext. Sortiert wird in `main()`, nicht vom Modell: Aus einem Abstract lässt sich kein verlässliches Datum lesen, weshalb früher ältere Studien zwischen neueren standen.
+
+## `SNAP_STATUS`: drei unterscheidbare Zustände
+
+Die Seite soll nicht bloß „aktuell" behaupten, sondern sagen können, was zuletzt geschah:
+
+| Zustand | Erkennung | Anzeige |
+|---|---|---|
+| normal | `SNAP_STATUS === "neu"` und Zeitstempel frisch | keine Meldung |
+| Lauf ohne neue Studien | `SNAP_STATUS === "unveraendert"` | neutraler Hinweis |
+| Lauf ausgefallen | `SNAP_DATE` älter als 30 Stunden | Warnhinweis |
+
+`update_studies.py` setzt `SNAP_STATUS`, indem es die neuen PMIDs mit denen in der bestehenden `index.html` vergleicht. Den Ausfall erkennt die **Seite selbst** am Alter von `SNAP_DATE` — das funktioniert auch dann, wenn das Skript gar nicht erst lief. Die Auswertung ist gegen ein fehlendes `SNAP_STATUS` abgesichert (`typeof`), damit ältere Marker-Blöcke die Seite nicht brechen.
+
+**Die Überschrift trägt bewusst kein Datum.** Um 06:00 Uhr hat der laufende Tag in PubMed praktisch nie schon Einträge — „Neu aufgenommen am [heute]" wäre fast täglich falsch, und das echte Datum stünde dauerhaft einen Tag zurück. Die Aktualität trägt stattdessen die Zeile „Zuletzt aktualisiert"; sie bezieht sich auf den Lauf und stimmt immer.
 
 ## Fallstricke
 
