@@ -1,5 +1,71 @@
 [
  {
+  "pmid": "42601168",
+  "journal": "Open Heart",
+  "year": "2026",
+  "author": "Frost L et al.",
+  "pubdate": "14.08.2026",
+  "title": "Elektrische Kardioversion bei Vorhofflimmern: nationale Trends in Dänemark 2010-2022",
+  "sum": "Die Studie untersuchte zeitliche Trends in der Nutzung von elektrischer Kardioversion bei Patienten mit Vorhofflimmern in Dänemark über 12 Jahre.",
+  "result": "Die Gesamtzahl der Kardioversionen pro Jahr stieg von 2204 (2010) auf 8300 (2022) um das Vierfache; die altersadjustierte und geschlechterstandardisierte Rate sank jedoch von 449,5 auf 316,6 pro 1000 Personenjahre im ersten Jahr nach Diagnose, was auf eine gezieltere Einsatzweise hindeutet.",
+  "aufgenommen": "2026-08-15"
+ },
+ {
+  "pmid": "42600137",
+  "journal": "JMIR Rehabilitation and Assistive Technology",
+  "year": "2026",
+  "author": "Rosario B et al.",
+  "pubdate": "14.08.2026",
+  "title": "Machbarkeit von S-Patch versus 24-Stunden-Holter bei älteren Erwachsenen mit Stürzen: randomisierte Crossover-Pilotstudie",
+  "sum": "Die Studie verglich Machbarkeit, Verträglichkeit und Adhärenz eines neuen tragbaren EKG-Geräts (S-Patch) mit Standard-Holter-Monitoring bei älteren Patienten mit Sturzrisiko.",
+  "result": "Bei 70 Patienten (45,7% mit kognitiver Beeinträchtigung) zeigte S-Patch längere durchschnittliche Tragedauer (>60 Stunden, signifikant länger wenn zuerst angewendet: 68,8 vs. 62,9 Stunden; p=0,04) mit vergleichbaren Arrhythmie-Erkennungsraten und guter Verträglichkeit auch bei kognitiv beeinträchtigten Patienten.",
+  "aufgenommen": "2026-08-15"
+ },
+ {
+  "pmid": "42599219",
+  "journal": "Int J Qual Health Care",
+  "year": "2026",
+  "author": "Mutashar A et al.",
+  "pubdate": "14.08.2026",
+  "title": "Entwicklung konsensbasierter Sicherheits- und Qualitäsindikatoren für sicheren Opioid-Einsatz in Krankenhäusern mittels modifizierter Delphi-Methode",
+  "sum": "Die Studie entwickelte einen Katalog von Indikatoren zur Überwachung der Sicherheit und Qualität des Opioid-Einsatzes in australischen Krankenhäusern durch ein multidisziplinäres Expertengremium.",
+  "result": "Von 34 bewerteten Indikatoren erreichten 17 Konsens für Wichtigkeit und Durchführbarkeit (Antwortquoten: Round 1 91%, Treffen 50%, Round 2 77%), was ein praktikables Werkzeug zur Verbesserung der Opioid-Medikamentensicherheit ermöglicht.",
+  "aufgenommen": "2026-08-15"
+ },
+ {
+  "pmid": "42598112",
+  "journal": "Resuscitation Plus",
+  "year": "2026",
+  "author": "Chee DS et al.",
+  "pubdate": "22.07.2026",
+  "title": "Inzidenz, Ätiologien und Überlebensoutcomes von pädiatrischen außerklinischen Herzstillständen in Singapur",
+  "sum": "Die Studie beschrieb Inzidenz, Ursachen und Überlebensraten von Herzstillständen bei Kindern in Singapur von 2010-2021 mittels der PAROS-Registry.",
+  "result": "Von 414 Patienten betrug die Gesamtinzidenz 4,62 pro 100.000 Personenjahre (höchste Rate bei Säuglingen <1 Jahr: 33,5 pro 100.000), Bystander-CPR-Rate 64,5%, häufigste Ursachen Atemwegsobstruktion (21%), Ertrinken (20,2%) und Trauma (18,5%); 30-Tage-Überlebensrate 11,1%, gutes neurologisches Ergebnis (CPC 1-2) 8,0% mit Verbesserung 2019-2021 (aOR 4,34; 95% CI 1,09-17,22; p=0,037).",
+  "aufgenommen": "2026-08-15"
+ },
+ {
+  "pmid": "42596889",
+  "journal": "J Global Health",
+  "year": "2026",
+  "author": "Huang Y et al.",
+  "pubdate": "14.08.2026",
+  "title": "Rolle von Life's Essential 8 in der Assoziation von Nachtschichtarbeit mit kardiovaskulären Erkrankungen: prospektive UK-Biobank-Kohorte",
+  "sum": "Die Studie untersuchte die Assoziation zwischen Nachtschichtarbeit und kardiovaskulären Erkrankungen sowie die vermittelnde Rolle des Life's Essential 8-Lebensstilscores bei 131.844 Erwerbstätigen.",
+  "result": "Über einen Median-Follow-up von 13,78 Jahren entwickelten 29,7% kardiovaskuläre Erkrankungen und 4,2% starben; Patienten mit permanenten Nachtschichten hatten erhöhtes Risiko für kardiovaskuläre Erkrankungen (HR=1,24; 95% CI 1,18-1,31), Gesamtmortalität (HR=1,23; 95% CI 1,07-1,41) und Myokardinfarkt (HR=1,29; 95% CI 1,09-1,51); Life's Essential 8 vermittelte 39,2% der kardiovaskulären Assoziation und 33,1% der Mortalität.",
+  "aufgenommen": "2026-08-15"
+ },
+ {
+  "pmid": "42596005",
+  "journal": "BMC Health Services Research",
+  "year": "2026",
+  "author": "Kanter J et al.",
+  "pubdate": "24.07.2026",
+  "title": "Implementierung eines umfassenden Sichelzellzentrums führt zu verbessertem Zugang und reduzierter Notfallversorgung",
+  "sum": "Die Studie evaluierte die Auswirkungen der Implementierung eines multidisziplinären erwachsenen Sichelzellzentrums auf Ambulanznutzung und Notfallverlagerung in Alabama.",
+  "result": "Die ambulante Klinikpopulation wuchs um mehr als das Dreifache auf 810 Patienten (2024), Infusions-Therapiebesuche stiegen um das Fünfzehnfache; durchschnittliche acute-care-Besuche pro Person/Jahr sanken signifikant von 2,11 auf 1,26 (p<0,001), während routinemäßige ambulante Besuche von 2,65 auf 5,32 stiegen.",
+  "aufgenommen": "2026-08-15"
+ },
+ {
   "pmid": "42594509",
   "journal": "J Am Med Dir Assoc",
   "year": "2026",
