@@ -375,6 +375,12 @@
     border-top:1px solid var(--line-soft); font-size:12px; color:var(--ink-soft);
   }
   .rb-uebersetzung b{ color:var(--brand); }
+  .rb-fehlt{
+    display:block; margin-top:6px; padding-top:6px;
+    border-top:1px solid var(--line-soft); font-size:12px; color:var(--ink-soft);
+  }
+  .rb-fehlt b{ color:var(--ink); }
+  .rb-fehlt a{ color:var(--brand); font-weight:700; white-space:nowrap; }
 
   .bool-hint{
     margin-top:9px; padding:9px 13px; border-radius:6px;
@@ -1209,6 +1215,15 @@ function basisUrl(tpl){
 // "Versorgung" und der Rest bleibt deutsch stehen.
 const GLOSSAR_LANG = GLOSSAR.slice().sort((a,b)=>b.de.length - a.de.length);
 
+// Alle Woerter, die in der englischen Spalte vorkommen. Wer 'primary care'
+// oder 'diabetes' eingibt, sucht bereits international - dann ist eine
+// fehlende Uebersetzung kein Mangel und es braucht keinen Hinweis.
+const EN_WOERTER = new Set(GLOSSAR.flatMap(g=>g.en.toLowerCase().split(/\s+/)));
+function wirktEnglisch(t){
+  const w = t.toLowerCase().split(/[\s,;]+/).filter(Boolean);
+  return w.length > 0 && w.every(x=>EN_WOERTER.has(x));
+}
+
 // Deutsche Fachbegriffe durch den international ueblichen Ausdruck ersetzen.
 // Wortweise, damit auch "Primaerversorgung Diabetes" funktioniert.
 function uebersetze(term){
@@ -1266,6 +1281,11 @@ function zeigeErgebnis(){
         ? '<span class="rb-uebersetzung">In internationalen Datenbanken wird gesucht als '
           + '<b>' + htmlEsc(uebersetzung.text) + '</b> &mdash; deutschsprachige Datenbanken '
           + 'behalten Ihren Begriff.</span>'
+        : (uebersetzung && !wirktEnglisch(gesucht))
+        ? '<span class="rb-fehlt">F&uuml;r <b>&bdquo;' + htmlEsc(gesucht) + '&ldquo;</b> ist keine '
+          + '&Uuml;bersetzung hinterlegt &mdash; internationale Datenbanken suchen den deutschen '
+          + 'Begriff und finden damit vermutlich wenig. '
+          + '<a href="' + vorschlagLink(gesucht) + '">Begriff vorschlagen</a></span>'
         : '');
   resultBar.hidden = false;
 }
@@ -1283,6 +1303,22 @@ function suchen(){
   // Nur beim Absenden hinunterspringen - nicht bei jeder Filteraenderung.
   const ziel = document.querySelector('.cat:not(.aus)');
   if(ziel) ziel.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+// Vorbereitete E-Mail an die Redaktion. Bewusst ohne Server und ohne Messung:
+// Wer den Begriff vermisst, meldet ihn selbst - so entsteht die Sammlung der
+// wirklich gesuchten Begriffe, ohne dass jemand beobachtet wird.
+function vorschlagLink(begriff){
+  const betreff = 'Knowledge-Hub: Begriff fürs Suchglossar';
+  const U = String.fromCharCode(10);   // Zeilenumbruch, ohne Escape-Fallen
+  const text = 'Guten Tag,' + U + U
+    + 'bitte ergänzen Sie folgenden Begriff im Suchglossar des Knowledge-Hubs:' + U + U
+    + 'Deutsch:  ' + begriff + U
+    + 'Englisch: ' + U + U
+    + '(Falls Ihnen der englische Fachbegriff bekannt ist, gern eintragen.)' + U + U
+    + 'Mit freundlichen Grüßen' + U;
+  return 'mailto:info@m-vf.de?subject=' + encodeURIComponent(betreff)
+       + '&body=' + encodeURIComponent(text);
 }
 
 function zuruecksetzen(){
