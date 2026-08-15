@@ -145,6 +145,40 @@ Die Seite soll nicht bloß „aktuell" behaupten, sondern sagen können, was zul
 
 **Die Überschrift trägt bewusst kein Datum.** Um 06:00 Uhr hat der laufende Tag in PubMed praktisch nie schon Einträge — „Neu aufgenommen am [heute]" wäre fast täglich falsch, und das echte Datum stünde dauerhaft einen Tag zurück. Die Aktualität trägt stattdessen die Zeile „Zuletzt aktualisiert"; sie bezieht sich auf den Lauf und stimmt immer.
 
+## Die Suche: nichts geschieht vor dem Absenden
+
+Frueher schrieb die Seite die Links schon beim Tippen um — unsichtbar, ohne Rueckmeldung — und die Eingabetaste oeffnete ausgerechnet das MVF-Archiv, also eine von 56 Datenbanken. Beides ist abgeschafft.
+
+| Aktion | Wirkung |
+|---|---|
+| Tippen | nichts; die Kacheln zeigen weiter auf die Startseiten |
+| Enter, Knopf oder Schnellwahl-Chip | `suchen()`: Links vorbereiten, Ergebnisleiste einblenden, zur ersten **sichtbaren** Rubrik springen |
+| Filter aendern | `zeigeErgebnis()`: nur die Zahlen nachfuehren |
+
+**Die Trennung von `suchen()` und `zeigeErgebnis()` ist die Pointe.** Ruft `filtern()` am Ende `suchen()` auf, springt die Seite bei jedem Filterklick nach unten — mehrere Filter zu setzen wird dann unmoeglich. Gesprungen wird ausschliesslich beim Absenden.
+
+### Filter
+
+`FILTER` haelt vier Gruppen: `zugang`, `suchart`, `bool`, `rubrik` (Mehrfachauswahl als `Set`). `filtern()` blendet Kacheln aus, versteckt leere Rubriken samt Sprungmarke und fuehrt Zaehler, Plakette und Ruecksetz-Knopf nach.
+
+**Vier Filter zusammen koennen alles ausblenden** — etwa „frei" + „Boolesch" + Rubrik „deutsch", denn keine deutsche Datenbank ist als boolesch belegt. Dafuer gibt es `#leerHinweis`; ohne ihn staende die Seite leer da.
+
+### Boolesche Operatoren: `b` ist dreiwertig
+
+| Wert | Bedeutung | Kennzeichen |
+|---|---|---|
+| `b:1` | geprueft, Operatoren wirken | `AND/OR ✓` |
+| `b:0` | geprueft, wirken nicht | `AND/OR ✗` |
+| fehlt | **ungeprueft** | keines |
+
+Die Werte stammen aus einer Messreihe: dieselbe Suche mit `OR` und mit `AND`, verglichen mit einem Phantasiewort. Wertet eine Datenbank `OR` aus, steigt die Trefferzahl sprunghaft; wertet sie `AND` aus, faellt sie auf null. Belegt: 11 ja, 4 nein, 13 offen (Bot-Sperre oder reine JavaScript-Oberflaeche).
+
+**Ungeprueftes zaehlt nie als „kann es".** Der Beschreibungstext sagt ausdruecklich, dass ein fehlendes Zeichen Unwissen bedeutet, nicht Unvermoegen — sonst wuerden Datenbanken wie Cochrane faelschlich festgelegt.
+
+### Hinweise unter dem Suchfeld
+
+Zweispaltig ueber **CSS-Textspalten** (`columns:2`), nicht ueber ein Raster. Ein Raster richtet Zeilen an der hoechsten Karte aus und streckte den kurzen Absatz, was knapp 50 px Loch hinterliess. Textspalten packen dicht. Unter 760 px einspaltig.
+
 ## Fallstricke
 
 - **Kein HTML-Escaping.** Alle Inhalte werden per `innerHTML`-Stringkonkatenation eingesetzt. Texte mit `<`, `>` oder `&` zerlegen das Markup — beim Anlegen von `DB`- oder `STUDIES`-Einträgen vermeiden bzw. maskieren.
