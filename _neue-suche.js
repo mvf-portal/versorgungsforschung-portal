@@ -77,10 +77,10 @@ function pruefeOperatoren(){
   const nein  = live.filter(x=>x.b === 0).length;
   const offen = live.length - ja - nein;
   boolHint.innerHTML =
-    '<b>AND, OR und NOT</b> werden von <b>' + ja + '</b> der ' + live.length
-    + ' Live-Suchen nachweislich ausgewertet; sie tragen das Zeichen '
-    + '<b>AND/OR</b>. ' + nein + ' werten sie nachweislich nicht aus und suchen die '
-    + 'W&ouml;rter einfach mit, bei ' + offen + ' ist es ungepr&uuml;ft.';
+    'Sie verwenden <b>Suchoperatoren</b>. Von ' + live.length + ' Live-Suchen werten <b>'
+    + ja + '</b> sie nachweislich aus (Zeichen <b>AND/OR &#10003;</b>), ' + nein
+    + ' nachweislich nicht (<b>AND/OR &#10007;</b>) &mdash; dort werden die W&ouml;rter '
+    + 'einfach mitgesucht. Bei ' + offen + ' ohne Zeichen ist es ungepr&uuml;ft.';
   boolHint.hidden = false;
 }
 

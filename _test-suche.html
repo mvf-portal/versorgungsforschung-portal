@@ -334,10 +334,13 @@
 
 
   .boolmark{
-    font-size:9.5px; font-weight:700; letter-spacing:.05em; color:var(--brand);
-    border:1px solid var(--brand); border-radius:3px; padding:1px 4px;
+    font-size:9.5px; font-weight:700; letter-spacing:.05em;
+    border-radius:3px; padding:1px 4px;
     margin-left:6px; white-space:nowrap; vertical-align:middle;
   }
+  .boolmark.ja  { color:var(--brand); border:1px solid var(--brand); }
+  /* Bewusst zurueckgenommen: die Aussage ist wahr, aber kein Verkaufsargument. */
+  .boolmark.nein{ color:var(--ink-faint); border:1px solid var(--line); }
 
   /* ---------- Rueckmeldung nach dem Absenden ---------- */
   /* Fruehere Fassung schrieb die Links still um - niemand sah, dass etwas
@@ -578,7 +581,7 @@
       <div class="hints">
         <p><b>Vollständigkeit.</b> Auch dieses Portal kann nicht sämtliche Artikel „aller Datenbanken" enthalten — das verhindern Lizenz- und Technikgrenzen. Es bündelt stattdessen die maßgeblichen Suchen, sodass eine Recherche systematisch über alle relevanten Datenbanken laufen kann.</p>
         <p><b>Portal vs. Live-Suche.</b> Von den derzeit <b id="cntGesamt"></b> eingebundenen Datenbanken unterstützen <b id="cntLive"></b> die Live-Suche; sie sind entsprechend gekennzeichnet. Weitere <b id="cntPortal"></b> sind als „Portal" markiert: Angebote wie LIVIVO, das DRKS oder die WHO-Plattform ICTRP erlauben technisch keine verlinkbaren Ergebnisadressen. Der Klick führt dort auf die Startseite — der Suchbegriff ist anschließend von Hand einzugeben.</p>
-        <p><b>Suchoperatoren.</b> <b>AND</b>, <b>OR</b> und <b>NOT</b> funktionieren nicht überall gleich. Wir haben es geprüft: <b id="cntBoolJa"></b> Live-Suchen werten die Operatoren aus — sie tragen das Zeichen <span class="boolmark">AND/OR</span>. <b id="cntBoolNein"></b> werten sie nachweislich nicht aus und suchen die Wörter einfach mit; bei <b id="cntBoolOffen"></b> ließ sich das nicht zuverlässig feststellen. Der Filter „Operatoren" blendet auf Wunsch nur die geprüft tauglichen ein.</p>
+        <p><b>Suchoperatoren.</b> <b>AND</b>, <b>OR</b> und <b>NOT</b> funktionieren nicht überall gleich — wir haben es einzeln nachgemessen. <span class="boolmark ja">AND/OR ✓</span> heißt: geprüft, die Operatoren wirken (<b id="cntBoolJa"></b> Datenbanken). <span class="boolmark nein">AND/OR ✗</span> heißt: geprüft, sie wirken nicht — die Wörter werden einfach mitgesucht (<b id="cntBoolNein"></b>). <b>Ohne Zeichen ist es ungeprüft</b> (<b id="cntBoolOffen"></b>): Diese Anbieter liefern eine Bot-Sperre oder eine reine JavaScript-Oberfläche, aus der sich kein belastbares Ergebnis ablesen ließ — das heißt ausdrücklich <i>nicht</i>, dass sie es nicht können. Der Filter „Operatoren" zeigt auf Wunsch nur die geprüft tauglichen.</p>
         <p><b>Hinweis zu Lizenzen.</b> Mit <span style="color:var(--accent)">Lizenz</span> markierte Datenbanken (z. B. Web of Science, Scopus, Embase, CINAHL) sind kostenpflichtig — der Zugang läuft meist über Ihre Bibliothek/Institution. Der Link führt zur Startseite bzw. zum institutionellen Login.</p>
       </div>
       <div class="meta-row">
@@ -864,7 +867,9 @@ CATS.forEach(cat=>{
       : '<span class="arrow">↗</span> Öffnen <span class="host mono">· '+hostOf(x.u)+'</span>';
     a.innerHTML =
       '<div class="card-top"><span class="card-name">'+x.n+'</span>'+
-    (x.b===1 ? '<span class="boolmark" title="Wertet AND, OR und NOT aus (geprüft)">AND/OR</span>' : '')+badge+'</div>'+
+    (x.b===1 ? '<span class="boolmark ja" title="Geprüft: wertet AND, OR und NOT aus">AND/OR ✓</span>'
+     : x.b===0 ? '<span class="boolmark nein" title="Geprüft: wertet die Operatoren nicht aus – sie werden als Wörter mitgesucht">AND/OR ✗</span>'
+     : '')+badge+'</div>'+
       '<div class="card-desc">'+x.d+'</div>'+
       '<div class="card-foot">'+foot+'</div>';
     grid.appendChild(a);
@@ -1201,10 +1206,10 @@ function pruefeOperatoren(){
   const nein  = live.filter(x=>x.b === 0).length;
   const offen = live.length - ja - nein;
   boolHint.innerHTML =
-    '<b>AND, OR und NOT</b> werden von <b>' + ja + '</b> der ' + live.length
-    + ' Live-Suchen nachweislich ausgewertet; sie tragen das Zeichen '
-    + '<b>AND/OR</b>. ' + nein + ' werten sie nachweislich nicht aus und suchen die '
-    + 'W&ouml;rter einfach mit, bei ' + offen + ' ist es ungepr&uuml;ft.';
+    'Sie verwenden <b>Suchoperatoren</b>. Von ' + live.length + ' Live-Suchen werten <b>'
+    + ja + '</b> sie nachweislich aus (Zeichen <b>AND/OR &#10003;</b>), ' + nein
+    + ' nachweislich nicht (<b>AND/OR &#10007;</b>) &mdash; dort werden die W&ouml;rter '
+    + 'einfach mitgesucht. Bei ' + offen + ' ohne Zeichen ist es ungepr&uuml;ft.';
   boolHint.hidden = false;
 }
 
