@@ -353,6 +353,13 @@
   .result-bar b{ font-weight:700; }
   .result-bar .rb-zusatz{ display:block; margin-top:3px; font-size:12px; color:var(--ink-soft); }
 
+  .leer-hinweis{
+    margin-top:10px; padding:11px 14px; border-radius:6px;
+    background:var(--card-2); border-left:3px solid var(--action-deep);
+    font-size:13px; line-height:1.5; color:var(--ink-soft);
+  }
+  .leer-hinweis b{ color:var(--ink); }
+
   .bool-hint{
     margin-top:9px; padding:9px 13px; border-radius:6px;
     background:var(--card-2); border-left:3px solid var(--action-deep);
@@ -405,6 +412,9 @@
     background:var(--brand); border-color:var(--brand); color:var(--on-brand);
   }
   .fchip:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+  .filter-reset{ display:flex; justify-content:flex-end; margin-top:2px; }
+  .fchip.reset{ border-style:dashed; color:var(--ink-faint); }
+  .fchip.reset:hover{ border-style:solid; border-color:var(--brand); color:var(--brand); }
 
   /* Ausgeblendete Kacheln und leergefilterte Rubriken */
   .card.aus, .cat.aus{ display:none; }
@@ -559,6 +569,7 @@
       <!-- Rueckmeldung nach dem Absenden. Vorher unsichtbar: Ohne Suche gibt
            es nichts zu melden. -->
       <div class="result-bar" id="resultBar" hidden></div>
+      <div class="leer-hinweis" id="leerHinweis" hidden></div>
 
       <!-- Hinweis auf Boolesche Operatoren - erscheint nur, wenn welche
            getippt werden. -->
@@ -595,6 +606,11 @@
           </div>
           <div class="filter-group" data-gruppe="rubrik" id="filterRubrik">
             <span class="filter-label">Art der Quelle</span>
+          </div>
+          <!-- Erscheint nur, wenn etwas zurueckzusetzen ist - sonst waere es
+               ein Knopf ohne Wirkung. -->
+          <div class="filter-reset" id="filterResetZeile" hidden>
+            <button type="button" class="fchip reset" id="filterReset">Alle Filter zurücksetzen</button>
           </div>
         </div>
       </details>
@@ -1305,9 +1321,30 @@ function filtern(){
               + (FILTER.bool !== 'alle') + (FILTER.rubrik.size ? 1 : 0);
   const badge = document.getElementById('filterBadge');
   badge.textContent = aktiv; badge.hidden = !aktiv;
+  document.getElementById('filterResetZeile').hidden = !aktiv;
   document.getElementById('dbCount').textContent = sichtbar;
+  // Sackgasse abfangen: Vier Filter zusammen koennen alles ausblenden.
+  const leer = document.getElementById('leerHinweis');
+  if(sichtbar === 0){
+    leer.innerHTML = '<b>Keine Datenbank erf&uuml;llt alle gew&auml;hlten Filter.</b> '
+      + 'Nehmen Sie einen Filter zur&uuml;ck &mdash; oder setzen Sie unten alle zur&uuml;ck.';
+    leer.hidden = false;
+  } else {
+    leer.hidden = true;
+  }
   zeigeErgebnis();   // nur die Zahlen nachfuehren, nicht springen
 }
+
+// Alles auf Ausgangswerte - die Suche selbst bleibt bestehen.
+document.getElementById('filterReset').addEventListener('click', ()=>{
+  FILTER.zugang = FILTER.suchart = FILTER.bool = 'alle';
+  FILTER.rubrik.clear();
+  document.querySelectorAll('.filter-group').forEach(g=>{
+    g.querySelectorAll('.fchip').forEach(b=>
+      b.setAttribute('aria-pressed', b.dataset.wert === 'alle' ? 'true' : 'false'));
+  });
+  filtern();
+});
 
 document.querySelectorAll('.filter-group').forEach(gruppe=>{
   const name = gruppe.dataset.gruppe;

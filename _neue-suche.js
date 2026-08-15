@@ -156,9 +156,30 @@ function filtern(){
               + (FILTER.bool !== 'alle') + (FILTER.rubrik.size ? 1 : 0);
   const badge = document.getElementById('filterBadge');
   badge.textContent = aktiv; badge.hidden = !aktiv;
+  document.getElementById('filterResetZeile').hidden = !aktiv;
   document.getElementById('dbCount').textContent = sichtbar;
+  // Sackgasse abfangen: Vier Filter zusammen koennen alles ausblenden.
+  const leer = document.getElementById('leerHinweis');
+  if(sichtbar === 0){
+    leer.innerHTML = '<b>Keine Datenbank erf&uuml;llt alle gew&auml;hlten Filter.</b> '
+      + 'Nehmen Sie einen Filter zur&uuml;ck &mdash; oder setzen Sie unten alle zur&uuml;ck.';
+    leer.hidden = false;
+  } else {
+    leer.hidden = true;
+  }
   zeigeErgebnis();   // nur die Zahlen nachfuehren, nicht springen
 }
+
+// Alles auf Ausgangswerte - die Suche selbst bleibt bestehen.
+document.getElementById('filterReset').addEventListener('click', ()=>{
+  FILTER.zugang = FILTER.suchart = FILTER.bool = 'alle';
+  FILTER.rubrik.clear();
+  document.querySelectorAll('.filter-group').forEach(g=>{
+    g.querySelectorAll('.fchip').forEach(b=>
+      b.setAttribute('aria-pressed', b.dataset.wert === 'alle' ? 'true' : 'false'));
+  });
+  filtern();
+});
 
 document.querySelectorAll('.filter-group').forEach(gruppe=>{
   const name = gruppe.dataset.gruppe;
