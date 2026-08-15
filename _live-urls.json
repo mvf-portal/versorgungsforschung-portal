@@ -1,0 +1,142 @@
+[
+ {
+  "c": "biblio",
+  "n": "PubMed / MEDLINE",
+  "u": "https://pubmed.ncbi.nlm.nih.gov/?term=%s"
+ },
+ {
+  "c": "biblio",
+  "n": "PubMed Central (PMC)",
+  "u": "https://www.ncbi.nlm.nih.gov/pmc/?term=%s"
+ },
+ {
+  "c": "biblio",
+  "n": "Europe PMC",
+  "u": "https://europepmc.org/search?query=%s"
+ },
+ {
+  "c": "evidenz",
+  "n": "Cochrane Library",
+  "u": "https://www.cochranelibrary.com/search?q=%s"
+ },
+ {
+  "c": "evidenz",
+  "n": "Epistemonikos",
+  "u": "https://www.epistemonikos.org/en/search?q=%s"
+ },
+ {
+  "c": "evidenz",
+  "n": "Trip Database",
+  "u": "https://www.tripdatabase.com/search?criteria=%s"
+ },
+ {
+  "c": "openaccess",
+  "n": "Google Scholar",
+  "u": "https://scholar.google.com/scholar?q=%s"
+ },
+ {
+  "c": "openaccess",
+  "n": "Semantic Scholar",
+  "u": "https://www.semanticscholar.org/search?q=%s&sort=relevance"
+ },
+ {
+  "c": "openaccess",
+  "n": "OpenAlex",
+  "u": "https://openalex.org/works?filter=default.search%3A%s"
+ },
+ {
+  "c": "openaccess",
+  "n": "BASE",
+  "u": "https://www.base-search.net/Search/Results?lookfor=%s"
+ },
+ {
+  "c": "openaccess",
+  "n": "CORE",
+  "u": "https://core.ac.uk/search?q=%s"
+ },
+ {
+  "c": "openaccess",
+  "n": "The Lens",
+  "u": "https://www.lens.org/lens/search/scholar/list?q=%s"
+ },
+ {
+  "c": "openaccess",
+  "n": "Dimensions",
+  "u": "https://app.dimensions.ai/discover/publication?search_text=%s"
+ },
+ {
+  "c": "openaccess",
+  "n": "Zenodo",
+  "u": "https://zenodo.org/search?q=%s"
+ },
+ {
+  "c": "deutsch",
+  "n": "Monitor Versorgungsforschung",
+  "u": "https://www.monitor-versorgungsforschung.de/?s=%s&utm_source=knowledge-hub&utm_medium=referral&utm_campaign=wissen-portal"
+ },
+ {
+  "c": "deutsch",
+  "n": "DNVF",
+  "u": "https://www.dnvf.de/suche.html?keywords=%s"
+ },
+ {
+  "c": "deutsch",
+  "n": "Gemeinsamer Bundesausschuss (G-BA)",
+  "u": "https://www.g-ba.de/sys/suche/?suchbegriff=%s"
+ },
+ {
+  "c": "deutsch",
+  "n": "Innovationsfonds (G-BA)",
+  "u": "https://innovationsfonds.g-ba.de/suche/?suchbegriff=%s"
+ },
+ {
+  "c": "volltext",
+  "n": "Nationallizenzen (DFG)",
+  "u": "https://www.nationallizenzen.de/@@search?SearchableText=%s"
+ },
+ {
+  "c": "volltext",
+  "n": "subito",
+  "u": "https://search.subito-doc.de/vufind/Search/Results?lookfor=%s&type=AllFields"
+ },
+ {
+  "c": "volltext",
+  "n": "Fernleihe (K10plus)",
+  "u": "https://opac.k10plus.de/DB=2.299/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=%s"
+ },
+ {
+  "c": "register",
+  "n": "ClinicalTrials.gov",
+  "u": "https://clinicaltrials.gov/search?term=%s"
+ },
+ {
+  "c": "register",
+  "n": "EU Clinical Trials Register",
+  "u": "https://www.clinicaltrialsregister.eu/ctr-search/search?query=%s"
+ },
+ {
+  "c": "policy",
+  "n": "WHO IRIS",
+  "u": "https://iris.who.int/discover?query=%s"
+ },
+ {
+  "c": "policy",
+  "n": "NICE",
+  "u": "https://www.nice.org.uk/search?q=%s"
+ },
+ {
+  "c": "preprint",
+  "n": "medRxiv",
+  "u": "https://www.medrxiv.org/search/%s"
+ },
+ {
+  "c": "preprint",
+  "n": "OSF",
+  "u": "https://osf.io/search/?q=%s"
+ },
+ {
+  "c": "preprint",
+  "n": "OpenGrey / Graue Literatur",
+  "u": "https://www.base-search.net/Search/Results?lookfor=%s&type=all&filter[]=f_dctypenorm%3A%224%22"
+ }
+]

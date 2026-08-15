@@ -1,0 +1,36 @@
+{
+ "ja": [
+  "PubMed / MEDLINE",
+  "PubMed Central (PMC)",
+  "Europe PMC",
+  "Google Scholar",
+  "OpenAlex",
+  "subito",
+  "ClinicalTrials.gov",
+  "EU Clinical Trials Register",
+  "NICE",
+  "Zenodo",
+  "medRxiv"
+ ],
+ "nein": [
+  "Monitor Versorgungsforschung",
+  "DNVF",
+  "Gemeinsamer Bundesausschuss (G-BA)",
+  "Nationallizenzen (DFG)"
+ ],
+ "offen": [
+  "Cochrane Library",
+  "Epistemonikos",
+  "Trip Database",
+  "Semantic Scholar",
+  "BASE",
+  "CORE",
+  "The Lens",
+  "Dimensions",
+  "Innovationsfonds (G-BA)",
+  "Fernleihe (K10plus)",
+  "WHO IRIS",
+  "OSF",
+  "OpenGrey / Graue Literatur"
+ ]
+}

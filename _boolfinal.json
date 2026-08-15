@@ -1,0 +1,142 @@
+[
+ {
+  "name": "PubMed / MEDLINE",
+  "urteil": "JA",
+  "beleg": "Trefferzahlen (Durchgang 1)"
+ },
+ {
+  "name": "PubMed Central (PMC)",
+  "urteil": "JA",
+  "beleg": "Trefferzahlen (Durchgang 1)"
+ },
+ {
+  "name": "Europe PMC",
+  "urteil": "JA",
+  "beleg": "Trefferzahlen (Durchgang 1)"
+ },
+ {
+  "name": "Cochrane Library",
+  "urteil": "nein",
+  "beleg": "Trefferzahl unveraendert (Durchgang 1)"
+ },
+ {
+  "name": "Epistemonikos",
+  "urteil": "ungeprueft",
+  "beleg": "nicht erreichbar (HTTPError)"
+ },
+ {
+  "name": "Trip Database",
+  "urteil": "ungeprueft",
+  "beleg": "weder Leermeldung noch Trefferliste erkennbar"
+ },
+ {
+  "name": "Google Scholar",
+  "urteil": "JA",
+  "beleg": "Trefferzahlen (Durchgang 1)"
+ },
+ {
+  "name": "Semantic Scholar",
+  "urteil": "ungeprueft",
+  "beleg": "weder Leermeldung noch Trefferliste erkennbar"
+ },
+ {
+  "name": "OpenAlex",
+  "urteil": "JA",
+  "beleg": "Trefferzahlen (Durchgang 1)"
+ },
+ {
+  "name": "BASE",
+  "urteil": "ungeprueft",
+  "beleg": "weder Leermeldung noch Trefferliste erkennbar"
+ },
+ {
+  "name": "CORE",
+  "urteil": "ungeprueft",
+  "beleg": "nicht erreichbar (HTTPError)"
+ },
+ {
+  "name": "The Lens",
+  "urteil": "ungeprueft",
+  "beleg": "nicht entscheidbar"
+ },
+ {
+  "name": "Dimensions",
+  "urteil": "ungeprueft",
+  "beleg": "weder Leermeldung noch Trefferliste erkennbar"
+ },
+ {
+  "name": "Zenodo",
+  "urteil": "nein",
+  "beleg": "Trefferzahl unveraendert (Durchgang 1)"
+ },
+ {
+  "name": "Monitor Versorgungsforschung",
+  "urteil": "nein",
+  "beleg": "Trefferzahl unveraendert (Durchgang 1)"
+ },
+ {
+  "name": "DNVF",
+  "urteil": "nein",
+  "beleg": "auch mit OR keine Treffer"
+ },
+ {
+  "name": "Gemeinsamer Bundesausschuss (G-BA)",
+  "urteil": "nein",
+  "beleg": "Trefferzahl unveraendert (Durchgang 1)"
+ },
+ {
+  "name": "Innovationsfonds (G-BA)",
+  "urteil": "ungeprueft",
+  "beleg": "nicht entscheidbar"
+ },
+ {
+  "name": "Nationallizenzen (DFG)",
+  "urteil": "nein",
+  "beleg": "auch mit OR keine Treffer"
+ },
+ {
+  "name": "subito",
+  "urteil": "JA",
+  "beleg": "Phantasiewort leer, mit OR voll"
+ },
+ {
+  "name": "Fernleihe (K10plus)",
+  "urteil": "ungeprueft",
+  "beleg": "weder Leermeldung noch Trefferliste erkennbar"
+ },
+ {
+  "name": "ClinicalTrials.gov",
+  "urteil": "JA",
+  "beleg": "Trefferzahlen (Durchgang 1)"
+ },
+ {
+  "name": "EU Clinical Trials Register",
+  "urteil": "JA",
+  "beleg": "Trefferzahlen (Durchgang 1)"
+ },
+ {
+  "name": "WHO IRIS",
+  "urteil": "ungeprueft",
+  "beleg": "weder Leermeldung noch Trefferliste erkennbar"
+ },
+ {
+  "name": "NICE",
+  "urteil": "JA",
+  "beleg": "Trefferzahlen (Durchgang 1)"
+ },
+ {
+  "name": "medRxiv",
+  "urteil": "ungeprueft",
+  "beleg": "nicht erreichbar (HTTPError)"
+ },
+ {
+  "name": "OSF",
+  "urteil": "ungeprueft",
+  "beleg": "weder Leermeldung noch Trefferliste erkennbar"
+ },
+ {
+  "name": "OpenGrey / Graue Literatur",
+  "urteil": "ungeprueft",
+  "beleg": "weder Leermeldung noch Trefferliste erkennbar"
+ }
+]

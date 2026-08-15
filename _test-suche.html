@@ -1,0 +1,1302 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Rechercheportal zur Versorgungsforschung und Health Services Research: gebündelte Live-Suchen über alle wichtigen Datenbanken plus tagesaktuelle Studien mit deutscher Zusammenfassung. Ein Angebot von Monitor Versorgungsforschung.">
+<title>Knowledge-Hub Versorgungsforschung</title>
+<style>
+  /* ---------- Lato: die Hausschrift von Monitor Versorgungsforschung ----------
+     Selbst gehostet wie auf m-vf.de. Bewusst kein Google Fonts: Der Hub baut
+     keine Verbindung zu Dritten auf - das steht so in seinen Datenschutzhinweisen.
+     font-display:swap zeigt sofort die Systemschrift und tauscht dann. */
+  @font-face{ font-family:"Lato"; font-style:normal; font-weight:300;
+    src:url("fonts/lato-300.woff2") format("woff2"); font-display:swap; }
+  @font-face{ font-family:"Lato"; font-style:normal; font-weight:400;
+    src:url("fonts/lato-400.woff2") format("woff2"); font-display:swap; }
+  @font-face{ font-family:"Lato"; font-style:normal; font-weight:700;
+    src:url("fonts/lato-700.woff2") format("woff2"); font-display:swap; }
+
+  :root{
+    --paper:#EDF2FA; --card:#FFFFFF; --card-2:#F7FAFD;
+    --ink:#111111; --ink-soft:#444A50; --ink-faint:#545C63;
+    --line:#D0D8E4; --line-soft:#E3EAF3;
+    --brand:#0051A1; --brand-deep:#003B77; --brand-tint:#E1EAF6;
+    /* Gold ist bei MVF die Handlungsfarbe: Abonnieren, Alle News, Spende. */
+    --action:#BE9E53; --action-deep:#A5873F; --on-action:#2A2207;
+    --on-brand:#FFFFFF;
+    --accent:#8A6E28;
+    --shadow:0 1px 2px rgba(16,40,38,.05), 0 8px 24px -16px rgba(16,40,38,.28);
+    --shadow-hover:0 2px 4px rgba(16,40,38,.06), 0 18px 40px -20px rgba(16,40,38,.40);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#0A1120; --card:#111B2E; --card-2:#0E1728;
+      --ink:#E9EEF6; --ink-soft:#A9B7CA; --ink-faint:#8FA0B7;
+      --line:#22314A; --line-soft:#1A2639;
+      --brand:#6FA8E8; --brand-deep:#9CC6F4; --brand-tint:#152742;
+      --action:#D4B878; --action-deep:#E3CB94; --on-action:#221A08;
+    --on-brand:#081726;
+      --accent:#D9BE82;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -18px rgba(0,0,0,.7);
+      --shadow-hover:0 2px 6px rgba(0,0,0,.4), 0 22px 46px -22px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="light"]{
+    --paper:#EDF2FA; --card:#FFFFFF; --card-2:#F7FAFD;
+    --ink:#111111; --ink-soft:#444A50; --ink-faint:#545C63;
+    --line:#D0D8E4; --line-soft:#E3EAF3;
+    --brand:#0051A1; --brand-deep:#003B77; --brand-tint:#E1EAF6;
+    /* Gold ist bei MVF die Handlungsfarbe: Abonnieren, Alle News, Spende. */
+    --action:#BE9E53; --action-deep:#A5873F; --on-action:#2A2207;
+    --on-brand:#FFFFFF;
+    --accent:#8A6E28;
+    --shadow:0 1px 2px rgba(16,40,38,.05), 0 8px 24px -16px rgba(16,40,38,.28);
+    --shadow-hover:0 2px 4px rgba(16,40,38,.06), 0 18px 40px -20px rgba(16,40,38,.40);
+  }
+  :root[data-theme="dark"]{
+    --paper:#0A1120; --card:#111B2E; --card-2:#0E1728;
+    --ink:#E9EEF6; --ink-soft:#A9B7CA; --ink-faint:#8FA0B7;
+    --line:#22314A; --line-soft:#1A2639;
+    --brand:#6FA8E8; --brand-deep:#9CC6F4; --brand-tint:#152742;
+    --action:#D4B878; --action-deep:#E3CB94; --on-action:#221A08;
+    --on-brand:#081726;
+    --accent:#D9BE82;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -18px rgba(0,0,0,.7);
+    --shadow-hover:0 2px 6px rgba(0,0,0,.4), 0 22px 46px -22px rgba(0,0,0,.8);
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Lato", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size:16px; line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{ font-family:inherit; font-weight:700; letter-spacing:-.005em; }  /* MVF nutzt durchgaengig Lato */
+  /* Keine zweite Schriftfamilie: m-vf.de fuehrt ausschliesslich Lato.
+     Der technische Charakter kommt ueber gleichbreite Ziffern. */
+  .mono{ font-family:inherit; font-variant-numeric:tabular-nums; letter-spacing:.015em; }
+
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 22px; }
+
+  /* ---------- Header ---------- */
+  header.masthead{
+    background:
+      radial-gradient(120% 140% at 88% -20%, var(--brand-tint) 0%, transparent 55%),
+      var(--card);
+    border-bottom:1px solid var(--line);
+  }
+  .masthead-inner{ padding:34px 0 30px; }
+  /* Kopfzeile: Titelblock links, MVF-Logo rechts. Ab 760 px untereinander. */
+  .masthead-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:26px; }
+  .masthead-text{ min-width:0; }
+  .brand-link{ flex:0 0 auto; display:block; line-height:0; }
+  .brand-link img{ width:210px; max-width:38vw; height:auto; display:block; }
+  .brand-link:focus-visible{ outline:2px solid var(--brand); outline-offset:4px; border-radius:3px; }
+  /* Das Logo besteht aus genau zwei Farben: Blau #0060A0 und Gold #C0A060.
+     Auf dunklem Grund waere es kaum sichtbar - es wird deshalb NICHT umgefaerbt
+     (das zerstoerte den Goldanteil der Wortmarke), sondern auf eine helle
+     Flaeche gestellt. So bleibt die Marke unveraendert. */
+  .brand-link{ border-radius:5px; }
+  @media (prefers-color-scheme:dark){
+    .brand-link{ background:#FFFFFF; padding:10px 13px; }
+  }
+  :root[data-theme="dark"] .brand-link{ background:#FFFFFF; padding:10px 13px; }
+  :root[data-theme="light"] .brand-link{ background:none; padding:0; }
+  @media (max-width:760px){
+    .masthead-top{ flex-direction:column-reverse; align-items:flex-start; gap:16px; }
+    .brand-link img{ width:170px; max-width:60vw; }
+  }
+  /* Ein durchgehender Titel in der Hausfarbe, Lato 700. Kein max-width und
+     kein text-wrap:balance mehr - beides erzwaenge einen Umbruch. Erst wenn
+     der Platz wirklich nicht reicht, bricht die Zeile (siehe Media Query). */
+  /* Der Titel soll auf EINER Zeile stehen. Gemessen: bei 3,7vw fuellt er die
+     Restbreite neben dem Logo exakt aus - 3,4vw laesst rund 10 % Reserve.
+     Die Untergrenze 18px haelt ihn auch auf 375px-Displays einzeilig.
+     Bewusst kein white-space:nowrap: darunter soll er umbrechen, nicht ueberlaufen. */
+  h1{
+    font-size:clamp(18px,3.4vw,46px); line-height:1.12; margin:0 0 .18em;
+    font-weight:700; letter-spacing:-.015em; color:var(--brand);
+  }
+  h1 .sub{ display:block; color:var(--ink-soft); font-size:.46em; font-weight:400;
+           letter-spacing:0; margin-top:.55em; max-width:52ch; }
+  .lede{ color:var(--ink-soft); max-width:64ch; font-size:17px; margin:.2em 0 0; }
+
+  /* ---------- Search panel ---------- */
+  .panel{
+    margin-top:26px; background:var(--card-2); border:1px solid var(--line);
+    border-radius:6px; padding:20px; box-shadow:var(--shadow);
+  }
+  .panel-label{
+    font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint);
+    font-weight:700; margin-bottom:10px; display:block;
+  }
+  .search-row{ display:flex; gap:10px; flex-wrap:wrap; }
+  .search-field{
+    position:relative; flex:1 1 320px; display:flex; align-items:center;
+  }
+  .search-field svg{ position:absolute; left:15px; width:19px; height:19px; color:var(--ink-faint); pointer-events:none; }
+  #q{
+    width:100%; font-size:17px; font-family:inherit; color:var(--ink);
+    background:var(--card); border:1.5px solid var(--line); border-radius:6px;
+    padding:14px 14px 14px 44px; outline:none; transition:border-color .15s, box-shadow .15s;
+  }
+  #q:focus{ border-color:var(--brand); box-shadow:0 0 0 3px var(--brand-tint); }
+  #q::placeholder{ color:var(--ink-faint); }
+  .btn-clear{
+    background:var(--card); border:1.5px solid var(--line); border-radius:6px;
+    color:var(--ink-soft); font-family:inherit; font-size:14px; font-weight:600;
+    padding:0 18px; cursor:pointer; transition:border-color .15s, color .15s;
+    min-height:46px;  /* Touch-Ziel, wenn die Buttons auf schmalen Displays umbrechen */
+  }
+  .btn-clear:hover{ border-color:var(--brand); color:var(--brand); }
+  .btn-clear:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+  .btn-go{
+    background:var(--action); border:1.5px solid var(--action); border-radius:6px;
+    color:var(--on-action); font-family:inherit; font-size:14px; font-weight:600;
+    padding:0 20px; cursor:pointer; white-space:nowrap;
+    display:flex; align-items:center; justify-content:center; gap:7px; transition:filter .15s;
+    min-height:46px;  /* Touch-Ziel, wenn die Buttons auf schmalen Displays umbrechen */
+    flex:0 1 auto;    /* natuerliche Breite: das Suchfeld soll den Platz bekommen */
+  }
+  /* Auf sehr schmalen Displays darf die Beschriftung umbrechen, statt zu ueberlaufen. */
+  @media (max-width:560px){
+    .btn-go{ white-space:normal; flex:1 1 100%; padding:10px 16px; }
+    .btn-select{ max-width:none; flex:1 1 auto; }
+  }
+  :root[data-theme="dark"] .btn-go{ color:var(--on-action); }
+  @media (prefers-color-scheme:dark){ .btn-go{ color:var(--on-action); } }
+  :root[data-theme="light"] .btn-go{ color:var(--on-action); }
+  .btn-go:hover{ filter:brightness(1.12); }
+  .btn-select{
+    background:var(--card); border:1.5px solid var(--line); border-radius:6px;
+    color:var(--ink-soft); font-family:inherit; font-size:14px; font-weight:600;
+    padding:0 12px; cursor:pointer; min-height:46px; max-width:230px;
+    transition:border-color .15s, color .15s;
+  }
+  .btn-select:hover{ border-color:var(--brand); color:var(--brand); }
+  .btn-select:disabled{ opacity:.45; cursor:not-allowed; }
+  .btn-select:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+  .btn-select optgroup{ font-weight:700; color:var(--ink); }
+  .btn-select option{ font-weight:500; color:var(--ink); }
+  .btn-go:disabled{ opacity:.45; cursor:not-allowed; filter:none; }
+  .btn-go:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+
+  .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:14px; align-items:center; }
+  .chips .chips-label{ font-size:12.5px; color:var(--ink-faint); margin-right:2px; }
+  .chip{
+    font-size:13px; font-family:inherit; color:var(--ink-soft); font-weight:500;
+    background:var(--card); border:1px solid var(--line); border-radius:999px;
+    padding:6px 13px; cursor:pointer; transition:all .14s; white-space:nowrap;
+  }
+  .chip:hover{ border-color:var(--brand); color:var(--brand); }
+  .chip[aria-pressed="true"]{ background:var(--brand); border-color:var(--brand); color:#fff; }
+  :root[data-theme="dark"] .chip[aria-pressed="true"],
+  .chip[aria-pressed="true"]{ color:var(--on-brand); }
+  .chip:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+
+  .meta-row{
+    display:flex; align-items:center; gap:8px; margin-top:16px;
+    font-size:13px; color:var(--ink-faint); flex-wrap:wrap;
+  }
+  .dot{ width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 0 var(--accent); animation:pulse 2.4s infinite; }
+  @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(179,97,42,.5)} 70%{box-shadow:0 0 0 7px rgba(179,97,42,0)} 100%{box-shadow:0 0 0 0 rgba(179,97,42,0)} }
+  @media (prefers-reduced-motion:reduce){ .dot{ animation:none } }
+
+  /* ---------- Category nav ---------- */
+  nav.jump{
+    position:sticky; top:0; z-index:20; background:color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter:saturate(180%) blur(8px); border-bottom:1px solid var(--line);
+  }
+  .jump-inner{ display:flex; gap:6px; overflow-x:auto; padding:11px 0; scrollbar-width:thin; }
+  .jump a{
+    flex:0 0 auto; font-size:13px; color:var(--ink-soft); text-decoration:none; font-weight:500;
+    padding:6px 12px; border-radius:6px; border:1px solid transparent; white-space:nowrap; transition:all .14s;
+  }
+  .jump a:hover{ background:var(--card); border-color:var(--line); color:var(--brand); }
+
+  /* ---------- Layout (Datenbanken + Studien-Frame) ---------- */
+  .layout{ padding:26px 0 40px; display:grid; grid-template-columns:minmax(0,1fr); gap:28px; align-items:start; }
+  @media (min-width:1000px){ .layout{ grid-template-columns:minmax(0,1fr) 358px; } }
+  .col-main{ min-width:0; }
+
+  /* ---------- Studien-Frame (rechts) ---------- */
+  aside.studies{ min-width:0; }
+  @media (min-width:1000px){
+    aside.studies{
+      position:sticky; top:58px; max-height:calc(100vh - 74px);
+      display:flex; flex-direction:column;
+      overflow-y:auto; scrollbar-width:thin;  /* Ventil, wenn alle Teile zusammen zu hoch werden */
+    }
+  }
+  .studies-head{
+    background:var(--card); border:1px solid var(--line); border-top:3px solid var(--accent);
+    border-radius:5px 13px 0 0; padding:15px 16px 13px; box-shadow:var(--shadow);
+  }
+  .studies-title{ display:flex; align-items:center; gap:9px; font-weight:600; font-size:16px; letter-spacing:-.01em; }
+  .studies-title .dot{ width:8px; height:8px; }
+  /* Meldung ueber den letzten Lauf. Zwei Faelle mit eigener Farbe:
+     "nichts Neues" ist normal (neutral), ein ausgefallener Lauf nicht (Warnfarbe). */
+  .studies-status{
+    font-size:11.5px; line-height:1.4; margin-top:7px; padding:6px 9px;
+    border-radius:5px; border-left:3px solid var(--ink-faint);
+    background:var(--card-2); color:var(--ink-soft);
+  }
+  .studies-status[data-art="ausfall"]{ border-left-color:var(--action-deep); }
+  .studies-hint{ font-size:11.5px; color:var(--ink-faint); margin-top:7px; line-height:1.45; }
+  .studies-sub{ font-size:12px; color:var(--ink-faint); margin-top:6px; padding-top:6px;
+                border-top:1px solid var(--line-soft); line-height:1.4; }
+  .studies-sub b{ color:var(--ink-soft); font-weight:600; }
+  .studies-list{
+    border:1px solid var(--line); border-top:none; border-radius:0 0 13px 13px;
+    background:var(--card-2); padding:12px; display:flex; flex-direction:column; gap:11px;
+    box-shadow:var(--shadow);
+    /* Volle Hoehe, kein eigener Rollbalken: Eine Studienkarte ist rund 420 px
+       hoch: in einem eingeklemmten Kasten war stets nur eine sichtbar.
+       Gescrollt wird stattdessen die Spalte als Ganzes (siehe aside.studies). */
+    flex:0 0 auto;
+  }
+  article.study{
+    background:var(--card); border:1px solid var(--line); border-radius:6px;
+    padding:11px 13px; display:flex; flex-direction:column; gap:5px;
+  }
+  .study-top{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; }
+  .study-journal{ font-size:11.5px; font-weight:600; color:var(--accent); line-height:1.3; }
+  .study-year{ font-size:11px; color:var(--ink-faint); font-variant-numeric:tabular-nums;
+               flex:0 0 auto; white-space:nowrap; }
+  .study-author{ font-size:11.5px; color:var(--ink-faint); line-height:1.3; margin-top:-3px; }
+  .study-added{ font-size:10.5px; color:var(--ink-faint); line-height:1.3; margin-top:-3px; opacity:.85; }
+  a.study-title{ font-size:14.5px; font-weight:600; color:var(--ink); text-decoration:none; line-height:1.32; letter-spacing:-.005em; }
+  a.study-title:hover{ color:var(--brand); text-decoration:underline; }
+  .study-sum{ font-size:13px; color:var(--ink-soft); line-height:1.46; margin:0; }
+  .study-result{
+    font-size:12.5px; line-height:1.45; color:var(--ink); background:var(--brand-tint);
+    border-left:3px solid var(--brand); border-radius:0 5px 5px 0; padding:7px 9px;
+  }
+  /* Inline statt auf eigener Zeile: spart je Karte eine Zeile Hoehe. */
+  .study-result .rlabel{
+    display:inline; font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--brand-deep); font-weight:700; margin-right:6px;
+  }
+  :root[data-theme="dark"] .study-result .rlabel{ color:var(--brand); }
+  @media (prefers-color-scheme:dark){ .study-result .rlabel{ color:var(--brand); } }
+  a.study-src{ font-size:11.5px; font-weight:600; color:var(--ink-faint); text-decoration:none; align-self:flex-start; }
+  a.study-src:hover{ color:var(--brand); }
+  /* Hinweise unter dem Suchfeld - bewusst untereinander statt zweispaltig.
+     Im Raster richten sich die Zeilen an der hoechsten Karte aus: Der kurze
+     Absatz wurde auf die Hoehe des langen gestreckt, was eine Luecke von
+     knapp 50 px hinterliess. Untereinander sind die Abstaende gleichmaessig;
+     die Zeilenlaenge begrenzt max-width, damit die Zeilen lesbar bleiben. */
+  .hints{
+    display:flex; flex-direction:column; gap:7px;
+    margin-top:14px; padding-top:13px; border-top:1px solid var(--line-soft);
+  }
+  .hints p{ margin:0; font-size:12px; line-height:1.5; color:var(--ink-faint); max-width:104ch; }
+  .hints b{ color:var(--ink-soft); font-weight:700; }
+
+  /* ---------- Download-Leisten ---------- */
+  .dl-row{ display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-top:10px; }
+  .dl-label{ font-size:11px; color:var(--ink-faint); }
+  .dl-btn{
+    font-size:11.5px; font-family:inherit; font-weight:600; color:var(--ink-soft);
+    background:var(--card-2); border:1px solid var(--line); border-radius:5px;
+    padding:5px 10px; cursor:pointer; transition:border-color .14s, color .14s;
+  }
+  .dl-btn:hover:not(:disabled){ border-color:var(--brand); color:var(--brand); }
+  .dl-btn:disabled{ opacity:.4; cursor:not-allowed; }
+  .dl-btn:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+  .archive .dl-row{ margin:0; padding:10px 14px 4px; border-bottom:1px solid var(--line-soft); }
+
+  /* ---------- Studien-Newsletter ---------- */
+  /* Die Anmeldung selbst liegt bei Monitor Versorgungsforschung; hier steht nur
+     der Hinweis darauf. Wie .archive: flex:0 0 auto, sonst staucht die
+     Studienliste den Kasten in der Sticky-Spalte weg. */
+  .nl{
+    margin-top:10px; border:1px solid var(--line); border-radius:6px;
+    background:var(--card); padding:11px 13px; flex:0 0 auto;
+  }
+  .nl-title{
+    display:flex; align-items:center; gap:8px;
+    font-weight:700; font-size:13.5px; color:var(--ink); margin-bottom:5px;
+  }
+  .nl-title::before{ content:"\2709"; font-size:15px; filter:grayscale(.3); }
+  .nl-text{ font-size:11px; line-height:1.45; color:var(--ink-faint); margin:0 0 8px; }
+  .nl-btn{
+    display:inline-flex; align-items:center; font-size:12px; font-weight:700;
+    text-decoration:none; color:var(--on-action); background:var(--action); border-radius:5px;
+    padding:8px 13px; transition:filter .14s;
+    min-height:46px;  /* Touch-Ziel, wie bei den uebrigen Knoepfen */
+  }
+  .nl-btn:hover{ filter:brightness(1.12); }
+  .nl-btn:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+  .nl-host{ display:block; font-size:10.5px; color:var(--ink-faint); margin-top:7px; }
+
+
+  .boolmark{
+    font-size:9.5px; font-weight:700; letter-spacing:.05em; color:var(--brand);
+    border:1px solid var(--brand); border-radius:3px; padding:1px 4px;
+    margin-left:6px; white-space:nowrap; vertical-align:middle;
+  }
+
+  /* ---------- Rueckmeldung nach dem Absenden ---------- */
+  /* Fruehere Fassung schrieb die Links still um - niemand sah, dass etwas
+     geschah. Diese Leiste ist die sichtbare Antwort auf die Eingabetaste. */
+  .result-bar{
+    margin-top:12px; padding:11px 14px; border-radius:6px;
+    background:var(--brand-tint); border-left:3px solid var(--brand);
+    font-size:13.5px; line-height:1.5; color:var(--ink);
+  }
+  .result-bar b{ font-weight:700; }
+  .result-bar .rb-zusatz{ display:block; margin-top:3px; font-size:12px; color:var(--ink-soft); }
+
+  .bool-hint{
+    margin-top:9px; padding:9px 13px; border-radius:6px;
+    background:var(--card-2); border-left:3px solid var(--action-deep);
+    font-size:12.5px; line-height:1.5; color:var(--ink-soft);
+  }
+  .bool-hint b{ color:var(--ink); font-weight:700; }
+
+  /* ---------- Filter ---------- */
+  .filters{ margin-top:12px; border-top:1px solid var(--line-soft); padding-top:10px; }
+  .filters summary{
+    cursor:pointer; font-size:12.5px; font-weight:700; color:var(--ink-soft);
+    list-style:none; display:flex; align-items:center; gap:8px;
+  }
+  .filters summary::-webkit-details-marker{ display:none; }
+  .filters summary::before{ content:"1"; font-size:15px; }
+  .filters summary::after{ content:"B8"; color:var(--ink-faint); transition:transform .15s; }
+  .filters[open] summary::after{ transform:rotate(90deg); }
+  .filters summary:hover{ color:var(--brand); }
+  .filter-badge{
+    background:var(--brand); color:var(--on-brand); border-radius:999px;
+    font-size:11px; padding:1px 7px; font-weight:700;
+  }
+  .filter-body{ display:flex; flex-direction:column; gap:9px; margin-top:11px; }
+  .filter-group{ display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
+  .filter-label{
+    font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--ink-faint); font-weight:700; min-width:104px;
+  }
+  .fchip{
+    font-size:12px; font-family:inherit; font-weight:600; color:var(--ink-soft);
+    background:var(--card); border:1px solid var(--line); border-radius:999px;
+    padding:4px 11px; cursor:pointer; transition:all .13s;
+  }
+  .fchip:hover{ border-color:var(--brand); color:var(--brand); }
+  .fchip[aria-pressed="true"]{
+    background:var(--brand); border-color:var(--brand); color:var(--on-brand);
+  }
+  .fchip:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+
+  /* Ausgeblendete Kacheln und leergefilterte Rubriken */
+  .card.aus, .cat.aus{ display:none; }
+  .cat-leer{
+    font-size:12.5px; color:var(--ink-faint); padding:10px 2px;
+  }
+
+  /* Marker auf der Kachel, sobald die Suche vorbereitet ist */
+  .card .bereit{
+    display:none; font-size:10px; font-weight:700; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--brand);
+  }
+  body.gesucht .card[data-live="1"] .bereit{ display:inline; }
+
+  /* ---------- Ordner „Ältere Suchergebnisse" ---------- */
+  .archive{
+    margin-top:10px; border:1px solid var(--line); border-radius:6px;
+    background:var(--card); overflow:hidden;
+    flex:0 0 auto;   /* darf nicht gestaucht werden - sonst verschwindet der Ordner */
+  }
+  .archive summary{
+    cursor:pointer; padding:12px 14px; font-weight:600; font-size:13.5px; color:var(--ink-soft);
+    list-style:none; display:flex; align-items:center; gap:9px;
+  }
+  .archive summary::-webkit-details-marker{ display:none; }
+  .archive summary::before{ content:"\1F5C2"; font-size:15px; filter:grayscale(.35); }
+  .archive summary::after{ content:"\25B8"; margin-left:auto; color:var(--ink-faint); transition:transform .15s; }
+  .archive[open] summary::after{ transform:rotate(90deg); }
+  .archive summary:hover{ color:var(--brand); }
+  .archive[open] summary{ border-bottom:1px solid var(--line); }
+  /* 32vh laesst der Studienliste genug Platz, wenn der Ordner offen ist. */
+  /* 32vh war zu viel: zusammen mit dem Newsletter-Kasten blieb fuer die
+     Studienliste kaum Hoehe uebrig. Das Archiv ist zweitrangig. */
+  .archive-body{ padding:6px 12px 12px; max-height:20vh; overflow-y:auto; scrollbar-width:thin; }
+  .arch-day{ margin-top:12px; }
+  .arch-day:first-child{ margin-top:4px; }
+  .arch-date{
+    position:sticky; top:0; z-index:1; background:var(--card);
+    font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--brand); padding:6px 0 5px; border-bottom:1px solid var(--line-soft);
+  }
+  .arch-item{ padding:9px 0 8px; border-bottom:1px solid var(--line-soft); }
+  .arch-item:last-child{ border-bottom:none; }
+  .arch-top{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; }
+  .arch-journal{ font-size:11px; font-weight:600; color:var(--accent); line-height:1.3; }
+  .arch-year{ font-size:10.5px; color:var(--ink-faint); font-variant-numeric:tabular-nums; flex:0 0 auto; white-space:nowrap; }
+  a.arch-title{ display:block; font-size:13.5px; font-weight:600; color:var(--ink); text-decoration:none; line-height:1.32; margin-top:2px; }
+  a.arch-title:hover{ color:var(--brand); text-decoration:underline; }
+  .arch-result{ font-size:12px; color:var(--ink-soft); line-height:1.45; margin:4px 0 0; }
+  .arch-status{ font-size:12px; color:var(--ink-faint); padding:10px 2px; }
+
+  /* ---------- Sections ---------- */
+  .cat{ scroll-margin-top:64px; margin-top:0; }
+  .cat + .cat{ margin-top:34px; }
+  /* MVF fuehrt genau zwei Farben: Blau und Gold. Ein Regenbogen aus acht
+     Kategorietoenen widerspraeche dem, deshalb tragen alle Rubriken die
+     Hausfarbe; die Rubriknummer steht in Gold. Das --h-System in CATS
+     bleibt unangetastet und laesst sich mit einer Zeile reaktivieren. */
+  .cat{ --cat:var(--brand); }
+  /* Gold bleibt den Knoepfen vorbehalten - bei MVF ebenso. Als kleine
+     Textfarbe reicht sein Kontrast nicht (3,04:1 auf hellem Grund). */
+  .cat-num{ color:var(--brand) !important; }
+
+  .cat-head{ display:flex; align-items:baseline; gap:13px; padding-bottom:14px; border-bottom:1px solid var(--line); }
+  .cat-num{ font-family:inherit; font-size:13px; font-weight:700; color:var(--cat);
+            letter-spacing:.06em; font-variant-numeric:tabular-nums; }
+  .cat-head h2{ font-size:clamp(20px,2.6vw,25px); margin:0; font-weight:600; letter-spacing:-.01em; }
+  .cat-count{ margin-left:auto; font-size:12.5px; color:var(--ink-faint); align-self:center; }
+
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(268px,1fr)); gap:14px; margin-top:16px; }
+
+  a.card{
+    display:flex; flex-direction:column; gap:9px; text-decoration:none; color:inherit;
+    background:var(--card); border:1px solid var(--line); border-left:3px solid var(--cat);
+    border-radius:5px; padding:16px 16px 15px; box-shadow:var(--shadow);
+    transition:transform .16s ease, box-shadow .16s ease, border-color .16s;
+    position:relative; min-height:120px;
+  }
+  a.card:hover{ transform:translateY(-3px); box-shadow:var(--shadow-hover); }
+  a.card:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+  .card-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+  .card-name{ font-weight:600; font-size:16.5px; letter-spacing:-.005em; line-height:1.25; }
+  .badge{
+    flex:0 0 auto; font-size:10.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+    padding:3px 8px; border-radius:6px; white-space:nowrap; margin-top:2px;
+  }
+  .badge.live{ background:var(--brand-tint); color:var(--brand-deep); }
+  :root[data-theme="dark"] .badge.live{ color:var(--brand); }
+  @media (prefers-color-scheme:dark){ .badge.live{ color:var(--brand); } }
+  .badge.portal{ background:transparent; color:var(--ink-faint); border:1px solid var(--line); }
+  .badge.lic{ background:transparent; color:var(--accent); border:1px solid color-mix(in srgb, var(--accent) 45%, var(--line)); }
+  .card-desc{ font-size:13.5px; color:var(--ink-soft); line-height:1.42; flex:1; }
+  .card-foot{ display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--cat); font-weight:600; margin-top:2px; }
+  .card-foot .host{ color:var(--ink-faint); font-weight:500; }
+  .arrow{ transition:transform .16s; }
+  a.card:hover .arrow{ transform:translate(3px,-3px); }
+
+  .empty{ grid-column:1/-1; text-align:center; color:var(--ink-faint); padding:30px; font-size:14px; }
+
+  /* ---------- Footer ---------- */
+  footer{ border-top:1px solid var(--line); margin-top:44px; }
+  .foot-inner{ padding:26px 0 40px; color:var(--ink-faint); font-size:13px; display:grid; gap:10px; }
+  .foot-inner strong{ color:var(--ink-soft); font-weight:600; }
+  .foot-inner a{ color:var(--brand); text-decoration:none; }
+  .foot-inner a:hover{ text-decoration:underline; }
+  .attrib{ color:var(--ink-soft); font-weight:600; margin-top:4px; }
+  .legal{ display:grid; gap:8px; margin-top:2px; }
+  .legal details{ border:1px solid var(--line); border-radius:6px; background:var(--card); overflow:hidden; }
+  .legal summary{ cursor:pointer; padding:10px 13px; font-weight:600; color:var(--ink-soft); font-size:13px; list-style:none; }
+  .legal summary::-webkit-details-marker{ display:none; }
+  .legal summary::before{ content:"\25B8\00a0"; color:var(--ink-faint); }
+  .legal details[open] summary::before{ content:"\25BE\00a0"; }
+  .legal details[open] summary{ border-bottom:1px solid var(--line); }
+  .legal .legal-body{ padding:10px 14px 14px; font-size:12px; line-height:1.55; color:var(--ink-soft); }
+  .legal .legal-body h4{ margin:11px 0 2px; font-size:12px; color:var(--ink); font-weight:700; }
+  .legal .legal-body h4:first-child{ margin-top:0; }
+  .legal .legal-body p{ margin:3px 0; }
+  .legal .legal-body a{ color:var(--brand); word-break:break-word; }
+
+  @media (max-width:560px){
+    .masthead-inner{ padding:26px 0 22px; }
+    .panel{ padding:16px; }
+    .cat-count{ display:none; }
+  }
+</style>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <div class="masthead-top">
+      <div class="masthead-text">
+        <h1 class="serif">Knowledge-Hub Versorgungsforschung
+          <span class="sub">Ein Zugang zu allen wichtigen Datenbanken</span>
+        </h1>
+      </div>
+      <a class="brand-link" href="https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&amp;utm_medium=referral&amp;utm_campaign=logo" target="_blank" rel="noopener" title="Monitor Versorgungsforschung — Herausgeber dieses Portals">
+        <img src="logo/mvf-logo.png" width="1236" height="327" alt="Monitor Versorgungsforschung">
+      </a>
+    </div>
+    <p class="lede">Ein Suchbegriff, alle Datenbanken. Geben Sie bitte unten einen Begriff ein — jede Datenbankkarte öffnet damit direkt die passende Live-Suche in einem neuen Tab. Deutschsprachige und internationale Fachdatenbanken, Evidenzsynthesen, Open-Access-Discovery, Studienregister, Institutionen und Wege zum Volltext an einem Ort. Jeden Tag werden die Suchergebnisse automatisch aktualisiert. Kuratiert von einer KI für die tägliche Recherchearbeit. Ein Service von Monitor Versorgungsforschung.</p>
+
+    <div class="panel">
+      <label class="panel-label" for="q">Suchbegriff</label>
+      <div class="search-row">
+        <div class="search-field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="search" autocomplete="off" spellcheck="false" value="Primärversorgung" placeholder="z. B. Primärversorgung, integrierte Versorgung, health services research …">
+        </div>
+        <button class="btn-go" id="go" type="button" title="Stellt alle Datenbanken auf Ihren Suchbegriff ein (oder Eingabetaste drücken)">In allen Datenbanken suchen</button>
+        <button class="btn-clear" id="clear" type="button">Leeren</button>
+      </div>
+
+      <!-- Rueckmeldung nach dem Absenden. Vorher unsichtbar: Ohne Suche gibt
+           es nichts zu melden. -->
+      <div class="result-bar" id="resultBar" hidden></div>
+
+      <!-- Hinweis auf Boolesche Operatoren - erscheint nur, wenn welche
+           getippt werden. -->
+      <div class="bool-hint" id="boolHint" hidden></div>
+      <div class="chips" id="chips">
+        <span class="chips-label">Schnellwahl:</span>
+      </div>
+
+      <details class="filters" id="filters">
+        <summary>Filter <span class="filter-badge" id="filterBadge" hidden></span></summary>
+        <div class="filter-body">
+          <div class="filter-group" data-gruppe="zugang">
+            <span class="filter-label">Zugang</span>
+            <button type="button" class="fchip" data-wert="alle" aria-pressed="true">Alle</button>
+            <button type="button" class="fchip" data-wert="frei" aria-pressed="false">Frei zugänglich</button>
+            <button type="button" class="fchip" data-wert="lizenz" aria-pressed="false">Lizenz nötig</button>
+          </div>
+          <div class="filter-group" data-gruppe="suchart">
+            <span class="filter-label">Suchart</span>
+            <button type="button" class="fchip" data-wert="alle" aria-pressed="true">Alle</button>
+            <button type="button" class="fchip" data-wert="live" aria-pressed="false">Live-Suche</button>
+            <button type="button" class="fchip" data-wert="portal" aria-pressed="false">Portal</button>
+          </div>
+          <div class="filter-group" data-gruppe="bool">
+            <span class="filter-label">Operatoren</span>
+            <button type="button" class="fchip" data-wert="alle" aria-pressed="true">Alle</button>
+            <button type="button" class="fchip" data-wert="ja" aria-pressed="false">Wertet AND/OR/NOT aus</button>
+          </div>
+          <div class="filter-group" data-gruppe="rubrik" id="filterRubrik">
+            <span class="filter-label">Art der Quelle</span>
+          </div>
+        </div>
+      </details>
+      <div class="hints">
+        <p><b>Vollständigkeit.</b> Auch dieses Portal kann nicht sämtliche Artikel „aller Datenbanken" enthalten — das verhindern Lizenz- und Technikgrenzen. Es bündelt stattdessen die maßgeblichen Suchen, sodass eine Recherche systematisch über alle relevanten Datenbanken laufen kann.</p>
+        <p><b>Portal vs. Live-Suche.</b> Von den derzeit <b id="cntGesamt"></b> eingebundenen Datenbanken unterstützen <b id="cntLive"></b> die Live-Suche; sie sind entsprechend gekennzeichnet. Weitere <b id="cntPortal"></b> sind als „Portal" markiert: Angebote wie LIVIVO, das DRKS oder die WHO-Plattform ICTRP erlauben technisch keine verlinkbaren Ergebnisadressen. Der Klick führt dort auf die Startseite — der Suchbegriff ist anschließend von Hand einzugeben.</p>
+        <p><b>Suchoperatoren.</b> <b>AND</b>, <b>OR</b> und <b>NOT</b> funktionieren nicht überall gleich. Wir haben es geprüft: <b id="cntBoolJa"></b> Live-Suchen werten die Operatoren aus — sie tragen das Zeichen <span class="boolmark">AND/OR</span>. <b id="cntBoolNein"></b> werten sie nachweislich nicht aus und suchen die Wörter einfach mit; bei <b id="cntBoolOffen"></b> ließ sich das nicht zuverlässig feststellen. Der Filter „Operatoren" blendet auf Wunsch nur die geprüft tauglichen ein.</p>
+        <p><b>Hinweis zu Lizenzen.</b> Mit <span style="color:var(--accent)">Lizenz</span> markierte Datenbanken (z. B. Web of Science, Scopus, Embase, CINAHL) sind kostenpflichtig — der Zugang läuft meist über Ihre Bibliothek/Institution. Der Link führt zur Startseite bzw. zum institutionellen Login.</p>
+      </div>
+      <div class="meta-row">
+        <span class="dot"></span>
+        <span id="statusText"><strong id="dbCount"></strong> Datenbanken · <span id="searchHint">Links aktualisieren sich live · öffnen in neuem Tab</span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="jump">
+  <div class="wrap jump-inner" id="jumpNav"></div>
+</nav>
+
+<div class="wrap layout">
+  <main class="col-main" id="main"></main>
+
+  <aside class="studies">
+    <div class="studies-head">
+      <div class="studies-title"><span class="dot"></span>Neu in PubMed</div>
+      <div class="studies-status" id="studiesStatus" hidden></div>
+      <div class="studies-hint">Bei den Suchergebnissen handelt es sich um eine Momentaufnahme, um keinen Live-Feed. Die Liste wird jeden Morgen um 6 Uhr automatisch aus PubMed geholt, auf Deutsch zusammengefasst und neu veröffentlicht.</div>
+      <div class="studies-sub">Datenbank: <b>PubMed</b>, nach Datum sortiert · jede Studie mit deutscher Zusammenfassung · Zuletzt aktualisiert: <b id="snapDate">Momentaufnahme</b></div>
+      <div class="dl-row">
+        <span class="dl-label">Download:</span>
+        <button class="dl-btn" id="dlAktuellDoc" type="button" title="Als Word-Dokument herunterladen">⤓ Word</button>
+        <button class="dl-btn" id="dlAktuellCsv" type="button" title="Als Tabelle für Excel herunterladen">⤓ Excel</button>
+      </div>
+    </div>
+    <div class="studies-list" id="studiesList"></div>
+
+    <details class="archive" id="archive" open>
+      <summary id="archiveSummary">Ältere Suchergebnisse</summary>
+      <div class="dl-row">
+        <span class="dl-label">Download:</span>
+        <button class="dl-btn" id="dlArchivDoc" type="button" disabled title="Als Word-Dokument herunterladen">⤓ Word</button>
+        <button class="dl-btn" id="dlArchivCsv" type="button" disabled title="Als Tabelle für Excel herunterladen">⤓ Excel</button>
+      </div>
+      <div class="archive-body" id="archiveBody">
+        <p class="arch-status">Wird geladen …</p>
+      </div>
+    </details>
+    <!-- Anmeldung bewusst NICHT hier: Der Hub erhebt keine personenbezogenen
+         Daten. Das Formular liegt bei Monitor Versorgungsforschung, wo auch
+         Double-Opt-in und Einwilligung verwaltet werden. -->
+    <div class="nl">
+      <div class="nl-title">Studien-Newsletter</div>
+      <p class="nl-text">Diese Studienauswahl kommt auf Wunsch jeden Morgen per E-Mail — mit deutschen Zusammenfassungen und den Ergebniszahlen, dazu Word- und Excel-Download. Kostenfrei, jederzeit kündbar.</p>
+      <a class="nl-btn" id="nlLink" href="https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&amp;utm_medium=referral&amp;utm_campaign=studien-newsletter#studien-newsletter" target="_blank" rel="noopener">Newsletter abonnieren ↗</a>
+      <span class="nl-host">Die Anmeldung erfolgt bei Monitor Versorgungsforschung.</span>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div class="attrib">Ein Angebot von „Monitor Versorgungsforschung" · eRelation AG – Content in Health</div>
+
+    <div class="legal">
+      <details>
+        <summary>Impressum</summary>
+        <div class="legal-body">
+          <h4>Angaben gemäß § 5 DDG und § 18 Abs. 2 MStV</h4>
+          <p>eRelation AG – Content in Health<br>Johannes-von-Hanstein-Str. 2<br>53115 Bonn, Deutschland</p>
+          <p>Vertreten durch den Vorstand: Peter Stegmaier (Vorsitzender)</p>
+          <p>Telefon: +49 228 76 36 80-30<br>Fax: +49 228 76 36 80-01<br>E-Mail: info@m-vf.de</p>
+          <p>Registergericht: Amtsgericht Bonn · Registernummer: HRB 9392</p>
+          <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Peter Stegmaier (Anschrift wie oben, stegmaier@m-vf.de)</p>
+          <p>Herausgeber: Prof. Dr. Reinhold Roski · Chefredaktion: Peter Stegmaier</p>
+          <p>Dieser Knowledge-Hub ist ein Angebot von „Monitor Versorgungsforschung".</p>
+        </div>
+      </details>
+      <details>
+        <summary>Datenschutzhinweise</summary>
+        <div class="legal-body">
+          <h4>1. Verantwortlicher</h4>
+          <p>eRelation AG – Content in Health, vertreten durch Peter Stegmaier, Johannes-von-Hanstein-Str. 2, 53115 Bonn. Kontakt siehe Impressum.</p>
+          <h4>2. Charakter dieses Angebots</h4>
+          <p>Dieses Portal ist eine statische Informationsseite. Es setzt keine Cookies, nutzt keine Analyse- oder Tracking-Dienste, versendet keinen Newsletter und bietet keine Eingabeformulare. Personenbezogene Daten der Nutzerinnen und Nutzer werden durch das Portal selbst nicht erhoben oder gespeichert.</p>
+          <h4>3. Hosting (GitHub Pages)</h4>
+          <p>Die Auslieferung erfolgt über GitHub Pages (GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Dabei verarbeitet GitHub technisch notwendige Zugriffsdaten (u. a. IP-Adresse, Datum und Uhrzeit, angeforderte Datei, Browsertyp) in Server-Logdateien zum sicheren Betrieb. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Näheres im <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>. Die Übermittlung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln.</p>
+          <h4>4. Externe Links</h4>
+          <p>Das Portal verlinkt auf externe Datenbanken, Studien und Institutionen (z. B. PubMed, Cochrane, LIVIVO). Mit dem Anklicken verlassen Sie dieses Angebot; die aufgerufenen Anbieter erhalten Ihre IP-Adresse, die Angabe, dass Sie von diesem Portal kommen (Referrer), und ggf. weitere Daten und verarbeiten diese nach ihren eigenen Bestimmungen. Hierfür sind die jeweiligen Anbieter verantwortlich.</p>
+          <h4>5. Ihre Rechte</h4>
+          <p>Sie haben das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21 DSGVO) sowie das Recht auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO). Zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW).</p>
+          <h4>6. Stand</h4>
+          <p>Stand: August 2026.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+const CATS = [
+  {id:"deutsch", h:28, num:"01", name:"Deutschsprachige Datenbanken & Institutionen"},
+  {id:"biblio", h:190, num:"02", name:"Bibliografische Datenbanken (international)"},
+  {id:"evidenz", h:262, num:"03", name:"Systematische Reviews & Evidenzsynthesen"},
+  {id:"openaccess", h:150, num:"04", name:"Open Access & Discovery"},
+  {id:"volltext", h:100, num:"05", name:"Volltext beschaffen"},
+  {id:"register", h:212, num:"06", name:"Studien- & Reviewregister"},
+  {id:"policy", h:338, num:"07", name:"Health Services Research & Gesundheitspolitik"},
+  {id:"preprint", h:46, num:"08", name:"Preprints & Graue Literatur"},
+];
+
+// type: "live" = URL-Suche mit %s | "portal" = feste URL | "lic" = lizenzpflichtig (feste URL)
+const DB = [
+  // 1 — Bibliografisch international
+  {c:"biblio", n:"PubMed / MEDLINE", d:"Die zentrale biomedizinische Datenbank der US-Nationalbibliothek (NLM). >37 Mio. Nachweise.", t:"live", u:"https://pubmed.ncbi.nlm.nih.gov/?term=%s", b:1},
+  {c:"biblio", n:"PubMed Central (PMC)", d:"Volltext-Archiv frei zugänglicher biomedizinischer Artikel.", t:"live", u:"https://www.ncbi.nlm.nih.gov/pmc/?term=%s", b:1},
+  {c:"biblio", n:"Europe PMC", d:"Europäisches Pendant zu PMC mit Volltexten, Preprints und Fördermittel-Nachweisen.", t:"live", u:"https://europepmc.org/search?query=%s", b:1},
+  {c:"biblio", n:"Embase", d:"Biomedizin & Pharmakologie mit starkem Europa-Fokus (Elsevier).", t:"lic", u:"https://www.embase.com/"},
+  {c:"biblio", n:"Web of Science", d:"Interdisziplinäre Zitationsdatenbank (Clarivate).", t:"lic", u:"https://www.webofscience.com/"},
+  {c:"biblio", n:"Scopus", d:"Große Abstract- & Zitationsdatenbank (Elsevier).", t:"lic", u:"https://www.scopus.com/"},
+  {c:"biblio", n:"CINAHL", d:"Pflege & Gesundheitsfachberufe (EBSCO).", t:"lic", u:"https://www.ebsco.com/products/research-databases/cinahl-database"},
+  {c:"biblio", n:"APA PsycInfo", d:"Psychologie, psychische Gesundheit & Verhaltenswissenschaften.", t:"lic", u:"https://www.apa.org/pubs/databases/psycinfo"},
+
+  // 2 — Evidenzsynthesen
+  {c:"evidenz", n:"Cochrane Library", d:"Systematische Reviews & kontrollierte Studien — Goldstandard der Evidenzsynthese.", t:"live", u:"https://www.cochranelibrary.com/search?q=%s"},
+  {c:"evidenz", n:"Epistemonikos", d:"Datenbank systematischer Reviews und ihrer eingeschlossenen Studien.", t:"live", u:"https://www.epistemonikos.org/en/search?q=%s"},
+  {c:"evidenz", n:"Trip Database", d:"Klinische Suchmaschine für evidenzbasierte Antworten & Leitlinien.", t:"live", u:"https://www.tripdatabase.com/search?criteria=%s"},
+  {c:"evidenz", n:"Health Systems Evidence", d:"McMaster-Datenbank zu Governance, Finanzierung & Organisation von Gesundheitssystemen.", t:"portal", u:"https://www.healthsystemsevidence.org/"},
+  {c:"evidenz", n:"PDQ-Evidence", d:"Evidenz zu Entscheidungen im Gesundheitswesen (Reviews, Studien, Leitlinien).", t:"portal", u:"https://www.pdq-evidence.org/"},
+  {c:"evidenz", n:"PROSPERO", d:"Internationales Register geplanter systematischer Reviews (CRD, York).", t:"portal", u:"https://www.crd.york.ac.uk/prospero/"},
+  {c:"evidenz", n:"JBI EBP Database", d:"Evidenzsynthesen des Joanna Briggs Institute.", t:"portal", u:"https://jbi.global/ebp"},
+
+  // 3 — Open Access & Discovery
+  {c:"openaccess", n:"Google Scholar", d:"Breite Suchmaschine für wissenschaftliche Literatur inkl. grauer Literatur & Zitationen.", t:"live", u:"https://scholar.google.com/scholar?q=%s", b:1},
+  {c:"openaccess", n:"Semantic Scholar", d:"KI-gestützte Discovery mit Zitationskontext (Allen Institute).", t:"live", u:"https://www.semanticscholar.org/search?q=%s&sort=relevance"},
+  {c:"openaccess", n:"OpenAlex", d:"Offener Katalog von >250 Mio. Werken, Autoren & Institutionen.", t:"live", u:"https://openalex.org/works?filter=default.search%3A%s", b:1},
+  {c:"openaccess", n:"BASE", d:"Bielefeld Academic Search Engine — >400 Mio. Dokumente aus Repositorien.", t:"live", u:"https://www.base-search.net/Search/Results?lookfor=%s"},
+  {c:"openaccess", n:"CORE", d:"Weltweit größte Sammlung offener Volltexte aus Repositorien.", t:"live", u:"https://core.ac.uk/search?q=%s"},
+  {c:"openaccess", n:"DOAJ", d:"Directory of Open Access Journals — qualitätsgeprüfte OA-Artikel.", t:"live", u:'https://doaj.org/search/articles?source=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22%s%22%2C%22default_operator%22%3A%22AND%22%7D%7D%7D'},
+  {c:"openaccess", n:"The Lens", d:"Verknüpfte Suche über Publikationen und Patente.", t:"live", u:"https://www.lens.org/lens/search/scholar/list?q=%s"},
+  {c:"openaccess", n:"Dimensions", d:"Publikationen, Förderung, Patente & klinische Studien vernetzt (Digital Science).", t:"live", u:"https://app.dimensions.ai/discover/publication?search_text=%s"},
+  {c:"openaccess", n:"Zenodo", d:"Offenes Repositorium (CERN) für Artikel, Daten & Preprints.", t:"live", u:"https://zenodo.org/search?q=%s", b:1},
+
+  // 4 — Deutschsprachig
+  {c:"deutsch", n:"Monitor Versorgungsforschung", d:"Deutsche Fachzeitschrift für Politik, Praxis & Forschung der Versorgung — durchsuchbares Facharchiv.", t:"live", u:"https://www.monitor-versorgungsforschung.de/?s=%s&utm_source=knowledge-hub&utm_medium=referral&utm_campaign=wissen-portal", b:0},
+  {c:"deutsch", n:"DNVF", d:"Deutsches Netzwerk Versorgungsforschung — Fachgesellschaft, Kongresse & Memoranden.", t:"live", u:"https://www.dnvf.de/suche.html?keywords=%s", b:0},
+  {c:"deutsch", n:"LIVIVO (ZB MED)", d:"Größtes deutschsprachiges Suchportal der Lebenswissenschaften — Begriff nach Öffnen eingeben.", t:"portal", u:"https://www.livivo.de/"},
+  {c:"deutsch", n:"German Medical Science (GMS)", d:"Open-Access-Portal deutscher medizinischer Fachgesellschaften (AWMF/ZB MED/DIMDI).", t:"portal", u:"https://www.egms.de/"},
+  {c:"deutsch", n:"IQWiG", d:"Institut für Qualität und Wirtschaftlichkeit im Gesundheitswesen — Berichte & Nutzenbewertung.", t:"portal", u:"https://www.iqwig.de/"},
+  {c:"deutsch", n:"Gemeinsamer Bundesausschuss (G-BA)", d:"Beschlüsse, Richtlinien & Nutzenbewertungen der Selbstverwaltung.", t:"live", u:"https://www.g-ba.de/sys/suche/?suchbegriff=%s", b:0},
+  {c:"deutsch", n:"Innovationsfonds (G-BA)", d:"Geförderte Projekte neuer Versorgungsformen & Versorgungsforschung.", t:"live", u:"https://innovationsfonds.g-ba.de/suche/?suchbegriff=%s"},
+  {c:"deutsch", n:"GBE-Bund", d:"Gesundheitsberichterstattung des Bundes — Statistiken & Indikatoren (RKI/Destatis).", t:"portal", u:"https://www.gbe-bund.de/"},
+  {c:"deutsch", n:"Robert Koch-Institut (RKI)", d:"Public-Health-Institut des Bundes — Studien, Surveillance & Berichte.", t:"portal", u:"https://www.rki.de/"},
+  {c:"deutsch", n:"Versorgungsatlas (Zi)", d:"Regionale Analysen zur ambulanten Versorgung (Zentralinstitut für die KV).", t:"portal", u:"https://www.versorgungsatlas.de/"},
+  {c:"deutsch", n:"WIdO", d:"Wissenschaftliches Institut der AOK — Versorgungsdaten & Reporte (Arzneimittel, Pflege).", t:"portal", u:"https://www.wido.de/"},
+
+  // 5 — Volltext beschaffen (legale Wege zum Volltext hinter der Bezahlschranke)
+  {c:"volltext", n:"Nationallizenzen (DFG)", d:"DFG-finanzierte Lizenzen für Zeitschriftenarchive und E-Books. Privatpersonen mit Wohnsitz in Deutschland können sich kostenlos registrieren.", t:"live", u:"https://www.nationallizenzen.de/@@search?SearchableText=%s", b:0},
+  {c:"volltext", n:"Unpaywall", d:"Findet legale Open-Access-Fassungen zu einer DOI — über 50 Mio. Volltexte aus Repositorien und Verlagen. DOI nach dem Öffnen eingeben.", t:"portal", u:"https://unpaywall.org/"},
+  {c:"volltext", n:"Open Access Button", d:"Sucht frei zugängliche Fassungen und fordert sie bei Bedarf direkt beim Autor an. DOI oder Titel nach dem Öffnen eingeben.", t:"portal", u:"https://openaccessbutton.org/"},
+  {c:"volltext", n:"subito", d:"Direktlieferdienst wissenschaftlicher Bibliotheken — Aufsätze und Bücher kostenpflichtig, aber schnell und lizenzkonform.", t:"live", u:"https://search.subito-doc.de/vufind/Search/Results?lookfor=%s&type=AllFields", b:1},
+  {c:"volltext", n:"Fernleihe (K10plus)", d:"Verbundkatalog mit Bestandsnachweis: zeigt, welche Bibliothek den Titel führt — Bestellung über die eigene Bibliothek.", t:"live", u:"https://opac.k10plus.de/DB=2.299/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=%s"},
+
+  // 6 — Register
+  {c:"register", n:"ClinicalTrials.gov", d:"Weltweit größtes Register klinischer Studien (NLM).", t:"live", u:"https://clinicaltrials.gov/search?term=%s", b:1},
+  {c:"register", n:"DRKS", d:"Deutsches Register Klinischer Studien — Begriff nach Öffnen eingeben.", t:"portal", u:"https://drks.de/"},
+  {c:"register", n:"WHO ICTRP", d:"International Clinical Trials Registry Platform — Meta-Suche über alle Register.", t:"portal", u:"https://trialsearch.who.int/"},
+  {c:"register", n:"EU Clinical Trials Register", d:"Klinische Arzneimittelstudien in der EU/EWR.", t:"live", u:"https://www.clinicaltrialsregister.eu/ctr-search/search?query=%s", b:1},
+
+  // 7 — HSR & Policy
+  {c:"policy", n:"AHRQ", d:"US Agency for Healthcare Research and Quality — Leitinstitution der HSR.", t:"portal", u:"https://www.ahrq.gov/"},
+  {c:"policy", n:"HSRProj (NLM)", d:"Register laufender Health-Services-Research-Projekte.", t:"portal", u:"https://hsrproject.nlm.nih.gov/"},
+  {c:"policy", n:"WHO IRIS", d:"Institutionelles Repositorium der Weltgesundheitsorganisation.", t:"live", u:"https://iris.who.int/discover?query=%s"},
+  {c:"policy", n:"WHO Global Health Observatory", d:"Daten & Indikatoren zu Gesundheitssystemen weltweit.", t:"portal", u:"https://www.who.int/data/gho"},
+  {c:"policy", n:"OECD Health", d:"Vergleichende Statistiken & Analysen zu Gesundheitssystemen.", t:"portal", u:"https://www.oecd.org/en/topics/health.html"},
+  {c:"policy", n:"Commonwealth Fund", d:"US-Stiftung mit internationalem Vergleich der Gesundheitsversorgung.", t:"portal", u:"https://www.commonwealthfund.org/"},
+  {c:"policy", n:"NICE", d:"UK-Institut für klinische Exzellenz — Leitlinien & Bewertungen.", t:"live", u:"https://www.nice.org.uk/search?q=%s", b:1},
+  {c:"policy", n:"Health Affairs", d:"Führende Fachzeitschrift für Gesundheitspolitik & -versorgung.", t:"portal", u:"https://www.healthaffairs.org/"},
+
+  // 8 — Preprints & Grau
+  {c:"preprint", n:"medRxiv", d:"Preprint-Server für die medizinischen & Gesundheitswissenschaften.", t:"live", u:"https://www.medrxiv.org/search/%s", b:1},
+  {c:"preprint", n:"OSF", d:"Open Science Framework — Preprints, Daten & Projektmaterialien.", t:"live", u:"https://osf.io/search/?q=%s"},
+  {c:"preprint", n:"SSRN", d:"Social Science Research Network mit Health-Economics/Policy-Reihen.", t:"portal", u:"https://www.ssrn.com/index.cfm/en/"},
+  {c:"preprint", n:"OpenGrey / Graue Literatur", d:"Berichte, Dissertationen & Konferenzbeiträge — via BASE & Google Scholar erschließbar.", t:"live", u:"https://www.base-search.net/Search/Results?lookfor=%s&type=all&filter[]=f_dctypenorm%3A%224%22"},
+];
+
+// Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
+// === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
+const SNAP_DATE = "15. Aug. 2026, 07:01 Uhr";
+const STUDIES = [
+  {
+    journal:"Open Heart", year:"2026", pmid:"42601168",
+    author:"Frost L et al.", pubdate:"14.08.2026",
+    added:"14.08.2026",
+    title:"Elektrische Kardioversion bei Vorhofflimmern: nationale Trends in Dänemark 2010-2022",
+    sum:"Die Studie untersuchte zeitliche Trends in der Nutzung von elektrischer Kardioversion bei Patienten mit Vorhofflimmern in Dänemark über 12 Jahre.",
+    result:"Die Gesamtzahl der Kardioversionen pro Jahr stieg von 2204 (2010) auf 8300 (2022) um das Vierfache; die altersadjustierte und geschlechterstandardisierte Rate sank jedoch von 449,5 auf 316,6 pro 1000 Personenjahre im ersten Jahr nach Diagnose, was auf eine gezieltere Einsatzweise hindeutet."
+  },
+  {
+    journal:"JMIR Rehabilitation and Assistive Technology", year:"2026", pmid:"42600137",
+    author:"Rosario B et al.", pubdate:"14.08.2026",
+    added:"14.08.2026",
+    title:"Machbarkeit von S-Patch versus 24-Stunden-Holter bei älteren Erwachsenen mit Stürzen: randomisierte Crossover-Pilotstudie",
+    sum:"Die Studie verglich Machbarkeit, Verträglichkeit und Adhärenz eines neuen tragbaren EKG-Geräts (S-Patch) mit Standard-Holter-Monitoring bei älteren Patienten mit Sturzrisiko.",
+    result:"Bei 70 Patienten (45,7% mit kognitiver Beeinträchtigung) zeigte S-Patch längere durchschnittliche Tragedauer (&gt;60 Stunden, signifikant länger wenn zuerst angewendet: 68,8 vs. 62,9 Stunden; p=0,04) mit vergleichbaren Arrhythmie-Erkennungsraten und guter Verträglichkeit auch bei kognitiv beeinträchtigten Patienten."
+  },
+  {
+    journal:"Int J Qual Health Care", year:"2026", pmid:"42599219",
+    author:"Mutashar A et al.", pubdate:"14.08.2026",
+    added:"14.08.2026",
+    title:"Entwicklung konsensbasierter Sicherheits- und Qualitäsindikatoren für sicheren Opioid-Einsatz in Krankenhäusern mittels modifizierter Delphi-Methode",
+    sum:"Die Studie entwickelte einen Katalog von Indikatoren zur Überwachung der Sicherheit und Qualität des Opioid-Einsatzes in australischen Krankenhäusern durch ein multidisziplinäres Expertengremium.",
+    result:"Von 34 bewerteten Indikatoren erreichten 17 Konsens für Wichtigkeit und Durchführbarkeit (Antwortquoten: Round 1 91%, Treffen 50%, Round 2 77%), was ein praktikables Werkzeug zur Verbesserung der Opioid-Medikamentensicherheit ermöglicht."
+  },
+  {
+    journal:"J Global Health", year:"2026", pmid:"42596889",
+    author:"Huang Y et al.", pubdate:"14.08.2026",
+    added:"14.08.2026",
+    title:"Rolle von Life's Essential 8 in der Assoziation von Nachtschichtarbeit mit kardiovaskulären Erkrankungen: prospektive UK-Biobank-Kohorte",
+    sum:"Die Studie untersuchte die Assoziation zwischen Nachtschichtarbeit und kardiovaskulären Erkrankungen sowie die vermittelnde Rolle des Life's Essential 8-Lebensstilscores bei 131.844 Erwerbstätigen.",
+    result:"Über einen Median-Follow-up von 13,78 Jahren entwickelten 29,7% kardiovaskuläre Erkrankungen und 4,2% starben; Patienten mit permanenten Nachtschichten hatten erhöhtes Risiko für kardiovaskuläre Erkrankungen (HR=1,24; 95% CI 1,18-1,31), Gesamtmortalität (HR=1,23; 95% CI 1,07-1,41) und Myokardinfarkt (HR=1,29; 95% CI 1,09-1,51); Life's Essential 8 vermittelte 39,2% der kardiovaskulären Assoziation und 33,1% der Mortalität."
+  },
+  {
+    journal:"BMC Health Services Research", year:"2026", pmid:"42596005",
+    author:"Kanter J et al.", pubdate:"24.07.2026",
+    added:"14.08.2026",
+    title:"Implementierung eines umfassenden Sichelzellzentrums führt zu verbessertem Zugang und reduzierter Notfallversorgung",
+    sum:"Die Studie evaluierte die Auswirkungen der Implementierung eines multidisziplinären erwachsenen Sichelzellzentrums auf Ambulanznutzung und Notfallverlagerung in Alabama.",
+    result:"Die ambulante Klinikpopulation wuchs um mehr als das Dreifache auf 810 Patienten (2024), Infusions-Therapiebesuche stiegen um das Fünfzehnfache; durchschnittliche acute-care-Besuche pro Person/Jahr sanken signifikant von 2,11 auf 1,26 (p&lt;0,001), während routinemäßige ambulante Besuche von 2,65 auf 5,32 stiegen."
+  },
+  {
+    journal:"Resuscitation Plus", year:"2026", pmid:"42598112",
+    author:"Chee DS et al.", pubdate:"22.07.2026",
+    added:"14.08.2026",
+    title:"Inzidenz, Ätiologien und Überlebensoutcomes von pädiatrischen außerklinischen Herzstillständen in Singapur",
+    sum:"Die Studie beschrieb Inzidenz, Ursachen und Überlebensraten von Herzstillständen bei Kindern in Singapur von 2010-2021 mittels der PAROS-Registry.",
+    result:"Von 414 Patienten betrug die Gesamtinzidenz 4,62 pro 100.000 Personenjahre (höchste Rate bei Säuglingen &lt;1 Jahr: 33,5 pro 100.000), Bystander-CPR-Rate 64,5%, häufigste Ursachen Atemwegsobstruktion (21%), Ertrinken (20,2%) und Trauma (18,5%); 30-Tage-Überlebensrate 11,1%, gutes neurologisches Ergebnis (CPC 1-2) 8,0% mit Verbesserung 2019-2021 (aOR 4,34; 95% CI 1,09-17,22; p=0,037)."
+  }
+];
+// === STUDIES-BLOCK-ENDE ===
+
+const CHIPS = [
+  "Primärversorgung",
+  "health services research",
+  "Versorgungsforschung",
+  "health care research",
+  "patient-reported outcomes",
+  "integrierte Versorgung",
+  "sektorenübergreifende Versorgung",
+];
+
+function hostOf(u){ try{ return new URL(u).hostname.replace(/^www\./,''); }catch(e){ return ""; } }
+
+const main = document.getElementById('main');
+const jumpNav = document.getElementById('jumpNav');
+const cardIndex = []; // {el, tpl, type}
+
+// Kein Sprung-Link in der Navigation - die id bleibt aber bestehen,
+// damit Direktlinks auf #studien weiter funktionieren.
+document.querySelector('aside.studies').id = 'studien';
+document.querySelector('aside.studies').style.scrollMarginTop = '64px';
+
+CATS.forEach(cat=>{
+  const items = DB.filter(x=>x.c===cat.id);
+  // jump link
+  const jl = document.createElement('a');
+  jl.href = '#'+cat.id; jl.textContent = cat.name;
+  jumpNav.appendChild(jl);
+
+  const sec = document.createElement('section');
+  sec.className='cat'; sec.id=cat.id; sec.style.setProperty('--h', cat.h);
+  sec.innerHTML =
+    '<div class="cat-head"><span class="cat-num mono">'+cat.num+'</span>'+
+    '<h2 class="serif">'+cat.name+'</h2>'+
+    '<span class="cat-count">'+items.length+' Datenbanken</span></div>'+
+    '<div class="grid"></div>';
+  const grid = sec.querySelector('.grid');
+
+  items.forEach(x=>{
+    const a = document.createElement('a');
+    a.className='card'; a.target='_blank'; a.rel='noopener';
+    if(x.t==='live') a.dataset.live='1';
+    const badge = x.t==='live' ? '<span class="badge live">Live-Suche</span>'
+                : x.t==='lic' ? '<span class="badge lic">Lizenz</span>'
+                : '<span class="badge portal">Portal</span>';
+    const foot = x.t==='live'
+      ? '<span class="bereit">Trefferliste · </span><span class="arrow">↗</span> Suche öffnen <span class="host mono">· '+hostOf(x.u)+'</span>'
+      : '<span class="arrow">↗</span> Öffnen <span class="host mono">· '+hostOf(x.u)+'</span>';
+    a.innerHTML =
+      '<div class="card-top"><span class="card-name">'+x.n+'</span>'+
+    (x.b===1 ? '<span class="boolmark" title="Wertet AND, OR und NOT aus (geprüft)">AND/OR</span>' : '')+badge+'</div>'+
+      '<div class="card-desc">'+x.d+'</div>'+
+      '<div class="card-foot">'+foot+'</div>';
+    grid.appendChild(a);
+    cardIndex.push({el:a, tpl:x.u, type:x.t, eintrag:x});
+  });
+
+  main.appendChild(sec);
+});
+
+document.getElementById('dbCount').textContent = DB.length;
+// Die Zahlen im Hinweis 'Portal vs. Live-Suche' aus DB zaehlen, nicht fest
+// eintragen - sonst veralten sie beim naechsten neuen Eintrag unbemerkt.
+document.getElementById('cntGesamt').textContent = DB.length;
+document.getElementById('cntLive').textContent   = DB.filter(x=>x.t==='live').length;
+document.getElementById('cntPortal').textContent = DB.filter(x=>x.t==='portal').length;
+// Boolesch-Zahlen aus denselben Daten wie die Kennzeichen - nie getrennt pflegen.
+const _live = DB.filter(x=>x.t==='live');
+document.getElementById('cntBoolJa').textContent    = _live.filter(x=>x.b===1).length;
+document.getElementById('cntBoolNein').textContent  = _live.filter(x=>x.b===0).length;
+document.getElementById('cntBoolOffen').textContent = _live.filter(x=>x.b===undefined).length;
+
+// ---- Studien-Frame rendern ----
+document.getElementById('snapDate').textContent = SNAP_DATE;
+
+// ---- Meldung ueber den letzten Lauf -------------------------------------
+// Drei Faelle sollen unterscheidbar sein:
+//   1. alles normal              -> keine Meldung
+//   2. Lauf war da, nichts Neues -> neutraler Hinweis (SNAP_STATUS)
+//   3. Lauf ausgefallen          -> Warnhinweis (Zeitstempel zu alt)
+// Fall 3 erkennt die Seite selbst: SNAP_DATE wird bei jedem erfolgreichen Lauf
+// neu gesetzt. Ist er aelter als 30 Stunden, kann kein Lauf stattgefunden haben.
+(function(){
+  const el = document.getElementById('studiesStatus');
+  if(!el) return;
+  const MON = {'Jan':0,'Feb':1,'März':2,'Apr':3,'Mai':4,'Juni':5,
+               'Juli':6,'Aug':7,'Sept':8,'Okt':9,'Nov':10,'Dez':11};
+  // Format: "15. Aug. 2026, 07:01 Uhr"
+  const m = /^(\d{1,2})\.\s*([^\s.]+)\.?\s*(\d{4}),\s*(\d{1,2}):(\d{2})/.exec(SNAP_DATE || '');
+  let stunden = null;
+  if(m && MON[m[2]] !== undefined){
+    const d = new Date(+m[3], MON[m[2]], +m[1], +m[4], +m[5]);
+    stunden = (Date.now() - d.getTime()) / 36e5;
+  }
+  const status = (typeof SNAP_STATUS !== 'undefined') ? SNAP_STATUS : 'neu';
+
+  if(stunden !== null && stunden > 30){
+    const tage = Math.floor(stunden / 24);
+    el.dataset.art = 'ausfall';
+    el.textContent = 'Die automatische Aktualisierung ist ausgefallen — die Liste '
+      + 'stammt vom ' + SNAP_DATE.replace(/,.*/, '') + (tage >= 1 ? ' (vor ' + tage + ' Tag' + (tage>1?'en':'') + ')' : '')
+      + '. Ursache ist eine technische Störung, nicht fehlende Studien.';
+    el.hidden = false;
+  } else if(status === 'unveraendert'){
+    el.dataset.art = 'unveraendert';
+    el.textContent = 'Der heutige Abgleich lief planmäßig, PubMed hat aber keine '
+      + 'neuen passenden Studien geliefert. Die Liste ist deshalb unverändert.';
+    el.hidden = false;
+  }
+})();
+const studiesList = document.getElementById('studiesList');
+STUDIES.forEach(s=>{
+  const art = document.createElement('article');
+  art.className = 'study';
+  const url = 'https://pubmed.ncbi.nlm.nih.gov/' + s.pmid + '/';
+  art.innerHTML =
+    '<div class="study-top"><span class="study-journal">'+s.journal+'</span>'+
+    // Publikationsdatum, sofern PubMed eines kennt - sonst das Jahr.
+    '<span class="study-year">'+(s.pubdate || s.year)+'</span></div>'+
+    '<a class="study-title" href="'+url+'" target="_blank" rel="noopener">'+s.title+'</a>'+
+    (s.author ? '<div class="study-author">'+s.author+'</div>' : '')+
+    // Das Aufnahmedatum erklaert, warum aeltere Publikationsdaten in einer
+    // taeglichen Liste auftauchen: Ausgewaehlt wird nach dem Tag, an dem
+    // PubMed den Eintrag aufnimmt - der liegt oft Wochen nach dem Erscheinen.
+    (s.added && s.added !== s.pubdate
+       ? '<div class="study-added">in PubMed seit '+s.added+'</div>' : '')+
+    '<p class="study-sum">'+s.sum+'</p>'+
+    '<div class="study-result"><span class="rlabel">Ergebnis</span>'+s.result+'</div>'+
+    '<a class="study-src" href="'+url+'" target="_blank" rel="noopener">PubMed · PMID '+s.pmid+' ↗</a>';
+  studiesList.appendChild(art);
+});
+
+// ---- Download der Studienlisten (Word / Excel) ----
+// Bewusst ohne Fremdbibliothek: Word oeffnet HTML mit der Endung .doc,
+// Excel oeffnet CSV mit Semikolon und UTF-8-BOM. Die Seite bleibt eigenstaendig.
+
+// Die Texte liegen HTML-maskiert vor (z. B. "p &lt; 0,001"), weil sie per innerHTML
+// eingesetzt werden. Fuer Dateien muss das zurueckverwandelt werden.
+function alsKlartext(v){
+  const t = document.createElement('textarea');
+  t.innerHTML = (v == null ? '' : String(v));
+  return t.value;
+}
+function pubmedUrl(pmid){ return 'https://pubmed.ncbi.nlm.nih.gov/' + pmid + '/'; }
+function htmlEsc(v){
+  return alsKlartext(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function dateiStempel(){
+  const d = new Date(), p = n => String(n).padStart(2,'0');
+  return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate());
+}
+function speichern(dateiname, inhalt, mime){
+  const url = URL.createObjectURL(new Blob([inhalt], {type: mime}));
+  const a = document.createElement('a');
+  a.href = url; a.download = dateiname; a.style.display = 'none';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url), 2000);
+}
+
+// Das Logo fuer den Word-Kopf. Ein relativer Pfad wuerde in einer verschickten
+// Datei ins Leere laufen, deshalb wird das Bild als data:-URI eingebettet -
+// ueber die Leinwand, weil das Logo je nach Fassung als Datei oder bereits als
+// data:-URI vorliegt.
+function logoDataUri(){
+  const img = document.querySelector('.brand-link img');
+  if(!img || !img.complete || !img.naturalWidth) return '';
+  if(img.src.startsWith('data:')) return img.src;
+  try{
+    const c = document.createElement('canvas');
+    c.width = img.naturalWidth; c.height = img.naturalHeight;
+    c.getContext('2d').drawImage(img, 0, 0);
+    return c.toDataURL('image/png');
+  }catch(e){ return ''; }   // z. B. wenn die Leinwand als fremd gilt
+}
+
+const DL_KOPFTEXT = 'Ein Service der Knowledge-Datenbank von Monitor Versorgungsforschung. '
+  + 'Täglich automatisiert KI-kuratiert aus PubMed und auf Deutsch übersetzt.';
+
+function baueCSV(liste, mitDatum){
+  const feld = v => '"' + alsKlartext(v).replace(/"/g,'""') + '"';
+  const kopf = (mitDatum ? ['Aufgenommen am'] : [])
+    .concat(['Autor','Publiziert am','In PubMed seit','Journal','Jahr','Titel','Fragestellung','Ergebnis','PMID','PubMed-Link']);
+  // Eine Tabelle kann kein Logo aufnehmen - deshalb nur der Kopftext, gefolgt
+  // von einer Leerzeile, damit die Spaltenueberschriften klar abgesetzt sind.
+  const zeilen = [feld(DL_KOPFTEXT), '', kopf.map(feld).join(';')];
+  liste.forEach(s=>{
+    zeilen.push((mitDatum ? [s.aufgenommen || ''] : [])
+      .concat([s.author || '', s.pubdate || '', s.added || '', s.journal, s.year, s.title, s.sum, s.result, s.pmid, pubmedUrl(s.pmid)])
+      .map(feld).join(';'));
+  });
+  // Das BOM explizit als Escape-Sequenz: als wortwoertliches Zeichen ginge es
+  // beim Speichern unsichtbar verloren. Ohne BOM zeigt deutsches Excel Umlaute falsch.
+  return '\uFEFF' + zeilen.join('\r\n');
+}
+
+function baueDoc(titel, untertitel, liste, mitDatum){
+  const logo = logoDataUri();
+  const eintraege = liste.map(s =>
+      '<h2 style="font-size:13pt;margin:16pt 0 2pt">' + htmlEsc(s.title) + '</h2>'
+    + '<p style="margin:0 0 5pt;color:#555">'
+    + (s.author ? htmlEsc(s.author) + ' &middot; ' : '')
+    + '<i>' + htmlEsc(s.journal) + '</i> &middot; ' + htmlEsc(s.pubdate || s.year)
+    + (s.added && s.added !== s.pubdate ? ' (in PubMed seit ' + htmlEsc(s.added) + ')' : '')
+    + (mitDatum && s.aufgenommen ? ' &middot; aufgenommen am ' + htmlEsc(s.aufgenommen) : '') + '</p>'
+    + '<p style="margin:0 0 5pt">' + htmlEsc(s.sum) + '</p>'
+    + '<p style="margin:0 0 5pt"><b>Ergebnis:</b> ' + htmlEsc(s.result) + '</p>'
+    + '<p style="margin:0 0 12pt;font-size:9pt">PMID ' + htmlEsc(s.pmid) + ' &ndash; '
+    + '<a href="' + pubmedUrl(s.pmid) + '">' + pubmedUrl(s.pmid) + '</a></p>'
+  ).join('');
+  return '<html xmlns:o="urn:schemas-microsoft-com:office:office" '
+    + 'xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
+    + '<head><meta charset="utf-8"><title>' + htmlEsc(titel) + '</title></head>'
+    + '<body style="font-family:Lato,Calibri,Arial,sans-serif;font-size:11pt">'
+    + (logo ? '<p style="margin:0 0 6pt"><img src="' + logo + '" width="170" height="45" '
+              + 'alt="Monitor Versorgungsforschung"></p>' : '')
+    + '<p style="margin:0 0 14pt;padding-bottom:8pt;border-bottom:1pt solid #C0A060;'
+              + 'font-size:9.5pt;color:#0051A1">' + htmlEsc(DL_KOPFTEXT) + '</p>'
+    + '<h1 style="font-size:16pt;margin:0 0 3pt;color:#0051A1">' + htmlEsc(titel) + '</h1>'
+    + '<p style="margin:0 0 16pt;color:#555">' + htmlEsc(untertitel) + '</p>'
+    + eintraege
+    + '<p style="margin-top:20pt;font-size:8.5pt;color:#777">Quelle: Knowledge-Hub '
+    + 'Versorgungsforschung, wissen.m-vf.de &ndash; ein Angebot von Monitor Versorgungsforschung. '
+    + 'Studiendaten aus PubMed (U.S. National Library of Medicine).</p></body></html>';
+}
+
+const DOC_MIME = 'application/msword';
+const CSV_MIME = 'text/csv;charset=utf-8';
+
+document.getElementById('dlAktuellDoc').addEventListener('click', ()=>{
+  speichern('MVF-Knowledge-Hub_Neueste-Studien_'+dateiStempel()+'.doc',
+    baueDoc('Neu in PubMed — Studien der Versorgungsforschung', 'Stand: '+alsKlartext(SNAP_DATE), STUDIES, false), DOC_MIME);
+});
+document.getElementById('dlAktuellCsv').addEventListener('click', ()=>{
+  speichern('MVF-Knowledge-Hub_Neueste-Studien_'+dateiStempel()+'.csv',
+    baueCSV(STUDIES, false), CSV_MIME);
+});
+
+// ---- Ordner „Ältere Suchergebnisse" ----
+// Standardmaessig aufgeklappt. Das Archiv liegt in einer eigenen Datei, damit
+// index.html nicht mit jedem Tag weiterwaechst; geladen wird es einmal pro Aufruf.
+const archiveEl = document.getElementById('archive');
+const archiveBody = document.getElementById('archiveBody');
+const archiveSummary = document.getElementById('archiveSummary');
+let archivGeladen = false;
+let archivListe = [];   // gefilterte Liste fuer den Download
+
+const MONATE = ['Jan.','Feb.','März','Apr.','Mai','Juni','Juli','Aug.','Sept.','Okt.','Nov.','Dez.'];
+function datumLang(iso){
+  const p = iso.split('-');
+  return parseInt(p[2],10)+'. '+MONATE[parseInt(p[1],10)-1]+' '+p[0];
+}
+
+function ladeArchiv(){
+  if(archivGeladen) return;
+  archivGeladen = true;
+  fetch('studien-archiv.json', {cache:'no-cache'})
+    .then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(alle=>{
+      const aktuell = new Set(STUDIES.map(s=>s.pmid));
+      const aeltere = alle.filter(e=>!aktuell.has(e.pmid));
+      if(!aeltere.length){
+        archiveBody.innerHTML = '<p class="arch-status">Noch keine älteren Ergebnisse — '
+          + 'das Archiv füllt sich mit jeder Aktualisierung.</p>';
+        return;
+      }
+      const tage = {};
+      aeltere.forEach(e=>{ (tage[e.aufgenommen] = tage[e.aufgenommen] || []).push(e); });
+      archiveBody.innerHTML = Object.keys(tage).sort().reverse().map(tag=>{
+        const items = tage[tag].map(e=>{
+          const url = 'https://pubmed.ncbi.nlm.nih.gov/'+e.pmid+'/';
+          return '<div class="arch-item">'
+               + '<div class="arch-top"><span class="arch-journal">'+e.journal+'</span>'
+               + '<span class="arch-year">'+e.year+'</span></div>'
+               + '<a class="arch-title" href="'+url+'" target="_blank" rel="noopener">'+e.title+'</a>'
+               + '<p class="arch-result">'+e.result+'</p></div>';
+        }).join('');
+        return '<div class="arch-day"><div class="arch-date">'+datumLang(tag)
+             + ' · '+tage[tag].length+' Studien</div>'+items+'</div>';
+      }).join('');
+      archiveSummary.textContent = 'Ältere Suchergebnisse ('+aeltere.length+')';
+      archivListe = aeltere;
+      document.getElementById('dlArchivDoc').disabled = false;
+      document.getElementById('dlArchivCsv').disabled = false;
+    })
+    .catch(()=>{
+      archivGeladen = false;   // beim naechsten Aufklappen erneut versuchen
+      archiveBody.innerHTML = '<p class="arch-status">Archiv konnte nicht geladen werden. '
+        + 'Bitte später erneut versuchen.</p>';
+    });
+}
+
+// Beim Laden holen (der Ordner ist offen); zusaetzlich beim Aufklappen,
+// falls er zuvor geschlossen wurde oder der erste Versuch fehlschlug.
+archiveEl.addEventListener('toggle', ()=>{ if(archiveEl.open) ladeArchiv(); });
+if(archiveEl.open) ladeArchiv();
+
+document.getElementById('dlArchivDoc').addEventListener('click', ()=>{
+  if(!archivListe.length) return;
+  speichern('MVF-Knowledge-Hub_Aeltere-Suchergebnisse_'+dateiStempel()+'.doc',
+    baueDoc('Ältere Suchergebnisse', archivListe.length+' Studien, nach Aufnahmetag sortiert',
+            archivListe, true), DOC_MIME);
+});
+document.getElementById('dlArchivCsv').addEventListener('click', ()=>{
+  if(!archivListe.length) return;
+  speichern('MVF-Knowledge-Hub_Aeltere-Suchergebnisse_'+dateiStempel()+'.csv',
+    baueCSV(archivListe, true), CSV_MIME);
+});
+
+// ---- Suche ---------------------------------------------------------------
+// Grundsatz: Es passiert nichts, bevor der Nutzer absendet. Frueher schrieb
+// die Seite die Links schon beim Tippen um - unsichtbar, ohne Rueckmeldung.
+// Jetzt gilt das Muster gaengiger Suchmaschinen: eingeben, Enter, Ergebnis.
+const input     = document.getElementById('q');
+const goBtn     = document.getElementById('go');
+const resultBar = document.getElementById('resultBar');
+const boolHint  = document.getElementById('boolHint');
+let   gesucht   = '';        // zuletzt abgeschickter Begriff
+
+const OPERATOR = /(^|\s)(AND|OR|NOT)(\s|$)/;
+
+function basisUrl(tpl){
+  return tpl.split('?')[0].split('/%s')[0];
+}
+
+// Links auf den Begriff einstellen - oder zurueck auf die Startseiten.
+function verdrahte(term){
+  const enc = encodeURIComponent(term);
+  cardIndex.forEach(c=>{
+    c.el.href = (c.type === 'live' && term) ? c.tpl.replace('%s', enc)
+              : (c.type === 'live')         ? basisUrl(c.tpl)
+              :                               c.tpl;
+  });
+}
+
+function suchen(){
+  const term = input.value.trim();
+  if(!term){ input.focus(); return; }
+  gesucht = term;
+  verdrahte(term);
+  document.body.classList.add('gesucht');
+
+  const sichtbar = cardIndex.filter(c=>!c.el.classList.contains('aus'));
+  const live     = sichtbar.filter(c=>c.type==='live').length;
+  const portale  = sichtbar.filter(c=>c.type==='portal').length;
+  const lizenz   = sichtbar.filter(c=>c.type==='lic').length;
+
+  resultBar.innerHTML =
+    '<b>&bdquo;' + htmlEsc(term) + '&ldquo;</b> ist in <b>' + live + '</b> Datenbanken vorbereitet &mdash; '
+    + 'ein Klick &ouml;ffnet die Trefferliste in einem neuen Tab.'
+    + '<span class="rb-zusatz">Dazu ' + portale + ' Portale, in denen der Begriff nach dem &Ouml;ffnen '
+    + 'einzugeben ist, und ' + lizenz + ' Datenbanken mit Lizenzpflicht.</span>';
+  resultBar.hidden = false;
+
+  // Sichtbar hinunterspringen: sonst bliebe die Wirkung im Kopfbereich verborgen.
+  const ziel = document.querySelector('.cat:not(.aus)');
+  if(ziel) ziel.scrollIntoView({behavior:'smooth', block:'start'});
+  aktualisiereChips(term);
+}
+
+function zuruecksetzen(){
+  gesucht = '';
+  input.value = '';
+  verdrahte('');
+  document.body.classList.remove('gesucht');
+  resultBar.hidden = true;
+  boolHint.hidden = true;
+  aktualisiereChips('');
+  input.focus();
+}
+
+function aktualisiereChips(term){
+  document.querySelectorAll('.chip').forEach(ch=>{
+    ch.setAttribute('aria-pressed',
+      ch.dataset.term.toLowerCase() === term.toLowerCase() ? 'true' : 'false');
+  });
+}
+
+// Operatoren-Hinweis: nur wenn welche getippt werden, und mit den echten
+// Zahlen. b:1 = geprueft, wertet aus. b:0 = geprueft, wertet nicht aus.
+// Fehlendes Merkmal = ungeprueft und wird NICHT als "kann es" gezaehlt.
+function pruefeOperatoren(){
+  if(!OPERATOR.test(input.value)){ boolHint.hidden = true; return; }
+  const live  = DB.filter(x=>x.t === 'live');
+  const ja    = live.filter(x=>x.b === 1).length;
+  const nein  = live.filter(x=>x.b === 0).length;
+  const offen = live.length - ja - nein;
+  boolHint.innerHTML =
+    '<b>AND, OR und NOT</b> werden von <b>' + ja + '</b> der ' + live.length
+    + ' Live-Suchen nachweislich ausgewertet; sie tragen das Zeichen '
+    + '<b>AND/OR</b>. ' + nein + ' werten sie nachweislich nicht aus und suchen die '
+    + 'W&ouml;rter einfach mit, bei ' + offen + ' ist es ungepr&uuml;ft.';
+  boolHint.hidden = false;
+}
+
+input.addEventListener('input', ()=>{
+  pruefeOperatoren();
+  goBtn.disabled = !input.value.trim();
+});
+input.addEventListener('keydown', e=>{
+  if(e.key === 'Enter'){ e.preventDefault(); suchen(); }
+});
+goBtn.addEventListener('click', suchen);
+document.getElementById('clear').addEventListener('click', zuruecksetzen);
+
+// ---- Schnellwahl ----
+const chipsBox = document.getElementById('chips');
+CHIPS.forEach(t=>{
+  const b = document.createElement('button');
+  b.type = 'button'; b.className = 'chip'; b.textContent = t; b.dataset.term = t;
+  // Ein Chip ist eine fertige Suche - er sendet direkt ab.
+  b.addEventListener('click', ()=>{ input.value = t; pruefeOperatoren(); suchen(); });
+  chipsBox.appendChild(b);
+});
+
+// ---- Filter --------------------------------------------------------------
+const FILTER = { zugang:'alle', suchart:'alle', bool:'alle', rubrik:new Set() };
+
+// Rubrik-Chips aus CATS aufbauen, damit beides nie auseinanderlaeuft.
+const rubrikBox = document.getElementById('filterRubrik');
+CATS.forEach(cat=>{
+  const b = document.createElement('button');
+  b.type = 'button'; b.className = 'fchip'; b.dataset.wert = cat.id;
+  b.textContent = cat.name; b.setAttribute('aria-pressed','false');
+  rubrikBox.appendChild(b);
+});
+
+function passt(x){
+  if(FILTER.zugang === 'frei'   && x.t === 'lic') return false;
+  if(FILTER.zugang === 'lizenz' && x.t !== 'lic') return false;
+  if(FILTER.suchart === 'live'   && x.t !== 'live')   return false;
+  if(FILTER.suchart === 'portal' && x.t !== 'portal') return false;
+  if(FILTER.bool === 'ja' && x.b !== 1) return false;
+  if(FILTER.rubrik.size && !FILTER.rubrik.has(x.c)) return false;
+  return true;
+}
+
+function filtern(){
+  let sichtbar = 0;
+  cardIndex.forEach(c=>{
+    const ok = passt(c.eintrag);
+    c.el.classList.toggle('aus', !ok);
+    if(ok) sichtbar++;
+  });
+  // Rubriken ohne sichtbare Kachel ganz ausblenden - samt Sprungmarke.
+  CATS.forEach(cat=>{
+    const sek = document.getElementById(cat.id);
+    if(!sek) return;
+    const drin = cardIndex.filter(c=>c.eintrag.c === cat.id && !c.el.classList.contains('aus'));
+    sek.classList.toggle('aus', drin.length === 0);
+    const nav = document.querySelector('.jump a[href="#' + cat.id + '"]');
+    if(nav) nav.classList.toggle('aus', drin.length === 0);
+    const z = sek.querySelector('.cat-count');
+    if(z) z.textContent = drin.length + ' Datenbanken';
+  });
+
+  const aktiv = (FILTER.zugang !== 'alle') + (FILTER.suchart !== 'alle')
+              + (FILTER.bool !== 'alle') + (FILTER.rubrik.size ? 1 : 0);
+  const badge = document.getElementById('filterBadge');
+  badge.textContent = aktiv; badge.hidden = !aktiv;
+  document.getElementById('dbCount').textContent = sichtbar;
+  if(gesucht) suchen();   // Rueckmeldung an die neue Auswahl anpassen
+}
+
+document.querySelectorAll('.filter-group').forEach(gruppe=>{
+  const name = gruppe.dataset.gruppe;
+  gruppe.addEventListener('click', e=>{
+    const b = e.target.closest('.fchip');
+    if(!b) return;
+    if(name === 'rubrik'){
+      const an = b.getAttribute('aria-pressed') === 'true';
+      b.setAttribute('aria-pressed', an ? 'false' : 'true');
+      if(an) FILTER.rubrik.delete(b.dataset.wert); else FILTER.rubrik.add(b.dataset.wert);
+    } else {
+      FILTER[name] = b.dataset.wert;
+      gruppe.querySelectorAll('.fchip').forEach(x=>
+        x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+    }
+    filtern();
+  });
+});
+
+// ---- Anfangszustand: nichts ist gesucht, Links zeigen auf die Startseiten.
+verdrahte('');
+filtern();
+goBtn.disabled = !input.value.trim();
+</script>

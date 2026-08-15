@@ -1,0 +1,67 @@
+[
+ {
+  "name": "Epistemonikos",
+  "urteil": "ungeprueft",
+  "beleg": "HTTPError"
+ },
+ {
+  "name": "Trip Database",
+  "urteil": "nein",
+  "beleg": "OR bringt nichts (leer=23 OR=23)"
+ },
+ {
+  "name": "Semantic Scholar",
+  "urteil": "nein",
+  "beleg": "OR bringt nichts (leer=189 OR=201)"
+ },
+ {
+  "name": "BASE",
+  "urteil": "nein",
+  "beleg": "OR bringt nichts (leer=1595 OR=1595)"
+ },
+ {
+  "name": "CORE",
+  "urteil": "ungeprueft",
+  "beleg": "HTTPError"
+ },
+ {
+  "name": "The Lens",
+  "urteil": "nein",
+  "beleg": "OR bringt nichts (leer=2332 OR=2332)"
+ },
+ {
+  "name": "Dimensions",
+  "urteil": "nein",
+  "beleg": "OR bringt nichts (leer=1 OR=1)"
+ },
+ {
+  "name": "Innovationsfonds (G-BA)",
+  "urteil": "nein",
+  "beleg": "OR bringt nichts (leer=1142 OR=1154)"
+ },
+ {
+  "name": "Fernleihe (K10plus)",
+  "urteil": "nein",
+  "beleg": "OR bringt nichts (leer=1211 OR=1211)"
+ },
+ {
+  "name": "WHO IRIS",
+  "urteil": "nein",
+  "beleg": "OR bringt nichts (leer=8 OR=8)"
+ },
+ {
+  "name": "medRxiv",
+  "urteil": "JA",
+  "beleg": "leer=3987 OR=9290 AND=4000"
+ },
+ {
+  "name": "OSF",
+  "urteil": "nein",
+  "beleg": "OR bringt nichts (leer=5 OR=5)"
+ },
+ {
+  "name": "OpenGrey / Graue Literatur",
+  "urteil": "nein",
+  "beleg": "OR bringt nichts (leer=1595 OR=1595)"
+ }
+]

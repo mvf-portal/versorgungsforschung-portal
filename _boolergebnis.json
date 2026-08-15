@@ -1,0 +1,254 @@
+[
+ {
+  "name": "PubMed / MEDLINE",
+  "quelle": "Schnittstelle",
+  "plain": 5281,
+  "or": 1209055,
+  "and": 5281,
+  "urteil": "JA",
+  "notiz": null
+ },
+ {
+  "name": "PubMed Central (PMC)",
+  "quelle": "Schnittstelle",
+  "plain": 39277,
+  "or": 2316530,
+  "and": 39277,
+  "urteil": "JA",
+  "notiz": null
+ },
+ {
+  "name": "Europe PMC",
+  "quelle": "Schnittstelle",
+  "plain": 29768,
+  "or": 2651826,
+  "and": 29768,
+  "urteil": "JA",
+  "notiz": null
+ },
+ {
+  "name": "Cochrane Library",
+  "quelle": "Ergebnisseite",
+  "plain": 20,
+  "or": 20,
+  "and": 20,
+  "urteil": "nein",
+  "notiz": null
+ },
+ {
+  "name": "Epistemonikos",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "nicht erreichbar (HTTPError)"
+ },
+ {
+  "name": "Trip Database",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "keine Trefferzahl auslesbar"
+ },
+ {
+  "name": "Google Scholar",
+  "quelle": "Ergebnisseite",
+  "plain": 120000,
+  "or": 1120000,
+  "and": 68700,
+  "urteil": "JA",
+  "notiz": null
+ },
+ {
+  "name": "Semantic Scholar",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "keine Trefferzahl auslesbar"
+ },
+ {
+  "name": "OpenAlex",
+  "quelle": "Schnittstelle",
+  "plain": 52578,
+  "or": 4458273,
+  "and": 52578,
+  "urteil": "JA",
+  "notiz": null
+ },
+ {
+  "name": "BASE",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "keine Trefferzahl auslesbar"
+ },
+ {
+  "name": "CORE",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "nicht erreichbar (HTTPError)"
+ },
+ {
+  "name": "The Lens",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "keine Trefferzahl auslesbar"
+ },
+ {
+  "name": "Dimensions",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "keine Trefferzahl auslesbar"
+ },
+ {
+  "name": "Zenodo",
+  "quelle": "Schnittstelle",
+  "plain": 31371,
+  "or": 31371,
+  "and": 206,
+  "urteil": "nein",
+  "notiz": null
+ },
+ {
+  "name": "Monitor Versorgungsforschung",
+  "quelle": "Ergebnisseite",
+  "plain": 22,
+  "or": 22,
+  "and": 22,
+  "urteil": "nein",
+  "notiz": null
+ },
+ {
+  "name": "DNVF",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "keine Trefferzahl auslesbar"
+ },
+ {
+  "name": "Gemeinsamer Bundesausschuss (G-BA)",
+  "quelle": "Ergebnisseite",
+  "plain": 27,
+  "or": 27,
+  "and": 27,
+  "urteil": "nein",
+  "notiz": null
+ },
+ {
+  "name": "Innovationsfonds (G-BA)",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "keine Trefferzahl auslesbar"
+ },
+ {
+  "name": "Nationallizenzen (DFG)",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "keine Trefferzahl auslesbar"
+ },
+ {
+  "name": "subito",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "keine Trefferzahl auslesbar"
+ },
+ {
+  "name": "Fernleihe (K10plus)",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "keine Trefferzahl auslesbar"
+ },
+ {
+  "name": "ClinicalTrials.gov",
+  "quelle": "Schnittstelle",
+  "plain": 476,
+  "or": 38683,
+  "and": 476,
+  "urteil": "JA",
+  "notiz": null
+ },
+ {
+  "name": "EU Clinical Trials Register",
+  "quelle": "Ergebnisseite",
+  "plain": 3,
+  "or": 2961,
+  "and": 3,
+  "urteil": "JA",
+  "notiz": null
+ },
+ {
+  "name": "WHO IRIS",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "keine Trefferzahl auslesbar"
+ },
+ {
+  "name": "NICE",
+  "quelle": "Ergebnisseite",
+  "plain": 3,
+  "or": 682,
+  "and": 3,
+  "urteil": "JA",
+  "notiz": null
+ },
+ {
+  "name": "medRxiv",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "nicht erreichbar (HTTPError)"
+ },
+ {
+  "name": "OSF",
+  "quelle": "Schnittstelle",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": null
+ },
+ {
+  "name": "OpenGrey / Graue Literatur",
+  "quelle": "Ergebnisseite",
+  "plain": null,
+  "or": null,
+  "and": null,
+  "urteil": "ungeprueft",
+  "notiz": "keine Trefferzahl auslesbar"
+ }
+]
