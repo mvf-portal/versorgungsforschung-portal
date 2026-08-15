@@ -283,17 +283,22 @@
   @media (prefers-color-scheme:dark){ .study-result .rlabel{ color:var(--brand); } }
   a.study-src{ font-size:11.5px; font-weight:600; color:var(--ink-faint); text-decoration:none; align-self:flex-start; }
   a.study-src:hover{ color:var(--brand); }
-  /* Hinweise unter dem Suchfeld - bewusst untereinander statt zweispaltig.
-     Im Raster richten sich die Zeilen an der hoechsten Karte aus: Der kurze
-     Absatz wurde auf die Hoehe des langen gestreckt, was eine Luecke von
-     knapp 50 px hinterliess. Untereinander sind die Abstaende gleichmaessig;
-     die Zeilenlaenge begrenzt max-width, damit die Zeilen lesbar bleiben. */
+  /* Hinweise unter dem Suchfeld: zwei Textspalten, keine Rasterzellen.
+     Ein Raster richtet Zeilen an der hoechsten Karte aus - der kurze Absatz
+     wurde dadurch gestreckt und hinterliess knapp 50 px Loch. Textspalten
+     lassen den Text einfach fliessen und packen dicht. */
   .hints{
-    display:flex; flex-direction:column; gap:7px;
+    columns:2; column-gap:26px;
     margin-top:14px; padding-top:13px; border-top:1px solid var(--line-soft);
   }
-  .hints p{ margin:0; font-size:12px; line-height:1.5; color:var(--ink-faint); max-width:104ch; }
+  .hints p{
+    margin:0 0 9px; font-size:12px; line-height:1.5; color:var(--ink-faint);
+    break-inside:avoid;           /* ein Absatz wird nie zerrissen */
+  }
+  .hints p:last-child{ margin-bottom:0; }
   .hints b{ color:var(--ink-soft); font-weight:700; }
+  /* Auf schmalen Bildschirmen untereinander - zwei Spalten waeren dort unlesbar. */
+  @media (max-width:760px){ .hints{ columns:1; } }
 
   /* ---------- Download-Leisten ---------- */
   .dl-row{ display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-top:10px; }
