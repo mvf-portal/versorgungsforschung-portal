@@ -24,29 +24,36 @@ function verdrahte(term){
   });
 }
 
-function suchen(){
-  const term = input.value.trim();
-  if(!term){ input.focus(); return; }
-  gesucht = term;
-  verdrahte(term);
-  document.body.classList.add('gesucht');
-
+// Die Ergebniszeile getrennt vom Springen: Beim Filtern sollen sich die
+// Zahlen aktualisieren, die Ansicht aber stehen bleiben - sonst rutscht die
+// Seite bei jedem Filterklick weg, und man kann keine zwei Filter setzen.
+function zeigeErgebnis(){
+  if(!gesucht) return;
   const sichtbar = cardIndex.filter(c=>!c.el.classList.contains('aus'));
   const live     = sichtbar.filter(c=>c.type==='live').length;
   const portale  = sichtbar.filter(c=>c.type==='portal').length;
   const lizenz   = sichtbar.filter(c=>c.type==='lic').length;
 
   resultBar.innerHTML =
-    '<b>&bdquo;' + htmlEsc(term) + '&ldquo;</b> ist in <b>' + live + '</b> Datenbanken vorbereitet &mdash; '
+    '<b>&bdquo;' + htmlEsc(gesucht) + '&ldquo;</b> ist in <b>' + live + '</b> Datenbanken vorbereitet &mdash; '
     + 'ein Klick &ouml;ffnet die Trefferliste in einem neuen Tab.'
     + '<span class="rb-zusatz">Dazu ' + portale + ' Portale, in denen der Begriff nach dem &Ouml;ffnen '
     + 'einzugeben ist, und ' + lizenz + ' Datenbanken mit Lizenzpflicht.</span>';
   resultBar.hidden = false;
+}
 
-  // Sichtbar hinunterspringen: sonst bliebe die Wirkung im Kopfbereich verborgen.
+function suchen(){
+  const term = input.value.trim();
+  if(!term){ input.focus(); return; }
+  gesucht = term;
+  verdrahte(term);
+  document.body.classList.add('gesucht');
+  zeigeErgebnis();
+  aktualisiereChips(term);
+
+  // Nur beim Absenden hinunterspringen - nicht bei jeder Filteraenderung.
   const ziel = document.querySelector('.cat:not(.aus)');
   if(ziel) ziel.scrollIntoView({behavior:'smooth', block:'start'});
-  aktualisiereChips(term);
 }
 
 function zuruecksetzen(){
@@ -150,7 +157,7 @@ function filtern(){
   const badge = document.getElementById('filterBadge');
   badge.textContent = aktiv; badge.hidden = !aktiv;
   document.getElementById('dbCount').textContent = sichtbar;
-  if(gesucht) suchen();   // Rueckmeldung an die neue Auswahl anpassen
+  zeigeErgebnis();   // nur die Zahlen nachfuehren, nicht springen
 }
 
 document.querySelectorAll('.filter-group').forEach(gruppe=>{
