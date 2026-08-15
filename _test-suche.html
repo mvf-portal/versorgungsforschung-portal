@@ -361,16 +361,30 @@
   .bool-hint b{ color:var(--ink); font-weight:700; }
 
   /* ---------- Filter ---------- */
-  .filters{ margin-top:12px; border-top:1px solid var(--line-soft); padding-top:10px; }
+  .filters{ margin-top:12px; }
+  /* Bewusst eine Leiste, kein blasser Textlink: Der Filter ging vorher unter.
+     Zusammengeklappt bleibt er eine Zeile hoch - er soll keinen Platz fressen. */
   .filters summary{
-    cursor:pointer; font-size:12.5px; font-weight:700; color:var(--ink-soft);
-    list-style:none; display:flex; align-items:center; gap:8px;
+    cursor:pointer; list-style:none;
+    display:flex; align-items:center; gap:9px;
+    padding:9px 13px; border:1px solid var(--line); border-radius:6px;
+    background:var(--card-2); transition:border-color .14s, background .14s;
   }
   .filters summary::-webkit-details-marker{ display:none; }
-  .filters summary::before{ content:"1"; font-size:15px; }
-  .filters summary::after{ content:"B8"; color:var(--ink-faint); transition:transform .15s; }
-  .filters[open] summary::after{ transform:rotate(90deg); }
-  .filters summary:hover{ color:var(--brand); }
+  .filters summary:hover{ border-color:var(--brand); background:var(--card); }
+  .filters summary:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+  .filters[open] summary{ border-color:var(--brand); background:var(--card); }
+  /* Symbole als SVG - Schriftzeichen wie oder haengen davon ab, ob die
+     Hausschrift sie enthaelt; Lato tut es nicht. */
+  .f-icon{ width:15px; height:15px; flex:0 0 auto; color:var(--brand); }
+  .f-titel{ font-size:12.5px; font-weight:700; color:var(--brand); }
+  .f-dims{
+    font-size:11.5px; color:var(--ink-faint); flex:1 1 auto;
+    overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  }
+  .f-pfeil{ width:13px; height:13px; flex:0 0 auto; color:var(--ink-faint); transition:transform .16s; }
+  .filters[open] .f-pfeil{ transform:rotate(90deg); }
+  @media (max-width:620px){ .f-dims{ display:none; } }
   .filter-badge{
     background:var(--brand); color:var(--on-brand); border-radius:999px;
     font-size:11px; padding:1px 7px; font-weight:700;
@@ -554,7 +568,13 @@
       </div>
 
       <details class="filters" id="filters">
-        <summary>Filter <span class="filter-badge" id="filterBadge" hidden></span></summary>
+        <summary>
+          <svg class="f-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M7 12h10M11 18h2"/></svg>
+          <span class="f-titel">Filter</span>
+          <span class="f-dims">Zugang &middot; Suchart &middot; Operatoren &middot; Art der Quelle</span>
+          <span class="filter-badge" id="filterBadge" hidden></span>
+          <svg class="f-pfeil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        </summary>
         <div class="filter-body">
           <div class="filter-group" data-gruppe="zugang">
             <span class="filter-label">Zugang</span>
