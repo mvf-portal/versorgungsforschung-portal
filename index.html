@@ -365,6 +365,17 @@
   }
   .leer-hinweis b{ color:var(--ink); }
 
+  .uebersetzen{
+    display:flex; align-items:center; gap:7px; margin-top:9px;
+    font-size:12px; color:var(--ink-soft); cursor:pointer;
+  }
+  .uebersetzen input{ accent-color:var(--brand); width:15px; height:15px; cursor:pointer; }
+  .rb-uebersetzung{
+    display:block; margin-top:6px; padding-top:6px;
+    border-top:1px solid var(--line-soft); font-size:12px; color:var(--ink-soft);
+  }
+  .rb-uebersetzung b{ color:var(--brand); }
+
   .bool-hint{
     margin-top:9px; padding:9px 13px; border-radius:6px;
     background:var(--card-2); border-left:3px solid var(--action-deep);
@@ -579,6 +590,8 @@
       <!-- Hinweis auf Boolesche Operatoren - erscheint nur, wenn welche
            getippt werden. -->
       <div class="bool-hint" id="boolHint" hidden></div>
+      <label class="uebersetzen"><input type="checkbox" id="uebersetzenAn" checked>
+        Deutsche Fachbegriffe für internationale Datenbanken übersetzen</label>
       <div class="chips" id="chips">
         <span class="chips-label">Schnellwahl:</span>
       </div>
@@ -623,6 +636,7 @@
         <p><b>Vollständigkeit.</b> Auch dieses Portal kann nicht sämtliche Artikel „aller Datenbanken" enthalten — das verhindern Lizenz- und Technikgrenzen. Es bündelt stattdessen die maßgeblichen Suchen, sodass eine Recherche systematisch über alle relevanten Datenbanken laufen kann.</p>
         <p><b>Portal vs. Live-Suche.</b> Von den derzeit <b id="cntGesamt"></b> eingebundenen Datenbanken unterstützen <b id="cntLive"></b> die Live-Suche; sie sind entsprechend gekennzeichnet. Weitere <b id="cntPortal"></b> sind als „Portal" markiert: Angebote wie LIVIVO, das DRKS oder die WHO-Plattform ICTRP erlauben technisch keine verlinkbaren Ergebnisadressen. Der Klick führt dort auf die Startseite — der Suchbegriff ist anschließend von Hand einzugeben.</p>
         <p><b>Suchoperatoren.</b> <b>AND</b>, <b>OR</b> und <b>NOT</b> funktionieren nicht überall gleich — wir haben es einzeln nachgemessen. <span class="boolmark ja">AND/OR ✓</span> heißt: geprüft, die Operatoren wirken (<b id="cntBoolJa"></b> Datenbanken). <span class="boolmark nein">AND/OR ✗</span> heißt: geprüft, sie wirken nicht — die Wörter werden einfach mitgesucht (<b id="cntBoolNein"></b>). <b>Ohne Zeichen ist es ungeprüft</b> (<b id="cntBoolOffen"></b>): Diese Anbieter liefern eine Bot-Sperre oder eine reine JavaScript-Oberfläche, aus der sich kein belastbares Ergebnis ablesen ließ — das heißt ausdrücklich <i>nicht</i>, dass sie es nicht können. Der Filter „Operatoren" zeigt auf Wunsch nur die geprüft tauglichen.</p>
+        <p><b>Deutsch suchen, international finden.</b> Internationale Datenbanken kennen keine deutschen Fachbegriffe — „Primärversorgung" liefert dort fast nichts. Der Hub übersetzt deshalb <b id="cntGlossar"></b> Fachbegriffe automatisch: Deutschsprachige Datenbanken behalten Ihren Begriff, internationale bekommen den Ausdruck, unter dem sie tatsächlich indexieren („Nutzenbewertung" wird zu <i>health technology assessment</i>, nicht zu <i>benefit assessment</i>). Die Ergebnisleiste zeigt die verwendete Fassung; der Schalter unter dem Suchfeld stellt es ab.</p>
         <p><b>Hinweis zu Lizenzen.</b> Mit <span style="color:var(--accent)">Lizenz</span> markierte Datenbanken (z. B. Web of Science, Scopus, Embase, CINAHL) sind kostenpflichtig — der Zugang läuft meist über Ihre Bibliothek/Institution. Der Link führt zur Startseite bzw. zum institutionellen Login.</p>
       </div>
       <div class="meta-row">
@@ -723,7 +737,7 @@ const CATS = [
   {id:"biblio", h:190, num:"02", name:"Bibliografische Datenbanken (international)"},
   {id:"evidenz", h:262, num:"03", name:"Systematische Reviews & Evidenzsynthesen"},
   {id:"openaccess", h:150, num:"04", name:"Open Access & Discovery"},
-  {id:"volltext", h:100, num:"05", name:"Volltext beschaffen"},
+  {id:"volltext", h:100, num:"05", name:"Volltext-Datenbanken"},
   {id:"register", h:212, num:"06", name:"Studien- & Reviewregister"},
   {id:"policy", h:338, num:"07", name:"Health Services Research & Gesundheitspolitik"},
   {id:"preprint", h:46, num:"08", name:"Preprints & Graue Literatur"},
@@ -775,15 +789,15 @@ const DB = [
   {c:"deutsch", n:"WIdO", d:"Wissenschaftliches Institut der AOK — Versorgungsdaten & Reporte (Arzneimittel, Pflege).", t:"portal", u:"https://www.wido.de/"},
 
   // 5 — Volltext beschaffen (legale Wege zum Volltext hinter der Bezahlschranke)
-  {c:"volltext", n:"Nationallizenzen (DFG)", d:"DFG-finanzierte Lizenzen für Zeitschriftenarchive und E-Books. Privatpersonen mit Wohnsitz in Deutschland können sich kostenlos registrieren.", t:"live", u:"https://www.nationallizenzen.de/@@search?SearchableText=%s", b:0},
+  {c:"volltext", n:"Nationallizenzen (DFG)", de:1, d:"DFG-finanzierte Lizenzen für Zeitschriftenarchive und E-Books. Privatpersonen mit Wohnsitz in Deutschland können sich kostenlos registrieren.", t:"live", u:"https://www.nationallizenzen.de/@@search?SearchableText=%s", b:0},
   {c:"volltext", n:"Unpaywall", d:"Findet legale Open-Access-Fassungen zu einer DOI — über 50 Mio. Volltexte aus Repositorien und Verlagen. DOI nach dem Öffnen eingeben.", t:"portal", u:"https://unpaywall.org/"},
   {c:"volltext", n:"Open Access Button", d:"Sucht frei zugängliche Fassungen und fordert sie bei Bedarf direkt beim Autor an. DOI oder Titel nach dem Öffnen eingeben.", t:"portal", u:"https://openaccessbutton.org/"},
-  {c:"volltext", n:"subito", d:"Direktlieferdienst wissenschaftlicher Bibliotheken — Aufsätze und Bücher kostenpflichtig, aber schnell und lizenzkonform.", t:"live", u:"https://search.subito-doc.de/vufind/Search/Results?lookfor=%s&type=AllFields", b:1},
-  {c:"volltext", n:"Fernleihe (K10plus)", d:"Verbundkatalog mit Bestandsnachweis: zeigt, welche Bibliothek den Titel führt — Bestellung über die eigene Bibliothek.", t:"live", u:"https://opac.k10plus.de/DB=2.299/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=%s"},
+  {c:"volltext", n:"subito", de:1, d:"Direktlieferdienst wissenschaftlicher Bibliotheken — Aufsätze und Bücher kostenpflichtig, aber schnell und lizenzkonform.", t:"live", u:"https://search.subito-doc.de/vufind/Search/Results?lookfor=%s&type=AllFields", b:1},
+  {c:"volltext", n:"Fernleihe (K10plus)", de:1, d:"Verbundkatalog mit Bestandsnachweis: zeigt, welche Bibliothek den Titel führt — Bestellung über die eigene Bibliothek.", t:"live", u:"https://opac.k10plus.de/DB=2.299/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=%s"},
 
   // 6 — Register
   {c:"register", n:"ClinicalTrials.gov", d:"Weltweit größtes Register klinischer Studien (NLM).", t:"live", u:"https://clinicaltrials.gov/search?term=%s", b:1},
-  {c:"register", n:"DRKS", d:"Deutsches Register Klinischer Studien — Begriff nach Öffnen eingeben.", t:"portal", u:"https://drks.de/"},
+  {c:"register", n:"DRKS", de:1, d:"Deutsches Register Klinischer Studien — Begriff nach Öffnen eingeben.", t:"portal", u:"https://drks.de/"},
   {c:"register", n:"WHO ICTRP", d:"International Clinical Trials Registry Platform — Meta-Suche über alle Register.", t:"portal", u:"https://trialsearch.who.int/"},
   {c:"register", n:"EU Clinical Trials Register", d:"Klinische Arzneimittelstudien in der EU/EWR.", t:"live", u:"https://www.clinicaltrialsregister.eu/ctr-search/search?query=%s", b:1},
 
@@ -1168,6 +1182,13 @@ document.getElementById('dlArchivCsv').addEventListener('click', ()=>{
     baueCSV(archivListe, true), CSV_MIME);
 });
 
+// ---- Suchglossar: deutsche Fachbegriffe -> der Ausdruck, unter dem
+// internationale Datenbanken sie fuehren. Redaktionell gepflegt, kein
+// Uebersetzungsdienst: kein Fremdzugriff, kein Schluessel, korrigierbar.
+const GLOSSAR = [{"de":"Primärversorgung","en":"primary care"},{"de":"Grundversorgung","en":"primary care"},{"de":"hausarztzentrierte Versorgung","en":"general practice centred care"},{"de":"integrierte Versorgung","en":"integrated care"},{"de":"sektorenübergreifende Versorgung","en":"cross-sectoral care"},{"de":"ambulante Versorgung","en":"ambulatory care"},{"de":"stationäre Versorgung","en":"inpatient care"},{"de":"Notfallversorgung","en":"emergency care"},{"de":"Akutversorgung","en":"acute care"},{"de":"Palliativversorgung","en":"palliative care"},{"de":"Hospizversorgung","en":"hospice care"},{"de":"Rehabilitation","en":"rehabilitation"},{"de":"Nachsorge","en":"aftercare"},{"de":"Langzeitpflege","en":"long-term care"},{"de":"häusliche Pflege","en":"home care"},{"de":"Regelversorgung","en":"usual care"},{"de":"Versorgungskette","en":"care pathway"},{"de":"Behandlungspfad","en":"clinical pathway"},{"de":"Überleitung","en":"transitional care"},{"de":"Entlassmanagement","en":"discharge management"},{"de":"Patientenlotse","en":"patient navigator"},{"de":"Fallmanagement","en":"case management"},{"de":"Versorgungsmanagement","en":"care management"},{"de":"Hausarzt","en":"general practitioner"},{"de":"Allgemeinmedizin","en":"general practice"},{"de":"Facharzt","en":"medical specialist"},{"de":"Arztpraxis","en":"medical practice"},{"de":"Medizinisches Versorgungszentrum","en":"outpatient care centre"},{"de":"Krankenhaus","en":"hospital"},{"de":"Universitätsklinikum","en":"university hospital"},{"de":"Pflegeheim","en":"nursing home"},{"de":"Pflegekraft","en":"nurse"},{"de":"Pflegepersonal","en":"nursing staff"},{"de":"Apotheke","en":"pharmacy"},{"de":"Hebamme","en":"midwife"},{"de":"Physiotherapie","en":"physiotherapy"},{"de":"Rettungsdienst","en":"emergency medical services"},{"de":"Krankenkasse","en":"health insurance fund"},{"de":"gesetzliche Krankenversicherung","en":"statutory health insurance"},{"de":"private Krankenversicherung","en":"private health insurance"},{"de":"Angehörige","en":"family caregivers"},{"de":"Selbsthilfegruppe","en":"self-help group"},{"de":"Gesundheitssystem","en":"health system"},{"de":"Gesundheitspolitik","en":"health policy"},{"de":"Gesundheitsökonomie","en":"health economics"},{"de":"Nutzenbewertung","en":"health technology assessment"},{"de":"frühe Nutzenbewertung","en":"early benefit assessment"},{"de":"Erstattung","en":"reimbursement"},{"de":"Vergütung","en":"provider payment"},{"de":"Fallpauschale","en":"diagnosis related group"},{"de":"Zuzahlung","en":"co-payment"},{"de":"Selektivvertrag","en":"selective contracting"},{"de":"Disease-Management-Programm","en":"disease management program"},{"de":"Innovationsfonds","en":"health care innovation fund"},{"de":"Bedarfsplanung","en":"health workforce planning"},{"de":"Mindestmenge","en":"minimum volume standard"},{"de":"Qualitätssicherung","en":"quality assurance"},{"de":"Zertifizierung","en":"accreditation"},{"de":"Leitlinie","en":"clinical practice guideline"},{"de":"Priorisierung","en":"priority setting"},{"de":"Rationierung","en":"rationing"},{"de":"Fachkräftemangel","en":"health workforce shortage"},{"de":"Versorgungsqualität","en":"quality of care"},{"de":"Patientensicherheit","en":"patient safety"},{"de":"Behandlungsfehler","en":"medical error"},{"de":"unerwünschtes Ereignis","en":"adverse event"},{"de":"Überversorgung","en":"overuse of health care"},{"de":"Unterversorgung","en":"underuse of health care"},{"de":"Fehlversorgung","en":"inappropriate care"},{"de":"Lebensqualität","en":"quality of life"},{"de":"Patientenzufriedenheit","en":"patient satisfaction"},{"de":"Krankenhausverweildauer","en":"length of stay"},{"de":"Wiederaufnahme","en":"hospital readmission"},{"de":"Sterblichkeit","en":"mortality"},{"de":"Krankheitslast","en":"burden of disease"},{"de":"Inanspruchnahme","en":"health care utilization"},{"de":"Wartezeit","en":"waiting time"},{"de":"Erreichbarkeit","en":"access to care"},{"de":"Leitlinientreue","en":"guideline adherence"},{"de":"Therapietreue","en":"medication adherence"},{"de":"Arzneimitteltherapiesicherheit","en":"medication safety"},{"de":"Polypharmazie","en":"polypharmacy"},{"de":"Krankenhauskeim","en":"healthcare-associated infection"},{"de":"Kosteneffektivität","en":"cost-effectiveness"},{"de":"Kosten-Nutzen-Analyse","en":"cost-benefit analysis"},{"de":"Gesundheitsausgaben","en":"health expenditure"},{"de":"Versorgungsforschung","en":"health services research"},{"de":"Gesundheitsforschung","en":"health research"},{"de":"Routinedaten","en":"claims data"},{"de":"Abrechnungsdaten","en":"administrative claims data"},{"de":"Sekundärdaten","en":"secondary data analysis"},{"de":"Registerstudie","en":"registry study"},{"de":"Kohortenstudie","en":"cohort study"},{"de":"Fall-Kontroll-Studie","en":"case-control study"},{"de":"Querschnittstudie","en":"cross-sectional study"},{"de":"Längsschnittstudie","en":"longitudinal study"},{"de":"Beobachtungsstudie","en":"observational study"},{"de":"randomisierte kontrollierte Studie","en":"randomized controlled trial"},{"de":"cluster-randomisierte Studie","en":"cluster randomized trial"},{"de":"Interventionsstudie","en":"intervention study"},{"de":"Machbarkeitsstudie","en":"feasibility study"},{"de":"Pilotstudie","en":"pilot study"},{"de":"Prozessevaluation","en":"process evaluation"},{"de":"systematische Übersichtsarbeit","en":"systematic review"},{"de":"Metaanalyse","en":"meta-analysis"},{"de":"Scoping Review","en":"scoping review"},{"de":"qualitative Studie","en":"qualitative study"},{"de":"Befragung","en":"survey"},{"de":"Fokusgruppe","en":"focus group"},{"de":"Delphi-Studie","en":"Delphi study"},{"de":"Mixed-Methods","en":"mixed methods"},{"de":"Implementierungsforschung","en":"implementation research"},{"de":"Wirksamkeit unter Alltagsbedingungen","en":"effectiveness"},{"de":"Evidenzbasierte Medizin","en":"evidence-based medicine"},{"de":"Telemedizin","en":"telemedicine"},{"de":"Videosprechstunde","en":"video consultation"},{"de":"elektronische Patientenakte","en":"electronic health record"},{"de":"digitale Gesundheitsanwendung","en":"digital health application"},{"de":"Gesundheits-App","en":"mobile health application"},{"de":"künstliche Intelligenz","en":"artificial intelligence"},{"de":"maschinelles Lernen","en":"machine learning"},{"de":"Telemonitoring","en":"remote patient monitoring"},{"de":"elektronisches Rezept","en":"electronic prescribing"},{"de":"Entscheidungsunterstützung","en":"clinical decision support"},{"de":"Interoperabilität","en":"interoperability"},{"de":"Datenschutz","en":"data protection"},{"de":"Prävention","en":"prevention"},{"de":"Gesundheitsförderung","en":"health promotion"},{"de":"Früherkennung","en":"screening"},{"de":"Impfung","en":"vaccination"},{"de":"Gesundheitskompetenz","en":"health literacy"},{"de":"soziale Ungleichheit","en":"health inequalities"},{"de":"sozioökonomischer Status","en":"socioeconomic status"},{"de":"ländlicher Raum","en":"rural health"},{"de":"Migration","en":"migrant health"},{"de":"Kindergesundheit","en":"child health"},{"de":"Frauengesundheit","en":"women's health"},{"de":"Alter","en":"aged"},{"de":"Pflegebedürftigkeit","en":"need for long-term care"},{"de":"Multimorbidität","en":"multimorbidity"},{"de":"chronische Erkrankung","en":"chronic disease"},{"de":"seltene Erkrankung","en":"rare disease"},{"de":"Gemeinsame Entscheidungsfindung","en":"shared decision making"},{"de":"Patientenbeteiligung","en":"patient participation"},{"de":"Patientenberichtete Ergebnisse","en":"patient reported outcome measures"},{"de":"Gendermedizin","en":"gender medicine"},{"de":"Herzinsuffizienz","en":"heart failure"},{"de":"Herzinfarkt","en":"myocardial infarction"},{"de":"Bluthochdruck","en":"hypertension"},{"de":"Schlaganfall","en":"stroke"},{"de":"Diabetes","en":"diabetes mellitus"},{"de":"Adipositas","en":"obesity"},{"de":"Krebs","en":"cancer"},{"de":"Brustkrebs","en":"breast cancer"},{"de":"Darmkrebs","en":"colorectal cancer"},{"de":"Demenz","en":"dementia"},{"de":"Depression","en":"depression"},{"de":"psychische Erkrankung","en":"mental disorder"},{"de":"Sucht","en":"substance use disorder"},{"de":"Rückenschmerz","en":"back pain"},{"de":"Schmerz","en":"pain"},{"de":"Asthma","en":"asthma"},{"de":"Nierenerkrankung","en":"kidney disease"},{"de":"Sepsis","en":"sepsis"},{"de":"Sturz","en":"accidental falls"},{"de":"Dekubitus","en":"pressure ulcer"},{"de":"Endometriose","en":"endometriosis"}];
+
+document.getElementById('cntGlossar').textContent = GLOSSAR.length;
+
 // ---- Suche ---------------------------------------------------------------
 // Grundsatz: Es passiert nichts, bevor der Nutzer absendet. Frueher schrieb
 // die Seite die Links schon beim Tippen um - unsichtbar, ohne Rueckmeldung.
@@ -1184,10 +1205,42 @@ function basisUrl(tpl){
   return tpl.split('?')[0].split('/%s')[0];
 }
 
-// Links auf den Begriff einstellen - oder zurueck auf die Startseiten.
+// Laengste Begriffe zuerst - sonst zerfaellt "integrierte Versorgung" in
+// "Versorgung" und der Rest bleibt deutsch stehen.
+const GLOSSAR_LANG = GLOSSAR.slice().sort((a,b)=>b.de.length - a.de.length);
+
+// Deutsche Fachbegriffe durch den international ueblichen Ausdruck ersetzen.
+// Wortweise, damit auch "Primaerversorgung Diabetes" funktioniert.
+function uebersetze(term){
+  let text = term;
+  const treffer = [];
+  GLOSSAR_LANG.forEach(g=>{
+    // Sonderzeichen im Begriff maskieren, damit z. B. ein Punkt nicht als
+    // "beliebiges Zeichen" wirkt. Wortgrenzen ueber Leerzeichen und Komma
+    // statt \b: \b trennt bei Umlauten und Bindestrichen falsch.
+    const roh = g.de.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const muster = new RegExp('(^|[\\s,;])(' + roh + ')(?=[\\s,;]|$)', 'gi');
+    if(muster.test(text)){
+      text = text.replace(muster, (_m, vor)=> vor + g.en);
+      treffer.push(g);
+    }
+  });
+  return { text, treffer, geaendert: text.toLowerCase() !== term.toLowerCase() };
+}
+
+// Eine deutschsprachige Datenbank bekommt den deutschen Begriff. Das sind die
+// Rubrik 01 und einzeln gekennzeichnete Kataloge (subito, K10plus, DRKS ...).
+function istDeutsch(x){ return x.c === 'deutsch' || x.de === 1; }
+
+let uebersetzung = null;   // Ergebnis von uebersetze() zur zuletzt gesendeten Suche
+
+// Links einstellen - deutsche Datenbanken deutsch, internationale uebersetzt.
 function verdrahte(term){
-  const enc = encodeURIComponent(term);
+  const deutschEnc = encodeURIComponent(term);
+  const intText = (uebersetzung && uebersetzung.geaendert) ? uebersetzung.text : term;
+  const intEnc  = encodeURIComponent(intText);
   cardIndex.forEach(c=>{
+    const enc = istDeutsch(c.eintrag) ? deutschEnc : intEnc;
     c.el.href = (c.type === 'live' && term) ? c.tpl.replace('%s', enc)
               : (c.type === 'live')         ? basisUrl(c.tpl)
               :                               c.tpl;
@@ -1208,7 +1261,12 @@ function zeigeErgebnis(){
     '<b>&bdquo;' + htmlEsc(gesucht) + '&ldquo;</b> ist in <b>' + live + '</b> Datenbanken vorbereitet &mdash; '
     + 'ein Klick &ouml;ffnet die Trefferliste in einem neuen Tab.'
     + '<span class="rb-zusatz">Dazu ' + portale + ' Portale, in denen der Begriff nach dem &Ouml;ffnen '
-    + 'einzugeben ist, und ' + lizenz + ' Datenbanken mit Lizenzpflicht.</span>';
+    + 'einzugeben ist, und ' + lizenz + ' Datenbanken mit Lizenzpflicht.</span>'
+    + ((uebersetzung && uebersetzung.geaendert)
+        ? '<span class="rb-uebersetzung">In internationalen Datenbanken wird gesucht als '
+          + '<b>' + htmlEsc(uebersetzung.text) + '</b> &mdash; deutschsprachige Datenbanken '
+          + 'behalten Ihren Begriff.</span>'
+        : '');
   resultBar.hidden = false;
 }
 
@@ -1216,6 +1274,7 @@ function suchen(){
   const term = input.value.trim();
   if(!term){ input.focus(); return; }
   gesucht = term;
+  uebersetzung = document.getElementById('uebersetzenAn').checked ? uebersetze(term) : null;
   verdrahte(term);
   document.body.classList.add('gesucht');
   zeigeErgebnis();
@@ -1228,6 +1287,7 @@ function suchen(){
 
 function zuruecksetzen(){
   gesucht = '';
+  uebersetzung = null;
   input.value = '';
   verdrahte('');
   document.body.classList.remove('gesucht');
@@ -1270,6 +1330,15 @@ input.addEventListener('keydown', e=>{
 });
 goBtn.addEventListener('click', suchen);
 document.getElementById('clear').addEventListener('click', zuruecksetzen);
+
+// Umschalten wirkt sofort auf die laufende Suche - Links neu einstellen und
+// Zahlen nachfuehren, aber nicht springen.
+document.getElementById('uebersetzenAn').addEventListener('change', ()=>{
+  if(!gesucht) return;
+  uebersetzung = document.getElementById('uebersetzenAn').checked ? uebersetze(gesucht) : null;
+  verdrahte(gesucht);
+  zeigeErgebnis();
+});
 
 // ---- Schnellwahl ----
 const chipsBox = document.getElementById('chips');

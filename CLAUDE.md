@@ -179,7 +179,23 @@ Die Werte stammen aus einer Messreihe: dieselbe Suche mit `OR` und mit `AND`, ve
 
 Zweispaltig ueber **CSS-Textspalten** (`columns:2`), nicht ueber ein Raster. Ein Raster richtet Zeilen an der hoechsten Karte aus und streckte den kurzen Absatz, was knapp 50 px Loch hinterliess. Textspalten packen dicht. Unter 760 px einspaltig.
 
+## Suchglossar: deutsch suchen, international finden
+
+`GLOSSAR` steht als Konstante **in** `index.html` (167 Begriffe, rund 9 KB) — nicht nachgeladen, weil es bei jeder Suche gebraucht wird. Die Pflegefassung mit Sachgebieten liegt als `_glossar.json` auf `entwurf/suche`.
+
+Bewusst **kein Uebersetzungsdienst**: Ein Schluessel fuer DeepL oder Google muesste im Quelltext stehen und waere damit oeffentlich. Ein gepflegtes Verzeichnis ist ausserdem redaktionell kontrollierbar.
+
+**Massgeblich ist der Suchbegriff, nicht die woertliche Uebersetzung:** `Nutzenbewertung` → `health technology assessment` (nicht *benefit assessment*), `Routinedaten` → `claims data`, `Wirksamkeit unter Alltagsbedingungen` → `effectiveness` (im Unterschied zu *efficacy*).
+
+`uebersetze()` ersetzt wortweise, **laengste Begriffe zuerst** — sonst zerfaellt „integrierte Versorgung" in „Versorgung". Wortgrenzen ueber Leerzeichen und Komma statt ``, weil `` bei Umlauten und Bindestrichen falsch trennt.
+
+`istDeutsch()` entscheidet, welche Datenbank den deutschen Begriff behaelt: Rubrik `deutsch` plus einzeln mit `de:1` gekennzeichnete Kataloge (Nationallizenzen, subito, K10plus, DRKS). Alle uebrigen bekommen die uebersetzte Fassung.
+
+Sichtbar gemacht wird das in der Ergebnisleiste („In internationalen Datenbanken wird gesucht als …"); der Schalter `#uebersetzenAn` stellt es ab und wirkt sofort, ohne Sprung.
+
 ## Fallstricke
+
+- **`const` vor seiner Definition benutzen legt die ganze Seite lahm.** Beim Einbau des Glossars stand `document.getElementById('cntGlossar').textContent = GLOSSAR.length;` vor der `const GLOSSAR`-Zeile. `const` wird zwar hochgezogen, ist davor aber nicht benutzbar — die Folge war ein `ReferenceError`, und weil das gesamte Skript in einem Block liegt, wurden **weder Kacheln noch Studien** gerendert. Nach Aenderungen am Skriptteil immer die Konsole pruefen.
 
 - **Kein HTML-Escaping.** Alle Inhalte werden per `innerHTML`-Stringkonkatenation eingesetzt. Texte mit `<`, `>` oder `&` zerlegen das Markup — beim Anlegen von `DB`- oder `STUDIES`-Einträgen vermeiden bzw. maskieren.
 - **Keine geraden doppelten Anführungszeichen in `STUDIES`-Strings** — die Objekte stehen in inline-JS; ein `"` bricht das Skript und die Seite bleibt leer. Notfalls „…" oder Klammern verwenden.
