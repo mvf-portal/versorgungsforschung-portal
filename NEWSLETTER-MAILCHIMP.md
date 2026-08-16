@@ -30,58 +30,43 @@ der Website liefert immer den aktuellen Stand.
 
 ---
 
-## Vorab: die Anmeldung auf monitor-versorgungsforschung.de
+## Vorab: die Anmeldung
 
-Der Hub zeigt in der rechten Spalte einen Kasten **„Studien-Newsletter"**. Der Knopf
-darin führt auf die MVF-Startseite:
+Die Anmeldung liegt seit August 2026 **auf dem Hub selbst**: `newsletter.html`, verlinkt
+im Menü und im Studien-Kasten. Sie sendet unmittelbar an Mailchimp und setzt dabei drei
+Kennzeichen:
 
-```
-https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&utm_medium=referral&utm_campaign=studien-newsletter#studien-newsletter
-```
+| Was | Kennzeichen |
+|---|---|
+| Studien-Newsletter | Tag **Studien-Newsletter Pubmed** (`tags=3433296`) |
+| MVF-Newsletter | Gruppe **Monitor Versorgungsforschung Newsletter** (`group[5629][4]`) |
+| Einwilligung | Gruppe **Datenschutzerklärung gelesen** (`group[5629][64]`) |
 
-Bewusst liegt **kein Formular auf dem Hub**: Er erhebt keine personenbezogenen Daten,
-und das soll so bleiben. Einwilligung, Double-Opt-in und Abmeldung verwaltet MVF.
-
-### Was auf der MVF-Seite einzurichten ist
-
-In der rechten Seitenleiste steht bereits das Formular des allgemeinen Newsletters
-(WPForms-Widget, Überschrift „Newsletter"). Darunter kommt ein **zweites Formular**:
-
-1. **Neues WPForms-Formular** anlegen, Überschrift **„Studien-Newsletter"**, mit
-   E-Mail-Feld und DSGVO-Kasten — analog zum bestehenden.
-2. **Anker-ID vergeben:** Das umgebende Element braucht
-   ```html
-   id="studien-newsletter"
-   ```
-   Genau darauf zeigt der Link vom Hub. Fehlt die ID, landen Interessierte oben auf
-   der Startseite und müssen die Seitenleiste selbst suchen — es ist also nichts
-   kaputt, aber unbequem. **Die ID bitte nicht umbenennen**, sonst muss der Hub
-   nachgezogen werden.
-3. **Mit Mailchimp verbinden** und die Anmeldungen mit einem **Tag oder einer Gruppe**
-   `Studien-Newsletter` versehen.
-4. **Double-Opt-in** aktivieren.
+Double-Opt-in ist in der Zielgruppe aktiv; Einwilligung, Bestätigung und Abmeldung
+verwaltet Mailchimp. Ein zweites Formular auf m-vf.de ist dafür **nicht** nötig — das
+dortige Formular bedient weiterhin den regulären MVF-Newsletter.
 
 > ### Der wichtigste Punkt
 >
-> Die RSS-Kampagne muss an ein **Segment** gehen, das auf diesen Tag gefiltert ist —
-> nicht an die gesamte Audience. Sonst erhalten alle MVF-Abonnenten täglich die
-> Studienauswahl, obwohl sie nur den allgemeinen Newsletter bestellt haben. Das wäre
-> nicht nur lästig, sondern mangels Einwilligung auch rechtlich angreifbar.
->
-> In Mailchimp: **Audience → Segments → Create segment**, Bedingung
-> *Tags → contains → Studien-Newsletter*. Dieses Segment in Schritt 1 unten als
-> Empfänger wählen.
+> Die RSS-Kampagne muss an den **Tag `Studien-Newsletter Pubmed`** gehen — nicht an die
+> gesamte Zielgruppe. Die Hausliste „eRelation GESAMT" zählt rund 5.900 Abonnenten;
+> sie alle bekämen sonst täglich die Studienauswahl, obwohl sie nur den regulären
+> Newsletter bestellt haben. Das wäre nicht nur lästig, sondern mangels Einwilligung
+> auch rechtlich angreifbar.
 
 ---
 
 ## Schritt 1: Kampagne anlegen
 
-1. In Mailchimp auf **Campaigns → Create → Email**.
-2. Reiter **Automated**, dann **Share blog updates** wählen.
-   (Das ist Mailchimps Bezeichnung für eine RSS-Kampagne; ein Blog ist dafür nicht nötig.)
+1. **Erstellen → E-Mail** (englisch: *Campaigns → Create → Email*).
+2. Reiter **Automatisiert** / *Automated*, darin **Blog-Updates teilen**
+   / *Share blog updates*. Das ist Mailchimps Name für eine RSS-Kampagne;
+   ein Blog wird dafür nicht gebraucht.
 3. Kampagnennamen vergeben, z. B. `MVF Studien-Newsletter`.
-4. Als Empfänger das **Segment `Studien-Newsletter`** wählen — nicht die gesamte
-   Audience (siehe Kasten oben).
+4. Zielgruppe **eRelation GESAMT**, und dort **nicht** „Gesamte Zielgruppe",
+   sondern **Segment oder Tag** → **Studien-Newsletter Pubmed**.
+   Ein eigenes Segment muss man dafür nicht anlegen: Mailchimp lässt den Tag
+   unmittelbar als Empfänger wählen.
 
 ## Schritt 2: Feed und Sendezeit
 
@@ -200,10 +185,13 @@ Newsletter üblich und zulässig, erfordert aber:
 - einen Hinweis auf die **Verarbeitung durch Mailchimp** (Intuit, USA) samt
   Rechtsgrundlage für die Übermittlung.
 
-Diese Punkte gehören in die Datenschutzerklärung des **Newsletters**, nicht in die
-des Hubs. Beide Erklärungen sollten nicht vermischt werden: Die Aussage „keine
-Cookies, kein Tracking" gilt weiterhin für wissen.m-vf.de und wäre für den
-Newsletter falsch.
+**Seit der Anmeldeseite steht das im Hub selbst** — `index.html`, Datenschutzhinweise
+Abschnitt 3 (Newsletter-Anmeldung, Double-Opt-in, Widerruf, Erfolgsmessung) und
+Abschnitt 4 (Mailchimp als Auftragsverarbeiter, USA-Übermittlung). Wer den Anmeldeweg
+ändert, muss diese beiden Abschnitte mitändern.
+
+Die Aussage „keine Cookies, kein Tracking" gilt unverändert für das Portal — das ist
+etwas anderes als der Newsletter und darf nicht vermischt werden.
 
 Die Vorlage enthält im Fußbereich bereits `*|UNSUB|*` (Abmeldelink) und
 `*|HTML:LIST_ADDRESS_HTML|*` (Absenderanschrift) — beides ist gesetzlich
