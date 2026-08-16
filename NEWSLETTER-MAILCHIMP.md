@@ -56,6 +56,24 @@ dortige Formular bedient weiterhin den regulären MVF-Newsletter.
 
 ---
 
+> ## ⚠ Dieser Weg ist versperrt (Stand: 16. August 2026)
+>
+> **Mailchimp hat die klassischen Automationen im Juni 2025 abgeschaltet** — darunter
+> „Blog-Updates teilen" / *Share blog updates*, die RSS-Kampagne. Nachgeprüft am
+> 16.08.2026 im Konto: `campaigns/create?type=rss` liefert 404, und der Journey-Builder,
+> der die Automationen ersetzt, bietet **keinen RSS-Auslöser** (Trigger-Rubriken:
+> Kontakt-, Kauf-, Marketing-, Buchungs-, Zahlungsaktivität, Datum, API).
+>
+> Die Schritte 1 bis 5 unten sind damit **Historie**. Sie bleiben stehen, weil sie
+> beschreiben, was der Feed leisten soll — nicht, weil man ihnen noch folgen könnte.
+>
+> **Der Weg, der bleibt:** die Mailchimp-API. Der tägliche GitHub-Lauf, der um 06:00 Uhr
+> die Studien holt, legt anschließend eine Kampagne an und verschickt sie an den Tag
+> `Studien-Newsletter Pubmed`. Der Inhalt entsteht ohnehin schon — `build_newsletter.py`
+> baut Feed, Word und Excel; die Vorlage `newsletter/mailchimp-vorlage.html` ist fertig.
+> Nötig wäre ein API-Schlüssel als Repository-Geheimnis, den **der Betreiber selbst**
+> hinterlegt.
+
 ## Schritt 1: Kampagne anlegen
 
 1. **Erstellen → E-Mail** (englisch: *Campaigns → Create → Email*).
