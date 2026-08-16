@@ -371,7 +371,10 @@
      waagerecht. Ohne Andeutung bleibt das unbemerkt - die hinteren Punkte
      (Impressum, Datenschutz) waeren praktisch unsichtbar. Der weiche Rand
      rechts zeigt, dass es weitergeht. */
-  @media (max-width:760px){
+  /* Bis 860 px passen die sechs Punkte nicht in eine Zeile - gemessen: bei
+     768 px liegen 54 px hinter dem Rand. Der weiche Rand zeigt, dass es
+     weitergeht. Darunter (620 px) bricht das Menue ohnehin um. */
+  @media (max-width:860px){
     nav.hauptmenu{ position:relative; }
     nav.hauptmenu::after{
       content:""; position:absolute; top:0; right:0; bottom:0; width:36px;
