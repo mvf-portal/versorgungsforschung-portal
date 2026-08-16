@@ -308,8 +308,14 @@ const MC = {
   //   [1]/[2]     Pharma Relations          | Altlasten: diese Titel gibt es
   //   [16]/[32]   MarketAccess&HealthPolicy | nicht mehr. Nicht anbieten,
   //   [128]/[256] Monitor Pflege            | auch nicht "der Vollstaendigkeit halber".
+  // Sortiert wird die Hausliste aber ueber TAGS, nicht ueber diese Gruppen.
+  // Das Formular kann Tags mitgeben - als Feld "tags" mit den NUMMERN der
+  // Tags, kommagetrennt. Die Nummer steht in der Adresszeile, wenn man den
+  // Tag in Mailchimp anklickt (dort als "static_segment").
+  tagStudien:        "3433296",          // Studien-Newsletter Pubmed
+  tagMvf:            "",                 // OFFEN: Nummer des MVF-Tags
+  // Solange der MVF-Tag fehlt, wird ersatzweise die alte Gruppe gesetzt.
   gruppeMvf:         "group[5629][4]",
-  gruppeStudien:     "",                 // NOCH ANZULEGEN in Mailchimp
   gruppeDatenschutz: "group[5629][64]"
 };
 const MVF_FORMULAR = "https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&utm_medium=referral&utm_campaign=newsletter#studien-newsletter";
@@ -364,10 +370,10 @@ form.addEventListener('submit', async (e)=>{
     sage('Ohne Ihre Einwilligung dürfen wir Ihnen nichts schicken. Bitte setzen Sie das Häkchen.', 'fehler');
     einwilligung.focus(); return;
   }
-  // Ohne eigene Gruppe waere eine Studien-Bestellung nicht von einer MVF-
+  // Ohne Kennzeichen waere eine Studien-Bestellung nicht von einer MVF-
   // Bestellung zu unterscheiden - der Besteller bekaeme entweder nichts oder
   // das Falsche. Dann lieber gar nicht senden.
-  if(wahlStudien.checked && !MC.gruppeStudien){
+  if(wahlStudien.checked && !MC.tagStudien){
     sage('Die Bestellung des Studien-Newsletters ist über diese Seite noch nicht freigeschaltet. '
        + 'Bitte nutzen Sie so lange das <a href="' + MVF_FORMULAR + '" target="_blank" rel="noopener">'
        + 'Formular auf monitor-versorgungsforschung.de</a>.', 'fehler');
@@ -385,8 +391,13 @@ form.addEventListener('submit', async (e)=>{
   p.set('EMAIL', feldMail.value.trim());
   // Mailchimps eigenes Fallenfeld heisst b_<u>_<id> und muss leer bleiben.
   p.set('b_' + MC.u + '_' + MC.id, feldFalle.value);
-  if(wahlStudien.checked && MC.gruppeStudien) p.set(MC.gruppeStudien, '1');
-  if(wahlMvf.checked     && MC.gruppeMvf)     p.set(MC.gruppeMvf, '1');
+  // Tags gehen als eine kommagetrennte Liste von Nummern mit.
+  const tags = [];
+  if(wahlStudien.checked && MC.tagStudien) tags.push(MC.tagStudien);
+  if(wahlMvf.checked     && MC.tagMvf)     tags.push(MC.tagMvf);
+  if(tags.length) p.set('tags', tags.join(','));
+  // Ersatzweise, solange der MVF-Tag fehlt: die alte Gruppe.
+  if(wahlMvf.checked && !MC.tagMvf && MC.gruppeMvf) p.set(MC.gruppeMvf, '1');
   // MVF vermerkt die gelesene Datenschutzerklaerung seit jeher als eigene
   // Gruppe. Damit die Anmeldungen von hier genauso dokumentiert sind wie die
   // vom Formular auf m-vf.de, wird sie mitgesetzt.
