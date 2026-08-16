@@ -128,7 +128,7 @@ def newsletter_html(studien: list[dict], datum: str, hinweis: str = "") -> str:
         aus den tagesaktuellen PubMed-Neuzugängen ausgewählt, auf Deutsch zusammengefasst und
         jeweils mit den konkreten Ergebniszahlen. Ausgewählt wird nach Übertragbarkeit auf das
         deutsche Versorgungssystem. Die vollständige Auswahl samt Archiv finden Sie im
-        Knowledge-Hub.</p>
+        <a href="https://wissen.m-vf.de/?{p}&amp;utm_content=intro" style="color:{BLAU};font-weight:bold;">Knowledge-Hub</a>.</p>
     </td></tr>
 {''.join(studie_html(e) for e in studien)}
 
