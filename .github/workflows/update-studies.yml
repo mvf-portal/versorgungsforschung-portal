@@ -51,7 +51,9 @@ jobs:
       - name: Newsletter-Entwurf zur Freigabe anlegen
         continue-on-error: true
         env:
-          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+          # Das Geheimnis heisst im Repository KNOWLEDGEHUB. Der zweite Name
+          # bleibt stehen, falls es spaeter sprechender benannt wird.
+          MAILCHIMP_API_KEY: ${{ secrets.KNOWLEDGEHUB || secrets.MAILCHIMP_API_KEY }}
         run: python scripts/mailchimp_entwurf.py
 
       - name: Committen & pushen (nur bei Änderung)

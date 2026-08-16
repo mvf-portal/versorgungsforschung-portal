@@ -78,7 +78,7 @@ Auswahl ist das Absicht, nicht Umständlichkeit.
 In Mailchimp unter **Account → Extras → API-Schlüssel** einen Schlüssel erzeugen
 (`https://us6.admin.mailchimp.com/account/api/`). Ihn **nicht** im Klartext weitergeben,
 sondern in GitHub hinterlegen: *Settings → Secrets and variables → Actions → New
-repository secret*, Name **`MAILCHIMP_API_KEY`**.
+repository secret*, Name **`KNOWLEDGEHUB`** (so heisst es im Repository; `MAILCHIMP_API_KEY` wird ebenfalls akzeptiert).
 
 Ohne diesen Schlüssel überspringt der Schritt sich selbst und meldet das im Protokoll;
 der Rest des Laufs bleibt davon unberührt. Auch ein Fehler beim Anlegen lässt das
