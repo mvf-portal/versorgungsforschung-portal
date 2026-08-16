@@ -260,11 +260,10 @@
     <p class="meldung" id="meldung" role="status" aria-live="polite"></p>
   </form>
 
-  <p class="fein">Zum Absenden werden Sie auf eine Seite unseres Versanddienstleisters Mailchimp
-  weitergeleitet, die den Eingang bestätigt. Anschließend erhalten Sie eine E-Mail mit einem
-  Bestätigungslink. Erst mit
-  dem Klick darauf beginnt der Versand (Double-Opt-in) — so kann niemand fremde Adressen
-  eintragen. Beide Newsletter sind kostenfrei und jederzeit einzeln abbestellbar.</p>
+  <p class="fein">Die Anmeldung wird an unseren Versanddienstleister Mailchimp übermittelt.
+  Anschließend erhalten Sie eine E-Mail mit einem Bestätigungslink; erst mit dem Klick darauf
+  beginnt der Versand (Double-Opt-in) — so kann niemand fremde Adressen eintragen. Beide
+  Newsletter sind kostenfrei und jederzeit einzeln abbestellbar.</p>
 
 </main>
 
@@ -289,13 +288,8 @@
 // JSONP-Schnittstelle /subscribe/post-json antwortet bei diesem Konto mit
 // 404 - gemessen, mit GET wie mit POST. Sie ist abgeschaltet. Uebrig bleibt
 // /subscribe/post, die gewoehnliche Formularadresse; genau die benutzt auch
-// die Anmeldeseite von MVF. Der Browser sendet also ganz normal hin, und
-// Mailchimp zeigt seine eigene Bestaetigung an.
-//
-// Das kostet die Rueckmeldung auf dieser Seite und bringt zweierlei: Die
-// Anmeldung funktioniert auch ohne JavaScript, und Faelle wie "Adresse schon
-// eingetragen" beantwortet Mailchimp selbst - in seiner Sprache, mit seinen
-// Links, ohne dass wir sie nachbauen.
+// die Anmeldeseite von MVF. Der Browser sendet also ganz normal hin - nur
+// nicht in dieses Fenster, sondern in einen unsichtbaren Rahmen (siehe unten).
 // ---------------------------------------------------------------------------
 const MC = {
   // Die Formularadresse traegt den Kontonamen als Vorsilbe. Ohne ihn
@@ -347,6 +341,25 @@ function sage(text, art){
 form.action = MC.ziel;
 form.method = 'post';
 form.setAttribute('novalidate','');
+
+// Gesendet wird in einen unsichtbaren Rahmen, damit der Besucher hier bleibt.
+//
+// Grund: Mailchimp leitet nach erfolgreicher Anmeldung auf die in der
+// Zielgruppe hinterlegte Dankeseite weiter - bei MVF auf m-vf.de. Wer sich
+// hier anmeldet, landete also auf einer fremden Seite. Diese Einstellung gilt
+// fuer die ganze Zielgruppe; sie zu aendern wuerde das Formular auf m-vf.de
+// mitverbiegen.
+//
+// Der Preis: Was im Rahmen passiert, koennen wir nicht lesen - fremde Domain.
+// Die Bestaetigung unten ist deshalb so formuliert, dass sie in beiden Faellen
+// stimmt, auch wenn die Adresse schon eingetragen war.
+const rahmen = document.createElement('iframe');
+rahmen.name = 'mcZiel';
+rahmen.title = 'Übermittlung an Mailchimp';
+rahmen.setAttribute('aria-hidden','true');
+rahmen.style.cssText = 'position:absolute; left:-5000px; width:1px; height:1px; border:0;';
+document.body.appendChild(rahmen);
+form.target = 'mcZiel';
 
 function verborgen(name, wert){
   const el = document.createElement('input');
@@ -403,8 +416,24 @@ form.addEventListener('submit', (e)=>{
 
   laeuft = true;
   knopf.disabled = true;
-  sage('Sie werden zu Mailchimp weitergeleitet …', '');
+  sage('Wird gesendet …', '');
   form.submit();          // absichtlich .submit(): loest dieses Ereignis nicht erneut aus
+
+  // Der Rahmen meldet, dass Mailchimp geantwortet hat - was er antwortet,
+  // bleibt verborgen. Bleibt die Meldung aus, zeigen wir nach vier Sekunden
+  // dasselbe: Ausbleiben heisst nicht Misserfolg.
+  const fertig = ()=>{
+    rahmen.removeEventListener('load', fertig);
+    clearTimeout(reissleine);
+    form.querySelectorAll('input').forEach(i=>{ i.disabled = true; });
+    sage('<b>Bitte prüfen Sie Ihr Postfach.</b> War Ihre Adresse noch nicht eingetragen, '
+       + 'finden Sie dort gleich eine E-Mail mit einem Bestätigungslink — erst mit dem Klick '
+       + 'darauf beginnt der Versand. Sehen Sie notfalls im Spam-Ordner nach. War die Adresse '
+       + 'bereits angemeldet, ändert sich nichts; Ihre Auswahl können Sie dann über den Link '
+       + '„Einstellungen ändern" am Ende jeder unserer E-Mails anpassen.', 'ok');
+  };
+  const reissleine = setTimeout(fertig, 4000);
+  rahmen.addEventListener('load', fertig);
 });
 </script>
 </html>
