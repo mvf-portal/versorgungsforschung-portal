@@ -56,6 +56,52 @@ dortige Formular bedient weiterhin den regulären MVF-Newsletter.
 
 ---
 
+## Der Versand heute: Entwurf zur Freigabe
+
+`scripts/mailchimp_entwurf.py` läuft täglich als letzter Schritt des Workflows — nach
+den Studien, nach Feed und Downloads. Es **verschickt nichts an die Leserschaft**:
+
+1. Es nimmt den jüngsten Tag aus `studien-archiv.json`. Ist der nicht von heute, endet es
+   ohne Entwurf — kein Versand ohne neue Studien.
+2. Es prüft, ob für diesen Tag schon ein Entwurf besteht (bei doppelten Läufen).
+3. Es legt die Kampagne an, Empfänger ist der Tag **Studien-Newsletter Pubmed**.
+4. Es setzt den Inhalt — zunächst mit einem goldenen Freigabe-Kasten obenauf.
+5. Es schickt eine Testausgabe an **stegmaier@m-vf.de**. Diese Testausgabe *ist* die
+   Vorschau: Sie sehen genau, was hinausginge, und im Kasten steht der Link zum Freigeben.
+6. Es setzt den Inhalt erneut, diesmal ohne den Kasten — die Leserschaft sieht ihn nie.
+
+Der Versand bleibt danach **ein Klick von Hand** in Mailchimp. Bei einer KI-kuratierten
+Auswahl ist das Absicht, nicht Umständlichkeit.
+
+### Einrichtung: ein Schlüssel
+
+In Mailchimp unter **Account → Extras → API-Schlüssel** einen Schlüssel erzeugen
+(`https://us6.admin.mailchimp.com/account/api/`). Ihn **nicht** im Klartext weitergeben,
+sondern in GitHub hinterlegen: *Settings → Secrets and variables → Actions → New
+repository secret*, Name **`MAILCHIMP_API_KEY`**.
+
+Ohne diesen Schlüssel überspringt der Schritt sich selbst und meldet das im Protokoll;
+der Rest des Laufs bleibt davon unberührt. Auch ein Fehler beim Anlegen lässt das
+Studien-Update nicht scheitern (`continue-on-error`).
+
+### Was im Skript fest steht
+
+| Wert | Bedeutung |
+|---|---|
+| `LIST_ID = 1c8fc10ec7` | Zielgruppe „eRelation GESAMT" |
+| `TAG_ID = 3433296` | Tag „Studien-Newsletter Pubmed" — **der Empfänger** |
+| `REPLY_TO = cms@m-vf.de` | wie in der Zielgruppe hinterlegt |
+| `FREIGABE_MAIL` | wohin die Testausgabe geht |
+
+Die E-Mail entsteht in `newsletter_html()` — Tabellen-Layout, Inline-Styles, feste
+600 Pixel, in den Hub-Farben Blau und Gold. `newsletter/mailchimp-vorlage.html` ist die
+ältere RSS-Fassung; sie bleibt als Beleg, wird aber nicht mehr benutzt.
+
+Zum Prüfen ohne Konto: `python scripts/mailchimp_entwurf.py --probe` schreibt die fertige
+E-Mail nach `_probe.html`.
+
+---
+
 > ## ⚠ Dieser Weg ist versperrt (Stand: 16. August 2026)
 >
 > **Mailchimp hat die klassischen Automationen im Juni 2025 abgeschaltet** — darunter

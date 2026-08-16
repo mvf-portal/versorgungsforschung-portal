@@ -1,0 +1,292 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Legt bei Mailchimp einen Kampagnen-ENTWURF fuer die Studien des Tages an.
+
+Verschickt wird NICHTS an die Leserschaft. Das Skript baut den fertigen
+Newsletter, legt ihn als Entwurf an und schickt eine Testausgabe an die
+Redaktion. Der Versand bleibt ein Klick von Hand - bei einer KI-kuratierten
+Auswahl ist das Absicht, nicht Umstaendlichkeit.
+
+Warum ueberhaupt ein Skript: Mailchimp hat die klassischen Automationen im
+Juni 2025 abgeschaltet, darunter die RSS-Kampagne. Der Journey-Builder, der
+sie ersetzt, kennt keinen RSS-Ausloeser. Uebrig bleibt die API.
+
+Ablauf:
+  1. juengsten Tag aus studien-archiv.json holen; ist er nicht von heute,
+     endet das Skript ohne Entwurf - kein Versand ohne neue Studien.
+  2. pruefen, ob fuer diesen Tag schon ein Entwurf besteht (doppelte Laeufe).
+  3. Kampagne anlegen, Empfaenger ist der Tag "Studien-Newsletter Pubmed".
+  4. Inhalt setzen - zunaechst MIT Freigabe-Hinweis obenauf.
+  5. Testausgabe an die Redaktion schicken; sie ist zugleich die Vorschau.
+  6. Inhalt ohne den Hinweis erneut setzen, damit die Leserschaft ihn nicht sieht.
+
+Aufruf:
+    python scripts/mailchimp_entwurf.py            # Entwurf anlegen
+    python scripts/mailchimp_entwurf.py --probe    # nur HTML nach _probe.html schreiben
+
+Der Schluessel kommt aus der Umgebung (MAILCHIMP_API_KEY), niemals aus dem
+Quelltext. Sein Anhaengsel nach dem Bindestrich ist das Rechenzentrum.
+"""
+
+from __future__ import annotations
+
+import datetime as dt
+import json
+import os
+import sys
+from html import escape
+from zoneinfo import ZoneInfo
+
+import requests
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from build_newsletter import load, utm            # gemeinsame Basis, kein zweiter Datenpfad
+
+TZ = ZoneInfo("Europe/Berlin")
+
+LIST_ID = "1c8fc10ec7"          # Zielgruppe "eRelation GESAMT"
+TAG_ID = 3433296                # Tag "Studien-Newsletter Pubmed" (Tags sind statische Segmente)
+FROM_NAME = "Monitor Versorgungsforschung"
+REPLY_TO = "cms@m-vf.de"        # wie in der Zielgruppe hinterlegt
+FREIGABE_MAIL = "stegmaier@m-vf.de"
+
+MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni",
+          "Juli", "August", "September", "Oktober", "November", "Dezember"]
+
+# Farben des Hubs seit der Umstellung auf das MVF-Erscheinungsbild.
+BLAU, GOLD, GOLD_TIEF = "#0051A1", "#BE9E53", "#8A6E28"
+
+
+def lang(iso: str) -> str:
+    d = dt.date.fromisoformat(iso)
+    return f"{d.day}. {MONATE[d.month - 1]} {d.year}"
+
+
+# --------------------------------------------------------------- Newsletter
+
+def studie_html(e: dict) -> str:
+    """Eine Studie als Tabellenzeile - Outlook rendert mit der Word-Engine."""
+    pubmed = utm(f"https://pubmed.ncbi.nlm.nih.gov/{e['pmid']}/", "email", "studie")
+    kopf = "  ·  ".join(x for x in (e.get("author"), e.get("pubdate")) if x)
+    titel = escape(e["title"])
+    quelle = " · ".join(x for x in (e.get("journal"), str(e.get("year") or "")) if x)
+    return f"""
+    <tr><td style="padding:22px 28px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr><td style="border-top:1px solid #D0D8E4;padding-top:20px;">
+          <h2 style="margin:0 0 6px;font:bold 19px/1.35 Georgia,serif;color:{BLAU};">
+            <a href="{escape(pubmed)}" style="color:{BLAU};text-decoration:none;">{titel}</a>
+          </h2>
+          <p style="margin:0 0 10px;font:12px/1.5 Arial,sans-serif;color:#545C63;">{escape(quelle)}</p>
+          {f'<p style="margin:0 0 8px;font:italic 13px Georgia,serif;color:#545C63;">{escape(kopf)}</p>' if kopf else ''}
+          <p style="margin:0 0 10px;font:15px/1.65 Georgia,serif;color:#333;">{escape(e["sum"])}</p>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr><td style="background:#F7FAFD;border-left:3px solid {BLAU};padding:10px 14px;
+                           font:15px/1.6 Georgia,serif;color:#222;">
+              <strong>Ergebnis:</strong> {escape(e["result"])}</td></tr>
+          </table>
+          {f'<p style="margin:8px 0 0;font:13px/1.6 Georgia,serif;color:#545C63;"><strong>Übertragbarkeit:</strong> {escape(e["transfer"])}</p>' if e.get("transfer") else ''}
+          <p style="margin:10px 0 0;font:13px Georgia,serif;">
+            <a href="{escape(pubmed)}" style="color:{GOLD_TIEF};">Studie in PubMed ansehen &rarr;</a></p>
+        </td></tr>
+      </table>
+    </td></tr>"""
+
+
+def newsletter_html(studien: list[dict], datum: str, hinweis: str = "") -> str:
+    """Die vollstaendige E-Mail. `hinweis` erscheint nur in der Testausgabe."""
+    dl = "https://wissen.m-vf.de/download"
+    p = "utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=studien-entwurf"
+    return f"""<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#EDF2FA;margin:0;padding:0;">
+<tr><td align="center" style="padding:24px 12px;">
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background:#ffffff;">
+    {hinweis}
+    <tr><td style="background:{BLAU};padding:22px 28px;">
+      <p style="margin:0;font:bold 12px/1.4 Arial,sans-serif;letter-spacing:2px;color:#C9DCF2;">
+        MONITOR VERSORGUNGSFORSCHUNG</p>
+      <p style="margin:4px 0 0;font:bold 24px/1.3 Georgia,serif;color:#ffffff;">
+        Neueste Studien der Versorgungsforschung</p>
+      <p style="margin:6px 0 0;font:13px/1.5 Georgia,serif;color:#D8E5F5;">
+        Ausgabe vom {escape(lang(datum))}</p>
+    </td></tr>
+
+    <tr><td style="padding:24px 28px 4px;">
+      <p style="margin:0;font:15px/1.65 Georgia,serif;color:#333;">
+        aus den tagesaktuellen PubMed-Neuzugängen ausgewählt, auf Deutsch zusammengefasst und
+        jeweils mit den konkreten Ergebniszahlen. Ausgewählt wird nach Übertragbarkeit auf das
+        deutsche Versorgungssystem. Die vollständige Auswahl samt Archiv finden Sie im
+        Knowledge-Hub.</p>
+    </td></tr>
+{''.join(studie_html(e) for e in studien)}
+
+    <tr><td style="padding:30px 28px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+             style="background:#F7FAFD;border:1px solid #D0D8E4;">
+        <tr><td style="padding:18px 22px;">
+          <p style="margin:0 0 4px;font:bold 15px/1.4 Georgia,serif;color:{BLAU};">
+            Diese Ausgabe herunterladen</p>
+          <p style="margin:0 0 12px;font:13px/1.6 Georgia,serif;color:#545C63;">
+            Word zum Weiterverarbeiten, Excel zum Auswerten &ndash; jeweils auf dem Stand dieser Ausgabe.</p>
+          <p style="margin:0;font:14px/2 Georgia,serif;">
+            <a href="{dl}/studien-aktuell.docx?{p}&amp;utm_content=dl-word" style="color:{GOLD_TIEF};font-weight:bold;">&#10515; Word (.docx)</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="{dl}/studien-aktuell.csv?{p}&amp;utm_content=dl-excel" style="color:{GOLD_TIEF};font-weight:bold;">&#10515; Excel (.csv)</a></p>
+          <p style="margin:12px 0 0;padding-top:12px;border-top:1px solid #D0D8E4;font:13px/1.7 Georgia,serif;color:#545C63;">
+            Das <strong>vollständige Archiv</strong> aller bisher vorgestellten Studien:
+            <a href="{dl}/studien-archiv.docx?{p}&amp;utm_content=dl-archiv-word" style="color:{GOLD_TIEF};">Word</a> &middot;
+            <a href="{dl}/studien-archiv.csv?{p}&amp;utm_content=dl-archiv-excel" style="color:{GOLD_TIEF};">Excel</a></p>
+        </td></tr>
+      </table>
+    </td></tr>
+
+    <tr><td style="padding:26px 28px 0;" align="center">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr><td style="background:{GOLD};">
+          <a href="https://wissen.m-vf.de/?{p}&amp;utm_content=cta"
+             style="display:inline-block;padding:13px 28px;font:bold 15px Georgia,serif;color:#2A2207;text-decoration:none;">
+            Zum MVF-Knowledge-Hub</a>
+        </td></tr>
+      </table>
+      <p style="margin:12px 0 0;font:13px/1.6 Georgia,serif;color:#545C63;">
+        56 Fachdatenbanken, 29 davon mit Direktsuche &ndash; ein Suchbegriff, alle Quellen.</p>
+    </td></tr>
+
+    <tr><td style="padding:28px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr><td style="border-top:1px solid #D0D8E4;padding-top:18px;font:12px/1.7 Arial,sans-serif;color:#777;">
+          <p style="margin:0 0 8px;">
+            <strong>Monitor Versorgungsforschung</strong><br>
+            eRelation AG &ndash; Content in Health<br>
+            *|HTML:LIST_ADDRESS_HTML|*</p>
+          <p style="margin:0;">
+            Sie erhalten diese E-Mail, weil Sie den Studien-Newsletter abonniert haben.<br>
+            <a href="*|UNSUB|*" style="color:#777;">Abmelden</a> &middot;
+            <a href="*|UPDATE_PROFILE|*" style="color:#777;">Einstellungen ändern</a> &middot;
+            <a href="https://wissen.m-vf.de/#datenschutz" style="color:#777;">Datenschutz</a></p>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</td></tr>
+</table>"""
+
+
+def freigabe_hinweis(anzahl: int, datum: str, link: str) -> str:
+    """Steht nur in der Testausgabe an die Redaktion, nie im Versand."""
+    return f"""
+    <tr><td style="background:{GOLD};padding:16px 28px;">
+      <p style="margin:0 0 6px;font:bold 15px/1.4 Arial,sans-serif;color:#2A2207;">
+        Entwurf zur Freigabe &ndash; noch nicht versendet</p>
+      <p style="margin:0;font:13px/1.6 Arial,sans-serif;color:#2A2207;">
+        {anzahl} Studien vom {escape(lang(datum))}. So sähe die Ausgabe aus. Zum Prüfen und Senden:<br>
+        <a href="{escape(link)}" style="color:#2A2207;"><strong>{escape(link)}</strong></a><br>
+        Dieser Kasten steht nur in dieser Testausgabe; die Leserschaft sieht ihn nicht.</p>
+    </td></tr>"""
+
+
+# ---------------------------------------------------------------- Mailchimp
+
+class Mailchimp:
+    def __init__(self, key: str):
+        if "-" not in key:
+            raise SystemExit("MAILCHIMP_API_KEY ohne Rechenzentrum (erwartet: ...-usX)")
+        self.dc = key.rsplit("-", 1)[1]
+        self.basis = f"https://{self.dc}.api.mailchimp.com/3.0"
+        self.auth = ("anystring", key)
+
+    def _ruf(self, methode: str, pfad: str, **kw):
+        r = requests.request(methode, self.basis + pfad, auth=self.auth, timeout=45, **kw)
+        if not r.ok:
+            # Mailchimps Fehler stecken im Rumpf, nicht im Statustext.
+            raise SystemExit(f"Mailchimp {methode} {pfad}: {r.status_code} {r.text[:500]}")
+        return r.json() if r.text else {}
+
+    def entwuerfe(self) -> list[dict]:
+        d = self._ruf("GET", "/campaigns", params={
+            "status": "save", "count": 50, "sort_field": "create_time", "sort_dir": "DESC"})
+        return d.get("campaigns", [])
+
+    def anlegen(self, titel: str, betreff: str) -> dict:
+        rumpf = {
+            "type": "regular",
+            "recipients": {"list_id": LIST_ID,
+                           "segment_opts": {"saved_segment_id": TAG_ID}},
+            "settings": {"subject_line": betreff, "title": titel,
+                         "from_name": FROM_NAME, "reply_to": REPLY_TO,
+                         "to_name": "*|FNAME|*", "auto_footer": False},
+        }
+        try:
+            return self._ruf("POST", "/campaigns", json=rumpf)
+        except SystemExit as fehler:
+            # Aeltere Konten nehmen den Tag nur als ausformulierte Bedingung an.
+            if "segment" not in str(fehler).lower():
+                raise
+            rumpf["recipients"]["segment_opts"] = {
+                "match": "any",
+                "conditions": [{"condition_type": "StaticSegment", "field": "static_segment",
+                                "op": "static_is", "value": TAG_ID}]}
+            return self._ruf("POST", "/campaigns", json=rumpf)
+
+    def inhalt(self, kid: str, html: str) -> None:
+        self._ruf("PUT", f"/campaigns/{kid}/content", json={"html": html})
+
+    def testen(self, kid: str, adresse: str) -> None:
+        self._ruf("POST", f"/campaigns/{kid}/actions/test",
+                  json={"test_emails": [adresse], "send_type": "html"})
+
+
+# --------------------------------------------------------------------- main
+
+def main() -> int:
+    probe = "--probe" in sys.argv
+
+    alle = load()                       # neueste zuerst
+    tag = alle[0]["aufgenommen"]
+    studien = [e for e in alle if e["aufgenommen"] == tag]
+    heute = dt.datetime.now(TZ).date().isoformat()
+
+    if not probe and tag != heute:
+        print(f"Juengster Archivtag ist {tag}, heute ist {heute} - keine neuen Studien, kein Entwurf.")
+        return 0
+
+    titel = f"MVF Studien-Newsletter {dt.date.fromisoformat(tag).strftime('%d.%m.%Y')}"
+    betreff = f"Neueste Studien der Versorgungsforschung – {lang(tag)}"
+
+    if probe:
+        html = newsletter_html(studien, tag,
+                               freigabe_hinweis(len(studien), tag, "https://beispiel.invalid/entwurf"))
+        with open("_probe.html", "w", encoding="utf-8") as f:
+            f.write(html)
+        print(f"{len(studien)} Studien vom {tag} -> _probe.html ({len(html)} Zeichen)")
+        return 0
+
+    key = os.environ.get("MAILCHIMP_API_KEY", "").strip()
+    if not key:
+        print("MAILCHIMP_API_KEY nicht gesetzt - kein Entwurf angelegt.")
+        return 0
+
+    mc = Mailchimp(key)
+
+    for k in mc.entwuerfe():
+        if k.get("settings", {}).get("title") == titel:
+            print(f"Entwurf '{titel}' besteht bereits ({k['id']}) - nichts zu tun.")
+            return 0
+
+    kampagne = mc.anlegen(titel, betreff)
+    kid = kampagne["id"]
+    link = f"https://{mc.dc}.admin.mailchimp.com/campaigns/edit?id={kampagne.get('web_id', '')}"
+
+    # Erst mit Freigabe-Kasten - diese Fassung geht nur an die Redaktion.
+    mc.inhalt(kid, newsletter_html(studien, tag, freigabe_hinweis(len(studien), tag, link)))
+    mc.testen(kid, FREIGABE_MAIL)
+    # Dann sauber, damit die Leserschaft den Kasten nicht sieht.
+    mc.inhalt(kid, newsletter_html(studien, tag))
+
+    print(f"Entwurf angelegt: {titel} ({len(studien)} Studien)")
+    print(f"Testausgabe an {FREIGABE_MAIL} verschickt.")
+    print(f"Freigeben unter: {link}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
