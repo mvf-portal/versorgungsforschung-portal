@@ -925,64 +925,62 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "16. Aug. 2026, 07:06 Uhr";
+const SNAP_DATE = "16. Aug. 2026, 16:30 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
     journal:"Open Heart", year:"2026", pmid:"42601168",
     author:"Frost L et al.", pubdate:"14.08.2026",
     added:"14.08.2026",
-    title:"Nationale Trends der elektrischen Kardioversion bei Vorhofflimmern in Dänemark 2010-2022",
-    sum:"Die Studie analysierte mithilfe von Registerdaten die zeitlichen Trends in der Nutzung von elektrischer Kardioversion (ECV) bei Patienten mit Vorhofflimmern über einen Zeitraum von 13 Jahren in Dänemark.",
-    result:"Die Gesamtzahl der ECV pro Jahr stieg zwischen 2010 und 2022 fast um das Vierfache (von 2204 auf 8300). Die altersstandardisierte Rate sank jedoch von 449,5 pro 1000 Personenjahre (2010) auf 316,6 pro 1000 Personenjahre (2021). Erstmalige ECV-Verfahren verdoppelten sich, während die Rate insgesamt sank, was auf eine gezielteren Einsatz hindeutet."
+    title:"Trends der elektrischen Kardioversion bei Vorhofflimmern in Dänemark 2010-2022",
+    sum:"Landesweite Untersuchung der zeitlichen Trends bei elektrischer Kardioversion (ECV) zur Sinusrhythmensicherung bei Vorhofflimmern in Dänemark über 13 Jahre basierend auf Routinedaten.",
+    result:"Die Gesamtzahl der ECV pro Jahr stieg von 2204 (2010) auf 8300 (2022). Die altersadjustierte 1-Jahr-ECV-Rate sank von 449,5 auf 316,6 pro 1000 Personenjahre (2021). Erstmalige ECV verdoppelten sich, während Raten bei jüngeren Patienten sanken.",
+    transfer:"Dänemark, Sozialversicherungssystem mit ähnlicher Gesundheitsorganisation"
   },
   {
-    journal:"International Journal of Quality in Health Care", year:"2026", pmid:"42599219",
-    author:"Mutashar A et al.", pubdate:"14.08.2026",
-    added:"14.08.2026",
-    title:"Konsensbasierte Qualitäts- und Sicherheitsindikatoren für sichere Opioidanwendung in Krankenhäusern",
-    sum:"Die Studie entwickelte mittels modifizierter Delphi-Methode einen Satz von Qualitäts- und Sicherheitsindikatoren für sichere Opioidanwendung in australischen Krankenhäusern.",
-    result:"Von 34 initial bewerteten Indikatoren erreichten 17 Konsens für Wichtigkeit und Machbarkeit. In Runde 1 betrug die Antwortquote 91% (n=20), im Clinical Reference Group Meeting 50% (n=11) und in Runde 2 77% (n=17). Diese 17 Indikatoren wurden als wichtig und praktikabel für die Routine-Überwachung bewertet."
+    journal:"Lancet Regional Health Europe", year:"2026", pmid:"42604020",
+    author:"Mediavilla R et al.", pubdate:"08.08.2026",
+    added:"16.08.2026",
+    title:"Arbeitsbedingungen und psychische Gesundheit bei Ärztinnen und Ärzten sowie Pflegekräften in der EU: Querschnittsstudie",
+    sum:"Die Studie untersuchte Zusammenhänge zwischen Arbeitsbedingungen und psychischer Gesundheit bei 90.171 Gesundheitsberuflern aus 28 EU-Staaten, Island und Norwegen im Zeitraum Oktober 2024 bis April 2025.",
+    result:"30% zeigten depressive Symptome, 23% Angstsymptome, 13% suizidale Gedanken. Physische Gewalt betraf 10% der Ärzte und 18% der Pflegekräfte. Ungünstige Arbeitsbedingungen korreliertten mit schlechterer psychischer Gesundheit (adjustierte Prävalenzratios 0,98-1,94), während Jobressourcen positive Effekte zeigten (PR 1,06-0,56).",
+    transfer:"Europäische Daten, systemisch vergleichbar mit Deutschland"
   },
   {
-    journal:"Journal of Global Health", year:"2026", pmid:"42596889",
-    author:"Huang Y et al.", pubdate:"14.08.2026",
-    added:"14.08.2026",
-    title:"Life's Essential 8 als Mediator in der Assoziation von Nachtschichtarbeit mit kardiovaskulärer Erkrankung und Mortalität",
-    sum:"Die Studie untersuchte in einer Kohorte von über 131.000 erwerbstätigen UK-Biobank-Teilnehmern ohne Baseline-kardiovaskuläre Erkrankung, inwieweit Lifestyle (Life's Essential 8) die Assoziation zwischen Nachtschichtarbeit und kardiovaskulärer Morbidität/Mortalität mediiert.",
-    result:"Über 13,78 Jahren entwickelten 29,7% (n=39.115) kardiovaskuläre Erkrankung und 4,2% (n=5.474) starben. Personen mit permanenter Nachtschicht zeigten höhere Risiken für kardiovaskuläre Erkrankung (HR=1,24; 95% KI 1,18-1,31), Mortalität (HR=1,23; 95% KI 1,07-1,41) und Myokardinfarkt (HR=1,29; 95% KI 1,09-1,51). Life's Essential 8 mediierte 39,2% der kardiovaskulären Assoziation."
+    journal:"BMC Health Services Research", year:"2026", pmid:"42576220",
+    author:"Bohnert K et al.", pubdate:"08.08.2026",
+    added:"11.08.2026",
+    title:"Erlebte integrierte Versorgung für Kinder mit Sonderbedarf in Deutschland: PART-CHILD-Kohortenstudie",
+    sum:"Querschnittsanalyse von 459 Betreuungspersonen von Kindern mit Sonderbedarf zu ihrer Erfahrung mit integrierten Versorgungsangeboten und Zusammenhänge mit soziodemografischen, gesundheits- und netzwerkbezogenen Faktoren.",
+    result:"Durchschnittliche Bewertung Teamqualität/Kommunikation 4,1±1,1 (Skala bis 9), Aufmerksamkeit für Familienbelastung 2,3±1,1. Höhere unmet needs assoziiert mit niedrigerer Teamqualität (≥5 unmet needs: β=-0,83; 95%-KI -1,28 bis -0,38). Größere Versorgungsnetzwerke (6-10 Anbieter) positiv mit Familienaufmerksamkeit (β=0,38; 95%-KI 0,07-0,70).",
+    transfer:"Deutsche Daten, gesetzlich versicherte Bevölkerung"
   },
   {
-    journal:"JMIR Rehabilitation and Assistive Technology", year:"2026", pmid:"42600137",
-    author:"Rosario B et al.", pubdate:"14.08.2026",
-    added:"14.08.2026",
-    title:"S-Patch versus 24-Stunden-Holter zur kardialen Überwachung bei älteren Menschen mit Sturzneigung",
-    sum:"Die Studie verglich die Durchführbarkeit, Verträglichkeit und Adhärenz eines neuartigen tragbaren Dual-Lead-EKG-Geräts (S-Patch) mit Standard-24-Stunden-Holter-Monitoring bei älteren Erwachsenen (≥60 Jahre) mit ungeklärten Stürzen, Synkope oder Pressynkope.",
-    result:"Von 70 eingeschlossenen Patienten (45,7% mit kognitiver Beeinträchtigung) war die S-Patch-Tragezeit signifikant länger (Mittelwert &gt;60 Stunden, 68,8 versus 62,9 Stunden; p=0,04 beim ersten Einsatz). Beide Geräte wurden gut vertragen ohne Unterschied in der Gerätepräferenz. S-Patch ermöglichte längere kontinuierliche Überwachung bei vergleichbarem Arrhythmie-Erkennungsvermögen."
+    journal:"Healthcare", year:"2026", pmid:"42588405",
+    author:"Mayer S et al.", pubdate:"06.08.2026",
+    added:"13.08.2026",
+    title:"Simulation der Auswirkungen von Mindestfallzahl-Schwellwerten auf geografische Erreichbarkeit neurochirurgischer Versorgung in Deutschland",
+    sum:"Modellierung der Auswirkungen unterschiedlicher Mindestfallzahl-Schwellwerte auf die geografische Erreichbarkeit neurochirurgischer Fachabteilungen in Deutschland unter Berücksichtigung von 40-Minuten-Fahrtzeit-Isochonen.",
+    result:"Baseline 2024: 66,6% der Fläche und 84,7% der Bevölkerung liegen innerhalb 40-Minuten-Erreichbarkeit. Jeder Prozentpunkt Erhöhung des Fallzahl-Schwellwerts reduziert Flächenabdeckung um durchschnittlich 0,70 Prozentpunkte (ca. 305.000 Personen). Größte Verluste in ländlichen, dünn besiedelt Regionen östlicher Bundesländer.",
+    transfer:"Deutsche Routinedaten, direkt auf Versorgungsplanung anwendbar"
   },
   {
-    journal:"Circulation: Population Health Outcomes", year:"2026", pmid:"42596879",
-    author:"Liu S et al.", pubdate:"14.08.2026",
-    added:"14.08.2026",
-    title:"Tage zu Hause nach Herzinsuffizienzspitalisierung in Singapur: Trends und Equity 2011-2019",
-    sum:"Die Studie untersuchte zeitliche Trends in Days Alive and Out of Hospital (DAOH) nach erster Hospitalisierung wegen Herzinsuffizienz mit reduzierter Auswurffraktion und prüfte Unterschiede zwischen Altersgruppen, Geschlecht und Ethnizität.",
-    result:"Von 10.147 Patienten (Medianalter 68,9 Jahre; 31,5% weiblich) verbesserte sich die 1-Jahres-DAOH von 291,7 auf 301,0 Tage (1,16 Tage pro Jahr; p&lt;0,001), während 30-Tage-DAOH stabil blieb (p=0,554). Die Rückgangsraten bei herzinsuffizienzbedingten Readmissionen waren bei Männern steiler als bei Frauen. 1-Jahres-DAOH-Gewinne waren bei Patienten malaiischer Abstammung größer als bei chinesischen Patienten."
+    journal:"Cancers", year:"2026", pmid:"42588642",
+    author:"von Fritsch L et al.", pubdate:"28.07.2026",
+    added:"13.08.2026",
+    title:"Chirurgische Therapie bei Pankreaskarzinom im Alter ≥80 Jahren: Nutzen-Risiko-Analyse",
+    sum:"Vergleichende Analyse von 3016 Pankreaskarzinom-Patienten (≤65 Jahre: n=944; 66-79 Jahre: n=1535; ≥80 Jahre: n=537) aus deutschen Krebsregistern 2015-2023 bezüglich Behandlungsmuster und Überleben.",
+    result:"Anteil Patienten ≥80 Jahre stieg von 15% (2015) auf 32% (2023). 24% der operierten Oktogenare erhielten adjuvante Chemotherapie. Overall Survival und disease-free Survival waren schlechter als in jüngeren Kohorten. Oktogenare mit alleiniger Operation oder Chemotherapie hatten vergleichbare Überlebensraten wie palliativ behandelte Patienten.",
+    transfer:"Deutsche Krebsregisterdaten, gesetzlich Versicherte"
   },
   {
     journal:"BMC Health Services Research", year:"2026", pmid:"42596005",
     author:"Kanter J et al.", pubdate:"24.07.2026",
     added:"14.08.2026",
-    title:"Umfassendes Sichelzellenzentrum verbessert Zugang und reduziert Notfallversorgung",
-    sum:"Die Studie evaluierte die Implementierung eines multidisziplinären Sichelzellzentrums und dessen Auswirkungen auf ambulante Versorgung und Akutbehandlung bei erwachsenen Patienten mit Sichelzellerkrankung.",
-    result:"Die Patientenpopulation stieg von 2017-2018 zu 2022-2024 mehr als dreifach auf 810 Patienten. Jährliche ambulante Besuche pro Person stiegen von 2,65 auf 5,32 (p &lt; 0,001). Akutbesuche pro Person pro Jahr sanken signifikant von 2,11 auf 1,26, während Infusionstherapiebesuche um das 15-fache zunahmen."
-  },
-  {
-    journal:"Resuscitation Plus", year:"2026", pmid:"42598112",
-    author:"Chee DS et al.", pubdate:"22.07.2026",
-    added:"14.08.2026",
-    title:"Inzidenz, Ätiologien und Überlebensergebnisse pädiatrischer außerklinischer Herzstillstände in Singapur 2010-2021",
-    sum:"Die Studie beschrieb die Inzidenz, Ätiologie und Überlebensergebnisse von außerklinischen Herzstillständen (OHCA) bei Kindern und identifizierte Prädiktoren für Überleben mittels Multivariate-Analyse.",
-    result:"Bei 414 Patienten &lt;18 Jahren betrug die Inzidenz 4,62 pro 100.000 Personenjahre (höchster Wert bei Säuglingen &lt;1 Jahr: 33,5 pro 100.000). Die Laien-CPR-Rate lag bei 64,5%. Hauptursachen waren Atemwegserkrankung (21%), Ertrinken (20,2%) und Trauma (18,5%). Die 30-Tage-Überlebensrate betrug 11,1%, gutes neurologisches Outcome (CPC 1-2) 8%. Von 2019-2021 verbesserte sich die 30-Tage-Überlebensrate gegenüber 2010-2012 (aOR 4,34; 95% KI 1,09-17,22; p=0,037)."
+    title:"Implementation eines umfassenden Sichelzellzentrums mit verbessertem Zugang und reduzierter Akutversorgungsnutzung",
+    sum:"Retrospektive Evaluierung der Auswirkungen der Implementierung eines multidisziplinären Adult-SCD-Zentrums auf Patientenbindung, Infusionstherapie-Nutzung und Akutversorgung vor (2017-2018) und nach (2022-2024) Implementierung.",
+    result:"Klinikpopulation stieg von ~270 auf 810 Patienten. Fast 90% wurden 2024 jährlich ambulant gesehen. Infusionsbesuche stiegen 15-fach. Mittlere Akutversorgungsbesuche pro Person/Jahr sanken von 2,11 auf 1,26 (p&lt;0,001), ambulante Besuche stiegen von 2,65 auf 5,32 pro Person/Jahr (p&lt;0,001).",
+    transfer:"US-Routinedaten, Fragestellung aber systemunabhängig zur Struktur"
   },
 ];
 // === STUDIES-BLOCK-ENDE ===

@@ -1,5 +1,18 @@
 [
  {
+  "pmid": "42604020",
+  "journal": "Lancet Regional Health Europe",
+  "year": "2026",
+  "author": "Mediavilla R et al.",
+  "pubdate": "08.08.2026",
+  "added": "16.08.2026",
+  "transfer": "Europäische Daten, systemisch vergleichbar mit Deutschland",
+  "title": "Arbeitsbedingungen und psychische Gesundheit bei Ärztinnen und Ärzten sowie Pflegekräften in der EU: Querschnittsstudie",
+  "sum": "Die Studie untersuchte Zusammenhänge zwischen Arbeitsbedingungen und psychischer Gesundheit bei 90.171 Gesundheitsberuflern aus 28 EU-Staaten, Island und Norwegen im Zeitraum Oktober 2024 bis April 2025.",
+  "result": "30% zeigten depressive Symptome, 23% Angstsymptome, 13% suizidale Gedanken. Physische Gewalt betraf 10% der Ärzte und 18% der Pflegekräfte. Ungünstige Arbeitsbedingungen korreliertten mit schlechterer psychischer Gesundheit (adjustierte Prävalenzratios 0,98-1,94), während Jobressourcen positive Effekte zeigten (PR 1,06-0,56).",
+  "aufgenommen": "2026-08-16"
+ },
+ {
   "pmid": "42596879",
   "journal": "Circulation: Population Health Outcomes",
   "year": "2026",
@@ -9,6 +22,32 @@
   "title": "Tage zu Hause nach Herzinsuffizienzspitalisierung in Singapur: Trends und Equity 2011-2019",
   "sum": "Die Studie untersuchte zeitliche Trends in Days Alive and Out of Hospital (DAOH) nach erster Hospitalisierung wegen Herzinsuffizienz mit reduzierter Auswurffraktion und prüfte Unterschiede zwischen Altersgruppen, Geschlecht und Ethnizität.",
   "result": "Von 10.147 Patienten (Medianalter 68,9 Jahre; 31,5% weiblich) verbesserte sich die 1-Jahres-DAOH von 291,7 auf 301,0 Tage (1,16 Tage pro Jahr; p<0,001), während 30-Tage-DAOH stabil blieb (p=0,554). Die Rückgangsraten bei herzinsuffizienzbedingten Readmissionen waren bei Männern steiler als bei Frauen. 1-Jahres-DAOH-Gewinne waren bei Patienten malaiischer Abstammung größer als bei chinesischen Patienten.",
+  "aufgenommen": "2026-08-16"
+ },
+ {
+  "pmid": "42588642",
+  "journal": "Cancers",
+  "year": "2026",
+  "author": "von Fritsch L et al.",
+  "pubdate": "28.07.2026",
+  "added": "13.08.2026",
+  "transfer": "Deutsche Krebsregisterdaten, gesetzlich Versicherte",
+  "title": "Chirurgische Therapie bei Pankreaskarzinom im Alter ≥80 Jahren: Nutzen-Risiko-Analyse",
+  "sum": "Vergleichende Analyse von 3016 Pankreaskarzinom-Patienten (≤65 Jahre: n=944; 66-79 Jahre: n=1535; ≥80 Jahre: n=537) aus deutschen Krebsregistern 2015-2023 bezüglich Behandlungsmuster und Überleben.",
+  "result": "Anteil Patienten ≥80 Jahre stieg von 15% (2015) auf 32% (2023). 24% der operierten Oktogenare erhielten adjuvante Chemotherapie. Overall Survival und disease-free Survival waren schlechter als in jüngeren Kohorten. Oktogenare mit alleiniger Operation oder Chemotherapie hatten vergleichbare Überlebensraten wie palliativ behandelte Patienten.",
+  "aufgenommen": "2026-08-16"
+ },
+ {
+  "pmid": "42576220",
+  "journal": "BMC Health Services Research",
+  "year": "2026",
+  "author": "Bohnert K et al.",
+  "pubdate": "08.08.2026",
+  "added": "11.08.2026",
+  "transfer": "Deutsche Daten, gesetzlich versicherte Bevölkerung",
+  "title": "Erlebte integrierte Versorgung für Kinder mit Sonderbedarf in Deutschland: PART-CHILD-Kohortenstudie",
+  "sum": "Querschnittsanalyse von 459 Betreuungspersonen von Kindern mit Sonderbedarf zu ihrer Erfahrung mit integrierten Versorgungsangeboten und Zusammenhänge mit soziodemografischen, gesundheits- und netzwerkbezogenen Faktoren.",
+  "result": "Durchschnittliche Bewertung Teamqualität/Kommunikation 4,1±1,1 (Skala bis 9), Aufmerksamkeit für Familienbelastung 2,3±1,1. Höhere unmet needs assoziiert mit niedrigerer Teamqualität (≥5 unmet needs: β=-0,83; 95%-KI -1,28 bis -0,38). Größere Versorgungsnetzwerke (6-10 Anbieter) positiv mit Familienaufmerksamkeit (β=0,38; 95%-KI 0,07-0,70).",
   "aufgenommen": "2026-08-16"
  },
  {
