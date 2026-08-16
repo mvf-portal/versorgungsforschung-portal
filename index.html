@@ -121,7 +121,10 @@
   }
   h1 .sub{ display:block; color:var(--ink-soft); font-size:.46em; font-weight:400;
            letter-spacing:0; margin-top:.55em; max-width:52ch; }
-  .lede{ color:var(--ink-soft); max-width:64ch; font-size:17px; margin:.2em 0 0; }
+  /* 64ch waren deutlich schmaler als der Titel (631 zu 758 px) und wirkten
+     abgesetzt. 72ch reichen fast an die Titelbreite heran und bleiben unter
+     der Grenze, ab der Zeilen schwer zu verfolgen sind (etwa 75 Zeichen). */
+  .lede{ color:var(--ink-soft); max-width:72ch; font-size:17px; margin:.2em 0 0; }
 
   /* ---------- Search panel ---------- */
   .panel{
@@ -347,6 +350,33 @@
   /* Bewusst zurueckgenommen: die Aussage ist wahr, aber kein Verkaufsargument. */
   .boolmark.nein{ color:var(--ink-faint); border:1px solid var(--line); }
 
+  /* ---------- Menueleiste ---------- */
+  nav.hauptmenu{ background:var(--card); border-bottom:1px solid var(--line); }
+  .menu-inner{
+    display:flex; align-items:center; gap:2px;
+    overflow-x:auto; scrollbar-width:none;
+  }
+  .menu-inner::-webkit-scrollbar{ display:none; }
+  .menu-inner a{
+    flex:0 0 auto; padding:11px 13px; font-size:13px; font-weight:700;
+    color:var(--ink-soft); text-decoration:none; white-space:nowrap;
+    border-bottom:2px solid transparent; transition:color .14s, border-color .14s;
+  }
+  .menu-inner a:hover{ color:var(--brand); border-bottom-color:var(--brand); }
+  .menu-inner a.hier{ color:var(--brand); border-bottom-color:var(--brand); }
+  .menu-inner a:focus-visible{ outline:2px solid var(--brand); outline-offset:-2px; }
+  .menu-extern::after{ content:" 97"; font-size:.85em; }
+
+  /* Knopf zur Über-Seite, direkt unter dem Einleitungstext */
+  .lede-aktion{ margin:16px 0 0; }
+  .btn-ueber{
+    display:inline-flex; align-items:center; gap:8px; min-height:46px;
+    background:var(--action); color:var(--on-action); font-weight:700; font-size:14px;
+    text-decoration:none; padding:0 20px; border-radius:6px; transition:filter .14s;
+  }
+  .btn-ueber:hover{ filter:brightness(1.08); }
+  .btn-ueber:focus-visible{ outline:2px solid var(--brand); outline-offset:3px; }
+
   /* ---------- Rueckmeldung nach dem Absenden ---------- */
   /* Fruehere Fassung schrieb die Links still um - niemand sah, dass etwas
      geschah. Diese Leiste ist die sichtbare Antwort auf die Eingabetaste. */
@@ -563,6 +593,17 @@
   }
 </style>
 
+<nav class="hauptmenu">
+  <div class="wrap menu-inner">
+    <a href="./" class="hier" aria-current="page">Knowledge-Hub</a>
+    <a href="ueber.html" target="_blank" rel="noopener">Über den Hub</a>
+    <a href="https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&amp;utm_medium=referral&amp;utm_campaign=studien-newsletter#studien-newsletter" target="_blank" rel="noopener" class="menu-extern">Studien-Newsletter</a>
+    <a href="#impressum">Impressum</a>
+    <a href="#datenschutz">Datenschutz</a>
+    <a href="https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&amp;utm_medium=referral&amp;utm_campaign=menu" target="_blank" rel="noopener" class="menu-extern">Monitor Versorgungsforschung</a>
+  </div>
+</nav>
+
 <header class="masthead">
   <div class="wrap masthead-inner">
     <div class="masthead-top">
@@ -576,6 +617,7 @@
       </a>
     </div>
     <p class="lede">Ein Suchbegriff, alle Datenbanken. Geben Sie bitte unten einen Begriff ein — jede Datenbankkarte öffnet damit direkt die passende Live-Suche in einem neuen Tab. Deutschsprachige und internationale Fachdatenbanken, Evidenzsynthesen, Open-Access-Discovery, Studienregister, Institutionen und Wege zum Volltext an einem Ort. Jeden Tag werden die Suchergebnisse automatisch aktualisiert. Kuratiert von einer KI für die tägliche Recherchearbeit. Ein Service von Monitor Versorgungsforschung.</p>
+    <p class="lede-aktion"><a class="btn-ueber" href="ueber.html" target="_blank" rel="noopener">Über den Knowledge-Hub <span aria-hidden="true">↗</span></a></p>
 
     <div class="panel">
       <label class="panel-label" for="q">Suchbegriff</label>
@@ -664,7 +706,7 @@
     <div class="studies-head">
       <div class="studies-title"><span class="dot"></span>Neu in PubMed</div>
       <div class="studies-status" id="studiesStatus" hidden></div>
-      <div class="studies-hint">Bei den Suchergebnissen handelt es sich um eine Momentaufnahme, um keinen Live-Feed. Die Liste wird jeden Morgen um 6 Uhr automatisch aus PubMed geholt, auf Deutsch zusammengefasst und neu veröffentlicht.</div>
+      <div class="studies-hint">Bei den Suchergebnissen handelt es sich um eine Momentaufnahme, um keinen Live-Feed. Die Liste wird jeden Morgen um 6 Uhr automatisch aus PubMed geholt, auf Deutsch zusammengefasst und neu veröffentlicht. Bringt PubMed an einem Tag nichts Neues — an Wochenenden häufig —, bleiben die zuletzt gefundenen Studien aktuell, bis neue hinzukommen.</div>
       <div class="studies-sub">Datenbank: <b>PubMed</b>, nach Datum sortiert · jede Studie mit deutscher Zusammenfassung · Zuletzt aktualisiert: <b id="snapDate">Momentaufnahme</b></div>
       <div class="dl-row">
         <span class="dl-label">Download:</span>
@@ -702,7 +744,7 @@
     <div class="attrib">Ein Angebot von „Monitor Versorgungsforschung" · eRelation AG – Content in Health</div>
 
     <div class="legal">
-      <details>
+      <details id="impressum">
         <summary>Impressum</summary>
         <div class="legal-body">
           <h4>Angaben gemäß § 5 DDG und § 18 Abs. 2 MStV</h4>
@@ -715,7 +757,7 @@
           <p>Dieser Knowledge-Hub ist ein Angebot von „Monitor Versorgungsforschung".</p>
         </div>
       </details>
-      <details>
+      <details id="datenschutz">
         <summary>Datenschutzhinweise</summary>
         <div class="legal-body">
           <h4>1. Verantwortlicher</h4>
@@ -1203,6 +1245,21 @@ document.getElementById('dlArchivCsv').addEventListener('click', ()=>{
 const GLOSSAR = [{"de":"Primärversorgung","en":"primary care"},{"de":"Grundversorgung","en":"primary care"},{"de":"hausarztzentrierte Versorgung","en":"general practice centred care"},{"de":"integrierte Versorgung","en":"integrated care"},{"de":"sektorenübergreifende Versorgung","en":"cross-sectoral care"},{"de":"ambulante Versorgung","en":"ambulatory care"},{"de":"stationäre Versorgung","en":"inpatient care"},{"de":"Notfallversorgung","en":"emergency care"},{"de":"Akutversorgung","en":"acute care"},{"de":"Palliativversorgung","en":"palliative care"},{"de":"Hospizversorgung","en":"hospice care"},{"de":"Rehabilitation","en":"rehabilitation"},{"de":"Nachsorge","en":"aftercare"},{"de":"Langzeitpflege","en":"long-term care"},{"de":"häusliche Pflege","en":"home care"},{"de":"Regelversorgung","en":"usual care"},{"de":"Versorgungskette","en":"care pathway"},{"de":"Behandlungspfad","en":"clinical pathway"},{"de":"Überleitung","en":"transitional care"},{"de":"Entlassmanagement","en":"discharge management"},{"de":"Patientenlotse","en":"patient navigator"},{"de":"Fallmanagement","en":"case management"},{"de":"Versorgungsmanagement","en":"care management"},{"de":"Hausarzt","en":"general practitioner"},{"de":"Allgemeinmedizin","en":"general practice"},{"de":"Facharzt","en":"medical specialist"},{"de":"Arztpraxis","en":"medical practice"},{"de":"Medizinisches Versorgungszentrum","en":"outpatient care centre"},{"de":"Krankenhaus","en":"hospital"},{"de":"Universitätsklinikum","en":"university hospital"},{"de":"Pflegeheim","en":"nursing home"},{"de":"Pflegekraft","en":"nurse"},{"de":"Pflegepersonal","en":"nursing staff"},{"de":"Apotheke","en":"pharmacy"},{"de":"Hebamme","en":"midwife"},{"de":"Physiotherapie","en":"physiotherapy"},{"de":"Rettungsdienst","en":"emergency medical services"},{"de":"Krankenkasse","en":"health insurance fund"},{"de":"gesetzliche Krankenversicherung","en":"statutory health insurance"},{"de":"private Krankenversicherung","en":"private health insurance"},{"de":"Angehörige","en":"family caregivers"},{"de":"Selbsthilfegruppe","en":"self-help group"},{"de":"Gesundheitssystem","en":"health system"},{"de":"Gesundheitspolitik","en":"health policy"},{"de":"Gesundheitsökonomie","en":"health economics"},{"de":"Nutzenbewertung","en":"health technology assessment"},{"de":"frühe Nutzenbewertung","en":"early benefit assessment"},{"de":"Erstattung","en":"reimbursement"},{"de":"Vergütung","en":"provider payment"},{"de":"Fallpauschale","en":"diagnosis related group"},{"de":"Zuzahlung","en":"co-payment"},{"de":"Selektivvertrag","en":"selective contracting"},{"de":"Disease-Management-Programm","en":"disease management program"},{"de":"Innovationsfonds","en":"health care innovation fund"},{"de":"Bedarfsplanung","en":"health workforce planning"},{"de":"Mindestmenge","en":"minimum volume standard"},{"de":"Qualitätssicherung","en":"quality assurance"},{"de":"Zertifizierung","en":"accreditation"},{"de":"Leitlinie","en":"clinical practice guideline"},{"de":"Priorisierung","en":"priority setting"},{"de":"Rationierung","en":"rationing"},{"de":"Fachkräftemangel","en":"health workforce shortage"},{"de":"Versorgungsqualität","en":"quality of care"},{"de":"Patientensicherheit","en":"patient safety"},{"de":"Behandlungsfehler","en":"medical error"},{"de":"unerwünschtes Ereignis","en":"adverse event"},{"de":"Überversorgung","en":"overuse of health care"},{"de":"Unterversorgung","en":"underuse of health care"},{"de":"Fehlversorgung","en":"inappropriate care"},{"de":"Lebensqualität","en":"quality of life"},{"de":"Patientenzufriedenheit","en":"patient satisfaction"},{"de":"Krankenhausverweildauer","en":"length of stay"},{"de":"Wiederaufnahme","en":"hospital readmission"},{"de":"Sterblichkeit","en":"mortality"},{"de":"Krankheitslast","en":"burden of disease"},{"de":"Inanspruchnahme","en":"health care utilization"},{"de":"Wartezeit","en":"waiting time"},{"de":"Erreichbarkeit","en":"access to care"},{"de":"Leitlinientreue","en":"guideline adherence"},{"de":"Therapietreue","en":"medication adherence"},{"de":"Arzneimitteltherapiesicherheit","en":"medication safety"},{"de":"Polypharmazie","en":"polypharmacy"},{"de":"Krankenhauskeim","en":"healthcare-associated infection"},{"de":"Kosteneffektivität","en":"cost-effectiveness"},{"de":"Kosten-Nutzen-Analyse","en":"cost-benefit analysis"},{"de":"Gesundheitsausgaben","en":"health expenditure"},{"de":"Versorgungsforschung","en":"health services research"},{"de":"Gesundheitsforschung","en":"health research"},{"de":"Routinedaten","en":"claims data"},{"de":"Abrechnungsdaten","en":"administrative claims data"},{"de":"Sekundärdaten","en":"secondary data analysis"},{"de":"Registerstudie","en":"registry study"},{"de":"Kohortenstudie","en":"cohort study"},{"de":"Fall-Kontroll-Studie","en":"case-control study"},{"de":"Querschnittstudie","en":"cross-sectional study"},{"de":"Längsschnittstudie","en":"longitudinal study"},{"de":"Beobachtungsstudie","en":"observational study"},{"de":"randomisierte kontrollierte Studie","en":"randomized controlled trial"},{"de":"cluster-randomisierte Studie","en":"cluster randomized trial"},{"de":"Interventionsstudie","en":"intervention study"},{"de":"Machbarkeitsstudie","en":"feasibility study"},{"de":"Pilotstudie","en":"pilot study"},{"de":"Prozessevaluation","en":"process evaluation"},{"de":"systematische Übersichtsarbeit","en":"systematic review"},{"de":"Metaanalyse","en":"meta-analysis"},{"de":"Scoping Review","en":"scoping review"},{"de":"qualitative Studie","en":"qualitative study"},{"de":"Befragung","en":"survey"},{"de":"Fokusgruppe","en":"focus group"},{"de":"Delphi-Studie","en":"Delphi study"},{"de":"Mixed-Methods","en":"mixed methods"},{"de":"Implementierungsforschung","en":"implementation research"},{"de":"Wirksamkeit unter Alltagsbedingungen","en":"effectiveness"},{"de":"Evidenzbasierte Medizin","en":"evidence-based medicine"},{"de":"Telemedizin","en":"telemedicine"},{"de":"Videosprechstunde","en":"video consultation"},{"de":"elektronische Patientenakte","en":"electronic health record"},{"de":"digitale Gesundheitsanwendung","en":"digital health application"},{"de":"Gesundheits-App","en":"mobile health application"},{"de":"künstliche Intelligenz","en":"artificial intelligence"},{"de":"maschinelles Lernen","en":"machine learning"},{"de":"Telemonitoring","en":"remote patient monitoring"},{"de":"elektronisches Rezept","en":"electronic prescribing"},{"de":"Entscheidungsunterstützung","en":"clinical decision support"},{"de":"Interoperabilität","en":"interoperability"},{"de":"Datenschutz","en":"data protection"},{"de":"Prävention","en":"prevention"},{"de":"Gesundheitsförderung","en":"health promotion"},{"de":"Früherkennung","en":"screening"},{"de":"Impfung","en":"vaccination"},{"de":"Gesundheitskompetenz","en":"health literacy"},{"de":"soziale Ungleichheit","en":"health inequalities"},{"de":"sozioökonomischer Status","en":"socioeconomic status"},{"de":"ländlicher Raum","en":"rural health"},{"de":"Migration","en":"migrant health"},{"de":"Kindergesundheit","en":"child health"},{"de":"Frauengesundheit","en":"women's health"},{"de":"Alter","en":"aged"},{"de":"Pflegebedürftigkeit","en":"need for long-term care"},{"de":"Multimorbidität","en":"multimorbidity"},{"de":"chronische Erkrankung","en":"chronic disease"},{"de":"seltene Erkrankung","en":"rare disease"},{"de":"Gemeinsame Entscheidungsfindung","en":"shared decision making"},{"de":"Patientenbeteiligung","en":"patient participation"},{"de":"Patientenberichtete Ergebnisse","en":"patient reported outcome measures"},{"de":"Gendermedizin","en":"gender medicine"},{"de":"Herzinsuffizienz","en":"heart failure"},{"de":"Herzinfarkt","en":"myocardial infarction"},{"de":"Bluthochdruck","en":"hypertension"},{"de":"Schlaganfall","en":"stroke"},{"de":"Diabetes","en":"diabetes mellitus"},{"de":"Adipositas","en":"obesity"},{"de":"Krebs","en":"cancer"},{"de":"Brustkrebs","en":"breast cancer"},{"de":"Darmkrebs","en":"colorectal cancer"},{"de":"Demenz","en":"dementia"},{"de":"Depression","en":"depression"},{"de":"psychische Erkrankung","en":"mental disorder"},{"de":"Sucht","en":"substance use disorder"},{"de":"Rückenschmerz","en":"back pain"},{"de":"Schmerz","en":"pain"},{"de":"Asthma","en":"asthma"},{"de":"Nierenerkrankung","en":"kidney disease"},{"de":"Sepsis","en":"sepsis"},{"de":"Sturz","en":"accidental falls"},{"de":"Dekubitus","en":"pressure ulcer"},{"de":"Endometriose","en":"endometriosis"}];
 
 document.getElementById('cntGlossar').textContent = GLOSSAR.length;
+
+// Sprungziele Impressum/Datenschutz: Die Texte stecken in <details>. Wird eines
+// direkt angesprungen, muss es aufklappen - sonst landet man auf einer
+// geschlossenen Ueberschrift und haelt den Link fuer kaputt.
+function oeffneZiel(){
+  const id = location.hash.replace('#','');
+  if(!id) return;
+  const el = document.getElementById(id);
+  if(el && el.tagName === 'DETAILS'){
+    el.open = true;
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
+window.addEventListener('hashchange', oeffneZiel);
+oeffneZiel();
 
 // ---- Suche ---------------------------------------------------------------
 // Grundsatz: Es passiert nichts, bevor der Nutzer absendet. Frueher schrieb
