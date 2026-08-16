@@ -47,7 +47,9 @@ TZ = ZoneInfo("Europe/Berlin")
 LIST_ID = "1c8fc10ec7"          # Zielgruppe "eRelation GESAMT"
 TAG_ID = 3433296                # Tag "Studien-Newsletter Pubmed" (Tags sind statische Segmente)
 FROM_NAME = "Monitor Versorgungsforschung"
-REPLY_TO = "cms@m-vf.de"        # wie in der Zielgruppe hinterlegt
+REPLY_TO = "redaktion@m-vf.de"   # Antworten sollen in der Redaktion landen,
+                                # nicht beim Redaktionssystem. Die Adresse muss in
+                                # Mailchimp als Absender freigegeben sein.
 FREIGABE_MAIL = "stegmaier@m-vf.de"
 
 MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni",
@@ -101,9 +103,20 @@ def newsletter_html(studien: list[dict], datum: str, hinweis: str = "") -> str:
 <tr><td align="center" style="padding:24px 12px;">
   <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background:#ffffff;">
     {hinweis}
+    <!-- Logo auf weissem Grund: Die Wortmarke ist blau-gold, auf dem blauen
+         Kopf ginge der blaue Anteil unter. Viele Programme laden Bilder erst
+         auf Klick - deshalb traegt sie einen Alternativtext, und die
+         Absenderzeile darunter wiederholt den Namen in Schrift. -->
+    <tr><td style="background:#ffffff;padding:18px 28px 14px;">
+      <a href="https://wissen.m-vf.de/?{p}&amp;utm_content=logo" style="text-decoration:none;">
+        <img src="https://wissen.m-vf.de/logo/mvf-logo.png" width="170" height="45"
+             alt="Monitor Versorgungsforschung"
+             style="display:block;border:0;width:170px;height:auto;"></a>
+    </td></tr>
+
     <tr><td style="background:{BLAU};padding:22px 28px;">
-      <p style="margin:0;font:bold 12px/1.4 Arial,sans-serif;letter-spacing:2px;color:#C9DCF2;">
-        MONITOR VERSORGUNGSFORSCHUNG</p>
+      <p style="margin:0;font:bold 12px/1.5 Arial,sans-serif;letter-spacing:1.5px;color:#C9DCF2;">
+        VOM KNOWLEDGE-HUB VON MONITOR VERSORGUNGSFORSCHUNG</p>
       <p style="margin:4px 0 0;font:bold 24px/1.3 Georgia,serif;color:#ffffff;">
         Neueste Studien der Versorgungsforschung</p>
       <p style="margin:6px 0 0;font:13px/1.5 Georgia,serif;color:#D8E5F5;">
