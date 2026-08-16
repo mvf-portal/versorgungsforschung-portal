@@ -91,6 +91,56 @@ Einrichtung und Kampagnenvorlage: `NEWSLETTER-MAILCHIMP.md` und `newsletter/mail
 
 `scripts/update-studies.ps1` und `scripts/Studien-aktualisieren.cmd` sind eine ältere lokale PowerShell-Variante und werden von der Automatik nicht verwendet.
 
+## Newsletter-Anmeldung (`newsletter.html`)
+
+Zwei Newsletter, eine Seite: Studien-Newsletter (taeglich, aus dem Hub) und MVF-Newsletter
+(redaktionell). Gesendet wird **direkt an Mailchimp**, nicht an WordPress — das WPForms-Formular
+auf m-vf.de minted sein Token je Seitenaufruf und liegt auf fremder Domain.
+
+### Die drei Fallen, die uns je einen Anlauf gekostet haben
+
+| Falle | Symptom | Loesung |
+|---|---|---|
+| Host ohne Kontovorsilbe | `us6.list-manage.com` → 404 | `monitor-versorgungsforschung.us6.list-manage.com` |
+| `/subscribe/post-json` | 404 mit GET wie POST — JSONP ist abgeschaltet | gewoehnliches Formular-POST |
+| Fehlendes `f_id` | Mailchimp nimmt an, **verwirft still** und leitet trotzdem auf die Dankeseite | Kennungen in die Adresszeile plus `f_id` |
+
+**Die dritte ist die gemeinste:** Ohne `f_id` verlangt Mailchimp das Token `ht`, das nur die
+gehostete Seite erzeugt. Fehlt beides, sieht alles nach Erfolg aus — Weiterleitung inklusive —,
+und in der Zielgruppe kommt nichts an. **Eine Weiterleitung ist kein Beweis. Beweis ist der
+Kontakt in Mailchimp.**
+
+### Kennzeichen
+
+```
+tags=3433296            Studien-Newsletter Pubmed
+group[5629][4]=1        Monitor Versorgungsforschung Newsletter
+group[5629][64]=1       Datenschutzerklaerung gelesen
+```
+
+Der MVF-Newsletter bleibt bei der **Gruppe**, weil seine Abonnenten sie seit jeher tragen und das
+Formular auf m-vf.de sie weiter setzt; ein zusaetzlicher Tag waere nur bei Neuzugaengen vom Hub
+gesetzt. Der Studien-Newsletter ist neu und kommt nur von hier — dort ist der **Tag** von Anfang
+an vollstaendig. In derselben Gruppenmenge stehen noch Pharma Relations, MarketAccess&HealthPolicy
+und Monitor Pflege: **Altlasten, die es im Verlag nicht mehr gibt.** Nicht anbieten.
+
+### Warum ein unsichtbarer Rahmen
+
+Mailchimp leitet nach der Anmeldung auf die zielgruppenweite Dankeseite — bei MVF auf m-vf.de.
+Der Besucher landete also auf einer fremden Seite. Deshalb geht das Formular in ein verstecktes
+`<iframe>`; die Bestaetigung steht im MVF-Design auf der Seite. Was im Rahmen passiert, ist nicht
+lesbar (fremde Domain), **darum ist die Bestaetigung so formuliert, dass sie auch dann stimmt,
+wenn die Adresse schon eingetragen war.** Keine Erfolgsmeldung fuer etwas, das nicht stattfand.
+
+### Was ausserhalb des Codes liegt
+
+- Double-Opt-in ist aktiv; die Bestaetigungsmail landete bei Gmail zunaechst **im Spam** (englischer
+  Betreff, Domain nicht authentifiziert). Beides in Mailchimp zu pflegen, nicht hier.
+- Die RSS-Kampagne muss auf den Tag *Studien-Newsletter Pubmed* gefiltert sein — sonst bekaemen
+  alle 5.905 Abonnenten taeglich die Studienauswahl.
+- Die Datenschutzhinweise in `index.html` (Abschnitte 3 und 4) beschreiben genau dieses Verfahren.
+  **Wer den Anmeldeweg aendert, muss sie mitaendern.**
+
 ## Gestaltung: das Erscheinungsbild von m-vf.de
 
 Der Hub übernimmt seit August 2026 Schrift und Farben von **monitor-versorgungsforschung.de** (die Kurzadresse `m-vf.de` leitet dorthin um).
