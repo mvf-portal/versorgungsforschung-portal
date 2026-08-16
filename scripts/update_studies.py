@@ -2,9 +2,11 @@
 """Aktualisiert den Studien-Block in index.html mit den neuesten PubMed-Treffern.
 
 Ablauf:
-  1. PubMed E-utilities: neueste Treffer zu "health services research" (nach Datum).
-  2. Claude-API: 5-7 relevante Studien mit konkreten Ergebnissen auswaehlen und
-     auf Deutsch zusammenfassen (strukturierte JSON-Ausgabe).
+  1. PubMed E-utilities: zwei Abfragen - die neuesten Treffer allgemein und
+     zusaetzlich die mit Deutschlandbezug (MeSH/Affiliation), zusammengefuehrt.
+  2. Claude-API: 5-7 Studien auswaehlen, die konkrete Ergebnisse nennen UND auf
+     das deutsche Versorgungssystem uebertragbar sind, und auf Deutsch
+     zusammenfassen (strukturierte JSON-Ausgabe).
   3. Nur den Marker-Block (SNAP_DATE + STUDIES) in index.html ersetzen.
 
 Bricht mit Exit-Code != 0 ab, wenn etwas fehlschlaegt - dann bleibt index.html
@@ -26,6 +28,13 @@ import requests
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 TERM = os.environ.get("SEARCH_TERM", '"health services research"')
+# Zweite Abfrage, damit Arbeiten mit Deutschlandbezug den Kandidatenpool
+# sicher erreichen. Ueber MeSH und Autorenadresse, nicht ueber Journalnamen -
+# deutschsprachige Journale liefern kaum Treffer.
+TERM_DE = os.environ.get(
+    "SEARCH_TERM_DE",
+    f"{TERM} AND (Germany[MeSH Terms] OR Germany[Affiliation])",
+)
 MODEL = os.environ.get("MODEL", "claude-haiku-4-5")  # Standard: guenstig; via MODEL-env aenderbar
 INDEX = "index.html"
 
@@ -51,7 +60,7 @@ SCHEMA = {
             "items": {
                 "type": "object",
                 "additionalProperties": False,
-                "required": ["journal", "year", "pmid", "title", "sum", "result"],
+                "required": ["journal", "year", "pmid", "title", "sum", "result", "transfer"],
                 "properties": {
                     "journal": {"type": "string"},
                     "year": {"type": "string"},
@@ -59,6 +68,9 @@ SCHEMA = {
                     "title": {"type": "string"},
                     "sum": {"type": "string"},
                     "result": {"type": "string"},
+                    # Kurze Begruendung, warum das Ergebnis auf das deutsche
+                    # Versorgungssystem uebertragbar ist - oder warum nur bedingt.
+                    "transfer": {"type": "string"},
                 },
             },
         }
@@ -76,7 +88,31 @@ USER_TEMPLATE = """Unten stehen aktuelle PubMed-Abstracts (nach Datum sortiert).
 Waehle GENAU 6 Studien aus, die (a) fuer Versorgungsforschung / Health Services Research
 relevant sind UND (b) im Abstract KONKRETE quantitative Ergebnisse nennen
 (Prozentwerte, Odds/Hazard Ratios, p-Werte, Fallzahlen). Ueberspringe Studien ohne
-Abstract oder ohne konkrete Ergebnisse. Achte auf thematische Vielfalt; die neuesten zuerst.
+Abstract oder ohne konkrete Ergebnisse. Achte auf thematische Vielfalt.
+
+WICHTIGSTES AUSWAHLKRITERIUM - Übertragbarkeit auf Deutschland:
+Die Leserschaft arbeitet im deutschen Versorgungssystem. Bei sonst gleicher
+Qualität hat die übertragbare Studie IMMER Vorrang vor der aktuelleren.
+
+Übertragbarkeit richtet sich nach dem SYSTEMKONTEXT, nicht nach der Herkunft
+der Autoren. Eine niederländische Arbeit zur Primärversorgung ist oft
+übertragbarer als eine deutsche Methodenarbeit.
+
+  Hoch:    Deutschland, Österreich, Schweiz - gleiche Grundstruktur.
+           Niederlande, Belgien, Frankreich - Sozialversicherungssysteme mit
+           Beitragsfinanzierung, Kassen und niedergelassenem Sektor.
+  Mittel:  Skandinavien, Großbritannien, Kanada, Australien - steuerfinanziert
+           und stark hausarztgesteuert; bei Fragen zu Prozessen, Qualität und
+           Patientenperspektive gut übertragbar, bei Vergütung und
+           Zugangssteuerung nur eingeschränkt.
+  Gering:  USA - fragmentierte Versicherung, Medicaid/Medicare, andere
+           Anreizstrukturen. Nur nehmen, wenn die Fragestellung systemunabhängig
+           ist (z. B. klinische Prozesse, Patientensicherheit, Messinstrumente).
+           Ebenso Studien aus Systemen mit grundlegend anderer Ressourcenlage.
+
+Nimm höhere Übertragbarkeit auch dann, wenn die Studie ein paar Tage älter ist.
+Eine reine US-Vergütungsstudie gehört nur in die Auswahl, wenn sonst nichts
+Brauchbares vorliegt.
 
 Fuer jede Studie:
 - journal: Journalname (Originalsprache)
@@ -86,6 +122,14 @@ Fuer jede Studie:
 - sum: 1 Satz auf Deutsch, was die Studie untersucht hat
 - result: Deutsch, die konkreten Zahlen/Befunde + ein kurzer Einordnungssatz.
   Deutsches Zahlenformat mit Komma (z. B. 0,63).
+- transfer: EIN Halbsatz (höchstens 12 Wörter), warum das Ergebnis für das
+  deutsche Versorgungssystem taugt - oder wo die Grenze liegt. Nenne das Land
+  bzw. die Datengrundlage. Keine ganzen Sätze, keine Wiederholung des Titels.
+  Gut:      "Deutsche Routinedaten, gesetzlich Versicherte"
+            "Niederlande, vergleichbares Sozialversicherungssystem"
+            "US-Daten - Fragestellung aber systemunabhängig"
+            "Nur bedingt: steuerfinanziertes System, andere Zugangssteuerung"
+  Schlecht: "Diese Studie ist gut übertragbar." (sagt nichts)
 
 WICHTIG - Fachterminologie: Etablierte englische Fachbegriffe NICHT eindeutschen.
 Sie sind auch im deutschen Fachdeutsch stehende Begriffe; eine woertliche Uebersetzung
@@ -126,16 +170,36 @@ def _get(path: str, params: dict, timeout: int) -> requests.Response:
     raise RuntimeError(f"PubMed nicht erreichbar: {last}")
 
 
-def fetch_pubmed() -> str:
+def _suche(term: str, anzahl: int) -> list[str]:
     r = _get(
         "esearch.fcgi",
-        {"db": "pubmed", "term": TERM, "sort": "date", "retmax": "25", "retmode": "json"},
+        {"db": "pubmed", "term": term, "sort": "date",
+         "retmax": str(anzahl), "retmode": "json"},
         timeout=30,
     )
-    ids = r.json().get("esearchresult", {}).get("idlist", [])
+    return r.json().get("esearchresult", {}).get("idlist", [])
+
+
+def fetch_pubmed() -> str:
+    """Zwei Abfragen statt einer, zusammengefuehrt und entdoppelt.
+
+    Die allgemeine Abfrage allein reicht nicht: Nur etwa 17 % der Neuaufnahmen
+    haben ueberhaupt Deutschlandbezug (gemessen: 35 von 209 im August). In
+    dichten Wochen - zuletzt 92 Neuaufnahmen in sieben Tagen - fielen deutsche
+    Arbeiten aus dem Fenster, bevor das Modell sie zu sehen bekam.
+
+    Die zweite Abfrage stellt sicher, dass sie es immer tun. Ueber Journalnamen
+    zu suchen bringt uebrigens nichts: im ganzen August genau ein Treffer.
+    """
+    allgemein = _suche(TERM, 40)
+    deutsch = _suche(TERM_DE, 15)
+    # Reihenfolge: erst die allgemein neuesten, dann alles mit Deutschlandbezug,
+    # das noch nicht dabei ist. Der Abstract-Block bleibt so nach Datum sortiert.
+    ids = allgemein + [p for p in deutsch if p not in allgemein]
     if not ids:
         raise RuntimeError("esearch lieferte keine PMIDs")
-    print(f"{len(ids)} PMIDs gefunden.")
+    print(f"{len(allgemein)} allgemein + {len(ids) - len(allgemein)} zusaetzlich "
+          f"mit Deutschlandbezug = {len(ids)} Kandidaten.")
     r2 = _get(
         "efetch.fcgi",
         {"db": "pubmed", "id": ",".join(ids), "rettype": "abstract", "retmode": "text"},
@@ -265,7 +329,8 @@ def build_block(studies: list[dict], status: str = "neu") -> str:
             f"    added:{js(s.get('added', ''))},\n"
             f"    title:{js(s['title'])},\n"
             f"    sum:{js(s['sum'])},\n"
-            f"    result:{js(s['result'])}\n"
+            f"    result:{js(s['result'])},\n"
+            f"    transfer:{js(s.get('transfer', ''))}\n"
             "  }"
         )
     # SNAP_DATE wird per textContent gesetzt, nicht per innerHTML -> kein HTML-Escaping.
@@ -305,6 +370,7 @@ def update_archive(studies: list[dict]) -> int:
             "pmid": s["pmid"], "journal": s["journal"], "year": s["year"],
             "author": s.get("author", ""), "pubdate": s.get("pubdate", ""),
             "added": s.get("added", ""),
+            "transfer": s.get("transfer", ""),
             "title": s["title"], "sum": s["sum"], "result": s["result"],
             "aufgenommen": heute,
         })

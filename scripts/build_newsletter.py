@@ -97,8 +97,10 @@ def item_html(e: dict) -> str:
         f'<tr><td style="background:#f4f6f4;border-left:3px solid #5a7d3a;padding:10px 14px;'
         f'font:15px Georgia,serif;color:#222;">'
         f'<strong>Ergebnis:</strong> {escape(e["result"])}</td></tr></table>'
-        f'<p style="margin:10px 0 0;font:13px Georgia,serif;">'
-        f'<a href="{escape(pubmed)}" style="color:#5a7d3a;">Studie in PubMed ansehen &rarr;</a></p>'
+        + (f'<p style="margin:8px 0 0;font:13px Georgia,serif;color:#666;">'
+           f'<strong>Übertragbarkeit:</strong> {escape(e["transfer"])}</p>' if e.get("transfer") else '')
+        + f'<p style="margin:10px 0 0;font:13px Georgia,serif;">'
+        + f'<a href="{escape(pubmed)}" style="color:#5a7d3a;">Studie in PubMed ansehen &rarr;</a></p>'
     )
 
 
@@ -148,13 +150,14 @@ KOPFTEXT = ("Ein Service der Knowledge-Datenbank von Monitor Versorgungsforschun
 LOGO = "logo/mvf-logo.png"
 
 SPALTEN = ["Aufgenommen", "Autor", "Publiziert am", "In PubMed seit", "Journal", "Jahr", "Titel",
-           "Fragestellung", "Ergebnis", "PMID", "PubMed-Link"]
+           "Fragestellung", "Ergebnis", "Übertragbarkeit", "PMID", "PubMed-Link"]
 
 
 def zeile(e: dict) -> list[str]:
     return [e["aufgenommen"], e.get("author", ""), e.get("pubdate", ""), e.get("added", ""),
             e["journal"], e["year"], e["title"], e["sum"],
-            e["result"], e["pmid"], f"https://pubmed.ncbi.nlm.nih.gov/{e['pmid']}/"]
+            e["result"], e.get("transfer", ""), e["pmid"],
+            f"https://pubmed.ncbi.nlm.nih.gov/{e['pmid']}/"]
 
 
 def write_csv(pfad: str, entries: list[dict]) -> None:
@@ -243,6 +246,12 @@ def write_docx(pfad: str, entries: list[dict], titel: str, stand: str,
         pe = doc.add_paragraph()
         pe.add_run("Ergebnis: ").bold = True
         pe.add_run(e["result"])
+
+        if e.get("transfer"):
+            pt = doc.add_paragraph()
+            rt = pt.add_run("Übertragbarkeit: ")
+            rt.bold = True; rt.font.size = Pt(9.5)
+            rt2 = pt.add_run(e["transfer"]); rt2.font.size = Pt(9.5)
 
         pl = doc.add_paragraph()
         rl = pl.add_run(f'https://pubmed.ncbi.nlm.nih.gov/{e["pmid"]}/')

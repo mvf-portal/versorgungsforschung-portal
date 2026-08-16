@@ -179,6 +179,26 @@ Die Werte stammen aus einer Messreihe: dieselbe Suche mit `OR` und mit `AND`, ve
 
 Zweispaltig ueber **CSS-Textspalten** (`columns:2`), nicht ueber ein Raster. Ein Raster richtet Zeilen an der hoechsten Karte aus und streckte den kurzen Absatz, was knapp 50 px Loch hinterliess. Textspalten packen dicht. Unter 760 px einspaltig.
 
+## Studienauswahl: kein Algorithmus, ein Prompt
+
+Es gibt **keine Gewichtung und kein Ranking**. PubMed liefert Kandidaten, ein Sprachmodell waehlt daraus nach schriftlichen Kriterien aus. Wer die Auswahl aendern will, aendert `USER_TEMPLATE` in `update_studies.py` — nicht Code.
+
+### Zwei Abfragen statt einer
+
+`fetch_pubmed()` fragt zweimal: `TERM` (40 neueste) und `TERM_DE` (15 neueste mit `Germany[MeSH Terms] OR Germany[Affiliation]`), zusammengefuehrt und ueber die PMID entdoppelt.
+
+**Warum:** Nur etwa 17 % der Neuaufnahmen haben Deutschlandbezug (gemessen 08/2026: 35 von 209). In dichten Wochen — 92 Neuaufnahmen in sieben Tagen — fielen deutsche Arbeiten aus dem 25er-Fenster, bevor das Modell sie sah. Mit der zweiten Abfrage steigt ihr Anteil im Pool von 22 auf 33 %.
+
+**Ueber Journalnamen zu suchen bringt nichts** — deutschsprachige Fachjournale liefern in PubMed kaum Treffer (August 2026: genau einer). Nicht erneut versuchen.
+
+### Uebertragbarkeit ist das oberste Kriterium
+
+Der Prompt ordnet Systeme nach Vergleichbarkeit: hoch (DACH, Niederlande, Belgien, Frankreich — Sozialversicherung), mittel (Skandinavien, UK, Kanada, Australien — steuerfinanziert), gering (USA). **Massgeblich ist der Systemkontext, nicht die Autorenadresse.**
+
+Jede Studie traegt das Feld `transfer`: ein Halbsatz, worauf die Uebertragbarkeit beruht. Es steht auf der Karte, im Archiv, in beiden Downloads und im Feed. Ohne dieses Feld waere das Kriterium unpruefbar — man muesste glauben, dass es wirkt.
+
+Altbestand hat `transfer` nicht; die Anzeige laesst die Zeile dann weg.
+
 ## Suchglossar: deutsch suchen, international finden
 
 `GLOSSAR` steht als Konstante **in** `index.html` (167 Begriffe, rund 9 KB) — nicht nachgeladen, weil es bei jeder Suche gebraucht wird. Die Pflegefassung mit Sachgebieten liegt als `_glossar.json` auf `entwurf/suche`.
