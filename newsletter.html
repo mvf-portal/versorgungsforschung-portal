@@ -313,8 +313,15 @@ const MC = {
   // Tags, kommagetrennt. Die Nummer steht in der Adresszeile, wenn man den
   // Tag in Mailchimp anklickt (dort als "static_segment").
   tagStudien:        "3433296",          // Studien-Newsletter Pubmed
-  tagMvf:            "",                 // OFFEN: Nummer des MVF-Tags
-  // Solange der MVF-Tag fehlt, wird ersatzweise die alte Gruppe gesetzt.
+  // Der MVF-Newsletter bleibt bewusst bei der Gruppe - das ist kein
+  // Provisorium. Seine Abonnenten tragen sie seit jeher, und das Formular auf
+  // m-vf.de traegt sie weiter ein. Ein zusaetzlicher Tag waere nur fuer die
+  // Neuzugaenge vom Hub gesetzt: zwei Kennzeichen fuer dieselbe Sache, und
+  // jedes Segment muesste beide abfragen. Der Studien-Newsletter dagegen ist
+  // neu und kommt nur von hier - dort ist der Tag von Anfang an vollstaendig.
+  //
+  // Erst wenn der Altbestand nachgetragen und das WPForms-Formular umgestellt
+  // ist, ergibt ein MVF-Tag Sinn. Dann hier eintauschen, nicht vorher.
   gruppeMvf:         "group[5629][4]",
   gruppeDatenschutz: "group[5629][64]"
 };
@@ -391,13 +398,13 @@ form.addEventListener('submit', async (e)=>{
   p.set('EMAIL', feldMail.value.trim());
   // Mailchimps eigenes Fallenfeld heisst b_<u>_<id> und muss leer bleiben.
   p.set('b_' + MC.u + '_' + MC.id, feldFalle.value);
-  // Tags gehen als eine kommagetrennte Liste von Nummern mit.
+  // Zwei Newsletter, zwei Kennzeichen - jedes so, wie es in der Liste
+  // tatsaechlich gefuehrt wird: der Studien-Newsletter als Tag (Feld "tags",
+  // kommagetrennte Nummern), der MVF-Newsletter als Gruppe.
   const tags = [];
   if(wahlStudien.checked && MC.tagStudien) tags.push(MC.tagStudien);
-  if(wahlMvf.checked     && MC.tagMvf)     tags.push(MC.tagMvf);
   if(tags.length) p.set('tags', tags.join(','));
-  // Ersatzweise, solange der MVF-Tag fehlt: die alte Gruppe.
-  if(wahlMvf.checked && !MC.tagMvf && MC.gruppeMvf) p.set(MC.gruppeMvf, '1');
+  if(wahlMvf.checked && MC.gruppeMvf) p.set(MC.gruppeMvf, '1');
   // MVF vermerkt die gelesene Datenschutzerklaerung seit jeher als eigene
   // Gruppe. Damit die Anmeldungen von hier genauso dokumentiert sind wie die
   // vom Formular auf m-vf.de, wird sie mitgesetzt.
