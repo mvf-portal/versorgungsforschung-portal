@@ -62,6 +62,30 @@
   .menu-inner a:focus-visible{ outline:2px solid var(--brand); outline-offset:-2px; }
   .menu-extern::after{ content:" \2197"; font-size:.85em; }
 
+  /* Auf schmalen Bildschirmen passt das Menue nicht in eine Zeile und rollt
+     waagerecht. Ohne Andeutung bleibt das unbemerkt - die hinteren Punkte
+     (Impressum, Datenschutz) waeren praktisch unsichtbar. Der weiche Rand
+     rechts zeigt, dass es weitergeht. */
+  @media (max-width:760px){
+    nav.hauptmenu{ position:relative; }
+    nav.hauptmenu::after{
+      content:""; position:absolute; top:0; right:0; bottom:0; width:36px;
+      background:linear-gradient(to right, transparent, var(--card));
+      pointer-events:none;
+    }
+  }
+  /* Auf dem Telefon waren von sechs Punkten nur zwei sichtbar, der Rest lag
+     487 px hinter dem Rand. Deshalb dort umbrechen statt rollen - und
+     Impressum und Datenschutz ausblenden, die ohnehin im Fussbereich stehen
+     und dort die gesetzlich geforderte staendige Erreichbarkeit erfuellen. */
+  @media (max-width:620px){
+    .menu-inner{ flex-wrap:wrap; padding:3px 0; gap:0; }
+    /* Kleiner gesetzt, damit vier Punkte in zwei Reihen passen statt in drei -
+       drei Reihen kosteten 131 px Hoehe ueber dem eigentlichen Inhalt. */
+    .menu-inner a{ padding:12px 9px; font-size:12px; }   /* 44 px Tippflaeche */
+    .menu-inner a.nur-breit{ display:none; }
+    nav.hauptmenu::after{ display:none; }
+  }
   /* ---------- Kopf ---------- */
   header.top{ background:var(--card); border-bottom:1px solid var(--line); padding:38px 0 30px; }
   .kopf-oben{ display:flex; align-items:flex-start; justify-content:space-between; gap:26px; }
@@ -144,8 +168,8 @@
     <a href="./">Knowledge-Hub</a>
     <a href="ueber.html" class="hier" aria-current="page">Über den Hub</a>
     <a href="https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&amp;utm_medium=referral&amp;utm_campaign=studien-newsletter#studien-newsletter" target="_blank" rel="noopener" class="menu-extern">Studien-Newsletter</a>
-    <a href="./#impressum">Impressum</a>
-    <a href="./#datenschutz">Datenschutz</a>
+    <a href="./#impressum" class="nur-breit">Impressum</a>
+    <a href="./#datenschutz" class="nur-breit">Datenschutz</a>
     <a href="https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&amp;utm_medium=referral&amp;utm_campaign=menu" target="_blank" rel="noopener" class="menu-extern">Monitor Versorgungsforschung</a>
   </div>
 </nav>
