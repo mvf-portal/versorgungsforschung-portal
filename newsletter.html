@@ -260,7 +260,9 @@
     <p class="meldung" id="meldung" role="status" aria-live="polite"></p>
   </form>
 
-  <p class="fein">Nach dem Absenden erhalten Sie eine E-Mail mit einem Bestätigungslink. Erst mit
+  <p class="fein">Zum Absenden werden Sie auf eine Seite unseres Versanddienstleisters Mailchimp
+  weitergeleitet, die den Eingang bestätigt. Anschließend erhalten Sie eine E-Mail mit einem
+  Bestätigungslink. Erst mit
   dem Klick darauf beginnt der Versand (Double-Opt-in) — so kann niemand fremde Adressen
   eintragen. Beide Newsletter sind kostenfrei und jederzeit einzeln abbestellbar.</p>
 
@@ -276,31 +278,31 @@
 
 <script>
 // ---------------------------------------------------------------------------
-// Anmeldung geht direkt an Mailchimp - der Hub speichert nichts.
+// Die Anmeldung geht direkt an Mailchimp - der Hub speichert nichts.
 //
 // Warum nicht an WordPress: Das Formular auf m-vf.de ist ein WPForms-Formular,
 // dessen Absende-Adresse bei jedem Seitenaufruf ein frisches Token bekommt
 // (data-token / data-token-time). Ein fest eingetragenes Token waere nach
-// Stunden wertlos, und die Gegenstelle liegt auf einer anderen Domain, sodass
-// der Browser die Antwort ohnehin nicht lesen duerfte. Wer von hier aus nach
-// WordPress schicken wollte, muesste sich auf beides verlassen.
+// Stunden wertlos, und die Gegenstelle liegt auf fremder Domain.
 //
-// Mailchimps klassische Formularadresse ist genau dafuer gebaut: Sie nimmt
-// einen Aufruf ueber ein <script>-Element entgegen (JSONP) und antwortet mit
-// einem Ergebnis, das ohne CORS lesbar ist. Doppelte Bestaetigung, Abmeldung
-// und Einwilligungsnachweis bleiben dort, wo sie schon liegen.
+// Warum ein echtes Absenden und kein Hintergrundaufruf: Mailchimps
+// JSONP-Schnittstelle /subscribe/post-json antwortet bei diesem Konto mit
+// 404 - gemessen, mit GET wie mit POST. Sie ist abgeschaltet. Uebrig bleibt
+// /subscribe/post, die gewoehnliche Formularadresse; genau die benutzt auch
+// die Anmeldeseite von MVF. Der Browser sendet also ganz normal hin, und
+// Mailchimp zeigt seine eigene Bestaetigung an.
 //
-// EINZUTRAGEN, bevor die Seite oeffentlich wird -- alle vier Werte stehen in
-// Mailchimp unter Audience > Signup forms > Embedded form im Quelltext:
-//   MC.rechenzentrum  die Endung der Adresse, z. B. "us12"
-//   MC.u / MC.id      die beiden Kennungen aus der Formularadresse
-//   MC.gruppe...      die Gruppen-Kennung je Newsletter, Form "group[123456][1]"
-// Solange etwas fehlt, sendet die Seite nichts, sondern verweist auf m-vf.de.
+// Das kostet die Rueckmeldung auf dieser Seite und bringt zweierlei: Die
+// Anmeldung funktioniert auch ohne JavaScript, und Faelle wie "Adresse schon
+// eingetragen" beantwortet Mailchimp selbst - in seiner Sprache, mit seinen
+// Links, ohne dass wir sie nachbauen.
 // ---------------------------------------------------------------------------
 const MC = {
-  rechenzentrum: "us6",
-  u:             "f4c91757bc7d8c740641acb50",
-  id:            "1c8fc10ec7",
+  // Die Formularadresse traegt den Kontonamen als Vorsilbe. Ohne ihn
+  // antwortet list-manage.com mit 404 - das war der erste Fehlversuch.
+  ziel: "https://monitor-versorgungsforschung.us6.list-manage.com/subscribe/post",
+  u:    "f4c91757bc7d8c740641acb50",
+  id:   "1c8fc10ec7",
   // Die Zielgruppe ist die Hausliste des Verlags. In der Gruppenmenge 5629
   // stehen historisch die Newsletter aller Titel nebeneinander:
   //   [4]/[8]     Monitor Versorgungsforschung Newsletter / Einladung
@@ -308,18 +310,17 @@ const MC = {
   //   [1]/[2]     Pharma Relations          | Altlasten: diese Titel gibt es
   //   [16]/[32]   MarketAccess&HealthPolicy | nicht mehr. Nicht anbieten,
   //   [128]/[256] Monitor Pflege            | auch nicht "der Vollstaendigkeit halber".
-  // Sortiert wird die Hausliste aber ueber TAGS, nicht ueber diese Gruppen.
-  // Das Formular kann Tags mitgeben - als Feld "tags" mit den NUMMERN der
-  // Tags, kommagetrennt. Die Nummer steht in der Adresszeile, wenn man den
-  // Tag in Mailchimp anklickt (dort als "static_segment").
-  tagStudien:        "3433296",          // Studien-Newsletter Pubmed
+  //
+  // Sortiert wird die Hausliste aber ueber TAGS. Das Formular kann sie
+  // mitgeben - Feld "tags" mit den NUMMERN, kommagetrennt. Die Nummer steht in
+  // der Adresszeile, wenn man den Tag anklickt (dort als "static_segment").
+  tagStudien: "3433296",          // Studien-Newsletter Pubmed
   // Der MVF-Newsletter bleibt bewusst bei der Gruppe - das ist kein
   // Provisorium. Seine Abonnenten tragen sie seit jeher, und das Formular auf
-  // m-vf.de traegt sie weiter ein. Ein zusaetzlicher Tag waere nur fuer die
-  // Neuzugaenge vom Hub gesetzt: zwei Kennzeichen fuer dieselbe Sache, und
+  // m-vf.de traegt sie weiter ein. Ein zusaetzlicher Tag waere nur bei den
+  // Neuzugaengen vom Hub gesetzt: zwei Kennzeichen fuer dieselbe Sache, und
   // jedes Segment muesste beide abfragen. Der Studien-Newsletter dagegen ist
   // neu und kommt nur von hier - dort ist der Tag von Anfang an vollstaendig.
-  //
   // Erst wenn der Altbestand nachgetragen und das WPForms-Formular umgestellt
   // ist, ergibt ein MVF-Tag Sinn. Dann hier eintauschen, nicht vorher.
   gruppeMvf:         "group[5629][4]",
@@ -327,43 +328,40 @@ const MC = {
 };
 const MVF_FORMULAR = "https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&utm_medium=referral&utm_campaign=newsletter#studien-newsletter";
 
-const form       = document.getElementById('anmeldung');
-const feldMail   = document.getElementById('email');
-const feldFalle  = document.getElementById('falle');
-const wahlStudien= document.getElementById('wahlStudien');
-const wahlMvf    = document.getElementById('wahlMvf');
+const form         = document.getElementById('anmeldung');
+const feldMail     = document.getElementById('email');
+const wahlStudien  = document.getElementById('wahlStudien');
+const wahlMvf      = document.getElementById('wahlMvf');
 const einwilligung = document.getElementById('einwilligung');
-const knopf      = document.getElementById('absenden');
-const meldung    = document.getElementById('meldung');
-
-// Erst beim Absenden pruefen, nicht beim Laden: So bleibt die Antwort richtig,
-// falls die Kennungen spaeter gesetzt werden, und laesst sich einzeln pruefen.
-function istEingerichtet(){ return Boolean(MC.rechenzentrum && MC.u && MC.id); }
+const knopf        = document.getElementById('absenden');
+const meldung      = document.getElementById('meldung');
 
 function sage(text, art){
   meldung.className = 'meldung ' + (art || '');
   meldung.innerHTML = text;
 }
 
-// Mailchimp antwortet als JSONP: Wir haengen ein <script> an, dessen Adresse
-// den Namen einer Funktion traegt, die die Antwort entgegennimmt. Kein fetch,
-// weil die Gegenstelle keine CORS-Kopfzeilen sendet.
-function frageMailchimp(parameter){
-  return new Promise((erfuellt, gescheitert)=>{
-    const name = 'mcAntwort' + Date.now();
-    const el = document.createElement('script');
-    const uhr = setTimeout(()=>{ aufraeumen(); gescheitert(new Error('Zeitueberschreitung')); }, 12000);
-    function aufraeumen(){ clearTimeout(uhr); delete window[name]; el.remove(); }
-    window[name] = (antwort)=>{ aufraeumen(); erfuellt(antwort); };
-    el.onerror = ()=>{ aufraeumen(); gescheitert(new Error('Netzfehler')); };
-    el.src = 'https://' + MC.rechenzentrum + '.list-manage.com/subscribe/post-json?'
-           + parameter.toString() + '&c=' + name;
-    document.body.appendChild(el);
-  });
+// Ohne JavaScript kaeme das Formular nicht bis Mailchimp - also gleich beim
+// Laden verdrahten, nicht erst beim Klick. Die Auswahl-Kaestchen tragen dabei
+// keine Namen; ihre Wirkung wird unten in verborgene Felder uebersetzt.
+form.action = MC.ziel;
+form.method = 'post';
+form.setAttribute('novalidate','');
+
+function verborgen(name, wert){
+  const el = document.createElement('input');
+  el.type = 'hidden'; el.name = name; el.value = wert;
+  form.appendChild(el);
+  return el;
 }
 
-form.addEventListener('submit', async (e)=>{
+// Der Knopf sperrt sich beim Absenden, die Eingabetaste umgeht ihn aber -
+// ohne diesen Riegel liesse sich zweimal senden.
+let laeuft = false;
+
+form.addEventListener('submit', (e)=>{
   e.preventDefault();
+  if(laeuft) return;
 
   if(!wahlStudien.checked && !wahlMvf.checked){
     sage('Bitte wählen Sie mindestens einen Newsletter aus.', 'fehler');
@@ -386,62 +384,27 @@ form.addEventListener('submit', async (e)=>{
        + 'Formular auf monitor-versorgungsforschung.de</a>.', 'fehler');
     return;
   }
-  if(!istEingerichtet()){
-    sage('Die Anmeldung über diese Seite ist noch nicht freigeschaltet. Bitte nutzen Sie so lange das '
-       + '<a href="' + MVF_FORMULAR + '" target="_blank" rel="noopener">Formular auf monitor-versorgungsforschung.de</a>.', 'fehler');
-    return;
-  }
 
-  const p = new URLSearchParams();
-  p.set('u', MC.u);
-  p.set('id', MC.id);
-  p.set('EMAIL', feldMail.value.trim());
+  // Aus einem frueheren Anlauf koennen noch Felder stehen - erst raeumen.
+  form.querySelectorAll('input[type="hidden"]').forEach(el=>el.remove());
+  verborgen('u', MC.u);
+  verborgen('id', MC.id);
   // Mailchimps eigenes Fallenfeld heisst b_<u>_<id> und muss leer bleiben.
-  p.set('b_' + MC.u + '_' + MC.id, feldFalle.value);
+  // Das Fallenfeld traegt Mailchimps eigenen Namen b_<u>_<id>. Menschen sehen
+  // es nicht; fuellt es ein Formularroboter, verwirft Mailchimp die Anmeldung.
+  document.getElementById('falle').name = 'b_' + MC.u + '_' + MC.id;
   // Zwei Newsletter, zwei Kennzeichen - jedes so, wie es in der Liste
-  // tatsaechlich gefuehrt wird: der Studien-Newsletter als Tag (Feld "tags",
-  // kommagetrennte Nummern), der MVF-Newsletter als Gruppe.
-  const tags = [];
-  if(wahlStudien.checked && MC.tagStudien) tags.push(MC.tagStudien);
-  if(tags.length) p.set('tags', tags.join(','));
-  if(wahlMvf.checked && MC.gruppeMvf) p.set(MC.gruppeMvf, '1');
-  // MVF vermerkt die gelesene Datenschutzerklaerung seit jeher als eigene
-  // Gruppe. Damit die Anmeldungen von hier genauso dokumentiert sind wie die
-  // vom Formular auf m-vf.de, wird sie mitgesetzt.
-  if(MC.gruppeDatenschutz) p.set(MC.gruppeDatenschutz, '1');
+  // tatsaechlich gefuehrt wird.
+  if(wahlStudien.checked) verborgen('tags', MC.tagStudien);
+  if(wahlMvf.checked)     verborgen(MC.gruppeMvf, '1');
+  // MVF vermerkt die gelesene Datenschutzerklaerung als eigene Gruppe. Damit
+  // Anmeldungen von hier genauso dokumentiert sind wie die von m-vf.de.
+  verborgen(MC.gruppeDatenschutz, '1');
 
+  laeuft = true;
   knopf.disabled = true;
-  sage('Wird gesendet …', '');
-
-  try{
-    const a = await frageMailchimp(p);
-    if(a && a.result === 'success'){
-      form.querySelectorAll('input').forEach(i=>{ i.disabled = true; });
-      sage('<b>Fast geschafft.</b> Wir haben Ihnen eine E-Mail mit einem Bestätigungslink '
-         + 'geschickt. Erst mit dem Klick darauf beginnt der Versand — bitte sehen Sie auch im '
-         + 'Spam-Ordner nach.', 'ok');
-    } else {
-      // Mailchimp liefert seine Hinweise als HTML und auf Englisch. Den
-      // haeufigsten Fall - Adresse schon eingetragen - beantworten wir selbst.
-      const roh = (a && a.msg) ? a.msg : '';
-      if(/already subscribed/i.test(roh)){
-        sage('Diese Adresse ist bereits angemeldet. Möchten Sie Ihre Auswahl ändern, nutzen Sie '
-           + 'bitte den Link „Einstellungen ändern" am Ende einer unserer E-Mails.', 'fehler');
-      } else {
-        // Mailchimps Text kann eigenes HTML enthalten. Er wird deshalb als
-        // reiner Text eingesetzt, nicht als Markup.
-        const klartext = new DOMParser().parseFromString(roh, 'text/html').body.textContent.trim();
-        sage('Das hat nicht geklappt. ', 'fehler');
-        meldung.append(klartext || 'Bitte versuchen Sie es später noch einmal.');
-      }
-      knopf.disabled = false;
-    }
-  } catch(fehler){
-    sage('Die Anmeldung ließ sich gerade nicht übermitteln. Bitte versuchen Sie es später noch '
-       + 'einmal oder nutzen Sie das <a href="' + MVF_FORMULAR + '" target="_blank" rel="noopener">'
-       + 'Formular auf monitor-versorgungsforschung.de</a>.', 'fehler');
-    knopf.disabled = false;
-  }
+  sage('Sie werden zu Mailchimp weitergeleitet …', '');
+  form.submit();          // absichtlich .submit(): loest dieses Ereignis nicht erneut aus
 });
 </script>
 </html>
