@@ -52,6 +52,14 @@ REPLY_TO = "redaktion@m-vf.de"   # Antworten sollen in der Redaktion landen,
                                 # Mailchimp als Absender freigegeben sein.
 FREIGABE_MAIL = "stegmaier@m-vf.de"
 
+# Titel aller von hier erzeugten Kampagnen. Daran erkennt das Skript spaeter,
+# was schon versendet wurde und was noch aussteht - Mailchimp fuehrt darueber
+# selbst kein Buch, seit die RSS-Kampagne weg ist.
+PRAEFIX = "MVF Studien-Newsletter"
+# Obergrenze, falls laenger nicht freigegeben wurde. Eine Ausgabe mit 80
+# Studien liest niemand; der Rest bleibt im Archiv und im Hub sichtbar.
+MAX_STUDIEN = 25
+
 MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni",
           "Juli", "August", "September", "Oktober", "November", "Dezember"]
 
@@ -95,7 +103,48 @@ def studie_html(e: dict) -> str:
     </td></tr>"""
 
 
-def newsletter_html(studien: list[dict], datum: str, hinweis: str = "") -> str:
+def tage(studien: list[dict]) -> list[str]:
+    """Die vertretenen Aufnahmetage, neueste zuerst."""
+    gesehen: list[str] = []
+    for e in studien:
+        if e["aufgenommen"] not in gesehen:
+            gesehen.append(e["aufgenommen"])
+    return gesehen
+
+
+def einleitung(studien: list[dict]) -> str:
+    """Sagt, welchen Zeitraum die Ausgabe abdeckt - eine Ausgabe kann mehrere
+    Tage nachholen, wenn zwischendurch keine freigegeben wurde."""
+    t = tage(studien)
+    if len(t) <= 1:
+        return "aus den tagesaktuellen PubMed-Neuzugängen ausgewählt,"
+    return (f"aus den PubMed-Neuzugängen vom {escape(lang(t[-1]))} bis "
+            f"{escape(lang(t[0]))} ausgewählt,")
+
+
+def studienteil(studien: list[dict]) -> str:
+    """Die Studien, bei mehreren Tagen mit Tagesbalken dazwischen."""
+    mehrtaegig = len(tage(studien)) > 1
+    teile, letzter = [], None
+    for e in studien:
+        if mehrtaegig and e["aufgenommen"] != letzter:
+            teile.append(tagesbalken(e["aufgenommen"]))
+            letzter = e["aufgenommen"]
+        teile.append(studie_html(e))
+    return "".join(teile)
+
+
+def tagesbalken(datum: str) -> str:
+    """Trennt die Tage, wenn eine Ausgabe mehrere umfasst."""
+    return f"""
+    <tr><td style="padding:26px 28px 0;">
+      <p style="margin:0;font:bold 11px/1.4 Arial,sans-serif;letter-spacing:1.5px;
+                text-transform:uppercase;color:{GOLD_TIEF};">
+        Aufgenommen am {escape(lang(datum))}</p>
+    </td></tr>"""
+
+
+def newsletter_html(studien: list[dict], hinweis: str = "") -> str:
     """Die vollstaendige E-Mail. `hinweis` erscheint nur in der Testausgabe."""
     dl = "https://wissen.m-vf.de/download"
     p = "utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=studien-entwurf"
@@ -120,17 +169,17 @@ def newsletter_html(studien: list[dict], datum: str, hinweis: str = "") -> str:
       <p style="margin:4px 0 0;font:bold 24px/1.3 Georgia,serif;color:#ffffff;">
         Neueste Studien der Versorgungsforschung</p>
       <p style="margin:6px 0 0;font:13px/1.5 Georgia,serif;color:#D8E5F5;">
-        Ausgabe vom {escape(lang(datum))}</p>
+        Ausgabe vom {escape(lang(tage(studien)[0]))}</p>
     </td></tr>
 
     <tr><td style="padding:24px 28px 4px;">
       <p style="margin:0;font:15px/1.65 Georgia,serif;color:#333;">
-        aus den tagesaktuellen PubMed-Neuzugängen ausgewählt, auf Deutsch zusammengefasst und
+        {einleitung(studien)} auf Deutsch zusammengefasst und
         jeweils mit den konkreten Ergebniszahlen. Ausgewählt wird nach Übertragbarkeit auf das
         deutsche Versorgungssystem. Die vollständige Auswahl samt Archiv finden Sie im
         <a href="https://wissen.m-vf.de/?{p}&amp;utm_content=intro" style="color:{BLAU};font-weight:bold;">Knowledge-Hub</a>.</p>
     </td></tr>
-{''.join(studie_html(e) for e in studien)}
+{studienteil(studien)}
 
     <tr><td style="padding:30px 28px 0;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
@@ -184,14 +233,18 @@ def newsletter_html(studien: list[dict], datum: str, hinweis: str = "") -> str:
 </table>"""
 
 
-def freigabe_hinweis(anzahl: int, datum: str, link: str) -> str:
+def freigabe_hinweis(studien: list[dict], link: str) -> str:
     """Steht nur in der Testausgabe an die Redaktion, nie im Versand."""
+    anzahl = len(studien)
+    t = tage(studien)
+    zeitraum = (f" vom {lang(t[0])}" if len(t) == 1
+                else f" aus {len(t)} Tagen ({lang(t[-1])} bis {lang(t[0])})")
     return f"""
     <tr><td style="background:{GOLD};padding:16px 28px;">
       <p style="margin:0 0 6px;font:bold 15px/1.4 Arial,sans-serif;color:#2A2207;">
         Entwurf zur Freigabe &ndash; noch nicht versendet</p>
       <p style="margin:0;font:13px/1.6 Arial,sans-serif;color:#2A2207;">
-        {anzahl} Studien vom {escape(lang(datum))}. So sähe die Ausgabe aus. Zum Prüfen und Senden:<br>
+        {anzahl} Studien{zeitraum}. So sähe die Ausgabe aus. Zum Prüfen und Senden:<br>
         <a href="{escape(link)}" style="color:#2A2207;"><strong>{escape(link)}</strong></a><br>
         Dieser Kasten steht nur in dieser Testausgabe; die Leserschaft sieht ihn nicht.</p>
     </td></tr>"""
@@ -240,6 +293,14 @@ class Mailchimp:
                                 "op": "static_is", "value": TAG_ID}]}
             return self._ruf("POST", "/campaigns", json=rumpf)
 
+    def gesendet(self) -> list[dict]:
+        d = self._ruf("GET", "/campaigns", params={
+            "status": "sent", "count": 50, "sort_field": "send_time", "sort_dir": "DESC"})
+        return d.get("campaigns", [])
+
+    def loeschen(self, kid: str) -> None:
+        self._ruf("DELETE", f"/campaigns/{kid}")
+
     def inhalt(self, kid: str, html: str) -> None:
         self._ruf("PUT", f"/campaigns/{kid}/content", json={"html": html})
 
@@ -250,38 +311,73 @@ class Mailchimp:
 
 # --------------------------------------------------------------------- main
 
+def datum_aus_titel(titel: str) -> str | None:
+    """'MVF Studien-Newsletter 16.08.2026' -> '2026-08-16'."""
+    if not titel.startswith(PRAEFIX):
+        return None
+    rest = titel[len(PRAEFIX):].strip()
+    try:
+        return dt.datetime.strptime(rest, "%d.%m.%Y").date().isoformat()
+    except ValueError:
+        return None
+
+
 def main() -> int:
     probe = "--probe" in sys.argv
-
     alle = load()                       # neueste zuerst
-    tag = alle[0]["aufgenommen"]
-    studien = [e for e in alle if e["aufgenommen"] == tag]
     heute = dt.datetime.now(TZ).date().isoformat()
 
-    if not probe and tag != heute:
-        print(f"Juengster Archivtag ist {tag}, heute ist {heute} - keine neuen Studien, kein Entwurf.")
-        return 0
-
-    titel = f"MVF Studien-Newsletter {dt.date.fromisoformat(tag).strftime('%d.%m.%Y')}"
-    betreff = f"Neueste Studien der Versorgungsforschung – {lang(tag)}"
-
     if probe:
-        html = newsletter_html(studien, tag,
-                               freigabe_hinweis(len(studien), tag, "https://beispiel.invalid/entwurf"))
+        # Fuer die Vorschau die letzten drei Tage nehmen - so laesst sich auch
+        # die mehrtaegige Fassung mit Tagesbalken ansehen.
+        drei = tage(alle)[:3]
+        studien = [e for e in alle if e["aufgenommen"] in drei][:MAX_STUDIEN]
+        html = newsletter_html(studien, freigabe_hinweis(studien, "https://beispiel.invalid/entwurf"))
         with open("_probe.html", "w", encoding="utf-8") as f:
             f.write(html)
-        print(f"{len(studien)} Studien vom {tag} -> _probe.html ({len(html)} Zeichen)")
+        print(f"{len(studien)} Studien aus {len(tage(studien))} Tagen -> _probe.html")
         return 0
 
     key = os.environ.get("MAILCHIMP_API_KEY", "").strip()
     if not key:
         print("MAILCHIMP_API_KEY nicht gesetzt - kein Entwurf angelegt.")
         return 0
-
     mc = Mailchimp(key)
 
-    for k in mc.entwuerfe():
-        if k.get("settings", {}).get("title") == titel:
+    # Bis wohin ist die Leserschaft bedient? Massgeblich ist der letzte
+    # tatsaechlich VERSENDETE Entwurf - nicht der letzte angelegte. Wer eine
+    # Ausgabe liegen laesst, soll ihre Studien in der naechsten wiederfinden.
+    versendet = [d for d in (datum_aus_titel(k.get("settings", {}).get("title", ""))
+                             for k in mc.gesendet()) if d]
+    seit = max(versendet) if versendet else None
+
+    offen = [e for e in alle if seit is None or e["aufgenommen"] > seit]
+    if not offen:
+        print(f"Nichts offen - zuletzt versendet wurde der Stand vom {seit}.")
+        return 0
+
+    entwuerfe = [(k, datum_aus_titel(k.get("settings", {}).get("title", "")))
+                 for k in mc.entwuerfe()]
+    eigene = [(k, d) for k, d in entwuerfe if d]
+    neu_heute = any(e["aufgenommen"] == heute for e in offen)
+
+    if not neu_heute and eigene:
+        # Nichts Neues, und der offene Bestand liegt bereits als Entwurf bereit.
+        print(f"Keine neuen Studien heute; {len(offen)} offene liegen im Entwurf "
+              f"'{eigene[0][0]['settings']['title']}'.")
+        return 0
+
+    if len(offen) > MAX_STUDIEN:
+        print(f"{len(offen)} offene Studien - auf die {MAX_STUDIEN} neuesten begrenzt.")
+        offen = offen[:MAX_STUDIEN]
+
+    titel = f"{PRAEFIX} {dt.date.fromisoformat(heute).strftime('%d.%m.%Y')}"
+    t = tage(offen)
+    betreff = ("Neueste Studien der Versorgungsforschung – " +
+               (lang(t[0]) if len(t) == 1 else f"{lang(t[-1])} bis {lang(t[0])}"))
+
+    for k, d in eigene:
+        if k["settings"]["title"] == titel:
             print(f"Entwurf '{titel}' besteht bereits ({k['id']}) - nichts zu tun.")
             return 0
 
@@ -290,12 +386,22 @@ def main() -> int:
     link = f"https://{mc.dc}.admin.mailchimp.com/campaigns/edit?id={kampagne.get('web_id', '')}"
 
     # Erst mit Freigabe-Kasten - diese Fassung geht nur an die Redaktion.
-    mc.inhalt(kid, newsletter_html(studien, tag, freigabe_hinweis(len(studien), tag, link)))
+    mc.inhalt(kid, newsletter_html(offen, freigabe_hinweis(offen, link)))
     mc.testen(kid, FREIGABE_MAIL)
     # Dann sauber, damit die Leserschaft den Kasten nicht sieht.
-    mc.inhalt(kid, newsletter_html(studien, tag))
+    mc.inhalt(kid, newsletter_html(offen))
 
-    print(f"Entwurf angelegt: {titel} ({len(studien)} Studien)")
+    # Aeltere, nie versendete Entwuerfe sind jetzt ueberholt: Ihre Studien
+    # stecken vollstaendig im neuen. Zwei Entwuerfe mit ueberlappendem Inhalt
+    # waeren eine Falle - man gibt beide frei und verschickt doppelt.
+    for k, d in eigene:
+        if d and d < heute:
+            mc.loeschen(k["id"])
+            print(f"Ueberholten Entwurf geloescht: {k['settings']['title']}")
+
+    print(f"Entwurf angelegt: {titel} - {len(offen)} Studien aus {len(t)} Tag(en)")
+    if len(t) > 1:
+        print(f"  darunter Nachzuegler seit {t[-1]} (zuletzt versendet: {seit or 'noch nie'})")
     print(f"Testausgabe an {FREIGABE_MAIL} verschickt.")
     print(f"Freigeben unter: {link}")
     return 0

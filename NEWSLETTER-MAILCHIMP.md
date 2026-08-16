@@ -61,14 +61,21 @@ dortige Formular bedient weiterhin den regulären MVF-Newsletter.
 `scripts/mailchimp_entwurf.py` läuft täglich als letzter Schritt des Workflows — nach
 den Studien, nach Feed und Downloads. Es **verschickt nichts an die Leserschaft**:
 
-1. Es nimmt den jüngsten Tag aus `studien-archiv.json`. Ist der nicht von heute, endet es
-   ohne Entwurf — kein Versand ohne neue Studien.
-2. Es prüft, ob für diesen Tag schon ein Entwurf besteht (bei doppelten Läufen).
+1. Es fragt Mailchimp, welcher Entwurf zuletzt **tatsächlich versendet** wurde (erkennbar am
+   Titel `MVF Studien-Newsletter TT.MM.JJJJ`), und nimmt alle Studien, die seither
+   hinzugekommen sind. **Wer eine Ausgabe liegen lässt, findet ihre Studien in der nächsten
+   wieder** — bei mehreren Tagen trennen Tagesbalken die Abschnitte. Obergrenze 25 Studien.
+2. Es prüft, ob für heute schon ein Entwurf besteht (bei doppelten Läufen). Gibt es heute
+   nichts Neues und liegt der offene Bestand bereits als Entwurf bereit, endet es.
 3. Es legt die Kampagne an, Empfänger ist der Tag **Studien-Newsletter Pubmed**.
 4. Es setzt den Inhalt — zunächst mit einem goldenen Freigabe-Kasten obenauf.
 5. Es schickt eine Testausgabe an **stegmaier@m-vf.de**. Diese Testausgabe *ist* die
    Vorschau: Sie sehen genau, was hinausginge, und im Kasten steht der Link zum Freigeben.
 6. Es setzt den Inhalt erneut, diesmal ohne den Kasten — die Leserschaft sieht ihn nie.
+
+Ältere, nie versendete Entwürfe löscht das Skript anschließend: Ihre Studien stecken
+vollständig im neuen. Zwei Entwürfe mit überlappendem Inhalt wären eine Falle — man gibt
+beide frei und verschickt doppelt.
 
 Der Versand bleibt danach **ein Klick von Hand** in Mailchimp. Bei einer KI-kuratierten
 Auswahl ist das Absicht, nicht Umständlichkeit.
