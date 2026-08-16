@@ -320,6 +320,7 @@ const MC = {
   gruppeMvf:         "group[5629][4]",
   gruppeDatenschutz: "group[5629][64]"
 };
+const MC_SEITE = "https://monitor-versorgungsforschung.us6.list-manage.com/subscribe?u=f4c91757bc7d8c740641acb50&id=1c8fc10ec7";
 const MVF_FORMULAR = "https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&utm_medium=referral&utm_campaign=newsletter#studien-newsletter";
 
 const form         = document.getElementById('anmeldung');
@@ -414,26 +415,26 @@ form.addEventListener('submit', (e)=>{
   // Anmeldungen von hier genauso dokumentiert sind wie die von m-vf.de.
   verborgen(MC.gruppeDatenschutz, '1');
 
-  laeuft = true;
-  knopf.disabled = true;
-  sage('Wird gesendet …', '');
-  form.submit();          // absichtlich .submit(): loest dieses Ereignis nicht erneut aus
-
-  // Der Rahmen meldet, dass Mailchimp geantwortet hat - was er antwortet,
-  // bleibt verborgen. Bleibt die Meldung aus, zeigen wir nach vier Sekunden
-  // dasselbe: Ausbleiben heisst nicht Misserfolg.
-  const fertig = ()=>{
-    rahmen.removeEventListener('load', fertig);
-    clearTimeout(reissleine);
-    form.querySelectorAll('input').forEach(i=>{ i.disabled = true; });
-    sage('<b>Bitte prüfen Sie Ihr Postfach.</b> War Ihre Adresse noch nicht eingetragen, '
-       + 'finden Sie dort gleich eine E-Mail mit einem Bestätigungslink — erst mit dem Klick '
-       + 'darauf beginnt der Versand. Sehen Sie notfalls im Spam-Ordner nach. War die Adresse '
-       + 'bereits angemeldet, ändert sich nichts; Ihre Auswahl können Sie dann über den Link '
-       + '„Einstellungen ändern" am Ende jeder unserer E-Mails anpassen.', 'ok');
-  };
-  const reissleine = setTimeout(fertig, 4000);
-  rahmen.addEventListener('load', fertig);
+  // ------------------------------------------------------------------
+  // VORUEBERGEHEND ABGESCHALTET
+  //
+  // Mailchimp verlangt an /subscribe/post ein signiertes Token (Feld "ht"),
+  // das bei jedem Aufruf der gehosteten Seite frisch erzeugt wird. Ohne das
+  // Token nimmt Mailchimp die Sendung an, verwirft sie stillschweigend und
+  // leitet trotzdem auf die Dankeseite weiter - eine Anmeldung, die nach
+  // Erfolg aussieht und keiner ist. Genau das ist im Test passiert.
+  //
+  // Solange nicht entschieden ist, wie es weitergeht, darf die Seite keine
+  // Adressen entgegennehmen, die nirgends ankommen. Sie verweist deshalb auf
+  // die Anmeldeseite von Mailchimp, die das Token selbst mitbringt.
+  // Der gesamte Code darueber bleibt stehen - er ist geprueft und wird
+  // wieder gebraucht, sobald der Einbettungscode vorliegt.
+  // ------------------------------------------------------------------
+  laeuft = false;
+  sage('<b>Die Anmeldung über diese Seite wird gerade umgebaut.</b> Bitte nutzen Sie so lange '
+     + 'das <a href="' + MC_SEITE + '" target="_blank" rel="noopener">Anmeldeformular von '
+     + 'Monitor Versorgungsforschung</a> — dort können Sie dieselben Newsletter bestellen.', 'fehler');
+  return;
 });
 </script>
 </html>
