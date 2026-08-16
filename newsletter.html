@@ -298,11 +298,19 @@
 // Solange etwas fehlt, sendet die Seite nichts, sondern verweist auf m-vf.de.
 // ---------------------------------------------------------------------------
 const MC = {
-  rechenzentrum: "",         // z. B. "us12"
-  u:             "",         // z. B. "a1b2c3d4e5f6a7b8c9d0e1f2a"
-  id:            "",         // z. B. "9f8e7d6c5b"
-  gruppeStudien: "",         // z. B. "group[41893][1]"
-  gruppeMvf:     ""          // z. B. "group[41893][2]"
+  rechenzentrum: "us6",
+  u:             "f4c91757bc7d8c740641acb50",
+  id:            "1c8fc10ec7",
+  // Die Zielgruppe gehoert dem ganzen Verlag: In der Gruppenmenge 5629 liegen
+  // die Newsletter und Einladungen aller vier Titel nebeneinander.
+  //   [1]/[2]     Pharma Relations Newsletter / Einladung
+  //   [4]/[8]     Monitor Versorgungsforschung Newsletter / Einladung
+  //   [16]/[32]   MarketAccess&HealthPolicy Newsletter / Einladung
+  //   [128]/[256] Monitor Pflege Newsletter / Einladung
+  //   [64]        Datenschutzerklaerung gelesen - so haelt MVF die Einwilligung fest
+  gruppeMvf:         "group[5629][4]",
+  gruppeStudien:     "",                 // NOCH ANZULEGEN in Mailchimp
+  gruppeDatenschutz: "group[5629][64]"
 };
 const MVF_FORMULAR = "https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&utm_medium=referral&utm_campaign=newsletter#studien-newsletter";
 
@@ -356,6 +364,15 @@ form.addEventListener('submit', async (e)=>{
     sage('Ohne Ihre Einwilligung dürfen wir Ihnen nichts schicken. Bitte setzen Sie das Häkchen.', 'fehler');
     einwilligung.focus(); return;
   }
+  // Ohne eigene Gruppe waere eine Studien-Bestellung nicht von einer MVF-
+  // Bestellung zu unterscheiden - der Besteller bekaeme entweder nichts oder
+  // das Falsche. Dann lieber gar nicht senden.
+  if(wahlStudien.checked && !MC.gruppeStudien){
+    sage('Die Bestellung des Studien-Newsletters ist über diese Seite noch nicht freigeschaltet. '
+       + 'Bitte nutzen Sie so lange das <a href="' + MVF_FORMULAR + '" target="_blank" rel="noopener">'
+       + 'Formular auf monitor-versorgungsforschung.de</a>.', 'fehler');
+    return;
+  }
   if(!istEingerichtet()){
     sage('Die Anmeldung über diese Seite ist noch nicht freigeschaltet. Bitte nutzen Sie so lange das '
        + '<a href="' + MVF_FORMULAR + '" target="_blank" rel="noopener">Formular auf monitor-versorgungsforschung.de</a>.', 'fehler');
@@ -370,6 +387,10 @@ form.addEventListener('submit', async (e)=>{
   p.set('b_' + MC.u + '_' + MC.id, feldFalle.value);
   if(wahlStudien.checked && MC.gruppeStudien) p.set(MC.gruppeStudien, '1');
   if(wahlMvf.checked     && MC.gruppeMvf)     p.set(MC.gruppeMvf, '1');
+  // MVF vermerkt die gelesene Datenschutzerklaerung seit jeher als eigene
+  // Gruppe. Damit die Anmeldungen von hier genauso dokumentiert sind wie die
+  // vom Formular auf m-vf.de, wird sie mitgesetzt.
+  if(MC.gruppeDatenschutz) p.set(MC.gruppeDatenschutz, '1');
 
   knopf.disabled = true;
   sage('Wird gesendet …', '');
