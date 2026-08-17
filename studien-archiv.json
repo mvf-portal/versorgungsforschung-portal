@@ -1,7 +1,7 @@
 [
  {
   "pmid": "42604452",
-  "journal": "Lancet Reg Health Eur",
+  "journal": "Milbank Q",
   "year": "2026",
   "author": "Leung LB et al.",
   "pubdate": "16.08.2026",
@@ -40,7 +40,7 @@
  },
  {
   "pmid": "42604020",
-  "journal": "Lancet Regional Health Europe",
+  "journal": "Lancet Reg Health Eur",
   "year": "2026",
   "author": "Mediavilla R et al.",
   "pubdate": "08.08.2026",
@@ -53,7 +53,7 @@
  },
  {
   "pmid": "42596879",
-  "journal": "Circulation: Population Health Outcomes",
+  "journal": "Circ Popul Health Outcomes",
   "year": "2026",
   "author": "Liu S et al.",
   "pubdate": "14.08.2026",
@@ -65,7 +65,7 @@
  },
  {
   "pmid": "42588642",
-  "journal": "Cancers",
+  "journal": "Cancers (Basel)",
   "year": "2026",
   "author": "von Fritsch L et al.",
   "pubdate": "28.07.2026",
@@ -78,7 +78,7 @@
  },
  {
   "pmid": "42576220",
-  "journal": "BMC Health Services Research",
+  "journal": "BMC Health Serv Res",
   "year": "2026",
   "author": "Bohnert K et al.",
   "pubdate": "08.08.2026",
@@ -103,7 +103,7 @@
  },
  {
   "pmid": "42600137",
-  "journal": "JMIR Rehabilitation and Assistive Technology",
+  "journal": "JMIR Rehabil Assist Technol",
   "year": "2026",
   "author": "Rosario B et al.",
   "pubdate": "14.08.2026",
@@ -127,7 +127,7 @@
  },
  {
   "pmid": "42598112",
-  "journal": "Resuscitation Plus",
+  "journal": "Resusc Plus",
   "year": "2026",
   "author": "Chee DS et al.",
   "pubdate": "22.07.2026",
@@ -139,7 +139,7 @@
  },
  {
   "pmid": "42596889",
-  "journal": "J Global Health",
+  "journal": "J Glob Health",
   "year": "2026",
   "author": "Huang Y et al.",
   "pubdate": "14.08.2026",
@@ -151,7 +151,7 @@
  },
  {
   "pmid": "42596005",
-  "journal": "BMC Health Services Research",
+  "journal": "BMC Health Serv Res",
   "year": "2026",
   "author": "Kanter J et al.",
   "pubdate": "24.07.2026",
@@ -259,7 +259,7 @@
  },
  {
   "pmid": "42586586",
-  "journal": "BMJ Open Quality",
+  "journal": "BMJ Open Qual",
   "year": "2026",
   "title": "Kürzere Verweildauer nach risikoarmem Kaiserschnitt",
   "sum": "Qualitätsverbesserungsprojekt zur Entlassung am dritten Tag nach risikoarmem Kaiserschnitt.",
@@ -283,7 +283,7 @@
  },
  {
   "pmid": "42584215",
-  "journal": "Health Services Research",
+  "journal": "Health Serv Res",
   "year": "2026",
   "title": "Wertbasierte Vergütung in der Primärversorgung und Low-Value Care",
   "sum": "Untersuchung, ob die Einführung wertbasierter Vergütung in Hausarztpraxen unnötige Leistungen reduziert.",
@@ -295,7 +295,7 @@
  },
  {
   "pmid": "42584205",
-  "journal": "Journal of the Royal Society of Medicine",
+  "journal": "J R Soc Med",
   "year": "2026",
   "title": "Inanspruchnahme und Kosten bei Long COVID (England und Wales)",
   "sum": "Vergleich von Versorgungskosten und Arztkontakten zwischen Long-COVID-Betroffenen und Kontrollpersonen.",
@@ -307,7 +307,7 @@
  },
  {
   "pmid": "42583905",
-  "journal": "Medical Care",
+  "journal": "Med Care",
   "year": "2026",
   "title": "Eigenbesitz an Zusatzleistungen und Testhäufigkeit in Urologiepraxen",
   "sum": "Analyse, ob unternehmerische Beteiligung von Urologiepraxen an Zusatzleistungen die Zahl angeordneter Tests erhöht.",
@@ -319,7 +319,7 @@
  },
  {
   "pmid": "42583901",
-  "journal": "Medical Care",
+  "journal": "Med Care",
   "year": "2026",
   "title": "Soziale Bedarfe und Versorgungszugang nach Kostenträger",
   "sum": "Querschnittsanalyse, wie häufig gesundheitsbezogene soziale Bedarfe je nach Versicherungsart auftreten und den Zugang zur Versorgung beeinflussen.",
@@ -331,7 +331,7 @@
  },
  {
   "pmid": "42581362",
-  "journal": "BMC Medicine",
+  "journal": "BMC Med",
   "year": "2026",
   "title": "Leitlinientreue in der Nachsorge nach akuter Nierenschädigung",
   "sum": "Routinedatenanalyse zur Frage, wie konsequent die empfohlene Nachsorge nach akuter Nierenschädigung umgesetzt wird.",
@@ -343,7 +343,7 @@
  },
  {
   "pmid": "42571911",
-  "journal": "Pharmacoepidemiology and Drug Safety",
+  "journal": "Pharmacoepidemiol Drug Saf",
   "year": "2026",
   "title": "ConcePTION-Algorithmus: Schwangerschaften in Routinedaten erkennen",
   "sum": "Entwicklung und Anwendung eines Algorithmus, der Schwangerschaften in bevölkerungsbezogenen Gesundheitsdatenbanken identifiziert.",
@@ -355,7 +355,7 @@
  },
  {
   "pmid": "42551070",
-  "journal": "Cancer Epidemiology",
+  "journal": "Cancer Epidemiol",
   "year": "2026",
   "title": "Wartezeit von Diagnose bis Operation beim Zervixkarzinom",
   "sum": "Kohortenstudie zum Zusammenhang zwischen dem Intervall Diagnose–Operation und dem Gesamtüberleben.",
@@ -367,7 +367,7 @@
  },
  {
   "pmid": "42571166",
-  "journal": "Tobacco Use Insights",
+  "journal": "Tob Use Insights",
   "year": "2026",
   "title": "Aufhörversuche beim Shisha-Rauchen junger Erwachsener in Deutschland",
   "sum": "Befragung zu Aufhörverhalten und dessen Prädiktoren bei jungen Shisha-Rauchenden in Deutschland.",
@@ -379,7 +379,7 @@
  },
  {
   "pmid": "42571012",
-  "journal": "BMC Health Services Research",
+  "journal": "BMC Health Serv Res",
   "year": "2026",
   "title": "Determinanten der Teilnahme am Mammographie-Screening (Ankara, Türkei)",
   "sum": "Querschnittstudie zu Faktoren, die die Inanspruchnahme der Brustkrebs-Früherkennung bei Frauen beeinflussen.",
@@ -391,7 +391,7 @@
  },
  {
   "pmid": "42571003",
-  "journal": "BMC Health Services Research",
+  "journal": "BMC Health Serv Res",
   "year": "2026",
   "title": "Therapieunterbrechende Systemfehler der Heim-Peritonealdialyse (HomeChoice-Cycler)",
   "sum": "Analyse technischer Fehler bei der Heimdialyse und ihrer Häufigkeit im Versorgungsalltag.",
@@ -403,7 +403,7 @@
  },
  {
   "pmid": "42570385",
-  "journal": "Gynecologic Oncology",
+  "journal": "Gynecol Oncol",
   "year": "2026",
   "title": "Lebensqualität nach risikoreduzierender Hysterektomie",
   "sum": "Untersuchung der gesundheitsbezogenen Lebensqualität (Nutzwerte) nach vorbeugender Gebärmutterentfernung.",
@@ -415,7 +415,7 @@
  },
  {
   "pmid": "42570194",
-  "journal": "GeroScience",
+  "journal": "Geroscience",
   "year": "2026",
   "title": "Orale Antikoagulation und neu auftretende Demenz bei Vorhofflimmern",
   "sum": "Real-World-Kohortenstudie zum Zusammenhang zwischen Art des Gerinnungshemmers und Demenzrisiko.",
@@ -427,7 +427,7 @@
  },
  {
   "pmid": "42570052",
-  "journal": "Journal of Cancer Survivorship",
+  "journal": "J Cancer Surviv",
   "year": "2026",
   "title": "Adhärenz zu Bewegungsleitlinien bei US-Krebsüberlebenden",
   "sum": "Auswertung landesweiter Surveydaten zur Einhaltung der Empfehlungen für körperliche Aktivität über die Zeit.",
