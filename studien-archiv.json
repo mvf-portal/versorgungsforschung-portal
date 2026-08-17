@@ -1,5 +1,44 @@
 [
  {
+  "pmid": "42604452",
+  "journal": "Lancet Reg Health Eur",
+  "year": "2026",
+  "author": "Leung LB et al.",
+  "pubdate": "16.08.2026",
+  "added": "16.08.2026",
+  "transfer": "Nur bedingt: US-Medicaid-System, Fragestellung aber systemunabhängig",
+  "title": "Expansion von Telehealth-Regelungen in US-Medicaid-Programmen 2018–2023: Legal-Mapping-Studie",
+  "sum": "50-Staaten-Analyse zur Adoption von Telehealth-Richtlinien in Medicaid-Programmen und deren mögliche Einflussfaktoren.",
+  "result": "Durchschnittlich 2,7 Telehealth-Richtlinien je Bundesstaat (SD 1,4); Audiotelefonie in 43 Staaten eingeführt; schnellste Adoption 2020–2021; Adoption unabhängig von Ländlichkeit, Fachkräftemangel, Medicaid-Expansion oder Internetverfügbarkeit (alle p ≥ 0,07).",
+  "aufgenommen": "2026-08-17"
+ },
+ {
+  "pmid": "42593155",
+  "journal": "Acta Derm Venereol",
+  "year": "2026",
+  "author": "Kind B et al.",
+  "pubdate": "13.08.2026",
+  "added": "13.08.2026",
+  "transfer": "Deutsche Routinedaten (TREATgermany-Registry)",
+  "title": "Reale Effektivität und Sicherheit von Lebrikizumab bei atopischer Dermatitis: TREATgermany-Registerdaten",
+  "sum": "Prospektive Evaluierung von Lebrikizumab (IL-13-Inhibitor) bei atopischer Dermatitis in deutschen Dermatologie-Praxen mit Effectiveness-Daten zur Routineversorgung.",
+  "result": "80 Patienten mit Follow-up; EASI-Score sank von Baseline 14,8 auf 5,6 (Monat 3) und 3,0 (Monat 6); PP-NRS von 6,6 auf 3,8 und 3,4; DLQI von 11,9 auf 4,9 und 4,8; Nebenwirkungen bei 26,6 % (Konjunktivitis 20,3 %); EASI-75 in Kohorte mit EASI≥16 bei 60 % (M3) und 70 % (M6).",
+  "aufgenommen": "2026-08-17"
+ },
+ {
+  "pmid": "42580197",
+  "journal": "Cancer Treat Res Commun",
+  "year": "2026",
+  "author": "Seliger C et al.",
+  "pubdate": "11.08.2026",
+  "added": "11.08.2026",
+  "transfer": "Deutsche Routinedaten, gesetzlich Versicherte + Krebsregister",
+  "title": "Mortalität von Hirntumor-Patienten in zertifizierten Onkologiezentren versus Nicht-Zentren: Deutschland",
+  "sum": "Kohortenstudie mit 62.735 GKV-Patienten und 5.196 Patienten aus klinischen Krebsregistern zu Überleben nach Behandlung in zertifizierten vs. nicht-zertifizierten Krankenhäusern.",
+  "result": "91,9 % der SHI-Patienten nicht in neuro-onkologischen Zentren behandelt; adjustierte Cox-Regression zeigte verbessertes Gesamtüberleben in zertifizierten Zentren (HR SHI 0,93, 95%-KI 0,86–1,00; HR KKR 0,84, 95%-KI 0,76–0,93); ältere Patienten und höhere WHO-Grade profilierten besonders.",
+  "aufgenommen": "2026-08-17"
+ },
+ {
   "pmid": "42604020",
   "journal": "Lancet Regional Health Europe",
   "year": "2026",
