@@ -114,9 +114,21 @@ Kontakt in Mailchimp.**
 
 ```
 tags=3433296            Studien-Newsletter Pubmed
+group[16135][512]=1     Studien Newsletter VF   (Gruppe der Mailchimp-Anmeldeseite)
 group[5629][4]=1        Monitor Versorgungsforschung Newsletter
 group[5629][64]=1       Datenschutzerklaerung gelesen
 ```
+
+**Der Studien-Newsletter traegt zwei Kennzeichen, und das mit Absicht:** Mailchimps eigene
+Anmeldeseite kann nur Gruppen setzen, nicht Tags. Wer sich dort eintraegt, haette ohne die
+Gruppe kein Kennzeichen; wer sich hier eintraegt, ohne den Tag keines im anderen Segment.
+Beide Wege setzen darum beides.
+
+> **Vorsicht bei Gruppen:** Am 17.08.2026 wurde `group[5629][1]` — bis dahin „Pharma Relations
+> Newsletter" — in „Studien Newsletter VF" **umbenannt** statt neu angelegt. Damit trug schlagartig
+> jeder Alt-Abonnent von Pharma Relations das Kennzeichen des Studien-Newsletters. Zurueckbenannt
+> und als eigene Gruppenmenge 16135 neu angelegt. **Gruppen-Nummern sind Identitaeten, keine
+> Beschriftungen** — wer eine umbenennt, verschiebt Menschen, nicht Woerter.
 
 Der MVF-Newsletter bleibt bei der **Gruppe**, weil seine Abonnenten sie seit jeher tragen und das
 Formular auf m-vf.de sie weiter setzt; ein zusaetzlicher Tag waere nur bei Neuzugaengen vom Hub

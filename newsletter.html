@@ -313,6 +313,11 @@ const MC = {
   // mitgeben - Feld "tags" mit den NUMMERN, kommagetrennt. Die Nummer steht in
   // der Adresszeile, wenn man den Tag anklickt (dort als "static_segment").
   tagStudien: "3433296",          // Studien-Newsletter Pubmed
+  // Dazu die Gruppe, die Mailchimps eigene Anmeldeseite anbietet. Wer sich
+  // dort eintraegt, bekommt nur sie; wer sich hier eintraegt, bekaeme ohne
+  // diese Zeile nur den Tag - und stuende in keinem der Segmente des jeweils
+  // anderen Weges. Sie liegt in einer eigenen Gruppenmenge (16135).
+  gruppeStudien: "group[16135][512]",
   // Der MVF-Newsletter bleibt bewusst bei der Gruppe - das ist kein
   // Provisorium. Seine Abonnenten tragen sie seit jeher, und das Formular auf
   // m-vf.de traegt sie weiter ein. Ein zusaetzlicher Tag waere nur bei den
@@ -396,7 +401,7 @@ form.addEventListener('submit', (e)=>{
   // Ohne Kennzeichen waere eine Studien-Bestellung nicht von einer MVF-
   // Bestellung zu unterscheiden - der Besteller bekaeme entweder nichts oder
   // das Falsche. Dann lieber gar nicht senden.
-  if(wahlStudien.checked && !MC.tagStudien){
+  if(wahlStudien.checked && !MC.tagStudien && !MC.gruppeStudien){
     sage('Die Bestellung des Studien-Newsletters ist über diese Seite noch nicht freigeschaltet. '
        + 'Bitte nutzen Sie so lange das <a href="' + MVF_FORMULAR + '" target="_blank" rel="noopener">'
        + 'Formular auf monitor-versorgungsforschung.de</a>.', 'fehler');
@@ -414,6 +419,7 @@ form.addEventListener('submit', (e)=>{
   // Zwei Newsletter, zwei Kennzeichen - jedes so, wie es in der Liste
   // tatsaechlich gefuehrt wird.
   if(wahlStudien.checked) verborgen('tags', MC.tagStudien);
+  if(wahlStudien.checked) verborgen(MC.gruppeStudien, '1');
   if(wahlMvf.checked)     verborgen(MC.gruppeMvf, '1');
   // MVF vermerkt die gelesene Datenschutzerklaerung als eigene Gruppe. Damit
   // Anmeldungen von hier genauso dokumentiert sind wie die von m-vf.de.
