@@ -755,6 +755,7 @@
         </div>
       </details>
       <div class="hints">
+        <p><b>So funktioniert die Suche.</b> Begriff eingeben, <b>Eingabetaste</b> drücken oder auf <b>„In allen Datenbanken suchen"</b> klicken — damit werden alle Kacheln auf Ihren Begriff eingestellt. Ein Klick auf eine Kachel öffnet dann <b>direkt die Trefferliste</b> dieser Datenbank in einem neuen Tab; ein zweites Mal suchen müssen Sie dort nicht. Die Kacheln bleiben eingestellt, Sie können also nacheinander mehrere Datenbanken öffnen, ohne den Begriff erneut einzugeben. Ausnahme sind die als <b>„Portal"</b> gekennzeichneten Anbieter — die erlauben technisch keine verlinkbare Trefferadresse.</p>
         <p><b>Vollständigkeit.</b> Auch dieses Portal kann nicht sämtliche Artikel „aller Datenbanken" enthalten — das verhindern Lizenz- und Technikgrenzen. Es bündelt stattdessen die maßgeblichen Suchen, sodass eine Recherche systematisch über alle relevanten Datenbanken laufen kann.</p>
         <p><b>Portal vs. Live-Suche.</b> Von den derzeit <b id="cntGesamt"></b> eingebundenen Datenbanken unterstützen <b id="cntLive"></b> die Live-Suche; sie sind entsprechend gekennzeichnet. Weitere <b id="cntPortal"></b> sind als „Portal" markiert: Angebote wie LIVIVO, das DRKS oder die WHO-Plattform ICTRP erlauben technisch keine verlinkbaren Ergebnisadressen. Der Klick führt dort auf die Startseite — der Suchbegriff ist anschließend von Hand einzugeben.</p>
         <p><b>Suchoperatoren.</b> <b>AND</b>, <b>OR</b> und <b>NOT</b> funktionieren nicht überall gleich — wir haben es einzeln nachgemessen. <span class="boolmark ja">AND/OR ✓</span> heißt: geprüft, die Operatoren wirken (<b id="cntBoolJa"></b> Datenbanken). <span class="boolmark nein">AND/OR ✗</span> heißt: geprüft, sie wirken nicht — die Wörter werden einfach mitgesucht (<b id="cntBoolNein"></b>). <b>Ohne Zeichen ist es ungeprüft</b> (<b id="cntBoolOffen"></b>): Diese Anbieter liefern eine Bot-Sperre oder eine reine JavaScript-Oberfläche, aus der sich kein belastbares Ergebnis ablesen ließ — das heißt ausdrücklich <i>nicht</i>, dass sie es nicht können. Der Filter „Operatoren" zeigt auf Wunsch nur die geprüft tauglichen.</p>
@@ -1442,6 +1443,25 @@ function zeigeErgebnis(){
         : '');
   resultBar.hidden = false;
 }
+
+// Die Falle, in die ein Betatester lief: Begriff eingetippt, nicht abgesendet,
+// dann auf eine Kachel geklickt - und die Datenbank oeffnete ihre Startseite,
+// wo er den Begriff ein zweites Mal eingeben musste. Aus seiner Sicht zu
+// Recht unverstaendlich. Ein Klick auf eine Kachel holt das Absenden deshalb
+// jetzt selbst nach: Der Zugriff erfolgt in der Erfassungsphase, also bevor
+// der Browser dem Link folgt - die Adresse steht dann schon richtig.
+document.addEventListener('click', (e)=>{
+  const link = e.target.closest('.card');
+  if(!link) return;
+  const term = input.value.trim();
+  if(!term || term === gesucht) return;      // nichts Neues einzustellen
+  gesucht = term;
+  uebersetzung = document.getElementById('uebersetzenAn').checked ? uebersetze(term) : null;
+  verdrahte(term);
+  document.body.classList.add('gesucht');
+  zeigeErgebnis();
+  aktualisiereChips(term);
+}, true);
 
 function suchen(){
   const term = input.value.trim();
