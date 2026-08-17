@@ -46,6 +46,12 @@ TZ = ZoneInfo("Europe/Berlin")
 
 LIST_ID = "1c8fc10ec7"          # Zielgruppe "eRelation GESAMT"
 TAG_ID = 3433296                # Tag "Studien-Newsletter Pubmed" (Tags sind statische Segmente)
+# Dieselbe Bestellung kann auch als Gruppe vorliegen: Mailchimps eigene
+# Anmeldeseite kann nur Gruppen setzen, keine Tags. Wer sich dort eintraegt,
+# traegt nur diese - und bekaeme ohne die zweite Bedingung nie eine Ausgabe.
+# Die API kennt Gruppen nicht unter der Nummer aus dem Formular (512), sondern
+# unter einer eigenen Kennung; die wird zur Laufzeit ueber den Namen gesucht.
+GRUPPE_NAME = "Studien Newsletter VF"
 FROM_NAME = "Monitor Versorgungsforschung"
 REPLY_TO = "redaktion@m-vf.de"   # Antworten sollen in der Redaktion landen,
                                 # nicht beim Redaktionssystem. Die Adresse muss in
@@ -286,11 +292,39 @@ class Mailchimp:
             "status": "save", "count": 50, "sort_field": "create_time", "sort_dir": "DESC"})
         return d.get("campaigns", [])
 
+    def gruppe_suchen(self, name: str) -> tuple[str, str] | None:
+        """Kennung von Kategorie und Gruppe zum sichtbaren Namen - oder None."""
+        try:
+            kats = self._ruf("GET", f"/lists/{LIST_ID}/interest-categories",
+                             params={"count": 60}).get("categories", [])
+            for k in kats:
+                ints = self._ruf("GET", f"/lists/{LIST_ID}/interest-categories/{k['id']}/interests",
+                                 params={"count": 60}).get("interests", [])
+                for i in ints:
+                    if i.get("name", "").strip().lower() == name.strip().lower():
+                        return k["id"], i["id"]
+        except SystemExit as fehler:
+            print(f"Gruppe '{name}' nicht ermittelbar ({fehler}) - nur ueber den Tag.")
+        return None
+
     def anlegen(self, titel: str, betreff: str) -> dict:
+        # Empfaenger: Tag ODER Gruppe. "any" ist hier wesentlich - mit "all"
+        # bekaeme die Ausgabe nur, wer zufaellig beide Kennzeichen traegt.
+        bedingungen = [{"condition_type": "StaticSegment", "field": "static_segment",
+                        "op": "static_is", "value": TAG_ID}]
+        gruppe = self.gruppe_suchen(GRUPPE_NAME)
+        if gruppe:
+            kat, interesse = gruppe
+            bedingungen.append({"condition_type": "Interests", "field": f"interests-{kat}",
+                                "op": "interestcontains", "value": [interesse]})
+            print(f"Empfaenger: Tag {TAG_ID} oder Gruppe '{GRUPPE_NAME}' ({interesse}).")
+        else:
+            print(f"Empfaenger: nur Tag {TAG_ID} - Gruppe '{GRUPPE_NAME}' nicht gefunden.")
+
         rumpf = {
             "type": "regular",
             "recipients": {"list_id": LIST_ID,
-                           "segment_opts": {"saved_segment_id": TAG_ID}},
+                           "segment_opts": {"match": "any", "conditions": bedingungen}},
             "settings": {"subject_line": betreff, "title": titel,
                          "from_name": FROM_NAME, "reply_to": REPLY_TO,
                          "to_name": "*|FNAME|*", "auto_footer": False},
@@ -298,13 +332,13 @@ class Mailchimp:
         try:
             return self._ruf("POST", "/campaigns", json=rumpf)
         except SystemExit as fehler:
-            # Aeltere Konten nehmen den Tag nur als ausformulierte Bedingung an.
-            if "segment" not in str(fehler).lower():
+            # Lieber an die Tag-Traeger allein als gar nicht: Wird die
+            # Gruppenbedingung abgelehnt, faellt der Empfaenger auf den Tag
+            # zurueck. Ein Entwurf ohne Empfaenger waere wertlos.
+            if not gruppe or "segment" not in str(fehler).lower():
                 raise
-            rumpf["recipients"]["segment_opts"] = {
-                "match": "any",
-                "conditions": [{"condition_type": "StaticSegment", "field": "static_segment",
-                                "op": "static_is", "value": TAG_ID}]}
+            print(f"Gruppenbedingung abgelehnt ({fehler}) - nur ueber den Tag.")
+            rumpf["recipients"]["segment_opts"] = {"saved_segment_id": TAG_ID}
             return self._ruf("POST", "/campaigns", json=rumpf)
 
     def gesendet(self) -> list[dict]:
