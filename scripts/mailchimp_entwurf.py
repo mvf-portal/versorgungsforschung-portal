@@ -72,7 +72,7 @@ BLAU, GOLD, GOLD_TIEF = "#0051A1", "#BE9E53", "#8A6E28"
 # alle anderen fallen auf Helvetica/Arial zurueck - dieselbe humanistische
 # Grotesk-Anmutung, keine Serifen. Kein Georgia mehr: Eine Serifenschrift
 # widerspricht dem Erscheinungsbild deutlicher als eine Ersatz-Grotesk.
-FONT = "'Lato',Helvetica,{FONT}"
+FONT = "'Lato',Helvetica,Arial,sans-serif"
 SCHRIFT_EINBINDEN = """<style type="text/css">
 @font-face{font-family:'Lato';font-style:normal;font-weight:400;
   src:url('https://wissen.m-vf.de/fonts/lato-400.woff2') format('woff2');}
