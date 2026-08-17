@@ -410,6 +410,30 @@
     .menu-inner a.nur-breit{ display:none; }
     nav.hauptmenu::after{ display:none; }
   }
+  /* Einleitung und Newsletter-Knopf nebeneinander. Der Knopf steht damit
+     im ersten Blickfeld, ohne den Text zu unterbrechen; unter 860 px rutscht
+     er darunter, weil zwei Spalten dort nur noch Silbentrennung erzeugen. */
+  .lede-zeile{ display:flex; align-items:flex-start; gap:30px; margin:.2em 0 0; }
+  .lede-zeile .lede{ flex:1 1 auto; margin:0; }
+  .lede-nl{
+    flex:0 0 auto; width:236px; padding:16px 18px;
+    background:var(--card); border:1px solid var(--line);
+    border-left:4px solid var(--action); border-radius:6px;
+  }
+  .btn-nl{
+    display:flex; align-items:center; justify-content:center; min-height:46px;
+    background:var(--action); color:var(--on-action); font-weight:700; font-size:14.5px;
+    text-decoration:none; padding:0 16px; border-radius:6px; transition:filter .14s;
+    text-align:center; line-height:1.25;
+  }
+  .btn-nl:hover{ filter:brightness(1.08); }
+  .btn-nl:focus-visible{ outline:2px solid var(--brand); outline-offset:3px; }
+  .nl-mini{ display:block; margin-top:9px; font-size:12px; line-height:1.45; color:var(--ink-faint); }
+  @media (max-width:860px){
+    .lede-zeile{ flex-direction:column; gap:18px; }
+    .lede-nl{ width:100%; }
+  }
+
   /* Knopf zur Über-Seite, direkt unter dem Einleitungstext */
   .lede-aktion{ margin:16px 0 0; }
   .btn-ueber{
@@ -660,7 +684,13 @@
         <img src="logo/mvf-logo.png" width="1236" height="327" alt="Monitor Versorgungsforschung">
       </a>
     </div>
-    <p class="lede">Ein Suchbegriff, alle Datenbanken. Geben Sie bitte unten einen Begriff ein — jede Datenbankkarte öffnet damit direkt die passende Live-Suche in einem neuen Tab. Deutschsprachige und internationale Fachdatenbanken, Evidenzsynthesen, Open-Access-Discovery, Studienregister, Institutionen und Wege zum Volltext an einem Ort. Jeden Tag werden die Suchergebnisse automatisch aktualisiert. Kuratiert von einer KI für die tägliche Recherchearbeit. Ein Service von Monitor Versorgungsforschung.</p>
+    <div class="lede-zeile">
+      <p class="lede">Ein Suchbegriff, alle Datenbanken. Geben Sie bitte unten einen Begriff ein — jede Datenbankkarte öffnet damit direkt die passende Live-Suche in einem neuen Tab. Deutschsprachige und internationale Fachdatenbanken, Evidenzsynthesen, Open-Access-Discovery, Studienregister, Institutionen und Wege zum Volltext an einem Ort. Jeden Tag werden die Suchergebnisse automatisch aktualisiert. Kuratiert von einer KI für die tägliche Recherchearbeit. Ein Service von Monitor Versorgungsforschung.</p>
+      <aside class="lede-nl">
+        <a class="btn-nl" href="newsletter.html">Newsletter abonnieren</a>
+        <span class="nl-mini">Die Studienauswahl jeden Morgen per E-Mail — kostenfrei und jederzeit kündbar.</span>
+      </aside>
+    </div>
     <p class="lede-aktion"><a class="btn-ueber" href="ueber.html" target="_blank" rel="noopener">Über den Knowledge-Hub <span aria-hidden="true">↗</span></a></p>
 
     <div class="panel">
