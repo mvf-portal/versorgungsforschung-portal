@@ -66,6 +66,20 @@ MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni",
 # Farben des Hubs seit der Umstellung auf das MVF-Erscheinungsbild.
 BLAU, GOLD, GOLD_TIEF = "#0051A1", "#BE9E53", "#8A6E28"
 
+# MVF setzt ausschliesslich Lato - auch hier. In E-Mails laesst sich das aber
+# nur anbieten, nicht erzwingen: Outlook rendert mit der Word-Engine und kennt
+# @font-face nicht, Gmail entfernt es. Apple Mail und iOS laden die Schrift,
+# alle anderen fallen auf Helvetica/Arial zurueck - dieselbe humanistische
+# Grotesk-Anmutung, keine Serifen. Kein Georgia mehr: Eine Serifenschrift
+# widerspricht dem Erscheinungsbild deutlicher als eine Ersatz-Grotesk.
+FONT = "'Lato',Helvetica,{FONT}"
+SCHRIFT_EINBINDEN = """<style type="text/css">
+@font-face{font-family:'Lato';font-style:normal;font-weight:400;
+  src:url('https://wissen.m-vf.de/fonts/lato-400.woff2') format('woff2');}
+@font-face{font-family:'Lato';font-style:normal;font-weight:700;
+  src:url('https://wissen.m-vf.de/fonts/lato-700.woff2') format('woff2');}
+</style>"""
+
 
 def lang(iso: str) -> str:
     d = dt.date.fromisoformat(iso)
@@ -84,19 +98,19 @@ def studie_html(e: dict) -> str:
     <tr><td style="padding:22px 28px 0;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr><td style="border-top:1px solid #D0D8E4;padding-top:20px;">
-          <h2 style="margin:0 0 6px;font:bold 19px/1.35 Georgia,serif;color:{BLAU};">
+          <h2 style="margin:0 0 6px;font:bold 19px/1.35 {FONT};color:{BLAU};">
             <a href="{escape(pubmed)}" style="color:{BLAU};text-decoration:none;">{titel}</a>
           </h2>
-          <p style="margin:0 0 10px;font:12px/1.5 Arial,sans-serif;color:#545C63;">{escape(quelle)}</p>
-          {f'<p style="margin:0 0 8px;font:italic 13px Georgia,serif;color:#545C63;">{escape(kopf)}</p>' if kopf else ''}
-          <p style="margin:0 0 10px;font:15px/1.65 Georgia,serif;color:#333;">{escape(e["sum"])}</p>
+          <p style="margin:0 0 10px;font:12px/1.5 {FONT};color:#545C63;">{escape(quelle)}</p>
+          {f'<p style="margin:0 0 8px;font:italic 13px {FONT};color:#545C63;">{escape(kopf)}</p>' if kopf else ''}
+          <p style="margin:0 0 10px;font:15px/1.65 {FONT};color:#333;">{escape(e["sum"])}</p>
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr><td style="background:#F7FAFD;border-left:3px solid {BLAU};padding:10px 14px;
-                           font:15px/1.6 Georgia,serif;color:#222;">
+                           font:15px/1.6 {FONT};color:#222;">
               <strong>Ergebnis:</strong> {escape(e["result"])}</td></tr>
           </table>
-          {f'<p style="margin:8px 0 0;font:13px/1.6 Georgia,serif;color:#545C63;"><strong>Übertragbarkeit:</strong> {escape(e["transfer"])}</p>' if e.get("transfer") else ''}
-          <p style="margin:10px 0 0;font:13px Georgia,serif;">
+          {f'<p style="margin:8px 0 0;font:13px/1.6 {FONT};color:#545C63;"><strong>Übertragbarkeit:</strong> {escape(e["transfer"])}</p>' if e.get("transfer") else ''}
+          <p style="margin:10px 0 0;font:13px {FONT};">
             <a href="{escape(pubmed)}" style="color:{GOLD_TIEF};">Studie in PubMed ansehen &rarr;</a></p>
         </td></tr>
       </table>
@@ -116,10 +130,10 @@ def einleitung(studien: list[dict]) -> str:
     """Sagt, welchen Zeitraum die Ausgabe abdeckt - eine Ausgabe kann mehrere
     Tage nachholen, wenn zwischendurch keine freigegeben wurde."""
     t = tage(studien)
-    if len(t) <= 1:
-        return "aus den tagesaktuellen PubMed-Neuzugängen ausgewählt,"
-    return (f"aus den PubMed-Neuzugängen vom {escape(lang(t[-1]))} bis "
-            f"{escape(lang(t[0]))} ausgewählt,")
+    zeitraum = (f"vom {escape(lang(t[0]))}" if len(t) <= 1
+                else f"vom {escape(lang(t[-1]))} bis {escape(lang(t[0]))}")
+    return (f"Eine Auswahl aus den PubMed-Neuzugängen {zeitraum}, auf Deutsch "
+            f"zusammengefasst und jeweils mit den konkreten Ergebniszahlen versehen.")
 
 
 def studienteil(studien: list[dict]) -> str:
@@ -138,7 +152,7 @@ def tagesbalken(datum: str) -> str:
     """Trennt die Tage, wenn eine Ausgabe mehrere umfasst."""
     return f"""
     <tr><td style="padding:26px 28px 0;">
-      <p style="margin:0;font:bold 11px/1.4 Arial,sans-serif;letter-spacing:1.5px;
+      <p style="margin:0;font:bold 11px/1.4 {FONT};letter-spacing:1.5px;
                 text-transform:uppercase;color:{GOLD_TIEF};">
         Aufgenommen am {escape(lang(datum))}</p>
     </td></tr>"""
@@ -148,7 +162,8 @@ def newsletter_html(studien: list[dict], hinweis: str = "") -> str:
     """Die vollstaendige E-Mail. `hinweis` erscheint nur in der Testausgabe."""
     dl = "https://wissen.m-vf.de/download"
     p = "utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=studien-entwurf"
-    return f"""<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#EDF2FA;margin:0;padding:0;">
+    return f"""{SCHRIFT_EINBINDEN}
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#EDF2FA;margin:0;padding:0;">
 <tr><td align="center" style="padding:24px 12px;">
   <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background:#ffffff;">
     {hinweis}
@@ -164,18 +179,17 @@ def newsletter_html(studien: list[dict], hinweis: str = "") -> str:
     </td></tr>
 
     <tr><td style="background:{BLAU};padding:22px 28px;">
-      <p style="margin:0;font:bold 12px/1.5 Arial,sans-serif;letter-spacing:1.5px;color:#C9DCF2;">
+      <p style="margin:0;font:bold 12px/1.5 {FONT};letter-spacing:1.5px;color:#C9DCF2;">
         VOM KNOWLEDGE-HUB VON MONITOR VERSORGUNGSFORSCHUNG</p>
-      <p style="margin:4px 0 0;font:bold 24px/1.3 Georgia,serif;color:#ffffff;">
+      <p style="margin:4px 0 0;font:bold 24px/1.3 {FONT};color:#ffffff;">
         Neueste Studien der Versorgungsforschung</p>
-      <p style="margin:6px 0 0;font:13px/1.5 Georgia,serif;color:#D8E5F5;">
+      <p style="margin:6px 0 0;font:13px/1.5 {FONT};color:#D8E5F5;">
         Ausgabe vom {escape(lang(tage(studien)[0]))}</p>
     </td></tr>
 
     <tr><td style="padding:24px 28px 4px;">
-      <p style="margin:0;font:15px/1.65 Georgia,serif;color:#333;">
-        {einleitung(studien)} auf Deutsch zusammengefasst und
-        jeweils mit den konkreten Ergebniszahlen. Ausgewählt wird nach Übertragbarkeit auf das
+      <p style="margin:0;font:15px/1.65 {FONT};color:#333;">
+        {einleitung(studien)} Ausgewählt wird nach Übertragbarkeit auf das
         deutsche Versorgungssystem. Die vollständige Auswahl samt Archiv finden Sie im
         <a href="https://wissen.m-vf.de/?{p}&amp;utm_content=intro" style="color:{BLAU};font-weight:bold;">Knowledge-Hub</a>.</p>
     </td></tr>
@@ -185,15 +199,15 @@ def newsletter_html(studien: list[dict], hinweis: str = "") -> str:
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
              style="background:#F7FAFD;border:1px solid #D0D8E4;">
         <tr><td style="padding:18px 22px;">
-          <p style="margin:0 0 4px;font:bold 15px/1.4 Georgia,serif;color:{BLAU};">
+          <p style="margin:0 0 4px;font:bold 15px/1.4 {FONT};color:{BLAU};">
             Diese Ausgabe herunterladen</p>
-          <p style="margin:0 0 12px;font:13px/1.6 Georgia,serif;color:#545C63;">
+          <p style="margin:0 0 12px;font:13px/1.6 {FONT};color:#545C63;">
             Word zum Weiterverarbeiten, Excel zum Auswerten &ndash; jeweils auf dem Stand dieser Ausgabe.</p>
-          <p style="margin:0;font:14px/2 Georgia,serif;">
+          <p style="margin:0;font:14px/2 {FONT};">
             <a href="{dl}/studien-aktuell.docx?{p}&amp;utm_content=dl-word" style="color:{GOLD_TIEF};font-weight:bold;">&#10515; Word (.docx)</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="{dl}/studien-aktuell.csv?{p}&amp;utm_content=dl-excel" style="color:{GOLD_TIEF};font-weight:bold;">&#10515; Excel (.csv)</a></p>
-          <p style="margin:12px 0 0;padding-top:12px;border-top:1px solid #D0D8E4;font:13px/1.7 Georgia,serif;color:#545C63;">
+          <p style="margin:12px 0 0;padding-top:12px;border-top:1px solid #D0D8E4;font:13px/1.7 {FONT};color:#545C63;">
             Das <strong>vollständige Archiv</strong> aller bisher vorgestellten Studien:
             <a href="{dl}/studien-archiv.docx?{p}&amp;utm_content=dl-archiv-word" style="color:{GOLD_TIEF};">Word</a> &middot;
             <a href="{dl}/studien-archiv.csv?{p}&amp;utm_content=dl-archiv-excel" style="color:{GOLD_TIEF};">Excel</a></p>
@@ -205,17 +219,17 @@ def newsletter_html(studien: list[dict], hinweis: str = "") -> str:
       <table role="presentation" cellpadding="0" cellspacing="0" border="0">
         <tr><td style="background:{GOLD};">
           <a href="https://wissen.m-vf.de/?{p}&amp;utm_content=cta"
-             style="display:inline-block;padding:13px 28px;font:bold 15px Georgia,serif;color:#2A2207;text-decoration:none;">
+             style="display:inline-block;padding:13px 28px;font:bold 15px {FONT};color:#2A2207;text-decoration:none;">
             Zum MVF-Knowledge-Hub</a>
         </td></tr>
       </table>
-      <p style="margin:12px 0 0;font:13px/1.6 Georgia,serif;color:#545C63;">
+      <p style="margin:12px 0 0;font:13px/1.6 {FONT};color:#545C63;">
         56 Fachdatenbanken, 29 davon mit Direktsuche &ndash; ein Suchbegriff, alle Quellen.</p>
     </td></tr>
 
     <tr><td style="padding:28px;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr><td style="border-top:1px solid #D0D8E4;padding-top:18px;font:12px/1.7 Arial,sans-serif;color:#777;">
+        <tr><td style="border-top:1px solid #D0D8E4;padding-top:18px;font:12px/1.7 {FONT};color:#777;">
           <p style="margin:0 0 8px;">
             <strong>Monitor Versorgungsforschung</strong><br>
             eRelation AG &ndash; Content in Health<br>
@@ -241,9 +255,9 @@ def freigabe_hinweis(studien: list[dict], link: str) -> str:
                 else f" aus {len(t)} Tagen ({lang(t[-1])} bis {lang(t[0])})")
     return f"""
     <tr><td style="background:{GOLD};padding:16px 28px;">
-      <p style="margin:0 0 6px;font:bold 15px/1.4 Arial,sans-serif;color:#2A2207;">
+      <p style="margin:0 0 6px;font:bold 15px/1.4 {FONT};color:#2A2207;">
         Entwurf zur Freigabe &ndash; noch nicht versendet</p>
-      <p style="margin:0;font:13px/1.6 Arial,sans-serif;color:#2A2207;">
+      <p style="margin:0;font:13px/1.6 {FONT};color:#2A2207;">
         {anzahl} Studien{zeitraum}. So sähe die Ausgabe aus. Zum Prüfen und Senden:<br>
         <a href="{escape(link)}" style="color:#2A2207;"><strong>{escape(link)}</strong></a><br>
         Dieser Kasten steht nur in dieser Testausgabe; die Leserschaft sieht ihn nicht.</p>
