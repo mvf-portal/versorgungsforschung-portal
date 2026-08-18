@@ -604,6 +604,11 @@
   .cat-head h2{ font-size:clamp(20px,2.6vw,25px); margin:0; font-weight:600; letter-spacing:-.01em; }
   .cat-count{ margin-left:auto; font-size:12.5px; color:var(--ink-faint); align-self:center; }
 
+  /* Hinweiszeile, die nur einzelne Bloecke tragen (CATS[].hinweis). */
+  .cat-hinweis{ margin:14px 0 0; padding:11px 14px; font-size:13.5px; line-height:1.55;
+                color:var(--ink-soft); background:var(--card-2);
+                border-left:3px solid var(--cat); border-radius:0 6px 6px 0; }
+
   .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(268px,1fr)); gap:14px; margin-top:16px; }
 
   a.card{
@@ -757,6 +762,9 @@
       <div class="hints">
         <p><b>So funktioniert die Suche.</b> Begriff eingeben, <b>Eingabetaste</b> drücken oder auf <b>„In allen Datenbanken suchen"</b> klicken — damit werden alle Kacheln auf Ihren Begriff eingestellt. Ein Klick auf eine Kachel öffnet dann <b>direkt die Trefferliste</b> dieser Datenbank in einem neuen Tab; ein zweites Mal suchen müssen Sie dort nicht. Die Kacheln bleiben eingestellt, Sie können also nacheinander mehrere Datenbanken öffnen, ohne den Begriff erneut einzugeben. Ausnahme sind die als <b>„Portal"</b> gekennzeichneten Anbieter — die erlauben technisch keine verlinkbare Trefferadresse.</p>
         <p><b>Vollständigkeit.</b> Auch dieses Portal kann nicht sämtliche Artikel „aller Datenbanken" enthalten — das verhindern Lizenz- und Technikgrenzen. Es bündelt stattdessen die maßgeblichen Suchen, sodass eine Recherche systematisch über alle relevanten Datenbanken laufen kann.</p>
+        <!-- === THEMA-HINWEIS-START (themenspezifisch; aus dem Themenprofil) === -->
+
+        <!-- === THEMA-HINWEIS-ENDE === -->
         <p><b>Portal vs. Live-Suche.</b> Von den derzeit <b id="cntGesamt"></b> eingebundenen Datenbanken unterstützen <b id="cntLive"></b> die Live-Suche; sie sind entsprechend gekennzeichnet. Weitere <b id="cntPortal"></b> sind als „Portal" markiert: Angebote wie LIVIVO, das DRKS oder die WHO-Plattform ICTRP erlauben technisch keine verlinkbaren Ergebnisadressen. Der Klick führt dort auf die Startseite — der Suchbegriff ist anschließend von Hand einzugeben.</p>
         <p><b>Suchoperatoren.</b> <b>AND</b>, <b>OR</b> und <b>NOT</b> funktionieren nicht überall gleich — wir haben es einzeln nachgemessen. <span class="boolmark ja">AND/OR ✓</span> heißt: geprüft, die Operatoren wirken (<b id="cntBoolJa"></b> Datenbanken). <span class="boolmark nein">AND/OR ✗</span> heißt: geprüft, sie wirken nicht — die Wörter werden einfach mitgesucht (<b id="cntBoolNein"></b>). <b>Ohne Zeichen ist es ungeprüft</b> (<b id="cntBoolOffen"></b>): Diese Anbieter liefern eine Bot-Sperre oder eine reine JavaScript-Oberfläche, aus der sich kein belastbares Ergebnis ablesen ließ — das heißt ausdrücklich <i>nicht</i>, dass sie es nicht können. Der Filter „Operatoren" zeigt auf Wunsch nur die geprüft tauglichen.</p>
         <p><b>Deutsch suchen, international finden.</b> Internationale Datenbanken kennen keine deutschen Fachbegriffe — „Primärversorgung" liefert dort fast nichts. Der Hub übersetzt deshalb <b id="cntGlossar"></b> Fachbegriffe automatisch: Deutschsprachige Datenbanken behalten Ihren Begriff, internationale bekommen den Ausdruck, unter dem sie tatsächlich indexieren („Nutzenbewertung" wird zu <i>health technology assessment</i>, nicht zu <i>benefit assessment</i>). Die Ergebnisleiste zeigt die verwendete Fassung; der Schalter unter dem Suchfeld stellt es ab.</p>
@@ -1065,6 +1073,9 @@ CATS.forEach(cat=>{
     '<div class="cat-head"><span class="cat-num mono">'+cat.num+'</span>'+
     '<h2 class="serif">'+cat.name+'</h2>'+
     '<span class="cat-count">'+items.length+' Datenbanken</span></div>'+
+    // Nur einzelne Bloecke tragen einen Hinweis: Dort liegen Modelle, Daten
+    // keine Publikationen - das erwartet niemand ungewarnt.
+    (cat.hinweis ? '<p class="cat-hinweis">'+cat.hinweis+'</p>' : '')+
     '<div class="grid"></div>';
   const grid = sec.querySelector('.grid');
 
@@ -1208,7 +1219,7 @@ function logoDataUri(){
   }catch(e){ return ''; }   // z. B. wenn die Leinwand als fremd gilt
 }
 
-const DL_KOPFTEXT = 'Ein Service der Knowledge-Datenbank von Monitor Versorgungsforschung. '
+const DL_KOPFTEXT = 'Ein Service des Knowledge-Hubs von Monitor Versorgungsforschung. '
   + 'Täglich automatisiert KI-kuratiert aus PubMed und auf Deutsch übersetzt.';
 
 function baueCSV(liste, mitDatum){
@@ -1264,7 +1275,7 @@ const CSV_MIME = 'text/csv;charset=utf-8';
 
 document.getElementById('dlAktuellDoc').addEventListener('click', ()=>{
   speichern('MVF-Knowledge-Hub_Neueste-Studien_'+dateiStempel()+'.doc',
-    baueDoc('Neu in PubMed — Studien der Versorgungsforschung', 'Stand: '+alsKlartext(SNAP_DATE), STUDIES, false), DOC_MIME);
+    baueDoc('Neu in PubMed: Versorgungsforschung', 'Stand: '+alsKlartext(SNAP_DATE), STUDIES, false), DOC_MIME);
 });
 document.getElementById('dlAktuellCsv').addEventListener('click', ()=>{
   speichern('MVF-Knowledge-Hub_Neueste-Studien_'+dateiStempel()+'.csv',

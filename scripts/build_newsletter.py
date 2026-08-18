@@ -118,7 +118,7 @@ def build_feed(entries: list[dict]) -> str:
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
         "<channel>",
-        "<title>MVF-Knowledge-Hub: Neueste Studien der Versorgungsforschung</title>",
+        "<title>MVF-Knowledge-Hub: Neueste Studien - Versorgungsforschung</title>",
         f"<link>{escape(utm(HUB, 'email', 'kanal'))}</link>",
         "<description>Täglich ausgewählte Studien aus PubMed, auf Deutsch "
         "zusammengefasst mit den konkreten Ergebnissen. Ein Angebot von "
@@ -145,7 +145,7 @@ def build_feed(entries: list[dict]) -> str:
 
 # ----------------------------------------------------------------- Downloads
 
-KOPFTEXT = ("Ein Service der Knowledge-Datenbank von Monitor Versorgungsforschung. "
+KOPFTEXT = ("Ein Service des Knowledge-Hubs von Monitor Versorgungsforschung. "
             "Täglich automatisiert KI-kuratiert aus PubMed und auf Deutsch übersetzt.")
 LOGO = "logo/mvf-logo.png"
 
@@ -279,9 +279,9 @@ def main() -> int:
     write_csv(f"{DL_DIR}/studien-aktuell.csv", aktuell)
     write_csv(f"{DL_DIR}/studien-archiv.csv", entries)
     write_docx(f"{DL_DIR}/studien-aktuell.docx", aktuell,
-               "Neueste Studien der Versorgungsforschung", stand, zeitpunkt)
+               "Neueste Studien - Versorgungsforschung", stand, zeitpunkt)
     write_docx(f"{DL_DIR}/studien-archiv.docx", entries,
-               "Studienarchiv Versorgungsforschung", stand, zeitpunkt)
+               "Studienarchiv - Versorgungsforschung", stand, zeitpunkt)
     print(f"{DL_DIR}/: aktuell {len(aktuell)} Studien, Archiv {len(entries)} Studien.")
     return 0
 

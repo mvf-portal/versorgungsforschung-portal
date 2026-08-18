@@ -34,9 +34,11 @@ jobs:
 
       - name: Studienliste aktualisieren
         env:
+          # Das Geheimnis heisst in diesem Repository ANTHROPIC_API_KEY. Fehlt es, bricht der
+          # Lauf ab - bewusst ohne Rueckfallweg, damit ein falscher Name auffaellt.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           MODEL: claude-haiku-4-5          # günstiges Modell; z. B. claude-sonnet-5 für mehr Qualität
-          # SEARCH_TERM: '"health services research"'   # optional: anderer Suchbegriff
+          # SEARCH_TERM: '...'   # optional: Standardabfrage ueberschreiben (siehe update_studies.py)
         run: python scripts/update_studies.py
 
       # Baut RSS-Feed (Mailchimp) und Download-Dateien aus dem Archiv.
@@ -51,9 +53,10 @@ jobs:
       - name: Newsletter-Entwurf zur Freigabe anlegen
         continue-on-error: true
         env:
-          # Das Geheimnis heisst im Repository KNOWLEDGEHUB. Der zweite Name
-          # bleibt stehen, falls es spaeter sprechender benannt wird.
-          MAILCHIMP_API_KEY: ${{ secrets.KNOWLEDGEHUB || secrets.MAILCHIMP_API_KEY }}
+          # Das Geheimnis heisst in diesem Repository KNOWLEDGEHUB ("MC" fuer
+          # Mailchimp - nicht mit ANTHROPIC_API_KEY verwechseln, das ist der
+          # Claude-Schluessel).
+          MAILCHIMP_API_KEY: ${{ secrets.KNOWLEDGEHUB }}
         run: python scripts/mailchimp_entwurf.py
 
       - name: Committen & pushen (nur bei Änderung)

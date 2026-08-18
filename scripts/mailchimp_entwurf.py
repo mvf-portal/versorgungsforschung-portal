@@ -45,7 +45,10 @@ from build_newsletter import load, utm            # gemeinsame Basis, kein zweit
 TZ = ZoneInfo("Europe/Berlin")
 
 LIST_ID = "1c8fc10ec7"          # Zielgruppe "eRelation GESAMT"
-TAG_ID = 3433296                # Tag "Studien-Newsletter Pubmed" (Tags sind statische Segmente)
+# Tag "Studien-Newsletter VF" (Tags sind statische Segmente). Die Nummer steht
+# in der Adresszeile, wenn man den Tag in Mailchimp anklickt. Ohne sie faellt das
+# Skript auf die Gruppe zurueck - siehe GRUPPE_NAME.
+TAG_ID = 3433296
 # Dieselbe Bestellung kann auch als Gruppe vorliegen: Mailchimps eigene
 # Anmeldeseite kann nur Gruppen setzen, keine Tags. Wer sich dort eintraegt,
 # traegt nur diese - und bekaeme ohne die zweite Bedingung nie eine Ausgabe.
@@ -61,6 +64,17 @@ FREIGABE_MAIL = "stegmaier@m-vf.de"
 # Titel aller von hier erzeugten Kampagnen. Daran erkennt das Skript spaeter,
 # was schon versendet wurde und was noch aussteht - Mailchimp fuehrt darueber
 # selbst kein Buch, seit die RSS-Kampagne weg ist.
+#
+# **Der Praefix MUSS sich vom Schwesterportal unterscheiden.** Beide Portale
+# schreiben in dasselbe Mailchimp-Konto. Am 17.08.2026 lief dieses Skript mit
+# dem geerbten Praefix "MVF Studien-Newsletter" und meldete: "Entwurf besteht
+# bereits" - es hatte den Entwurf des Versorgungsforschungs-Portals fuer seinen
+# eigenen gehalten und legte gar keinen an.
+#
+# Und er darf mit dem anderen auch nicht *anfangen*: datum_aus_titel() prueft
+# mit startswith(), also wuerde "MVF Studien-Newsletter VF ..." drueben als
+# eigene Kampagne durchgehen. Deshalb ein voellig eigener Name. Ein drittes
+# Portal braucht wieder einen, der mit keinem der beiden beginnt.
 PRAEFIX = "MVF Studien-Newsletter"
 # Obergrenze, falls laenger nicht freigegeben wurde. Eine Ausgabe mit 80
 # Studien liest niemand; der Rest bleibt im Archiv und im Hub sichtbar.
@@ -188,7 +202,7 @@ def newsletter_html(studien: list[dict], hinweis: str = "") -> str:
       <p style="margin:0;font:bold 12px/1.5 {FONT};letter-spacing:1.5px;color:#C9DCF2;">
         VOM KNOWLEDGE-HUB VON MONITOR VERSORGUNGSFORSCHUNG</p>
       <p style="margin:4px 0 0;font:bold 24px/1.3 {FONT};color:#ffffff;">
-        Neueste Studien der Versorgungsforschung</p>
+        Neueste Studien - Versorgungsforschung</p>
       <p style="margin:6px 0 0;font:13px/1.5 {FONT};color:#D8E5F5;">
         Ausgabe vom {escape(lang(tage(studien)[0]))}</p>
     </td></tr>
@@ -310,16 +324,27 @@ class Mailchimp:
     def anlegen(self, titel: str, betreff: str) -> dict:
         # Empfaenger: Tag ODER Gruppe. "any" ist hier wesentlich - mit "all"
         # bekaeme die Ausgabe nur, wer zufaellig beide Kennzeichen traegt.
-        bedingungen = [{"condition_type": "StaticSegment", "field": "static_segment",
-                        "op": "static_is", "value": TAG_ID}]
+        # Solange keine Tag-Nummer hinterlegt ist, darf die Tag-Bedingung nicht
+        # mitgeschickt werden - Mailchimp lehnt "static_is 0" ab und der ganze
+        # Entwurf scheitert. Dann traegt die Gruppe den Versand allein.
+        bedingungen = []
+        if TAG_ID:
+            bedingungen.append({"condition_type": "StaticSegment", "field": "static_segment",
+                                "op": "static_is", "value": TAG_ID})
         gruppe = self.gruppe_suchen(GRUPPE_NAME)
         if gruppe:
             kat, interesse = gruppe
             bedingungen.append({"condition_type": "Interests", "field": f"interests-{kat}",
                                 "op": "interestcontains", "value": [interesse]})
-            print(f"Empfaenger: Tag {TAG_ID} oder Gruppe '{GRUPPE_NAME}' ({interesse}).")
-        else:
+            print(f"Empfaenger: {'Tag %d oder ' % TAG_ID if TAG_ID else ''}"
+                  f"Gruppe '{GRUPPE_NAME}' ({interesse}).")
+        elif TAG_ID:
             print(f"Empfaenger: nur Tag {TAG_ID} - Gruppe '{GRUPPE_NAME}' nicht gefunden.")
+        else:
+            raise SystemExit(
+                f"Kein Empfaenger bestimmbar: TAG_ID ist 0 und die Gruppe "
+                f"'{GRUPPE_NAME}' wurde in Mailchimp nicht gefunden. Bitte die "
+                f"Tag-Nummer in scripts/mailchimp_entwurf.py eintragen.")
 
         rumpf = {
             "type": "regular",
@@ -335,7 +360,9 @@ class Mailchimp:
             # Lieber an die Tag-Traeger allein als gar nicht: Wird die
             # Gruppenbedingung abgelehnt, faellt der Empfaenger auf den Tag
             # zurueck. Ein Entwurf ohne Empfaenger waere wertlos.
-            if not gruppe or "segment" not in str(fehler).lower():
+            # Ohne Tag-Nummer gibt es keinen Rueckfallweg - dann lieber laut
+            # scheitern als einen Entwurf ohne Empfaenger anlegen.
+            if not gruppe or not TAG_ID or "segment" not in str(fehler).lower():
                 raise
             print(f"Gruppenbedingung abgelehnt ({fehler}) - nur ueber den Tag.")
             rumpf["recipients"]["segment_opts"] = {"saved_segment_id": TAG_ID}
@@ -421,7 +448,7 @@ def main() -> int:
 
     titel = f"{PRAEFIX} {dt.date.fromisoformat(heute).strftime('%d.%m.%Y')}"
     t = tage(offen)
-    betreff = ("Neueste Studien der Versorgungsforschung – " +
+    betreff = ("Neueste Studien - Versorgungsforschung – " +
                (lang(t[0]) if len(t) == 1 else f"{lang(t[-1])} bis {lang(t[0])}"))
 
     for k, d in eigene:
