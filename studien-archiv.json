@@ -1,5 +1,31 @@
 [
  {
+  "pmid": "42606900",
+  "journal": "Clin J Am Soc Nephrol",
+  "year": "2026",
+  "author": "Jayasinghe K et al.",
+  "pubdate": "17.08.2026",
+  "added": "17.08.2026",
+  "transfer": "Australische Daten, aber Implementierungsrahmen systemunabhängig auf deutsches Versorgungssystem übertragbar",
+  "title": "Genomische Testung in der Nephrologie: Mainstreaming als effektives Versorgungsmodell",
+  "sum": "Beobachtungsstudie an vier Zentren zur Evaluierung eines \"hub and spoke\"-Modells für genomische Testung bei Nierenkrankheiten mit Schulung niedergelassener Nephrologen.",
+  "result": "1.028 genomische Tests wurden durchgeführt (diagnostische Ausbeute 34%); ähnlich erfolgreich in Zentren (32%) und bei lokalen Nephrologen (38%). Der Anteil der Tests in Mainstream-Nephrologie-Settings stieg von 23% auf 74%, während die Absolutzahlen in Spezialkliniken stabil blieben.",
+  "aufgenommen": "2026-08-18"
+ },
+ {
+  "pmid": "42606848",
+  "journal": "JAMA Neurol",
+  "year": "2026",
+  "author": "Schubert KM et al.",
+  "pubdate": "17.08.2026",
+  "added": "17.08.2026",
+  "transfer": "Internationale TriNetX-Daten, Arzneisicherheit-Fragestellung systemunabhängig relevant",
+  "title": "Sicherheit von Antikonvulsiva unter direkten oralen Antikoagulanzien bei Epilepsie",
+  "sum": "Retrospektive Kohortenstudie mit TriNetX-Daten zu Thromboembolie-, Blutungs- und Mortalitätsrisiken verschiedener Antikonvulsiva bei Epilepsiepatienten unter DOAC-Therapie.",
+  "result": "Levetiracetam war mit erhöhtem thromboembolischem Risiko assoziiert (HR 1,98; 95% CI 1,37–2,87) und höherer Mortalität (HR 1,60; 95% CI 1,23–2,08). Starke Enzym-induzierende ASMs zeigten erhöhtes thromboembolisches Risiko (HR 1,55), aber niedrigere Blutungsrate (HR 0,62).",
+  "aufgenommen": "2026-08-18"
+ },
+ {
   "pmid": "42604452",
   "journal": "Milbank Q",
   "year": "2026",
