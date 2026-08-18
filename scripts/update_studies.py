@@ -4,9 +4,9 @@
 Ablauf:
   1. PubMed E-utilities: zwei Abfragen - die neuesten Treffer allgemein und
      zusaetzlich die mit Deutschlandbezug (MeSH/Affiliation), zusammengefuehrt.
-  2. Claude-API: 5-7 Studien auswaehlen, die konkrete Ergebnisse nennen UND auf
+  2. Claude-API: Studien auswaehlen, die konkrete Ergebnisse nennen UND auf
      das deutsche Versorgungssystem uebertragbar sind, und auf Deutsch
-     zusammenfassen (strukturierte JSON-Ausgabe).
+     zusammenfassen (strukturierte JSON-Ausgabe). Kriterien: thema.py.
   3. Nur den Marker-Block (SNAP_DATE + STUDIES) in index.html ersetzen.
 
 Bricht mit Exit-Code != 0 ab, wenn etwas fehlschlaegt - dann bleibt index.html
@@ -26,20 +26,20 @@ from zoneinfo import ZoneInfo
 import anthropic
 import requests
 
+# Alles Themenspezifische steht in thema.py - Suchabfrage, Rollenbeschreibung,
+# Auswahlregeln, Anzahl. Diese Datei bleibt in allen Portalen wortgleich; wer
+# hier etwas korrigiert, kann es mit vorlage-abgleich.py in die Schwesterportale
+# uebernehmen. Wer das Thema aendert, aendert thema.py.
+from thema import (ANZAHL_MAX, ANZAHL_MIN, ANZAHL_SOLL, EUROPA_ZUERST, KAPPEN,
+                   NCBI_TOOL, POOL_ALLGEMEIN, POOL_EUROPA, SYSTEM, TERM, TERM_DE,
+                   USER_TEMPLATE)
+
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
-TERM = os.environ.get("SEARCH_TERM", '"health services research"')
-# Zweite Abfrage, damit Arbeiten mit Deutschlandbezug den Kandidatenpool
-# sicher erreichen. Ueber MeSH und Autorenadresse, nicht ueber Journalnamen -
-# deutschsprachige Journale liefern kaum Treffer.
-TERM_DE = os.environ.get(
-    "SEARCH_TERM_DE",
-    f"{TERM} AND (Germany[MeSH Terms] OR Germany[Affiliation])",
-)
 MODEL = os.environ.get("MODEL", "claude-haiku-4-5")  # Standard: guenstig; via MODEL-env aenderbar
 INDEX = "index.html"
 
 # NCBI bittet bei automatisierten Zugriffen um Tool-Kennung und Kontaktadresse.
-NCBI_TOOL = "versorgungsforschung-portal"
+# Die Kennung kommt aus thema.py (Repo-Name des jeweiligen Portals).
 NCBI_EMAIL = os.environ.get("NCBI_EMAIL", "stegmaier@m-vf.de")
 
 START = "// === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ==="
@@ -57,6 +57,11 @@ SCHEMA = {
     "properties": {
         "studies": {
             "type": "array",
+            # **Hier keine Laengenbegrenzung eintragen.** Am 17.08.2026 nacheinander
+            # ausprobiert und beide Male mit HTTP 400 abgelehnt:
+            #   minItems -> "values other than 0 or 1 are not supported"
+            #   maxItems -> "property 'maxItems' is not supported"
+            # Die Anzahl wird deshalb in pick_studies() geregelt, nicht im Schema.
             "items": {
                 "type": "object",
                 "additionalProperties": False,
@@ -68,91 +73,14 @@ SCHEMA = {
                     "title": {"type": "string"},
                     "sum": {"type": "string"},
                     "result": {"type": "string"},
-                    # Kurze Begruendung, warum das Ergebnis auf das deutsche
-                    # Versorgungssystem uebertragbar ist - oder warum nur bedingt.
+                    # Kurze Begruendung, warum das Ergebnis auf Deutschland
+                    # uebertragbar ist - oder warum nur bedingt.
                     "transfer": {"type": "string"},
                 },
             },
         }
     },
 }
-
-SYSTEM = (
-    "Du bist Fachredakteur fuer Versorgungsforschung / Health Services Research. "
-    "Aus einer Liste von PubMed-Abstracts waehlst du die relevantesten aktuellen "
-    "Studien aus und fasst sie praezise auf Deutsch zusammen."
-)
-
-USER_TEMPLATE = """Unten stehen aktuelle PubMed-Abstracts (nach Datum sortiert).
-
-Waehle GENAU 6 Studien aus, die (a) fuer Versorgungsforschung / Health Services Research
-relevant sind UND (b) im Abstract KONKRETE quantitative Ergebnisse nennen
-(Prozentwerte, Odds/Hazard Ratios, p-Werte, Fallzahlen). Ueberspringe Studien ohne
-Abstract oder ohne konkrete Ergebnisse. Achte auf thematische Vielfalt.
-
-WICHTIGSTES AUSWAHLKRITERIUM - Übertragbarkeit auf Deutschland:
-Die Leserschaft arbeitet im deutschen Versorgungssystem. Bei sonst gleicher
-Qualität hat die übertragbare Studie IMMER Vorrang vor der aktuelleren.
-
-Übertragbarkeit richtet sich nach dem SYSTEMKONTEXT, nicht nach der Herkunft
-der Autoren. Eine niederländische Arbeit zur Primärversorgung ist oft
-übertragbarer als eine deutsche Methodenarbeit.
-
-  Hoch:    Deutschland, Österreich, Schweiz - gleiche Grundstruktur.
-           Niederlande, Belgien, Frankreich - Sozialversicherungssysteme mit
-           Beitragsfinanzierung, Kassen und niedergelassenem Sektor.
-  Mittel:  Skandinavien, Großbritannien, Kanada, Australien - steuerfinanziert
-           und stark hausarztgesteuert; bei Fragen zu Prozessen, Qualität und
-           Patientenperspektive gut übertragbar, bei Vergütung und
-           Zugangssteuerung nur eingeschränkt.
-  Gering:  USA - fragmentierte Versicherung, Medicaid/Medicare, andere
-           Anreizstrukturen. Nur nehmen, wenn die Fragestellung systemunabhängig
-           ist (z. B. klinische Prozesse, Patientensicherheit, Messinstrumente).
-           Ebenso Studien aus Systemen mit grundlegend anderer Ressourcenlage.
-
-Nimm höhere Übertragbarkeit auch dann, wenn die Studie ein paar Tage älter ist.
-Eine reine US-Vergütungsstudie gehört nur in die Auswahl, wenn sonst nichts
-Brauchbares vorliegt.
-
-Fuer jede Studie:
-- journal: Journalname genau so, wie er in der Kopfzeile des Abstracts steht -
-  Abkuerzung nicht aufloesen, nichts ergaenzen. (Wird ohnehin durch die Angabe
-  aus PubMed ersetzt; rate hier nichts.)
-- year: Erscheinungsjahr, z. B. "2026"
-- pmid: die PubMed-ID
-- title: praegnanter deutscher Titel
-- sum: 1 Satz auf Deutsch, was die Studie untersucht hat
-- result: Deutsch, die konkreten Zahlen/Befunde + ein kurzer Einordnungssatz.
-  Deutsches Zahlenformat mit Komma (z. B. 0,63).
-- transfer: EIN Halbsatz (höchstens 12 Wörter), warum das Ergebnis für das
-  deutsche Versorgungssystem taugt - oder wo die Grenze liegt. Nenne das Land
-  bzw. die Datengrundlage. Keine ganzen Sätze, keine Wiederholung des Titels.
-  Gut:      "Deutsche Routinedaten, gesetzlich Versicherte"
-            "Niederlande, vergleichbares Sozialversicherungssystem"
-            "US-Daten - Fragestellung aber systemunabhängig"
-            "Nur bedingt: steuerfinanziertes System, andere Zugangssteuerung"
-  Schlecht: "Diese Studie ist gut übertragbar." (sagt nichts)
-
-WICHTIG - Fachterminologie: Etablierte englische Fachbegriffe NICHT eindeutschen.
-Sie sind auch im deutschen Fachdeutsch stehende Begriffe; eine woertliche Uebersetzung
-wirkt unprofessionell und erschwert das Wiederfinden. Beispiele fuer Begriffe, die
-englisch bleiben: Door-to-Balloon-Zeit, Patient-Reported Outcomes, Shared Decision
-Making, Case Management, Disease Management, Public Health, Screening, Follow-up,
-Outcome, Adherence, Value-Based Care, Hazard Ratio, Odds Ratio, Confounder, Baseline,
-Setting, Cluster. Gaengige Abkuerzungen ebenfalls unveraendert lassen: STEMI, COPD,
-ICU, PROM, DRG, ACSC.
-Faustregel: Wuerde eine deutsche Fachzeitschrift wie Monitor Versorgungsforschung den
-Begriff englisch stehen lassen, dann tue es auch. Im Zweifel englisch belassen und bei
-Bedarf eine kurze deutsche Erlaeuterung in Klammern ergaenzen.
-Umgekehrt gilt: Wo es ein gebraeuchliches deutsches Fachwort gibt (Verweildauer,
-Hausarztkontakt, Nutzenbewertung, Fallzahl), dieses verwenden.
-
-Gib ausschliesslich das geforderte JSON zurueck.
-
-=== ABSTRACTS ===
-{abstracts}
-"""
-
 
 def _get(path: str, params: dict, timeout: int) -> requests.Response:
     """GET mit drei Versuchen - PubMed ist gelegentlich kurz nicht erreichbar."""
@@ -185,23 +113,30 @@ def _suche(term: str, anzahl: int) -> list[str]:
 def fetch_pubmed() -> str:
     """Zwei Abfragen statt einer, zusammengefuehrt und entdoppelt.
 
-    Die allgemeine Abfrage allein reicht nicht: Nur etwa 17 % der Neuaufnahmen
-    haben ueberhaupt Deutschlandbezug (gemessen: 35 von 209 im August). In
-    dichten Wochen - zuletzt 92 Neuaufnahmen in sieben Tagen - fielen deutsche
-    Arbeiten aus dem Fenster, bevor das Modell sie zu sehen bekam.
+    Die allgemeine Abfrage allein reicht in keinem der Portale. Publiziert wird
+    weltweit, mit starkem Uebergewicht der USA und Asiens; die tagesaktuellen
+    Neuaufnahmen sind entsprechend dominiert. Fuer eine deutsche Leserschaft
+    zaehlt aber, was in einem vergleichbaren Versorgungs- und Rechtsrahmen gilt.
 
-    Die zweite Abfrage stellt sicher, dass sie es immer tun. Ueber Journalnamen
-    zu suchen bringt uebrigens nichts: im ganzen August genau ein Treffer.
+    Deshalb stellt die Europa-Abfrage die MEHRHEIT des Pools und steht vorn:
+    Ein Sprachmodell gewichtet, was es zuerst liest. Die Groessen stehen in
+    thema.py (POOL_EUROPA, POOL_ALLGEMEIN).
     """
-    allgemein = _suche(TERM, 40)
-    deutsch = _suche(TERM_DE, 15)
-    # Reihenfolge: erst die allgemein neuesten, dann alles mit Deutschlandbezug,
-    # das noch nicht dabei ist. Der Abstract-Block bleibt so nach Datum sortiert.
-    ids = allgemein + [p for p in deutsch if p not in allgemein]
+    europa = _suche(TERM_DE, POOL_EUROPA)
+    allgemein = _suche(TERM, POOL_ALLGEMEIN)
+    # Reihenfolge: in der Regel erst Europa, dann der Rest der weltweit neuesten.
+    # Wer das umdreht, bekommt eine Auswahl ohne Bezug zu hiesigen Verhaeltnissen
+    # - im Klima-Portal nachgewiesen. EUROPA_ZUERST steht in thema.py, weil das
+    # Versorgungsforschungs-Portal es seit jeher andersherum haelt.
+    if EUROPA_ZUERST:
+        ids = europa + [p for p in allgemein if p not in europa]
+    else:
+        ids = allgemein + [p for p in europa if p not in allgemein]
     if not ids:
         raise RuntimeError("esearch lieferte keine PMIDs")
-    print(f"{len(allgemein)} allgemein + {len(ids) - len(allgemein)} zusaetzlich "
-          f"mit Deutschlandbezug = {len(ids)} Kandidaten.")
+    print(f"{len(europa)} mit Europa-/Deutschlandbezug, {len(allgemein)} weltweit, "
+          f"zusammengefuehrt {len(ids)} Kandidaten "
+          f"({'Europa zuerst' if EUROPA_ZUERST else 'weltweit zuerst'}).")
     r2 = _get(
         "efetch.fcgi",
         {"db": "pubmed", "id": ",".join(ids), "rettype": "abstract", "retmode": "text"},
@@ -254,18 +189,18 @@ def fetch_meta(pmids: list[str]) -> dict[str, dict]:
     """Journal, Jahr, Autor und Publikationsdatum ueber esummary holen.
 
     Bewusst nicht vom Sprachmodell erraten lassen: Das sind harte Fakten.
+    sortpubdate wird ignoriert - PubMed setzt dort bei reinen Monatsangaben
+    den 1. ein, was einen Tag vortaeuschen wuerde. Genommen wird die
+    genaueste ECHTE Angabe aus pubdate und epubdate.
 
-    **Das Journal gehoert unbedingt hierher, nicht in die Modellantwort.** Im
-    Schwesterportal ki.m-vf.de stand am 17.08.2026 ueber einer Studie aus
+    **Das Journal gehoert unbedingt hierher, nicht in die Modellantwort.** Beim
+    ersten Lauf dieses Portals am 17.08.2026 stand ueber einer Studie aus
     NPJ Prim Care Respir Med der Name Nat Commun, und aus Qual Life Res wurde
     das ausgeschriebene Quality of Life Research. Beides plausibel, beides
     falsch: Der Abstract-Block nennt das Journal nur in der Kopfzeile, und ein
     Sprachmodell ergaenzt dort bereitwillig, was haeufig vorkommt. Eine falsche
     Quellenangabe ist in einem Rechercheportal der teuerste aller kleinen
-    Fehler - sie macht die Studie unauffindbar.
-    sortpubdate wird ignoriert - PubMed setzt dort bei reinen Monatsangaben
-    den 1. ein, was einen Tag vortaeuschen wuerde. Genommen wird die
-    genaueste ECHTE Angabe aus pubdate und epubdate.
+    Fehler - sie macht die Studie unauffindbar und das Portal unglaubwuerdig.
     """
     r = _get("esummary.fcgi",
              {"db": "pubmed", "retmode": "json", "id": ",".join(pmids)},
@@ -295,8 +230,8 @@ def fetch_meta(pmids: list[str]) -> dict[str, dict]:
         eintrag = {"author": autor, "pubdate": datum,
                    "added": aufnahme, "_sort": _sortschluessel(e)}
         # source ist die von PubMed gefuehrte Journal-Abkuerzung. Nur setzen,
-        # wenn sie wirklich da ist - eine ungefaehre Angabe ist immer noch
-        # besser als eine leere.
+        # wenn sie wirklich da ist - sonst bliebe die Angabe leer, und eine
+        # ungefaehre Angabe ist immer noch besser als gar keine.
         if e.get("source"):
             eintrag["journal"] = e["source"]
         jahr = (datum or "")[-4:]
@@ -321,7 +256,18 @@ def pick_studies(abstracts: str) -> list[dict]:
     )
     text = next(b.text for b in resp.content if b.type == "text")
     studies = json.loads(text)["studies"]
-    if not 5 <= len(studies) <= 7:
+    # Zu viele ist kein Grund abzubrechen: Die Auswahl ist nach Relevanz
+    # geordnet, die vorderen sechs sind brauchbar. Am 17.08.2026 lieferte das
+    # Modell trotz "waehle GENAU 6" neun Stueck - und weil das Schema keine
+    # Laengenbegrenzung zulaesst (siehe SCHEMA), wird hier gekappt.
+    if len(studies) > ANZAHL_MAX:
+        if not KAPPEN:
+            raise RuntimeError(f"Unerwartete Studienanzahl: {len(studies)}")
+        print(f"{len(studies)} Studien geliefert - auf die ersten {ANZAHL_SOLL} gekuerzt.")
+        studies = studies[:ANZAHL_SOLL]
+    # Zu wenige dagegen heisst, dass etwas grundsaetzlich schieflief - dann
+    # lieber sichtbar scheitern als eine duenne Auswahl veroeffentlichen.
+    if len(studies) < ANZAHL_MIN:
         raise RuntimeError(f"Unerwartete Studienanzahl: {len(studies)}")
     return studies
 
