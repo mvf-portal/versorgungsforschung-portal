@@ -2,7 +2,7 @@
 <html lang="de">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Newsletter von Monitor Versorgungsforschung bestellen: den täglichen Studien-Newsletter aus dem Knowledge-Hub, den redaktionellen MVF-Newsletter — oder beide.">
+<meta name="description" content="Newsletter von Monitor Versorgungsforschung bestellen: den täglichen Studien-Newsletter aus dem Knowledge-Hub, die Studienauswahl der Schwesterportale zu Klima, KI und Pflege, den redaktionellen MVF-Newsletter — einzeln oder zusammen.">
 <title>Newsletter bestellen — Monitor Versorgungsforschung</title>
 <link rel="canonical" href="https://wissen.m-vf.de/newsletter.html">
 <style>
@@ -141,6 +141,11 @@
   }
   .karte .was{ display:block; font-size:13.5px; line-height:1.5; color:var(--ink-soft); }
 
+  .reihe-vor{ margin:-4px 0 12px; }
+  /* Die Karten der Schwesterportale tragen zusaetzlich die Domain. */
+  .karte .wo{ display:block; font-size:12.5px; color:var(--ink-faint); margin-top:7px; }
+  .karte .wo a{ color:var(--ink-faint); }
+
   label.feld{ display:block; font-size:13px; font-weight:700; color:var(--ink-soft); margin-bottom:6px; }
   input[type="email"]{
     width:100%; max-width:420px; min-height:46px; padding:0 13px;
@@ -201,8 +206,9 @@
     <div>
       <p class="eyebrow">Knowledge-Hub Versorgungsforschung</p>
       <h1>Newsletter bestellen</h1>
-      <p class="standfirst">Zwei Newsletter, eine Anmeldung: die tägliche Studienauswahl aus dem
-      Hub, der redaktionelle Newsletter von „Monitor Versorgungsforschung" — oder beide.</p>
+      <p class="standfirst">Eine Anmeldung für alles: die tägliche Studienauswahl dieses Hubs,
+      die Studienauswahl der Schwesterportale und der redaktionelle Newsletter von
+      „Monitor Versorgungsforschung" — einzeln oder zusammen.</p>
     </div>
     <a class="marke" href="https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&amp;utm_medium=referral&amp;utm_campaign=logo" target="_blank" rel="noopener" title="Monitor Versorgungsforschung — Herausgeber dieses Portals">
       <img src="logo/mvf-logo.png" width="1236" height="327" alt="Monitor Versorgungsforschung">
@@ -220,9 +226,7 @@
           <input type="checkbox" id="wahlStudien" checked>
           <span class="takt">täglich</span>
           <b>Studien-Newsletter</b>
-          <span class="was">Die Studienauswahl des Hubs jeden Morgen per E-Mail: deutsche
-          Zusammenfassungen, die Ergebniszahlen und die Einordnung, was sich auf das deutsche
-          Versorgungssystem übertragen lässt. Dazu die Word- und Excel-Datei zum Tag.</span>
+          <span class="was">Die Studienauswahl des Hubs jeden Morgen per E-Mail: deutsche Zusammenfassungen, die Ergebniszahlen und die Einordnung, was sich auf das deutsche Versorgungssystem übertragen lässt. Dazu die Word- und Excel-Datei zum Tag.</span>
         </label>
         <label class="karte">
           <input type="checkbox" id="wahlMvf">
@@ -233,6 +237,17 @@
           Veranstaltungen und Ausgabenhinweise.</span>
         </label>
       </div>
+    </fieldset>
+
+    <!-- Die Schwesterportale. Der Abschnitt wird aus REIHE (siehe Skript) erzeugt
+         und bleibt verborgen, solange die Reihe ausser diesem Portal nichts
+         Bereites enthaelt - eine leere Ueberschrift waere schlimmer als keine. -->
+    <fieldset id="feldReihe" hidden>
+      <legend>Auch aus den Schwesterportalen</legend>
+      <p class="fein reihe-vor">Dieselbe Machart, anderes Thema — jeder dieser Newsletter kommt
+      aus einem eigenen Rechercheportal von „Monitor Versorgungsforschung" und ist einzeln
+      abbestellbar.</p>
+      <div class="wahl" id="wahlReihe"></div>
     </fieldset>
 
     <div>
@@ -261,8 +276,9 @@
 
   <p class="fein">Die Anmeldung wird an unseren Versanddienstleister Mailchimp übermittelt.
   Anschließend erhalten Sie eine E-Mail mit einem Bestätigungslink; erst mit dem Klick darauf
-  beginnt der Versand (Double-Opt-in) — so kann niemand fremde Adressen eintragen. Beide
-  Newsletter sind kostenfrei und jederzeit einzeln abbestellbar.</p>
+  beginnt der Versand (Double-Opt-in) — so kann niemand fremde Adressen eintragen. Alle
+  Newsletter sind kostenfrei und jederzeit einzeln abbestellbar; Ihre Auswahl können Sie
+  später über den Link „Einstellungen ändern" am Ende jeder E-Mail anpassen.</p>
 
 </main>
 
@@ -311,13 +327,21 @@ const MC = {
   //
   // Sortiert wird die Hausliste aber ueber TAGS. Das Formular kann sie
   // mitgeben - Feld "tags" mit den NUMMERN, kommagetrennt. Die Nummer steht in
-  // der Adresszeile, wenn man den Tag anklickt (dort als "static_segment").
-  tagStudien: "3433296",          // Studien-Newsletter Pubmed
-  // Dazu die Gruppe, die Mailchimps eigene Anmeldeseite anbietet. Wer sich
-  // dort eintraegt, bekommt nur sie; wer sich hier eintraegt, bekaeme ohne
-  // diese Zeile nur den Tag - und stuende in keinem der Segmente des jeweils
-  // anderen Weges. Sie liegt in einer eigenen Gruppenmenge (16135).
-  gruppeStudien: "group[16135][512]",
+  // der Adresszeile, wenn man den Tag in Mailchimp anklickt (als "static_segment").
+  // Hier steht die Nummer des Tags dieses Portals, sofern es einen gibt. Bleibt
+  // sie leer, traegt die Anmeldung nur die Gruppe ein - das genuegt zum Versand,
+  // die RSS-Kampagne wird dann ueber die Gruppe segmentiert. Eine "0" darf hier
+  // NICHT stehen: In JavaScript ist die Zeichenkette "0" wahr, und Mailchimp
+  // bekaeme tags=0 geschickt.
+  tagStudien: "3433296",
+  // Die Gruppen der drei Studien-Newsletter liegen in je eigenen Gruppenmengen.
+  // Am 17.08.2026 auf der gehosteten Mailchimp-Anmeldeseite ausgelesen:
+  //   group[16135][512]   Studien Newsletter VF    -> wissen.m-vf.de
+  //   group[16136][1024]  Studien Newsletter Klima -> klima.m-vf.de
+  //   group[16135][512]  Studien Newsletter VF    -> dieses Portal
+  // Achtung beim Nachschlagen: Auf der Mailchimp-Seite steht die Beschriftung
+  // VOR dem Ankreuzfeld. Wer sie dahinter liest, ordnet alle drei falsch zu.
+  gruppeStudien: "group[16135][512]",   // Studien Newsletter VF
   // Der MVF-Newsletter bleibt bewusst bei der Gruppe - das ist kein
   // Provisorium. Seine Abonnenten tragen sie seit jeher, und das Formular auf
   // m-vf.de traegt sie weiter ein. Ein zusaetzlicher Tag waere nur bei den
@@ -329,16 +353,72 @@ const MC = {
   gruppeMvf:         "group[5629][4]",
   gruppeDatenschutz: "group[5629][64]"
 };
+// ---------------------------------------------------------------------------
+// Alle Studien-Newsletter der Reihe - in JEDEM Portal dieselbe Liste. Das
+// eigene Portal wird unten anhand von MC.gruppeStudien herausgenommen, sodass
+// niemand seinen eigenen Newsletter zweimal angeboten bekommt.
+//
+// Kommt ein Portal hinzu, wird hier EINE Zeile ergaenzt und die Aenderung mit
+// `py vorlage-abgleich.py --alle --uebernehmen` in alle Portale gezogen. Genau
+// dafuer ist newsletter.html seit dem 18.08.2026 eine neutrale Datei.
+//
+// `bereit: false` heisst: Die Gruppe steht in Mailchimp, das Portal versendet
+// aber noch nicht (fehlende Secrets, fehlendes Zertifikat). Solche Zeilen
+// werden nicht angeboten - man kann niemanden auf einen Newsletter setzen, den
+// es noch nicht gibt. Umschalten ist dann ein Wort.
+//
+// `url` bewusst mit dem Schema, das die Domain heute wirklich beantwortet:
+// ki.m-vf.de und pflege.m-vf.de haben noch kein Zertifikat. Sobald HTTPS
+// erzwungen ist, leitet http dorthin um - der Link bleibt also richtig.
+const REIHE = [
+  { gruppe:"group[16135][512]",  titel:"Versorgungsforschung",
+    url:"https://wissen.m-vf.de", domain:"wissen.m-vf.de", bereit:true,
+    was:"Versorgungsforschung und Health Services Research: Versorgungsformen, "
+      + "Qualitaet, Steuerung und Nutzenbewertung." },
+  { gruppe:"group[16136][1024]", titel:"Hitze, Klima &amp; Gesundheit",
+    url:"https://klima.m-vf.de",  domain:"klima.m-vf.de",  bereit:true,
+    was:"Hitze, Extremwetter und Klimawandel und was sie fuer Versorgung, "
+      + "Praxis und Bevoelkerungsgesundheit bedeuten." },
+  { gruppe:"group[16137][2048]", titel:"Digitalisierung, KI &amp; Gesundheit",
+    url:"https://ki.m-vf.de",      domain:"ki.m-vf.de",     bereit:true,
+    was:"Digitale Anwendungen und Kuenstliche Intelligenz in der Versorgung - "
+      + "vom Entscheidungsassistenten bis zur Regulierung." },
+  { gruppe:"group[16138][4096]", titel:"Pflege &amp; Langzeitversorgung",
+    url:"https://pflege.m-vf.de",  domain:"pflege.m-vf.de", bereit:true,
+    was:"Pflegerische Versorgung, Langzeitpflege und die Lage der Pflegenden - "
+      + "Personal, Qualitaet, Angehoerige." }
+];
+
 const MC_SEITE = "https://monitor-versorgungsforschung.us6.list-manage.com/subscribe?u=f4c91757bc7d8c740641acb50&id=1c8fc10ec7";
 const MVF_FORMULAR = "https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&utm_medium=referral&utm_campaign=newsletter#studien-newsletter";
 
 const form         = document.getElementById('anmeldung');
+const feldReihe    = document.getElementById('feldReihe');
+const wahlReihe    = document.getElementById('wahlReihe');
 const feldMail     = document.getElementById('email');
 const wahlStudien  = document.getElementById('wahlStudien');
 const wahlMvf      = document.getElementById('wahlMvf');
 const einwilligung = document.getElementById('einwilligung');
 const knopf        = document.getElementById('absenden');
 const meldung      = document.getElementById('meldung');
+
+// Die Karten der Schwesterportale entstehen erst hier - so steht die Liste nur
+// einmal im Dokument und kein Portal traegt handgeschriebene Kacheln mit sich
+// herum, die beim naechsten Abgleich auseinanderlaufen.
+const andere = REIHE.filter(x => x.bereit && x.gruppe !== MC.gruppeStudien);
+if(andere.length){
+  wahlReihe.innerHTML = andere.map((x, i) => (
+    '<label class="karte">'
+    + '<input type="checkbox" class="wahlAnderes" data-gruppe="' + x.gruppe + '">'
+    + '<span class="takt">täglich</span>'
+    + '<b>Studien-Newsletter ' + x.titel + '</b>'
+    + '<span class="was">' + x.was + '</span>'
+    + '<span class="wo"><a href="' + x.url + '/?utm_source=knowledge-hub&amp;utm_medium=referral'
+    + '&amp;utm_campaign=newsletter" target="_blank" rel="noopener">' + x.domain + '</a></span>'
+    + '</label>'
+  )).join('');
+  feldReihe.hidden = false;
+}
 
 function sage(text, art){
   meldung.className = 'meldung ' + (art || '');
@@ -386,7 +466,8 @@ form.addEventListener('submit', (e)=>{
   e.preventDefault();
   if(laeuft) return;
 
-  if(!wahlStudien.checked && !wahlMvf.checked){
+  const gewaehlteAndere = [...document.querySelectorAll('.wahlAnderes:checked')];
+  if(!wahlStudien.checked && !wahlMvf.checked && !gewaehlteAndere.length){
     sage('Bitte wählen Sie mindestens einen Newsletter aus.', 'fehler');
     wahlStudien.focus(); return;
   }
@@ -418,9 +499,15 @@ form.addEventListener('submit', (e)=>{
   document.getElementById('falle').name = 'b_' + MC.u + '_' + MC.id;
   // Zwei Newsletter, zwei Kennzeichen - jedes so, wie es in der Liste
   // tatsaechlich gefuehrt wird.
-  if(wahlStudien.checked) verborgen('tags', MC.tagStudien);
+  // Das Tag-Feld nur mitschicken, wenn eine Nummer hinterlegt ist - ein leeres
+  // "tags" wuerde Mailchimp als Loeschanweisung missverstehen koennen.
+  if(wahlStudien.checked && MC.tagStudien) verborgen('tags', MC.tagStudien);
   if(wahlStudien.checked) verborgen(MC.gruppeStudien, '1');
   if(wahlMvf.checked)     verborgen(MC.gruppeMvf, '1');
+  // Jeder Schwester-Newsletter ist eine eigene Gruppe in einer eigenen
+  // Gruppenmenge - sie stehen nebeneinander und schliessen einander nicht aus.
+  // Der Tag bleibt aussen vor: Er gehoert zu diesem Portal, nicht zu jenen.
+  gewaehlteAndere.forEach(el => verborgen(el.dataset.gruppe, '1'));
   // MVF vermerkt die gelesene Datenschutzerklaerung als eigene Gruppe. Damit
   // Anmeldungen von hier genauso dokumentiert sind wie die von m-vf.de.
   verborgen(MC.gruppeDatenschutz, '1');
