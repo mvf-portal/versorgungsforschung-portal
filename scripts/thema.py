@@ -30,14 +30,20 @@ POOL_EUROPA = 15
 POOL_ALLGEMEIN = 40
 EUROPA_ZUERST = False
 
-# Wie viele Studien taeglich erscheinen. KAPPEN=False heisst: zu viele lassen
-# den Lauf scheitern, statt gekuerzt zu werden.
+# Wie viele Studien taeglich erscheinen. KAPPEN=True heisst: liefert das Modell
+# zu viele, werden die ersten ANZAHL_SOLL genommen, statt den Lauf abzubrechen.
+# Stand bis zum 19.08.2026 auf False, damit der Anschluss an die Vorlage die
+# Auswahl dieses aeltesten Portals nicht unbemerkt veraendert. Am 19.08.2026
+# kamen 12 Studien, der Lauf brach ab - und damit fiel nicht nur der Newsletter
+# aus, sondern auch das Studien-Update der Seite. Seither wie in allen anderen
+# Portalen: kappen. Die Auswahl ist nach Relevanz sortiert; die vorderen sechs
+# sind dieselben, die das Portal auch sonst genommen haette.
 # **Nicht ins JSON-Schema schreiben** — die Anthropic-API lehnt minItems > 1
 # und maxItems ab.
 ANZAHL_SOLL = 6
 ANZAHL_MAX = 7
 ANZAHL_MIN = 5
-KAPPEN = False
+KAPPEN = True
 
 # ------------------------------------------------------------------- Prompts
 SYSTEM = (
