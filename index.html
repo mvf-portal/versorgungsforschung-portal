@@ -1014,62 +1014,71 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "20. Aug. 2026, 09:13 Uhr";
+const SNAP_DATE = "20. Aug. 2026, 09:24 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
     journal:"Nurs Outlook", year:"2026", pmid:"42617414",
     author:"Noorland SA et al.", pubdate:"19.08.2026",
     added:"19.08.2026",
-    title:"Pflegepersonal auf künftige Pandemien vorbereitet: Mentale Leistungsfähigkeit und Bedarf an psychosozialer Unterstützung",
-    sum:"Niederländische Querschnittsstudie mit 679 Pflegekräften zum Assessment ihrer mentalen Leistungsfähigkeit und des Unterstützungsbedarfs für künftige Pandemien.",
-    result:"90,4% der Pflegekräfte fühlten sich mental in der Lage, in zukünftigen Pandemien Versorgung zu leisten (keine signifikanten Assoziationen mit Demographie oder COVID-19-Erfahrung). Psychische Gesundheit war insgesamt gut (Median Mental Health Inventory-5: 84). Bevorzugte Unterstützungsformen waren kollegiale Peer-Gespräche, Moralische Fallberatung und eins-zu-eins Coaching. Hauptthemen: Belastung durch Fallzahlen, Miterleben von Patientenleid und Patientenisolation.",
-    transfer:"Niederlande, vergleichbares Gesundheitssystem und Pflegepersonalkontext"
+    title:"Pflegefachkräfte auf zukünftige Pandemien vorbereitet: Nationale Querschnittstudie zu psychischer Leistungsfähigkeit und Unterstützungsbedarf",
+    sum:"Niederländische Querschnittstudie mit 679 Pflegefachkräften zur psychischen Leistungsfähigkeit und Unterstützungsbedarf während künftiger Pandemien.",
+    result:"90,4% fühlten sich psychisch leistungsfähig, Median Mental Health Inventory-5 von 84, Pflegefachkräfte bevorzugten Peer-Support (Gruppengespräche, moralische Fallbesprechungen), gefolgt von 1:1-Coaching; hauptsächliche Unterstützungsthemen waren Arbeitsbelastung, Leid von Patienten und Einsamkeit.",
+    transfer:"Niederlande, vergleichbares Sozialversicherungssystem mit ähnlichen Pflegestrukturen"
   },
   {
     journal:"J Med Internet Res", year:"2026", pmid:"42617155",
     author:"Bouchmal S et al.", pubdate:"19.08.2026",
     added:"19.08.2026",
-    title:"Datenreife in der Langzeitpflege: Gemischte Methodenstudie zur Kapazität und Bereitschaft",
-    sum:"Niederländische Querschnittsstudie mit n=3 Langzeitpflegeorganisationen zur Bewertung ihrer Datenreife und Stakeholder-Perspektiven auf Datennutzung.",
-    result:"Alle Langzeitpflegeorganisationen operieren auf niedriger bis mittlerer Datenreife. Domains Strategie, Governance und Datenqualität waren durchgängig niedrig. Größte Variabilität in Leadership und Kultur-Domain. Vier Schlüsselthemen identifiziert: 1) Absence klarer Vision für datengestützte Versorgung, 2) Datenkultur als Voraussetzung für Lernen, 3) Innovation limitiert durch eingeschränkte Interdisziplinarität und Kommunikation, 4) Nachhaltige Datennutzung durch Infrastruktur und Kulturbereitschaft behindert.",
-    transfer:"Niederlande, Langzeitpflege-Kontext mit ähnlichen Strukturen"
+    title:"Datenmaturität in stationären Langzeitpflegeeinrichtungen: Mixed-Methods-Studie",
+    sum:"Explorative Mixed-Methods-Studie in 3 niederländischen Langzeitpflegeeinrichtungen zur Bewertung von Datenmaturität mittels 7-Domains-Assessment mit 77 Items und qualitativen Fokusgruppen.",
+    result:"Langzeitpflegeeinrichtungen operieren auf niedriger Datenmaturitätsstufe; Domains Strategie, Governance und Datenqualität waren niedrig und konsistent über Organisationen hinweg; die größten Lücken zeigten sich in Führung und Organisationskultur; 15 Stakeholder identifizierten 4 übergreifende Themen: fehlende Visions für datengesteuerte Versorgung, Datenkulturbedarf, mangelnde Interdisziplinarität und infrastrukturelle Kapazitätslücken.",
+    transfer:"Niederlande, vergleichbares Versorgungssystem mit ähnlichen langzeitpflege-Strukturen"
+  },
+  {
+    journal:"Soc Psychiatry Psychiatr Epidemiol", year:"2026", pmid:"42616064",
+    author:"Aluh DO et al.", pubdate:"19.08.2026",
+    added:"19.08.2026",
+    title:"Förderung von Autonomie in Zwangsbetreuung: Vergleichende Analyse europäischer Gesetze in 27 Ländern",
+    sum:"Vergleichende Analyse von Gesetzen aus 27 europäischen Jurisdiktionen zu Autonomie-fördernden Bestimmungen bei Zwangsbetreuung unter Berücksichtigung der UN-Behindertenrechtskonvention.",
+    result:"Alle 27 Legislationen beinhalten Maßnahmen zum Legalitätsprinzip, Berufungsrecht und rechtliche Unterstützung; Advance Healthcare Directives und Supported Decision-Making waren seltener verankert; Verfahrensschutzgarantien sind etabliert, aber signifikante Varianz bei anderen Autonomie-fördernden Mechanismen bleibt bestehen.",
+    transfer:"Europäische Legislationen inklusive Deutschland, Österreich, Schweiz"
   },
   {
     journal:"Rheumatology (Oxford)", year:"2026", pmid:"42616666",
     author:"Hagen G et al.", pubdate:"19.08.2026",
     added:"19.08.2026",
-    title:"Kosteneffektivität der Herpes-Zoster-Impfung bei rheumatoider Arthritis: norwegische Health-System-Perspektive",
-    sum:"Markov-Modell-Analyse zur Kosteneffektivität der rekombinanten Zoster-Vakzine (RZV) vs. keine Impfung bei RA-Patienten mit Lebenszeitperspektive.",
-    result:"RZV-Impfung führte zu 2.550 vermiedenen HZ-Fällen und 1.303 PHN-Fällen pro 10.000 RA-Patienten. ICER betrug EUR 11.205/QALY (unter EUR 23.650/QALY-Schwelle). Probabilistische Analyse zeigte 98% Wahrscheinlichkeit von Kosteneffektivität. Ergebnisse sensibel gegenüber Wahrscheinlichkeit von PHN als HZ-Sequela.",
-    transfer:"Norwegen, steuerfinanziertes System; Fragestellung zur klinischen Prävention systemunabhängig relevant"
+    title:"Kosteneffektivität der Herpes-Zoster-Impfung bei rheumatoider Arthritis",
+    sum:"Entscheidungsanalytisches Markov-Modell zur Kosteneffektivität der adjuvierten Herpes-Zoster-Vakzine (RZV) gegenüber Nichtimpfung bei Patienten mit rheumatoider Arthritis.",
+    result:"Impfung führte zu 2.550 verhinderten Herpes-Zoster-Fällen und 1.303 verhinderten postherpetischen Neuralgie-Fällen pro 10.000 geimpfte RA-Patienten; inkrementelles Kosten-Effektivitäts-Verhältnis (ICER) EUR 11.205 pro QALY; 98% Wahrscheinlichkeit kosteneffektiv bei EUR 23.650/QALY-Schwelle; Ergebnisse sensitiv für Wahrscheinlichkeit postherpetischer Neuralgia nach Herpes Zoster.",
+    transfer:"Norwegen, skandinavisches Gesundheitssystem, Schwellenwerte und Modelllogik übertragbar"
   },
   {
     journal:"BMC Health Serv Res", year:"2026", pmid:"42613610",
     author:"Gedefaw A et al.", pubdate:"17.08.2026",
     added:"19.08.2026",
-    title:"Immunisierungsresilienz in Äthiopien während COVID-19: Rolle dezentraler Gesundheitsstrukturen",
-    sum:"Longitudinale Vergleichsstudie der Impfstoffaufnahme in Äthiopien (Sidama, 18 Krankenhäuser, 132 Gesundheitszentren, 532 Gesundheitsposten) in zwei 12-Monats-Perioden (vor und während Pandemie).",
-    result:"Gesamte Impfaufnahme stieg um 7,35% (p&lt;0,001) über 12-Monate Pandemieperiode gegenüber Vorjahr. Krankenhäuser zeigten 5,2% Rückgang, während Gesundheitszentren +7,96% (p=0,015) und Gesundheitsposten +11,5% (p=0,002) zeigten. In Post-Lockdown-Phase stieg Krankenhausaufnahme um 38,15% (p&lt;0,001). Dezentralisierte Systeme absorbierten Nachfragestöße nach Krankenhausstörungen.",
-    transfer:"Äthiopien zeigt Systemmuster mit dezentraler Primärversorgung, nur bedingt übertragbar auf Deutschland"
+    title:"Widerstandsfähigkeit von Impfservices bei COVID-19: Rolle von Einrichtungen mehrerer Ebenen in Äthiopien",
+    sum:"Längsschnittstudie über Impfstoffaufnahme in 18 Krankenhäusern, 132 Gesundheitszentren und 532 Gesundheitsposten in Äthiopien vor und während der COVID-19-Pandemie.",
+    result:"Während der ersten 12 Pandemie-Monate stieg die Gesamtimpfstoffaufnahme um 7,35% (p&lt;0,001) gegenüber Vorjahr; Krankenhäuser sanken um 5,2% (p=0,449), Gesundheitszentren stiegen um 7,96% (p=0,015), Gesundheitsposten um 11,5% (p=0,002); dezentralisierte Systeme absorbierten Nachfragesteigerungen nach Krankenhausunterbrechungen.",
+    transfer:"Äthiopien - systemunabhängige Fragestellung zu Versorgungsresilienz und dezentralisierter Leistungserbringung"
   },
   {
     journal:"BMC Health Serv Res", year:"2026", pmid:"42613606",
     author:"Bikova M et al.", pubdate:"14.08.2026",
     added:"19.08.2026",
-    title:"UN-Dekade des gesunden Alterns in Norwegen: Perspektiven von älteren Menschen, Fachkräften und Entscheidungsträgern",
-    sum:"Qualitative Fallstudie mit 23 semistrukturierten Interviews mit Entscheidungsträgern, Gesundheitsfachkräften und älteren Menschen in einer norwegischen Kommune.",
-    result:"Drei Hauptthemen: 1) Strategien für Bewältigung sehen Selbstvorbereitung als kollektive Verantwortung, doch älter werdende Menschen tragen zunehmend Eigenverantwortung; 2) Gemischte Wahrnehmungen des Alterns; 3) Gesundheitsdienste wahrgenommen als hochwertig, aber mit Ressourcenchallenges. Rasche Digitalisierung als signifikante Barriere für inklusive Teilhabe identifiziert. Risiko der Marginalisierung von Vulnerablen ohne Ressourcen.",
-    transfer:"Norwegen, steuerfinanziert; bei Prozessen und Patientenperspektive gut übertragbar"
+    title:"UN-Dekade für gesundes Altern in Norwegen: Perspektiven von älteren Erwachsenen, Fachkräften und Entscheidungsträgern",
+    sum:"Qualitative Fallstudie mit 23 Interviews zu Verständnis von gesundem Altern in einer norwegischen Kommune im Kontext der UN-Dekade für gesundes Altern mit vier Aktionsbereichen.",
+    result:"Befunde zeigen drei Themen: Strategien für Meisterung, gemischte Wahrnehmungen des Alterns und Gesundheitsservices; Vorbereitung auf Alter ist Kollektivaufgabe, aber ältere Erwachsene werden zunehmend zur Selbstverantwortung erwartet; schnelle Digitalisierung ist Barriere für Teilhabe; kommunale Services hochwertig aber mit Ressourcenchallenge; Risiko, vulnerable Gruppen zu marginalisieren.",
+    transfer:"Norwegen, steuerfinanziertes System mit universeller Grundversorgung, Politik und Prozesse übertragbar"
   },
   {
     journal:"Gen Hosp Psychiatry", year:"2026", pmid:"42612565",
     author:"Thake M et al.", pubdate:"13.08.2026",
     added:"18.08.2026",
-    title:"Diagnostische Genauigkeit des PHQ-9 in der Hausarztpraxis stratifiziert nach Depressionsrisikofaktoren",
-    sum:"Sekundäranalyse von 985 Patienten aus der GET.FEEDBACK.GP-Studie zur diagnostischen Accuracy des PHQ-9 für Major Depression, stratifiziert nach Anzahl/Art von Risikofaktoren.",
-    result:"89 Patienten (9,1%) mit MDD-Diagnose. Beste PHQ-9-Cutoffs variierten von 7–13 je nach Anzahl Risikofaktoren. Sensitivität 0,78–0,99, Spezifität 0,80–0,91, PPV 0,40–0,88, NPV 0,80–0,99. AUCs 0,92–0,97, exzellente diagnostische Accuracy. Höhere Risikofaktorzahl assoziiert mit höherem optimalem PHQ-9-Cutoff.",
-    transfer:"Deutschland; Studie an deutschen Hausarztpraxen mit deutschen Routinedaten"
+    title:"Diagnostische Genauigkeit von PHQ-9 in der Primärversorgung stratifiziert nach Depressionsrisikofaktoren",
+    sum:"Sekundäranalyse von 985 Hausarztpatienten zur diagnostischen Genauigkeit des PHQ-9 bei Major Depression, stratifiziert nach Vorhandensein einzelner und mehrerer Depressionsrisikofaktoren.",
+    result:"89 Patienten (9,1%) hatten eine Diagnose Major Depression; beste PHQ-9-Schwellwerte variierten zwischen 7 und 13 je nach Anzahl Risikofaktoren; Sensitivität 0,78–0,99, Spezifität 0,80–0,91, PPV 0,40–0,88, NPV 0,80–0,99, AUC 0,92–0,97; risikoadaptiertes Screening mit PHQ-9 in Primärversorgung ist valide.",
+    transfer:"Deutsche Daten aus GET.FEEDBACK.GP-Trial, deutsches Primärversorgungssystem"
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
