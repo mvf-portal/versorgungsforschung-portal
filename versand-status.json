@@ -1,19 +1,22 @@
 {
  "hub": "Knowledge-Hub Versorgungsforschung",
  "domain": "wissen.m-vf.de",
- "datum": "2026-08-19",
- "stand": "terminiert",
- "titel": "MVF Studien-Newsletter 19.08.2026",
- "betreff": "Neueste Studien - Versorgungsforschung – 19. August 2026",
- "anzahl": 5,
+ "datum": "2026-08-20",
+ "stand": "gestoppt",
+ "titel": "MVF Studien-Newsletter 20.08.2026",
+ "betreff": "Neueste Studien - Versorgungsforschung – 20. August 2026",
+ "anzahl": 6,
  "pmids": [
-  "42612565",
-  "42608694",
-  "42608687",
-  "42608682",
-  "42605315"
+  "42617414",
+  "42617323",
+  "42617155",
+  "42616666",
+  "42613610",
+  "42613606"
  ],
- "kampagne": "https://us6.admin.mailchimp.com/campaigns/edit?id=9098456",
- "termin_utc": "2026-08-19T08:00:00+00:00",
- "beanstandungen": []
+ "kampagne": "https://us6.admin.mailchimp.com/campaigns/edit?id=9098470",
+ "termin_utc": null,
+ "beanstandungen": [
+  "Studie 2 (PMID 42617323): Zusammenfassung ist verdaechtig kurz (71 Zeichen)"
+ ]
 }

@@ -1014,62 +1014,71 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "19. Aug. 2026, 08:32 Uhr";
+const SNAP_DATE = "20. Aug. 2026, 07:18 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
+  {
+    journal:"Nurs Outlook", year:"2026", pmid:"42617414",
+    author:"Noorland SA et al.", pubdate:"19.08.2026",
+    added:"19.08.2026",
+    title:"Vorbereitung auf zukünftige Pandemien: Befähigung und Unterstützungsbedarf des Pflegepersonals im Querschnitt",
+    sum:"Eine niederländische Querschnittsstudie untersuchte die mentale Leistungsfähigkeit des Pflegepersonals für zukünftige Pandemien, deren psychische Gesundheit nach COVID-19 und deren Vorlieben für psychosoziale Unterstützung.",
+    result:"90,4 % fühlten sich mental fähig, während einer zukünftigen Pandemie zu arbeiten. Die mentale Gesundheit war generell gut (Median MHI-5: 84) und positiv assoziiert mit höherer wahrgenommener Fähigkeit. Das Personal bevorzugte Peer-basierte Unterstützung (Gruppengespräche, moralische Fallberatungen, Partnerschaft mit Kollegen) gegenüber Einzelgesprächen und Stressmanagement-Schulungen.",
+    transfer:"Niederlande, vergleichbares Sozialversicherungssystem, hohe Übertragbarkeit für Pflegepersonalentwicklung"
+  },
+  {
+    journal:"J Med Internet Res", year:"2026", pmid:"42617155",
+    author:"Bouchmal S et al.", pubdate:"19.08.2026",
+    added:"19.08.2026",
+    title:"Datensouveränität in der Langzeitpflege: Mixed-Methods-Studie zur Reifegradbeurteilung",
+    sum:"Eine niederländische Mixed-Methods-Studie in drei Langzeitpflege-Organisationen untersuchte deren Fähigkeit zur Nutzung von Daten für Entscheidungen und Qualitätsverbesserungen.",
+    result:"Organisationen wiesen niedrige Datenreife auf. Bereiche Strategie, Governance und Datenqualität waren durchgehend niedrig. Vier Themen wurden identifiziert: fehlende klare Vision (Datenreife niedrig), Datenkultur als Voraussetzung, begrenzte Interdisziplinarität und Infrastruktur- sowie kulturelle Hürden hemmen nachhaltige Nutzung.",
+    transfer:"Niederlande, Langzeitpflege-Setting, hohe Übertragbarkeit auf deutsche Altenheime"
+  },
+  {
+    journal:"Rheumatology (Oxford)", year:"2026", pmid:"42616666",
+    author:"Hagen G et al.", pubdate:"19.08.2026",
+    added:"19.08.2026",
+    title:"Kosteneffektivität der Herpes-zoster-Impfung bei rheumatoider Arthritis",
+    sum:"Eine norwegische Markov-Modellierungsstudie bewertete die Kosteneffektivität der adjuvantierten rekombinanten Zoster-Impfung (RZV) bei RA-Patienten.",
+    result:"RZV vermied 2.550 HZ-Fälle und 1.303 PHN-Fälle pro 10.000 RA-Patienten, ICER von 11.205 EUR/QALY (unter Schwellenwert von 23.650 EUR/QALY). Probabilistische Analyse zeigte 98 % Wahrscheinlichkeit der Kosteneffektivität. Sensitivitätsanalysen zeigten Robustheit der Ergebnisse.",
+    transfer:"Norwegen, skandinavisches Steuersystem, gut übertragbar für Vakzinations- und Preventiv-Fragen"
+  },
+  {
+    journal:"Health Policy", year:"2026", pmid:"42617323",
+    author:"Kraft KB et al.", pubdate:"19.08.2026",
+    added:"19.08.2026",
+    title:"[Corrigendum - keine eigenständigen Ergebnisse für Abstract-Analyse]",
+    sum:"[Berichtigung einer früheren Publikation zu Ärzte-Anreizen in Norwegen]",
+    result:"[Nicht verwertbar - Berichtigung ohne eigenständige neue Ergebnisse]",
+    transfer:"[Ausschluss: Corrigendum]"
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42613610",
+    author:"Gedefaw A et al.", pubdate:"17.08.2026",
+    added:"19.08.2026",
+    title:"Resilienz der Impfversorgung in Äthiopien während COVID-19: Dezentralisierung schützt vor Ausfällen",
+    sum:"Eine äthiopische Längsschnittstudie verglich die Impfversorgung über 18 Krankenhäuser, 132 Gesundheitszentren und 532 Gesundheitsposten während und vor der Pandemie.",
+    result:"Gesamtimpfquote stieg um 9,72 % (p=0,006) in den ersten 6 Monaten. Krankenhäuser fielen um 5,2 % ab (p=0,449), Gesundheitszentren stiegen um 7,96 % (p=0,015) und Posten um 11,5 % (p=0,002). Dezentralisierte Strukturen absorbierten Nachfrage nach Spitalauställen.",
+    transfer:"Äthiopien, Low-Income-Setting - begrenzte Übertragbarkeit auf deutsche Strukturen mit anderen Ressourcen"
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42613606",
+    author:"Bikova M et al.", pubdate:"14.08.2026",
+    added:"19.08.2026",
+    title:"UN-Dekade für gesundes Altern: Perspektiven von älteren Menschen und Fachkräften in Norwegen",
+    sum:"Eine norwegische qualitative Fallstudie mit 23 Interviews (Ältere, Fachkräfte, Entscheidungsträger) untersuchte die Umsetzung der UN-Decade of Healthy Ageing.",
+    result:"Kernthemen: Strategien zur Selbstbestimmung, ambivalente Alterswahrnehmung, Herausforderungen der Gesundheitsdienste. Digitalisierung als Barriere für inklusive Teilhabe identifiziert. Digitale Inklusion, intergenerationale Ansätze und Bekämpfung von Alterismus empfohlen.",
+    transfer:"Norwegen, steuerfinanziertes System, mittel übertragbar für Fragen zur Versorgungsstruktur und Partizipation"
+  },
   {
     journal:"Gen Hosp Psychiatry", year:"2026", pmid:"42612565",
     author:"Thake M et al.", pubdate:"13.08.2026",
     added:"18.08.2026",
-    title:"Diagnostische Genauigkeit des PHQ-9 in der hausärztlichen Praxis bei Patienten mit Depressionsrisiken",
-    sum:"Studie zur diagnostischen Genauigkeit des PHQ-9 für die Erkennung von Major Depression bei Hausarztpatienten mit unterschiedlichen Depressionsrisikofaktoren.",
-    result:"PHQ-9 zeigte hohe diagnostische Genauigkeit (AUC 0,92–0,97) in Primärversorgung. Optimal-Cutoffs variierten je nach Risikofaktoren (7–13 Punkte). Sensitivität 0,78–0,99; Spezifität 0,80–0,91; NPW 0,80–0,99. Ergebnisse unterstützen risikoadaptiertes Screening mittels PHQ-9 in der Hausarztpraxis.",
-    transfer:"Deutsche Routinedaten aus Primärversorgung, gesetzlich Versicherte"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42608694",
-    author:"Utsch M et al.", pubdate:"12.08.2026",
-    added:"18.08.2026",
-    title:"PROMIS GH-10 als Patient-Reported Outcome Maß in Rehabilitationskliniken: Mixed-Methods-Studie zur Implementierungseignung",
-    sum:"Erprobung des PROMIS GH-10 zur Messung patientenberichteter Gesundheitsergebnisse in stationärer Schweizer Rehabilitation mit Fokus auf Responsivität und praktische Umsetzbarkeit.",
-    result:"2.083 Patienten, 1.217 vollständige Messungen. Signifikante Verbesserungen: Physische Gesundheit d=0,68 (p&lt;0,001); Psychische Gesundheit d=0,48 (p&lt;0,001). Effektstärken je Setting 0,50–0,95 bzw. 0,33–1,19. 41% der Patienten brauchten Unterstützung. Barrieren: Unsicherheit über Nutzen, fehlende Ressourcen. PROMIS GH-10 zeigte adäquate Responsivität.",
-    transfer:"Schweiz, Sozialversicherungssystem, direkt auf deutsches System übertragbar"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42608687",
-    author:"Gurisch C et al.", pubdate:"12.08.2026",
-    added:"18.08.2026",
-    title:"Kosten-Nutzen-Parameter für Magnet®-Zertifizierung in deutschen Krankenhäusern",
-    sum:"Analyse relevanter Parameter für eine Kosten-Nutzen-Analyse der Magnet®-Designation (Organisationsintervention zur Verbesserung der Pflegefachkräftearbeitsbedingungen) im deutschen Kontext.",
-    result:"Potenzielle Kosten: ANCC-Gebühren, Benchmarking, Fortbildungen, Ressourcen und Datenverwaltung. Kostenersparnisse durch: Verbesserung pflegefachkraftsensibler Indikatoren, Personalindikatoren, Krankenhausleistung. Für Deutschland zusätzlich relevant: Kosten der Akademisierung von Pflegekräften und Datenmanagement. Erhebliche Datenlücken bremsen aktuelle Kosten-Nutzen-Analyse.",
-    transfer:"Deutschland, deutsches Krankenhaussystem; deutsche Stakeholder-Interviews"
-  },
-  {
-    journal:"Patient Prefer Adherence", year:"2026", pmid:"42605315",
-    author:"Skaare-Fatland K et al.", pubdate:"12.08.2026",
-    added:"17.08.2026",
-    title:"Vorhersagefaktoren von Überzeugungen zu Antipsychotika bei Psychosestörungen: longitudinale Beobachtungsstudie",
-    sum:"Longitudinale Studie über Faktoren, die Notwendigkeits- und Besorgnis-Überzeugungen bezüglich antipsychotischer Medikamente bei psychotischen Störungen vorhersagen (12-Monats-Follow-up).",
-    result:"Baseline (N=310): Höhere Medikations-Unterstützung assoziiert mit höheren Notwendigkeits-Scores (β=0,18; 95% KI 0,04–0,33) und niedriger Besorgnis (β=-0,29; 95% KI -0,42 bis -0,16). Nach 12 Monaten: Notwendigkeits-Scores fielen (β=-0,35; 95% KI -0,60 bis -0,11), Besorgnis stiegen (β=0,25; 95% KI 0,05–0,45). Höhere Symptombelastung und Nebenwirkungen mit höherer Besorgnis assoziiert.",
-    transfer:"Skandinavien (Norwegen), steuerfinanziert; Prozesse und Patientenperspektive relevant"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42608682",
-    author:"Oeltjen LK et al.", pubdate:"11.08.2026",
-    added:"18.08.2026",
-    title:"Erfahrungen von Nutzern mit Kriseninterventionen und Peer-Support in der Psychiatrie: qualitative Studie",
-    sum:"Qualitative Studie über Erfahrungen von Menschen mit schweren psychischen Erkrankungen während psychiatrischer Kriseninterventionen mit oder ohne Peer-Unterstützung.",
-    result:"25 Interviews. Als hilfreich erlebt: empathisches Zuhören, ruhige Kommunikation, transparente Erklärungen, Partizipation in Entscheidungen. Als belastend: konfrontative Kommunikation, unzureichende Information. Peer-Support: überwiegend positiv wahrgenommen wegen Authentizität und Hoffnungsgebung. Erfahrungen mit Polizei ambivalent. Strukturfaktoren (Kontinuität, Warteumgebung) prägten Erlebnis.",
-    transfer:"Deutschland (Bremen), deutsches Sektor-Setting der Psychiatrie; qualitativ hochrelevant"
-  },
-  {
-    journal:"Lancet Reg Health Eur", year:"2026", pmid:"42604020",
-    author:"Mediavilla R et al.", pubdate:"08.08.2026",
-    added:"16.08.2026",
-    title:"Arbeitsbedingungen und psychische Gesundheit von Ärzten und Pflegekräften in der EU",
-    sum:"Befragung zu Zusammenhängen zwischen Arbeitsbedingungen und psychischen Problemen bei Gesundheitsberuflern in 27 EU-Ländern.",
-    result:"Von 90.171 Teilnehmern: 30% depressive, 23% Angststörungssymptome, 13% suizidale Gedanken. Physische Gewalt betraf 10% der Ärzte und 18% der Pflegekräfte. Ungünstige Arbeitsbedingungen stark assoziiert mit schlechter psychischer Gesundheit (PR 0,98–1,94); Ressourcen und Unterstützung schützend (PR 0,56–1,06).",
-    transfer:"Europäische Querschnittsstudie mit mehren Ländern, übertragbar auf deutsches System"
+    title:"Diagnostische Genauigkeit des PHQ-9 in der Hausarztpraxis: Risikofaktor-stratifizierte Analyse",
+    sum:"Eine deutsche Sekundäranalyse von 985 Hausarztpatienten untersuchte die diagnostische Genauigkeit des PHQ-9 zur Erkennung depressiver Störungen stratifiziert nach Risikofaktoren.",
+    result:"89 (9,1 %) hatten eine depressive Störung. Optimale PHQ-9-Grenzwerte variierten je nach Risikofaktoranzahl (7–13). Sensitivität 0,78–0,99; Spezifität 0,80–0,91; AUC 0,92–0,97 (ausgezeichnete diagnostische Genauigkeit). Ergebnisse unterstützen risikoadaptiertes Screening.",
+    transfer:"Deutschland, Hausarztpraxis, sehr hohe Übertragbarkeit auf Primärversorgung"
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
