@@ -1,5 +1,57 @@
 [
  {
+  "pmid": "42622517",
+  "journal": "Scand J Prim Health Care",
+  "year": "2026",
+  "author": "Kraft KB et al.",
+  "pubdate": "20.08.2026",
+  "added": "20.08.2026",
+  "transfer": "Niederlande, Belgien, Frankreich: vergleichbare Sozialversicherungssysteme mit Capitation und FFS",
+  "title": "Vergütungstyp von Hausärzten und Antibiotikaverordnungen: Analyse von Patienten­wechseln mit Routinedaten",
+  "sum": "Norwegische Studie zu Auswirkungen verschiedener Vergütungsformen (Fee-for-Service vs. Gehalt) auf die Antibiotikaverordnungen bei Patienten, die die Hausarztpraxis wechselten.",
+  "result": "Patienten, die von einem Allgemeinarzt mit Fee-for-Service zu einem salariierten Arzt wechselten, reduzierten ihre monatliche Antibiotikanutzung um 21 definierte Tagesdosen pro 1000 Patienten (SD=7); umgekehrt erhöhte sich die Nutzung um 85 DDD pro 1000 Patienten (SD=20) beim Wechsel zu Fee-for-Service. Dies deutet darauf hin, dass die Vergütungsform einen signifikanten Effekt auf das Verschreibungsverhalten hat.",
+  "aufgenommen": "2026-08-21"
+ },
+ {
+  "pmid": "42621103",
+  "journal": "Front Rehabil Sci",
+  "year": "2026",
+  "author": "Wengemuth E et al.",
+  "pubdate": "05.08.2026",
+  "added": "20.08.2026",
+  "transfer": "Deutsche Routinedaten, deutsches Rehabilitationssystem direkt relevant",
+  "title": "Übergang von medizinischer zu beruflicher Rehabilitation in Deutschland: Erfahrungen der Rehabilitanden",
+  "sum": "Explorative Mixed-Methods-Studie über Erfahrungen von Rehabilitanden beim Übergang von medizinischer zu beruflicher Rehabilitation in Deutschland mit quantitativen und qualitativen Datenerfassungsmethoden.",
+  "result": "Von 61 Befragten berichteten etwa 50 %, über berufliche Rehabilitation während medizinischer Rehabilitation informiert worden zu sein; deutlich weniger erhielten praktische Unterstützung (z.B. Antragshilfe). Hausärzte und Fachärzte wurden von etwa 60 % als unterstützend empfunden, Arbeitgeber als am wenigsten hilfreich. Knapp zwei Drittel fühlten sich selbstbestimmt bei der Wahl und beim Beginn des beruflichen Rehabilitationsprogramms, einige berichteten aber von Druck. Mangelnde Kooperation zwischen Akteuren erschwerte den Übergang.",
+  "aufgenommen": "2026-08-21"
+ },
+ {
+  "pmid": "42618922",
+  "journal": "BMC Health Serv Res",
+  "year": "2026",
+  "author": "Strand M et al.",
+  "pubdate": "18.08.2026",
+  "added": "20.08.2026",
+  "transfer": "Skandinavien, steuerfinanziert: Erkenntnisse zu Prozessen und Patientenperspektive übertragbar",
+  "title": "Öffentliche Gesundheitskommunikation während COVID-19 in Stockholm: Community-Engagement für Migranten",
+  "sum": "Qualitative Studie über die Entwicklung und Umsetzung von Krisenkommunikationsmaterialien für migrationsgeprägte Gemeinschaften in Stockholm während der COVID-19-Pandemie.",
+  "result": "Vier Hauptthemen zeigten zeitliche Entwicklung: Frühe Phase fokussierte auf Sprachübersetzung standardisierter Botschaften, verlagerte sich aber zu dialogbasierter Einbindung. Wichtige Erkenntnisse waren Vertrauensaufbau durch Community-Stakeholder, Adressierung struktureller Barrieren statt fehlenden Verständnisses, Stigmabekämpfung und kreative Problemlösung. Viele Fachleute äußerten Bedenken, dass etablierte Netzwerke und gewonnene Erkenntnisse verloren gingen.",
+  "aufgenommen": "2026-08-21"
+ },
+ {
+  "pmid": "42596686",
+  "journal": "Med Decis Making",
+  "year": "2026",
+  "author": "Lamu AN et al.",
+  "pubdate": "13.08.2026",
+  "added": "14.08.2026",
+  "transfer": "Deutschland, methodisches Instrument für deutschsprachige Gesundheitsökonomie",
+  "title": "Abbildung der HoNOS auf die EQ-5D-5L zur QALY-Berechnung in der Psychiatrie",
+  "sum": "Mapping-Studie zur Vorhersage von EQ-5D-5L-Werten aus der Health of the Nation Outcome Scales (HoNOS) bei Erwachsenen mit schweren psychischen Erkrankungen für die gesundheitsökonomische Bewertung.",
+  "result": "Vier ökonometrische Verfahren wurden getestet; das Fractional Regression Model (FRM) zeigte beste Performance. In der 10-fach-Kreuzvalidierung mit deutschen EQ-5D-5L-Werten erreichte FRM: RMSE=0,2204, MAE=0,1622, r²=36,5 %. Das Modell ermöglicht QALY-Schätzungen aus HoNOS-Daten und eröffnet wirtschaftliche Bewertungen von psychischen Gesundheitsinterventionen, wenn nur HoNOS-Informationen verfügbar sind.",
+  "aufgenommen": "2026-08-21"
+ },
+ {
   "pmid": "42617414",
   "journal": "Nurs Outlook",
   "year": "2026",
