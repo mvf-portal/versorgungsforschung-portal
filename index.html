@@ -1014,62 +1014,62 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "21. Aug. 2026, 07:20 Uhr";
+const SNAP_DATE = "22. Aug. 2026, 07:04 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
+  {
+    journal:"Lancet Infect Dis", year:"2026", pmid:"42628558",
+    author:"Mo Y et al.", pubdate:"21.08.2026",
+    added:"21.08.2026",
+    title:"Nosokomiale Infektionen und Antibiotikaresistenz im asiatischen Überwachungsnetz (ACORN-HAI)",
+    sum:"Multinationale prospektive Kohortenstudie in 41 Krankenhäusern über 19 Länder in Asien zur Epidemiologie antimikrobieller Resistenz bei Healthcare-assoziierten Infektionen.",
+    result:"Von 9.642 analysierten Infektionsepisoden waren 73,7% mit resistenten Bakterien assoziiert. Gesamtsterblichkeit bei Gram-negativen Resistenzen: 37,7% (AMR) vs. 40,6% (Multiresistenz). Carbapenem-resistente Acinetobacter (CRA) und Enterobacterales (CRE) zeigten höchste Mortalität: CRA 51,3%, CRE 48,4%; attributable Mortalität CRA 19,4% (95% CI 14,1–24,7), CRE 16,2% (95% CI 12,8–19,6).",
+    transfer:"Asiatische Länder mit Ressourcenengpässen, aber Daten zur Antimikrobial Stewardship systemunabhängig relevant"
+  },
   {
     journal:"Scand J Prim Health Care", year:"2026", pmid:"42622517",
     author:"Kraft KB et al.", pubdate:"20.08.2026",
     added:"20.08.2026",
-    title:"Vergütungstyp von Hausärzten und Antibiotikaverordnungen: Analyse von Patienten­wechseln mit Routinedaten",
-    sum:"Norwegische Studie zu Auswirkungen verschiedener Vergütungsformen (Fee-for-Service vs. Gehalt) auf die Antibiotikaverordnungen bei Patienten, die die Hausarztpraxis wechselten.",
-    result:"Patienten, die von einem Allgemeinarzt mit Fee-for-Service zu einem salariierten Arzt wechselten, reduzierten ihre monatliche Antibiotikanutzung um 21 definierte Tagesdosen pro 1000 Patienten (SD=7); umgekehrt erhöhte sich die Nutzung um 85 DDD pro 1000 Patienten (SD=20) beim Wechsel zu Fee-for-Service. Dies deutet darauf hin, dass die Vergütungsform einen signifikanten Effekt auf das Verschreibungsverhalten hat.",
-    transfer:"Niederlande, Belgien, Frankreich: vergleichbare Sozialversicherungssysteme mit Capitation und FFS"
+    title:"Hausärztliche Vergütungsform und Antibiotikaverordnungen: Analyse von Patientenwechseln mit Registerdaten",
+    sum:"Norwegen: Analyse von Patientenwechseln zwischen Hausärzten mit unterschiedlichen Vergütungsmodellen (Fee-for-Service vs. Gehalt) und deren Effekt auf Antibiotikaverordnungen.",
+    result:"Patienten, die von salarierten zu Fee-for-Service-Ärzten wechselten, zeigten einen Anstieg von 85 DDD Antibiotika pro 1.000 Patienten/Monat (SD=20). Der umgekehrte Wechsel führte zu einem Rückgang um 21 DDD pro 1.000 Patienten/Monat (SD=7). Die Assoziation zwischen Fee-for-Service-Vergütung und erhöhtem Antibiotikaverbrauch bleibt signifikant.",
+    transfer:"Norwegen, vergleichbar mit deutschem GKV-System und niedergelassenem Sektor"
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42618922",
-    author:"Strand M et al.", pubdate:"18.08.2026",
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42618915",
+    author:"Schulz C et al.", pubdate:"19.08.2026",
     added:"20.08.2026",
-    title:"Öffentliche Gesundheitskommunikation während COVID-19 in Stockholm: Community-Engagement für Migranten",
-    sum:"Qualitative Studie über die Entwicklung und Umsetzung von Krisenkommunikationsmaterialien für migrationsgeprägte Gemeinschaften in Stockholm während der COVID-19-Pandemie.",
-    result:"Vier Hauptthemen zeigten zeitliche Entwicklung: Frühe Phase fokussierte auf Sprachübersetzung standardisierter Botschaften, verlagerte sich aber zu dialogbasierter Einbindung. Wichtige Erkenntnisse waren Vertrauensaufbau durch Community-Stakeholder, Adressierung struktureller Barrieren statt fehlenden Verständnisses, Stigmabekämpfung und kreative Problemlösung. Viele Fachleute äußerten Bedenken, dass etablierte Netzwerke und gewonnene Erkenntnisse verloren gingen.",
-    transfer:"Skandinavien, steuerfinanziert: Erkenntnisse zu Prozessen und Patientenperspektive übertragbar"
+    title:"Nutzerbewertung KI-generierter und menschlicher Antworten in digitaler Gesundheitskommunikation",
+    sum:"Deutschland: Paired-Survey-Studie, in der Nutzer ChatGPT-4-generierte und von einem Physiotherapeuten verfasste Antworten auf Gesundheitsfragen vergleichend bewerteten.",
+    result:"Über die meisten Kriterien hinweg wurde die KI-Antwort besser bewertet als die menschliche, besonders bei Empathie und Verständlichkeit (alle p&lt;0,001). Expert-Rating favorisierte auch die KI-Antwort in Bezug auf Richtigkeit und Vollständigkeit, obwohl Längen und Struktur differierten. Teilnehmerzahl n=224.",
+    transfer:"Deutsche Studie in Healthcare-System kontextualisiert; Aussage zu Nutzerpräferenz systemabhängig, aber zur Kommunikationsqualität relevant"
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42613610",
-    author:"Gedefaw A et al.", pubdate:"17.08.2026",
-    added:"19.08.2026",
-    title:"Elastizität von Impfservices in Äthiopien während COVID-19: Rolle dezentraler Gesundheitseinrichtungen",
-    sum:"Longitudinale Vergleichsstudie der Routineimpfquoten über alle Ebenen des Gesundheitssystems (Krankenhäuser, Gesundheitszentren, Gesundheitsposten) in der Region Sidama, Äthiopien, vor und während COVID-19.",
-    result:"Während der ersten sechs Monate der Pandemie (März–August 2020) stieg die Gesamtimpfquote um 9,72 % (95 % KI: 9,66–9,79 %; p=0,006) im Vergleich zum Vorjahr. Während Krankenhäuser einen Rückgang von 5,2 % verzeichneten, zeigten Gesundheitszentren und Gesundheitsposten signifikante Zuwächse von 7,96 % (p=0,015) bzw. 11,5 % (p=0,002). Dies unterstreicht die Bedeutung dezentralisierter Systeme für die Aufrechterhaltung von Impfservices.",
-    transfer:"Ressourcenlimitierte Settings mit dezentraler Struktur relevant für Versorgungsforschung"
+    journal:"Gen Hosp Psychiatry", year:"2026", pmid:"42612565",
+    author:"Thake M et al.", pubdate:"13.08.2026",
+    added:"18.08.2026",
+    title:"Diagnostische Genauigkeit des PHQ-9 in der Hausarztpraxis stratifiziert nach Depressionrisikofaktoren",
+    sum:"Deutschland: Sekundäranalyse von 985 Hausarztpatienten zur diagnostischen Genauigkeit des PHQ-9 für Major Depression je nach Anzahl und Art von Risikofaktoren.",
+    result:"Bei Patienten mit Risikofaktoren zeigte PHQ-9 ausgezeichnete diagnostische Genauigkeit (AUC 0,92–0,97). Optimale Cut-off-Werte variierten zwischen 7–13 je nach Risikofaktoranzahl. Sensitivität: 0,78–0,99; Spezifität: 0,80–0,91; PPV: 0,40–0,88; NPV: 0,80–0,99.",
+    transfer:"Deutsche Routinedaten aus Hausarztpraxen, vollständig übertragbar"
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42613606",
-    author:"Bikova M et al.", pubdate:"14.08.2026",
-    added:"19.08.2026",
-    title:"UN-Dekade für gesundes Altern in Praxis: Perspektiven älterer Menschen, Fachkräfte und Entscheidungsträger in Norwegen",
-    sum:"Qualitative Fallstudie mit 23 semi-strukturierten Interviews zur Umsetzung der UN-Dekade für gesundes Altern in einer norwegischen Gemeinde unter Beteiligung älterer Menschen, Fachkräfte und Entscheidungsträger.",
-    result:"Drei Hauptthemen: (1) Strategien zur Meisterung zeigen, dass Vorbereitung auf Alter als kollektive Verantwortung wahrgenommen wird, ältere Menschen aber zunehmend selbst Verantwortung tragen; (2) Gemischte Wahrnehmungen des Alterns; (3) Kommunale Gesundheitsdienste werden als hochwertig wahrgenommen, stehen aber unter Druck. Digitalisierung wurde als erhebliche Barriere für Chancengleichheit identifiziert. Kombination aus Individualverantwortung und rascher Digitalisierung riskiert Verstärkung von Ungleichheiten.",
-    transfer:"Skandinavien, steuerfinanziert: Prozesse und Patientenperspektive übertragbar"
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42608682",
+    author:"Oeltjen LK et al.", pubdate:"11.08.2026",
+    added:"18.08.2026",
+    title:"Perspektiven von Nutzern auf psychische Krisenbewältigung mit und ohne Peer Support",
+    sum:"Deutschland (Bremen): Qualitative Studie mit 25 Personen nach psychischen Krisenbewältigung mit mobilen Teams und ambulanten Interventionen, teilweise mit Peer-Support-Arbeitern (PSW).",
+    result:"Zentral für positive Erfahrungen waren empathisches Zuhören, ruhige Kommunikation und transparente Erklärungen. Peer Support wurde überwiegend positiv wahrgenommen (n=6 Fälle), v.a. wegen Authentizität und Hoffnungsvermittlung. Polizeieinsätze (n=8) wurden ambivalent erlebt – von unterstützend bis eskalierend. Kontinuität und physische Wartenumgebung wichtig.",
+    transfer:"Deutsche Studie, Bremen-System mit Versorgungsforschungsdesign direkt übertragbar"
   },
   {
-    journal:"Med Decis Making", year:"2026", pmid:"42596686",
-    author:"Lamu AN et al.", pubdate:"13.08.2026",
-    added:"14.08.2026",
-    title:"Abbildung der HoNOS auf die EQ-5D-5L zur QALY-Berechnung in der Psychiatrie",
-    sum:"Mapping-Studie zur Vorhersage von EQ-5D-5L-Werten aus der Health of the Nation Outcome Scales (HoNOS) bei Erwachsenen mit schweren psychischen Erkrankungen für die gesundheitsökonomische Bewertung.",
-    result:"Vier ökonometrische Verfahren wurden getestet; das Fractional Regression Model (FRM) zeigte beste Performance. In der 10-fach-Kreuzvalidierung mit deutschen EQ-5D-5L-Werten erreichte FRM: RMSE=0,2204, MAE=0,1622, r²=36,5 %. Das Modell ermöglicht QALY-Schätzungen aus HoNOS-Daten und eröffnet wirtschaftliche Bewertungen von psychischen Gesundheitsinterventionen, wenn nur HoNOS-Informationen verfügbar sind.",
-    transfer:"Deutschland, methodisches Instrument für deutschsprachige Gesundheitsökonomie"
-  },
-  {
-    journal:"Front Rehabil Sci", year:"2026", pmid:"42621103",
-    author:"Wengemuth E et al.", pubdate:"05.08.2026",
-    added:"20.08.2026",
-    title:"Übergang von medizinischer zu beruflicher Rehabilitation in Deutschland: Erfahrungen der Rehabilitanden",
-    sum:"Explorative Mixed-Methods-Studie über Erfahrungen von Rehabilitanden beim Übergang von medizinischer zu beruflicher Rehabilitation in Deutschland mit quantitativen und qualitativen Datenerfassungsmethoden.",
-    result:"Von 61 Befragten berichteten etwa 50 %, über berufliche Rehabilitation während medizinischer Rehabilitation informiert worden zu sein; deutlich weniger erhielten praktische Unterstützung (z.B. Antragshilfe). Hausärzte und Fachärzte wurden von etwa 60 % als unterstützend empfunden, Arbeitgeber als am wenigsten hilfreich. Knapp zwei Drittel fühlten sich selbstbestimmt bei der Wahl und beim Beginn des beruflichen Rehabilitationsprogramms, einige berichteten aber von Druck. Mangelnde Kooperation zwischen Akteuren erschwerte den Übergang.",
-    transfer:"Deutsche Routinedaten, deutsches Rehabilitationssystem direkt relevant"
+    journal:"Alzheimers Dement", year:"2026", pmid:"42625505",
+    author:"Lim JH et al.", pubdate:"Aug. 2026",
+    added:"21.08.2026",
+    title:"Auswirkungen von nationaler kognitiver Screening auf Demenzversorgung und Hospitalisierung in Südkorea",
+    sum:"Südkorea: Kohortenstudie zur Auswirkung eines 2007 eingeführten nationalen kognitiven Screening-Programms auf nachfolgende Demenzversorgung und Hospitalisierung.",
+    result:"Kognitive Früherkennung war mit einer 37% höheren Wahrscheinlichkeit für Demenzbehandlung innerhalb von 2 Jahren (p&lt;0,001) und einem 12% niedrigerem Risiko für demenzbedingte Hospitalisierung innerhalb von 10 Jahren assoziiert. Baseline: 1,4% erhielten Demenzbehandlung, 3,0% wurden hospitalisiert.",
+    transfer:"Asiatisches System mit Screening-Struktur, aber steuerfinanziert - Fragestellung zur Frühdiagnose systemunabhängig relevant"
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
