@@ -1,5 +1,57 @@
 [
  {
+  "pmid": "42632276",
+  "journal": "Surgery",
+  "year": "2026",
+  "author": "Makar KG et al.",
+  "pubdate": "03.08.2026",
+  "added": "22.08.2026",
+  "transfer": "Qualitativ und systemunabhängig; konzeptualisiert patientenzentrierte Ergebnisse.",
+  "title": "Spiritual Distress bei erwachsenen Patienten vor elektiver Chirurgie: Qualitative Studie",
+  "sum": "Qualitative Studie zu spiritueller Belastung und deren Auswirkungen auf die präoperative Erfahrung bei Patienten mit geplanten Eingriffen.",
+  "result": "23 von 29 Patienten (79,3%) zeigten spirituelle Belastung, 6 Patienten (20,7%) spirituelles Wohlbefinden. Spirituell belastete Patienten äußerten signifikant mehr Angst und Komplikationserwartungen, während spirituell stabile Patienten Chirurgie als Genesung wahrnahmen. Diese Befunde unterstreichen die Bedeutung routinemäßiger spiritueller Unterstützung in der perioperativen Versorgung.",
+  "aufgenommen": "2026-08-23"
+ },
+ {
+  "pmid": "42631682",
+  "journal": "J Emerg Nurs",
+  "year": "2026",
+  "author": "Kelleher DP et al.",
+  "pubdate": "22.08.2026",
+  "added": "22.08.2026",
+  "transfer": "USA-Daten, Fragestellung aber zur gesundheitlichen Chancengleichheit systemunabhängig.",
+  "title": "Nicht-englische Sprachpräferenz und ICU-Aufnahmen über Notfallabteilungen: US-Analyse",
+  "sum": "Longitudinale Kohortenstudie zum Vergleich von ICU-Aufnahmen zwischen Patienten mit nicht-englischer Sprachpräferenz und englischsprachigen Patienten.",
+  "result": "Patienten mit nicht-englischer Sprachpräferenz hatten 99% höhere Aufnahmewahrscheinlichkeit auf die Intensivstation (OR = 1,99, 95% KI 1,63-2,42; p < 0,001). Kein signifikanter Unterschied bei Verweildauer auf ICU oder im Krankenhaus. Ergebnis deutet auf diskriminierende oder ungleiche Zugangssteuerungsmechanismen hin.",
+  "aufgenommen": "2026-08-23"
+ },
+ {
+  "pmid": "42631669",
+  "journal": "JACC Asia",
+  "year": "2026",
+  "author": "Bucci T et al.",
+  "pubdate": "30.07.2026",
+  "added": "22.08.2026",
+  "transfer": "Asien-Pazifik; Versorgungsqualität und Stratifikation auch für andere Systeme relevant.",
+  "title": "ABC-Pathway-Adherence und kardiovaskuläre Ereignisse bei Vorhofflimmern: Asiatische Register-Analyse",
+  "sum": "Clusteranalyse von 3.468 asiatischen Patienten mit Vorhofflimmern zur Identifikation klinischer Phänotypen und zum Nachweis der Assoziation zwischen ABC-Pathway-Therapieadhärenz und Outcomes.",
+  "result": "Fünf Cluster identifiziert mit gestuftem Risiko; ABC-Pathway-Adhärenz war mit niedrigerem Primärergebnis-Risiko assoziiert (HR 0,53, 95% KI 0,38-0,74), unabhängig vom Phänotyp. Ältere Patienten mit hoher kardiovaskulärer Belastung oder Herzinsuffizienz zeigten höchstes Risiko (HR 3,33-4,15 vs. junge Patientengruppe).",
+  "aufgenommen": "2026-08-23"
+ },
+ {
+  "pmid": "42631575",
+  "journal": "Int J Stroke",
+  "year": "2026",
+  "author": "Branscheidt M et al.",
+  "pubdate": "22.08.2026",
+  "added": "22.08.2026",
+  "transfer": "Internationale Expertengruppe; Implementierungsforschung systemunabhängig.",
+  "title": "High-Dose High-Intensity Neurorehabilitation nach Schlaganfall: Konsens-Empfehlungen",
+  "sum": "Internationale Konsensusfindung zur Identifizierung von Barrieren und Lösungen für die Umsetzung von intensiver Schlaganfall-Neurorehabilitation.",
+  "result": "Vier Hauptbarrieren für Umsetzung: (1) Wissenslücke zu HDHI-Mechanismen, (2) Lieferketten- und Kapazitätsbeschränkungen, (3) Widerstand trotz Evidenz durch Zeitdruck und mangelnde administrative Unterstützung, (4) systemische Enabler unzureichend. Empfehlungen: Home-basierte Hybrid-Pathways, Reimbursement-Alignment und Infrastruktur für Kontinuität.",
+  "aufgenommen": "2026-08-23"
+ },
+ {
   "pmid": "42628558",
   "journal": "Lancet Infect Dis",
   "year": "2026",
