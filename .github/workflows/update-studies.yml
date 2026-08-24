@@ -75,7 +75,7 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git config user.name  "VF-Portal Bot"
+          git config user.name  "Versorgungsforschung-Portal Bot"
           git config user.email "stegmaier@m-vf.de"
           git add $DATEIEN
           git commit -m "Studien-Update $(TZ=Europe/Berlin date +%d.%m.%Y)"
