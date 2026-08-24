@@ -1014,62 +1014,71 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "23. Aug. 2026, 07:16 Uhr";
+const SNAP_DATE = "24. Aug. 2026, 07:58 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
-  {
-    journal:"J Emerg Nurs", year:"2026", pmid:"42631682",
-    author:"Kelleher DP et al.", pubdate:"22.08.2026",
-    added:"22.08.2026",
-    title:"Nicht-englische Sprachpräferenz und ICU-Aufnahmen über Notfallabteilungen: US-Analyse",
-    sum:"Longitudinale Kohortenstudie zum Vergleich von ICU-Aufnahmen zwischen Patienten mit nicht-englischer Sprachpräferenz und englischsprachigen Patienten.",
-    result:"Patienten mit nicht-englischer Sprachpräferenz hatten 99% höhere Aufnahmewahrscheinlichkeit auf die Intensivstation (OR = 1,99, 95% KI 1,63-2,42; p &lt; 0,001). Kein signifikanter Unterschied bei Verweildauer auf ICU oder im Krankenhaus. Ergebnis deutet auf diskriminierende oder ungleiche Zugangssteuerungsmechanismen hin.",
-    transfer:"USA-Daten, Fragestellung aber zur gesundheitlichen Chancengleichheit systemunabhängig."
-  },
-  {
-    journal:"Int J Stroke", year:"2026", pmid:"42631575",
-    author:"Branscheidt M et al.", pubdate:"22.08.2026",
-    added:"22.08.2026",
-    title:"High-Dose High-Intensity Neurorehabilitation nach Schlaganfall: Konsens-Empfehlungen",
-    sum:"Internationale Konsensusfindung zur Identifizierung von Barrieren und Lösungen für die Umsetzung von intensiver Schlaganfall-Neurorehabilitation.",
-    result:"Vier Hauptbarrieren für Umsetzung: (1) Wissenslücke zu HDHI-Mechanismen, (2) Lieferketten- und Kapazitätsbeschränkungen, (3) Widerstand trotz Evidenz durch Zeitdruck und mangelnde administrative Unterstützung, (4) systemische Enabler unzureichend. Empfehlungen: Home-basierte Hybrid-Pathways, Reimbursement-Alignment und Infrastruktur für Kontinuität.",
-    transfer:"Internationale Expertengruppe; Implementierungsforschung systemunabhängig."
-  },
   {
     journal:"Scand J Prim Health Care", year:"2026", pmid:"42622517",
     author:"Kraft KB et al.", pubdate:"20.08.2026",
     added:"20.08.2026",
-    title:"Hausärztliche Vergütungsform und Antibiotikaverordnungen: Norwegische Registeranalyse",
-    sum:"Difference-in-Differences-Analyse mit Daten von 508.088 Patienten zur Untersuchung des Effekts von GP-Vergütungstyp auf Antibiotikanutzung.",
-    result:"Patienten, die zu einem Fee-for-Service-GP wechselten, zeigten Erhöhung um 85 DDD pro 1.000 Patienten/Monat (SD 20) versus Salary-GP-Wechsel mit Reduktion um 21 DDD pro 1.000 (SD 7). Der Unterschied war statistisch signifikant und robust nach Sensitivitätsanalysen.",
-    transfer:"Norwegen, Primärversorgung in Sozialversicherungssystem; Evidenz für Vergütungs-Impact transferierbar."
+    title:"Hausarzt-Vergütungsmodelle und Antibiotikaverordnungen in Norwegen",
+    sum:"Norwegische Kohortenstudie mit 508.088 Patientenwechseln untersucht Antibiotikaverbrauch je nach Vergütungsmodell des Hausarztes.",
+    result:"Wechsel zu Fee-for-Service-Arzt: +85 definierte Tagesdeosen pro 1.000 Patienten/Monat. Wechsel zu Salarärztin: −21 DDD pro 1.000. Fee-for-Service-Vergütung assoziiert mit erhöhtem Antibiotikaverbrauch.",
+    transfer:"Norwegen – Sozialversicherungssystem, hohe Übertragbarkeit; Vergütung beeinflusst Verordnungsverhalten."
+  },
+  {
+    journal:"Int J Chron Obstruct Pulmon Dis", year:"2026", pmid:"42633418",
+    author:"Ko J et al.", pubdate:"18.08.2026",
+    added:"23.08.2026",
+    title:"Kontinuität der Betreuung und Risiken von Krankenhausaufenthalten und Mortalität bei COPD: eine landesweite Kohortenstudie",
+    sum:"Eine südkoreanische Kohortenstudie mit 29.316 COPD-Neudiagnosen untersucht den Einfluss der Kontinuität der Betreuung auf COPD-Exazerbationen und Sterblichkeit.",
+    result:"Niedrige Kontinuitätsscores waren mit erhöhtem Risiko für COPD-Exazerbations-Krankenhausaufenthalte (HR 1,63; 95 % KI 1,45–1,83) und Gesamtmortalität (HR 1,25; 95 % KI 1,11–1,40) verbunden. Fragmentierte ambulante Betreuung erhöhte präventable Krankenhausaufenthalte deutlich.",
+    transfer:"Südkorea – Sozialversicherungssystem, hohe Übertragbarkeit auf Deutschland."
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42618922",
+    author:"Strand M et al.", pubdate:"18.08.2026",
+    added:"20.08.2026",
+    title:"Public-Health-Outreach für migrationsgeprägte Gemeinschaften in Stockholm während COVID-19: qualitative Studie",
+    sum:"Qualitative Studie mit 8 Interviews und 3 Fokusgruppen (21 Teilnehmer) untersucht COVID-Krisenkommunikation mit migrationsgepräägten Gruppen in Schweden.",
+    result:"Initial Fokus auf Sprachübersetzung; später Verschiebung zu dialogischem Engagement. Vertrauen durch Einbindung von Gemeindeleadership, Abbau von Barrieren (Wohnen, Beschäftigung, digitale Teilhabe). PSW und lokale Netzwerke bauten systemisches Vertrauen auf; nach Krise Risiko, diese Einsichten zu verlieren.",
+    transfer:"Schweden – steuerfinanziert, aber Prozessqualität und Beteiligungsaspekte übertragbar auf Deutschland."
   },
   {
     journal:"Gen Hosp Psychiatry", year:"2026", pmid:"42612565",
     author:"Thake M et al.", pubdate:"13.08.2026",
     added:"18.08.2026",
-    title:"PHQ-9 Diagnostische Genauigkeit in der Primärversorgung bei Depression mit Risikofaktoren",
-    sum:"Sekundäranalyse von 985 Primärversorgungspatienten zur Evaluierung der PHQ-9 Diagnostik bei Major Depression, stratifiziert nach Anzahl und Art von Depressionsrisikofaktoren.",
-    result:"PHQ-9 zeigte hohe diagnostische Genauigkeit (AUCs 0,92-0,97) für MDD-Detektion bei risikoadaptierten Patienten. Optimale Cutoffs variierten mit Risikofaktoranzahl (7-13). Sensitivität 0,78-0,99, Spezifität 0,80-0,91, PPV 0,40-0,88, NPV 0,80-0,99. Befunde unterstützen risikoadaptiertes Screening in der Primärversorgung.",
-    transfer:"Deutschland/Österreich, deutschsprachige Studie mit deutscher Routinepraxis."
+    title:"Diagnostische Genauigkeit von PHQ-9 in der Hausarztpraxis je nach Depressions-Risikofaktoren",
+    sum:"Deutsche Sekundäranalyse von 985 Hausarzt-Patienten prüft die diagnostische Genauigkeit des PHQ-9 je nach Anzahl/Art von Depressions-Risikofaktoren.",
+    result:"89 Patienten (9,1 %) mit Major Depression. Optimale PHQ-9-Cutoffs variierten nach Risikofaktoranzahl (7–13). Sensitivität 0,78–0,99; Spezifität 0,80–0,91; AUC 0,92–0,97. PHQ-9 zeigte ausgezeichnete Genauigkeit für risikogerechtes Screening.",
+    transfer:"Deutsche Daten (GET.FEEDBACK.GP-Studie), direkt übertragbar auf deutsches Primärversorgungssystem."
+  },
+  {
+    journal:"Int J Cardiol Heart Vasc", year:"2026", pmid:"42633073",
+    author:"Piayda K et al.", pubdate:"12.08.2026",
+    added:"23.08.2026",
+    title:"Einfluss von Alter, Gebrechlichkeit und Komorbiditäten auf Überleben nach Mitralklappenreparatur in Deutschland",
+    sum:"Eine deutsche Routinedatenstudie mit 4.896 Patienten untersucht Prognosen nach minimalinvasiver Mitralklappenreparatur hinsichtlich Alter, Gebrechlichkeit und Komorbiditäten.",
+    result:"Sehr alte Patienten (80–99 Jahre): OR 1,2 (95 % KI 1,07–1,49). Mit Pflegegrad 1–3: OR 1,43–2,09. Mit ≥3 Komorbiditäten: OR 2,82 (95 % KI 2,37–3,36). Medizinische Gesamtausgaben blieben gleich, aber Herzinsuffizienz-Krankenhausaufenthalte sanken.",
+    transfer:"Deutsche Routinedaten (BARMER Krankenkasse), direkt übertragbar."
+  },
+  {
+    journal:"Front Rehabil Sci", year:"2026", pmid:"42621103",
+    author:"Wengemuth E et al.", pubdate:"05.08.2026",
+    added:"20.08.2026",
+    title:"Übergang von medizinischer zu beruflicher Rehabilitation in Deutschland: qualitativ-quantitative Studie",
+    sum:"Deutsche Mixed-Methods-Studie mit 61 Rehabilitanden erfasst Erfahrungen beim Wechsel von medizinischer zu beruflicher Rehabilitation.",
+    result:"~50 % erhielten Information über berufliche Rehabilitation; weniger praktische Unterstützung bei Anträgen. GP/Fachärzte wurden von ~60 % als unterstützend wahrgenommen. ~2/3 fühlten sich selbstbestimmt, wenige unter Druck. System erfordert hohe Navigations-Kompetenzen.",
+    transfer:"Deutschland – direkt vom deutschen Versorgungssystem, hohe Übertragbarkeit."
   },
   {
     journal:"Surgery", year:"2026", pmid:"42632276",
     author:"Makar KG et al.", pubdate:"03.08.2026",
     added:"22.08.2026",
-    title:"Spiritual Distress bei erwachsenen Patienten vor elektiver Chirurgie: Qualitative Studie",
-    sum:"Qualitative Studie zu spiritueller Belastung und deren Auswirkungen auf die präoperative Erfahrung bei Patienten mit geplanten Eingriffen.",
-    result:"23 von 29 Patienten (79,3%) zeigten spirituelle Belastung, 6 Patienten (20,7%) spirituelles Wohlbefinden. Spirituell belastete Patienten äußerten signifikant mehr Angst und Komplikationserwartungen, während spirituell stabile Patienten Chirurgie als Genesung wahrnahmen. Diese Befunde unterstreichen die Bedeutung routinemäßiger spiritueller Unterstützung in der perioperativen Versorgung.",
-    transfer:"Qualitativ und systemunabhängig; konzeptualisiert patientenzentrierte Ergebnisse."
-  },
-  {
-    journal:"JACC Asia", year:"2026", pmid:"42631669",
-    author:"Bucci T et al.", pubdate:"30.07.2026",
-    added:"22.08.2026",
-    title:"ABC-Pathway-Adherence und kardiovaskuläre Ereignisse bei Vorhofflimmern: Asiatische Register-Analyse",
-    sum:"Clusteranalyse von 3.468 asiatischen Patienten mit Vorhofflimmern zur Identifikation klinischer Phänotypen und zum Nachweis der Assoziation zwischen ABC-Pathway-Therapieadhärenz und Outcomes.",
-    result:"Fünf Cluster identifiziert mit gestuftem Risiko; ABC-Pathway-Adhärenz war mit niedrigerem Primärergebnis-Risiko assoziiert (HR 0,53, 95% KI 0,38-0,74), unabhängig vom Phänotyp. Ältere Patienten mit hoher kardiovaskulärer Belastung oder Herzinsuffizienz zeigten höchstes Risiko (HR 3,33-4,15 vs. junge Patientengruppe).",
-    transfer:"Asien-Pazifik; Versorgungsqualität und Stratifikation auch für andere Systeme relevant."
+    title:"Spirituelle Belastung bei Erwachsenen vor elektiver Chirurgie: qualitative Studie",
+    sum:"Qualitative Studie mit 29 Patienten untersucht, wie Spiritualität und spirituelle Belastung präoperative Erfahrungen beeinflussen.",
+    result:"23 Patienten waren spirituell belastet, 6 spirituell gefestigt. Belastete Patienten äußerten Angst, Komplikationserwartungen und Zweifel am Göttlichen; gefestigte Patienten sahen Chirurgie als heilsam und vertrauten Gott. Spiritualität prägt preoperative Vulnerabilität oder Resilienz signifikant.",
+    transfer:"USA – Fragestellung aber systemunabhängig; qualitativ, patientenzentriert übertragbar."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
