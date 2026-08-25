@@ -1,5 +1,31 @@
 [
  {
+  "pmid": "42637631",
+  "journal": "Eur J Intern Med",
+  "year": "2026",
+  "author": "Campbell C et al.",
+  "pubdate": "24.08.2026",
+  "added": "24.08.2026",
+  "transfer": "Englische Routinedaten; vergleichbar mit deutschem NHS-ähnlichen System in Versorgungssteuerung und Datenqualität.",
+  "title": "Sterblichkeit bei akuter Lebererkrankung in England: nationale Kohortenstudie",
+  "sum": "Studie zur Langzeitsterblichkeit von 82.402 Patienten mit chronischer Lebererkrankung nach erstem Notfallaufenthalt in englischen Krankenhäusern (2012-2019).",
+  "result": "5-Jahres-Mortalität 59,9%; Median-Überlebenszeit 2,72 Jahre (95%-KI 2,66-2,79). Regional erhöhte Mortalität außerhalb Londons (adjHR 1,06-1,19); Encephalopathie (adjHR 1,70), Aszites (adjHR 1,64) und gastrointestinale Blutung (adjHR 1,10) mit erhöhter Mortalität assoziiert.",
+  "aufgenommen": "2026-08-25"
+ },
+ {
+  "pmid": "42637584",
+  "journal": "Res Social Adm Pharm",
+  "year": "2026",
+  "author": "Suppiah SD et al.",
+  "pubdate": "22.08.2026",
+  "added": "24.08.2026",
+  "transfer": "Australisch-singapurisches Autorenteam; Konzepte zu Patient-zentrierten Interventionen auf deutschsprachigen Raum übertragbar.",
+  "title": "Apotheken-Interventionen bei niedriger Health Literacy: systematische Übersicht mit Co-Design-Fokus",
+  "sum": "Systematische Übersicht von neun RCTs (13 Publikationen) zu Apotheken-Interventionen für chronisch kranke Erwachsene mit eingeschränkter Health Literacy.",
+  "result": "Medikamentenverstehen verbesserte sich konsistent, besonders durch patientenzentrierte Medikamentenetiketten; Adherence-Effekte waren inkonsistent und nicht nachhaltig; Care-Transition-Interventionen zeigten teilweise Reduktion ungünstiger Events. Co-Design-Elemente waren in nur einem Trial dokumentiert. 10 Studien, alle niedriges bis moderates Bias-Risiko.",
+  "aufgenommen": "2026-08-25"
+ },
+ {
   "pmid": "42633418",
   "journal": "Int J Chron Obstruct Pulmon Dis",
   "year": "2026",
