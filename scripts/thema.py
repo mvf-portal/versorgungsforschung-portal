@@ -42,7 +42,7 @@ EUROPA_ZUERST = False
 # und maxItems ab.
 ANZAHL_SOLL = 6
 ANZAHL_MAX = 7
-ANZAHL_MIN = 5
+ANZAHL_MIN = 1
 KAPPEN = True
 
 # ------------------------------------------------------------------- Prompts
