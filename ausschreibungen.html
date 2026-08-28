@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Offene Förderausschreibungen für die Gesundheitsforschung, nach zwölf Themengebieten geordnet: Bund, DFG und grants.gov, zweimal pro Woche geprüft. Ein Angebot von Monitor Versorgungsforschung.">
+<title>Ausschreibungsradar — Monitor Versorgungsforschung</title>
+<!-- Ohne Icon zeigt die Tableiste nur den Anfangsbuchstaben des Titels. Das
+     Zeichen ist in allen zwoelf Portalen dasselbe; gebaut wird es mit
+     icon_bauen.py in der Portal-Vorlage. -->
+<link rel="icon" href="/logo/hub-icon.svg" type="image/svg+xml">
+<link rel="icon" href="/logo/hub-icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/logo/hub-icon-180.png">
+<meta name="theme-color" content="#0051A1">
+<link rel="canonical" href="https://wissen.m-vf.de/ausschreibungen.html">
+<style>
+  /* Schrift, Farben und Gerüst wie newsletter.html - die Seite gehört sichtbar dazu. */
+  @font-face{ font-family:"Lato"; font-style:normal; font-weight:400;
+    src:url("fonts/lato-400.woff2") format("woff2"); font-display:swap; }
+  @font-face{ font-family:"Lato"; font-style:normal; font-weight:700;
+    src:url("fonts/lato-700.woff2") format("woff2"); font-display:swap; }
+
+  :root{
+    --paper:#EDF2FA; --card:#FFFFFF; --card-2:#F7FAFD;
+    --ink:#111111; --ink-soft:#444A50; --ink-faint:#545C63;
+    --line:#D0D8E4; --line-soft:#E3EAF3;
+    --brand:#0051A1; --brand-deep:#003B77; --brand-tint:#E1EAF6;
+    --action:#BE9E53; --action-deep:#8A6E28; --on-action:#2A2207;
+    --ok:#1C6B3C; --ok-tint:#E6F4EC; --warn:#8A2D2D; --warn-tint:#FAEAEA;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#0A1120; --card:#111B2E; --card-2:#0E1728;
+      --ink:#E9EEF6; --ink-soft:#A9B7CA; --ink-faint:#8FA0B7;
+      --line:#22314A; --line-soft:#1A2639;
+      --brand:#6FA8E8; --brand-deep:#9CC6F4; --brand-tint:#152742;
+      --action:#D4B878; --action-deep:#D9BE82; --on-action:#221A08;
+      --ok:#7FD3A2; --ok-tint:#12271C; --warn:#F0A3A3; --warn-tint:#2A1414;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0A1120; --card:#111B2E; --card-2:#0E1728;
+    --ink:#E9EEF6; --ink-soft:#A9B7CA; --ink-faint:#8FA0B7;
+    --line:#22314A; --line-soft:#1A2639;
+    --brand:#6FA8E8; --brand-deep:#9CC6F4; --brand-tint:#152742;
+    --action:#D4B878; --action-deep:#D9BE82; --on-action:#221A08;
+    --ok:#7FD3A2; --ok-tint:#12271C; --warn:#F0A3A3; --warn-tint:#2A1414;
+  }
+
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Lato", system-ui, "Segoe UI", Arial, sans-serif;
+    font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:820px; margin:0 auto; padding:0 22px; }
+
+  /* ---------- Menüleiste (wie ueber.html) ---------- */
+  nav.hauptmenu{ background:var(--card); border-bottom:1px solid var(--line); }
+  .menu-inner{
+    display:flex; align-items:center; gap:4px; flex-wrap:nowrap;
+    overflow-x:auto; scrollbar-width:none; padding:0;
+  }
+  .menu-inner::-webkit-scrollbar{ display:none; }
+  .menu-inner a{
+    flex:0 0 auto; padding:11px 13px; font-size:13px; font-weight:700;
+    color:var(--ink-soft); text-decoration:none; white-space:nowrap;
+    border-bottom:2px solid transparent; transition:color .14s, border-color .14s;
+  }
+  .menu-inner a:hover{ color:var(--brand); border-bottom-color:var(--brand); }
+  .menu-inner a.hier{ color:var(--brand); border-bottom-color:var(--brand); }
+  .menu-inner a:focus-visible{ outline:2px solid var(--brand); outline-offset:-2px; }
+  .menu-extern::after{ content:" \2197"; font-size:.85em; }
+  @media (max-width:860px){
+    nav.hauptmenu{ position:relative; }
+    nav.hauptmenu::after{
+      content:""; position:absolute; top:0; right:0; bottom:0; width:36px;
+      background:linear-gradient(to right, transparent, var(--card));
+      pointer-events:none;
+    }
+  }
+  @media (max-width:620px){
+    .menu-inner{ flex-wrap:wrap; padding:3px 0; gap:0; }
+    .menu-inner a{ padding:12px 9px; font-size:12px; }
+    .menu-inner a.nur-breit{ display:none; }
+    nav.hauptmenu::after{ display:none; }
+  }
+
+  /* ---------- Kopf ---------- */
+  header.top{ background:var(--card); border-bottom:1px solid var(--line); padding:38px 0 30px; }
+  .kopf-oben{ display:flex; align-items:flex-start; justify-content:space-between; gap:26px; }
+  .eyebrow{
+    font-size:11.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--brand); margin:0 0 8px;
+  }
+  h1{
+    font-size:clamp(24px,3.6vw,38px); font-weight:700; line-height:1.15;
+    margin:0 0 14px; color:var(--brand); letter-spacing:-.015em; text-wrap:balance;
+  }
+  .standfirst{ margin:0; font-size:clamp(16px,2vw,18px); color:var(--ink-soft); max-width:62ch; text-wrap:pretty; }
+  .marke{ flex:0 0 auto; display:block; line-height:0; border-radius:5px; }
+  .marke img{ width:190px; max-width:34vw; height:auto; display:block; }
+  @media (prefers-color-scheme:dark){ .marke{ background:#fff; padding:9px 12px; } }
+  :root[data-theme="dark"] .marke{ background:#fff; padding:9px 12px; }
+  :root[data-theme="light"] .marke{ background:none; padding:0; }
+  @media (max-width:720px){
+    .kopf-oben{ flex-direction:column-reverse; align-items:flex-start; gap:16px; }
+    .marke img{ width:160px; max-width:56vw; }
+  }
+
+  main{ padding:34px 0 70px; }
+  h2{
+    font-size:clamp(19px,2.6vw,24px); font-weight:700; line-height:1.25;
+    margin:0 0 14px; padding-bottom:9px; border-bottom:2px solid var(--brand);
+  }
+  p{ margin:0 0 14px; max-width:68ch; text-wrap:pretty; }
+  a{ color:var(--brand); text-underline-offset:2px; }
+  a:focus-visible{ outline:2px solid var(--brand); outline-offset:3px; border-radius:3px; }
+
+  /* ---------- Ausschreibungsradar ---------- */
+  /* Zwölf Gebiete untereinander. Jedes trägt seinen Slug als id, damit die
+     elf Schwesterhubs direkt auf ihr Gebiet verweisen können - der Link in
+     ihrer Kopfkarte endet auf "#pflege", "#safety" und so fort. */
+  .gebiet{ margin:0 0 30px; scroll-margin-top:14px; }
+  .gebiet-kopf{
+    display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+    margin:0 0 12px; padding-bottom:9px; border-bottom:2px solid var(--brand);
+  }
+  .gebiet-kopf h2{ margin:0; padding:0; border:0; }
+  .gebiet-zahl{
+    font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--brand-deep); background:var(--brand-tint);
+    border-radius:4px; padding:2px 9px;
+  }
+  .gebiet-hub{ margin-left:auto; font-size:13px; color:var(--ink-faint); }
+
+  .los{ list-style:none; margin:0; padding:0; }
+  .los li{
+    background:var(--card); border:1px solid var(--line); border-radius:6px;
+    padding:14px 17px; margin:0 0 10px;
+  }
+  .los-titel{ font-size:16px; font-weight:700; line-height:1.35; color:var(--brand);
+              text-decoration:none; display:block; hyphens:auto; }
+  .los-titel:hover{ text-decoration:underline; }
+  .los-meta{
+    display:flex; align-items:center; gap:9px; flex-wrap:wrap;
+    margin-top:7px; font-size:13px; color:var(--ink-faint);
+  }
+  .los-frist{ font-weight:700; color:var(--ink-soft); }
+  /* Was in zwei Wochen ablaeuft, muss ins Auge fallen: Danach ist der Eintrag
+     nicht nur wertlos, sondern eine Falle fuer den, der darauf hin plant. */
+  .los-frist[data-knapp="ja"]{ color:var(--action-deep); }
+  .los-land{ border:1px solid var(--line); border-radius:3px; padding:0 5px; font-size:12px; }
+
+  .leer{
+    font-size:14.5px; color:var(--ink-soft); background:var(--card-2);
+    border:1px dashed var(--line); border-radius:6px; padding:13px 16px; margin:0;
+  }
+  .stand{ font-size:13px; color:var(--ink-faint); margin:-6px 0 26px; }
+  .quellen{
+    font-size:13.5px; color:var(--ink-faint); line-height:1.6; max-width:68ch;
+    background:var(--card-2); border:1px solid var(--line-soft);
+    border-radius:6px; padding:14px 17px; margin:0 0 30px;
+  }
+  .inhalt{ margin:0 0 30px; padding:0; list-style:none;
+           display:flex; flex-wrap:wrap; gap:7px; }
+  .inhalt a{
+    font-size:13px; text-decoration:none; color:var(--ink-soft);
+    background:var(--card); border:1px solid var(--line);
+    border-radius:999px; padding:4px 12px;
+  }
+  .inhalt a:hover{ border-color:var(--brand); color:var(--brand); }
+
+  footer{
+    border-top:1px solid var(--line); background:var(--card);
+    padding:26px 0 40px; font-size:13.5px; color:var(--ink-faint);
+  }
+  footer p{ margin:0 0 8px; max-width:70ch; }
+  footer a{ color:var(--ink-soft); }
+</style>
+
+<nav class="hauptmenu">
+  <div class="wrap menu-inner">
+    <a href="./">Knowledge-Hub</a>
+    <a href="ueber.html">Über den Hub</a>
+    <a href="newsletter.html">Newsletter</a>
+    <a href="ausschreibungen.html" class="hier" aria-current="page">Ausschreibungen</a>
+    <a href="./#impressum" class="nur-breit">Impressum</a>
+    <a href="./#datenschutz" class="nur-breit">Datenschutz</a>
+    <a href="https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&amp;utm_medium=referral&amp;utm_campaign=menu" target="_blank" rel="noopener" class="menu-extern">Monitor Versorgungsforschung</a>
+  </div>
+</nav>
+<header class="top">
+  <div class="wrap kopf-oben">
+    <div>
+      <p class="eyebrow">Knowledge-Hub Versorgungsforschung</p>
+      <h1>Ausschreibungsradar</h1>
+      <p class="standfirst">Wer zu einem Thema forscht, sucht nicht nur Studien, sondern auch
+      Geld. Diese Seite sammelt zweimal pro Woche offene Förderausschreibungen und ordnet sie
+      den zwölf Themengebieten der Knowledge-Hubs zu. Aufgenommen wird nur, was eine erkennbare Frist
+      hat — und was noch läuft.</p>
+    </div>
+    <a class="marke" href="https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&amp;utm_medium=referral&amp;utm_campaign=logo" target="_blank" rel="noopener" title="Monitor Versorgungsforschung — Herausgeber dieses Portals">
+      <img src="logo/mvf-logo.png" width="1236" height="327" alt="Monitor Versorgungsforschung">
+    </a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="stand" id="stand"></p>
+
+  <!-- Der Quellenhinweis steht fest im Markup und nicht im Marker-Block: Er
+       beschreibt, was der Radar auswertet, und das ändert sich nicht täglich.
+       Er nennt die Quellen ausdrücklich, damit niemand die Liste für
+       vollständig hält — Ausschreibungen des BMG, des Familienministeriums,
+       der Länder oder von Stiftungen sind maschinell nicht abrufbar und
+       fehlen deshalb. -->
+  <p class="quellen">Ausgewertet werden die Förderbekanntmachungen des Bundes
+    (foerderinfo.bund.de, darunter der Innovationsausschuss des G-BA), die
+    Informationen für die Wissenschaft der <b>DFG</b> und <b>grants.gov</b>
+    (USA, inkl. NIH). Ausschreibungen anderer Häuser können fehlen. Maßgeblich
+    ist stets die Bekanntmachung selbst — bitte dort die Frist prüfen.</p>
+
+  <ul class="inhalt" id="inhalt"></ul>
+
+  <div id="gebiete"></div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Ein Angebot von „Monitor Versorgungsforschung" · eRelation AG – Content in Health, Bonn</p>
+    <p><a href="./">Knowledge-Hub</a> · <a href="ueber.html">Über den Hub</a> ·
+       <a href="./#impressum">Impressum</a> · <a href="./#datenschutz">Datenschutz</a></p>
+  </div>
+</footer>
+
+<script>
+// === RADAR-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
+const RADAR_STAND = "28.08.2026";
+const RADAR = [
+  {slug:"versorgungsforschung", name:"Versorgungsforschung", domain:"wissen.m-vf.de", eintraege:[
+    {titel:"Innovationsausschuss – Versorgungsforschung zum themenspezifischen Bereich", frist:"2026-10-20", url:"https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-versorgungsforschung-zum-themenspezifischen-bereich.69", quelle:"Bund (foerderinfo.bund.de)", land:"DE"},
+    {titel:"Innovationsausschuss – Versorgungsforschung zum themenoffenen Bereich", frist:"2026-10-20", url:"https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-versorgungsforschung-zum-themenoffenen-bereich.55", quelle:"Bund (foerderinfo.bund.de)", land:"DE"},
+    {titel:"Innovationsausschuss - Versorgungsforschung – Medizinische Leitlinien (MedLL)", frist:"2026-09-22", url:"https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-versorgungsforschung-medizinische-leitlinien-medll.70", quelle:"Bund (foerderinfo.bund.de)", land:"DE"},
+    {titel:"Klinische Studien mit hoher Relevanz für die Versorgung von Patientinnen und Patienten mit postinfektiösen Erkrankungen", frist:"2026-09-02", url:"https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/06/2026-06-01-bekanntmachung-postinfektioese-erkrankungen.html", quelle:"Bund (foerderinfo.bund.de)", land:"DE"},
+    {titel:"Klinische Studien mit hoher Relevanz für die Patientenversorgung", frist:"2026-09-02", url:"https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/06/2026-06-01-bekanntmachung-patientenversorgung.html", quelle:"Bund (foerderinfo.bund.de)", land:"DE"},
+    {titel:"Etablierung eines Netzwerks zum Aufbau einer Gesundheitsdateninfrastruktur in Europa", frist:"2026-09-14", url:"https://www.bundesanzeiger.de/ebanzwww/wexsservlet?page.navid=to_bookmark_official&bookmark_id=W8bclYaY0KxWVZChYBb", quelle:"Bund (foerderinfo.bund.de)", land:"DE"},
+    {titel:"e2Health –  Klinische Validierungsstudien", frist:"2026-09-23", url:"https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-07-bekanntmachung-in-silico-methoden.html", quelle:"Bund (foerderinfo.bund.de)", land:"DE"},
+  ]},
+  {slug:"klima-gesundheit", name:"Hitze, Klima & Gesundheit", domain:"klima.m-vf.de", eintraege:[
+  ]},
+  {slug:"ki-gesundheit", name:"Digitalisierung, KI & Gesundheit", domain:"ki.m-vf.de", eintraege:[
+    {titel:"Etablierung eines Netzwerks zum Aufbau einer Gesundheitsdateninfrastruktur in Europa", frist:"2026-09-14", url:"https://www.bundesanzeiger.de/ebanzwww/wexsservlet?page.navid=to_bookmark_official&bookmark_id=W8bclYaY0KxWVZChYBb", quelle:"Bund (foerderinfo.bund.de)", land:"DE"},
+    {titel:"e2Health –  Klinische Validierungsstudien", frist:"2026-09-23", url:"https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-07-bekanntmachung-in-silico-methoden.html", quelle:"Bund (foerderinfo.bund.de)", land:"DE"},
+    {titel:"Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung", frist:"2026-10-28", url:"https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-11-bekanntmachung-secure-processing-environments.html", quelle:"Bund (foerderinfo.bund.de)", land:"DE"},
+    {titel:"Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)", frist:"2026-10-06", url:"https://www.grants.gov/search-results-detail/359252", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"Logistics Center for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (U24 Clinical Trials Not Allowed)", frist:"2026-10-02", url:"https://www.grants.gov/search-results-detail/359268", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"Development and Testing of a Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (U01 Clinical Trial Not Allowed)", frist:"2026-10-09", url:"https://www.grants.gov/search-results-detail/359271", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (UG3/UH3, Clinical Trial Optional)", frist:"2026-10-19", url:"https://www.grants.gov/search-results-detail/359666", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"PRIMED-AI: Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (UG3/UH3 Clinical Trial Optional)", frist:"2026-10-19", url:"https://www.grants.gov/search-results-detail/359270", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+  ]},
+  {slug:"pflege", name:"Pflege & Langzeitversorgung", domain:"pflege.m-vf.de", eintraege:[
+  ]},
+  {slug:"longevity", name:"Gesundes Altern & Longevity", domain:"longevity.m-vf.de", eintraege:[
+    {titel:"Renewal of the Clinician-Scientists Transdisciplinary Aging Research (Clin-STAR) Coordinating Center (U24 Clinical Trial Not Allowed)", frist:"2026-09-29", url:"https://www.grants.gov/search-results-detail/359651", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)", frist:"2026-10-15", url:"https://www.grants.gov/search-results-detail/359201", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+  ]},
+  {slug:"healthliteracy", name:"Gesundheitskompetenz", domain:"healthliteracy.m-vf.de", eintraege:[
+  ]},
+  {slug:"impfen", name:"Impfen & Impfprävention", domain:"impfen.m-vf.de", eintraege:[
+  ]},
+  {slug:"ncd", name:"Nicht übertragbare Krankheiten", domain:"ncd.m-vf.de", eintraege:[
+    {titel:"Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)", frist:"2026-10-06", url:"https://www.grants.gov/search-results-detail/359252", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"Single Source Competition: Continuation of the Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D) - Resource Center (U24 Clinical Trial Not Allowed)", frist:"2026-09-30", url:"https://www.grants.gov/search-results-detail/361035", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"Single Source for Continuation of the Integrated Islet Distribution Program U24 (Clinical Trial Not Allowed)", frist:"2026-09-30", url:"https://www.grants.gov/search-results-detail/358917", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"DoW Prostate Cancer, Data Science Award", frist:"2026-09-02", url:"https://www.grants.gov/search-results-detail/362259", quelle:"grants.gov (DOD-AMRAA)", land:"US"},
+    {titel:"DoW Peer Reviewed Cancer, Clinical Trial Award", frist:"2026-10-05", url:"https://www.grants.gov/search-results-detail/362268", quelle:"grants.gov (DOD-AMRAA)", land:"US"},
+    {titel:"DoW Melanoma Research Program Team Science Award", frist:"2026-10-14", url:"https://www.grants.gov/search-results-detail/362242", quelle:"grants.gov (DOD-AMRAA)", land:"US"},
+    {titel:"NCI Community Oncology Research Program (NCORP) Community Sites (UG1 Clinical Trial Not Allowed)", frist:"2026-09-18", url:"https://www.grants.gov/search-results-detail/358964", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"NCI Community Oncology Research Program (NCORP) Research Bases (UG1 Clinical Trial Required)", frist:"2026-09-18", url:"https://www.grants.gov/search-results-detail/358963", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+  ]},
+  {slug:"gender", name:"Geschlechtersensible Medizin", domain:"gender.m-vf.de", eintraege:[
+  ]},
+  {slug:"adipositas", name:"Adipositas", domain:"adipositas.m-vf.de", eintraege:[
+    {titel:"Optimal Treatment Strategies for use of Anti-Obesity Medications (AOMs) in Children and Adolescents Clinical Centers (U01 Clinical Trial Required)", frist:"2026-10-09", url:"https://www.grants.gov/search-results-detail/360387", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"Optimal Treatment Strategies for use of Anti-Obesity Medications (AOMs) in Children and Adolescents Research Coordinating Center (U24 Clinical Trial Not Allowed)", frist:"2026-10-09", url:"https://www.grants.gov/search-results-detail/360441", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"Nutrition Obesity Research Centers (NORCs) (P30 Clinical Trial Optional)", frist:"2026-10-20", url:"https://www.grants.gov/search-results-detail/360544", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+  ]},
+  {slug:"safety", name:"Patientensicherheit", domain:"safety.m-vf.de", eintraege:[
+  ]},
+  {slug:"mental", name:"Psychische Gesundheit", domain:"mental.m-vf.de", eintraege:[
+    {titel:"Alcohol Health Services Research (R01 Clinical Trial Optional)", frist:"2026-09-07", url:"https://www.grants.gov/search-results-detail/357440", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"Alcohol Health Services Research (R34 Clinical Trial Optional)", frist:"2026-09-07", url:"https://www.grants.gov/search-results-detail/357438", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"Alcohol Treatment, Pharmacotherapy, and Recovery Research (R34 Clinical Trial required)", frist:"2026-09-07", url:"https://www.grants.gov/search-results-detail/357444", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"Alcohol Treatment, Pharmacotherapy, and Recovery Research (R01 Clinical Trial Required)", frist:"2026-09-07", url:"https://www.grants.gov/search-results-detail/357442", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+    {titel:"Nonfatal Overdoses in Emergency Departments:  Bridging Patient Characteristics, Biospecimen Toxicology, and Drug Supply Composition", frist:"2026-08-31", url:"https://www.grants.gov/search-results-detail/363543", quelle:"grants.gov (ONDCP)", land:"US"},
+    {titel:"Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)", frist:"2026-10-15", url:"https://www.grants.gov/search-results-detail/359201", quelle:"grants.gov (HHS-NIH11)", land:"US"},
+  ]},
+];
+// === RADAR-BLOCK-ENDE ===
+
+// Abgelaufenes steht schon nicht mehr im Block - `ausschreibungen.py` nimmt es
+// bei jedem Lauf heraus. Diese Schleife rechnet zusätzlich im Browser nach:
+// Zwischen dem nächtlichen Lauf und dem Seitenaufruf können Stunden liegen,
+// und am Stichtag selbst wäre die Angabe sonst falsch.
+(function(){
+  const heute = new Date(); heute.setHours(0,0,0,0);
+  const ziel = document.getElementById('gebiete');
+  const inhalt = document.getElementById('inhalt');
+  const stand = document.getElementById('stand');
+  if(!ziel) return;
+
+  const offen = a => {
+    const f = new Date(a.frist + 'T00:00:00');
+    return !isNaN(f) && f >= heute;
+  };
+  let gesamt = 0;
+
+  RADAR.forEach(g => {
+    const eintraege = (g.eintraege || []).filter(offen);
+    gesamt += eintraege.length;
+
+    const punkt = document.createElement('li');
+    punkt.innerHTML = '<a href="#' + g.slug + '">' + g.name
+      + ' (' + eintraege.length + ')</a>';
+    inhalt.appendChild(punkt);
+
+    const abschnitt = document.createElement('section');
+    abschnitt.className = 'gebiet';
+    abschnitt.id = g.slug;
+    const kopf = document.createElement('div');
+    kopf.className = 'gebiet-kopf';
+    kopf.innerHTML = '<h2>' + g.name + '</h2>'
+      + '<span class="gebiet-zahl">' + eintraege.length + '</span>'
+      + '<span class="gebiet-hub"><a href="https://' + g.domain
+        + '/" target="_blank" rel="noopener">' + g.domain + ' \u2197</a></span>';
+    abschnitt.appendChild(kopf);
+
+    if(!eintraege.length){
+      // Die Null-Ansage ist eine Aussage, keine Fehlermeldung: Der Radar hat
+      // gesucht und nichts gefunden. Bei eng gefassten Gebieten ist das der
+      // Normalfall und darf nicht wie ein Ausfall aussehen.
+      const leer = document.createElement('p');
+      leer.className = 'leer';
+      leer.textContent = 'Derzeit gibt es keine von uns recherchierbaren '
+        + 'Fördermaßnahmen in diesem Themenbereich. Der Radar sucht zweimal pro Woche neu.';
+      abschnitt.appendChild(leer);
+    } else {
+      const liste = document.createElement('ul');
+      liste.className = 'los';
+      eintraege.forEach(a => {
+        const f = new Date(a.frist + 'T00:00:00');
+        const tage = Math.round((f - heute) / 86400000);
+        const rest = tage === 0 ? 'heute letzter Tag'
+                   : tage === 1 ? 'noch 1 Tag' : 'noch ' + tage + ' Tage';
+        const li = document.createElement('li');
+        li.innerHTML =
+          '<a class="los-titel" href="' + a.url + '" target="_blank" rel="noopener">'
+            + a.titel + '</a>'
+          + '<div class="los-meta">'
+            + '<span class="los-land">' + a.land + '</span>'
+            + '<span class="los-frist" data-knapp="' + (tage <= 14 ? 'ja' : 'nein') + '">'
+            + rest + '</span>'
+            + '<span>Frist: ' + f.toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'}) + '</span>'
+            + '<span>\u00b7 ' + a.quelle + '</span>'
+          + '</div>';
+        liste.appendChild(li);
+      });
+      abschnitt.appendChild(liste);
+    }
+    ziel.appendChild(abschnitt);
+  });
+
+  if(stand){
+    stand.textContent = gesamt + ' offene Ausschreibung' + (gesamt === 1 ? '' : 'en')
+      + ' \u00b7 Stand ' + RADAR_STAND + ' \u00b7 zweimal pro Woche geprüft';
+  }
+})();
+</script>
+
+</html>
+
+<!-- ZAEHLER-START --------------------------------------------------------
+     Zaehlt den Aufruf auf dem eigenen Server von Monitor Versorgungsforschung.
+     Kein Cookie, keine Kennung auf dem Geraet, keine fremde Firma. Wer Do Not
+     Track gesetzt hat, wird gar nicht erst gezaehlt. Schlaegt der Abruf fehl,
+     merkt die Seite es nicht - ein Bild, das nicht laedt, ist folgenlos.
+     Gegenstueck: /zaehler/z.php auf monitor-versorgungsforschung.de -->
+<script>
+(function () {
+  try {
+    if (navigator.doNotTrack === '1' || window.doNotTrack === '1'
+        || navigator.globalPrivacyControl === true) return;
+    // Automatische Umgebungen melden sich selbst: navigator.webdriver setzen
+    // Headless Chrome und Selenium von sich aus. Zuverlaessiger als jede
+    // Liste von Browserkennungen, weil es nicht geraten, sondern gemeldet wird.
+    if (navigator.webdriver) return;
+    if (!screen.width || !screen.height) return;   // kein echter Bildschirm
+    if (!/\.m-vf\.de$/.test(location.hostname)) return;   // lokal nicht zaehlen
+    var r = '';
+    try { r = document.referrer ? new URL(document.referrer).hostname : ''; }
+    catch (e) { r = ''; }
+    if (r === location.hostname) r = '';
+    // Bildschirmbreite nur in Stufen. Die genaue Aufloesung waere eines der
+    // staerksten Merkmale zum Wiedererkennen eines Browsers; fuer die Frage,
+    // fuer welche Breite zu gestalten ist, genuegt die Schublade.
+    var w = screen.width;
+    var stufe = w < 480 ? 'bis480' : w < 768 ? 'bis768' : w < 1024 ? 'bis1024'
+              : w < 1440 ? 'bis1440' : w < 1920 ? 'bis1920' : 'ueber1920';
+    var q = 'h=' + encodeURIComponent(location.hostname)
+          + '&p=' + encodeURIComponent(location.pathname)
+          + '&r=' + encodeURIComponent(r ? 'https://' + r + '/' : '')
+          + '&g=' + (Math.min(screen.width, screen.height) < 768 ? 'm' : 'd')
+          + '&b=' + stufe
+          + '&c=' + Date.now();
+    new Image(1, 1).src =
+      'https://www.monitor-versorgungsforschung.de/zaehler/z.php?' + q;
+  } catch (e) { /* Zaehlung ist nie wichtiger als die Seite */ }
+})();
+</script>
+<!-- ZAEHLER-ENDE -->
