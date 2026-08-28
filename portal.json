@@ -40,5 +40,6 @@
   "N_RUBRIKEN": "8",
   "N_GLOSSAR": "167",
   "META_NEWSLETTER": "Newsletter von Monitor Versorgungsforschung bestellen: den täglichen Studien-Newsletter aus dem Knowledge-Hub, die Studienauswahl der Schwesterportale zu Klima, KI und Pflege, den redaktionellen MVF-Newsletter — einzeln oder zusammen.",
-  "NL_STUDIEN_WAS": "Die Studienauswahl des Hubs jeden Morgen per E-Mail: deutsche Zusammenfassungen, die Ergebniszahlen und die Einordnung, was sich auf das deutsche Versorgungssystem übertragen lässt. Dazu die Word- und Excel-Datei zum Tag."
+  "NL_STUDIEN_WAS": "Die Studienauswahl des Hubs jeden Morgen per E-Mail: deutsche Zusammenfassungen, die Ergebniszahlen und die Einordnung, was sich auf das deutsche Versorgungssystem übertragen lässt. Dazu die Word- und Excel-Datei zum Tag.",
+  "CRON_MIN": "3"
 }
