@@ -343,6 +343,32 @@
   /* Die Anmeldung selbst liegt bei Monitor Versorgungsforschung; hier steht nur
      der Hinweis darauf. Wie .archive: flex:0 0 auto, sonst staucht die
      Studienliste den Kasten in der Sticky-Spalte weg. */
+  /* ---------- Aus dem Magazin ----------
+     Beitraege von m-vf.de zum Themenfeld dieses Hubs. Steht bewusst UNTER
+     den Studien und ueber dem Newsletter-Kasten: Die Studien sind das
+     Herzstueck, das Magazin ist die Einordnung dazu. */
+  .magazin{
+    margin-top:10px; border:1px solid var(--line); border-radius:6px;
+    background:var(--card); padding:11px 13px; flex:0 0 auto;
+  }
+  .magazin[hidden]{ display:none; }
+  .magazin-title{
+    display:flex; align-items:center; gap:8px;
+    font-weight:700; font-size:13.5px; color:var(--ink); margin-bottom:3px;
+  }
+  .magazin-title::before{ content:"\1F4F0"; font-size:15px; filter:grayscale(.3); }
+  .magazin-sub{ font-size:11px; line-height:1.45; color:var(--ink-faint); margin:0 0 8px; }
+  .magazin-sub a{ color:var(--ink-faint); }
+  .magazin-list{ list-style:none; margin:0; padding:0; }
+  .magazin-list li{ padding:7px 0; border-top:1px solid var(--line-soft); }
+  .magazin-list li:first-child{ border-top:none; }
+  .magazin-list a{
+    font-size:12.5px; line-height:1.35; font-weight:600; color:var(--brand);
+    text-decoration:none; display:block; hyphens:auto;
+  }
+  .magazin-list a:hover{ text-decoration:underline; }
+  .magazin-datum{ display:block; font-size:11px; color:var(--ink-faint); margin-top:3px; }
+
   .nl{
     margin-top:10px; border:1px solid var(--line); border-radius:6px;
     background:var(--card); padding:11px 13px; flex:0 0 auto;
@@ -891,6 +917,19 @@
         <p class="arch-status">Wird geladen …</p>
       </div>
     </details>
+    <!-- Aus dem Magazin. Angeregt vom selben Nutzer wie der
+         Ausschreibungsradar: Wer sich fuer ein Thema interessiert, will nicht
+         nur die Studienlage, sondern auch, was dazu geschrieben wurde.
+         Quelle ist ausschliesslich das eigene Archiv (m-vf.de) - Fremdmedien
+         waeren presserechtlich heikel und verwaesserten das Evidenz-Profil.
+         Gefuellt von scripts/newsfeed.py, verborgen bis dahin. -->
+    <section class="magazin" id="magazin" hidden>
+      <div class="magazin-title">Ausgesuchte News zu diesem Themenfeld</div>
+      <p class="magazin-sub">Beiträge aus dem Portal von „Monitor
+        Versorgungsforschung" (<a href="https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&amp;utm_medium=referral&amp;utm_campaign=magazin" target="_blank" rel="noopener">www.m-vf.de</a>)</p>
+      <ul class="magazin-list" id="magazinList"></ul>
+    </section>
+
     <!-- Anmeldung bewusst NICHT hier: Der Hub erhebt keine personenbezogenen
          Daten. Das Formular liegt bei Monitor Versorgungsforschung, wo auch
          Double-Opt-in und Einwilligung verwaltet werden. -->
@@ -1116,6 +1155,19 @@ const RADAR_ZUHAUSE = true;
 const RADAR_FRISTEN = [["2026-10-20", "2026-10-20", "2026-09-22", "2026-09-02", "2026-09-02", "2026-09-14", "2026-09-23"], [], ["2026-09-14", "2026-09-23", "2026-10-28", "2026-10-06", "2026-10-02", "2026-10-09", "2026-10-19", "2026-10-19"], [], ["2026-09-29", "2026-10-15"], [], [], ["2026-10-06", "2026-09-30", "2026-09-30", "2026-09-02", "2026-10-05", "2026-10-14", "2026-09-18", "2026-09-18"], [], ["2026-10-09", "2026-10-09", "2026-10-20"], [], ["2026-09-07", "2026-09-07", "2026-09-07", "2026-09-07", "2026-08-31", "2026-10-15"]];
 // === RADAR-BLOCK-ENDE ===
 
+// Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
+// === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
+const NEWS_STAND = "28.08.2026";
+const NEWS = [
+  {titel:"Dr. Johanna Löchner ist neue Professorin für „Mentale Gesundheit in der Primärversorgung“", datum:"2026-08-19", url:"https://www.monitor-versorgungsforschung.de/news/dr-johanna-loechner-ist-neue-professorin-fuer-mentale-gesundheit-in-der-primaerversorgung/"},
+  {titel:"Enge digitale Begleitung hilft Frauen mit Brustkrebs", datum:"2026-08-11", url:"https://www.monitor-versorgungsforschung.de/news/enge-digitale-begleitung-hilft-frauen-mit-brustkrebs/"},
+  {titel:"Erfolgreich abgeschlossene Versorgungsforschungsprojekte – Multimodale Konzepte für Ältere sowie Analysen zur leitliniengerechten Behandlung einer chronischen Herzerkrankung", datum:"2026-07-20", url:"https://www.monitor-versorgungsforschung.de/news/erfolgreich-abgeschlossene-versorgungsforschungsprojekte-multimodale-konzepte-fuer-aeltere-sowie-analysen-zur-leitliniengerechten-behandlung-einer-chronischen-herzerkrankung/"},
+  {titel:"Verbraucher:innen sind offen für Gesundheitsservices abseits von Praxen und Apotheken", datum:"2026-04-01", url:"https://www.monitor-versorgungsforschung.de/news/verbraucherinnen-sind-offen-fuer-gesundheitsservices-abseits-von-praxen-und-apotheken/"},
+  {titel:"Internationaler Forschungspreis der Zahnmedizin geht ans Heidelberg Institute of Global Health", datum:"2025-08-04", url:"https://www.monitor-versorgungsforschung.de/news/internationaler-forschungspreis-der-zahnmedizin-geht-ans-heidelberg-institute-of-global-health/"},
+  {titel:"„Dürftig!“ – Deutsche Gesellschaft für Integrierte Versorgung kritisiert Koalitionsvertrag", datum:"2025-04-24", url:"https://www.monitor-versorgungsforschung.de/news/duerftig-deutsche-gesellschaft-fuer-integrierte-versorgung-kritisiert-koalitionsvertrag/"},
+];
+// === NEWS-BLOCK-ENDE ===
+
 // === CHIPS-BLOCK-START (themenspezifisch) ===
 const CHIPS = [
   "Primärversorgung",
@@ -1280,6 +1332,39 @@ STUDIES.forEach(s=>{
     '<a class="study-src" href="'+url+'" target="_blank" rel="noopener">PubMed · PMID '+s.pmid+' ↗</a>';
   studiesList.appendChild(art);
 });
+
+// ---- Aus dem Magazin ----
+// Die Beitraege stehen fertig im Block; hier wird nur gerendert. Findet
+// newsfeed.py nichts, bleibt der alte Inhalt stehen - eine leere Karte saehe
+// aus wie ein Themenfeld, ueber das nie etwas geschrieben wurde.
+(function(){
+  const kasten = document.getElementById('magazin');
+  const liste = document.getElementById('magazinList');
+  if(!kasten || !liste || typeof NEWS === 'undefined' || !NEWS.length) return;
+  NEWS.forEach(n => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = n.url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    // textContent statt innerHTML: In Beitragstiteln stehen Anfuehrungs-
+    // zeichen, Gedankenstriche und gelegentlich ein Ampersand.
+    a.textContent = n.titel;
+    li.appendChild(a);
+    if(n.datum){
+      const d = new Date(n.datum + 'T00:00:00');
+      if(!isNaN(d)){
+        const span = document.createElement('span');
+        span.className = 'magazin-datum';
+        span.textContent = d.toLocaleDateString('de-DE',
+          {day:'2-digit', month:'long', year:'numeric'});
+        li.appendChild(span);
+      }
+    }
+    liste.appendChild(li);
+  });
+  kasten.hidden = false;
+})();
 
 // ---- Hinweis auf den Ausschreibungsradar ----
 // Der Block oben nennt die Fristen des eigenen Themengebiets, nicht eine
