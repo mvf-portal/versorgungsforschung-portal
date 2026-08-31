@@ -1,8 +1,8 @@
 {
- "stand": "28.08.2026",
+ "stand": "31.08.2026",
  "quellen": {
-  "Bund": 73,
-  "grants.gov": 297,
+  "Bund": 72,
+  "grants.gov": 292,
   "DFG": 12
  },
  "warnungen": [],
@@ -38,16 +38,7 @@
      "quelle": "Bund (foerderinfo.bund.de)",
      "land": "DE",
      "beschreibung": "Förderbekanntmachung Versorgungsforschung - Medizinische Leitlinien (MedLL) vom 19.06.2026. Web-Seminar am 14.07.2026.",
-     "beleg": "Versorgungsforschung – Medizinische Leitlinien (MedLL)"
-    },
-    {
-     "titel": "Klinische Studien mit hoher Relevanz für die Versorgung von Patientinnen und Patienten mit postinfektiösen Erkrankungen",
-     "frist": "2026-09-02",
-     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/06/2026-06-01-bekanntmachung-postinfektioese-erkrankungen.html",
-     "quelle": "Bund (foerderinfo.bund.de)",
-     "land": "DE",
-     "beschreibung": "Richtlinie zur Förderung von Projekten zum Thema klinische Studien mit hoher Relevanz für die Versorgung von Patientinnen und Patienten mit postinfektiösen Erkrankungen – Nationale Dekade gegen postinfektiöse Erkrankungen. BAnz vom 01.06.2026.",
-     "beleg": "hoher Relevanz für die Versorgung von Patientinnen und Patienten mit postinfektiösen Erkrankungen"
+     "beleg": "Versorgungsforschung – Medizinische Leitlinien"
     },
     {
      "titel": "Klinische Studien mit hoher Relevanz für die Patientenversorgung",
@@ -59,22 +50,31 @@
      "beleg": "Klinische Studien mit hoher Relevanz für die Patientenversorgung"
     },
     {
-     "titel": "Etablierung eines Netzwerks zum Aufbau einer Gesundheitsdateninfrastruktur in Europa",
-     "frist": "2026-09-14",
-     "url": "https://www.bundesanzeiger.de/ebanzwww/wexsservlet?page.navid=to_bookmark_official&bookmark_id=W8bclYaY0KxWVZChYBb",
+     "titel": "Klinische Studien mit hoher Relevanz für die Versorgung von Patientinnen und Patienten mit postinfektiösen Erkrankungen",
+     "frist": "2026-09-02",
+     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/06/2026-06-01-bekanntmachung-postinfektioese-erkrankungen.html",
      "quelle": "Bund (foerderinfo.bund.de)",
      "land": "DE",
-     "beschreibung": "Richtlinie zur Förderung eines Entwicklungsprojekts zum Thema \"Etablierung eines nationalen Netzwerks zum Aufbau\r\neiner föderierten Gesundheitsdateninfrastruktur im Europäischen Gesundheitsdatenraum\". BAnz vom 27.07.2026.",
-     "beleg": "Aufbau einer föderierten Gesundheitsdateninfrastruktur im Europäischen Gesundheitsdatenraum"
+     "beschreibung": "Richtlinie zur Förderung von Projekten zum Thema klinische Studien mit hoher Relevanz für die Versorgung von Patientinnen und Patienten mit postinfektiösen Erkrankungen – Nationale Dekade gegen postinfektiöse Erkrankungen. BAnz vom 01.06.2026.",
+     "beleg": "klinische Studien mit hoher Relevanz für die Versorgung von Patientinnen und Patienten"
     },
     {
-     "titel": "e2Health –  Klinische Validierungsstudien",
-     "frist": "2026-09-23",
-     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-07-bekanntmachung-in-silico-methoden.html",
-     "quelle": "Bund (foerderinfo.bund.de)",
-     "land": "DE",
-     "beschreibung": "Richtlinie zur Förderung von Forschungsprojekten zum Thema Klinische Validierungsstudien von In silico-Methoden im Forschungs- und Förderkonzept \"e2Health – In silico-Forschung für die Medizin der Zukunft\". BAnz vom 07.08.2026.",
-     "beleg": "Klinische Validierungsstudien von In silico-Methoden"
+     "titel": "Alcohol Health Services Research (R01 Clinical Trial Optional)",
+     "frist": "2026-09-07",
+     "url": "https://www.grants.gov/search-results-detail/357440",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Alcohol Health Services Research (R01 Clinical Trial Optional)"
+    },
+    {
+     "titel": "Alcohol Health Services Research (R34 Clinical Trial Optional)",
+     "frist": "2026-09-07",
+     "url": "https://www.grants.gov/search-results-detail/357438",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Alcohol Health Services Research (R34 Clinical Trial Optional)"
     }
    ]
   },
@@ -98,16 +98,7 @@
      "quelle": "Bund (foerderinfo.bund.de)",
      "land": "DE",
      "beschreibung": "Richtlinie zur Förderung eines Entwicklungsprojekts zum Thema \"Etablierung eines nationalen Netzwerks zum Aufbau\r\neiner föderierten Gesundheitsdateninfrastruktur im Europäischen Gesundheitsdatenraum\". BAnz vom 27.07.2026.",
-     "beleg": "Aufbau einer föderierten Gesundheitsdateninfrastruktur im Europäischen Gesundheitsdatenraum"
-    },
-    {
-     "titel": "e2Health –  Klinische Validierungsstudien",
-     "frist": "2026-09-23",
-     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-07-bekanntmachung-in-silico-methoden.html",
-     "quelle": "Bund (foerderinfo.bund.de)",
-     "land": "DE",
-     "beschreibung": "Richtlinie zur Förderung von Forschungsprojekten zum Thema Klinische Validierungsstudien von In silico-Methoden im Forschungs- und Förderkonzept \"e2Health – In silico-Forschung für die Medizin der Zukunft\". BAnz vom 07.08.2026.",
-     "beleg": "Klinische Validierungsstudien von In silico-Methoden ... e2Health – In silico-Forschung für die Medizin der Zukunft"
+     "beleg": "föderierten Gesundheitsdateninfrastruktur im Europäischen Gesundheitsdatenraum"
     },
     {
      "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
@@ -117,6 +108,15 @@
      "land": "DE",
      "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
      "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
+    },
+    {
+     "titel": "e2Health –  Klinische Validierungsstudien",
+     "frist": "2026-09-23",
+     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-07-bekanntmachung-in-silico-methoden.html",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Richtlinie zur Förderung von Forschungsprojekten zum Thema Klinische Validierungsstudien von In silico-Methoden im Forschungs- und Förderkonzept \"e2Health – In silico-Forschung für die Medizin der Zukunft\". BAnz vom 07.08.2026.",
+     "beleg": "Klinische Validierungsstudien von In silico-Methoden im Forschungs- und Förderkonzept \"e2Health – In silico-Forschung für die Medizin der Zukunft\""
     },
     {
      "titel": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)",
@@ -134,7 +134,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Logistics Center for Precision Medicine with AI: Integrating Imaging with Multimodal Data"
+     "beleg": "Logistics Center for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
     },
     {
      "titel": "Development and Testing of a Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (U01 Clinical Trial Not Allowed)",
@@ -143,7 +143,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data"
+     "beleg": "Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
     },
     {
      "titel": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (UG3/UH3, Clinical Trial Optional)",
@@ -152,7 +152,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data"
+     "beleg": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
     },
     {
      "titel": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (UG3/UH3 Clinical Trial Optional)",
@@ -161,7 +161,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships ... Precision Medicine with AI"
+     "beleg": "Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI: Integrating Imaging with Multimodal Data"
     }
    ]
   },
@@ -176,7 +176,7 @@
    "slug": "longevity",
    "name": "Gesundes Altern & Longevity",
    "domain": "longevity.m-vf.de",
-   "anzahl": 2,
+   "anzahl": 6,
    "ausschreibungen": [
     {
      "titel": "Renewal of the Clinician-Scientists Transdisciplinary Aging Research (Clin-STAR) Coordinating Center (U24 Clinical Trial Not Allowed)",
@@ -185,7 +185,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Clinician-Scientists Transdisciplinary Aging Research (Clin-STAR) Coordinating Center"
+     "beleg": "Transdisciplinary Aging Research (Clin-STAR) Coordinating Center"
     },
     {
      "titel": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)",
@@ -194,7 +194,43 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI)"
+     "beleg": "Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness"
+    },
+    {
+     "titel": "Institutional Training Programs to Advance Translational Research on Alzheimer's Disease (AD) and AD-Related Dementias (ADRD) (T32 Clinical Trial Not Allowed)",
+     "frist": "2026-09-25",
+     "url": "https://www.grants.gov/search-results-detail/357710",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Translational Research on Alzheimer's Disease (AD) and AD-Related Dementias (ADRD)"
+    },
+    {
+     "titel": "Schizophrenia and related disorders during mid- to late-life (R01 Clinical Trial Optional)",
+     "frist": "2026-09-07",
+     "url": "https://www.grants.gov/search-results-detail/357181",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Schizophrenia and related disorders during mid- to late-life"
+    },
+    {
+     "titel": "Schizophrenia and related disorders during mid- to late-life (R21 Clinical Trial Optional)",
+     "frist": "2026-09-07",
+     "url": "https://www.grants.gov/search-results-detail/357183",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Schizophrenia and related disorders during mid- to late-life"
+    },
+    {
+     "titel": "Addressing Dementia in Tribal and Urban Indian Communities:&nbsp;CAReS Program",
+     "frist": "2026-09-04",
+     "url": "https://www.grants.gov/search-results-detail/360294",
+     "quelle": "grants.gov (HHS-IHS)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Addressing Dementia in Tribal and Urban Indian Communities"
     }
    ]
   },
@@ -216,62 +252,8 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 8,
+   "anzahl": 7,
    "ausschreibungen": [
-    {
-     "titel": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)",
-     "frist": "2026-10-06",
-     "url": "https://www.grants.gov/search-results-detail/359252",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Type 2 Diabetes"
-    },
-    {
-     "titel": "Single Source Competition: Continuation of the Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D) - Resource Center (U24 Clinical Trial Not Allowed)",
-     "frist": "2026-09-30",
-     "url": "https://www.grants.gov/search-results-detail/361035",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D)"
-    },
-    {
-     "titel": "Single Source for Continuation of the Integrated Islet Distribution Program U24 (Clinical Trial Not Allowed)",
-     "frist": "2026-09-30",
-     "url": "https://www.grants.gov/search-results-detail/358917",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Integrated Islet Distribution Program"
-    },
-    {
-     "titel": "DoW Prostate Cancer, Data Science Award",
-     "frist": "2026-09-02",
-     "url": "https://www.grants.gov/search-results-detail/362259",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Prostate Cancer, Data Science Award"
-    },
-    {
-     "titel": "DoW Peer Reviewed Cancer, Clinical Trial Award",
-     "frist": "2026-10-05",
-     "url": "https://www.grants.gov/search-results-detail/362268",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Peer Reviewed Cancer, Clinical Trial Award"
-    },
-    {
-     "titel": "DoW Melanoma Research Program Team Science Award",
-     "frist": "2026-10-14",
-     "url": "https://www.grants.gov/search-results-detail/362242",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Melanoma Research Program Team Science Award"
-    },
     {
      "titel": "NCI Community Oncology Research Program (NCORP) Community Sites (UG1 Clinical Trial Not Allowed)",
      "frist": "2026-09-18",
@@ -289,6 +271,51 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "NCI Community Oncology Research Program (NCORP) Research Bases"
+    },
+    {
+     "titel": "NCI Community Oncology Research Program (NCORP) Academic Community Sites (UG1 Clinical Trials Not Allowed)",
+     "frist": "2026-09-18",
+     "url": "https://www.grants.gov/search-results-detail/359132",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "NCI Community Oncology Research Program (NCORP) Academic Community Sites"
+    },
+    {
+     "titel": "DoW Peer Reviewed Cancer, Clinical Trial Award",
+     "frist": "2026-10-05",
+     "url": "https://www.grants.gov/search-results-detail/362268",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Peer Reviewed Cancer, Clinical Trial Award"
+    },
+    {
+     "titel": "DoW Prostate Cancer, Data Science Award",
+     "frist": "2026-09-02",
+     "url": "https://www.grants.gov/search-results-detail/362259",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Prostate Cancer, Data Science Award"
+    },
+    {
+     "titel": "Single Source Competition: Continuation of the Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D) - Resource Center (U24 Clinical Trial Not Allowed)",
+     "frist": "2026-09-30",
+     "url": "https://www.grants.gov/search-results-detail/361035",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Continuation of the Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D)"
+    },
+    {
+     "titel": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)",
+     "frist": "2026-10-06",
+     "url": "https://www.grants.gov/search-results-detail/359252",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Management of Type 2 Diabetes"
     }
    ]
   },
@@ -345,7 +372,7 @@
    "slug": "mental",
    "name": "Psychische Gesundheit",
    "domain": "mental.m-vf.de",
-   "anzahl": 6,
+   "anzahl": 5,
    "ausschreibungen": [
     {
      "titel": "Alcohol Health Services Research (R01 Clinical Trial Optional)",
@@ -384,22 +411,13 @@
      "beleg": "Alcohol Treatment, Pharmacotherapy, and Recovery Research (R01 Clinical Trial Required)"
     },
     {
-     "titel": "Nonfatal Overdoses in Emergency Departments:  Bridging Patient Characteristics, Biospecimen Toxicology, and Drug Supply Composition",
-     "frist": "2026-08-31",
-     "url": "https://www.grants.gov/search-results-detail/363543",
-     "quelle": "grants.gov (ONDCP)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Nonfatal Overdoses in Emergency Departments: Bridging Patient Characteristics, Biospecimen Toxicology, and Drug Supply Composition"
-    },
-    {
      "titel": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)",
      "frist": "2026-10-15",
      "url": "https://www.grants.gov/search-results-detail/359201",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI)"
+     "beleg": "Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI)"
     }
    ]
   }
