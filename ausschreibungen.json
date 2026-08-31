@@ -2,7 +2,7 @@
  "stand": "31.08.2026",
  "quellen": {
   "Bund": 72,
-  "grants.gov": 292,
+  "grants.gov": 294,
   "DFG": 12
  },
  "warnungen": [],
@@ -11,8 +11,26 @@
    "slug": "versorgungsforschung",
    "name": "Versorgungsforschung",
    "domain": "wissen.m-vf.de",
-   "anzahl": 7,
+   "anzahl": 5,
    "ausschreibungen": [
+    {
+     "titel": "Klinische Studien mit hoher Relevanz für die Patientenversorgung",
+     "frist": "2026-09-02",
+     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/06/2026-06-01-bekanntmachung-patientenversorgung.html",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Richtlinie zur Förderung von Projekten zum Thema klinische Studien mit hoher Relevanz für die Patientenversorgung. BAnz vom 01.06.2026.",
+     "beleg": "Klinische Studien mit hoher Relevanz für die Patientenversorgung"
+    },
+    {
+     "titel": "Innovationsausschuss - Versorgungsforschung – Medizinische Leitlinien (MedLL)",
+     "frist": "2026-09-22",
+     "url": "https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-versorgungsforschung-medizinische-leitlinien-medll.70",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Förderbekanntmachung Versorgungsforschung - Medizinische Leitlinien (MedLL) vom 19.06.2026. Web-Seminar am 14.07.2026.",
+     "beleg": "Innovationsausschuss - Versorgungsforschung – Medizinische Leitlinien (MedLL)"
+    },
     {
      "titel": "Innovationsausschuss – Versorgungsforschung zum themenspezifischen Bereich",
      "frist": "2026-10-20",
@@ -32,49 +50,13 @@
      "beleg": "Versorgungsforschung zum themenoffenen Bereich"
     },
     {
-     "titel": "Innovationsausschuss - Versorgungsforschung – Medizinische Leitlinien (MedLL)",
-     "frist": "2026-09-22",
-     "url": "https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-versorgungsforschung-medizinische-leitlinien-medll.70",
-     "quelle": "Bund (foerderinfo.bund.de)",
-     "land": "DE",
-     "beschreibung": "Förderbekanntmachung Versorgungsforschung - Medizinische Leitlinien (MedLL) vom 19.06.2026. Web-Seminar am 14.07.2026.",
-     "beleg": "Versorgungsforschung – Medizinische Leitlinien"
-    },
-    {
-     "titel": "Klinische Studien mit hoher Relevanz für die Patientenversorgung",
-     "frist": "2026-09-02",
-     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/06/2026-06-01-bekanntmachung-patientenversorgung.html",
-     "quelle": "Bund (foerderinfo.bund.de)",
-     "land": "DE",
-     "beschreibung": "Richtlinie zur Förderung von Projekten zum Thema klinische Studien mit hoher Relevanz für die Patientenversorgung. BAnz vom 01.06.2026.",
-     "beleg": "Klinische Studien mit hoher Relevanz für die Patientenversorgung"
-    },
-    {
      "titel": "Klinische Studien mit hoher Relevanz für die Versorgung von Patientinnen und Patienten mit postinfektiösen Erkrankungen",
      "frist": "2026-09-02",
      "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/06/2026-06-01-bekanntmachung-postinfektioese-erkrankungen.html",
      "quelle": "Bund (foerderinfo.bund.de)",
      "land": "DE",
      "beschreibung": "Richtlinie zur Förderung von Projekten zum Thema klinische Studien mit hoher Relevanz für die Versorgung von Patientinnen und Patienten mit postinfektiösen Erkrankungen – Nationale Dekade gegen postinfektiöse Erkrankungen. BAnz vom 01.06.2026.",
-     "beleg": "klinische Studien mit hoher Relevanz für die Versorgung von Patientinnen und Patienten"
-    },
-    {
-     "titel": "Alcohol Health Services Research (R01 Clinical Trial Optional)",
-     "frist": "2026-09-07",
-     "url": "https://www.grants.gov/search-results-detail/357440",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Alcohol Health Services Research (R01 Clinical Trial Optional)"
-    },
-    {
-     "titel": "Alcohol Health Services Research (R34 Clinical Trial Optional)",
-     "frist": "2026-09-07",
-     "url": "https://www.grants.gov/search-results-detail/357438",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Alcohol Health Services Research (R34 Clinical Trial Optional)"
+     "beleg": "hoher Relevanz für die Versorgung von Patientinnen und Patienten mit postinfektiösen Erkrankungen"
     }
    ]
   },
@@ -98,7 +80,7 @@
      "quelle": "Bund (foerderinfo.bund.de)",
      "land": "DE",
      "beschreibung": "Richtlinie zur Förderung eines Entwicklungsprojekts zum Thema \"Etablierung eines nationalen Netzwerks zum Aufbau\r\neiner föderierten Gesundheitsdateninfrastruktur im Europäischen Gesundheitsdatenraum\". BAnz vom 27.07.2026.",
-     "beleg": "föderierten Gesundheitsdateninfrastruktur im Europäischen Gesundheitsdatenraum"
+     "beleg": "Aufbau einer föderierten Gesundheitsdateninfrastruktur im Europäischen Gesundheitsdatenraum"
     },
     {
      "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
@@ -134,7 +116,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Logistics Center for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
+     "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data"
     },
     {
      "titel": "Development and Testing of a Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (U01 Clinical Trial Not Allowed)",
@@ -143,7 +125,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
+     "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
     },
     {
      "titel": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (UG3/UH3, Clinical Trial Optional)",
@@ -152,7 +134,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
+     "beleg": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data"
     },
     {
      "titel": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (UG3/UH3 Clinical Trial Optional)",
@@ -161,7 +143,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI: Integrating Imaging with Multimodal Data"
+     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships"
     }
    ]
   },
@@ -176,7 +158,7 @@
    "slug": "longevity",
    "name": "Gesundes Altern & Longevity",
    "domain": "longevity.m-vf.de",
-   "anzahl": 6,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "Renewal of the Clinician-Scientists Transdisciplinary Aging Research (Clin-STAR) Coordinating Center (U24 Clinical Trial Not Allowed)",
@@ -185,7 +167,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Transdisciplinary Aging Research (Clin-STAR) Coordinating Center"
+     "beleg": "Renewal of the Clinician-Scientists Transdisciplinary Aging Research (Clin-STAR) Coordinating Center"
     },
     {
      "titel": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)",
@@ -194,34 +176,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness"
-    },
-    {
-     "titel": "Institutional Training Programs to Advance Translational Research on Alzheimer's Disease (AD) and AD-Related Dementias (ADRD) (T32 Clinical Trial Not Allowed)",
-     "frist": "2026-09-25",
-     "url": "https://www.grants.gov/search-results-detail/357710",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Translational Research on Alzheimer's Disease (AD) and AD-Related Dementias (ADRD)"
-    },
-    {
-     "titel": "Schizophrenia and related disorders during mid- to late-life (R01 Clinical Trial Optional)",
-     "frist": "2026-09-07",
-     "url": "https://www.grants.gov/search-results-detail/357181",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Schizophrenia and related disorders during mid- to late-life"
-    },
-    {
-     "titel": "Schizophrenia and related disorders during mid- to late-life (R21 Clinical Trial Optional)",
-     "frist": "2026-09-07",
-     "url": "https://www.grants.gov/search-results-detail/357183",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Schizophrenia and related disorders during mid- to late-life"
+     "beleg": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI)"
     },
     {
      "titel": "Addressing Dementia in Tribal and Urban Indian Communities:&nbsp;CAReS Program",
@@ -230,7 +185,7 @@
      "quelle": "grants.gov (HHS-IHS)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Addressing Dementia in Tribal and Urban Indian Communities"
+     "beleg": "Addressing Dementia in Tribal and Urban Indian Communities: CAReS Program"
     }
    ]
   },
@@ -252,7 +207,7 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 7,
+   "anzahl": 8,
    "ausschreibungen": [
     {
      "titel": "NCI Community Oncology Research Program (NCORP) Community Sites (UG1 Clinical Trial Not Allowed)",
@@ -282,13 +237,13 @@
      "beleg": "NCI Community Oncology Research Program (NCORP) Academic Community Sites"
     },
     {
-     "titel": "DoW Peer Reviewed Cancer, Clinical Trial Award",
-     "frist": "2026-10-05",
-     "url": "https://www.grants.gov/search-results-detail/362268",
-     "quelle": "grants.gov (DOD-AMRAA)",
+     "titel": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)",
+     "frist": "2026-10-06",
+     "url": "https://www.grants.gov/search-results-detail/359252",
+     "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Peer Reviewed Cancer, Clinical Trial Award"
+     "beleg": "Application of Digital Health Technology to the Management of Type 2 Diabetes"
     },
     {
      "titel": "DoW Prostate Cancer, Data Science Award",
@@ -300,22 +255,31 @@
      "beleg": "DoW Prostate Cancer, Data Science Award"
     },
     {
+     "titel": "DoW Peer Reviewed Cancer, Clinical Trial Award",
+     "frist": "2026-10-05",
+     "url": "https://www.grants.gov/search-results-detail/362268",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Peer Reviewed Cancer, Clinical Trial Award"
+    },
+    {
+     "titel": "DoW Melanoma Research Program Team Science Award",
+     "frist": "2026-10-14",
+     "url": "https://www.grants.gov/search-results-detail/362242",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Melanoma Research Program Team Science Award"
+    },
+    {
      "titel": "Single Source Competition: Continuation of the Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D) - Resource Center (U24 Clinical Trial Not Allowed)",
      "frist": "2026-09-30",
      "url": "https://www.grants.gov/search-results-detail/361035",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Continuation of the Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D)"
-    },
-    {
-     "titel": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)",
-     "frist": "2026-10-06",
-     "url": "https://www.grants.gov/search-results-detail/359252",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Management of Type 2 Diabetes"
+     "beleg": "Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D)"
     }
    ]
   },
@@ -375,24 +339,6 @@
    "anzahl": 5,
    "ausschreibungen": [
     {
-     "titel": "Alcohol Health Services Research (R01 Clinical Trial Optional)",
-     "frist": "2026-09-07",
-     "url": "https://www.grants.gov/search-results-detail/357440",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Alcohol Health Services Research (R01 Clinical Trial Optional)"
-    },
-    {
-     "titel": "Alcohol Health Services Research (R34 Clinical Trial Optional)",
-     "frist": "2026-09-07",
-     "url": "https://www.grants.gov/search-results-detail/357438",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Alcohol Health Services Research (R34 Clinical Trial Optional)"
-    },
-    {
      "titel": "Alcohol Treatment, Pharmacotherapy, and Recovery Research (R34 Clinical Trial required)",
      "frist": "2026-09-07",
      "url": "https://www.grants.gov/search-results-detail/357444",
@@ -409,6 +355,24 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Alcohol Treatment, Pharmacotherapy, and Recovery Research (R01 Clinical Trial Required)"
+    },
+    {
+     "titel": "Alcohol Health Services Research (R01 Clinical Trial Optional)",
+     "frist": "2026-09-07",
+     "url": "https://www.grants.gov/search-results-detail/357440",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Alcohol Health Services Research (R01 Clinical Trial Optional)"
+    },
+    {
+     "titel": "Alcohol Health Services Research (R34 Clinical Trial Optional)",
+     "frist": "2026-09-07",
+     "url": "https://www.grants.gov/search-results-detail/357438",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Alcohol Health Services Research (R34 Clinical Trial Optional)"
     },
     {
      "titel": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)",

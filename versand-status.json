@@ -26,21 +26,15 @@
   "42660605",
   "42649455"
  ],
- "kampagne": "https://us6.admin.mailchimp.com/campaigns/edit?id=9098621",
+ "kampagne": "https://us6.admin.mailchimp.com/campaigns/edit?id=9098634",
  "termin_utc": "2026-08-31T08:00:00+00:00",
  "empfaenger": 8,
  "listengroesse": 5904,
  "beanstandungen": [],
  "aussortiert": [],
- "pool": {
-  "geholt": 220,
-  "bekannt": 68,
-  "pool": 46,
-  "gewaehlt": 6,
-  "neu": 6
- },
+ "pool": {},
  "rubriken": {
-  "radar": "3f26f99ffea35e03",
+  "radar": "2ae763f9cbf7d455",
   "news": "358d108794b6833d"
  }
 }
