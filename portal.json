@@ -1,6 +1,7 @@
 {
   "SLUG": "versorgungsforschung",
   "DOMAIN": "wissen.m-vf.de",
+  "HUB": "wissen",
   "REPO": "mvf-portal/versorgungsforschung-portal",
   "TITEL": "Knowledge-Hub Versorgungsforschung",
   "TITEL_HTML": "Knowledge-Hub Versorgungsforschung",
