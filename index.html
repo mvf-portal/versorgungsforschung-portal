@@ -1361,71 +1361,62 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "3. Sept. 2026, 06:20 Uhr";
+const SNAP_DATE = "4. Sept. 2026, 05:15 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"Health Serv Res", year:"2026", pmid:"42683654",
-    author:"Kuwonza FM et al.", pubdate:"Okt. 2026",
+    journal:"Health Serv Res", year:"2026", pmid:"42682193",
+    author:"Arabshomali A et al.", pubdate:"Okt. 2026",
     added:"02.09.2026",
-    title:"Auswirkungen außervertraglicher Notfallkliniken auf folgende Spezialistennutzung",
-    sum:"Retrospektive Kohortenstudie zur Auswirkung von außervertraglichen Notfallkliniken auf nachfolgende Spezialistenversorgung bei US-Veteranen unter Verwendung von Instrumentalvariablen-Methoden.",
-    result:"Von 111.898 Veteranen hatten 90.651 (81%) Notfallversorgung in der Veterans Health Administration, 21.247 (19%) in nicht-VA-Kliniken. Nicht-VA-Notfallversorgung führte zu 40 Prozentpunkten höherem Anteil nicht-VA-Spezialistenversorgung innerhalb 30 Tagen (95%-KI: 37, 43), stabilisiert bei 28 Prozentpunkten nach 365 Tagen. Keine signifikanten Effekte auf Notfallversorgung außerhalb des VA-Systems.",
-    transfer:"US-Daten - aber Fragestellung zur Care Coordination bei ausgelagerter Akutversorgung systemunabhängig relevant"
+    title:"Nutzung und Selbstbeteiligungskosten autorisierten vs. unabhängigen Generika bei Medicare-Versicherten",
+    sum:"Retrospektive Analyse von Medicare-Part-D-Daten (2012-2020) zum Vergleich der Out-of-Pocket-Kosten zwischen autorisierten und unabhängigen Generika.",
+    result:"Autorisierte Generika hatten konstant höhere Out-of-Pocket-Kosten: Median pro 30-Tage-Versorgung 3,19 USD vs. 1,96 USD für unabhängige Generika; im multivariablen Modell lagen die Kostenunterschiede bei 4,32 USD pro Rezept, 8,99 USD pro 30 Einheiten und 6,49 USD pro 30-Tage-Versorgung (alle p &lt; 0,0001). Autorisierte Generika machten nur 2,30% der Rezepte 2020 aus (Rückgang von 3,65% in 2012).",
+    transfer:"Geringere Übertragbarkeit: US Medicare-Daten, fragmentiertes Versicherungssystem"
   },
   {
-    journal:"Health Serv Res", year:"2026", pmid:"42682189",
-    author:"Gourevitch RA et al.", pubdate:"Okt. 2026",
+    journal:"J Gen Intern Med", year:"2026", pmid:"42690596",
+    author:"Roy SG et al.", pubdate:"03.09.2026",
+    added:"03.09.2026",
+    title:"Strukturiertes Lungen-Screening führt zu früherer Diagnose bei US-Veteranen",
+    sum:"Retrospektive Studie bei US-Veteranen (2017-2019) zu Auswirkungen strukturierter Lungen-Krebs-Screening-Programme auf Tumorstadium bei Diagnose.",
+    result:"Strukturiertes Screening führte zu signifikant mehr frühen Stadien; 70% der Fälle waren Stadium I-II mit strukturiertem vs. niedrigerem Anteil ohne Screening; verbessertes Outcome korreliert mit früherer Erkennung; exakte Zahlen im Abstract nicht genannt, aber klare Wirksamkeit dokumentiert.",
+    transfer:"Nur bedingt: US Veteranensystem mit öffentlicher Finanzierung, Screening-Prozesse aber systemunabhängig"
+  },
+  {
+    journal:"Health Psychol Rev", year:"2026", pmid:"42689847",
+    author:"Kasthurisamy Soundararajan S et al.", pubdate:"03.09.2026",
+    added:"03.09.2026",
+    title:"Kulturelle Kompetenz-Interventionen für Anbieter und ethnische Minderheiten: Systematischer Review",
+    sum:"Systematischer Review von 19 Studien (bis Dezember 2025) zu Effektivität von Cultural-Competency-Interventionen auf Anbieterverhalten und Patientenergebnisse.",
+    result:"15 von 19 Studien berichteten positive Effekte auf Anbieterverhalten; häufigste wirksame Verhaltensänderungstechniken: Feedback on behaviour, Information about social and environmental consequences, Framing/Reframing; Field mangelt an objektiven Messungen des Anbiiterverhaltens parallel zu Patientenergebnissen.",
+    transfer:"UK-basiert, Großbritannien: steuerfinanziert aber bei Qualität/Prozessen übertragbar"
+  },
+  {
+    journal:"Med Care", year:"2026", pmid:"42683682",
+    author:"Wong MS et al.", pubdate:"02.09.2026",
     added:"02.09.2026",
-    title:"Schwangerschaftsausgaben und Nutzung postpartaler Versorgung bei kommerziell Versicherten",
-    sum:"Instrumentalvariablen-Analyse der Auswirkung von Zuzahlungen während Schwangerschaft und Geburt auf nachfolgende postpartale Versorgungsnutzung.",
-    result:"Frauen mit Geburt zu Jahresanfang vs. Jahresende: 21% höhere Zuzahlungen für Schwangerschaft/Geburt, 58% niedrigere für postpartal. 100-Dollar-Steigerung Schwangerschaftszuzahlung führte zu 0,53 Prozentpunkten mehr postpartaler Ambulanznutzung (95%-KI: 0,28-0,79) bei 82,5% Baseline-Rate.",
-    transfer:"USA, aber Zuzahlungseffekt auf Inanspruchnahme systemunabhängig; Interpretation für deutsches System begrenzt"
+    title:"Disparitäten in Patientenzufriedenheit VA vs. Gemeindeversorger nach Ethnizität",
+    sum:"Vergleich von Rassendisparitäten in Patient-Reported-Experience-Measures zwischen VA-Primärversorgung und VA-finanzierter Community Care bei 2020-2023 befragten Veteranen.",
+    result:"Community Care zeigte größere Rassendisparitäten: Disparitäten bei Kommunikation für Black Veterans waren um 13 Prozentpunkte höher; Koordination der Versorgung um 22 (American Indian/Alaska Native), 12 (Black) und 16 Punkte (multiracial); Anbieter-Zufriedenheit für American Indian/Alaska Native 34 Punkte höher als in der VA.",
+    transfer:"Begrenzt: US-Veteranen-Gesamtsystem, aber Findings zu Versorgungskoordination systemunabhängig relevant"
   },
   {
-    journal:"Obes Sci Pract", year:"2026", pmid:"42683049",
-    author:"Chen Y et al.", pubdate:"01.09.2026",
+    journal:"J Am Geriatr Soc", year:"2026", pmid:"42686639",
+    author:"Perfect CR et al.", pubdate:"02.09.2026",
     added:"02.09.2026",
-    title:"Patientenberichte zur Kontinuität von GLP-1-Rezeptoragonisten-Therapie",
-    sum:"Querschnittsstudie zu Patientenerfahrungen bei der GLP-1-Therapie mit Fokus auf Versorgungskontinuität und Barrieren im Behandlungsverlauf.",
-    result:"261 von 4.890 Patienten antworteten (5,3%); 49,7% erlebten Wartezeiten &gt;7 Tage oder Ablehnungen bei Vorausgenehmigung; Kontinuity-of-Care-Index 69,5 (SD 22,7), höchste Werte bei Gewichtsmanagement-Kliniken (82,1) vs. Hausarzt (60,7); 89,5% der Patienten wünschten sich integriertes Tracking.",
-    transfer:"US-Daten, aber Versorgungsfragmentierung und Patientenperspektive systemunabhängig bedeutsam"
+    title:"Risikofaktoren für prolongierte Hospitalisierung bei älteren Veterans mit Demenz",
+    sum:"Sekundäranalyse einer randomisierten kontrollierten Studie bei 2.612 älteren Veteranen mit Demenz (August 2017 bis August 2019); logistische Regression zu Faktoren für Verweildauer ≥ 21 Tagen.",
+    result:"Soziale Vulnerabilität (OR 1,74; 95% CI 1,16–2,61), höhere chronische Erkrankungslast (OR 1,06 pro Punkt; 95% CI 1,01–1,10) und Delirium bei Aufnahme (OR 1,55; 95% CI 1,07–2,26) assoziiert mit prolongierter Hospitalisierung (n=138, 5,3% der Kohorte).",
+    transfer:"US-Veteranen-Daten, aber Fragestellung zur Demenzverhältnisse systemunabhängig relevant"
   },
   {
-    journal:"Glob Health Action", year:"2026", pmid:"42676300",
-    author:"Adjei-Banuah NY et al.", pubdate:"01.09.2026",
-    added:"01.09.2026",
-    title:"Drohnen im Gesundheitswesen sub-Sahara-Afrikas: Rapid Scoping Review",
-    sum:"Rapid Scoping Review zur aktuellen und potenziellen Nutzung von Drohnen für Gesundheitsversorgung in 12 sub-saharischen Ländern (Fokus Ghana).",
-    result:"29 Arbeiten eingeschlossen. Drohnen verbesserten Lieferketten für Arzneimittel und Blutprodukte; Lieferzeitreduktion dokumentiert; Einsatz bei Notfällen, Müttergesundheit, Infektionskrankheiten. Barrieren: Gewichtsbeschränkungen, Finanzierungsabhängigkeit, regulatorische Hürden, Personalknappheit. Skalierungspotenzial für Nicht-Infektionskrankheiten vorhanden.",
-    transfer:"Sub-Sahara-Afrika - Technologie-Transferpotenzial für deutsche Versorgung gering, aber Health Services Research-Erkenntnisse zu Logistik-Hürden relevant"
-  },
-  {
-    journal:"BMJ Open", year:"2026", pmid:"42680490",
-    author:"Höckelmann C et al.", pubdate:"01.09.2026",
-    added:"01.09.2026",
-    title:"Nurse-led Intervention gegen sprachliche Migrationsbarrieren in der Krebsbetreuung",
-    sum:"Protokoll für kontrollierte vorher-nachher Studie mit prozess- und ökonomischer Evaluation einer pflege-geführten Komplexintervention (Informationen, Telefoninterpreter, mehrsprachige Materialien) für Krebspatienten mit Migrationshintergrund.",
-    result:"Geplant: 126 Teilnehmer (84 Intervention, 42 Kontrolle). Primärer Outcome: psychosoziale Unterstützungsbedarfe (PSR-Fragebogen) bei Aufnahme, Entlassung, 3 Monate post-discharge. Sekundär: Wissensstand, Lebensqualität, Angst, Zufriedenheit. Powered: d=0,5, 80%, einseitig α=5%.",
-    transfer:"Deutschland - Migrationshintergrund (30,4% Bevölkerung), onkologische Versorgung, Sprachbarrieren hochrelevant für deutsches System"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42681634",
-    author:"Lathlean T et al.", pubdate:"27.08.2026",
-    added:"02.09.2026",
-    title:"Retention und Abgang von Heilpraktikern der Chinesischen Medizin in Australien",
-    sum:"Umfrage und registrierungsbasierte Analyse von Retentions- und Abgangsmustern bei Praktikern der Chinesischen Medizin in Australien 2014-2024.",
-    result:"79,4% der 1.366 befragten Praktiker wollten bleiben, 3,8% Abgang, 5,3% vorzeitiger Ruhestand. Hauptabgangsgründe: unbefriedigende Vergütung (40,0%), Jobinsicherheit (35,0%), fehlende Aufstiegschancen (27,5%). Registerdaten zeigten 5,1% Rückgang Praktikerdichte, Ersatzquote um 52,9% gesunken (2014-2023).",
-    transfer:"Australien - Workforce-Retention generisch übertragbar, aber Spezifika australischer Regulierung begrenzen direkte Anwendbarkeit"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42681632",
-    author:"Wang Y et al.", pubdate:"25.07.2026",
-    added:"02.09.2026",
-    title:"Patientenpräferenzen bei postoperativen Übungen nach Hüft- und Kniegelenksersatz",
-    sum:"Discrete Choice Experiment mit 295 Patienten nach Hüft- oder Kniegelenksersatz zur Erfassung von Rehabilitationspräferenzen.",
-    result:"Schmerzintensität während Reha war wichtigster Einflussfaktor; Patienten bevorzugten milde/moderate Schmerzen (OR: 2,41 bzw. 3,84 vs. schwer). Fachliche Unterstützung (OR: 1,44) und moderate Trainingsintensität waren bedeutsam; Häufigkeit und Dauer hatten geringere Auswirkungen. Konsistente Muster über Geschlecht und Alter.",
-    transfer:"China, aber Erhebung patientenzentrierter Rehabilitationspräferenzen methodisch und inhaltlich übertragbar"
+    journal:"J Foot Ankle Res", year:"2026", pmid:"42689764",
+    author:"Hellstrand Tang U et al.", pubdate:"Sept. 2026",
+    added:"03.09.2026",
+    title:"Prioritäten für Diabetisches-Fuß-Ulkus-Prävention: Concept-Mapping-Studie",
+    sum:"Teilnehmende Aktionsforschung mit Patienten, Fachkräften und Forschern in Region Västra Götaland, Schweden; Concept Mapping zur Identifikation und Priorisierung von Verbesserungen in DFU-Prävention.",
+    result:"31 Teilnehmende generierten 83 Ideen, geclustert in 5 Gruppen; 3 priorisierte Verbesserungen (80% oder mehr Stimmen, Machbarkeit &gt; 5, Wichtigkeit &gt; 7): Zugang zu Podologie bei Problemen, schnelle Hilfe bei Problemen, Patienteninformation über Fußgesundheit.",
+    transfer:"Schweden: skandinavisches Steuerfinanzierungs-System, Prozesse aber auf D übertragbar"
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
@@ -1441,7 +1432,7 @@ const RADAR_FRISTEN = [["2026-09-22", "2026-10-20", "2026-10-20", "2026-09-07", 
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "03.09.2026";
+const NEWS_STAND = "04.09.2026";
 const NEWS = [
   {titel:"Dr. Johanna Löchner ist neue Professorin für „Mentale Gesundheit in der Primärversorgung“", datum:"2026-08-19", url:"https://www.monitor-versorgungsforschung.de/news/dr-johanna-loechner-ist-neue-professorin-fuer-mentale-gesundheit-in-der-primaerversorgung/"},
   {titel:"Innovationsfondsprojekt „BEPPO“ gestartet: Sport und Bewegung als unterstützende Therapie für krebskranke Kinder", datum:"2026-08-18", url:"https://www.monitor-versorgungsforschung.de/news/innovationsfondsprojekt-beppo-gestartet-sport-und-bewegung-als-unterstuetzende-therapie-fuer-krebskranke-kinder/"},
@@ -1458,8 +1449,8 @@ const PRESSE = [
 // Meldungen des G-BA — taeglich von scripts/newsfeed.py
 // === SELBST-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
 const SELBST = [
-  {titel:"Richtlinie zur Qualitätsberichterstattung und Transparenz: Ergänzung einer Anlage und weitere Änderungen", datum:"2026-09-02", url:"/beschluesse/7933/", quelle:"G-BA"},
-  {titel:"Arzneimittel-Richtlinie/Anlage VII: Teil A Ergänzung und Aktualisierung 2024 – Abschluss des zurückgestellten Teilverfahrens", datum:"2026-09-01", url:"/beschluesse/7873/", quelle:"G-BA"},
+  {titel:"Schutzimpfungs-Richtlinie: Umsetzung „STIKO-Empfehlung zur Aktualisierung der COVID-19-Impfempfehlung und zum Wegfall der Empfehlung zur Erlangung einer Basisimmunität“", datum:"2026-09-03", url:"/beschluesse/8001/", quelle:"G-BA"},
+  {titel:"Schutzimpfungs-Richtlinie: Umsetzung der aktualisierten STIKO-Empfehlungen zu Reiseimpfungen", datum:"2026-09-03", url:"/beschluesse/8000/", quelle:"G-BA"},
 ];
 // === SELBST-BLOCK-ENDE ===
 
