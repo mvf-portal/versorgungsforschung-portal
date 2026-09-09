@@ -1,31 +1,36 @@
 {
  "hub": "Knowledge-Hub Versorgungsforschung",
  "domain": "wissen.m-vf.de",
- "datum": "2026-09-08",
- "stand": "terminiert",
- "titel": "MVF Studien-Newsletter 08.09.2026",
- "betreff": "Neueste Studien - Versorgungsforschung – 8. September 2026",
- "anzahl": 6,
+ "datum": "2026-09-09",
+ "stand": "gestoppt",
+ "titel": "MVF Studien-Newsletter 09.09.2026",
+ "betreff": "Neueste Studien - Versorgungsforschung – 9. September 2026",
+ "anzahl": 7,
  "pmids": [
-  "42703647",
-  "42692200",
-  "42691737",
-  "42682016",
-  "42681645",
-  "42646806"
+  "42710024",
+  "42706542",
+  "42706532",
+  "42706525",
+  "42706524",
+  "42706426",
+  "42704983"
  ],
- "kampagne": "https://us6.admin.mailchimp.com/campaigns/edit?id=9098751",
- "termin_utc": "2026-09-08T08:00:00+00:00",
- "empfaenger": 9,
- "listengroesse": 5902,
- "beanstandungen": [],
+ "kampagne": "https://us6.admin.mailchimp.com/campaigns/edit?id=9098767",
+ "termin_utc": null,
+ "empfaenger": 10,
+ "listengroesse": 5905,
+ "beanstandungen": [
+  "Studie 5 (PMID 42706524): Zusammenfassung enthaelt 3 englische Funktionswoerter - vermutlich der englische Abstract",
+  "Studie 6 (PMID 42706426): Zusammenfassung enthaelt 3 englische Funktionswoerter - vermutlich der englische Abstract",
+  "Studie 7 (PMID 42704983): Zusammenfassung enthaelt 6 englische Funktionswoerter - vermutlich der englische Abstract"
+ ],
  "aussortiert": [],
  "pool": {
   "geholt": 220,
-  "bekannt": 101,
-  "pool": 49,
-  "gewaehlt": 6,
-  "neu": 6
+  "bekannt": 96,
+  "pool": 48,
+  "gewaehlt": 7,
+  "neu": 7
  },
  "rubriken": {
   "radar": "3f26f99ffea35e03",

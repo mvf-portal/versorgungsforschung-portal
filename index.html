@@ -1361,62 +1361,71 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "8. Sept. 2026, 05:16 Uhr";
+const SNAP_DATE = "9. Sept. 2026, 05:16 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"J Dent Res", year:"2026", pmid:"42703647",
-    author:"Tay AHC et al.", pubdate:"07.09.2026",
+    journal:"JBI Evid Implement", year:"2026", pmid:"42710024",
+    author:"van der Braak K et al.", pubdate:"09.09.2026",
+    added:"08.09.2026",
+    title:"Roadmap for organization-wide implementation of evidence-based medicine",
+    sum:"Systematic overview of reviews synthesizing evidence on implementing evidence-based medicine across 100 included reviews (2013–2023), examining outcome measurement, contextual analysis, and implementation strategies.",
+    result:"Identified four consistently recommended measurement instruments (EBPQ, EPIC, Fresno Test, HS-EBP); 50 reviews addressed outcome measurement, 57 on contextual analysis with 22 themes, and 40 reviewed implementation strategies (38 educational). Educational strategies were most studied; infrastructure changes and organizational-/patient-level outcomes underrepresented.",
+    transfer:"Niederlande, Cochrane-Netzwerk; Sozialversicherungssystem mit Implementierungswissenschaft."
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42706524",
+    author:"May S et al.", pubdate:"07.09.2026",
+    added:"08.09.2026",
+    title:"Guideline-based speech therapy for aphasia: systemic barriers in German-speaking healthcare",
+    sum:"Exploratory qualitative study using two online focus groups with people with aphasia, relatives, speech therapists, and healthcare stakeholders in German-speaking context to identify barriers to guideline-recommended therapy.",
+    result:"Six main barrier categories identified: societal/systemic conditions, access to care, patient journey fragmentation, relatives' roles, psychosocial factors, and interdisciplinary care gaps. Transition from inpatient to outpatient care emerged as particularly vulnerable stage. Fragmented care pathways and financial obstacles hindered implementation; informal family support created inequalities in care access.",
+    transfer:"Deutschland/Österreich/Schweiz, direkt; fokussiert auf Versorgungslücken und Systembarrieren."
+  },
+  {
+    journal:"Eye (Lond)", year:"2026", pmid:"42706426",
+    author:"Al-Nosairy KO et al.", pubdate:"07.09.2026",
     added:"07.09.2026",
-    title:"Patientensicht auf Zahnbehandlungsqualität: qualitative Systematik-Übersicht",
-    sum:"Systematische qualitative Analyse von 36 Studien zur Patientenwahrnehmung von Qualität in der Zahnversorgung.",
-    result:"Vier Kernthemen: (1) strukturelle Bedingungen für Vertrauen, (2) Sicherheit durch erlebte Kompetenz, (3) zwischenmenschliche Pflege als Qualitätsfundament (Respekt, Empathie, Kommunikation, Shared Decision Making), (4) kontinuierliche Beziehung als patientenrelevantes Ergebnis. Patienten deuten relationale und emotionale Aspekte als Indikatoren der Systemorientierung.",
-    transfer:"Diverse Populationen international, Thematik der Patientenzentralität systemunabhängig übertragbar."
+    title:"Patient satisfaction in tele-ophthalmology: systematic review and meta-analysis",
+    sum:"Systematic review and meta-analysis of 41 studies (24,595 participants) comparing patient satisfaction in tele-ophthalmology versus in-person eye care and assessing overall telemedicine satisfaction.",
+    result:"Comparable satisfaction rates: tele-ophthalmology vs. in-person (OR 0,98; 95% CI 0,36–2,65, p=0,95). Pooled satisfaction in telemedicine 93,5% (95% CI 90,8–95,5); 92,0% general acceptability. Asynchronous (94,6%), synchronous (92,1%), hybrid (93,8%) models showed similar rates. Higher recommendation (94,9%) than reuse intention (84,0%); no publication bias detected (p&gt;0,05).",
+    transfer:"Querschnittsübertragbar: Patientenzufriedenheit systemunabhängig."
   },
   {
-    journal:"Public Health", year:"2026", pmid:"42691737",
-    author:"Nguyen CM et al.", pubdate:"03.09.2026",
-    added:"03.09.2026",
-    title:"Private Krankenversicherung und Prävention in Australien: Längsschnittstudie",
-    sum:"Längsschnittstudie an 9.674 australischen Erwachsenen (2009–2017) zur Assoziation zwischen privater Krankenversicherung und Nutzung von Präventivleistungen.",
-    result:"Chronische Erkrankungen wurden häufiger, Prävention nahm zu. Nach Adjustment zeigte sich: Bei Frauen waren hospital PHI und kombinierte PHI mit IRR 1,14 (95%-KI 1,09–1,18) bzw. 1,18 (1,11–1,25) assoziiert; bei Männern hospital PHI mit IRR 1,12 (1,00–1,23) und kombinierte PHI mit IRR 1,18 (1,11–1,25).",
-    transfer:"Australisches Zwei-Klassen-System mit Medicare-Basisversorgung und zusätzlicher privater Versicherung; Frage zu Versicherungsstatus und Prävention eingeschränkt übertragbar."
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42706532",
+    author:"Dymek NG et al.", pubdate:"05.09.2026",
+    added:"08.09.2026",
+    title:"System Support Mapping for implementation determinants in neonatal intensive care",
+    sum:"Methodological illustration of System Support Mapping (SSM) combined with Matrixed Multiple Case Study approach for identifying implementation determinants in a multi-site study implementing lactation support in five German NICUs.",
+    result:"Six-step methodology demonstrated: individual System Support Maps per NICU (steps 1–3), cross-site matrix enabling comparison (steps 4–6). Within-site analysis revealed context-dependent determinant perceptions (same resource as facilitating, inhibiting, or both depending on context). Cross-site analysis identified homogeneous and heterogeneous determinant patterns, showing different contextual manifestations enabling site-specific vs. cross-site strategy differentiation.",
+    transfer:"Deutsche NICUs; Implementierungswissenschaft für deutsche Kontexte."
   },
   {
-    journal:"Am J Transplant", year:"2026", pmid:"42692200",
-    author:"McMichael LC et al.", pubdate:"03.09.2026",
-    added:"03.09.2026",
-    title:"Regionale Disparitäten bei Lebendnierenverpflanzungen in Australien und Neuseeland",
-    sum:"Analyse der ANZORGG-Registry (Australien, Neuseeland) zu regionalen Unterschieden bei Zugang zu Lebendnierenverpflanzung.",
-    result:"Standardisierte Quote lebender Nierenverpflanzungen variierte zwischen 0,36 und 2,11 über 21 Netzwerke (n=53.313 Patienten 2002–2022). Von 21 Netzwerken lagen 4 (19%) unter Erwartung. Faktoren: direkte Transplantationsaffiliation des Behandlungszentrums, nicht-metropolitane Residenz und zeitnahe nephrologische Vorstellung assoziiert mit erhöhtem Lebendspender-Transplantationsrisiko.",
-    transfer:"Australien/Neuseeland, Fragestellung zu regionalen Versorgungsungleichheiten in spezialisierten Leistungen übertragbar auf Deutschland."
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42706542",
+    author:"Puhlmann N et al.", pubdate:"04.09.2026",
+    added:"08.09.2026",
+    title:"Greener active pharmaceutical ingredients: healthcare professionals' perspectives",
+    sum:"Qualitative interview study with 16 European healthcare professionals (doctors, pharmacists, procurement, reimbursement, regulators) exploring perspectives on adopting greener active pharmaceutical ingredients (APIs) as part of sustainable medical care.",
+    result:"Interviewees identified existing environmental consideration strategies (e.g., environmental criteria in procurement tenders). Key needs for adoption: access to reliable environmental impact data, legislative/regulatory frameworks for harmonized assessment, centralized decision-making on environmental properties. Marketing authorization process viewed as main intervention point; professional interest in environmental data may stimulate company data-sharing and greener API design.",
+    transfer:"Europäische Perspektiven; Regulierung und Beschaffung relevant für deutsches System."
   },
   {
-    journal:"Diabet Med", year:"2026", pmid:"42682016",
-    author:"Majstorovic M et al.", pubdate:"01.09.2026",
-    added:"02.09.2026",
-    title:"Screening auf Autoimmunität bei Typ-1-Diabetes aus Sicht des Fachpersonals",
-    sum:"Qualitative Studie mit 32 australischen Fachkräften (Kindermedizin) zu Perspektiven auf Screening und Monitoring von Inselzellautoantkörpern.",
-    result:"Sieben Themen identifiziert: (1) umstrittenes Screening, (2) Strukturüberlegungen, (3) Zugangsparität, (4) Managementfokus auf Testerleben, (5) potenzielle psychische Folgen, (6) Bewältigungsfähigkeit der Betreuer, (7) Bedeutung vertrauensvoller Beziehungen. Fachkräfte betonten psychische Belastungen für Familien, Wichtigkeit therapeutischer Beziehungen.",
-    transfer:"Qualitative Fachperspektive, Thema Screening-Akzeptanz und -Design systemunabhängig relevant."
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42706525",
+    author:"Nordgren LB et al.", pubdate:"03.09.2026",
+    added:"08.09.2026",
+    title:"Primary Care Behavioral Health model in Swedish primary care: pilot trial outcomes",
+    sum:"Stepped-wedge clinical trial evaluating implementation of Primary Care Behavioral Health (PCBH) model in four Swedish primary care centers with 37,100 listed patients over three time periods.",
+    result:"Post-PCBH: first appointment waiting time decreased 30–39% (16→10–11 days, p&lt;0,001); all appointment waiting times decreased 21–24% (18→13,7–14,2 days, p&lt;0,001); total BHC appointments increased 21–34% (1762→2359–2127, p&lt;0,001); psychotropic prescriptions decreased 14–18% (8025→6570–6927, p&lt;0,001). Improvements partly declined after implementation phase.",
+    transfer:"Schweden, Primärversorgung; hausarztgesteuertes System, aber prozessuale Lernpunkte übertragbar."
   },
   {
-    journal:"Trop Med Infect Dis", year:"2026", pmid:"42646806",
-    author:"Elion Assiana DO et al.", pubdate:"17.08.2026",
-    added:"26.08.2026",
-    title:"Nationale Implementierung eines TB-Probenversandsystems in der Republik Kongo",
-    sum:"Dreijährige Mixed-Methods-Studie (Pilot Januar–Juni 2023, Scale-up Juli 2023–Dezember 2025) zur Umsetzung eines strukturierten Versandsystems für TB-Diagnostik.",
-    result:"Pilot-Phase: 962 Proben, 30,6% TB-Fälle (12/294 RR-TB), medianer Turnaround 53 h urban/62 h rural, 86% Beteiligungsquote. Scale-up (29 → 12/12 Departements): 2154 Proben (2023) → 5160 (2024), 2587 TB- und 84 RR-TB-Fälle über 3 Jahre detektiert. TB-Detektionsbeitrag stieg von 9,2% auf 16,0%, RR-TB von 10,4% auf 18,7%.",
-    transfer:"Ressourcenlimitiertes Subsahara-Kontext, Versorgungsforschung zur Stärkung von Diagnostikzugang relevant, aber nur bedingt auf deutsche Strukturen übertragbar."
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42681645",
-    author:"Thomas HL et al.", pubdate:"04.08.2026",
-    added:"02.09.2026",
-    title:"Verfügbarkeit und Zugang zu Infertilitätsversorgung in West- und Zentralafrika",
-    sum:"Länderübergreifende Studie (Burkina Faso, Elfenbeinküste, Niger, Uganda) zu Verfügbarkeit, geografischem Zugang und Nutzung von STI-Tests und Infertilitätsservices.",
-    result:"STI-Tests verfügbar in 68,5–92,6% der Einrichtungen, Infertilitätsservices in 28,4–44,0% (Burkina Faso 78,3%). Frauen mit höherer Bildung, Wohlstand, urbaner Residenz hatten besseren Zugang. In Burkina Faso und Niger: Frauen innerhalb 5 km STI-Testung zeigten erhöhte biomedizinische Inanspruchnahme (aOR 2,94 bzw. 7,19).",
-    transfer:"Subsaharische Länder mit begrenzten Ressourcen, Fragestellung zu geografischem Zugang und Inanspruchnahme grundsätzlich relevant."
+    journal:"Soc Sci Med", year:"2026", pmid:"42704983",
+    author:"Zhang Y et al.", pubdate:"12.08.2026",
+    added:"07.09.2026",
+    title:"Primary care visits and prevention of chronic conditions in China's health system reform",
+    sum:"Panel study of 11,425 individuals across four waves (2011–2018) from China Health and Retirement Longitudinal Study examining associations between primary care visits and preventing additional chronic conditions and reducing hospital utilization.",
+    result:"Each additional primary care visit associated with fewer new chronic conditions acquired (−0,011, 95% CI −0,017 to −0,004). Association stronger in urban residents (−0,016), those with primary education (−0,014), single chronic condition (−0,018). Among those with existing conditions, primary care visits not significantly associated with hospital outpatient visits (−0,010, 95% CI −0,029 to 0,009) or inpatient admissions (0,010, 95% CI −0,020 to 0,040).",
+    transfer:"China; Konzepte zu Primärversorgung und Prävention aber strukturelle Unterschiede erheblich."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
@@ -1432,10 +1441,10 @@ const RADAR_FRISTEN = [["2026-09-22", "2026-10-20", "2026-10-20", "2026-09-07", 
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "08.09.2026";
+const NEWS_STAND = "09.09.2026";
 const NEWS = [
-  {titel:"Letzter Baustein für neue Form der Basisversorgung – Start ab Januar 2027", datum:"2026-09-07", url:"https://www.monitor-versorgungsforschung.de/news/letzter-baustein-fuer-neue-form-der-basisversorgung-start-ab-januar-2027/"},
-  {titel:"Dr. Johanna Löchner ist neue Professorin für „Mentale Gesundheit in der Primärversorgung“", datum:"2026-08-19", url:"https://www.monitor-versorgungsforschung.de/news/dr-johanna-loechner-ist-neue-professorin-fuer-mentale-gesundheit-in-der-primaerversorgung/"},
+  {titel:"Pflege, Notfall, Primärversorgung: SBK fordert Reformentscheidungen", datum:"2026-09-08", url:"https://www.monitor-versorgungsforschung.de/news/pflege-notfall-primaerversorgung-sbk-fordert-reformentscheidungen/"},
+  {titel:"25. Deutscher Kongress für Versorgungsforschung", datum:"2026-09-08", url:"https://www.monitor-versorgungsforschung.de/news/25-deutscher-kongress-fuer-versorgungsforschung/"},
 ];
 // === NEWS-BLOCK-ENDE ===
 
