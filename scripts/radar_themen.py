@@ -1,20 +1,22 @@
 # -*- coding: utf-8 -*-
-"""Die zwoelf Themengebiete des Ausschreibungsradars - an einer Stelle.
+"""Die fuenfzehn Themengebiete des Ausschreibungsradars - an einer Stelle.
 
 Entscheidung des Herausgebers vom 28.08.2026: Der Radar laeuft **einmal
 zentral** im Versorgungsforschungs-Hub und ist dort nach Themengebieten
-gegliedert (`ausschreibungen.html`). Die elf Schwesterhubs suchen nicht selbst;
-sie zeigen in ihrer Kopfkarte nur die Zahl ihres Gebiets und verweisen auf die
-zentrale Seite (`scripts/radar_hinweis.py`).
+gegliedert (`ausschreibungen.html`). Die vierzehn Schwesterhubs suchen nicht
+selbst; sie zeigen in ihrer Kopfkarte nur die Zahl ihres Gebiets und verweisen
+auf die zentrale Seite (`scripts/radar_hinweis.py`).
 
-Warum zentral: Zwoelf Hubs, die dieselben drei Quellen abfragen, holen jede
-Nacht zwoelfmal dasselbe - und zwoelfmal muss ein Modell dieselben Kandidaten
-lesen. Der Unterschied liegt allein in der Auswahlregel, und die passt in eine
-Zeile je Gebiet. Aus zwoelf Laeufen wird so einer, aus zwoelf Fassungen des
-Wahrheitsstands eine.
+Warum zentral: Fuenfzehn Hubs, die dieselben drei Quellen abfragen, holen jede
+Nacht fuenfzehnmal dasselbe - und fuenfzehnmal muss ein Modell dieselben
+Kandidaten lesen. Der Unterschied liegt allein in der Auswahlregel, und die
+passt in eine Zeile je Gebiet. Aus fuenfzehn Laeufen wird so einer, aus
+fuenfzehn Fassungen des Wahrheitsstands eine.
 
 Diese Datei ist die einzige Pflegestelle dafuer. Kommt ein Hub hinzu, gehoert
-er hier hinein - und in PORTALE in `knowledge-hubs/scripts/versand_bericht.py`.
+er hier hinein. PORTALE in `knowledge-hubs/scripts/versand_bericht.py` kommt
+seit dem 04.09.2026 aus portale.json (portale_pflegen.py); von Hand bleiben
+ausserdem `dirigent.yml` und `laufwache.py` in knowledge-hubs.
 
 **Die Auswahlregeln sind vom Herausgeber bestaetigt** (28.08.2026). Abgeleitet
 sind sie aus den Themenprofilen der Hubs (`themen/<slug>.json`: kriterium_a,
@@ -22,7 +24,7 @@ ausschluss). Wo eine Regel zu weit ist, stehen fremde Ausschreibungen im Hub;
 wo sie zu eng ist, schweigt er, obwohl es etwas zu melden gaebe - eine Regel zu
 aendern heisst deshalb, den Zuschnitt eines Hubs zu aendern.
 
-Drei Abgrenzungen sind dabei ausdruecklich entschieden worden; sie stehen unten
+Vier Abgrenzungen sind dabei ausdruecklich entschieden worden; sie stehen unten
 in den betroffenen Regeln und sind keine Nebensache:
 
   1. **Adipositas erscheint nicht zusaetzlich unter "Nicht uebertragbare
@@ -33,10 +35,22 @@ in den betroffenen Regeln und sind keine Nebensache:
   3. **Breit angelegte Praeventionsprogramme ohne Krankheitsbezug gehoeren
      allein in die Versorgungsforschung.** Sonst stuende dieselbe
      Bekanntmachung in vier Gebieten, und keines davon meinte sie wirklich.
+  4. **Krebs, Herz-Kreislauf und Diabetes erscheinen nicht mehr unter "Nicht
+     uebertragbare Krankheiten"** (11.09.2026, mit dem Scharfschalten der drei
+     Indikationshubs). Das ist Punkt 1 fortgeschrieben, und der Preis steht
+     fest: NCD verliert damit seine drei groessten Brocken und behaelt
+     Atemwege, muskuloskelettale Erkrankungen, Nieren und Leber,
+     Multimorbiditaet und das Krankheitsuebergreifende. Konsistenz im Radar
+     wiegt schwerer als die Fuelle eines Gebiets - wer Krebs-Ausschreibungen
+     sucht, hat jetzt einen Krebs-Hub.
+
+     AUSNAHME davon ist das Paar Diabetes/Adipositas: Zwei gleich spezielle
+     Gebiete duerfen dieselbe Bekanntmachung fuehren, wenn sie beide meint.
+     Die Begruendung steht in der Diabetes-Regel.
 """
 
-# Die zentrale Seite, auf die alle elf anderen Hubs verweisen. Der Anker ist
-# der Slug des Themengebiets - deshalb traegt jede Rubrik dort eine id.
+# Die zentrale Seite, auf die alle vierzehn anderen Hubs verweisen. Der Anker
+# ist der Slug des Themengebiets - deshalb traegt jede Rubrik dort eine id.
 ZENTRALE = "https://wissen.m-vf.de/ausschreibungen.html"
 
 # Welche Fachfeeds von foerderinfo.bund.de abgefragt werden. Die elf Namen
@@ -55,7 +69,7 @@ FEEDS = [
     "bekanntmachungen-internationales",
 ]
 
-# Die zwoelf Themengebiete in der Reihenfolge der Hub-Reihe.
+# Die fuenfzehn Themengebiete in der Reihenfolge der Hub-Reihe.
 #   slug   - Anker auf der zentralen Seite und Kennung in ausschreibungen.json.
 #            MUSS dem SLUG in der portal.json des Hubs entsprechen: Daran
 #            findet scripts/radar_hinweis.py sein Gebiet wieder. Zwei heissen
@@ -181,17 +195,19 @@ nicht vorkommt.""",
         "suche": ["chronic disease management", "noncommunicable diseases"],
         "regel": """Einschlägig ist eine Ausschreibung, wenn sie Versorgung,
 Prävention oder Krankheitslast chronischer, nicht übertragbarer Erkrankungen
-fördert - Herz-Kreislauf, Krebs, Diabetes, Atemwege, muskuloskelettale
-Erkrankungen.
+fördert - Atemwege, muskuloskelettale Erkrankungen, chronische Nieren- und
+Lebererkrankungen, Multimorbidität sowie krankheitsübergreifendes Chronic
+Disease Management.
 
 NICHT einschlägig sind Grundlagenforschung, Molekularbiologie, Tiermodelle und
 die Entwicklung einzelner Wirkstoffe ohne Versorgungsbezug.
 
-NICHT einschlägig sind außerdem **Ausschreibungen zu Adipositas** - dafür gibt
-es ein eigenes Themengebiet, und dieses hier nennt sie auch dann nicht, wenn
-Adipositas als eine chronische Erkrankung unter mehreren vorkommt. Ebenso wenig
-breit angelegte Präventionsprogramme ohne Bezug auf ein bestimmtes
-Krankheitsbild; die gehören in die Versorgungsforschung.""",
+NICHT einschlägig sind außerdem **Ausschreibungen zu Adipositas, Krebs,
+Herz-Kreislauf-Erkrankungen und Diabetes** - für jedes dieser vier gibt es ein
+eigenes Themengebiet, und dieses hier nennt sie auch dann nicht, wenn sie als
+eine chronische Erkrankung unter mehreren vorkommen. Ebenso wenig breit
+angelegte Präventionsprogramme ohne Bezug auf ein bestimmtes Krankheitsbild;
+die gehören in die Versorgungsforschung.""",
     },
     {
         "slug": "gender",
@@ -250,8 +266,60 @@ Versorgungsthema auftritt.
 NICHT einschlägig sind Neurobiologie, Bildgebung, Genetik, Tiermodelle und
 Wirkstoffstudien ohne Versorgungsbezug.""",
     },
+    {
+        "slug": "onkologie",
+        "name": "Onkologie",
+        "domain": "onkologie.m-vf.de",
+        "suche": ["cancer research", "oncology care"],
+        "regel": """Einschlägig ist eine Ausschreibung, wenn sie Forschung zu
+Krebserkrankungen fördert - Früherkennung, Diagnostik, Therapie, Nachsorge,
+Palliativversorgung, onkologische Versorgungsstrukturen, Krebsregister und
+Tumorboards; einschließlich translationaler Projekte mit erkennbarem Bezug zum
+Menschen.
+
+NICHT einschlägig sind reine Zell- und Tiermodelle ohne Anwendungsbezug,
+präklinische Wirkstoffentwicklung sowie breit angelegte Präventionsprogramme
+ohne Bezug auf ein bestimmtes Krankheitsbild; die gehören in die
+Versorgungsforschung.""",
+    },
+    {
+        "slug": "kardio",
+        "name": "Kardiologie",
+        "domain": "kardio.m-vf.de",
+        "suche": ["cardiovascular disease", "heart failure care"],
+        "regel": """Einschlägig ist eine Ausschreibung, wenn sie Forschung zu
+Herz-, Kreislauf- und Gefäßerkrankungen fördert - koronare Herzkrankheit,
+Herzinsuffizienz, Rhythmusstörungen, Schlaganfall, kardiologische
+Rehabilitation, Notfallketten und Versorgungsstrukturen.
+
+NICHT einschlägig sind Grundlagenforschung ohne Anwendungsbezug, Tiermodelle
+und Medizintechnikentwicklung ohne Versorgungsbezug.""",
+    },
+    {
+        "slug": "diabetes",
+        "name": "Diabetes",
+        "domain": "diabetes.m-vf.de",
+        "suche": ["diabetes care", "diabetes prevention"],
+        "regel": """Einschlägig ist eine Ausschreibung, wenn sie Forschung zu
+Diabetes fördert - Typ 1 und Typ 2, Folgeerkrankungen (Retinopathie,
+Nephropathie, diabetisches Fußsyndrom), Technik (CGM, Insulinpumpen, Closed
+Loop), Schulung und Selbstmanagement sowie Diabetesprävention durch Lebensstil
+einschließlich Ernährungstherapie mit Diabetesbezug.
+
+Geschnitten wird nach der **Zielgröße**, nicht nach dem Mittel: Zielt ein
+Ernährungs- oder Bewegungsprogramm auf das Gewicht, gehört es nach Adipositas;
+zielt es auf den Blutzucker, hierher. Nennt eine Ausschreibung beides - der
+häufigste Fall bei Präventionsbekanntmachungen -, darf sie in beiden Gebieten
+stehen. Das ist der Unterschied zur Abgrenzung gegen "Nicht übertragbare
+Krankheiten": Dort schluckt ein allgemeines Gebiet ein spezielles, hier
+überschneiden sich zwei gleich spezielle.
+
+NICHT einschlägig sind Ernährungsforschung ohne Diabetesbezug, einzelne
+Nährstoffe und Nahrungsergänzung, Lebensmitteltechnologie und
+Agrarforschung.""",
+    },
 ]
 
-# Alle Suchbegriffe der zwoelf Gebiete, entdoppelt und in fester Reihenfolge:
-# Der Pool wird einmal geholt und danach zwoelfmal befragt.
+# Alle Suchbegriffe der fuenfzehn Gebiete, entdoppelt und in fester Reihenfolge:
+# Der Pool wird einmal geholt und danach fuenfzehnmal befragt.
 SUCHE = list(dict.fromkeys(b for t in THEMEN for b in t["suche"]))
