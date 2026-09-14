@@ -1,7 +1,7 @@
 {
  "stand": "14.09.2026",
  "quellen": {
-  "Bund": 76,
+  "Bund": 78,
   "grants.gov": 330,
   "DFG": 11
  },
@@ -20,7 +20,7 @@
      "quelle": "Bund (foerderinfo.bund.de)",
      "land": "DE",
      "beschreibung": "Förderbekanntmachung Versorgungsforschung - Medizinische Leitlinien (MedLL) vom 19.06.2026. Web-Seminar am 14.07.2026.",
-     "beleg": "Versorgungsforschung – Medizinische Leitlinien (MedLL)"
+     "beleg": "Innovationsausschuss - Versorgungsforschung – Medizinische Leitlinien (MedLL)"
     },
     {
      "titel": "Innovationsausschuss – Versorgungsforschung zum themenoffenen Bereich",
@@ -29,7 +29,7 @@
      "quelle": "Bund (foerderinfo.bund.de)",
      "land": "DE",
      "beschreibung": "Förderbekanntmachung des Innovationsausschusses beim Gemeinsamen Bundesausschuss zur themenoffenen Förderung von Versorgungsforschung: Forschungsprojekte zur Weiterentwicklung der Versorgung in der gesetzlichen Krankenversicherung. Vom 19.06.2026. Web-Seminar am 14.07.2026.",
-     "beleg": "Versorgungsforschung zum themenoffenen Bereich: Forschungsprojekte zur Weiterentwicklung der Versorgung in der gesetzlichen Krankenve"
+     "beleg": "themenoffenen Förderung von Versorgungsforschung: Forschungsprojekte zur Weiterentwicklung der Versorgung in der gesetzlichen Krankenve"
     },
     {
      "titel": "Innovationsausschuss – Versorgungsforschung zum themenspezifischen Bereich",
@@ -38,7 +38,7 @@
      "quelle": "Bund (foerderinfo.bund.de)",
      "land": "DE",
      "beschreibung": "Förderbekanntmachung des Innovationsausschusses beim Gemeinsamen Bundesausschuss zur themenspezifischen Förderung von Versorgungsforschung: Forschungsprojekte zur Weiterentwicklung der Versorgung in der gesetzlichen Krankenversicherung. Vom 19.06.2026. Web-Seminar am 14.07.2026.",
-     "beleg": "Versorgungsforschung zum themenspezifischen Bereich: Forschungsprojekte zur Weiterentwicklung der Versorgung in der gesetzlichen Kran"
+     "beleg": "themenspezifischen Förderung von Versorgungsforschung: Forschungsprojekte zur Weiterentwicklung der Versorgung in der gesetzlichen Kran"
     }
    ]
   },
@@ -62,7 +62,7 @@
      "quelle": "Bund (foerderinfo.bund.de)",
      "land": "DE",
      "beschreibung": "Richtlinie zur Förderung eines Entwicklungsprojekts zum Thema \"Etablierung eines nationalen Netzwerks zum Aufbau\r\neiner föderierten Gesundheitsdateninfrastruktur im Europäischen Gesundheitsdatenraum\". BAnz vom 27.07.2026.",
-     "beleg": "föderierten Gesundheitsdateninfrastruktur im Europäischen Gesundheitsdatenraum"
+     "beleg": "Aufbau einer föderierten Gesundheitsdateninfrastruktur im Europäischen Gesundheitsdatenraum"
     },
     {
      "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
@@ -74,6 +74,15 @@
      "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
     },
     {
+     "titel": "e2Health –  Klinische Validierungsstudien",
+     "frist": "2026-09-23",
+     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-07-bekanntmachung-in-silico-methoden.html",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Richtlinie zur Förderung von Forschungsprojekten zum Thema Klinische Validierungsstudien von In silico-Methoden im Forschungs- und Förderkonzept \"e2Health – In silico-Forschung für die Medizin der Zukunft\". BAnz vom 07.08.2026.",
+     "beleg": "Klinische Validierungsstudien von In silico-Methoden im Forschungs- und Förderkonzept \"e2Health\""
+    },
+    {
      "titel": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)",
      "frist": "2026-10-06",
      "url": "https://www.grants.gov/search-results-detail/359252",
@@ -83,22 +92,13 @@
      "beleg": "Application of Digital Health Technology to the Management of Type 2 Diabetes"
     },
     {
-     "titel": "e2Health –  Klinische Validierungsstudien",
-     "frist": "2026-09-23",
-     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-07-bekanntmachung-in-silico-methoden.html",
-     "quelle": "Bund (foerderinfo.bund.de)",
-     "land": "DE",
-     "beschreibung": "Richtlinie zur Förderung von Forschungsprojekten zum Thema Klinische Validierungsstudien von In silico-Methoden im Forschungs- und Förderkonzept \"e2Health – In silico-Forschung für die Medizin der Zukunft\". BAnz vom 07.08.2026.",
-     "beleg": "Klinische Validierungsstudien von In silico-Methoden im Forschungs- und Förderkonzept \"e2Health – In silico-Forschung für die Medizin der Zukunft\""
-    },
-    {
      "titel": "Logistics Center for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (U24 Clinical Trials Not Allowed)",
      "frist": "2026-10-02",
      "url": "https://www.grants.gov/search-results-detail/359268",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Logistics Center for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
+     "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
     },
     {
      "titel": "Development and Testing of a Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (U01 Clinical Trial Not Allowed)",
@@ -107,7 +107,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
+     "beleg": "Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data"
     },
     {
      "titel": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (UG3/UH3, Clinical Trial Optional)",
@@ -116,16 +116,16 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
+     "beleg": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data"
     },
     {
-     "titel": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (UG3/UH3 Clinical Trial Optional)",
+     "titel": "Advanced Development of Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
      "frist": "2026-10-19",
-     "url": "https://www.grants.gov/search-results-detail/359270",
+     "url": "https://www.grants.gov/search-results-detail/359855",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI"
+     "beleg": "Advanced Development of Informatics Technologies for Cancer Research and Management"
     }
    ]
   },
@@ -152,6 +152,15 @@
      "beleg": "Clinician-Scientists Transdisciplinary Aging Research (Clin-STAR) Coordinating Center"
     },
     {
+     "titel": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)",
+     "frist": "2026-10-15",
+     "url": "https://www.grants.gov/search-results-detail/359201",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Interventions for Older Adults Living with Serious Mental Illness (SMI)"
+    },
+    {
      "titel": "Institutional Training Programs to Advance Translational Research on Alzheimer's Disease (AD) and AD-Related Dementias (ADRD) (T32 Clinical Trial Not Allowed)",
      "frist": "2026-09-25",
      "url": "https://www.grants.gov/search-results-detail/357710",
@@ -167,16 +176,7 @@
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Alzheimer’s Transforming Care Award"
-    },
-    {
-     "titel": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)",
-     "frist": "2026-10-15",
-     "url": "https://www.grants.gov/search-results-detail/359201",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Interventions for Older Adults Living with Serious Mental Illness (SMI)"
+     "beleg": "DoW Alzheimer's Transforming Care Award"
     }
    ]
   },
@@ -198,8 +198,27 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 0,
-   "ausschreibungen": []
+   "anzahl": 2,
+   "ausschreibungen": [
+    {
+     "titel": "Limited Competition for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers (U01 Clinical Trial Required)",
+     "frist": "2026-11-06",
+     "url": "https://www.grants.gov/search-results-detail/360679",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers"
+    },
+    {
+     "titel": "Single Source for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center (U01 Clinical Trial Required)",
+     "frist": "2026-11-09",
+     "url": "https://www.grants.gov/search-results-detail/360458",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center"
+    }
+   ]
   },
   {
    "slug": "gender",
@@ -212,17 +231,8 @@
    "slug": "adipositas",
    "name": "Adipositas",
    "domain": "adipositas.m-vf.de",
-   "anzahl": 4,
+   "anzahl": 3,
    "ausschreibungen": [
-    {
-     "titel": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)",
-     "frist": "2026-10-06",
-     "url": "https://www.grants.gov/search-results-detail/359252",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes"
-    },
     {
      "titel": "Optimal Treatment Strategies for use of Anti-Obesity Medications (AOMs) in Children and Adolescents Clinical Centers (U01 Clinical Trial Required)",
      "frist": "2026-10-09",
@@ -283,6 +293,24 @@
    "anzahl": 8,
    "ausschreibungen": [
     {
+     "titel": "Specialized Programs of Research Excellence (SPOREs) in Human Cancers for Years 2024, 2025, and 2026 (P50 Clinical Trial Required)",
+     "frist": "2026-09-25",
+     "url": "https://www.grants.gov/search-results-detail/350299",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Specialized Programs of Research Excellence (SPOREs) in Human Cancers"
+    },
+    {
+     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
+     "frist": "2026-10-01",
+     "url": "https://www.grants.gov/search-results-detail/360606",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Glioblastoma Therapeutics Network (GTN)"
+    },
+    {
      "titel": "NCI Community Oncology Research Program (NCORP) Community Sites (UG1 Clinical Trial Not Allowed)",
      "frist": "2026-09-18",
      "url": "https://www.grants.gov/search-results-detail/358964",
@@ -310,24 +338,6 @@
      "beleg": "NCI Community Oncology Research Program (NCORP) Academic Community Sites"
     },
     {
-     "titel": "Specialized Programs of Research Excellence (SPOREs) in Human Cancers for Years 2024, 2025, and 2026 (P50 Clinical Trial Required)",
-     "frist": "2026-09-25",
-     "url": "https://www.grants.gov/search-results-detail/350299",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Specialized Programs of Research Excellence (SPOREs) in Human Cancers"
-    },
-    {
-     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
-     "frist": "2026-10-01",
-     "url": "https://www.grants.gov/search-results-detail/360606",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Glioblastoma Therapeutics Network (GTN)"
-    },
-    {
      "titel": "DoW Peer Reviewed Cancer, Clinical Trial Award",
      "frist": "2026-10-05",
      "url": "https://www.grants.gov/search-results-detail/362268",
@@ -337,22 +347,22 @@
      "beleg": "DoW Peer Reviewed Cancer, Clinical Trial Award"
     },
     {
-     "titel": "DoW Pancreatic Cancer Research Program, Translational Research Partnership Award",
-     "frist": "2026-10-07",
-     "url": "https://www.grants.gov/search-results-detail/362191",
+     "titel": "DoW, Peer Reviewed Cancer, Impact Award",
+     "frist": "2026-10-05",
+     "url": "https://www.grants.gov/search-results-detail/362267",
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Pancreatic Cancer Research Program, Translational Research Partnership Award"
+     "beleg": "DoW, Peer Reviewed Cancer, Impact Award"
     },
     {
-     "titel": "DoW Breast Cancer, Breakthrough Award Level 4",
-     "frist": "2026-09-30",
-     "url": "https://www.grants.gov/search-results-detail/362205",
+     "titel": "DoW Peer Reviewed Cancer, Idea Award",
+     "frist": "2026-10-05",
+     "url": "https://www.grants.gov/search-results-detail/362265",
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Breakthrough Award Level 4"
+     "beleg": "DoW Peer Reviewed Cancer, Idea Award"
     }
    ]
   },
@@ -369,7 +379,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D)"
+     "beleg": "Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D) - Resource Center"
     }
    ]
   },
@@ -377,7 +387,7 @@
    "slug": "diabetes",
    "name": "Diabetes",
    "domain": "diabetes.m-vf.de",
-   "anzahl": 4,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)",
@@ -386,7 +396,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes"
+     "beleg": "Application of Digital Health Technology to the Management of Type 2 Diabetes"
     },
     {
      "titel": "Single Source Competition: Continuation of the Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D) - Resource Center (U24 Clinical Trial Not Allowed)",
@@ -395,7 +405,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Continuation of the Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D) - Resource Center"
+     "beleg": "Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D)"
     },
     {
      "titel": "Single Source for the Continuation of the Epidemiology of Diabetes Interventions and Complications (EDIC) Study Research Center (Collaborative U01 Clinical Trial Not Allowed)",
@@ -404,16 +414,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Epidemiology of Diabetes Interventions and Complications (EDIC) Study Research Center"
-    },
-    {
-     "titel": "Single Source for Continuation of the Integrated Islet Distribution Program U24 (Clinical Trial Not Allowed)",
-     "frist": "2026-09-30",
-     "url": "https://www.grants.gov/search-results-detail/358917",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Continuation of the Integrated Islet Distribution Program"
+     "beleg": "Epidemiology of Diabetes Interventions and Complications (EDIC) Study"
     }
    ]
   }
