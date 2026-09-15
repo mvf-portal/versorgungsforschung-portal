@@ -70,7 +70,7 @@ Sie muss noch zu GitHub — dafür gibt es zwei Wege.
    ```
    Die Schrägstriche legen die Ordner automatisch an.
 3. Den kompletten Inhalt der lokalen Datei
-   `C:\Users\Stegmaier\Documents\versorgungsforschung-portal\.github\workflows\update-studies.yml`
+   `C:\Users\Stegmaier\Documents\Claude-Daten\versorgungsforschung-portal\.github\workflows\update-studies.yml`
    hineinkopieren.
 4. Unten **Commit changes**.
 
@@ -86,7 +86,7 @@ gh auth refresh -h github.com -s workflow
 Es öffnet sich der Browser zur Bestätigung. Danach:
 
 ```bash
-cd C:\Users\Stegmaier\Documents\versorgungsforschung-portal
+cd C:\Users\Stegmaier\Documents\Claude-Daten\versorgungsforschung-portal
 git add .github/workflows/update-studies.yml
 git commit -m "Taeglicher Studien-Update-Workflow"
 git push
@@ -190,7 +190,7 @@ py -m pip install --user "anthropic>=0.40" requests tzdata
 Dann in PowerShell — der Key gilt nur für dieses Fenster und wird nirgends gespeichert:
 
 ```powershell
-cd C:\Users\Stegmaier\Documents\versorgungsforschung-portal
+cd C:\Users\Stegmaier\Documents\Claude-Daten\versorgungsforschung-portal
 $env:ANTHROPIC_API_KEY = "sk-ant-..."
 py scripts\update_studies.py
 ```
