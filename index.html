@@ -1361,62 +1361,62 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "14. Sept. 2026, 06:20 Uhr";
+const SNAP_DATE = "15. Sept. 2026, 06:20 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"Health Serv Res", year:"2026", pmid:"42720268",
-    author:"Carlin CS et al.", pubdate:"Okt. 2026",
+    journal:"J Med Internet Res", year:"2026", pmid:"42735377",
+    author:"Marshall P et al.", pubdate:"14.09.2026",
+    added:"14.09.2026",
+    title:"Design-Richtlinien für Online-Gesundheitsforen",
+    sum:"Qualitative Studie mit 54 Interviews und Workshops zur Entwicklung evidenzgestützter Designrichtlinien für sichere Online-Gesundheitsforen basierend auf Selbstbestimmungstheorie.",
+    result:"Vier übergeordnete Designprinzipien identifiziert (Autonomie, Kompetenz, Zugehörigkeit, Sicherheit) mit pragmatischen Umsetzungsstrategien; Ergebnisse zeigen gemischte Nutzererfahrungen und Bedarf für nutzerzentrierte Weiterentwicklung.",
+    transfer:"UK-Studie, aber Fragestellung zu Prozessqualität und Nutzerperspektive systemunabhängig übertragbar."
+  },
+  {
+    journal:"J Comp Eff Res", year:"2026", pmid:"42734113",
+    author:"Debonnaire P et al.", pubdate:"14.09.2026",
+    added:"14.09.2026",
+    title:"Indirekte Effektivitätsvergleich Tafamidis vs. Acoramidis bei Transthyretin-Kardiomyopathie",
+    sum:"Trial-Emulation-Studie mit indirektem Vergleich zweier Transthyretin-Stabilisatoren basierend auf Registerdaten und klinischen Trials.",
+    result:"Nach Kalibrierung zeigte Acoramidis eine 42-Monats-Mortalitätsrate von 24,0% versus kalibrierte 31,2% für Tafamidis; relatives Mortalitätsrisiko 0,78 (95%-KI: 0,60–0,99), was auf 22% niedrigeres Sterblichkeitsrisiko deutet.",
+    transfer:"Gering: US-Registerdaten; aber Fragestellung zur Vergleichbarkeit von Wirkstoffen systemunabhängig relevant."
+  },
+  {
+    journal:"J Patient Saf", year:"2026", pmid:"42725452",
+    author:"Griffey RT et al.", pubdate:"11.09.2026",
+    added:"11.09.2026",
+    title:"SESAME-Checkliste für Adverse-Event- und Fehlerberichterstattung",
+    sum:"Methodisches Konsensuspapier zur Entwicklung einer 44-Item-Checkliste (SESAME) zur Standardisierung der Berichterstattung in Studien zu unerwünschten Ereignissen und medizinischen Fehlern.",
+    result:"SESAME-Checkliste mit 44 Items deckt alle kritischen Reporting-Domänen ab; Ziel ist Verbesserung der Vollständigkeit, Vergleichbarkeit und Reproduzierbarkeit; Entwicklung nach EQUATOR-Standards mit internationalem Expertenkonsens.",
+    transfer:"Internationales Konsensdokument zur Studienqualität, systemunabhängig für Patientensicherheitsforschung relevant."
+  },
+  {
+    journal:"Eur Geriatr Med", year:"2026", pmid:"42720850",
+    author:"van der Velde N et al.", pubdate:"10.09.2026",
     added:"10.09.2026",
-    title:"Risk Adjustment in Medicare Advantage mit Encounter-Daten",
-    sum:"Vergleichende Re-Schätzung des CMS-Hierarchical-Condition-Category-Modells mit Traditional-Medicare- vs. Medicare-Advantage-Claims 2016–2022.",
-    result:"MA-Daten zeigen 8,9% niedrigere durchschnittliche HCC-Scores als TM-Daten; Unterschiede variieren über Scoreverteilung. Keine neuen Anreizverzerrungen zu Lasten von Minoritäten oder ländlichen Versicherten.",
-    transfer:"US-System (MA/Medicare), aber relevante Methodologie für Risk-Adjustment"
+    title:"Koordinierter Ansatz zur integrierten Sturz- und Frakturprävention",
+    sum:"Position Paper von sieben internationalen Fachgesellschaften zu evidenzgestützter integrierter Versorgung für Sturz- und Frakturprävention bei älteren Menschen.",
+    result:"Kernerkenntnis: Fragmentierte Versorgungsstrukturen erfordern integrierte Fall- und Frakturprävention als Public-Health-Priorität; Empfehlungen für interdisziplinäre Zusammenarbeit, Trainings und systemische Ressourcenallokation.",
+    transfer:"Europäischer Konsens mit Fokus auf Versorgungsprozesse, Qualität und Implementierung in Regelversorgung."
   },
   {
-    journal:"BMJ Ment Health", year:"2026", pmid:"42731881",
-    author:"Chan AYL et al.", pubdate:"12.09.2026",
-    added:"12.09.2026",
-    title:"ADHD-Medikation und Selbstverletzungsrisiko: multinational",
-    sum:"Multinational selbstkontrollierte Fallserie zur Assoziation zwischen ADHD-Medikation und Selbstverletzungen anhand von fünf Ländern-Datenbanken.",
-    result:"Höchstes Risiko 90 Tage vor Therapiestart (IRR 2,58), dann während ersten 90 Tage (IRR 1,78) und später (IRR 1,27). Muster konsistent über alle Datenbanken – erhöhtes Risiko vor Behandlung deutet auf unbehandelte ADHD-Symptome, nicht auf Medikation hin.",
-    transfer:"Multinational, UK, Neuseeland, Taiwan eingeschlossen"
-  },
-  {
-    journal:"Res Health Serv Reg", year:"2026", pmid:"42720815",
-    author:"Farah B et al.", pubdate:"10.09.2026",
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42717348",
+    author:"Akhtar S et al.", pubdate:"04.09.2026",
     added:"10.09.2026",
-    title:"Notfall- und Katastrophenbereitschaft in Krankenhäusern Äthiopiens",
-    sum:"Querschnittsstudie zur Notfall- und Katastrophenbereitschaft in vier öffentlichen Zonal-Krankenhäusern in der Somali-Region mit WHO-Hospital-Safety-Index Modul 4.",
-    result:"Mittlere Bereitschaftswerte von 45%; tiefste Werte für Notfall- und Katastrophenreaktion/Wiederherstellung (41,3%). Defizite in Reaktionsplanung, logistischer Bereitschaft, Finanzadministration und Kommunikationssystemen; fehlende externe Stakeholder-Koordination.",
-    transfer:"Äthiopien (LMIC), aber HTA zur Systemreife allgemein relevant"
+    title:"Tabakrauchexposition und Gesundheitsdienstleistungen bei jungen Erwachsenen",
+    sum:"Querschnittsstudie mit 1.323 Studierenden zur Erfassung von Tabakrauchexposition, Symptomen und Inanspruchnahme von Gesundheitsdienstleistungen.",
+    result:"Exposition gegenüber Tabakrauch 55,9% (740/1.323); Husten (aOR 2,10; 95%-KI 1,66–2,64), Dyspnoe (aOR 1,30; 95%-KI 1,01–1,67) und Asthma (aOR 1,95; 95%-KI 1,43–2,65) signifikant mit Inanspruchnahme assoziiert.",
+    transfer:"Kuwait, aber Fragestellung zu Symptomen, Morbidität und Versorgungsnutzung epidemiologisch aussagekräftig."
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42728588",
-    author:"Grace D et al.", pubdate:"05.09.2026",
-    added:"12.09.2026",
-    title:"Online-Infektionstests: Systemische Vorteile und Barrieren",
-    sum:"Qualitative Interviews mit 41 Fachleuten zu Implementierung eines Online-Tests für sexuell übertragbare Infektionen (GetCheckedOnline) in Ontario.",
-    result:"Fünf zentrale Spannungsfelder identifiziert: Zugang, Datenschutz, Koordination, Agency und Systemauswirkungen. Teilnehmende erkannten Vorteile (besserer Zugang), berichteten aber auch unerwünschte Folgen (Koordinationsverluste zwischen Sektoren, Datenschutzbedenken).",
-    transfer:"Kanada, aber Fragestellung zu digitalen Testmodellen systemübergreifend relevant"
-  },
-  {
-    journal:"J Cancer Res Clin Oncol", year:"2026", pmid:"42693346",
-    author:"Richter C et al.", pubdate:"02.09.2026",
-    added:"04.09.2026",
-    title:"MISSION4Sax: Sektorübergreifende onkologische Versorgungsmodelle",
-    sum:"Studienprotokoll eines multizentrischen Pilotstudien zur Machbarkeit einer integrierten onkologischen Versorgung über Regionaltumorbrett zwischen Maximalversorgung und Landpraxis mit standardisierten Patientenpfaden.",
-    result:"Geplante Bewertung von Machbarkeit, Akzeptanz, Implementierung und Datenqualität (keine Effektivitätsfrage); Fokus auf Wartezeiten, Adhärenz, klinische und Patient-Reported Outcomes. Routinedaten der Krankenkasse als externe Referenz geplant, keine Individualverlinkung.",
-    transfer:"Deutschland (Sachsen), Versorgungsforschungs-Design direkt übertragbar"
-  },
-  {
-    journal:"J Eval Clin Pract", year:"2026", pmid:"42732558",
-    author:"Lam JYJ et al.", pubdate:"Sept. 2026",
-    added:"13.09.2026",
-    title:"Kliniker- und Informatiker-Perspektiven auf Harm-Risk-Vorhersage-Tools",
-    sum:"Qualitative Studie mit 22 Interviews (6 Ärzte, 11 Pharmazeuten, 5 Informatiker) zur Implementierung digitaler Risk-Prediction-Tools für Medikamentenschaden in australischen Krankenhäusern.",
-    result:"Fünf Themen mit Einfluss auf Adoption: Vertrauen der Kliniker, wahrgenommener Nutzen, organisatorische Bereitschaft, automatisierungsfähigkeit und Workflow-Kompatibilität. Barrieren: schlechte Systemintegration, Unsicherheit über Tool-Zuverlässigkeit; Enabler: umfassende Feedback-Mechanismen, Ressourcenplanung.",
-    transfer:"Australien, aber klinische Perspektiven auf digitale Sicherheitstools übertragbar"
+    journal:"Eur J Public Health", year:"2026", pmid:"42734651",
+    author:"Deal A et al.", pubdate:"04.08.2026",
+    added:"14.09.2026",
+    title:"Hepatitis-B-Disparitäten bei Migranten in Dänemark",
+    sum:"Matched-Cohort-Studie mit 179.110 Migranten und 1.049.345 Dänen über 23 Jahre zur Erfassung von HBV-Diagnoseraten und Verzögerungen.",
+    result:"Migranten zeigten 30,6-fach erhöhtes HBV-Diagnosrisiko (95%-KI: 26,7–35,2); durchschnittliche Verzögerung von Ankunft bis Diagnose 5,4 Jahre; Unterversorgung bei Personen außerhalb routinemäßiger Screening-Prozesse.",
+    transfer:"Dänemark, Sozialversicherungssystem vergleichbar mit Deutschland, aussagekräftig für Migrantenpopulationen."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
@@ -1432,9 +1432,9 @@ const RADAR_FRISTEN = [["2026-09-22", "2026-10-20", "2026-10-20"], [], ["2026-09
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "14.09.2026";
+const NEWS_STAND = "15.09.2026";
 const NEWS = [
-  {titel:"15. MVF-Fachkongress „Primärversorgung 2030 – Implementierung und Verbindlichkeit“ (27.11.26)", datum:"2026-09-13", url:"https://www.monitor-versorgungsforschung.de/featured/15-mvf-fachkongress-primaerversorgung/"},
+  {titel:"Primärversorgung interprofessionell gestalten: AOK Rheinland/Hamburg", datum:"2026-09-14", url:"https://www.monitor-versorgungsforschung.de/news/primaerversorgung-interprofessionell-gestalten-aok-rheinland-hamburg/"},
   {titel:"25. Deutscher Kongress für Versorgungsforschung", datum:"2026-09-08", url:"https://www.monitor-versorgungsforschung.de/news/25-deutscher-kongress-fuer-versorgungsforschung/"},
 ];
 // === NEWS-BLOCK-ENDE ===
@@ -1442,7 +1442,7 @@ const NEWS = [
 // Fremde Pressemeldungen zum Thema — taeglich von scripts/newsfeed.py
 // === PRESSE-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
 const PRESSE = [
-  {titel:"Primärversorgung: Gesundheitsreform darf nicht warten", datum:"2026-08-26", url:"http://idw-online.de/de/news876378", quelle:"idw"},
+  {titel:"Erfolgreiche EU-Förderung für Marburger Zukunftsmedizin", datum:"2026-09-14", url:"http://idw-online.de/de/news877318", quelle:"idw"},
 ];
 // === PRESSE-BLOCK-ENDE ===
 
