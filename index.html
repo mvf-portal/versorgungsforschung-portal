@@ -1474,78 +1474,87 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "16. Sept. 2026, 06:20 Uhr";
+const SNAP_DATE = "17. Sept. 2026, 06:20 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"Respir Med", year:"2026", pmid:"42744205",
-    author:"Tay TR et al.", pubdate:"15.09.2026",
-    added:"15.09.2026",
-    title:"Pragmatisches Vorhersagemodell für Asthma-Klinikreadmissionen",
-    sum:"Entwicklung und externe Validierung eines neunfaktoriellen Vorhersagemodells für Krankenhauswiederaufnahmen nach Asthmaexazerbation innerhalb von 12 Monaten.",
-    result:"READMIT-Modell zeigte gute Diskriminierung im Entwicklungs-(AUC 0,748; 95% KI 0,711–0,785) und externen Kohort (AUC 0,737; 95% KI 0,712–0,762), mit zufriedenstellender Kalibrierung.",
-    transfer:"Singapur-Daten, aber Fragestellung zu klinischen Prozessen systemunabhängig"
+    journal:"BMJ Open", year:"2026", pmid:"42749376",
+    author:"Dixon LK et al.", pubdate:"16.09.2026",
+    added:"16.09.2026",
+    title:"Chirurgische Behandlung von NSCLC in England: Trends, Variation und kurzfristige Ergebnisse 2015–2023",
+    sum:"Bevölkerungsgestützte Kohortenstudie zu Trends in der chirurgischen Praxis, regionalen Unterschieden und postoperativen Outcomes bei Lungenkrebs-Resektion in England über 9 Jahre.",
+    result:"Resektionsrate stieg von 15,4 % (2015) auf 20,9 % (2023); Segmentektomie von 11,2 % auf 20,6 %, minimal-invasive Chirurgie von 47,1 % auf 79,7 %; 90-Tage-Mortalität sank von 4,03 % auf 2,26 %; Verweildauer verkürzt sich, Wiederaufnahmen stabil bei ~10–12 % – jedoch erhebliche Zentren-Heterogenität in Segmentektomie (10,7–80,3 %) und roboterassistierter Chirurgie (0–67 %).",
+    transfer:"England, spezialisierte Thoraxchirurgie-Zentren – systemischer Kontext nur bedingt übertragbar"
   },
   {
-    journal:"Gesundheitswesen", year:"2026", pmid:"42743977",
-    author:"Kästner A et al.", pubdate:"15.09.2026",
-    added:"15.09.2026",
-    title:"Routinedaten in der onkologischen Versorgungsforschung: Chancen und Herausforderungen",
-    sum:"Qualitative Analyse praktischer Erfahrungen mit Krebsregisterdaten und Abrechnungsdaten von Krankenkassen für Versorgungsforschung am Beispiel eines Innovationsfonds-Projekts.",
-    result:"Verlinkung von Krebsregistern und Abrechnungsdaten ermöglicht umfassende Analysen von Langzeitoutcomes und Versorgungsstrukturen, erfordert jedoch zeitintensive Abstimmungs- und Genehmigungsprozesse sowie spezialisierte methodische Expertise.",
-    transfer:"Deutsches Gesundheitssystem, Krebsregister nach §65c SGB V und gesetzliche Krankenkassen"
+    journal:"Diabetes Care", year:"2026", pmid:"42747941",
+    author:"Donahue KE et al.", pubdate:"16.09.2026",
+    added:"16.09.2026",
+    title:"Elektronische Arzneihinweise verbessern Überweisungen zu Diabetes-Selbstmanagement-Schulung",
+    sum:"Clusterrandomisierte Studie zur Wirkung von Best-Practice-Advisories im EHR auf Überweisungsquoten zu Diabetes-Selbstmanagement-Schulung (DSMES) über 18 Monate in US-Primärversorgung.",
+    result:"Nach 12 Monaten: 12,9 % Überweisungsrate in Interventionskliniken vs. 1,2 % in Kontrollen (p&lt;0,001); nach 18 Monaten 13,7 % vs. 1,6 % (p&lt;0,001); adjustierte Odds Ratio 10,55 (95%-KI 4,65–23,94) nach 12 Monaten und 9,44 (95%-KI 4,91–18,17) nach 18 Monaten. Standing Orders erhielten diese Gewinne.",
+    transfer:"USA, Primärversorgung – Prozessoptimierung systemunabhängig, aber Anreizsystem unterschiedlich"
   },
   {
-    journal:"J Subst Use Addict Treat", year:"2026", pmid:"42744115",
-    author:"Lindenfeld Z et al.", pubdate:"15.09.2026",
-    added:"15.09.2026",
-    title:"Buprenorphin-Verordnungen nach Einführung eines niedrigschwelligen virtuellen Netzwerks",
-    sum:"Analyse der Auswirkungen eines kommunalen Rapid-Access-Modells (RealFix) mit virtuellen Anbietern auf die Buprenorphin-Verschreibungen in Paterson, New Jersey, mittels Differenzen-in-Differenzen-Analyse (2021–2025).",
-    result:"RealFix war mit Zunahmen von 66,5–76,8 Buprenorphin-Rezepten pro 10.000 Einwohner monatlich verbunden (14,6–17,0% Anstieg über Kontrollgruppen hinaus); Retentionseffekte waren gemischt.",
-    transfer:"USA (Medicaid)-Daten, aber Fragestellung zu niedrigschwelliger Zugangssteuerung auf andere Systeme übertragbar"
+    journal:"Z Gerontol Geriatr", year:"2026", pmid:"42747513",
+    author:"Dieterich A et al.", pubdate:"16.09.2026",
+    added:"16.09.2026",
+    title:"Mehrebenen-Mehrfach-Fallstudie: Methodik zur Analyse komplexer Versorgungstrajektorien älterer Menschen",
+    sum:"Methodisches Diskussionspapier zur Anwendung von Mehrebenen-Mehrfach-Fallstudien als Forschungsdesign zur empirischen Rekonstruktion komplexer Hilfeverläufe in sektorenübergreifender Versorgung für ältere Menschen.",
+    result:"Fallkonstellationen auf Mikro- (Interaktion Betroffener, professionelle und informelle Helfer), Meso- (Organisationen, Netzwerke) und Makroebene (Rahmenbedingungen) systematisch verknüpft; Methodenkombination (Interviews, Dokumenten-, Sozialraum-, Netzwerkanalysen, reflexive thematische Analyse) ermöglicht kontextabhängige Bedingungen von Versorgung zu identifizieren; Design eröffnet neue Möglichkeiten für Versorgungsforschung, stellt aber hohe Anforderungen an Feldzugang, Datenintegration und Forschungsethik.",
+    transfer:"Deutschland, Versorgungsforschung – direkt anwendbare Methodik für sektorenübergreifende Versorgungsanalyse"
   },
   {
-    journal:"PLoS One", year:"2026", pmid:"42743352",
-    author:"Ndwandwe S et al.", pubdate:"15.09.2026",
-    added:"15.09.2026",
-    title:"Präferenzen für dezentrale ophthalmologische Kliniken: Diskrete-Wahl-Experiment im UK",
-    sum:"Diskrete-Wahl-Experiment mit 389 Befragten (Patienten, Fachkräfte, Öffentlichkeit) zu Präferenzen für Merkmale einer techniker-geleiteten asynchronen Augenklinik zur Überwachung chronischer Augenerkrankungen.",
-    result:"Wer einen Techniker statt Kliniker sah und Ergebnisse per Post erhielt, benötigte Reduktion der Terminverzögerung um 6,27 Monate (95% KI 4,52–8,03) oder Fahrtzeit um 153 Minuten (95% KI 88–219); techniker-geleitete Modelle könnten kliniker-geleitete Services ergänzen, wenn sie Verzögerungen verkürzen.",
-    transfer:"UK NHS-System, teilweise übertragbar auf dezentrale Versorgungsmodelle in Deutschland"
+    journal:"JMIR Form Res", year:"2026", pmid:"42748457",
+    author:"Bourmand R et al.", pubdate:"16.09.2026",
+    added:"16.09.2026",
+    title:"Hybrid-Telemedizin-Hausbesuch-Modell für Pneumonieversorung: Pilot-Fallserie aus Texas",
+    sum:"Retrospektive deskriptive Fallserie (n=28 Patienten mit Pneumoniediagnose) zur Implementierbarkeit und Nutzungsmuster eines Hybrid-Modells aus virtueller ärztlicher Bewertung und trainierter Fachperson im Hausbesuch mit digitalen Diagnostik-Tools.",
+    result:"28 Patienten mit 56 klinischen Kontakten (Median 2, IQR 1–3 pro Patient); CRB-65-Scores 0–2 (46,4 % Score 0, 46,4 % Score 1, 7,1 % Score 2); 8/28 (28,6 %) zur ED überwiesen; Patienten zur ED überwiesen hatten signifikant höhere CRB-65-Scores (Median 1, IQR 1–1,5 vs. Median 0, IQR 0–1; p=0,01); Modell machbar, aber größere prospektive Vergleichsstudien für Outcomes/Sicherheit erforderlich.",
+    transfer:"USA – Fragestellung zur Versorgungsmodellintegration systemunabhängig, aber Kontext Urgent Care begrenzt übertragbar"
   },
   {
-    journal:"JMIR Mhealth Uhealth", year:"2026", pmid:"42735900",
-    author:"May S et al.", pubdate:"14.09.2026",
-    added:"14.09.2026",
-    title:"Zugang zur elektronischen Patientenakte über Krankenversicherer-Apps in Deutschland",
-    sum:"Qualitative Interviewstudie mit 23 Personen zu Nutzererfahrungen beim Einrichten und Authentifizieren des Zugangs zur ePA durch Versicherer-Apps.",
-    result:"Zugang besteht nicht aus einem einzelnen Schritt, sondern aus fünf interdependenten Phasen (Orientierung, technischer Zugang, Verifizierung, Unterbrechungen, initiale Nutzung); Barrieren akkumulieren sich über Phasen hinweg und führen zu wiederholten Versuchen.",
-    transfer:"Deutsche Routinedaten und ePA-Implementierung, direkt für deutsches System anwendbar"
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42745286",
+    author:"Hjelm M et al.", pubdate:"12.09.2026",
+    added:"16.09.2026",
+    title:"Zusammenarbeit und Partizipation in integrierter Versorgung: Sicht von Managern mit komplexen Bedarf",
+    sum:"Qualitative Fokusgruppenstudie (n=13 Manager) zu Barrieren und Facilitatoren interprofessioneller Zusammenarbeit und Patientenbeteiligung in integrierter Gesundheits- und Sozialversorgung für Erwachsene mit komplexen Bedarfen in Schweden.",
+    result:"Drei zentrale Kategorien identifiziert: (1) organisatorische Voraussetzungen für nachhaltige Verbesserung integrierter Versorgung, (2) interprofessionelle Zusammenarbeit zur Bedarfserfassung, (3) relationale und bedarfsgerechte Ansätze; Kluft zwischen Intention und Implementierung von personenzentrierter, integrierter Versorgung erkannt; Vertrauen, klare Governance und organisatorische Kontinuität als Schlüsselfaktoren.",
+    transfer:"Schweden – Primärversorgung und Koordinationsprozesse gut übertragbar auf Deutschland"
   },
   {
-    journal:"Front Public Health", year:"2026", pmid:"42741285",
-    author:"Peters C et al.", pubdate:"31.08.2026",
-    added:"15.09.2026",
-    title:"Psychische Belastung von Gesundheitsfachkräften in der COVID-19-Pandemie",
-    sum:"Querschnittstudie zu Arbeitsbedingungen und psychischer Gesundheit von 576 Beschäftigten in deutschen Gesundheits- und Sozialeinrichtungen während COVID-19.",
-    result:"59% waren Gesundheitsfachkräfte; diese berichteten schlechtere Arbeitsfähigkeit (6,9 vs. 7,3), höhere emotionale Belastung und depressive Symptome; ca. ein Fünftel zeigte moderate bis schwere psychische Belastung.",
-    transfer:"Deutsche Routinedaten, Studie in Deutschland durchgeführt"
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42745254",
+    author:"Michiels L et al.", pubdate:"31.08.2026",
+    added:"16.09.2026",
+    title:"Lungenkrebs-Screening in Flandern: Barrieren und Facilitatoren aus Stakeholder-Perspektive",
+    sum:"Qualitative exploratorische Studie (22 Gesundheitsfachpersonen, 13 Screening-Berechtigte) zu Implementierungs- und Partizipationsbarrieren sowie Facilitatoren für bevölkerungsgestütztes Lungenkrebs-Screening mit Niedrig-Dosis-CT in Belgien.",
+    result:"Überwiegend positive Einstellung zum Screening, aber Barrieren: Stigma bezüglich Rauchen, begrenzte Gesundheitskompetenz, indirekte finanzielle/logistische Hindernisse, Angst vor Screening und Warten auf Ergebnisse, Workload-Bedenken, Schulungsbedarf bei Fachpersonen; Facilitatoren: klare Richtlinien, staatliche Koordination/Finanzierung, Integration in Workflows, Zugänglichkeit, public awareness, vertrauensbasierte Kommunikation ohne Wertung.",
+    transfer:"Belgien, vergleichbares Sozialversicherungssystem mit ähnlichen Implementierungshürden"
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42745252",
+    author:"Kruithof K et al.", pubdate:"05.08.2026",
+    added:"16.09.2026",
+    title:"Digitale Versorgungstechnologien für ältere Menschen: Anforderungen für Erfahrung als gute Versorgung",
+    sum:"Qualitative Studie (n=27 wohnhaft lebende ältere Menschen) zu Bedingungen, unter denen digitale Pflege- und Unterstützungstechnologien von älteren Menschen als gute Versorgung wahrgenommen werden.",
+    result:"Technologien als gute Versorgung erlebt, wenn sie (1) Bedarf und Gewohnheiten entsprechen, (2) Fähigkeiten unterstützen, (3) Werte respektieren; aktive Rolle bei Technologiewahl assoziiert mit Altern-in-place und verbesserter Zugänglichkeit/Sicherheit/Autonomie; von Betreuerseite eingeführte Technologien oft als unnötig wahrgenommen und nicht genutzt; Technologien können reduziertem menschlichem Kontakt und Zugänglichkeitsmängeln schaden.",
+    transfer:"Niederlande, ähnliches Gesundheitssystem – Implementierung digitaler Lösungen systemunabhängig"
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
 
 // Offene Foerderausschreibungen zum Thema — taeglich von scripts/radar_hinweis.py
 // === RADAR-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const RADAR_STAND = "14.09.2026";
+const RADAR_STAND = "17.09.2026";
 const RADAR_URL = "https://wissen.m-vf.de/ausschreibungen.html#versorgungsforschung";
 const RADAR_EIGENES = 0;
 const RADAR_ZUHAUSE = true;
-const RADAR_FRISTEN = [["2026-09-22", "2026-10-20", "2026-10-20"], [], ["2026-09-14", "2026-09-23", "2026-10-06", "2026-10-28", "2026-10-02", "2026-10-09", "2026-10-19", "2026-10-19"], [], ["2026-09-29", "2026-10-15"], [], [], [], [], ["2026-10-09", "2026-10-09", "2026-10-20"], [], ["2026-10-15"], ["2026-09-25", "2026-09-18", "2026-09-18", "2026-10-01", "2026-10-05", "2026-10-07", "2026-09-30", "2026-10-14"], ["2026-09-30"], ["2026-10-06", "2026-09-30", "2026-11-09"]];
+const RADAR_FRISTEN = [["2026-09-22", "2026-10-20", "2026-10-20"], [], ["2026-10-06", "2026-09-23", "2026-10-28", "2026-10-02", "2026-10-19", "2026-10-19", "2026-10-09", "2026-10-19"], [], ["2026-09-29", "2026-09-25", "2026-10-15", "2026-09-24", "2026-09-28"], [], [], [], [], ["2026-10-09", "2026-10-09", "2026-10-20"], [], ["2026-10-15"], ["2026-09-25", "2026-09-18", "2026-09-18", "2026-09-18", "2026-10-01", "2026-10-05", "2026-10-07", "2026-10-01"], ["2026-09-28", "2026-09-30"], ["2026-10-06", "2026-09-30", "2026-11-09", "2026-09-30"]];
 // === RADAR-BLOCK-ENDE ===
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "16.09.2026";
+const NEWS_STAND = "17.09.2026";
 const NEWS = [
   {titel:"Primärversorgung interprofessionell gestalten: AOK Rheinland/Hamburg", datum:"2026-09-14", url:"https://www.monitor-versorgungsforschung.de/news/primaerversorgung-interprofessionell-gestalten-aok-rheinland-hamburg/"},
   {titel:"25. Deutscher Kongress für Versorgungsforschung", datum:"2026-09-08", url:"https://www.monitor-versorgungsforschung.de/news/25-deutscher-kongress-fuer-versorgungsforschung/"},
