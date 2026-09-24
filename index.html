@@ -1474,97 +1474,88 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "23. Sept. 2026, 07:25 Uhr";
+const SNAP_DATE = "24. Sept. 2026, 06:00 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"Fam Med Community Health", year:"2026", pmid:"42773062",
-    author:"Liu X et al.", pubdate:"22.09.2026",
-    added:"22.09.2026",
-    title:"Ultra-verarbeitete Lebensmittel und chronische Erkrankungen",
-    sum:"Metaanalyse von 51 prospektiven Kohortenstudien mit 8,8 Mio. Teilnehmern zu Risiken ultra-verarbeiteter Lebensmittel.",
-    result:"Ultra-verarbeitete Lebensmittel assoziiert mit kardiovaskulären Ereignissen (HR 1,24), Krebs (HR 1,12), Adipositas (HR 1,23), Diabetes (HR 1,24), Depression/Angststörung (HR 1,27), Verdauungserkrankungen (HR 1,31) und all-cause-Mortalität (HR 1,18). Pro 100 g/Tag zusätzlich: kardiovaskuläre Ereignisse HR 1,14.",
-    transfer:"Internationale Daten – Fragestellung systemunabhängig, für Public-Health-Empfehlungen universell übertragbar"
+    journal:"Int J Clin Pharm", year:"2026", pmid:"42776432",
+    author:"Budden M et al.", pubdate:"23.09.2026",
+    added:"23.09.2026",
+    title:"Unkomplizierte Harnwegsinfekte: Apothekerverschreibung in der Gemeindepharmzie",
+    sum:"Große Kohortenstudie (n=14.680 Follow-up) zu Wirksamkeit und Sicherheit von strukturierter Apothekerverschreibung für unkomplizierte Harnwegsinfekte in Australien.",
+    result:"Symptomauflösung nach 7 Tagen bei 79,4 % der Patienten, weitere 17,9 % mit Teilbesserung. Antibiotika in 92,6 % verschrieben, Überweisungen in 6,9 %, Nebenwirkungen in 5,0 % (meist milde gastrointestinale Symptome).",
+    transfer:"Australien – vergleichbar zu Apotheker-Extended-Services in Sozialversicherungssystemen"
   },
   {
-    journal:"Clin Ther", year:"2026", pmid:"42773037",
-    author:"Ignacy P et al.", pubdate:"22.09.2026",
-    added:"22.09.2026",
-    title:"Kardiovaskuläre Autonome Neuropathie und Diabeteskomplikationen",
-    sum:"Polnische Querschnittsstudie mit 728 Diabetespatienten zur Assoziation zwischen mikrovaskulären/makrovaskulären Komplikationen und kardiovaskulärer autonomer Neuropathie.",
-    result:"Kardiovaskuläre autonome Neuropathie bei 48,2% (davon definit 15,8%). Unabhängig assoziiert mit diabetischer Retinopathie (OR 2,26; 95%-KI 1,25–4,19; p=0,008); borderline mit CKD (OR 1,57; p=0,049). Keine signifikante Assoziation mit ASCVD.",
-    transfer:"Polen – ähnliches Sozialversicherungssystem, gute Übertragbarkeit auf Deutschland"
+    journal:"Z Gerontol Geriatr", year:"2026", pmid:"42776232",
+    author:"Ach T et al.", pubdate:"23.09.2026",
+    added:"23.09.2026",
+    title:"Augenärztliche Versorgung in deutschen Seniorenheimen: TOVIS-Studie",
+    sum:"Narrative Übersicht mit Fokus auf Versorgungslücken bei Augenerkrankungen in deutschen Pflegeheimen und Teleophthalmologie-Modell TOVIS (n=109 Bewohner).",
+    result:"OVIS-Studie: 61 % der Bewohner hatten behandlungsbedürftige ophthalmologische Befunde (Katarakt 53 %, AMD 39 %); letzte Augenarztvisite durchschnittlich 4 Jahre zurück. TOVIS-Pilotstudie: 48,5 % visusrelevante Katarakt, 34,1 % AMD, 60,6 % unzureichend angepasste Brille; nur 26,9 % der empfohlenen Nachuntersuchungen tatsächlich wahrgenommen.",
+    transfer:"Deutsche Daten, Seniorenheime – direkt auf deutsches System übertragbar"
   },
   {
-    journal:"Z Evid Fortbild Qual Gesundhwes", year:"2026", pmid:"42773021",
-    author:"Dittmer K et al.", pubdate:"22.09.2026",
-    added:"22.09.2026",
-    title:"Persona-Methode in partizipativer Versorgungsforschung",
-    sum:"Deutschsprachiger Methodenbericht zur Anwendung der Persona-Methode bei partizipativer Versorgungsforschung mit Fokusgruppen und Expert*innen.",
-    result:"Personas integrieren Erfahrungswissen mehrerer Experten anonym, ohne persönliche Daten preiszugeben; ideal für vulnerable Gruppen. Risiken: Stereotypisierung; Mitigation durch reflektive Entwicklungsprozesse. Reflexionsfragen zur Bias-Reduktion werden präsentiert.",
-    transfer:"Deutsches Projekt – direkt übertragbar auf deutsche Versorgungsforschung"
+    journal:"Expert Rev Pharmacoecon Outcomes Res", year:"2026", pmid:"42773780",
+    author:"Zmudzki F et al.", pubdate:"22.09.2026",
+    added:"23.09.2026",
+    title:"Künstliche Intelligenz in der Kosten-Effektivitäts-Bewertung von Schmerztherapie",
+    sum:"Übersichtsarbeit zu Integration von KI-Methoden in ökonomische Evaluationen zur Präzisionsmedizin bei chronischem Schmerz.",
+    result:"Diskussion, wie maschinelles Lernen und automatisierte Datenverarbeitung ökonomische Rahmen für personalisierte Schmerzmanagement-Strategien verbessern können; konkrete Ergebnisse im Abstract nicht quantifiziert.",
+    transfer:"Konzeptionelle Methodologie – systemunabhängig auf KI-Anwendungen fokussiert"
   },
   {
-    journal:"BMJ Open Gastroenterol", year:"2026", pmid:"42772946",
-    author:"Landy R et al.", pubdate:"22.09.2026",
-    added:"22.09.2026",
-    title:"Mobile Screening-Einheit für Barretts Ösophagus in England",
-    sum:"Implementierungsstudie in England mit mobiler Einheit zur Kapselschwamm-Testung bei Refluxpatienten; Vergleich Hausarzt-Rekrutierung vs. Selbstmeldung.",
-    result:"Bei GP-Einladung: 50% Antwortquote, 59,6% interessiert, 66,3% elegibel, 532 teilgenommen; 15% aller Eingeladenen erfolgreich getestet. Bei Selbstmeldung: 39,6% erfolgreich getestet. Barretts-Prävalenz 4,2% (GP-invitiert) vs. 3,4% (Selbstmeldung). Akzeptanz &gt;99%.",
-    transfer:"Großbritannien – ähnliche Primärversorgungsstruktur, begrenzte Übertragbarkeit (steuerfinanziert)"
+    journal:"J Epidemiol", year:"2026", pmid:"42778372",
+    author:"Imai E et al.", pubdate:"19.09.2026",
+    added:"23.09.2026",
+    title:"Rauchen und schwere Erkrankungen: 10-Jahres-Assoziation mit Nikotinentwöhnung",
+    sum:"Prospektive Kohortenstudie mit 17.779 japanischen Rauchern zur Assoziation von Herzinfarkt, Schlaganfall, Krebs und Chirurgie mit langfristiger Rauchentwöhnung.",
+    result:"26,9 % der Raucher (n=4.789) beendeten das Rauchen über 10 Jahre. Major-disease-Diagnosen zeigten starke Assoziation mit Entwöhnung (OR 5,39; 95%-KI 4,80–6,05); Herzinfarkt OR 6,87 (95%-KI 5,18–9,12), Schlaganfall OR 4,03 (95%-KI 3,40–4,78), Lungenkrebs OR 7,41 (95%-KI 4,44–12,51).",
+    transfer:"Japan – Fragestellung systemunabhängig; vergleichbare Verhaltensforschung übertragbar"
   },
   {
-    journal:"J Korean Med Sci", year:"2026", pmid:"42773077",
-    author:"Cho H et al.", pubdate:"21.09.2026",
-    added:"22.09.2026",
-    title:"Einkommensvolatilität und Mortalität bei Depression",
-    sum:"Koreanische Kohortenstudie an 735.922 Personen mit Depression, die Zusammenhang zwischen Einkommensvolatilität und all-cause-Mortalität sowie Hospitalisierungen untersuchte.",
-    result:"Höhere Einkommensvolatilität assoziiert mit erhöhtem Mortalitätsrisiko (HR 1,18; 95%-KI 1,16–1,19) und Hospitalisierungen (IRR 1,07; 1,06–1,08). Bei Männern stärker ausgeprägt (HR 1,26 vs. 1,12 bei Frauen). Besonders hohe Risiken für Bluterkrankungen (IRR 1,47), endokrine Erkrankungen (1,40) und psychische Störungen (1,26).",
-    transfer:"Südkorea – begrenzte Übertragbarkeit auf deutsches System mit anderer Sozialstruktur"
+    journal:"Front Public Health", year:"2026", pmid:"42774359",
+    author:"Sturmberg JP et al.", pubdate:"08.09.2026",
+    added:"23.09.2026",
+    title:"Soziale Determinanten und Gesundheitsungleichheit: Systemdynamische Perspektive",
+    sum:"Konzeptionelle Übersichtsarbeit zu Mechanismen, wie vernetzte soziale Determinanten Gesundheitsungleichheit durch biologisches Embedding und Rückkopplungsschleifen über die Lebensspanne verfestigen.",
+    result:"Kernaussage: Frühe biologische Prägung (Stressregulation, Entzündung, Epigenetik) und systemische Rückkopplungsschleifen stabilisieren Nachteil über Generationen; Nichtlinearität erklärt begrenzte Effekte isolierter Interventionen. Koordinierte, ortsgestützte Strategien und relationale Kontinuität in Primärversorgung zeigen Potenzial.",
+    transfer:"Konzeptionelle Analyse – systemunabhängig, aber besonders relevant für Versorgungsstruktur"
   },
   {
-    journal:"BMJ Open", year:"2026", pmid:"42767736",
-    author:"Field J et al.", pubdate:"21.09.2026",
-    added:"21.09.2026",
-    title:"Forschungsprioritäten in Hebammentätigkeit und Geburtshilfe",
-    sum:"UK James-Lind-Alliance Priority-Setting Partnership mit 977 Befragten (Hebammen, Eltern, schwangere Personen) zur Identifikation von Forschungslücken in Geburtshilfe.",
-    result:"68 Priority-Topics identifiziert, nach evidenzbasierter Prüfung auf 67 reduziert, dann von 548 Befragten gereiht. 10 Top-Prioritäten durch Konsens vereinbart; umfassen klinische Versorgung, Personalwohlbefinden und Ausbildung.",
-    transfer:"Großbritannien – methodisch stark, bedingt übertragbar auf deutsches Hebammensystem"
-  },
-  {
-    journal:"Lancet Respir Med", year:"2026", pmid:"42743935",
-    author:"Roy MA et al.", pubdate:"15.09.2026",
-    added:"15.09.2026",
-    title:"FeNO und Blut-Eosinophile zur Asthmadiagnose bei Kindern und Erwachsenen",
-    sum:"Metaanalyse von 30 diagnostischen Studien (22 bei Erwachsenen, 9 bei Kindern) zur Genauigkeit von FeNO und Blut-Eosinophilen gegenüber Bronchialprovokationstests.",
-    result:"FeNO diagnostische Genauigkeit: Erwachsene AUC 0,80, Kinder AUC 0,75. Bei Erwachsenen FeNO≥65 ppb: positive Vorhersagekraft 80%, &lt;20 ppb: negative VK 93%. Blut-Eosinophile schwache Leistung (AUC 0,65). Prospektive Validierung in DIVE-Kohorte (n=123) bestätigte Ergebnisse (FeNO AUC 0,77).",
-    transfer:"Internationale Daten mit prospektiver Primärversorgungsvalidierung – Diagnostik systemunabhängig"
+    journal:"JAMA Netw Open", year:"2026", pmid:"42776525",
+    author:"Pathman DE et al.", pubdate:"01.09.2026",
+    added:"23.09.2026",
+    title:"Gemeindeverankerung und Verbleib von Ärzten in unterversorgten Regionen",
+    sum:"Querschnittsstudie mit 1.074 Ärzten in ländlichen und urbanen Health Professional Shortage Areas (HPSA) zur Assoziation von Gemeindeintegration mit beabsichtigtem Verbleib.",
+    result:"75,5 % der Ärzte in ländlichen und 71,2 % in urbanen HPSA planten Verbleib &gt;2 Jahre (p=0,14). Beide Dimensionen (Gemeindeintegration β=0,58–0,69; Gemeindebedarfserfüllung β=0,56–0,61) waren unabhängig assoziiert mit Verbleib; keine signifikanten ländlich-urbanen Unterschiede.",
+    transfer:"USA-Daten – Fragestellung zu Ärztebindung aber systemunabhängig relevant"
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
 
 // Offene Foerderausschreibungen zum Thema — taeglich von scripts/radar_hinweis.py
 // === RADAR-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const RADAR_STAND = "21.09.2026";
+const RADAR_STAND = "24.09.2026";
 const RADAR_URL = "https://wissen.m-vf.de/ausschreibungen.html#versorgungsforschung";
 const RADAR_EIGENES = 0;
 const RADAR_ZUHAUSE = true;
-const RADAR_FRISTEN = [[], [], ["2026-10-06", "2026-09-23", "2026-10-28", "2026-10-02", "2026-10-09", "2026-10-19", "2026-10-19", "2026-10-19"], [], ["2026-09-29", "2026-09-25", "2026-10-15"], [], [], ["2026-11-06", "2026-11-09", "2026-11-18"], [], ["2026-10-09", "2026-10-09", "2026-10-20"], [], ["2026-10-15", "2026-10-15", "2026-10-15"], ["2026-09-25", "2026-10-01", "2026-10-05", "2026-10-07", "2026-09-30", "2026-10-14", "2026-09-28", "2026-11-18"], ["2026-09-28", "2026-09-30"], ["2026-10-06", "2026-09-30", "2026-11-09"]];
+const RADAR_FRISTEN = [["2026-10-20", "2026-10-20"], [], ["2026-10-28", "2026-10-06", "2026-10-02", "2026-10-09", "2026-10-19", "2026-10-19", "2026-10-19", "2026-10-19"], [], ["2026-09-29", "2026-10-15", "2026-09-25", "2026-09-28", "2026-09-24"], [], [], ["2026-11-06", "2026-11-09", "2026-10-26"], [], ["2026-10-09", "2026-10-09", "2026-10-20"], [], ["2026-10-15"], ["2026-09-25", "2026-10-01", "2026-10-05", "2026-10-01", "2026-10-07", "2026-10-14", "2026-09-28", "2026-11-10"], ["2026-09-28", "2026-09-30"], ["2026-10-06", "2026-11-09", "2026-09-30", "2026-09-30"]];
 // === RADAR-BLOCK-ENDE ===
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "23.09.2026";
+const NEWS_STAND = "24.09.2026";
 const NEWS = [
+  {titel:"25. Kongress für Versorgungsforschung eröffnet: DNVF tagt in Köln", datum:"2026-09-23", url:"https://www.monitor-versorgungsforschung.de/news/25-kongress-fuer-versorgungsforschung-eroeffnet-dnvf-tagt-in-koeln/"},
   {titel:"Innovationsfonds: S3-Leitlinie Störungen des Sozialverhaltens aktualisiert", datum:"2026-09-18", url:"https://www.monitor-versorgungsforschung.de/news/s3-leitlinie-stoerungen-des-sozialverhaltens-aktualisiert-innovationsfonds/"},
-  {titel:"Primärversorgung interprofessionell gestalten: AOK Rheinland/Hamburg", datum:"2026-09-14", url:"https://www.monitor-versorgungsforschung.de/news/primaerversorgung-interprofessionell-gestalten-aok-rheinland-hamburg/"},
 ];
 // === NEWS-BLOCK-ENDE ===
 
 // Fremde Pressemeldungen zum Thema — taeglich von scripts/newsfeed.py
 // === PRESSE-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
 const PRESSE = [
-  {titel:"Erfolgreiche EU-Förderung für Marburger Zukunftsmedizin", datum:"2026-09-14", url:"http://idw-online.de/de/news877318", quelle:"idw"},
+  {titel:"DKVF 2026: „Menschen. Beziehungen. Organisationen. 25 Jahre gemeinsame Versorgungsforschung“", datum:"2026-09-23", url:"http://idw-online.de/de/news877841", quelle:"idw"},
 ];
 // === PRESSE-BLOCK-ENDE ===
 
