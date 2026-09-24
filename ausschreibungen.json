@@ -47,15 +47,6 @@
    "anzahl": 8,
    "ausschreibungen": [
     {
-     "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
-     "frist": "2026-10-28",
-     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-11-bekanntmachung-secure-processing-environments.html",
-     "quelle": "Bund (foerderinfo.bund.de)",
-     "land": "DE",
-     "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
-     "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
-    },
-    {
      "titel": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)",
      "frist": "2026-10-06",
      "url": "https://www.grants.gov/search-results-detail/359252",
@@ -63,6 +54,15 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Application of Digital Health Technology to the Management of Type 2 Diabetes"
+    },
+    {
+     "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
+     "frist": "2026-10-28",
+     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-11-bekanntmachung-secure-processing-environments.html",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
+     "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
     },
     {
      "titel": "Logistics Center for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (U24 Clinical Trials Not Allowed)",
@@ -80,7 +80,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
+     "beleg": "Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
     },
     {
      "titel": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (UG3/UH3, Clinical Trial Optional)",
@@ -89,7 +89,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
+     "beleg": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
     },
     {
      "titel": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (UG3/UH3 Clinical Trial Optional)",
@@ -98,7 +98,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships"
+     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI"
     },
     {
      "titel": "Advanced Development of Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
@@ -107,7 +107,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Informatics Technologies for Cancer Research and Management"
+     "beleg": "Advanced Development of Informatics Technologies for Cancer Research and Management"
     },
     {
      "titel": "Sustained Support for Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
@@ -116,7 +116,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Informatics Technologies for Cancer Research and Management"
+     "beleg": "Sustained Support for Informatics Technologies for Cancer Research and Management"
     }
    ]
   },
@@ -152,13 +152,13 @@
      "beleg": "Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI)"
     },
     {
-     "titel": "Institutional Training Programs to Advance Translational Research on Alzheimer's Disease (AD) and AD-Related Dementias (ADRD) (T32 Clinical Trial Not Allowed)",
-     "frist": "2026-09-25",
-     "url": "https://www.grants.gov/search-results-detail/357710",
-     "quelle": "grants.gov (HHS-NIH11)",
+     "titel": "DoW Alzheimer&rsquo;s Transforming Care Award",
+     "frist": "2026-09-24",
+     "url": "https://www.grants.gov/search-results-detail/362178",
+     "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Institutional Training Programs to Advance Translational Research on Alzheimer's Disease (AD) and AD-Related Dementias (ADRD)"
+     "beleg": "DoW Alzheimer’s Transforming Care Award"
     },
     {
      "titel": "Single Source: Post-Stroke Vascular Contributions to Cognitive Impairment and Dementia (VCID) in the United States (U19 - Clinical Trial Not Allowed)",
@@ -170,13 +170,13 @@
      "beleg": "Post-Stroke Vascular Contributions to Cognitive Impairment and Dementia (VCID)"
     },
     {
-     "titel": "DoW Alzheimer&rsquo;s Transforming Care Award",
-     "frist": "2026-09-24",
-     "url": "https://www.grants.gov/search-results-detail/362178",
-     "quelle": "grants.gov (DOD-AMRAA)",
+     "titel": "Institutional Training Programs to Advance Translational Research on Alzheimer's Disease (AD) and AD-Related Dementias (ADRD) (T32 Clinical Trial Not Allowed)",
+     "frist": "2026-09-25",
+     "url": "https://www.grants.gov/search-results-detail/357710",
+     "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Alzheimer\\u2019s Transforming Care Award"
+     "beleg": "Translational Research on Alzheimer's Disease (AD) and AD-Related Dementias (ADRD)"
     }
    ]
   },
@@ -198,36 +198,8 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 3,
-   "ausschreibungen": [
-    {
-     "titel": "Limited Competition for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers (U01 Clinical Trial Required)",
-     "frist": "2026-11-06",
-     "url": "https://www.grants.gov/search-results-detail/360679",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers"
-    },
-    {
-     "titel": "Single Source for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center (U01 Clinical Trial Required)",
-     "frist": "2026-11-09",
-     "url": "https://www.grants.gov/search-results-detail/360458",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center"
-    },
-    {
-     "titel": "Long-term health outcomes of people living with spina bifida",
-     "frist": "2026-10-26",
-     "url": "https://www.grants.gov/search-results-detail/361002",
-     "quelle": "grants.gov (HHS-CDC-NCBDDD)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Long-term health outcomes of people living with spina bifida"
-    }
-   ]
+   "anzahl": 0,
+   "ausschreibungen": []
   },
   {
    "slug": "gender",
@@ -291,7 +263,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)"
+     "beleg": "Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI)"
     }
    ]
   },
@@ -347,31 +319,31 @@
      "beleg": "DoW Pancreatic Cancer Research Program, Translational Research Partnership Award"
     },
     {
-     "titel": "DoW Melanoma Research Program Team Science Award",
-     "frist": "2026-10-14",
-     "url": "https://www.grants.gov/search-results-detail/362242",
+     "titel": "DoW Breast Cancer, Breakthrough Award Level 3",
+     "frist": "2026-09-30",
+     "url": "https://www.grants.gov/search-results-detail/362203",
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Melanoma Research Program Team Science Award"
+     "beleg": "DoW Breast Cancer, Breakthrough Award Level 3"
     },
     {
-     "titel": "DoW Kidney Cancer, Academy of Kidney Cancer Investigators &ndash; Early-Career Scholar Award",
+     "titel": "DoW Kidney Cancer, Idea Development Award",
      "frist": "2026-09-28",
-     "url": "https://www.grants.gov/search-results-detail/362853",
+     "url": "https://www.grants.gov/search-results-detail/362865",
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Kidney Cancer, Academy of Kidney Cancer Investigators – Early-Career Scholar Award"
+     "beleg": "DoW Kidney Cancer, Idea Development Award"
     },
     {
-     "titel": "Advanced Development and Validation of Emerging Technologies for Basic and Clinical Cancer Research (R33 Clinical Trial Not Allowed)",
-     "frist": "2026-11-10",
-     "url": "https://www.grants.gov/search-results-detail/360534",
+     "titel": "Assay Validation of High Quality Markers for Clinical Studies in Cancer (UH2/UH3 Clinical Trial Not Allowed)",
+     "frist": "2026-10-14",
+     "url": "https://www.grants.gov/search-results-detail/356718",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Advanced Development and Validation of Emerging Technologies for Basic and Clinical Cancer Research"
+     "beleg": "Assay Validation of High Quality Markers for Clinical Studies in Cancer"
     }
    ]
   },
@@ -417,15 +389,6 @@
      "beleg": "Application of Digital Health Technology to the Management of Type 2 Diabetes"
     },
     {
-     "titel": "Single Source for the Continuation of the Epidemiology of Diabetes Interventions and Complications (EDIC) Study Research Center (Collaborative U01 Clinical Trial Not Allowed)",
-     "frist": "2026-11-09",
-     "url": "https://www.grants.gov/search-results-detail/361213",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Epidemiology of Diabetes Interventions and Complications (EDIC) Study Research Center"
-    },
-    {
      "titel": "Single Source Competition: Continuation of the Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D) - Resource Center (U24 Clinical Trial Not Allowed)",
      "frist": "2026-09-30",
      "url": "https://www.grants.gov/search-results-detail/361035",
@@ -433,6 +396,15 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Cardiovascular Repository for Type 1 Diabetes (CaRe-T1D)"
+    },
+    {
+     "titel": "Single Source for the Continuation of the Epidemiology of Diabetes Interventions and Complications (EDIC) Study Research Center (Collaborative U01 Clinical Trial Not Allowed)",
+     "frist": "2026-11-09",
+     "url": "https://www.grants.gov/search-results-detail/361213",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Epidemiology of Diabetes Interventions and Complications (EDIC) Study"
     },
     {
      "titel": "Single Source for Continuation of the Integrated Islet Distribution Program U24 (Clinical Trial Not Allowed)",
