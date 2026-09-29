@@ -1474,62 +1474,62 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "28. Sept. 2026, 06:00 Uhr";
+const SNAP_DATE = "29. Sept. 2026, 06:20 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"Child Adolesc Psychiatry Ment Health", year:"2026", pmid:"42800877",
-    author:"Paumen T et al.", pubdate:"25.09.2026",
+    journal:"JMIR Public Health Surveill", year:"2026", pmid:"42804191",
+    author:"Veldkamp R et al.", pubdate:"28.09.2026",
+    added:"28.09.2026",
+    title:"Physiotherapie nach COVID-19 in der niederländischen Primärversorgung: Inanspruchnahme und Trends",
+    sum:"Retrospektive Kohortenstudie zur Inanspruchnahme von Physiotherapie nach COVID-19 in niederländischen Hausarztpraxen über 2,5 Jahre der Pandemie.",
+    result:"Unter 71.152 Behandlungsverläufen hatten abgeschlossene Fälle eine mediane Dauer von 24 Wochen mit 28 Konsultationen. Die Physiotherapie-Inanspruchnahme sank signifikant über die Zeit (p&lt;0,001), mit maximalen Konsultationen bei 60-79-Jährigen und 1,5 Wochen längerer Behandlung bei Frauen (p&lt;0,001). In 83% waren Baseline-Werte auf Outcome-Messungen erfasst (6-Minuten-Gehtest: 420 m [340-490]).",
+    transfer:"Niederländische Routinedaten aus Primärversorgung, direkt auf deutsches System übertragbar."
+  },
+  {
+    journal:"J Telemed Telecare", year:"2026", pmid:"42804181",
+    author:"Barwick AL et al.", pubdate:"28.09.2026",
+    added:"28.09.2026",
+    title:"Telepharmacy-Services und Notfallaufnahme-Inanspruchnahme: Systematische Übersicht",
+    sum:"Metaanalyse von 17 RCTs zur Wirksamkeit von Telepharmacy-Interventionen auf Notaufnahme-Besuche und Wiederaufnahmen.",
+    result:"Telepharmacy war mit einer 6% absoluten Reduktion von 30-Tage-Notaufnahme-Besuchen assoziiert (Risikodifferenz=0,06, 95% CI: 0,02-0,10; p=0,005). Keine signifikante Reduktion bei ungeplanten Wiederaufnahmen.",
+    transfer:"Heterogene RCTs international, Fragestellung zum Einsatz von Telemedizin systemunabhängig relevant."
+  },
+  {
+    journal:"JMIR Public Health Surveill", year:"2026", pmid:"42804191",
+    author:"Veldkamp R et al.", pubdate:"28.09.2026",
+    added:"28.09.2026",
+    title:"Physiotherapie nach COVID-19 in der niederländischen Primärversorgung",
+    sum:"Retrospektive Kohortenstudie zur Physiotherapie nach COVID-19 in 71.152 niederländischen Behandlungsverläufen (März 2020-Dezember 2022).",
+    result:"Abgeschlossene Behandlungen: Median 24 Wochen, 28 Konsultationen. Sinkende Inanspruchnahme über Zeit (p&lt;0,001). Frauen: 1,5 Wochen längere Behandlung (β 1,5, SE 0,12; p&lt;0,001). Baseline-Werte: 6-Minuten-Gehtest 420 m (340-490; n=27.035), PSFS 8 (7-10; n=55.074).",
+    transfer:"Niederländische Routinedaten aus Primärversorgung, direkter Übertrag auf Deutschland."
+  },
+  {
+    journal:"Physiother Theory Pract", year:"2026", pmid:"42802900",
+    author:"Inamura T et al.", pubdate:"28.09.2026",
+    added:"28.09.2026",
+    title:"Intra-Session-Reliabilität des Imagined Timed Up and Go Tests bei älteren Erwachsenen",
+    sum:"Reliabilitätsstudie (85 Probanden) zum Imagined Timed Up and Go Test zur Erfassung von Schätzfehlern der physischen Leistung.",
+    result:"Intra-Rater-Reliabilität moderat (ICC_A,1: 0,69-0,73); simultane Inter-Rater-Reliabilität exzellent (ICC_2,2≈0,994; ICC_2,1: 0,982-0,984). Intra-Rater MDC95: 2,3 s (35,1%); Inter-Rater MDC95: 0,3 s (4,9%). Probanden übersch ätzen ihre Fähigkeiten (TUG 6,0 s vs. ITUG 4,0 s).",
+    transfer:"Japanische Daten, klinische Metriken systemunabhängig, Validierung vor Routineeinsatz relevant."
+  },
+  {
+    journal:"CMAJ", year:"2026", pmid:"42805627",
+    author:"Gupta N et al.", pubdate:"27.09.2026",
+    added:"28.09.2026",
+    title:"Kosteneffektivität eines Diabetes-Präventionsprogramms in Kanada",
+    sum:"Gesundheitsökonomisches Modell zum NHS-England-DPP in Quebec und Ontario über 35 Jahre.",
+    result:"DPP sparte 244 CAD pro Teilnehmer in Quebec und 242 CAD in Ontario (95% UI -1.017 bis 408). Gewinn: 0,060 QALYs pro Person (95% UI 0,024-0,094). In 74,8% der Simulationen war DPP kostengünstiger und wirksamer.",
+    transfer:"Kanada ähnlich deutschem Sozialversicherungssystem, vergleichbare Kostenkalkulation möglich."
+  },
+  {
+    journal:"Int J Health Plann Manage", year:"2026", pmid:"42800063",
+    author:"Delpino FM et al.", pubdate:"26.09.2026",
     added:"26.09.2026",
-    title:"Wirksamkeit familienorientierter Intervention für Kinder psychisch erkrankter Eltern",
-    sum:"Cluster-randomisierte Studie zur Wirksamkeit des CHIMPS-Programms (psychodynamische transdiagnostische Familienintervention) auf psychische Gesundheit und Lebensqualität bei 215 Kindern psychisch erkrankter Eltern in Deutschland und der Schweiz.",
-    result:"Odds Ratio 0,52 (95%-KI: 0,25-1,09) für diagnostische Remission in der Interventionsgruppe versus Kontrollgruppe – statistisch nicht signifikant. Keine klinisch relevanten Unterschiede in Sekundäroutcomes (Verhaltensauffälligkeiten, Lebensqualität). Geringe Erreichbarkeit und Adhärenz der Zielgruppe erschwerten Umsetzung.",
-    transfer:"Deutsche Daten aus Universitätskliniken, gesetzlich versicherte Population"
-  },
-  {
-    journal:"Int J Equity Health", year:"2026", pmid:"42791536",
-    author:"Link F et al.", pubdate:"24.09.2026",
-    added:"25.09.2026",
-    title:"Zivilgesellschaftliche Organisationen in Gesundheitsversorgung für Migranten auf der Balkanroute",
-    sum:"Qualitative Studie mit 15 CSO-Mitarbeitern aus 11 Ländern (März–Mai 2024) zu Barrieren, Erleichterungen und Rollen von Zivilgesellschaft bei Gesundheitsversorgung für Menschen in Migrationsprozessen.",
-    result:"Vier Hauptkategorien identifiziert: fragmentierte Migrationspolitik, begrenzte Systemkapazitäten, Diskriminierung und Rechtsbarrieren. CSO erfüllen kritische Lückenfüllungsfunktion durch Mediation und Advocacy; jedoch chronische Finanzierungsunsicherheit, Personalengpässe und ethische Spannungen. Vertrauen zwischen CSO, Gesundheitssystem und Behörden essentiell.",
-    transfer:"Europäischer Kontext (11 Länder), Mehrländer-Perspektive – Migrationsstrukturen relevant"
-  },
-  {
-    journal:"World J Emerg Surg", year:"2026", pmid:"42786484",
-    author:"Häske D et al.", pubdate:"22.09.2026",
-    added:"25.09.2026",
-    title:"Präklinische Halswirbelimmobilisierung und Mortalität bei Traumapatienten",
-    sum:"Retrospektive Beobachtungsstudie aus deutschem Traumaregister (TraumaRegister DGU, 2020–2022) mit Propensity-Score-Matching zu Effekt präklinischer Halswirbelimmobilisierung auf Krankenhausmortalität und neurologische Outcomes (n=31.055, davon 16.922 gematched).",
-    result:"Mortalität gematched: 12,0% mit Immobilisierung vs. 13,6% ohne (p=0,001), kein klinisch bedeutsamer Unterschied. Bei bestätigter Halswirbelverletztung (n=1.362): Mortalität 17,9% vs. 18,2% (p=0,888), Glasgow Outcome Scale zeigt kein signifikanten Unterschied. GCS-Verbesserung Einsatzstelle-Hospital marginal höher mit Immobilisierung (15,7% vs. 12,8%, p&lt;0,001).",
-    transfer:"Deutsche Routinedaten aus standardisiertem Traumaregister, System vergleichbar"
-  },
-  {
-    journal:"Diabetes Care", year:"2026", pmid:"42765974",
-    author:"Cromer SJ et al.", pubdate:"21.09.2026",
-    added:"21.09.2026",
-    title:"Empagliflozin-Effekte auf kardiovaskuläre Outcomes in sociodemografischen Subgruppen",
-    sum:"Real-World-Analyse aus US-Medicare-Daten (2014–2020) zur Heterogenität der Effekte von Empagliflozin auf MACE, Herzinsuffizienz-Hospitalisierung und Mortalität bei älteren Erwachsenen mit Typ-2-Diabetes (n propensity-matched: 16.922).",
-    result:"Empagliflozin vs. DPP4-Inhibitoren: MACE HR 0,77 (99,9%-KI 0,69–0,85, IRD –10,3), HHF HR 0,72 (0,67–0,79, IRD –18,3), Mortalität HR 0,66 (0,57–0,76, IRD –8,6). Konsistente Effekte über sociodemografische Gruppen, höherer absoluter Nutzen mit prävalenter kardiovaskulärer Erkrankung.",
-    transfer:"US-Daten – Fragestellung aber systemunabhängig, kardiometabolisch relevant"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42791544",
-    author:"Darshana N et al.", pubdate:"14.09.2026",
-    added:"25.09.2026",
-    title:"Tamil-Validierung des Diabetes Quality-of-Life Brief Clinical Inventory",
-    sum:"Kulturelle Adaptation und Validierung eines Instruments zur Messung der diabetesspezifischen Lebensqualität bei tamilsprachigen Erwachsenen mit Typ-2-Diabetes in Sri Lanka (n=165).",
-    result:"Cronbachs α=0,682, signifikante negative Korrelation mit WHOQOL-BREF (r=-0,559, p&lt;0,001), signifikant niedrigere Lebensqualität bei Patienten mit Mikrovaskularisierungskomplikationen (p=0,040). KMO=0,729, Faktorenanalyse erklärt 72% der Gesamtvarianz.",
-    transfer:"Nur begrenzt: Südasiatische Bevölkerung, anderes Gesundheitssystem"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42791541",
-    author:"Skoss R et al.", pubdate:"11.08.2026",
-    added:"25.09.2026",
-    title:"Gesundheitskompetenz und Versorgungsintegration bei Kindern mit Spezialversorgungsbedarfen",
-    sum:"Querschnittstudie zur Beziehung zwischen Gesundheitskompetenz von Eltern, Erfahrungen mit Versorgungsintegration und Elternbelastung bei 126 australischen Eltern von Kindern mit Spezialversorgungsbedarfen.",
-    result:"Clusteranalyse identifizierte drei Gesundheitskompetenz-Profile; höhere Kompetenz assoziiert mit besseren Erfahrungen bei Versorgungsintegration und niedrigerem Elternstress. Mehrheitlich Eltern mit Behinderungs-(53,7%) und Atemwegserkrankungen (38,9%) vertreten.",
-    transfer:"Steuerfinanziert, englischsprachig – begrenzte Übertragbarkeit auf deutsches SV-System"
+    title:"Krankenhaus-Management-Modelle und Krebsergebnisse in São Paulo",
+    sum:"Staggered Difference-in-Differences-Analyse zu 652.734 Brust-, Prostata- und Darmkrebs-Fällen (2000-2023) unter Vergleich von Social Health Organisations vs. direkt verwalteten Häusern.",
+    result:"SHO-Adoption assoziiert mit unpräzisen Änderungen: Diagnose-bis-Behandlung -155,3 Tage (95% CI -350,0 bis 39,4); Konsultation-bis-Diagnose -96,3 Tage (95% CI -237,7 bis 45,1); 30-Tage-Mortalität +0,8 Prozentpunkte (95% CI -4,0 bis 5,5). Kontrolle und Gewichtung materialverändernd.",
+    transfer:"Brasilien, unterschiedliches Ressourcen-Setting; Fragestellung zu Managementmodellen kontextabhängig."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
@@ -1545,10 +1545,10 @@ const RADAR_FRISTEN = [["2026-10-15", "2026-10-06", "2026-10-19", "2026-10-15", 
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "28.09.2026";
+const NEWS_STAND = "29.09.2026";
 const NEWS = [
-  {titel:"Erfolgreicher Auftakt der Initiative „Versorgungsforschung und Translation“", datum:"2026-09-24", url:"https://www.monitor-versorgungsforschung.de/news/erfolgreicher-auftakt-der-initiative-versorgungsforschung-und-translation/"},
-  {titel:"Innovationsfonds: S3-Leitlinie Störungen des Sozialverhaltens aktualisiert", datum:"2026-09-18", url:"https://www.monitor-versorgungsforschung.de/news/s3-leitlinie-stoerungen-des-sozialverhaltens-aktualisiert-innovationsfonds/"},
+  {titel:"Neue U10 soll HPV-Impfquoten heben: Vorarbeit aus Projekt PRÄZIS", datum:"2026-09-28", url:"https://www.monitor-versorgungsforschung.de/news/neue-u10-soll-hpv-impfquoten-heben-vorarbeit-aus-projekt-praezis/"},
+  {titel:"25. Kongress für Versorgungsforschung beendet: DNVF zieht Bilanz", datum:"2026-09-28", url:"https://www.monitor-versorgungsforschung.de/news/25-kongress-fuer-versorgungsforschung-beendet-dnvf-zieht-bilanz/"},
 ];
 // === NEWS-BLOCK-ENDE ===
 
