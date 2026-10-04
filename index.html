@@ -1518,71 +1518,71 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "3. Okt. 2026, 06:21 Uhr";
+const SNAP_DATE = "4. Okt. 2026, 06:00 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"Crit Care", year:"2026", pmid:"42823746",
-    author:"Trudzinski FC et al.", pubdate:"30.09.2026",
+    journal:"BMC Geriatr", year:"2026", pmid:"42823763",
+    author:"Varg S et al.", pubdate:"02.10.2026",
     added:"02.10.2026",
-    title:"Specialist-led interprofessional weaning program reduces failed weaning in high-risk ICU patients",
-    sum:"Deutsche Studie zur Wirksamkeit eines spezialisierten, interprofessionellen Beatmungsentwöhnungsprogramms bei intensivpflichtigen Patienten mit hohemRisiko.",
-    result:"In der propensity-score-matched Analyse wiesen Interventionspatienten höhere Quoten erfolgreicher Beatmungsentwöhnung auf (58,3% vs. 46,4%, OR 2,90; 95%-KI 1,61–5,24; p&lt;0,001). Im unadjustierten primären Analyseplan erreichte der Unterschied keine statistische Signifikanz (OR 1,46; p=0,057). Die Machbarkeit wurde demonstriert, mit 16,3% der Patienten in spezialisierte Weaning-Zentren verlegt.",
-    transfer:"Deutsche Daten, ICU-Verweildauer und Beatmungsdauer sind zentrale Versorgungsergebnisse."
+    title:"Regionale Disparitäten beim direkten Rettungsdienst-Transport zu geriatrischen Notfallstationen",
+    sum:"Schwedische Register-Studie zu geografischen Unterschieden bei direkter Rettungsdienst-Zuweisung älterer Patienten (≥65J.) zu Notaufnahmen versus geriatrischen Spezialstationen.",
+    result:"Von 8.208 älteren Patienten wurden 7% (603) direkt zu geriatrischen Stationen transportiert. Zwischen Krankenhauseinzugsgebieten stark variierend (4–21%). Nach Adjustierung reduzierte sich Varianz um 41%, aber erhebliche regionale Unterschiede blieben (MOR=1,54).",
+    transfer:"Schweden (Steuerfinanzierung); Prozessqualität und Zugangssteuerung in Primärversorgung auf deutsche Kontexte nur eingeschränkt übertragbar."
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42816856",
-    author:"Swadźba D et al.", pubdate:"29.09.2026",
-    added:"01.10.2026",
-    title:"Blutbasierte Screening-Programme am Arbeitsplatz: Ökonomische Ergebnisse inkonsistent",
-    sum:"Systematischer Review (56 Studien, überwiegend US-Beobachtungsdaten) zu wirtschaftlichen und Produktivitätsergebnissen von Workplace-Health-Programmen mit Blutscreening.",
-    result:"Gesundheitskosten: 21 von 29 Studien zeigten günstige Ergebnisse. Return-on-Investment: einheitlich positiv (20 Studien), ohne Abschwächung mit Studienqualität. Absenteeismus: 23 Studien, inkonsistent. Präsentismus/Fluktuation: selten gemessen. Günstiger Effekt nur bei strukturiert begleiteten Programmen, nicht Screening allein.",
-    transfer:"Überwiegend US-Daten; Fragestellung aber systemunabhängig relevant für Betriebliche Gesundheitsförderung."
-  },
-  {
-    journal:"Int J Ment Health Syst", year:"2026", pmid:"42823740",
-    author:"Welter LS et al.", pubdate:"29.09.2026",
+    journal:"JAMA Netw Open", year:"2026", pmid:"42826020",
+    author:"Kim A et al.", pubdate:"01.10.2026",
     added:"02.10.2026",
-    title:"Globale ökonomische Last der Schizophrenie: 243 Milliarden USD im Jahr 2019",
-    sum:"Health-Economic-Modeling-Studie zur globalen sozioökonomischen Last der Schizophrenie 2019 über 204 Länder (direkte, indirekte und informale Pflegekosten).",
-    result:"22,1 Millionen Erwachsene (0,39% Prävalenz) lebten mit Schizophrenie 2019. Gesamtkosten: 243,2 Milliarden USD (Kaufkraftparität): 47% direkte Kosten, 29% indirekt (Produktivitätsverluste), 24% informale Pflege. Obere-Mittel-Länder trugen proportional zu BIP am meisten, Hocheinkommensländer in absoluten und Pro-Kopf-Kosten am meisten. Regionale Heterogenität erheblich.",
-    transfer:"Globale Modellierung; für Versorgungsforschung Deutschland relevant zur Kostenlast-Abschätzung."
+    title:"Längere MOUD-Dauer senkt postpartales Überdosis- und Sterblichkeitsrisiko",
+    sum:"Retrospektive Kohorte mit Tennessee-Medicaid-Daten zu Schwangerschaften mit Medikamentöser Opioid-Abhängigkeitsbehandlung (MOUD) und postpartalem Überdosis-/Mortalitätsrisiko.",
+    result:"Unter 9.360 Schwangerschaften betrug die 1-Jahres-Postpartum-Mortalität/-Überdosisrate 1,58% (148 Fälle). Längere MOUD-Dauer während Schwangerschaft assoziiert mit niedrigerem Risiko: adjustierte Hazard Ratio für 132 vs. 1 Tag MOUD-Versorgung 0,52 (95%-KI 0,31–0,88).",
+    transfer:"US-Medicaid-Daten; Fragestellung zur kontinuierlichen Opioid-Substitutionsbehandlung systemunabhängig relevant."
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42823682",
-    author:"AlMuhana N et al.", pubdate:"28.09.2026",
-    added:"02.10.2026",
-    title:"Muskel-Selbstmanagement und virtuelle Physiotherapie in Saudi-Arabien: Kulturelle Anpassungen erforderlich",
-    sum:"Qualitative Studie (8 Fokusgruppen, n=36) zu Muskel-Selbstmanagement und Akzeptanz virtueller Physiotherapie in Saudi-Arabien.",
-    result:"Patienten praktizieren selbstgesteuertes Management wegen verzögerter professioneller Versorgung. Barrieren: strukturelle, psychologische, relationale Faktoren. Neu: Kulturelle Lücke – Patienten brauchten Anleitung zum Anpassen von Salah (islamisches Gebet) bei Muskelschmerzen. Hybrida Versorgung wurde bevorzugt (virtuelle Nachsorge nach In-Person-Assessment), nicht virtuell von Anfang an.",
-    transfer:"Saudi-Arabien; systemische Übertragbarkeit limitiert, aber Befunde zu Selbstmanagement und virtueller Versorgung aussagekräftig."
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42823771",
-    author:"Zhang X et al.", pubdate:"21.09.2026",
-    added:"02.10.2026",
-    title:"Rural medical students in China: nur 23% planen längerfristiges Bleiben im Landdienst",
-    sum:"Qualitative Studie zu Bleibechancen ländlich ausgebildeter Medizinstudierender in chinesischen Stadtgesundheitszentren nach Pflichtdienst.",
-    result:"Von 26 befragten Studierenden wollten nur 23,1% (6/26) über die vorgeschriebene Dienstzeit hinaus bleiben. Führungsunterstützung erwies sich als prominentester Faktor für Unterschiede zwischen Bleibern und Weggehern. Work-Family-Balance war Erleichterungsfaktor. Karrieremobilitätsmechanismen wurden als unterentwickelt wahrgenommen.",
-    transfer:"Nur bedingt: ländliche Kontexte in China; Fachkräftemangel aber global relevant."
-  },
-  {
-    journal:"JAMA Netw Open", year:"2026", pmid:"42814462",
-    author:"Hu X et al.", pubdate:"01.09.2026",
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42811355",
+    author:"Hiller M et al.", pubdate:"28.09.2026",
     added:"30.09.2026",
-    title:"Palliativmedizin bei fortgeschrittenem Krebs: MA-Versicherte nutzen mehr, aber bekommen weniger Chemotherapie",
-    sum:"Kohortenstudie mit SEER/Medicare-Daten zu Palliativmedizin-, Systemtherapie- und Hospiz-Nutzung bei fortgeschrittenem Krebs (Mammakarzinom, CRC, Lungenkarzinom, Pankreaskarzinom, Prostatakarzinom) in Medicare Advantage (MA) vs. Traditional Medicare (TM), 2016–2021.",
-    result:"135.402 Patienten (32,3% MA, 67,7% TM). MA-Patienten: höhere 6-Monats-Kumulativ-Inzidenz Palliativmedizin (13,3% vs. 9,3%; aHR 1,39 [95%-KI 1,35–1,44]; p&lt;0,001), vor allem HMO-Pläne (aHR 1,66). Nach Oncologist-Matching: PA-Unterschied aufgelöst (aHR 1,05; p=0,19), aber MA-Patienten hatten weniger Systemtherapie (−5,4 Prozentpunkte) und mehr Hospiz (+3,4 Prozentpunkte), persistent nach Matching.",
-    transfer:"US-Daten; Frage zur Versorgungssteuerung systemabhängig, aber Palliativmedizin-Integration relevant."
+    title:"Standardisierte Entlassungskriterien von Intensivstationen: Pilotimplementierung",
+    sum:"Deutsche prospektive Pilotstudie zur Implementierbarkeit und klinischen Nutzbarkeit eines standardisierten Satzes von ICU-Entlassungskriterien in zwei Kliniken.",
+    result:"Elf patientenspezifische und organisationsspezifische Kriterien zeigten &gt;80% Completion bei Entlassungsentscheidungen und wurden als Kern-Set definiert. Organisationsspezifische Kriterien sollten je Klinik, Patientengruppen und Empfängerabteilungen angepasst werden.",
+    transfer:"Deutsche Routinedaten aus zwei ICU-Stationen; direkt auf deutsches Versorgungssystem übertragbar."
   },
   {
-    journal:"Lancet Reg Health Eur", year:"2026", pmid:"42819749",
-    author:"Lip GYH et al.", pubdate:"30.08.2026",
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42811348",
+    author:"Krumm S et al.", pubdate:"28.09.2026",
+    added:"30.09.2026",
+    title:"Arbeitgeberperspektiven auf Arbeitsplatzinklusion bei psychischen Erkrankungen",
+    sum:"Qualitative Interview-Studie mit 29 deutschen Arbeitgebern zu Sichtweisen auf Inklusion von Arbeitnehmern mit psychischen Problemen.",
+    result:"Arbeitgeber beschrieben ambivalente Orientierungen: Normalisierungstrends einerseits, aber Verunsicherung bei Arbeitsorganisation, Teamdynamiken und Vorhersehbarkeit andererseits. Offenbarung, Eigenverantwortung und gegenseitiges Vertrauen wurden als zentral für Unterstützung betont.",
+    transfer:"Deutsche Qualitätsstudie; direkt für deutsche Arbeitsmarkt- und Versorgungspolitik relevant."
+  },
+  {
+    journal:"BMC Psychiatry", year:"2026", pmid:"42806324",
+    author:"Peters SJ et al.", pubdate:"24.09.2026",
+    added:"28.09.2026",
+    title:"Geschlechter- und Diversitätsfaktoren in psychiatrischer Krankenhausbehandlung: Studienprotokoll PSY-DIVER",
+    sum:"Deutsches Studienprotokoll zur Untersuchung von Geschlechts- und Diversitätsfaktoren (Alter, Migration, sexuelle Orientierung, Religion, SES) in der stationären psychiatrischen Versorgung.",
+    result:"Geplantes Mixed-Methods-Design mit Routinedaten-Analyse (500.000 stationäre Fälle 2015–2024), 31 Interviews und Online-Befragungen, Delphi-Prozess. NLP-gestützte Extraktion von Diversitätsvariablen aus klinischen Texten.",
+    transfer:"Deutsche Studienplanung, neun psychiatrische LVR-Kliniken; hochgradig auf deutsches System übertragbar."
+  },
+  {
+    journal:"Eur J Cancer", year:"2026", pmid:"42810149",
+    author:"Vulpe H et al.", pubdate:"16.09.2026",
+    added:"29.09.2026",
+    title:"Radiotherapie-Personalnotstand UK: Reforming der Zertifizierung zur Schließung der Lücke",
+    sum:"Politische Analyse zur Personalknappheit in der klinischen Onkologie/Strahlentherapie im UK und Vorschlag für Regulierungsreform zur internationalen Rekrutierung.",
+    result:"17% Unterbesetzung in klinischer Onkologie heute, 26% prognostiziert bis 2030. UK-Dualausbildung (Radiotherapie + Systemtherapie) behindert Rekrutierung international trainierter Radiation Oncologists aus Systemen mit separaten Fachrichtungen.",
+    transfer:"UK-Healthcare-System mit NHS; Regulierungsfragen systemabhängig, aber Workforceplanung grundsätzlich relevant."
+  },
+  {
+    journal:"Bull World Health Organ", year:"2026", pmid:"42820175",
+    author:"Rendell N et al.", pubdate:"01.10.2026",
     added:"01.10.2026",
-    title:"mHealth-gestützte Integrated Care für ältere Vorhofflimmernpatienten: Kein Vorteil bei optimaler Baseline",
-    sum:"AFFIRMO cluster-RCT in 6 europäischen Ländern zu iABC-System (Integrated Care mit CGA) vs. usual care bei älteren multimorbiden Vorhofflimmernpatienten.",
-    result:"1.260 Patienten (Alter 74 Jahre, CHA₂DS₂-VASc 4). Primärer Endpunkt ungeplante Hospitalisierung: 17,1% (Intervention) vs. 18,2% (usual care), OR 0,95 (95%-KI 0,61–1,49; p=0,84). App-Nutzung suboptimal (68,5% nur 1/3 der Beobachtungszeit). Günstige Baseline-Compliance (97,3% Antikoagulation).",
-    transfer:"Mehrländer-Studie mit europäischem Kontext, aber System steuerfinanziert; begrenzte Übertragbarkeit auf deutsches Sozialversicherungssystem."
+    title:"Aktualisiertes WHO-STEPS-Modul zur Mundhygiene-Surveillance in der Bevölkerung",
+    sum:"WHO-Entwicklung eines aktualisierten Moduls zur Routine-Überwachung von Mundhygieneproblemen in Bevölkerungsumfragen zu nichtübertragbaren Erkrankungen.",
+    result:"Neues STEPS-Modul ergänzt bisherige Selbstangaben durch klinische Bewertungskomponente. Kann von Zahn- und Nicht-Zahnfachpersonal nach kurzer Schulung durchgeführt werden. Praktisch skalierbar zur Schließung persistierender Überwachungslücken.",
+    transfer:"WHO-Empfehlung für globale Anwendbarkeit; für deutsche Public-Health-Surveillance relevant."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
@@ -1598,7 +1598,7 @@ const RADAR_FRISTEN = [["2026-10-20", "2026-10-20"], [], ["2026-10-28", "2026-10
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "03.10.2026";
+const NEWS_STAND = "04.10.2026";
 const NEWS = [
   {titel:"25. Kongress für Versorgungsforschung beendet: DNVF zieht Bilanz", datum:"2026-09-28", url:"https://www.monitor-versorgungsforschung.de/news/25-kongress-fuer-versorgungsforschung-beendet-dnvf-zieht-bilanz/"},
   {titel:"Adipositas-Versorgung weltweit: WHO Foundation und Boehringer kooperieren", datum:"2026-09-28", url:"https://www.monitor-versorgungsforschung.de/news/adipositas-versorgung-weltweit-who-foundation-und-boehringer-kooperieren/"},
