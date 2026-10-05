@@ -1518,87 +1518,78 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "4. Okt. 2026, 06:00 Uhr";
+const SNAP_DATE = "5. Okt. 2026, 06:20 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"BMC Geriatr", year:"2026", pmid:"42823763",
-    author:"Varg S et al.", pubdate:"02.10.2026",
-    added:"02.10.2026",
-    title:"Regionale Disparitäten beim direkten Rettungsdienst-Transport zu geriatrischen Notfallstationen",
-    sum:"Schwedische Register-Studie zu geografischen Unterschieden bei direkter Rettungsdienst-Zuweisung älterer Patienten (≥65J.) zu Notaufnahmen versus geriatrischen Spezialstationen.",
-    result:"Von 8.208 älteren Patienten wurden 7% (603) direkt zu geriatrischen Stationen transportiert. Zwischen Krankenhauseinzugsgebieten stark variierend (4–21%). Nach Adjustierung reduzierte sich Varianz um 41%, aber erhebliche regionale Unterschiede blieben (MOR=1,54).",
-    transfer:"Schweden (Steuerfinanzierung); Prozessqualität und Zugangssteuerung in Primärversorgung auf deutsche Kontexte nur eingeschränkt übertragbar."
+    journal:"BMC Public Health", year:"2026", pmid:"42829430",
+    author:"Scheuermann JS et al.", pubdate:"03.10.2026",
+    added:"03.10.2026",
+    title:"Ernährungsberatung reduziert Alkoholkonsum bei mild kognitiver Beeinträchtigung",
+    sum:"Sekundäranalyse eines RCT untersuchte, ob Ernährungsberatung (WFPB oder DGE-Richtlinien) den Alkoholkonsum bei 189 Personen mit milder kognitiver Beeinträchtigung über 12 Monate reduziert.",
+    result:"Beide Interventionen führten zu signifikanter Reduktion des Alkoholkonsums (Cohens d = 0,30 für WFPB; d = 0,39 für DGE). Frauen profitierten substanziell nur von DGE-Beratung (d = 0,33). Höherer Baseline-Alkoholkonsum, höheres Alter und bessere Adhärenz waren Prädiktoren für stärkere Reduktion.",
+    transfer:"Deutsche RCT mit deutschen Interventionen (DGE-Richtlinien), Routine-Datenerfassung übertragbar"
   },
   {
-    journal:"JAMA Netw Open", year:"2026", pmid:"42826020",
-    author:"Kim A et al.", pubdate:"01.10.2026",
-    added:"02.10.2026",
-    title:"Längere MOUD-Dauer senkt postpartales Überdosis- und Sterblichkeitsrisiko",
-    sum:"Retrospektive Kohorte mit Tennessee-Medicaid-Daten zu Schwangerschaften mit Medikamentöser Opioid-Abhängigkeitsbehandlung (MOUD) und postpartalem Überdosis-/Mortalitätsrisiko.",
-    result:"Unter 9.360 Schwangerschaften betrug die 1-Jahres-Postpartum-Mortalität/-Überdosisrate 1,58% (148 Fälle). Längere MOUD-Dauer während Schwangerschaft assoziiert mit niedrigerem Risiko: adjustierte Hazard Ratio für 132 vs. 1 Tag MOUD-Versorgung 0,52 (95%-KI 0,31–0,88).",
-    transfer:"US-Medicaid-Daten; Fragestellung zur kontinuierlichen Opioid-Substitutionsbehandlung systemunabhängig relevant."
+    journal:"J Eval Clin Pract", year:"2026", pmid:"42829905",
+    author:"Targino JSO et al.", pubdate:"Okt. 2026",
+    added:"04.10.2026",
+    title:"TALK-Debriefing-Methode verbessert Interprofessionalität und Patientensicherheit",
+    sum:"Qualitative Aktionsforschung mit 12 Gesundheitsfachpersonen untersuchte Auswirkungen der TALK-Debriefing-Methode auf interprofessionelle Kommunikation und Patientensicherheit in brasilianischer Sekundärversorgung.",
+    result:"TALK-Methode funktionierte als strukturierendes Instrument für reflektive Praxis und reorganisierte interprofessionelle Interaktionen. Teilnehmer berichteten Verbesserungen in Kommunikation, Teamintegration und Versorgungsplanung sowie psychologisch sichere, nicht-punitives Umfeld. Barrieren: Zeitknappheit, Arbeitsbelastung, variable Engagement, begrenzte institutionelle Unterstützung.",
+    transfer:"Qualitatives Design, systemunabhängige Fragestellung zu Kommunikation und Teamentwicklung"
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42811355",
-    author:"Hiller M et al.", pubdate:"28.09.2026",
-    added:"30.09.2026",
-    title:"Standardisierte Entlassungskriterien von Intensivstationen: Pilotimplementierung",
-    sum:"Deutsche prospektive Pilotstudie zur Implementierbarkeit und klinischen Nutzbarkeit eines standardisierten Satzes von ICU-Entlassungskriterien in zwei Kliniken.",
-    result:"Elf patientenspezifische und organisationsspezifische Kriterien zeigten &gt;80% Completion bei Entlassungsentscheidungen und wurden als Kern-Set definiert. Organisationsspezifische Kriterien sollten je Klinik, Patientengruppen und Empfängerabteilungen angepasst werden.",
-    transfer:"Deutsche Routinedaten aus zwei ICU-Stationen; direkt auf deutsches Versorgungssystem übertragbar."
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42811348",
-    author:"Krumm S et al.", pubdate:"28.09.2026",
-    added:"30.09.2026",
-    title:"Arbeitgeberperspektiven auf Arbeitsplatzinklusion bei psychischen Erkrankungen",
-    sum:"Qualitative Interview-Studie mit 29 deutschen Arbeitgebern zu Sichtweisen auf Inklusion von Arbeitnehmern mit psychischen Problemen.",
-    result:"Arbeitgeber beschrieben ambivalente Orientierungen: Normalisierungstrends einerseits, aber Verunsicherung bei Arbeitsorganisation, Teamdynamiken und Vorhersehbarkeit andererseits. Offenbarung, Eigenverantwortung und gegenseitiges Vertrauen wurden als zentral für Unterstützung betont.",
-    transfer:"Deutsche Qualitätsstudie; direkt für deutsche Arbeitsmarkt- und Versorgungspolitik relevant."
-  },
-  {
-    journal:"BMC Psychiatry", year:"2026", pmid:"42806324",
-    author:"Peters SJ et al.", pubdate:"24.09.2026",
-    added:"28.09.2026",
-    title:"Geschlechter- und Diversitätsfaktoren in psychiatrischer Krankenhausbehandlung: Studienprotokoll PSY-DIVER",
-    sum:"Deutsches Studienprotokoll zur Untersuchung von Geschlechts- und Diversitätsfaktoren (Alter, Migration, sexuelle Orientierung, Religion, SES) in der stationären psychiatrischen Versorgung.",
-    result:"Geplantes Mixed-Methods-Design mit Routinedaten-Analyse (500.000 stationäre Fälle 2015–2024), 31 Interviews und Online-Befragungen, Delphi-Prozess. NLP-gestützte Extraktion von Diversitätsvariablen aus klinischen Texten.",
-    transfer:"Deutsche Studienplanung, neun psychiatrische LVR-Kliniken; hochgradig auf deutsches System übertragbar."
-  },
-  {
-    journal:"Eur J Cancer", year:"2026", pmid:"42810149",
-    author:"Vulpe H et al.", pubdate:"16.09.2026",
-    added:"29.09.2026",
-    title:"Radiotherapie-Personalnotstand UK: Reforming der Zertifizierung zur Schließung der Lücke",
-    sum:"Politische Analyse zur Personalknappheit in der klinischen Onkologie/Strahlentherapie im UK und Vorschlag für Regulierungsreform zur internationalen Rekrutierung.",
-    result:"17% Unterbesetzung in klinischer Onkologie heute, 26% prognostiziert bis 2030. UK-Dualausbildung (Radiotherapie + Systemtherapie) behindert Rekrutierung international trainierter Radiation Oncologists aus Systemen mit separaten Fachrichtungen.",
-    transfer:"UK-Healthcare-System mit NHS; Regulierungsfragen systemabhängig, aber Workforceplanung grundsätzlich relevant."
-  },
-  {
-    journal:"Bull World Health Organ", year:"2026", pmid:"42820175",
-    author:"Rendell N et al.", pubdate:"01.10.2026",
+    journal:"Epilepsia", year:"2026", pmid:"42821310",
+    author:"Crespo-Pimentel B et al.", pubdate:"01.10.2026",
     added:"01.10.2026",
-    title:"Aktualisiertes WHO-STEPS-Modul zur Mundhygiene-Surveillance in der Bevölkerung",
-    sum:"WHO-Entwicklung eines aktualisierten Moduls zur Routine-Überwachung von Mundhygieneproblemen in Bevölkerungsumfragen zu nichtübertragbaren Erkrankungen.",
-    result:"Neues STEPS-Modul ergänzt bisherige Selbstangaben durch klinische Bewertungskomponente. Kann von Zahn- und Nicht-Zahnfachpersonal nach kurzer Schulung durchgeführt werden. Praktisch skalierbar zur Schließung persistierender Überwachungslücken.",
-    transfer:"WHO-Empfehlung für globale Anwendbarkeit; für deutsche Public-Health-Surveillance relevant."
+    title:"Theory of Mind: kognitives Endophänotyp bei juveniler myoklonischer Epilepsie?",
+    sum:"Prospektive Querschnittsstudie mit 52 Patienten mit juveniler myoklonischer Epilepsie (JME), 13 nicht-betroffenen Geschwistern und 64 gesunden Kontrollen untersuchte soziale Kognition als mögliches Endophänotyp.",
+    result:"JME-Patienten zeigten reduzierte Leistung bei Aufgaben zu Mentalisieren über Überzeugungen (Faux Pas Test, Reading Mind in the Eyes). Geschwister unterschieden sich nicht signifikant von JME-Patienten oder Kontrollen. Selektive Beeinträchtigung des Mentalisierens über Überzeugungen in JME, aber keine Evidenz für Endophänotyp-Rolle in dieser Stichprobe.",
+    transfer:"Österreich-basierte Studie, systemunabhängige neuropsychologische Fragestellung"
+  },
+  {
+    journal:"Can J Respir Ther", year:"2026", pmid:"42828082",
+    author:"Mohammed J et al.", pubdate:"30.09.2026",
+    added:"03.10.2026",
+    title:"Wiederholte pulmonale Rehabilitation bei COPD bleibt wirksam trotz kleinerer Gewinne",
+    sum:"Retrospektive Analyse von 429 COPD-Patienten, die zwei Rehabilitationsprogramme (PR1 und PR2) an Ciro (Niederlande) zwischen 2005 und 2022 absolvierten.",
+    result:"Nach PR1 und PR2 signifikante Verbesserungen: 6MWD (PR1: 37,0 m [29,2–44,8]; PR2: 27,0 m [19,2–34,8]), Quadrizeps-Kraft (PR1: 10,4 Nm; PR2: 8,6 Nm), CAT, SGRQ, HADS und COPM. Gewinne nach PR2 kleiner, aber klinisch bedeutsam. Alle Outcomes zwischen PR1 und PR2 signifikant rückläufig.",
+    transfer:"Niederländisches spezialisiertes Rehabilitationszentrum, vergleichbares System, Ergebnisse übertragbar"
+  },
+  {
+    journal:"Nord J Psychiatry", year:"2026", pmid:"42813764",
+    author:"Larsen S et al.", pubdate:"30.09.2026",
+    added:"30.09.2026",
+    title:"Schlechte Adhärenz zu evidenzbasierter kardiovaskulärer Prävention bei schweren psychischen Erkrankungen in Norwegen",
+    sum:"Multizenter-Studie mit 230 Patienten (Schizophrenie/bipolare Störung oder Antipsychotika-Nutzer) untersuchte Adhärenz zu evidenzbasierter kardiovaskulärer Prävention mittels Fidelity Scale.",
+    result:"Seiten zeigten geringe Fidelity-Scores (höher bei Richtlinien als bei Praktiken). Alle Risikofaktoren hochprevalent: tägliches Rauchen/Schnuff 58,1%. Zwischen Fidelity und Patientenergebnissen keine signifikanten Assoziationen nach Adjustierung. Spezialistische Versorgungsanbieter zeigten niedrige Adhärenz zu evidenzbasierter kardiovaskulärer Risikomanagement-Praxis.",
+    transfer:"Norwegische spezialisierte psychische Gesundheitsversorgung, vergleichbar mit deutschem System"
+  },
+  {
+    journal:"Am J Prev Cardiol", year:"2026", pmid:"42828241",
+    author:"Heider D et al.", pubdate:"14.07.2026",
+    added:"03.10.2026",
+    title:"Telehealth-Coaching für periphere arterielle Verschlusskrankheit kosteneffektiv unter günstigen Bedingungen",
+    sum:"Kosteneffektivitätsanalyse eines 12-Monatigen Telehealth-Coaching- und Remote-Monitoring-Programms (TeGeCoach) für 394 PAD-Patienten basierend auf Krankenkassendaten und Fragebögen.",
+    result:"Bei WTP-Schwellenwert von 50.000 Euro: ITT 30% Wahrscheinlichkeit kosteneffektiv; mITT 79%; PP 95%. Interventionskosten 672 Euro. Unter PP-Analyse kosteneffektiv, aber ITT-Szenario nicht. Anpassung der Implementierung notwendig.",
+    transfer:"Deutsche Krankenversicherungsdaten, praktische Implementierungsfrage für deutsche Versorgung"
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
 
 // Offene Foerderausschreibungen zum Thema — taeglich von scripts/radar_hinweis.py
 // === RADAR-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const RADAR_STAND = "01.10.2026";
+const RADAR_STAND = "05.10.2026";
 const RADAR_URL = "https://wissen.m-vf.de/ausschreibungen.html#versorgungsforschung";
 const RADAR_EIGENES = 0;
 const RADAR_ZUHAUSE = true;
-const RADAR_FRISTEN = [["2026-10-20", "2026-10-20"], [], ["2026-10-28", "2026-10-06", "2027-01-07", "2026-10-02", "2026-10-09", "2026-10-19", "2026-10-19", "2026-10-19"], [], ["2026-10-15"], [], [], ["2026-10-30", "2026-11-06", "2026-11-09", "2026-10-26"], [], ["2026-10-20", "2026-10-09", "2026-10-09"], [], ["2026-10-15", "2027-01-07"], ["2026-10-01", "2026-10-05", "2026-10-05", "2026-10-07", "2026-10-14", "2026-10-19", "2026-11-18", "2027-01-07"], ["2027-01-07", "2027-01-07"], ["2026-10-06", "2026-11-09"]];
+const RADAR_FRISTEN = [["2026-10-20", "2026-10-20", "2026-10-19", "2027-01-07", "2026-10-15"], [], ["2026-10-28", "2027-01-07", "2026-10-06", "2026-10-09", "2026-10-19", "2026-10-19"], [], ["2026-10-15", "2026-11-19"], [], [], ["2026-10-30", "2026-10-22", "2026-11-18"], [], ["2026-10-09", "2026-10-09", "2026-10-20"], [], ["2026-10-15", "2027-01-07"], ["2026-10-05", "2026-10-05", "2026-10-07", "2026-10-07", "2027-01-07", "2026-11-18", "2026-11-18", "2027-01-07"], ["2026-11-19"], ["2026-10-06", "2026-11-09"]];
 // === RADAR-BLOCK-ENDE ===
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "04.10.2026";
+const NEWS_STAND = "05.10.2026";
 const NEWS = [
   {titel:"25. Kongress für Versorgungsforschung beendet: DNVF zieht Bilanz", datum:"2026-09-28", url:"https://www.monitor-versorgungsforschung.de/news/25-kongress-fuer-versorgungsforschung-beendet-dnvf-zieht-bilanz/"},
   {titel:"Adipositas-Versorgung weltweit: WHO Foundation und Boehringer kooperieren", datum:"2026-09-28", url:"https://www.monitor-versorgungsforschung.de/news/adipositas-versorgung-weltweit-who-foundation-und-boehringer-kooperieren/"},
