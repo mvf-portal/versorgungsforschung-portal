@@ -24,7 +24,11 @@ Quellen (am 26.08.2026 gemessen):
      Anmeldung. Ergiebig, aber unscharf: "health services research" liefert
      1.470 Treffer, viele davon blosse Vorankuendigungen ohne Frist. Deshalb
      nur `posted` (keine Forecasts) und danach die Modellpruefung.
-  3. **DFG** - RSS "Informationen fuer die Wissenschaft". Der Feed nennt nur
+  3. **Innovationsfonds beim G-BA** - keine Schnittstelle, die Seite selbst.
+     Laeuft zwar ueber foerderinfo mit, aber nicht vollstaendig: Am 05.10.2026
+     fuehrte foerderinfo die beiden Bekanntmachungen zur Versorgungsforschung,
+     nicht aber die zu den neuen Versorgungsformen.
+  4. **DFG** - RSS "Informationen fuer die Wissenschaft". Der Feed nennt nur
      Titel und Adresse, keine Frist. Die steht im Fliesstext der verlinkten
      Seite und wird von dort geholt. Am 28.08.2026 gemessen: 20 Eintraege,
      davon zehn mit erkennbarer Frist. Der Rest sind Kongresslisten,
@@ -53,6 +57,7 @@ import json
 import pathlib
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 from html import unescape
@@ -68,6 +73,7 @@ UA = "MVF-Knowledge-Hubs/1.0 (+https://knowledge-hubs.m-vf.de)"
 RSS = "https://www.foerderinfo.bund.de/foerderinfo/de/services/rss/{}/rssnewsfeed.xml"
 GRANTS = "https://api.grants.gov/v1/api/search2"
 DFG_FEED = "https://www.dfg.de/service/rss/de/323556/feed.rss"
+INNOFONDS = "https://innovationsfonds.g-ba.de/foerderbekanntmachungen/"
 
 # Der DFG-Feed haelt 20 Eintraege vor. Fuer jeden davon wird die verlinkte
 # Seite geholt - anders ist an die Frist nicht heranzukommen.
@@ -118,11 +124,32 @@ ANZEIGEN_MAX = 8
 POOL_MAX = 200
 
 
+# Wie oft ein Abruf wiederholt wird, bevor die Quelle als ausgefallen gilt.
+# Am 05.10.2026 gemessen: foerderinfo.bund.de brach in zwei von vier Laeufen
+# die Verbindung ab (WinError 10054), beim naechsten Versuch ging es. Ohne
+# Wiederholung verliert der Radar dann einen ganzen Fachbereich - gemeldet
+# zwar, aber eben weg.
+VERSUCHE = 3
+PAUSE = 3
+
+
 def hol(url: str, daten: bytes | None = None, kopf: dict | None = None) -> bytes:
     req = urllib.request.Request(url, data=daten,
                                  headers={"User-Agent": UA, **(kopf or {})})
-    with urllib.request.urlopen(req, timeout=45) as r:
-        return r.read()
+    letzter: Exception | None = None
+    for versuch in range(VERSUCHE):
+        try:
+            with urllib.request.urlopen(req, timeout=45) as r:
+                return r.read()
+        except (urllib.error.URLError, TimeoutError) as fehler:
+            # Ein abgelehnter Zugriff (403, 404) wird nicht besser, wenn man
+            # ihn wiederholt - nur abgerissene Verbindungen und Zeitueberlaeufe.
+            if isinstance(fehler, urllib.error.HTTPError):
+                raise
+            letzter = fehler
+            if versuch < VERSUCHE - 1:
+                time.sleep(PAUSE)
+    raise letzter if letzter else RuntimeError(f"{url} nicht erreichbar")
 
 
 def feld(eintrag: str, name: str) -> str:
@@ -362,6 +389,68 @@ def aus_dfg(heute: dt.date, stoerungen: list[str]) -> list[dict]:
     return gefunden
 
 
+def aus_innovationsfonds(heute: dt.date, stoerungen: list[str]) -> list[dict]:
+    """Die Foerderbekanntmachungen des Innovationsausschusses beim G-BA.
+
+    Warum eigens, obwohl der Innovationsausschuss ueber foerderinfo mitlaeuft:
+    Am 05.10.2026 nachgemessen - foerderinfo fuehrte die beiden Bekanntmachungen
+    zur **Versorgungsforschung**, nicht aber die zu den **neuen
+    Versorgungsformen**. Das ist die zweite Saeule des Fonds, und die laufende
+    Einreichung bis Jahresende waere der Leserschaft entgangen.
+
+    Die Seite braucht keinen Feed: Titel, Veroeffentlichung und
+    Einreichungsfrist stehen in einem Rutsch hintereinander, jeweils hinter dem
+    Verweis auf die Bekanntmachung. Gelesen wird deshalb ab jedem solchen
+    Verweis bis zum naechsten.
+
+    Abgelaufenes steht auf derselben Seite unter "In Bewertung" und weiter
+    unten im Archiv bis 2018 - herausgehalten wird es wie ueberall ueber die
+    Frist, nicht ueber die Stelle im Dokument.
+    """
+    gefunden: list[dict] = []
+    try:
+        seite = hol(INNOFONDS).decode("utf-8", "replace")
+    except (urllib.error.URLError, TimeoutError) as fehler:
+        stoerungen.append(f"Innovationsfonds nicht erreichbar ({fehler}).")
+        return gefunden
+
+    gesehen: set[str] = set()
+    for stueck in re.split(
+            r'(?i)(?=<a[^>]+href="[^"]*foerderbekanntmachung)', seite):
+        m = re.search(r'href="([^"]*foerderbekanntmachung[^"]*)"', stueck)
+        if not m:
+            continue
+        url = m.group(1)
+        if url.startswith("/"):
+            url = "https://innovationsfonds.g-ba.de" + url
+        klar = re.sub(r"\s+", " ",
+                      unescape(re.sub(r"<[^>]+>", " ", stueck)))
+        frist = re.search(r"Einreichungsfrist\s*(\d{2}\.\d{2}\.\d{4})", klar)
+        if not frist:
+            continue      # ohne Frist nicht rein, wie bei allen Quellen
+        try:
+            stichtag = dt.datetime.strptime(frist.group(1), "%d.%m.%Y").date()
+        except ValueError:
+            continue
+        if stichtag < heute or url in gesehen:
+            continue
+        # Vor "Veroeffentlicht am" steht der Titel; davor der Rest des
+        # vorigen Eintrags, deshalb wird von hinten abgeschnitten.
+        titel = re.sub(r"^\W+", "", klar.split("Veröffentlicht")[0]).strip()
+        if not titel:
+            continue
+        gesehen.add(url)
+        gefunden.append({
+            "titel": titel[:160],
+            "frist": stichtag.isoformat(),
+            "url": url,
+            "quelle": "Innovationsfonds (G-BA)",
+            "land": "DE",
+            "beschreibung": klar[:600],
+        })
+    return gefunden
+
+
 def entdoppeln(kandidaten: list[dict]) -> list[dict]:
     """Dieselbe Bekanntmachung steht oft in mehreren Fachfeeds.
 
@@ -370,16 +459,29 @@ def entdoppeln(kandidaten: list[dict]) -> list[dict]:
     Zeile stuende sie zweimal auf der Seite - und das Modell haette sie zweimal
     zu bewerten, was einen der acht Plaetze kostet.
 
-    Erkannt wird ueber Titel und Frist, nicht ueber die Adresse: Dieselbe
-    Bekanntmachung kann je Feed eine andere Verweisadresse tragen.
+    Erkannt wird ueber Titel und Frist - dieselbe Bekanntmachung kann je Feed
+    eine andere Verweisadresse tragen - UND ueber die Zieladresse. Das zweite
+    Merkmal kam am 05.10.2026 mit dem Innovationsfonds dazu: Dieselbe
+    Bekanntmachung heisst bei foerderinfo "Innovationsausschuss –
+    Versorgungsforschung zum themenoffenen Bereich" und auf der Seite des
+    Fonds "Foerderbekanntmachung Versorgungsforschung zum themenoffenen
+    Bereich". Ueber den Titel ist das nicht zu erkennen, ueber das Linkziel
+    schon - beide zeigen auf dieselbe Seite.
+
+    Wer zuerst kommt, bleibt: Die Reihenfolge der Quellen in main() entscheidet
+    also, welcher der beiden Titel auf der Seite steht.
     """
     gesehen: set[tuple[str, str]] = set()
+    adressen: set[str] = set()
     behalten: list[dict] = []
     for k in kandidaten:
         merkmal = (k["titel"].casefold(), k["frist"])
-        if merkmal in gesehen:
+        ziel = k["url"].split("?")[0].rstrip("/").casefold()
+        if merkmal in gesehen or (ziel and ziel in adressen):
             continue
         gesehen.add(merkmal)
+        if ziel:
+            adressen.add(ziel)
         behalten.append(k)
     return behalten
 
@@ -595,7 +697,11 @@ def main() -> int:
     # dreien verstummt, waehrend die anderen weiterliefern.
     quellen: dict[str, int] = {}
     geholt: dict[str, list[dict]] = {}
-    for name, holen in (("Bund", aus_bund),
+    # Der Innovationsfonds steht VOR dem Bund: Beide fuehren dieselben
+    # Bekanntmachungen zur Versorgungsforschung, und die Entdopplung behaelt
+    # den ersten. Der Titel der Fonds-Seite ist der amtliche.
+    for name, holen in (("Innovationsfonds", aus_innovationsfonds),
+                        ("Bund", aus_bund),
                         ("grants.gov", aus_grants_gov),
                         ("DFG", aus_dfg)):
         teil = holen(heute, stoerungen)
@@ -608,7 +714,8 @@ def main() -> int:
     # liefert (Bergbau, Botschaftsprogramme, Sportdiplomatie). Die beiden
     # deutschen Quellen sind vorgeprueft und kommen deshalb vollstaendig in
     # den Pool; grants.gov fuellt den Rest auf.
-    deutsch = entdoppeln(geholt["Bund"] + geholt["DFG"])
+    deutsch = entdoppeln(geholt["Innovationsfonds"] + geholt["Bund"]
+                         + geholt["DFG"])
     rest = max(0, POOL_MAX - len(deutsch))
     usa = sorted(geholt["grants.gov"], key=lambda k: k["frist"])[:rest]
     kandidaten = entdoppeln(deutsch + usa)
