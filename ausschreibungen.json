@@ -1,13 +1,11 @@
 {
  "stand": "05.10.2026",
  "quellen": {
-  "Bund": 59,
+  "Bund": 68,
   "grants.gov": 319,
   "DFG": 7
  },
- "warnungen": [
-  "Bund: Fachfeed 'bekanntmachungen-gesundheit-ernaehrung' nicht erreichbar (<urlopen error [Errno 104] Connection reset by peer>)."
- ],
+ "warnungen": [],
  "themen": [
   {
    "slug": "versorgungsforschung",
@@ -16,13 +14,22 @@
    "anzahl": 5,
    "ausschreibungen": [
     {
-     "titel": "DoW Traumatic Brain Injury and Psychological Health, Health Services Research Award",
-     "frist": "2026-10-15",
-     "url": "https://www.grants.gov/search-results-detail/362271",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Traumatic Brain Injury and Psychological Health, Health Services Research Award"
+     "titel": "Innovationsausschuss – Versorgungsforschung zum themenspezifischen Bereich",
+     "frist": "2026-10-20",
+     "url": "https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-versorgungsforschung-zum-themenspezifischen-bereich.69",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Förderbekanntmachung des Innovationsausschusses beim Gemeinsamen Bundesausschuss zur themenspezifischen Förderung von Versorgungsforschung: Forschungsprojekte zur Weiterentwicklung der Versorgung in der gesetzlichen Krankenversicherung. Vom 19.06.2026. Web-Seminar am 14.07.2026.",
+     "beleg": "Innovationsausschuss – Versorgungsforschung zum themenspezifischen Bereich"
+    },
+    {
+     "titel": "Innovationsausschuss – Versorgungsforschung zum themenoffenen Bereich",
+     "frist": "2026-10-20",
+     "url": "https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-versorgungsforschung-zum-themenoffenen-bereich.55",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Förderbekanntmachung des Innovationsausschusses beim Gemeinsamen Bundesausschuss zur themenoffenen Förderung von Versorgungsforschung: Forschungsprojekte zur Weiterentwicklung der Versorgung in der gesetzlichen Krankenversicherung. Vom 19.06.2026. Web-Seminar am 14.07.2026.",
+     "beleg": "Innovationsausschuss – Versorgungsforschung zum themenoffenen Bereich"
     },
     {
      "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
@@ -43,22 +50,13 @@
      "beleg": "Advance Data and Practice Transformation for Optimizing Oral Health for All"
     },
     {
-     "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/356690",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities"
-    },
-    {
-     "titel": "Intervention Research to Improve Native American Health (R34 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/358373",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Intervention Research to Improve Native American Health"
+     "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
+     "frist": "2026-10-28",
+     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-11-bekanntmachung-secure-processing-environments.html",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
+     "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
     }
    ]
   },
@@ -76,22 +74,13 @@
    "anzahl": 8,
    "ausschreibungen": [
     {
-     "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
-     "frist": "2026-10-28",
-     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-11-bekanntmachung-secure-processing-environments.html",
-     "quelle": "Bund (foerderinfo.bund.de)",
-     "land": "DE",
-     "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
-     "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
-    },
-    {
      "titel": "Development and Testing of a Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (U01 Clinical Trial Not Allowed)",
      "frist": "2026-10-09",
      "url": "https://www.grants.gov/search-results-detail/359271",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data"
+     "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
     },
     {
      "titel": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (UG3/UH3, Clinical Trial Optional)",
@@ -121,6 +110,24 @@
      "beleg": "Application of Digital Health Technology to the Management of Type 2 Diabetes"
     },
     {
+     "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
+     "frist": "2026-10-28",
+     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-11-bekanntmachung-secure-processing-environments.html",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
+     "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
+    },
+    {
+     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357273",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
+    },
+    {
      "titel": "Advanced Development of Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
      "frist": "2026-10-19",
      "url": "https://www.grants.gov/search-results-detail/359855",
@@ -137,15 +144,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Sustained Support for Informatics Technologies for Cancer Research and Management"
-    },
-    {
-     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357273",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
     }
    ]
   },
@@ -169,7 +167,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI)"
+     "beleg": "Older Adults Living with Serious Mental Illness (SMI)"
     },
     {
      "titel": "Seamless Early-Stage Clinical Drug Development (Phase 1 to 2a) for Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD) (UG3/UH3 Clinical Trial Required)",
@@ -178,7 +176,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD)"
+     "beleg": "Alzheimer's Disease (AD) and AD-related Dementias (ADRD)"
     }
    ]
   },
@@ -200,7 +198,7 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 3,
+   "anzahl": 6,
    "ausschreibungen": [
     {
      "titel": "DoW Arthritis Clinical Research Award",
@@ -227,7 +225,34 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "HEAL Initiative: Whole Joint Health Program"
+     "beleg": "HEAL Initiative: Whole Joint Health Program (R61/R33 Clinical Trial Required)"
+    },
+    {
+     "titel": "Limited Competition for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers (U01 Clinical Trial Required)",
+     "frist": "2026-11-06",
+     "url": "https://www.grants.gov/search-results-detail/360679",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers (U01 Clinical Trial Required)"
+    },
+    {
+     "titel": "Single Source for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center (U01 Clinical Trial Required)",
+     "frist": "2026-11-09",
+     "url": "https://www.grants.gov/search-results-detail/360458",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center (U01 Clinical Trial Required)"
+    },
+    {
+     "titel": "Long-term health outcomes of people living with spina bifida",
+     "frist": "2026-10-26",
+     "url": "https://www.grants.gov/search-results-detail/361002",
+     "quelle": "grants.gov (HHS-CDC-NCBDDD)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Long-term health outcomes of people living with spina bifida"
     }
    ]
   },
@@ -251,7 +276,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Optimal Treatment Strategies for use of Anti-Obesity Medications (AOMs) in Children and Adolescents Clinical Centers"
+     "beleg": "Anti-Obesity Medications (AOMs) in Children and Adolescents Clinical Centers"
     },
     {
      "titel": "Optimal Treatment Strategies for use of Anti-Obesity Medications (AOMs) in Children and Adolescents Research Coordinating Center (U24 Clinical Trial Not Allowed)",
@@ -260,7 +285,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Optimal Treatment Strategies for use of Anti-Obesity Medications (AOMs) in Children and Adolescents Research Coordinating Center"
+     "beleg": "Anti-Obesity Medications (AOMs) in Children and Adolescents Research Coordinating Center"
     },
     {
      "titel": "Nutrition Obesity Research Centers (NORCs) (P30 Clinical Trial Optional)",
@@ -284,7 +309,7 @@
    "slug": "mental",
    "name": "Psychische Gesundheit",
    "domain": "mental.m-vf.de",
-   "anzahl": 3,
+   "anzahl": 2,
    "ausschreibungen": [
     {
      "titel": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)",
@@ -302,16 +327,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
-    },
-    {
-     "titel": "DoW Traumatic Brain Injury and Psychological Health, Health Services Research Award",
-     "frist": "2026-10-15",
-     "url": "https://www.grants.gov/search-results-detail/362271",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Traumatic Brain Injury and Psychological Health, Health Services Research Award"
+     "beleg": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
     }
    ]
   },
@@ -322,15 +338,6 @@
    "anzahl": 8,
    "ausschreibungen": [
     {
-     "titel": "DoW, Peer Reviewed Cancer, Impact Award",
-     "frist": "2026-10-05",
-     "url": "https://www.grants.gov/search-results-detail/362267",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW, Peer Reviewed Cancer, Impact Award"
-    },
-    {
      "titel": "DoW Peer Reviewed Cancer, Clinical Trial Award",
      "frist": "2026-10-05",
      "url": "https://www.grants.gov/search-results-detail/362268",
@@ -338,33 +345,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "DoW Peer Reviewed Cancer, Clinical Trial Award"
-    },
-    {
-     "titel": "DoW Peer Reviewed Cancer, Idea Award",
-     "frist": "2026-10-05",
-     "url": "https://www.grants.gov/search-results-detail/362265",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Peer Reviewed Cancer, Idea Award"
-    },
-    {
-     "titel": "DoW Pancreatic Cancer Research Program, Translational Research Partnership Award",
-     "frist": "2026-10-07",
-     "url": "https://www.grants.gov/search-results-detail/362191",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Pancreatic Cancer Research Program, Translational Research Partnership Award"
-    },
-    {
-     "titel": "DoW Pancreatic Cancer Research Program, Idea Development Award",
-     "frist": "2026-10-07",
-     "url": "https://www.grants.gov/search-results-detail/362190",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Pancreatic Cancer Research Program, Idea Development Award"
     },
     {
      "titel": "National Cancer Institute's Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis (R01 Clinical Trial Required)",
@@ -385,13 +365,49 @@
      "beleg": "Cancer Prevention and Control Clinical Trials Grant Program"
     },
     {
-     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
-     "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/360606",
+     "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/356690",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Glioblastoma Therapeutics Network (GTN)"
+     "beleg": "expand cancer screening and preventive services"
+    },
+    {
+     "titel": "DoW Pancreatic Cancer Research Program, Idea Development Award",
+     "frist": "2026-10-07",
+     "url": "https://www.grants.gov/search-results-detail/362190",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Pancreatic Cancer Research Program, Idea Development Award"
+    },
+    {
+     "titel": "DoW Breast Cancer, Clinical Research Extension Award",
+     "frist": "2026-11-18",
+     "url": "https://www.grants.gov/search-results-detail/363671",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
+    },
+    {
+     "titel": "DoW Rare Cancers Idea Development Award",
+     "frist": "2026-11-18",
+     "url": "https://www.grants.gov/search-results-detail/362849",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Rare Cancers Idea Development Award"
+    },
+    {
+     "titel": "DoW Melanoma Research Program Survivorship Research Award",
+     "frist": "2026-10-14",
+     "url": "https://www.grants.gov/search-results-detail/362246",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Melanoma Research Program Survivorship Research Award"
     }
    ]
   },
@@ -399,7 +415,7 @@
    "slug": "kardio",
    "name": "Kardiologie",
    "domain": "kardio.m-vf.de",
-   "anzahl": 3,
+   "anzahl": 4,
    "ausschreibungen": [
     {
      "titel": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention (UG3/UH3 Clinical Trial Optional)",
@@ -417,7 +433,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
+     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R61/R33 Clinical Trial Required)"
     },
     {
      "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R33 CT Required)",
@@ -426,7 +442,16 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
+     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R33 CT Required)"
+    },
+    {
+     "titel": "NHLBI Clinical Trial Pilot Studies (R34 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357800",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "NHLBI Clinical Trial Pilot Studies (R34 Clinical Trial Optional)"
     }
    ]
   },
@@ -434,7 +459,7 @@
    "slug": "diabetes",
    "name": "Diabetes",
    "domain": "diabetes.m-vf.de",
-   "anzahl": 2,
+   "anzahl": 1,
    "ausschreibungen": [
     {
      "titel": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)",
@@ -443,16 +468,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Digital Health Technology to the Management of Type 2 Diabetes"
-    },
-    {
-     "titel": "Single Source for the Continuation of the Epidemiology of Diabetes Interventions and Complications (EDIC) Study Research Center (Collaborative U01 Clinical Trial Not Allowed)",
-     "frist": "2026-11-09",
-     "url": "https://www.grants.gov/search-results-detail/361213",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Epidemiology of Diabetes Interventions and Complications (EDIC) Study Research Center"
+     "beleg": "Application of Digital Health Technology to the Management of Type 2 Diabetes"
     }
    ]
   }
