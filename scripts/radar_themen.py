@@ -96,6 +96,13 @@ Hierher gehören auch **breit angelegte Präventions- und
 Gesundheitsförderungsprogramme ohne Bezug auf ein bestimmtes Krankheitsbild**.
 Sie passen sonst überallhin und nirgends richtig; entschieden am 28.08.2026.
 
+Hierher gehören ebenso **alle Förderbekanntmachungen des Innovationsausschusses
+beim G-BA** - auch die zu NEUEN VERSORGUNGSFORMEN. Dort wird die Erprobung
+einer Versorgungsform samt Evaluation gefördert; formal ist das keine
+Forschungsausschreibung, für die Leserschaft dieses Hubs aber die wichtigste
+Fördermöglichkeit überhaupt. Die Regel "nur Forschungsförderung" gilt für sie
+nicht (entschieden am 05.10.2026).
+
 NICHT einschlägig sind reine Grundlagenforschung ohne Versorgungsbezug,
 Medikamentenentwicklung, Agrar- und Ernährungsforschung, Biotechnologie,
 Energie- und Umwelttechnik - auch dann nicht, wenn sie im selben Fachfeed

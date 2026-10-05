@@ -540,10 +540,16 @@ def waehlen(kandidaten: list[dict], liste: str, thema: dict,
         "Entscheidend ist, ob das Thema dieses Gebiets in der Ausschreibung "
         "selbst vorkommt - nicht, ob es dazu passen könnte. Eine "
         "allgemein gehaltene Ausschreibung zur Gesundheitsversorgung oder "
-        "-forschung, die für jedes der zwölf Gebiete gleich gut "
+        "-forschung, die für jedes Themengebiet gleich gut "
         "passen würde, gehört NICHT hierher: Sie steht im Gebiet "
         "Versorgungsforschung. Nimm sie nur auf, wenn die Bekanntmachung "
-        "dieses Thema ausdrücklich nennt oder erkennbar meint.\n\n")
+        "dieses Thema ausdrücklich nennt oder erkennbar meint.\n\n"
+        "Das gilt ausdrücklich für die **Förderbekanntmachungen des "
+        "Innovationsausschusses beim G-BA** (Versorgungsforschung wie neue "
+        "Versorgungsformen): Sie sind themenoffen oder nennen ihre "
+        "Schwerpunkte erst im Verfahren und gehören deshalb immer in das "
+        "Gebiet Versorgungsforschung - auch dann, wenn ein Schwerpunkt dieses "
+        "Thema streift.\n\n")
     auftrag = (
         f"Oben stehen offene Förderausschreibungen. Wähle die aus, die für den "
         f"Knowledge-Hub \"{thema['name']}\" einschlägig sind.\n\n"
