@@ -2,7 +2,7 @@
  "stand": "08.10.2026",
  "quellen": {
   "Innovationsfonds": 3,
-  "Bund": 68,
+  "Bund": 69,
   "grants.gov": 312,
   "DFG": 7
  },
@@ -24,22 +24,22 @@
      "beleg": "Förderbekanntmachung Versorgungsforschung zum themenspezifischen Bereich"
     },
     {
-     "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357524",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
+     "titel": "Förderbekanntmachung Versorgungsforschung zum themenoffenen Bereich",
+     "frist": "2026-10-20",
+     "url": "https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-versorgungsforschung-zum-themenoffenen-bereich.55",
+     "quelle": "Innovationsfonds (G-BA)",
+     "land": "DE",
+     "beschreibung": " Förderbekanntmachung Versorgungsforschung zum themenoffenen Bereich Veröffentlicht am 19.06.2026 | Einreichungsfrist 20.10.2026 12:00 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
+     "beleg": "Förderbekanntmachung Versorgungsforschung zum themenoffenen Bereich"
     },
     {
-     "titel": "Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed)",
-     "frist": "2026-10-19",
-     "url": "https://www.grants.gov/search-results-detail/359123",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Advance Data and Practice Transformation for Optimizing Oral Health for All"
+     "titel": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich)",
+     "frist": "2026-12-31",
+     "url": "https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-neue-versorgungsformen-zum-themenoffenen-bereich-einstufig-kurz-einreichung-laufend-im-jahr-moeglich.66",
+     "quelle": "Innovationsfonds (G-BA)",
+     "land": "DE",
+     "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
+     "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
     }
    ]
   },
@@ -54,8 +54,26 @@
    "slug": "ki-gesundheit",
    "name": "Digitalisierung, KI & Gesundheit",
    "domain": "ki.m-vf.de",
-   "anzahl": 5,
+   "anzahl": 8,
    "ausschreibungen": [
+    {
+     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357273",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
+    },
+    {
+     "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
+     "frist": "2026-10-28",
+     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-11-bekanntmachung-secure-processing-environments.html",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
+     "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
+    },
     {
      "titel": "Development and Testing of a Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (U01 Clinical Trial Not Allowed)",
      "frist": "2026-10-09",
@@ -81,25 +99,34 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI"
+     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships... Precision Medicine with AI"
     },
     {
-     "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
-     "frist": "2026-10-28",
-     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-11-bekanntmachung-secure-processing-environments.html",
-     "quelle": "Bund (foerderinfo.bund.de)",
-     "land": "DE",
-     "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
-     "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
-    },
-    {
-     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357273",
+     "titel": "Advanced Development of Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
+     "frist": "2026-10-19",
+     "url": "https://www.grants.gov/search-results-detail/359855",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
+     "beleg": "Advanced Development of Informatics Technologies for Cancer Research and Management"
+    },
+    {
+     "titel": "Sustained Support for Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
+     "frist": "2026-10-19",
+     "url": "https://www.grants.gov/search-results-detail/359853",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Sustained Support for Informatics Technologies for Cancer Research and Management"
+    },
+    {
+     "titel": "Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed)",
+     "frist": "2026-10-19",
+     "url": "https://www.grants.gov/search-results-detail/359123",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "CEED Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All"
     }
    ]
   },
@@ -123,7 +150,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Interventions for Older Adults Living with Serious Mental Illness (SMI)"
+     "beleg": "Older Adults Living with Serious Mental Illness (SMI)"
     }
    ]
   },
@@ -145,17 +172,8 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 6,
+   "anzahl": 4,
    "ausschreibungen": [
-    {
-     "titel": "DoW Arthritis Clinical Research Award",
-     "frist": "2026-10-22",
-     "url": "https://www.grants.gov/search-results-detail/362175",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Arthritis Clinical Research Award"
-    },
     {
      "titel": "HEAL Initiative: Whole Joint Health Program (R61/R33 Clinical Trial Required)",
      "frist": "2026-10-30",
@@ -166,6 +184,15 @@
      "beleg": "HEAL Initiative: Whole Joint Health Program"
     },
     {
+     "titel": "DoW Arthritis Clinical Research Award",
+     "frist": "2026-10-22",
+     "url": "https://www.grants.gov/search-results-detail/362175",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Arthritis Clinical Research Award"
+    },
+    {
      "titel": "DoW Orthopaedic, Clinical Research Award",
      "frist": "2026-11-18",
      "url": "https://www.grants.gov/search-results-detail/362524",
@@ -173,24 +200,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "DoW Orthopaedic, Clinical Research Award"
-    },
-    {
-     "titel": "Limited Competition for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers (U01 Clinical Trial Required)",
-     "frist": "2026-11-06",
-     "url": "https://www.grants.gov/search-results-detail/360679",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers"
-    },
-    {
-     "titel": "Single Source for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center (U01 Clinical Trial Required)",
-     "frist": "2026-11-09",
-     "url": "https://www.grants.gov/search-results-detail/360458",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center"
     },
     {
      "titel": "Long-term health outcomes of people living with spina bifida",
@@ -223,7 +232,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Anti-Obesity Medications (AOMs) in Children and Adolescents Clinical Centers"
+     "beleg": "Optimal Treatment Strategies for use of Anti-Obesity Medications (AOMs) in Children and Adolescents Clinical Centers"
     },
     {
      "titel": "Optimal Treatment Strategies for use of Anti-Obesity Medications (AOMs) in Children and Adolescents Research Coordinating Center (U24 Clinical Trial Not Allowed)",
@@ -232,7 +241,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Anti-Obesity Medications (AOMs) in Children and Adolescents Research Coordinating Center"
+     "beleg": "Optimal Treatment Strategies for use of Anti-Obesity Medications (AOMs) in Children and Adolescents Research Coordinating Center"
     },
     {
      "titel": "Nutrition Obesity Research Centers (NORCs) (P30 Clinical Trial Optional)",
@@ -256,7 +265,7 @@
    "slug": "mental",
    "name": "Psychische Gesundheit",
    "domain": "mental.m-vf.de",
-   "anzahl": 4,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)",
@@ -265,7 +274,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI)"
+     "beleg": "Older Adults Living with Serious Mental Illness (SMI)"
     },
     {
      "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
@@ -274,16 +283,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Access and Quality of Empirically-Supported Practices for Youth Mental Health"
-    },
-    {
-     "titel": "HEAL Initiative: Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)",
-     "frist": "2027-01-26",
-     "url": "https://www.grants.gov/search-results-detail/360048",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers"
+     "beleg": "Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
     },
     {
      "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
@@ -292,7 +292,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center"
+     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery"
     }
    ]
   },
@@ -321,31 +321,22 @@
      "beleg": "Cancer Prevention and Control Clinical Trials Grant Program"
     },
     {
-     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
-     "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/360606",
+     "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/356690",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Glioblastoma Therapeutics Network (GTN)"
+     "beleg": "expand cancer screening and preventive services"
     },
     {
-     "titel": "DoW Breast Cancer, Clinical Research Extension Award",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/363671",
-     "quelle": "grants.gov (DOD-AMRAA)",
+     "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
+     "frist": "2027-01-25",
+     "url": "https://www.grants.gov/search-results-detail/360393",
+     "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
-    },
-    {
-     "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/363670",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Breakthrough Award"
+     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure"
     },
     {
      "titel": "DoW Melanoma Research Program Team Science Award",
@@ -366,13 +357,22 @@
      "beleg": "DoW Melanoma Research Program Survivorship Research Award"
     },
     {
-     "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/356690",
-     "quelle": "grants.gov (HHS-NIH11)",
+     "titel": "DoW Breast Cancer, Clinical Research Extension Award",
+     "frist": "2026-11-18",
+     "url": "https://www.grants.gov/search-results-detail/363671",
+     "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "expand cancer screening and preventive services"
+     "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
+    },
+    {
+     "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
+     "frist": "2026-11-18",
+     "url": "https://www.grants.gov/search-results-detail/363670",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2"
     }
    ]
   },
