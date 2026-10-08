@@ -12,7 +12,7 @@
    "slug": "versorgungsforschung",
    "name": "Versorgungsforschung",
    "domain": "wissen.m-vf.de",
-   "anzahl": 3,
+   "anzahl": 4,
    "ausschreibungen": [
     {
      "titel": "Förderbekanntmachung Versorgungsforschung zum themenspezifischen Bereich",
@@ -40,6 +40,15 @@
      "land": "DE",
      "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
      "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
+    },
+    {
+     "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
+     "frist": "2026-10-28",
+     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-11-bekanntmachung-secure-processing-environments.html",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
+     "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
     }
    ]
   },
@@ -54,17 +63,8 @@
    "slug": "ki-gesundheit",
    "name": "Digitalisierung, KI & Gesundheit",
    "domain": "ki.m-vf.de",
-   "anzahl": 8,
+   "anzahl": 7,
    "ausschreibungen": [
-    {
-     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357273",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
-    },
     {
      "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
      "frist": "2026-10-28",
@@ -75,13 +75,22 @@
      "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
     },
     {
+     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357273",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
+    },
+    {
      "titel": "Development and Testing of a Multi-use Frameworks Playbook for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (U01 Clinical Trial Not Allowed)",
      "frist": "2026-10-09",
      "url": "https://www.grants.gov/search-results-detail/359271",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data"
+     "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
     },
     {
      "titel": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (UG3/UH3, Clinical Trial Optional)",
@@ -99,7 +108,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships... Precision Medicine with AI"
+     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships"
     },
     {
      "titel": "Advanced Development of Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
@@ -118,15 +127,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Sustained Support for Informatics Technologies for Cancer Research and Management"
-    },
-    {
-     "titel": "Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed)",
-     "frist": "2026-10-19",
-     "url": "https://www.grants.gov/search-results-detail/359123",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "CEED Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All"
     }
    ]
   },
@@ -150,7 +150,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Older Adults Living with Serious Mental Illness (SMI)"
+     "beleg": "Interventions for Older Adults Living with Serious Mental Illness (SMI)"
     }
    ]
   },
@@ -172,17 +172,8 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 4,
+   "anzahl": 3,
    "ausschreibungen": [
-    {
-     "titel": "HEAL Initiative: Whole Joint Health Program (R61/R33 Clinical Trial Required)",
-     "frist": "2026-10-30",
-     "url": "https://www.grants.gov/search-results-detail/361304",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "HEAL Initiative: Whole Joint Health Program"
-    },
     {
      "titel": "DoW Arthritis Clinical Research Award",
      "frist": "2026-10-22",
@@ -193,6 +184,15 @@
      "beleg": "DoW Arthritis Clinical Research Award"
     },
     {
+     "titel": "HEAL Initiative: Whole Joint Health Program (R61/R33 Clinical Trial Required)",
+     "frist": "2026-10-30",
+     "url": "https://www.grants.gov/search-results-detail/361304",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "HEAL Initiative: Whole Joint Health Program"
+    },
+    {
      "titel": "DoW Orthopaedic, Clinical Research Award",
      "frist": "2026-11-18",
      "url": "https://www.grants.gov/search-results-detail/362524",
@@ -200,15 +200,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "DoW Orthopaedic, Clinical Research Award"
-    },
-    {
-     "titel": "Long-term health outcomes of people living with spina bifida",
-     "frist": "2026-10-26",
-     "url": "https://www.grants.gov/search-results-detail/361002",
-     "quelle": "grants.gov (HHS-CDC-NCBDDD)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Long-term health outcomes of people living with spina bifida"
     }
    ]
   },
@@ -274,7 +265,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Older Adults Living with Serious Mental Illness (SMI)"
+     "beleg": "Interventions for Older Adults Living with Serious Mental Illness (SMI)"
     },
     {
      "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
@@ -292,7 +283,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery"
+     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR)"
     }
    ]
   },
@@ -330,31 +321,13 @@
      "beleg": "expand cancer screening and preventive services"
     },
     {
-     "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
-     "frist": "2027-01-25",
-     "url": "https://www.grants.gov/search-results-detail/360393",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure"
-    },
-    {
-     "titel": "DoW Melanoma Research Program Team Science Award",
-     "frist": "2026-10-14",
-     "url": "https://www.grants.gov/search-results-detail/362242",
+     "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
+     "frist": "2026-11-18",
+     "url": "https://www.grants.gov/search-results-detail/363670",
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Melanoma Research Program Team Science Award"
-    },
-    {
-     "titel": "DoW Melanoma Research Program Survivorship Research Award",
-     "frist": "2026-10-14",
-     "url": "https://www.grants.gov/search-results-detail/362246",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Melanoma Research Program Survivorship Research Award"
+     "beleg": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2"
     },
     {
      "titel": "DoW Breast Cancer, Clinical Research Extension Award",
@@ -366,13 +339,31 @@
      "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
     },
     {
-     "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
+     "titel": "DoW Rare Cancers Idea Development Award",
      "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/363670",
+     "url": "https://www.grants.gov/search-results-detail/362849",
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2"
+     "beleg": "DoW Rare Cancers Idea Development Award"
+    },
+    {
+     "titel": "DoW Melanoma Research Program Survivorship Research Award",
+     "frist": "2026-10-14",
+     "url": "https://www.grants.gov/search-results-detail/362246",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Melanoma Research Program Survivorship Research Award"
+    },
+    {
+     "titel": "DoW Melanoma Research Program Team Science Award",
+     "frist": "2026-10-14",
+     "url": "https://www.grants.gov/search-results-detail/362242",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Melanoma Research Program Team Science Award"
     }
    ]
   },
