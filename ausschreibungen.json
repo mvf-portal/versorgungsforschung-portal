@@ -1,9 +1,9 @@
 {
- "stand": "05.10.2026",
+ "stand": "08.10.2026",
  "quellen": {
   "Innovationsfonds": 3,
   "Bund": 68,
-  "grants.gov": 319,
+  "grants.gov": 312,
   "DFG": 7
  },
  "warnungen": [],
@@ -63,17 +63,8 @@
    "slug": "ki-gesundheit",
    "name": "Digitalisierung, KI & Gesundheit",
    "domain": "ki.m-vf.de",
-   "anzahl": 8,
+   "anzahl": 7,
    "ausschreibungen": [
-    {
-     "titel": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)",
-     "frist": "2026-10-06",
-     "url": "https://www.grants.gov/search-results-detail/359252",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Application of Digital Health Technology to the Management of Type 2 Diabetes"
-    },
     {
      "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
      "frist": "2026-10-28",
@@ -99,7 +90,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI)"
+     "beleg": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data"
     },
     {
      "titel": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (UG3/UH3 Clinical Trial Optional)",
@@ -108,7 +99,25 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data"
+     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships"
+    },
+    {
+     "titel": "Advanced Development of Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
+     "frist": "2026-10-19",
+     "url": "https://www.grants.gov/search-results-detail/359855",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Advanced Development of Informatics Technologies for Cancer Research and Management"
+    },
+    {
+     "titel": "Sustained Support for Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
+     "frist": "2026-10-19",
+     "url": "https://www.grants.gov/search-results-detail/359853",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Sustained Support for Informatics Technologies for Cancer Research and Management"
     },
     {
      "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
@@ -118,24 +127,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
-    },
-    {
-     "titel": "Advanced Development of Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
-     "frist": "2026-10-19",
-     "url": "https://www.grants.gov/search-results-detail/359855",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Informatics Technologies for Cancer Research and Management"
-    },
-    {
-     "titel": "Sustained Support for Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
-     "frist": "2026-10-19",
-     "url": "https://www.grants.gov/search-results-detail/359853",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Informatics Technologies for Cancer Research and Management"
     }
    ]
   },
@@ -159,7 +150,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI)"
+     "beleg": "Interventions for Older Adults Living with Serious Mental Illness (SMI)"
     }
    ]
   },
@@ -181,17 +172,8 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 4,
+   "anzahl": 3,
    "ausschreibungen": [
-    {
-     "titel": "HEAL Initiative: Whole Joint Health Program (R61/R33 Clinical Trial Required)",
-     "frist": "2026-10-30",
-     "url": "https://www.grants.gov/search-results-detail/361304",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "HEAL Initiative: Whole Joint Health Program"
-    },
     {
      "titel": "DoW Arthritis Clinical Research Award",
      "frist": "2026-10-22",
@@ -202,6 +184,15 @@
      "beleg": "DoW Arthritis Clinical Research Award"
     },
     {
+     "titel": "HEAL Initiative: Whole Joint Health Program (R61/R33 Clinical Trial Required)",
+     "frist": "2026-10-30",
+     "url": "https://www.grants.gov/search-results-detail/361304",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "HEAL Initiative: Whole Joint Health Program"
+    },
+    {
      "titel": "DoW Orthopaedic, Clinical Research Award",
      "frist": "2026-11-18",
      "url": "https://www.grants.gov/search-results-detail/362524",
@@ -209,15 +200,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "DoW Orthopaedic, Clinical Research Award"
-    },
-    {
-     "titel": "Long-term health outcomes of people living with spina bifida",
-     "frist": "2026-10-26",
-     "url": "https://www.grants.gov/search-results-detail/361002",
-     "quelle": "grants.gov (HHS-CDC-NCBDDD)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Long-term health outcomes of people living with spina bifida"
     }
    ]
   },
@@ -235,15 +217,6 @@
    "anzahl": 3,
    "ausschreibungen": [
     {
-     "titel": "Nutrition Obesity Research Centers (NORCs) (P30 Clinical Trial Optional)",
-     "frist": "2026-10-20",
-     "url": "https://www.grants.gov/search-results-detail/360544",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Nutrition Obesity Research Centers (NORCs) (P30 Clinical Trial Optional)"
-    },
-    {
      "titel": "Optimal Treatment Strategies for use of Anti-Obesity Medications (AOMs) in Children and Adolescents Clinical Centers (U01 Clinical Trial Required)",
      "frist": "2026-10-09",
      "url": "https://www.grants.gov/search-results-detail/360387",
@@ -260,6 +233,15 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Optimal Treatment Strategies for use of Anti-Obesity Medications (AOMs) in Children and Adolescents Research Coordinating Center"
+    },
+    {
+     "titel": "Nutrition Obesity Research Centers (NORCs) (P30 Clinical Trial Optional)",
+     "frist": "2026-10-20",
+     "url": "https://www.grants.gov/search-results-detail/360544",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Nutrition Obesity Research Centers (NORCs)"
     }
    ]
   },
@@ -274,17 +256,8 @@
    "slug": "mental",
    "name": "Psychische Gesundheit",
    "domain": "mental.m-vf.de",
-   "anzahl": 5,
+   "anzahl": 6,
    "ausschreibungen": [
-    {
-     "titel": "DoW Traumatic Brain Injury and Psychological Health, Health Services Research Award",
-     "frist": "2026-10-15",
-     "url": "https://www.grants.gov/search-results-detail/362271",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Traumatic Brain Injury and Psychological Health, Health Services Research Award"
-    },
     {
      "titel": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)",
      "frist": "2026-10-15",
@@ -292,7 +265,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI)"
+     "beleg": "Serious Mental Illness (SMI)"
     },
     {
      "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
@@ -301,7 +274,34 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Empirically-Supported Practices for Youth Mental Health"
+     "beleg": "Youth Mental Health"
+    },
+    {
+     "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
+     "frist": "2027-01-26",
+     "url": "https://www.grants.gov/search-results-detail/360366",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery"
+    },
+    {
+     "titel": "HEAL Initiative: Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)",
+     "frist": "2027-01-26",
+     "url": "https://www.grants.gov/search-results-detail/360048",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Integrative Management of Chronic Pain and OUD for Whole Recovery"
+    },
+    {
+     "titel": "DoW Traumatic Brain Injury and Psychological Health, Health Services Research Award",
+     "frist": "2026-10-15",
+     "url": "https://www.grants.gov/search-results-detail/362271",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Psychological Health, Health Services Research Award"
     },
     {
      "titel": "DoW Traumatic Brain Injury and Psychological Health, Clinical Trial Award",
@@ -310,16 +310,7 @@
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Traumatic Brain Injury and Psychological Health, Clinical Trial Award"
-    },
-    {
-     "titel": "DoW Traumatic Brain Injury and Psychological Health, Translational Research Award",
-     "frist": "2026-10-15",
-     "url": "https://www.grants.gov/search-results-detail/362272",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Traumatic Brain Injury and Psychological Health, Translational Research Award"
+     "beleg": "Psychological Health, Clinical Trial Award"
     }
    ]
   },
@@ -357,22 +348,22 @@
      "beleg": "expand cancer screening and preventive services"
     },
     {
-     "titel": "DoW Pancreatic Cancer Research Program, Translational Research Partnership Award",
-     "frist": "2026-10-07",
-     "url": "https://www.grants.gov/search-results-detail/362191",
-     "quelle": "grants.gov (DOD-AMRAA)",
+     "titel": "Assay Validation of High Quality Markers for Clinical Studies in Cancer (UH2/UH3 Clinical Trial Not Allowed)",
+     "frist": "2026-10-14",
+     "url": "https://www.grants.gov/search-results-detail/356718",
+     "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Pancreatic Cancer Research Program, Translational Research Partnership Award"
+     "beleg": "Clinical Studies in Cancer"
     },
     {
-     "titel": "DoW Pancreatic Cancer Research Program, Idea Development Award",
-     "frist": "2026-10-07",
-     "url": "https://www.grants.gov/search-results-detail/362190",
-     "quelle": "grants.gov (DOD-AMRAA)",
+     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
+     "frist": "2027-01-11",
+     "url": "https://www.grants.gov/search-results-detail/360606",
+     "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Pancreatic Cancer Research Program, Idea Development Award"
+     "beleg": "Glioblastoma Therapeutics Network"
     },
     {
      "titel": "DoW Breast Cancer, Clinical Research Extension Award",
@@ -381,7 +372,7 @@
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Breast Cancer, Clinical Research Extension Award"
+     "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
     },
     {
      "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
@@ -390,16 +381,16 @@
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Breast Cancer, Breakthrough Award"
+     "beleg": "DoW Breast Cancer, Breakthrough Award"
     },
     {
-     "titel": "DoW Peer Reviewed Cancer, Clinical Trial Award",
-     "frist": "2026-10-05",
-     "url": "https://www.grants.gov/search-results-detail/362268",
+     "titel": "DoW Melanoma Research Program Team Science Award",
+     "frist": "2026-10-14",
+     "url": "https://www.grants.gov/search-results-detail/362242",
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Peer Reviewed Cancer, Clinical Trial Award"
+     "beleg": "DoW Melanoma Research Program Team Science Award"
     }
    ]
   },
@@ -407,7 +398,7 @@
    "slug": "kardio",
    "name": "Kardiologie",
    "domain": "kardio.m-vf.de",
-   "anzahl": 3,
+   "anzahl": 4,
    "ausschreibungen": [
     {
      "titel": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention (UG3/UH3 Clinical Trial Optional)",
@@ -416,7 +407,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Stroke Treatment, Recovery, and Prevention"
+     "beleg": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
     },
     {
      "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R61/R33 Clinical Trial Required)",
@@ -425,7 +416,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Therapeutics and/or Diagnostics for HLBS Disorders"
+     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R61/R33 Clinical Trial Required)"
     },
     {
      "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R33 CT Required)",
@@ -434,7 +425,16 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Therapeutics and/or Diagnostics for HLBS Disorders"
+     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R33 CT Required)"
+    },
+    {
+     "titel": "NHLBI Clinical Trial Pilot Studies (R34 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357800",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "NHLBI Clinical Trial Pilot Studies (R34 Clinical Trial Optional)"
     }
    ]
   },
@@ -442,17 +442,8 @@
    "slug": "diabetes",
    "name": "Diabetes",
    "domain": "diabetes.m-vf.de",
-   "anzahl": 2,
+   "anzahl": 1,
    "ausschreibungen": [
-    {
-     "titel": "Advancing Research on the Application of Digital Health Technology to the Management of Type 2 Diabetes (R01- Clinical Trail Required)",
-     "frist": "2026-10-06",
-     "url": "https://www.grants.gov/search-results-detail/359252",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Application of Digital Health Technology to the Management of Type 2 Diabetes"
-    },
     {
      "titel": "Single Source for the Continuation of the Epidemiology of Diabetes Interventions and Complications (EDIC) Study Research Center (Collaborative U01 Clinical Trial Not Allowed)",
      "frist": "2026-11-09",

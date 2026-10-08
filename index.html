@@ -1475,78 +1475,87 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "7. Okt. 2026, 06:00 Uhr";
+const SNAP_DATE = "8. Okt. 2026, 06:00 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"Neth Heart J", year:"2026", pmid:"42837105",
-    author:"Aertsen-van der Kuip MSA et al.", pubdate:"06.10.2026",
+    journal:"Nurs Crit Care", year:"2026", pmid:"42841439",
+    author:"Wefer F et al.", pubdate:"Nov. 2026",
+    added:"07.10.2026",
+    title:"Durst bei Herzinsuffizienz-Patienten auf Transplantwarteliste",
+    sum:"Qualitative Mischmethod-Studie mit 10 Patienteninterviews und 2 Fokusgruppen (5 Pflegekräfte) sowie 59 Pflegekräfte-Befragung zur Erfahrung mit Durst bei hochgradig Herzkranken.",
+    result:"Patienten berichten heterogenes Durstserleben (mild bis schwer). Pflege hält es für relevant, nutzt aber sehr unterschiedliche Assessmentstrategien; &lt;50% bewerten Durst regelmäßig. Patienten und Pflegekräfte wünschen standardisierte Beratung.",
+    transfer:"Deutschland (Ruhr-Universität Bochum, Bad Oeynhausen), direkt übertragbar"
+  },
+  {
+    journal:"Postgrad Med J", year:"2026", pmid:"42842596",
+    author:"Büyükkaya MŞ et al.", pubdate:"07.10.2026",
+    added:"07.10.2026",
+    title:"Ärztevariabilität dominiert Schicht-Effekte in der ED",
+    sum:"Retrospektive Beobachtungsstudie zu diagnostischer Ressourcentechnik (Labor, Bildgebung, Konsile) bei 11.032 niedrig-akuten ED-Besuchen in der Türkei nach Schichtzeit und Arzt.",
+    result:"Laborquoten 9,5% (p=0,997), Bildgebung 12,6–13,5% (p=0,485) zeigen keine signifikante Schicht-Variation. Arzt-Level-Variation deutlich größer: Labor 3,5–21,5%, Bildgebung 6,3–28,7%. Ärztliche Spezialisierung dominiert.",
+    transfer:"Türkei, aber Frage zur Ärzte-Variabilität und Ressourcennutzung systemunabhängig"
+  },
+  {
+    journal:"Singapore Med J", year:"2026", pmid:"42839708",
+    author:"Koh JJE et al.", pubdate:"05.10.2026",
+    added:"07.10.2026",
+    title:"Primary care accessibility reduces inappropriate ED attendance",
+    sum:"Retrospektive Kohortenstudie untersuchte, wie Erreichbarkeit und Verfügbarkeit von Hausarztpraxen die unangemessene Notfallaufnahmebesuche (12,5% von 135.838 Besuchen) beeinflussen.",
+    result:"Reisezeit &gt;5 Min zu nächster Praxis erhöhte unangemessene ED-Besuche um 13–24%, Reisedistanz &gt;1 km um 10–33%. Mehr als 3 Praxen im 1-km-Radius reduzierten unangemessene Besuche um ≥12%.",
+    transfer:"Singapur, aber Fragestellung systemunabhängig zur Primärversorgung"
+  },
+  {
+    journal:"J Hum Hypertens", year:"2026", pmid:"42829395",
+    author:"Kamijima J et al.", pubdate:"03.10.2026",
+    added:"03.10.2026",
+    title:"Stressabbau senkt Blutdruck bei Normotensiven",
+    sum:"Systematisches Review und Metaanalyse von 22 RCTs (n=3.089) zu Stressmanagement-Interventionen und Blutdruckveränderungen bei gesunden Erwachsenen ohne Hypertonie.",
+    result:"Mind-Body-Übung: −2,17 mmHg systolisch (95% KI −3,29 bis −1,05), −1,69 mmHg diastolisch; Meditation: −1,49/−1,00 mmHg; Relaxation: −4,76/−1,71 mmHg. Primärprävention möglich.",
+    transfer:"Internationale Datenbasis, systemunabhängige Fragestellung zu Prävention"
+  },
+  {
+    journal:"Gerontologist", year:"2026", pmid:"42830447",
+    author:"Moczygemba W et al.", pubdate:"03.10.2026",
+    added:"05.10.2026",
+    title:"Person-zentrierte Demenzpflege durch Coaching umsetzen",
+    sum:"Pre-post-Studie zur Implementierung des Care Community Coaching Program (CCCP) in 38 Langzeitpflegeeinrichtungen Ohios zur Umsetzung von Dementia Care Practice Recommendations.",
+    result:"Signifikante Verbesserungen in 8 von 9 Leitlinien-Bereichen für personenzentrierte Versorgung; Baseline-Implementationsrate 61,8%, Arbeitskräfte-Praktiken 78,3%. Barriers und Facilitators dokumentiert.",
+    transfer:"USA, aber Fragestellung zur Implementierungsforschung systemübergreifend relevant"
+  },
+  {
+    journal:"JAMA Netw Open", year:"2026", pmid:"42837155",
+    author:"Jiang C et al.", pubdate:"01.10.2026",
     added:"06.10.2026",
-    title:"Palliative care in chronic heart failure in the Netherlands",
-    sum:"Befragung von 120 niederländischen Fachleuten zur Implementierung von Palliativversorgung und Advance Care Planning bei chronischer Herzinsuffizienz.",
-    result:"97% der Fachleute bewerteten Palliativversorgung als (sehr) wichtig, aber nur etwa ein Drittel bot diese regelmäßig an. 78% konnten Palliativbedarf erkennen, nur 23% fühlten sich ausreichend qualifiziert. Hauptprobleme: fehlende Fähigkeiten und Zeitmangel.",
-    transfer:"Niederlande, Sozialversicherungssystem, direkt übertragbar auf Deutschland"
+    title:"Ärzt- und Praxis-Level-Variation in Studienteilnahme bei Krebs",
+    sum:"Kohortenstudie von 205.743 Patienten mit fortgeschrittenem Krebs (2011–2024) zur Klinische-Studien-Teilnahme in 1.664 Arzt-Praxen, 107 Zentren (Flatiron-Daten).",
+    result:"Studienteilnahme 5,2% (2011: 3,9%, 2024: 6,8%). 23,4% Ärzte mit 83,6% Einschlüssen; 19,6% Praxen mit 80,5% der Patienten. Arzt- (12,3%) und Praxis-Level (15,1%) erklären mehr Variation als beobachtbare Patientenfaktoren (11,4%).",
+    transfer:"USA, aber Fragestellung zu System- und Anbieter-Barrieren in der Forschung systemunabhängig"
   },
   {
-    journal:"Int Wound J", year:"2026", pmid:"42834577",
-    author:"Stücker M et al.", pubdate:"Okt. 2026",
-    added:"06.10.2026",
-    title:"Unterversorgung mit Kompressionstherapie bei Ulcus cruris venosum",
-    sum:"Retrospektive Kohortenanalyse von Routinedaten von 3,35 Millionen Versicherten zu Häufigkeit und Determinanten der Kompressionstherapie bei venösen Beindoloren und Ulzera.",
-    result:"Prävalenz: 0,50% für Ulcus cruris venosum (n=16.615), 7,27% für chronische Venenerkrankung (n=243.681). Über 5 Jahre: 75,85% mit Ulcus erhielten Kompression, aber 24,15% nicht – obwohl Kompression leitliniengerecht ist. Multimorbidität war höher bei Behandelten.",
-    transfer:"Deutsche Routinedaten aus der gesetzlichen Krankenversicherung"
-  },
-  {
-    journal:"JAMA Netw Open", year:"2026", pmid:"42837152",
-    author:"Austin EJ et al.", pubdate:"01.10.2026",
-    added:"06.10.2026",
-    title:"Reisebelastungen bei Methadon-Ambulanzbesuchen",
-    sum:"Mixed-Methods-Studie (Befragung + qualitative Interviews) zu Reiseerfahrungen von 98 Patienten an Opioid-Behandlungsprogrammen in Washington State.",
-    result:"Mittlere Reisedauer 82,5 Min (Spannweite 10–330 Min) und durchschnittliche Kosten 15,80 USD pro Besuch. 55,1% fuhren selbst, 21,4% wurden gefahren, 12,3% nutzten ÖPNV. Kernproblem: Unpredictable Wartezeiten und Konflikte mit Beruf/Familie beeinträchtigen Adhärenz.",
-    transfer:"USA-Kontext, aber Problematik der Behandlungszugang für marginalisierte Gruppen systemübergreifend"
-  },
-  {
-    journal:"J Gen Intern Med", year:"2026", pmid:"42816723",
-    author:"Burke RE et al.", pubdate:"30.09.2026",
-    added:"30.09.2026",
-    title:"Qualität der Pflegeheimversorgung für Veteranen nach Hospitalisierung",
-    sum:"Retrospektive Kohortenstudie zur Verfügbarkeit und Nutzung hochqualitativer Pflegeheime (SNF) durch ältere Veteranen nach stationärer Aufnahme.",
-    result:"Von 926.860 Veteranen ≥66 Jahre nutzten &gt;92% private Medicare-Pflegeheime. Nur 34,4% wählten das bestbewertete SNF in der Nähe, 15,4% wählten das schlechteste. 64,5% hätten Zugang zu höher bewerteten Einrichtungen gehabt; 43,7% zu 5+ besseren Alternativen.",
-    transfer:"USA-System, aber Frage der Qualitätssteuerung und Patientenwahl systemübergreifend relevant"
-  },
-  {
-    journal:"Am J Occup Ther", year:"2026", pmid:"42813599",
-    author:"Donnelly MR et al.", pubdate:"30.09.2026",
-    added:"30.09.2026",
-    title:"Partizipation nach Schlaganfall im jungen Erwachsenenalter",
-    sum:"Scoping Review von 15 Studien zur Partizipation junger Erwachsener (18–45 Jahre) nach Schlaganfall in Rollen und Aktivitäten des Erwachsenenlebens.",
-    result:"Schlaganfall führt zu Unterbrechung der beruflichen und sozialen Laufbahn; multi-dimensionale Effekte auf Rollen (Partner, Eltern), Bildung und Karriere. Rehabilitation fokussiert typischerweise auf motorische Funktionen, adressiert aber nicht die entwicklungsspezifischen Bedürfnisse junger Erwachsener.",
-    transfer:"Qualitative HSR-Synthese, Erkenntnisse zur Versorgungsplanung systemunabhängig"
-  },
-  {
-    journal:"Europace", year:"2026", pmid:"42809232",
-    author:"Kazi K et al.", pubdate:"02.09.2026",
-    added:"29.09.2026",
-    title:"Atriale Kardiomyopathie und klinische Langzeitfolgen",
-    sum:"Kohortenstudie zu Assoziationen zwischen echokardiographischen Merkmalen atrialerKardiomyopathie und Inzidenz von Vorhofflimmern, Herzinsuffizienz und Schlaganfall. (Abstract ohne konkrete Ergebnisse verfügbar)",
-    result:"Abstract enthält keine benennbaren Zahlen oder Ergebnisse; nur Studiendesign beschrieben. Ausschluss.",
-    transfer:"Ausgeschlossen"
+    journal:"Reports (MDPI)", year:"2026", pmid:"42784021",
+    author:"Cirkel LL et al.", pubdate:"02.09.2026",
+    added:"24.09.2026",
+    title:"Verweildauer bei Mundkrebs in Deutschland",
+    sum:"Retrospektive Multizenter-Analyse von 3.957 Krebshospitalisierungen (2019–2024) aus 34 deutschen Krankenhäusern zu Verweildauer und Einflussfaktoren.",
+    result:"Mediane Verweildauer 6 Tage (IQR 3–13), Mittel 10,2 Tage. 49,4% ≥7 Tage, 23,5% ≥14 Tage. Alter &gt;80 Jahre: Rate Ratio 1,17 (95% KI 1,13–1,21); hohe Komorbiditätslast: RR 1,58 (1,54–1,63); Bluttransfusion RR 1,80, komplexe Intensivbehandlung RR 1,70.",
+    transfer:"Deutsche Routinedaten, 49 Krankenhäuser, direkt übertragbar"
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
 
 // Offene Foerderausschreibungen zum Thema — taeglich von scripts/radar_hinweis.py
 // === RADAR-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const RADAR_STAND = "05.10.2026";
+const RADAR_STAND = "08.10.2026";
 const RADAR_URL = "https://wissen.m-vf.de/ausschreibungen.html#versorgungsforschung";
 const RADAR_EIGENES = 0;
 const RADAR_ZUHAUSE = true;
-const RADAR_FRISTEN = [["2026-10-20", "2026-10-20", "2026-12-31", "2026-10-28"], [], ["2026-10-06", "2026-10-28", "2026-10-09", "2026-10-19", "2026-10-19", "2027-01-07", "2026-10-19", "2026-10-19"], [], ["2026-10-15"], [], [], ["2026-10-30", "2026-10-22", "2026-11-18", "2026-10-26"], [], ["2026-10-20", "2026-10-09", "2026-10-09"], [], ["2026-10-15", "2026-10-15", "2027-01-07", "2026-10-15", "2026-10-15"], ["2027-01-07", "2027-01-07", "2027-01-07", "2026-10-07", "2026-10-07", "2026-11-18", "2026-11-18", "2026-10-05"], ["2026-11-19", "2027-01-07", "2027-01-07"], ["2026-10-06", "2026-11-09"]];
+const RADAR_FRISTEN = [["2026-10-20", "2026-10-20", "2026-12-31", "2026-10-28"], [], ["2026-10-28", "2026-10-09", "2026-10-19", "2026-10-19", "2026-10-19", "2026-10-19", "2027-01-07"], [], ["2026-10-15"], [], [], ["2026-10-22", "2026-10-30", "2026-11-18"], [], ["2026-10-09", "2026-10-09", "2026-10-20"], [], ["2026-10-15", "2027-01-07", "2027-01-26", "2027-01-26", "2026-10-15", "2026-10-15"], ["2027-01-07", "2027-01-07", "2027-01-07", "2026-10-14", "2027-01-11", "2026-11-18", "2026-11-18", "2026-10-14"], ["2026-11-19", "2027-01-07", "2027-01-07", "2027-01-07"], ["2026-11-09"]];
 // === RADAR-BLOCK-ENDE ===
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "07.10.2026";
+const NEWS_STAND = "08.10.2026";
 const NEWS = [
   {titel:"Primärversorgung 2030: Anmeldung zum 15. MVF-Fachkongress läuft", datum:"2026-10-05", url:"https://www.monitor-versorgungsforschung.de/news/primaerversorgung-2030-anmeldung-zum-15-mvf-fachkongress-laeuft/"},
   {titel:"25. Kongress für Versorgungsforschung beendet: DNVF zieht Bilanz", datum:"2026-09-28", url:"https://www.monitor-versorgungsforschung.de/news/25-kongress-fuer-versorgungsforschung-beendet-dnvf-zieht-bilanz/"},
