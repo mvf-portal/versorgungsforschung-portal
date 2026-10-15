@@ -1,10 +1,10 @@
 {
- "stand": "12.10.2026",
+ "stand": "15.10.2026",
  "quellen": {
   "Innovationsfonds": 3,
-  "Bund": 67,
-  "grants.gov": 319,
-  "DFG": 7
+  "Bund": 66,
+  "grants.gov": 322,
+  "DFG": 8
  },
  "warnungen": [],
  "themen": [
@@ -12,7 +12,7 @@
    "slug": "versorgungsforschung",
    "name": "Versorgungsforschung",
    "domain": "wissen.m-vf.de",
-   "anzahl": 3,
+   "anzahl": 4,
    "ausschreibungen": [
     {
      "titel": "Förderbekanntmachung Versorgungsforschung zum themenspezifischen Bereich",
@@ -40,6 +40,15 @@
      "land": "DE",
      "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
      "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
+    },
+    {
+     "titel": "DoW Traumatic Brain Injury and Psychological Health, Health Services Research Award",
+     "frist": "2026-10-15",
+     "url": "https://www.grants.gov/search-results-detail/362271",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Health Services Research Award"
     }
    ]
   },
@@ -84,6 +93,15 @@
      "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data"
     },
     {
+     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357273",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
+    },
+    {
      "titel": "Advanced Development of Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
      "frist": "2026-10-19",
      "url": "https://www.grants.gov/search-results-detail/359855",
@@ -100,15 +118,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Informatics Technologies for Cancer Research and Management"
-    },
-    {
-     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357273",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
     }
    ]
   },
@@ -123,7 +132,7 @@
    "slug": "longevity",
    "name": "Gesundes Altern & Longevity",
    "domain": "longevity.m-vf.de",
-   "anzahl": 1,
+   "anzahl": 2,
    "ausschreibungen": [
     {
      "titel": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)",
@@ -132,7 +141,16 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Interventions for Older Adults Living with Serious Mental Illness (SMI)"
+     "beleg": "Older Adults Living with Serious Mental Illness (SMI)"
+    },
+    {
+     "titel": "Seamless Early-Stage Clinical Drug Development (Phase 1 to 2a) for Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD) (UG3/UH3 Clinical Trial Required)",
+     "frist": "2026-11-19",
+     "url": "https://www.grants.gov/search-results-detail/357343",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD)"
     }
    ]
   },
@@ -157,15 +175,6 @@
    "anzahl": 5,
    "ausschreibungen": [
     {
-     "titel": "HEAL Initiative: Whole Joint Health Program (R61/R33 Clinical Trial Required)",
-     "frist": "2026-10-30",
-     "url": "https://www.grants.gov/search-results-detail/361304",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Whole Joint Health Program"
-    },
-    {
      "titel": "DoW Arthritis Clinical Research Award",
      "frist": "2026-10-22",
      "url": "https://www.grants.gov/search-results-detail/362175",
@@ -173,6 +182,15 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "DoW Arthritis Clinical Research Award"
+    },
+    {
+     "titel": "HEAL Initiative: Whole Joint Health Program (R61/R33 Clinical Trial Required)",
+     "frist": "2026-10-30",
+     "url": "https://www.grants.gov/search-results-detail/361304",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Whole Joint Health Program"
     },
     {
      "titel": "DoW Orthopaedic, Clinical Research Award",
@@ -228,7 +246,7 @@
    "slug": "mental",
    "name": "Psychische Gesundheit",
    "domain": "mental.m-vf.de",
-   "anzahl": 2,
+   "anzahl": 5,
    "ausschreibungen": [
     {
      "titel": "Advancing Research on Empirically-Supported Interventions for Older Adults Living with Serious Mental Illness (SMI) (R01 Clinical Trial Optional)",
@@ -246,7 +264,34 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Access and Quality of Empirically-Supported Practices for Youth Mental Health"
+     "beleg": "Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
+    },
+    {
+     "titel": "DoW Traumatic Brain Injury and Psychological Health, Health Services Research Award",
+     "frist": "2026-10-15",
+     "url": "https://www.grants.gov/search-results-detail/362271",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Traumatic Brain Injury and Psychological Health, Health Services Research Award"
+    },
+    {
+     "titel": "DoW Traumatic Brain Injury and Psychological Health, Clinical Trial Award",
+     "frist": "2026-10-15",
+     "url": "https://www.grants.gov/search-results-detail/362187",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Traumatic Brain Injury and Psychological Health, Clinical Trial Award"
+    },
+    {
+     "titel": "DoW Traumatic Brain Injury and Psychological Health, Translational Research Award",
+     "frist": "2026-10-15",
+     "url": "https://www.grants.gov/search-results-detail/362272",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Traumatic Brain Injury and Psychological Health, Translational Research Award"
     }
    ]
   },
@@ -263,7 +308,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
+     "beleg": "National Cancer Institute's Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
     },
     {
      "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
@@ -272,7 +317,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Glioblastoma Therapeutics Network (GTN)"
+     "beleg": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)"
     },
     {
      "titel": "Cancer Prevention and Control Clinical Trials Grant Program (R01 Clinical Trial Required)",
@@ -290,7 +335,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "expand cancer screening and preventive services"
+     "beleg": "Interventions to expand cancer screening and preventive services"
     },
     {
      "titel": "DoW Breast Cancer, Clinical Research Extension Award",
@@ -311,22 +356,22 @@
      "beleg": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2"
     },
     {
-     "titel": "DoW Melanoma Research Program Team Science Award",
-     "frist": "2026-10-14",
-     "url": "https://www.grants.gov/search-results-detail/362242",
-     "quelle": "grants.gov (DOD-AMRAA)",
+     "titel": "Advanced Development of Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
+     "frist": "2026-10-19",
+     "url": "https://www.grants.gov/search-results-detail/359855",
+     "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Melanoma Research Program Team Science Award"
+     "beleg": "Advanced Development of Informatics Technologies for Cancer Research and Management"
     },
     {
-     "titel": "DoW Melanoma Research Program Survivorship Research Award",
-     "frist": "2026-10-14",
-     "url": "https://www.grants.gov/search-results-detail/362246",
-     "quelle": "grants.gov (DOD-AMRAA)",
+     "titel": "Secondary Analysis and Integration of Existing Data to Elucidate Cancer Risk and Related Outcomes (R01 Clinical Trial Not Allowed)",
+     "frist": "2026-11-06",
+     "url": "https://www.grants.gov/search-results-detail/357204",
+     "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Melanoma Research Program Survivorship Research Award"
+     "beleg": "Secondary Analysis and Integration of Existing Data to Elucidate Cancer Risk and Related Outcomes"
     }
    ]
   },
@@ -343,7 +388,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Stroke Treatment, Recovery, and Prevention"
+     "beleg": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
     }
    ]
   },
