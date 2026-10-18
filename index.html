@@ -1865,62 +1865,71 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "17. Okt. 2026, 06:20 Uhr";
+const SNAP_DATE = "18. Okt. 2026, 06:20 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"Ann Rheum Dis", year:"2026", pmid:"42888164",
-    author:"van Tubergen A et al.", pubdate:"16.10.2026",
+    journal:"Br J Cancer", year:"2026", pmid:"42888204",
+    author:"Jashek-Ahmed F et al.", pubdate:"16.10.2026",
     added:"16.10.2026",
-    title:"ASAS-Kernsatz zur Assessmentierung axialer Spondyloarthritis",
-    sum:"Internationale Expertengruppe entwickelte per modifiziertem Delphi-Verfahren einen standardisierten Kernsatz von Assessmentdomänen und -instrumenten für die klinische Praxis.",
-    result:"Der Kernsatz wurde von der Mehrheit der ASAS-Mitglieder verabschiedet. Fünf Domänen für Routinevisiten (Krankheitsaktivität, Schmerz, periphere Manifestationen, extramuskuloskeletale Manifestationen, Therapieaspekte) mit je mindestens einem empfohlenen Instrument plus vier ergänzende Domänen für erweiterte Visiten (strukturelle Schäden, Funktionsfähigkeit, Komorbiditäten, Mobilität).",
-    transfer:"Internationaler Konsens, europäische Beteiligung, deutsches Rheumazentrum beteiligt"
+    title:"Wartezeiten und Verzögerungen bei Kopf-Hals-Krebs in England",
+    sum:"Britische Kohortenstudie mit verlinkten nationalen Datenregistern untersuchte Wartezeiten von Überweisung bis zur ersten Krebsbehandlung (Chirurgie oder Strahlenchemotherapie) bei 30.506 Kopf-Hals-Karzinom-Patienten.",
+    result:"43 % erlebten Behandlungsverzögerung (&gt;62 Tage), 11 % bei Chirurgie und 20 % bei (Chemo-)Strahlung &gt;90 Tage. Nicht-dringende Überweisung (30 % der Patienten) war stärkster Prädiktor für lange Verzögerung (aOR 4,07; 95 %-KI 3,54–4,68). Zusätzliche Risikofaktoren: initiale Bewertung in Nicht-Spezialist-Kliniken, Non-Oropharynx-Karzinome, höhere Deprivation.",
+    transfer:"England, NHS-System; Methodik zu Zugangssteuerung begrenzt übertragbar auf Deutschland."
   },
   {
-    journal:"BMC Rheumatol", year:"2026", pmid:"42881477",
-    author:"Reich A et al.", pubdate:"14.10.2026",
+    journal:"Ann Am Thorac Soc", year:"2026", pmid:"42885566",
+    author:"Melles MC et al.", pubdate:"16.10.2026",
     added:"16.10.2026",
-    title:"Depressive Symptome und Remission bei Psoriasis-Arthritis",
-    sum:"Deutsche Registerstudie untersuchte die Assoziation depressiver Symptome mit Remissionserreichung bei Patienten mit Psoriasis-Arthritis unter systemischer Therapie.",
-    result:"29 % der 1.888 Patienten berichteten moderate/schwere depressive Symptome (34 % Frauen, 23 % Männer). Höheres Wohlbefinden war mit Remission assoziiert (OR 1,06–1,14 pro 10-Punkt-Steigerung). Beide Geschlechter mit moderaten/schweren Symptomen erreichten Minimal Disease Activity und DAPSA-Remission weniger häufig; die Assoziation unterschied sich nicht signifikant nach Geschlecht.",
-    transfer:"Deutsche Routinedaten, ambulante rheumatologische Praxis"
+    title:"Konsensusdefinition schwere COPD: internationale Delphi-Studie",
+    sum:"Internationale modifizierte Delphi-Studie mit 55 COPD-Experten entwickelte Konsensusdefinition und minimales Diagnose-Set für schwere COPD sowie notwendige Arbeitsvorgänge.",
+    result:"Konsens in 46 von 67 Aussagen (Runde 1, 69 %) und 15 von 20 (Runde 2, 75 %). Schwere COPD definiert als persistierende Symptome/Funktionsbeeinträchtigung trotz optimaler Therapie mit mindestens einem Merkmal: schwere Atemwegsobstruktion, schwere Diffusionsstörung, schwere Überblähung, häufige Exazerbationen, chronische Ateminsuffizienz, pulmonale Hypertonie oder Kachexie. Standardisiertes Workup inkl. Patient-Reported Outcomes, Exazerbationen, Lungenfunktion, Blutgase, Imaging, kardiale Bewertung, Belastungstestung.",
+    transfer:"Internationale Konsensus-Studie mit 55 Experten; Definitionen für deutsches Versorgungssystem relevant."
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42870268",
-    author:"Momina AU et al.", pubdate:"13.10.2026",
-    added:"14.10.2026",
-    title:"Technische Effizienz öffentlicher Gesundheitseinrichtungen",
-    sum:"Datenabgrenzungsanalyse evaluierte die technische Effizienz von 100 öffentlichen Gesundheitseinrichtungen in Pakistan bei der Familienplanungsversorgung.",
-    result:"Die durchschnittliche Effizienzquote betrug 78 %. Basic Health Units und Rural Health Centers zeigten erhebliche Ressourcenoptimierungslücken. Eine negative Assoziation bestand zwischen der Anzahl alternativer Anbieter im Einzugsgebiet und der Effizienz, was die Bedeutung der Angebotsorientierung nach lokaler Nachfrage unterstreicht.",
-    transfer:"Nur bedingt: andere Ressourcenlage, Gesundheitssystem-Kontext unterscheidet sich grundlegend"
-  },
-  {
-    journal:"Orphanet J Rare Dis", year:"2026", pmid:"42881418",
-    author:"Brandt M et al.", pubdate:"12.10.2026",
-    added:"16.10.2026",
-    title:"Belastung von Eltern als Pflegende bei seltenen Kindererkrankungen",
-    sum:"Deutsche Querschnittstudie untersuchte Pflegbelastung bei 123 Eltern von Kindern mit seltenen Erkrankungen und identifizierte assoziierte Faktoren.",
-    result:"23 % berichteten depressive Symptome, 77 % mindestens einen unerfüllten Unterstützungsbedarf. Bei Kindern mit Pflegebedarf: 24 % mit hoher Pflegbelastung. Nach Adjustierung für multiple Tests zeigten sich bei niedrigerer pflegbezogener Lebensqualität, höherer Sozioökonomie, elterlichen depressiven Symptomen und niedriger Therapiezufriedenheit stärkste Assoziationen mit Pflegbelastung.",
-    transfer:"Deutsche Studie, spezialisierte Zentren und Patientenorganisationen"
-  },
-  {
-    journal:"Health Expect", year:"2026", pmid:"42886175",
-    author:"Fox J et al.", pubdate:"Okt. 2026",
-    added:"16.10.2026",
-    title:"Partizipative Forschung mit Betroffenen: Impact und Team-Dynamik",
-    sum:"Qualitative Fallstudie erforschte über sieben Jahre die Erfahrungen von Forschungsteams und Betroffenen-Panels bei partizipativ durchgeführter Forschung zur Psychoseprävention.",
-    result:"Vier Hauptthemen: Impact wurde als Lernprozess mit Friktionen beschrieben; Studienteam schätzte Expertise der Betroffenen; Herausforderungen waren mangelnde Schulung zur Partizipation, Wechsel in Panelstruktur, COVID-bedingte Online-Verlagerung und Zweifel an Relevanzbezug. Regelmäßige reflexive Lernprozesse mit offenem Feedback waren zentral für positive Inklusionskultur.",
-    transfer:"UK-Studie, Methode aber international übertragbar für Partizipationsforschung"
-  },
-  {
-    journal:"Front Med (Lausanne)", year:"2026", pmid:"42876879",
-    author:"Otto R et al.", pubdate:"30.09.2026",
+    journal:"J Med Internet Res", year:"2026", pmid:"42879747",
+    author:"Powell M et al.", pubdate:"15.10.2026",
     added:"15.10.2026",
-    title:"Gesundheitskompetenz und Gesundheit bei Pflegestudierenden",
-    sum:"Longitudinale deutsche Kohortenstudie verfolgten 128 Auszubildende und 43 Studierende im Pflegebereich über ein Jahr und untersuchten Gesundheitskompetenz, Gesundheitsstatus und Gesundheitsverhalten.",
-    result:"Durchschnittliche Gesundheitskompetenzscores blieben stabil, zeigten aber heterogene individuelle Veränderungen. BMI stieg signifikant an. Selbstbewerteter Gesundheitsstatus verschlechterte sich bei Auszubildenden signifikant. Raucherquote stieg signifikant an, andere Gesundheitsverhalten blieben unverändert. Keine signifikanten Assoziationen zwischen Baseline-Gesundheitskompetenz und späteren Outcomes oder Verhalten.",
-    transfer:"Deutsche Studie, Unterricht und Ausbildungssetting"
+    title:"Social-Media-Nutzung und Angststörungen bei Gesundheitsmitarbeitern in COVID-19",
+    sum:"Sekundäranalyse der UC-COVID-Studie 2021 mit 427 Gesundheitsmitarbeitern untersuchte Assoziationen zwischen Social-Media-Nutzung über mehrere Plattformen und Angst-Symptomen während Pandemie.",
+    result:"29 % berichteten klinisch relevante Angststörungen (GAD-2 ≥3). Höhere Social-Media-Nutzung signifikant mit Angst assoziiert (OR 1,77; 95 %-KI 1,15–2,73). Älteres Alter reduzierte Angststörungen (aOR 0,97; 95 %-KI 0,95–0,99). Psychische-Anamnese erhöhte Angststörungen (aOR 2,33; 95 %-KI 1,35–4,03). Nicht-hispanische Asiaten weniger Angststörungen (aOR 0,39; KI 0,19–0,80). Höheres Einkommen reduzierte Angststörungen (aOR 0,51; KI 0,30–0,87).",
+    transfer:"USA-Daten; Fragestellung zu Gesundheitsmitarbeiter-Psyche systemunabhängig relevant."
+  },
+  {
+    journal:"EClinicalMedicine", year:"2026", pmid:"42890411",
+    author:"Law CK et al.", pubdate:"05.10.2026",
+    added:"17.10.2026",
+    title:"Enzalutamid bei metastatischem hormonsensitivem Prostatakarzinom: Kosteneffektivitätsanalyse",
+    sum:"Australische within-trial-Kosteneffektivitätsanalyse der ENZAMET-Studie verglich Enzalutamid plus Testosteronsuppression mit Standard-Nicht-Steroiden für Patienten mit metastatischem hormonsensitivem Prostatakarzinom über 60 Monate.",
+    result:"Enzalutamid führte zu AUD 127.262 zusätzlichen Kosten pro Patient, 0,24 Lebensjahren und 0,15 QALYs-Gewinn; ICER AUD 835.580 pro QALY. Kosteneffizienz nur bei Kaufpreis von AUD 6,73 pro Tablette erreichbar (Schwellenwert AUD 50.000/QALY). Erhöhte Hospitalisierungen und Muskel-Skelett-Medikationen in Enzalutamid-Gruppe.",
+    transfer:"Australisches Gesundheitssystem, aber Analyse-Methodik auf deutsches System übertragbar."
+  },
+  {
+    journal:"Health Serv Res", year:"2026", pmid:"42888180",
+    author:"Tyler DA et al.", pubdate:"Okt. 2026",
+    added:"16.10.2026",
+    title:"Zugang zu Versorgung bei Niereninsuffizienz: Sicht von Medicare-Advantage-Organisationen",
+    sum:"Qualitative Studie mit 56 Teilnehmern aus 8 Medicare-Advantage-Plänen, 6 Dialyse- und 5 Nierenbetreu-Unternehmen in den USA untersuchte Perspektiven zum Versorgungszugang nach Medicare-Advantage-Einschreibung bei Dialysepatienten.",
+    result:"Perspektiven differieren nach Organisation und Mitarbeiter-Funktion. MA-Plankvertreter berichten keine Zugangsbarrieren zu Dialyse; kleine Dialyse-Anbieter berichten Patienten-Fahrtweite zu In-Network-Einrichtungen. Informationen über Netzwerkbeschränkungen für Spezialisten oft nicht Patienten-bewusst. MA wählt ‚Centers of Excellence', andere berichten Transplant-Zugangs-Behinderung. Zusatzleistungen von Exekutive betont, von Frontline-Personal als begrenzt berichtet.",
+    transfer:"USA; stark systemabhängig von Medicare-Struktur, begrenzte Übertragbarkeit."
+  },
+  {
+    journal:"Med J Aust", year:"2026", pmid:"42888857",
+    author:"Bessen T et al.", pubdate:"Okt. 2026",
+    added:"17.10.2026",
+    title:"Nutzen von klinischen Qualitätsregistern: Governance und Systemintegration",
+    sum:"Konferenzbeitrag diskutiert, wie klinische Qualitätsregister (CQRs) zur Qualitätsverbesserung in Gesundheitssystemen beitragen und beschreibt Organizational-Infrastructure-Elemente für Systemintegration.",
+    result:"CQRs erfassen systematisch Sicherheits- und Qualitätsdaten mit Risikoanpassung und Benchmarking; Daten treiben Qualitätsverbesserungen. Zentrale Erkenntnis: Daten bleiben oft in Facheinheiten statt Organisation/System-weit integriert. Erforderlich: Governance-Infrastruktur zur Systemintegration auf Gesundheits- und Behördenebene.",
+    transfer:"Australien; Registries-Governance-Ansätze auf deutsches Qualitätsmanagement übertragbar."
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42875763",
+    author:"Gouws M et al.", pubdate:"19.08.2026",
+    added:"15.10.2026",
+    title:"Umsetzung von CVD-Risiko-Vorhersage-Tools in Subsahara-Afrika: Scoping Review",
+    sum:"Systematische Scoping Review zur Implementierung von Kardiovaskulär-Risiko-Vorhersage-Scores in Subsahara-Afrika anhand von 41 Studien aus zehn Ländern; Struktur nach Implementation-Research-Logic-Model.",
+    result:"Vier Use-Cases identifiziert: ökonomische/Policy-Überlegungen, Screening hohes CVD-Risiko/Überweisung, Risikokommunikation, Behandlung Hochrisiko-Patienten. Häufigste Barrieren: Gesundheitssystem- und Organisations-Herausforderungen. Implementierungs-Strategien fokussieren Task-Shifting, Training, kurzfristige Materialien/Technologie-Unterstützung für Community-Health-Worker. Wenig Evidenz zu Nachhaltigkeits-Strategien in Einrichtungen; Mismatch zwischen Determinanten-Breite und Strategien-Enge.",
+    transfer:"Sub-Sahara; systemabhängig von Ressourcenlage, begrenzte Übertragbarkeit auf Deutschland."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
@@ -1936,7 +1945,7 @@ const RADAR_FRISTEN = [["2026-10-20", "2026-10-20", "2026-12-31"], [], ["2026-10
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "17.10.2026";
+const NEWS_STAND = "18.10.2026";
 const NEWS = [
   {titel:"Primärversorgung 2030: Anmeldung zum 15. MVF-Fachkongress läuft", datum:"2026-10-05", url:"https://www.monitor-versorgungsforschung.de/news/primaerversorgung-2030-anmeldung-zum-15-mvf-fachkongress-laeuft/"},
   {titel:"25. Kongress für Versorgungsforschung beendet: DNVF zieht Bilanz", datum:"2026-09-28", url:"https://www.monitor-versorgungsforschung.de/news/25-kongress-fuer-versorgungsforschung-beendet-dnvf-zieht-bilanz/"},
