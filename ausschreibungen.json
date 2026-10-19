@@ -12,7 +12,7 @@
    "slug": "versorgungsforschung",
    "name": "Versorgungsforschung",
    "domain": "wissen.m-vf.de",
-   "anzahl": 5,
+   "anzahl": 4,
    "ausschreibungen": [
     {
      "titel": "Förderbekanntmachung Versorgungsforschung zum themenspezifischen Bereich",
@@ -49,15 +49,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
-    },
-    {
-     "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
-     "frist": "2026-10-28",
-     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-11-bekanntmachung-secure-processing-environments.html",
-     "quelle": "Bund (foerderinfo.bund.de)",
-     "land": "DE",
-     "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
-     "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
     }
    ]
   },
@@ -72,8 +63,17 @@
    "slug": "ki-gesundheit",
    "name": "Digitalisierung, KI & Gesundheit",
    "domain": "ki.m-vf.de",
-   "anzahl": 6,
+   "anzahl": 4,
    "ausschreibungen": [
+    {
+     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357273",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
+    },
     {
      "titel": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (UG3/UH3, Clinical Trial Optional)",
      "frist": "2026-10-19",
@@ -90,7 +90,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Precision Medicine with AI: Integrating Imaging with Multimodal Data"
+     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships"
     },
     {
      "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
@@ -100,33 +100,6 @@
      "land": "DE",
      "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
      "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
-    },
-    {
-     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357273",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
-    },
-    {
-     "titel": "Advanced Development of Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
-     "frist": "2026-10-19",
-     "url": "https://www.grants.gov/search-results-detail/359855",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Informatics Technologies for Cancer Research and Management"
-    },
-    {
-     "titel": "Sustained Support for Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
-     "frist": "2026-10-19",
-     "url": "https://www.grants.gov/search-results-detail/359853",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Informatics Technologies for Cancer Research and Management"
     }
    ]
   },
@@ -141,18 +114,8 @@
    "slug": "longevity",
    "name": "Gesundes Altern & Longevity",
    "domain": "longevity.m-vf.de",
-   "anzahl": 1,
-   "ausschreibungen": [
-    {
-     "titel": "Seamless Early-Stage Clinical Drug Development (Phase 1 to 2a) for Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD) (UG3/UH3 Clinical Trial Required)",
-     "frist": "2026-11-19",
-     "url": "https://www.grants.gov/search-results-detail/357343",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD)"
-    }
-   ]
+   "anzahl": 0,
+   "ausschreibungen": []
   },
   {
    "slug": "healthliteracy",
@@ -172,7 +135,7 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 6,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "DoW Arthritis Clinical Research Award",
@@ -200,33 +163,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "DoW Orthopaedic, Clinical Research Award"
-    },
-    {
-     "titel": "Limited Competition for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers (U01 Clinical Trial Required)",
-     "frist": "2026-11-06",
-     "url": "https://www.grants.gov/search-results-detail/360679",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers"
-    },
-    {
-     "titel": "Single Source for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center (U01 Clinical Trial Required)",
-     "frist": "2026-11-09",
-     "url": "https://www.grants.gov/search-results-detail/360458",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center"
-    },
-    {
-     "titel": "Long-term health outcomes of people living with spina bifida",
-     "frist": "2026-10-26",
-     "url": "https://www.grants.gov/search-results-detail/361002",
-     "quelle": "grants.gov (HHS-CDC-NCBDDD)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Long-term health outcomes of people living with spina bifida"
     }
    ]
   },
@@ -274,7 +210,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Access and Quality of Empirically-Supported Practices for Youth Mental Health"
+     "beleg": "Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
     }
    ]
   },
@@ -294,6 +230,15 @@
      "beleg": "Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
     },
     {
+     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
+     "frist": "2027-01-11",
+     "url": "https://www.grants.gov/search-results-detail/360606",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Glioblastoma Therapeutics Network (GTN)"
+    },
+    {
      "titel": "Cancer Prevention and Control Clinical Trials Grant Program (R01 Clinical Trial Required)",
      "frist": "2027-01-07",
      "url": "https://www.grants.gov/search-results-detail/357074",
@@ -301,6 +246,15 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Cancer Prevention and Control Clinical Trials Grant Program"
+    },
+    {
+     "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
+     "frist": "2027-01-25",
+     "url": "https://www.grants.gov/search-results-detail/360393",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI)"
     },
     {
      "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
@@ -312,31 +266,22 @@
      "beleg": "expand cancer screening and preventive services"
     },
     {
-     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
+     "titel": "Discovery of the Genetic Basis of Childhood Cancers and of Congenital Anomalies: Gabriella Miller Kids First Pediatric Research Program (X01 Clinical Trial Not Allowed)",
      "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/360606",
+     "url": "https://www.grants.gov/search-results-detail/361164",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Glioblastoma Therapeutics Network (GTN)"
+     "beleg": "Genetic Basis of Childhood Cancers"
     },
     {
-     "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
-     "frist": "2027-01-25",
-     "url": "https://www.grants.gov/search-results-detail/360393",
+     "titel": "Secondary Analysis and Integration of Existing Data to Elucidate Cancer Risk and Related Outcomes (R01 Clinical Trial Not Allowed)",
+     "frist": "2026-11-06",
+     "url": "https://www.grants.gov/search-results-detail/357204",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure"
-    },
-    {
-     "titel": "DoW Breast Cancer, Clinical Research Extension Award",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/363671",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
+     "beleg": "Elucidate Cancer Risk and Related Outcomes"
     },
     {
      "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
@@ -345,16 +290,7 @@
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2"
-    },
-    {
-     "titel": "Advanced Development of Informatics Technologies for Cancer Research and Management (U24 Clinical Trial Optional)",
-     "frist": "2026-10-19",
-     "url": "https://www.grants.gov/search-results-detail/359855",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Informatics Technologies for Cancer Research and Management"
+     "beleg": "DoW Breast Cancer, Breakthrough Award"
     }
    ]
   },
@@ -362,7 +298,7 @@
    "slug": "kardio",
    "name": "Kardiologie",
    "domain": "kardio.m-vf.de",
-   "anzahl": 1,
+   "anzahl": 4,
    "ausschreibungen": [
     {
      "titel": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention (UG3/UH3 Clinical Trial Optional)",
@@ -372,6 +308,33 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
+    },
+    {
+     "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R61/R33 Clinical Trial Required)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357543",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
+    },
+    {
+     "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R33 CT Required)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357542",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
+    },
+    {
+     "titel": "NHLBI Clinical Trial Pilot Studies (R34 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357800",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "NHLBI Clinical Trial Pilot Studies"
     }
    ]
   },
