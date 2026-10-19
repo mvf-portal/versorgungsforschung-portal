@@ -48,7 +48,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
+     "beleg": "Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
     }
    ]
   },
@@ -66,15 +66,6 @@
    "anzahl": 4,
    "ausschreibungen": [
     {
-     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357273",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
-    },
-    {
      "titel": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (UG3/UH3, Clinical Trial Optional)",
      "frist": "2026-10-19",
      "url": "https://www.grants.gov/search-results-detail/359666",
@@ -90,7 +81,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships"
+     "beleg": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI"
     },
     {
      "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
@@ -100,6 +91,15 @@
      "land": "DE",
      "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
      "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
+    },
+    {
+     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357273",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
     }
    ]
   },
@@ -114,8 +114,18 @@
    "slug": "longevity",
    "name": "Gesundes Altern & Longevity",
    "domain": "longevity.m-vf.de",
-   "anzahl": 0,
-   "ausschreibungen": []
+   "anzahl": 1,
+   "ausschreibungen": [
+    {
+     "titel": "Seamless Early-Stage Clinical Drug Development (Phase 1 to 2a) for Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD) (UG3/UH3 Clinical Trial Required)",
+     "frist": "2026-11-19",
+     "url": "https://www.grants.gov/search-results-detail/357343",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD)"
+    }
+   ]
   },
   {
    "slug": "healthliteracy",
@@ -138,15 +148,6 @@
    "anzahl": 3,
    "ausschreibungen": [
     {
-     "titel": "DoW Arthritis Clinical Research Award",
-     "frist": "2026-10-22",
-     "url": "https://www.grants.gov/search-results-detail/362175",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Arthritis Clinical Research Award"
-    },
-    {
      "titel": "HEAL Initiative: Whole Joint Health Program (R61/R33 Clinical Trial Required)",
      "frist": "2026-10-30",
      "url": "https://www.grants.gov/search-results-detail/361304",
@@ -154,6 +155,15 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "HEAL Initiative: Whole Joint Health Program"
+    },
+    {
+     "titel": "DoW Arthritis Clinical Research Award",
+     "frist": "2026-10-22",
+     "url": "https://www.grants.gov/search-results-detail/362175",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Arthritis Clinical Research Award"
     },
     {
      "titel": "DoW Orthopaedic, Clinical Research Award",
@@ -230,15 +240,6 @@
      "beleg": "Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
     },
     {
-     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
-     "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/360606",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Glioblastoma Therapeutics Network (GTN)"
-    },
-    {
      "titel": "Cancer Prevention and Control Clinical Trials Grant Program (R01 Clinical Trial Required)",
      "frist": "2027-01-07",
      "url": "https://www.grants.gov/search-results-detail/357074",
@@ -246,6 +247,15 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Cancer Prevention and Control Clinical Trials Grant Program"
+    },
+    {
+     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
+     "frist": "2027-01-11",
+     "url": "https://www.grants.gov/search-results-detail/360606",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Glioblastoma Therapeutics Network (GTN)"
     },
     {
      "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
@@ -266,13 +276,13 @@
      "beleg": "expand cancer screening and preventive services"
     },
     {
-     "titel": "Discovery of the Genetic Basis of Childhood Cancers and of Congenital Anomalies: Gabriella Miller Kids First Pediatric Research Program (X01 Clinical Trial Not Allowed)",
-     "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/361164",
-     "quelle": "grants.gov (HHS-NIH11)",
+     "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
+     "frist": "2026-11-18",
+     "url": "https://www.grants.gov/search-results-detail/363670",
+     "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Genetic Basis of Childhood Cancers"
+     "beleg": "DoW Breast Cancer, Breakthrough Award"
     },
     {
      "titel": "Secondary Analysis and Integration of Existing Data to Elucidate Cancer Risk and Related Outcomes (R01 Clinical Trial Not Allowed)",
@@ -281,16 +291,16 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Elucidate Cancer Risk and Related Outcomes"
+     "beleg": "Elucidate Cancer Risk and Related Outcomes (R01"
     },
     {
-     "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/363670",
-     "quelle": "grants.gov (DOD-AMRAA)",
+     "titel": "Secondary Analysis and Integration of Existing Data to Elucidate Cancer Risk and Related Outcomes (R21 Clinical Trials Not Allowed)",
+     "frist": "2026-11-17",
+     "url": "https://www.grants.gov/search-results-detail/357205",
+     "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Breakthrough Award"
+     "beleg": "Elucidate Cancer Risk and Related Outcomes (R21"
     }
    ]
   },
@@ -298,7 +308,7 @@
    "slug": "kardio",
    "name": "Kardiologie",
    "domain": "kardio.m-vf.de",
-   "anzahl": 4,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention (UG3/UH3 Clinical Trial Optional)",
@@ -307,7 +317,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
+     "beleg": "StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
     },
     {
      "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R61/R33 Clinical Trial Required)",
@@ -326,15 +336,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
-    },
-    {
-     "titel": "NHLBI Clinical Trial Pilot Studies (R34 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357800",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "NHLBI Clinical Trial Pilot Studies"
     }
    ]
   },
