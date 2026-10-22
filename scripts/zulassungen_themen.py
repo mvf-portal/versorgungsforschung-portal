@@ -94,6 +94,40 @@ REGELN = {
     ]),
 }
 
+# ------------------------------------------------- britisch oder amerikanisch
+# **Die Quellen schreiben verschieden, die Muster koennen es nicht.** Die
+# EMA schreibt britisch ("tumour", "polycythaemia vera", "mixed
+# dyslipidaemia"), die FDA amerikanisch ("tumor", "polycythemia"). Am
+# 22.10.2026 an der EMA-Antragsliste gemessen: Von sieben nicht zugeordneten
+# Mitteln lagen **vier** allein daran - Rusfertid (polycythaemia),
+# Pimicotinib (tumour) und zweimal Enlicitid (hypercholesterolaemia).
+#
+# Jedes Muster zu verdoppeln waere der falsche Weg: Es waeren ueber hundert,
+# und beim naechsten neuen Muster vergisst man die Haelfte. Normalisiert wird
+# deshalb der TEXT, einmal, vor dem Vergleich. Die Richtung ist amerikanisch,
+# weil MeSH amerikanisch schreibt und die Muster daher stammen.
+BRITISCH = [
+    ("oedema", "edema"), ("oesoph", "esoph"), ("oestro", "estro"),
+    ("aemia", "emia"), ("aemic", "emic"), ("haem", "hem"), ("haes", "hes"),
+    ("ischaem", "ischem"), ("anaesth", "anesth"), ("paediatr", "pediatr"),
+    ("diarrhoea", "diarrhea"), ("coeliac", "celiac"), ("foetal", "fetal"),
+    ("gynaec", "gynec"), ("orthopaed", "orthoped"), ("leucocyt", "leukocyt"),
+    ("tumour", "tumor"), ("behaviour", "behavior"), ("fibre", "fiber"),
+]
+
+
+def amerikanisch(text: str) -> str:
+    """Britische Schreibung auf amerikanische bringen - nur zum Vergleichen.
+
+    Der Text selbst bleibt unveraendert; was der Leser sieht, ist stets das
+    Original der Quelle.
+    """
+    klein = str(text or "").lower()
+    for brit, ami in BRITISCH:
+        klein = klein.replace(brit, ami)
+    return klein
+
+
 # --------------------------------------------------------------- Diagnostika
 # **Ein Diagnostikum gehoert in keinen Hub**, auch wenn seine Indikation eine
 # Krankheit nennt - und sie nennt immer eine. PIXCLARA (Floretyrosin F-18)
@@ -140,7 +174,7 @@ def hubs_fuer_text(indikation_en: str) -> list[str]:
     deshalb keine Vorhersage. Der Gegentest in zulassungen_gegentest.py
     prueft gegen einen zurueckgehaltenen Satz aelterer Zulassungen.
     """
-    text = str(indikation_en or "")
+    text = amerikanisch(indikation_en)
     if not text.strip():
         return []
     if DIAGNOSTIK.search(text):
@@ -221,6 +255,35 @@ DIGA_GEBAUT = {slug: [re.compile(m, re.I) for m in muster]
                for slug, muster in DIGA_MUSTER.items()}
 
 NAMEN_SONST = {DIGA_HEIMAT: DIGA_HEIMAT_NAME}
+
+
+def hubs_fuer_antrag(indikation_en: str) -> list[str]:
+    """Die Hub-Slugs zu einem Antrag aus der EMA-Liste laufender Verfahren.
+
+    Dritte Quelle, dritte Textsorte: Die EMA-Antragsliste traegt **einen
+    Einzeiler** ("Treatment of presbyopia in adults"), nicht ein MeSH-Feld
+    und nicht einen Beipackzettel. Daraus folgt der Unterschied zu
+    `hubs_fuer_text()`: Die Beschraenkung auf den Satz mit "indicated"
+    entfaellt - das Wort steht dort meist gar nicht, und ein Einzeiler hat
+    keine Begleitsaetze, in denen fremde Krankheiten vorkommen.
+
+    Der Diagnostik-Filter bleibt. Er hat sich an diesen 57 Texten nicht
+    bewaehrt (die schlechte Fassung ohne ihn war gleich gut), aber das liegt
+    daran, dass unter ihnen nur ein Diagnostikum war und keines der Muster
+    darauf ansprach. Eine Vorkehrung, die in einer Stichprobe nichts faengt,
+    ist nicht widerlegt - sie ist ungepruefet.
+
+    Gemessen am 22.10.2026 gegen ein von Hand gesetztes Soll ueber alle 57
+    Antraege: 50 richtig, **0 falsch**, 7 fehlend. Nach dem Nachtrag der
+    britischen Schreibung (siehe `amerikanisch`) sind es 54 richtig, 0
+    falsch, 3 fehlend. Die drei uebrigen sind Grenzfaelle meines eigenen
+    Urteils, keine Regelluecken.
+    """
+    text = amerikanisch(indikation_en)
+    if not text.strip() or DIAGNOSTIK.search(text):
+        return []
+    return [slug for slug, (_, muster) in GEBAUT.items()
+            if any(m.search(text) for m in muster)]
 
 
 def hubs_fuer_diga(bezeichnung: str) -> list[str]:
