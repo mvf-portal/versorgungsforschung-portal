@@ -1,0 +1,808 @@
+{
+ "stand": "22.10.2026",
+ "quelle": "European Medicines Agency",
+ "fenster_tage": 180,
+ "zahlen": {
+  "zulassung": 35,
+  "gutachten": 28,
+  "ohne_hub": 20
+ },
+ "warnungen": [],
+ "eintraege": [
+  {
+   "stufe": "gutachten",
+   "datum": "2026-10-15",
+   "name": "Fovlussea",
+   "wirkstoff": "ranibizumab",
+   "gebiet_mesh": "Wet Macular Degeneration;Macular Edema;Diabetes Complications;Choroidal Neovascularization",
+   "atc": "S01LA04",
+   "inhaber": "Accord Healthcare S.L.U.",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006940",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/fovlussea",
+   "indikation_en": "Treatment of neovascular (wet) age-related macular degeneration (AMD), and other visual impairments in adults",
+   "hubs": [
+    "diabetes",
+    "longevity"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Fovlussea (Ranibizumab) zur Behandlung der neovaskulären altersbezogenen Makuladegeneration und anderer visueller Beeinträchtigungen bei Erwachsenen."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-10-15",
+   "name": "Foundayo",
+   "wirkstoff": "Orforglipron hemicalcium",
+   "gebiet_mesh": "Obesity;Overweight;Diabetes Mellitus",
+   "atc": "A10BJ",
+   "inhaber": "Eli Lilly Nederland B.V.",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006632",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/foundayo",
+   "indikation_en": "Treatment of obesity and type 2 diabetes mellitus in adults",
+   "hubs": [
+    "diabetes",
+    "adipositas"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Foundayo (Orforglipron-hemicalcium) zur Behandlung von Adipositas und Typ-2-Diabetes mellitus bei Erwachsenen."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-10-15",
+   "name": "Kizfizo",
+   "wirkstoff": "temozolomide",
+   "gebiet_mesh": "Glioma",
+   "atc": "L01AX03",
+   "inhaber": "ORPHELIA Pharma",
+   "kennzeichen": [
+    "Orphan Drug"
+   ],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006892",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/kizfizo-0",
+   "indikation_en": "Treatment of adults with glioblastoma multiforme and children with malignant glioma&nbsp;",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Kizfizo (Temozolomid) zur Behandlung des Glioblastoma multiforme bei Erwachsenen und maligner Gliome bei Kindern."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-10-15",
+   "name": "Rasonque",
+   "wirkstoff": "daraxonrasib",
+   "gebiet_mesh": "Pancreatic Neoplasms",
+   "atc": "L01XX",
+   "inhaber": "Revolution Medicines Netherlands B.V.",
+   "kennzeichen": [
+    "Orphan Drug"
+   ],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/007122",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/rasonque",
+   "indikation_en": "Treatment of adult patients with metastatic pancreatic adenocarcinoma who have received at least one prior systemic therapy.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Rasonque (Daraxonrasib) zur Behandlung von metastasierendem Pankreasadenokarzinom bei Erwachsenen nach mindestens einer vorangegangenen systemischen Therapie."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-09-18",
+   "name": "Tafamidis Accord",
+   "wirkstoff": "tafamidis",
+   "gebiet_mesh": "Amyloidosis, Familial;Cardiomyopathies",
+   "atc": "N07XX08",
+   "inhaber": "Accord Healthcare S.L.U.",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006711",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/tafamidis-accord",
+   "indikation_en": "Tafamidis Accord is indicated for the treatment of hereditary transthyretin amyloidosis in adult patients with cardiomyopathy (ATTRh-CM).",
+   "hubs": [
+    "kardio"
+   ],
+   "satz": "Tafamidis Accord (Tafamidis) ist zur Behandlung der hereditären Transthyretin-Amyloidose mit Kardiomyopathie bei Erwachsenen zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-09-18",
+   "name": "Ruxolitinib Viatris",
+   "wirkstoff": "ruxolitinib hemifumarate",
+   "gebiet_mesh": "Primary Myelofibrosis;Polycythemia Vera;Graft vs Host Disease",
+   "atc": "L01EJ01",
+   "inhaber": "Viatris Limited",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006618",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/ruxolitinib-viatris",
+   "indikation_en": "Myelofibrosis (MF)&nbsp; Ruxolitinib Viatris is indicated for the treatment of disease-related splenomegaly or symptoms in adult patients with primary myelofibrosis (also known as chronic idiopathic myelofibrosis), post polycythaemia vera myelofibrosis or post essential thrombocythaemia myelofibrosis.&nbsp; Polycythaemia vera (PV)&nbsp; Ruxolitinib Viatris is indicated for the treatment of adult patients with polycythaemia vera who are resistant to or intolerant of hydroxyurea.&nbsp; Graft versus host disease (GvHD)&nbsp;&nbsp; Acute GvHD&nbsp;Ruxolitinib Viatris is indicated for the treatment of adults and paediatric patients aged 28 days and older with acute graft versus host disease who have inadequate response to corticosteroids or other systemic therapies (see section 5.1). Chronic GvHD&nbsp;Ruxolitinib Viatris is indicated for the treatment of adults and paediatric patients aged 6 months and older with chronic graft versus host disease who have inadequate response to corticosteroids or other systemic therapies (see section 5.1).",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Ruxolitinib Viatris (Ruxolitinib-Hemifumarat) ist zur Behandlung der Myelofibrose, Polycythaemia vera und akuten sowie chronischen Graft-versus-Host-Disease zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-09-18",
+   "name": "Susvimo",
+   "wirkstoff": "ranibizumab",
+   "gebiet_mesh": "Wet Macular Degeneration",
+   "atc": "S01LA04",
+   "inhaber": "Roche Registration GmbH",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006527",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/susvimo",
+   "indikation_en": "Susvimo is indicated in adult patients for the treatment of neovascular (wet) age-related macular degeneration (nAMD) who have achieved stable disease after previously responding to intravitreal treatment with a vascular endothelial growth factor (VEGF) inhibitor medicinal product.",
+   "hubs": [
+    "longevity"
+   ],
+   "satz": "Susvimo (Ranibizumab) ist zur Behandlung der neovaskularären altersbezogenen Makuladegeneration bei Erwachsenen mit stabiler Erkrankung nach vorheriger VEGF-Inhibitor-Therapie zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-09-18",
+   "name": "Icotyde",
+   "wirkstoff": "icotrokinra hydrochloride",
+   "gebiet_mesh": "Psoriasis",
+   "atc": "L04AC28",
+   "inhaber": "Janssen-Cilag International",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006730",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/icotyde",
+   "indikation_en": "Icotyde is indicated for the treatment of moderate to severe plaque psoriasis in adults, and adolescents 12&nbsp;years of age and older and weighing at least 40&nbsp;kg, who are candidates for systemic therapy",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Icotyde (Icotrokinra-Hydrochlorid) ist zur Behandlung der mittelschweren bis schweren Plaque-Psoriasis bei Erwachsenen und Jugendlichen ab 12 Jahren mit mindestens 40 kg Körpergewicht zugelassen, die für eine systemische Therapie geeignet sind."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-09-18",
+   "name": "Zokovea",
+   "wirkstoff": "ensitrelvir fumaric acid",
+   "gebiet_mesh": "COVID-19 virus infection",
+   "atc": "J05AE16",
+   "inhaber": "Shionogi B.V.",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006063",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/zokovea",
+   "indikation_en": "Post exposure prophylaxis of COVID-19 in adults and adolescents aged 12 years and older",
+   "hubs": [
+    "impfen"
+   ],
+   "satz": "Zokovea (Ensitrelvir) ist zur Postexpositionsprophylaxe von COVID-19 bei Erwachsenen und Jugendlichen ab 12 Jahren zugelassen."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-09-17",
+   "name": "Adcomfo",
+   "wirkstoff": "omalizumab",
+   "gebiet_mesh": "Asthma;Nasal Polyps;Urticaria",
+   "atc": "R03DX05",
+   "inhaber": "Advanz Pharma Limited",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006756",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/adcomfo",
+   "indikation_en": "Treatment of asthma, chronic rhinosinusitis with nasal polyps (CRSwNP) and chronic spontaneous urticaria (CSU)",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Adcomfo (Omalizumab) zur Behandlung von Asthma, chronischer Rhinosinusitis mit Nasenpolypen und chronischer spontaner Urtikaria."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-09-17",
+   "name": "Inijaq",
+   "wirkstoff": "tofacitinib citrate",
+   "gebiet_mesh": "Arthritis, Rheumatoid;Colitis, Ulcerative;Arthritis, Juvenile;Arthritis, Psoriatic;Spondylitis, Ankylosing",
+   "atc": "L04AF01",
+   "inhaber": "Gedeon Richter Plc.",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006698",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/inijaq",
+   "indikation_en": "Treatment of rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, and ulcerative colitis in adults, and juvenile idiopathic arthritis (JIA) in children from 2 years old",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Inijaq (Tofacitinib) zur Behandlung von rheumatoider Arthritis, Psoriasisarthritis, Spondylitis ankylosans und Colitis ulcerosa sowie juveniler idiopathischer Arthritis bei Kindern ab 2 Jahren."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-09-17",
+   "name": "Lifyorli",
+   "wirkstoff": "relacorilant",
+   "gebiet_mesh": "Fallopian Tube Neoplasms;Peritoneal Neoplasms;Carcinoma, Ovarian Epithelial",
+   "atc": "",
+   "inhaber": "Corcept Therapeutics Netherlands B.V.",
+   "kennzeichen": [
+    "Orphan Drug"
+   ],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006731",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/lifyorli",
+   "indikation_en": "Treatment of adult patients with platinum-resistant epithelial ovarian, fallopian tube, or primary peritoneal cancer",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Lifyorli (Relacorilant) zur Behandlung von platinumresistentem epithelialem Ovarial-, Eileiter- oder primärem Peritonealkarzinom."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-09-17",
+   "name": "Ruxolitinib Zentiva",
+   "wirkstoff": "ruxolitinib hemifumarate",
+   "gebiet_mesh": "Primary Myelofibrosis;Polycythemia Vera;Graft vs Host Disease",
+   "atc": "L01EJ01",
+   "inhaber": "Zentiva k.s.",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006791",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/ruxolitinib-zentiva",
+   "indikation_en": "Treatment of myelofibrosis (MF) in adults, treatment of polycythaemia vera (PV) in adults and treatment of Graft versus host disease (GvHD) in adults and children",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Ruxolitinib Zentiva (Ruxolitinib-Hemifumarat) zur Behandlung der Myelofibrose, Polycythaemia vera und Graft-versus-Host-Disease bei Erwachsenen und Kindern."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-09-17",
+   "name": "Sepalna",
+   "wirkstoff": "senaparib",
+   "gebiet_mesh": "Fallopian Tube Neoplasms;Peritoneal Neoplasms;Carcinoma, Ovarian Epithelial",
+   "atc": "L01XK07",
+   "inhaber": "",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006708",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/sepalna",
+   "indikation_en": "Maintenance treatment of advanced epithelial high-grade ovarian, fallopian tube or primary peritoneal cancer",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Sepalna (senaparib) zur Erhaltungstherapie des fortgeschrittenen epithelialen hochgradig serösen Ovarial-, Eileiter- oder primären Peritonealkarzinoms."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-09-17",
+   "name": "Gevalka",
+   "wirkstoff": "ensartinib dihydrochloride",
+   "gebiet_mesh": "Carcinoma, Non-Small-Cell Lung",
+   "atc": "",
+   "inhaber": "SFL Pharmaceuticals Deutschland GmbH",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006757",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/gevalka",
+   "indikation_en": "The treatment of adult patients with anaplastic lymphoma kinase (ALK)-positive advanced non-small cell lung cancer (NSCLC)",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Gevalka (Ensartinib) zur Behandlung von Erwachsenen mit ALK-positivem fortgeschrittenem nicht-kleinzelligem Lungenkarzinom."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-09-17",
+   "name": "VaxRabeo",
+   "wirkstoff": "Rabies virus (inactivated) strain WISTAR (PM/WI 38-1503-3M)",
+   "gebiet_mesh": "Rabies",
+   "atc": "J07BG01",
+   "inhaber": "Sanofi Winthrop Industrie",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006602",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/vaxrabeo",
+   "indikation_en": "Pre-exposure and post-exposure prophylaxis against rabies in all age groups",
+   "hubs": [
+    "impfen"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von VaxRabeo (inaktiviertes Rabiesvirus, Stamm WISTAR) zur Prä- und Postexpositionsprophylaxe gegen Tollwut."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-08-28",
+   "name": "Denosumab Ascend",
+   "wirkstoff": "denosumab",
+   "gebiet_mesh": "Neoplasms, Bone Tissue;Giant Cell Tumor of Bone",
+   "atc": "M05BX04",
+   "inhaber": "Ascend GmbH",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006626",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/denosumab-ascend",
+   "indikation_en": "Prevention of skeletal related events (pathological fracture, radiation to bone, spinal cord compression or surgery to bone) in adults with advanced malignancies involving bone.Treatment of adults and skeletally mature adolescents with giant cell tumour of bone that is unresectable or where surgical resection is likely to result in severe morbidity.&nbsp;",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Denosumab Ascend (Denosumab) ist zur Prävention skelettbezogener Ereignisse bei Erwachsenen mit fortgeschrittenen Malignomen und zur Behandlung des Riesenzelltumors der Knochen bei Erwachsenen und skelettal reifen Jugendlichen zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-08-20",
+   "name": "Aujemflu",
+   "wirkstoff": "A/(H1N1)-like virus antigen;A/(H3N2)-like virus antigen;B (Victoria lineage)-like virus antigen",
+   "gebiet_mesh": "Influenza, Human",
+   "atc": "J07BB02",
+   "inhaber": "Seqirus Netherlands B.V.",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006692",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/aujemflu",
+   "indikation_en": "Prophylaxis of influenza in adults 50 years of age and older. Aujemflu should be used in accordance with official recommendations.",
+   "hubs": [
+    "impfen"
+   ],
+   "satz": "Aujemflu (Influenza-Virusantigene A/H1N1, A/H3N2, B/Victoria) ist zur Grippe-Prophylaxe bei Erwachsenen ab 50 Jahren zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-08-20",
+   "name": "Hopledo",
+   "wirkstoff": "carbidopa monohydrate;levodopa",
+   "gebiet_mesh": "Parkinson Disease",
+   "atc": "N04BA02",
+   "inhaber": "Zambon SpA",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006629",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/hopledo",
+   "indikation_en": "Hopledo is indicated for the treatment of adult patients with Parkinson’s disease and moderate to severe motor fluctuations who have not been sufficiently stabilised with oral levodopa/dopa decarboxylase (DDC) inhibitor-based treatment regimens.",
+   "hubs": [
+    "longevity"
+   ],
+   "satz": "Hopledo (Levodopa/Carbidopa) ist indiziert zur Behandlung von Parkinson-Patienten mit mittelschweren bis schweren Motorfluktuationen, die auf orales Levodopa/DDC-Inhibitor-Regime unzureichend ansprechen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-07-24",
+   "name": "Colchicine Agepha Pharma",
+   "wirkstoff": "colchicine",
+   "gebiet_mesh": "Myocardial Infarction;Stroke;Coronary Artery Disease",
+   "atc": "M04AC01",
+   "inhaber": "Agepha Pharma s.r.o.",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006653",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/colchicine-agepha-pharma",
+   "indikation_en": "Colchicine AGEPHA Pharma is indicated for secondary prevention of atherothrombotic events in adult patients with coronary disease stable for at least 6 months.",
+   "hubs": [
+    "kardio"
+   ],
+   "satz": "Colchicine Agepha Pharma (Colchicin) ist zur Sekundärprävention atherothrombotischer Ereignisse bei Erwachsenen mit stabiler koronarer Erkrankung zugelassen."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-07-23",
+   "name": "Qezzaqar",
+   "wirkstoff": "catequentinib dihydrochloride",
+   "gebiet_mesh": "Sarcoma;Leiomyosarcoma",
+   "atc": "L01EX",
+   "inhaber": "CATS Consultants GmbH",
+   "kennzeichen": [
+    "Orphan Drug"
+   ],
+   "gutachten": "Negative",
+   "nummer": "EMEA/H/C/006317",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/qezzaqar",
+   "indikation_en": "Treatment of synovial sarcoma or leiomyosarcoma.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Qezzaqar (Catequentinib dihydrochlorid) zur Behandlung von Synovialzellsarkom oder Leiomyosarkom."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-07-23",
+   "name": "Evlarco",
+   "wirkstoff": "ezetimibe;obicetrapib hemicalcium",
+   "gebiet_mesh": "Hypercholesterolemia;Dyslipidemias",
+   "atc": "C10B",
+   "inhaber": "A. Menarini International Licensing S.A.",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006517",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/evlarco",
+   "indikation_en": "Treatment of primary hypercholesterolaemia or mixed dyslipidaemia.",
+   "hubs": [
+    "kardio"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Evlarco (Obicetrapib) zur Behandlung der primären Hypercholesterinämie oder gemischten Dyslipidämie."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-07-23",
+   "name": "Lynavoy",
+   "wirkstoff": "Linerixibat",
+   "gebiet_mesh": "Liver Cirrhosis, Biliary;Pruritus",
+   "atc": "A05AX",
+   "inhaber": "GlaxoSmithKline Trading Services Limited",
+   "kennzeichen": [
+    "Orphan Drug"
+   ],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006241",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/lynavoy",
+   "indikation_en": "Treatment of cholestatic pruritus in adult patients with primary biliary cholangitis.",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Lynavoy (Linerixibat) zur Behandlung des cholestatischen Pruritus bei Patienten mit primärer biliärer Cholangitis."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-07-23",
+   "name": "Lyrokaul",
+   "wirkstoff": "Lerodalcibep",
+   "gebiet_mesh": "Hypercholesterolemia;Dyslipidemias",
+   "atc": "C10AX",
+   "inhaber": "LIB Therapeutics B.V.",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006694",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/lyrokaul",
+   "indikation_en": "It is indicated in adults with primary hypercholesterolaemia (heterozygous familial (HeFH) and non-familial) or mixed dyslipidaemia as an adjunct to diet.",
+   "hubs": [
+    "kardio"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Lyrokaul (Lerodalcibep) zur Behandlung der primären Hypercholesterinämie und gemischten Dyslipidämie als Ergänzung zur Diät."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-07-23",
+   "name": "Ubeslo",
+   "wirkstoff": "obicetrapib hemicalcium",
+   "gebiet_mesh": "Hypercholesterolemia;Dyslipidemias",
+   "atc": "C10A",
+   "inhaber": "A. Menarini International Licensing S.A.",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006516",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/ubeslo",
+   "indikation_en": "Treatment of primary hypercholesterolaemia or mixed dyslipidaemia.",
+   "hubs": [
+    "kardio"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Ubeslo (Obicetrapib-hemicalcium) zur Behandlung der primären Hypercholesterinämie oder gemischten Dyslipidämie."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-07-23",
+   "name": "Riociguat Accord",
+   "wirkstoff": "riociguat",
+   "gebiet_mesh": "Hypertension, Pulmonary;Pulmonary Arterial Hypertension",
+   "atc": "C02KX05",
+   "inhaber": "Accord Healthcare S.L.U.",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006838",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/riociguat-accord",
+   "indikation_en": "Treatment of Chronic thromboembolic pulmonary hypertension (CTEPH) in adults and treatment of Pulmonary arterial hypertension (PAH) in adults and children from 6 years of age.",
+   "hubs": [
+    "kardio"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Riociguat Accord (Riociguat) zur Behandlung der chronischen thromboembolischen pulmonalen Hypertonie und der pulmonalarteriellen Hypertonie bei Erwachsenen und Kindern ab 6 Jahren."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-07-20",
+   "name": "Etcamah",
+   "wirkstoff": "camizestrant",
+   "gebiet_mesh": "Breast Neoplasms",
+   "atc": "L02BA05",
+   "inhaber": "AstraZeneca AB",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006494",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/etcamah",
+   "indikation_en": "Etcamah&nbsp;in combination with a CDK4/6 inhibitor (palbociclib, ribociclib, or abemaciclib) is indicated for the treatment of&nbsp;adult&nbsp;patients with ER-positive,&nbsp;HER2-negative,&nbsp;locally advanced or metastatic breast&nbsp;cancer upon detection of ESR1‑mutation and without disease progression during first-line endocrine therapy in combination with a CDK4/6 inhibitor (for biomarker based patient-selection, see section 4.2 and 5.1).",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Etcamah (Camizestrant) in Kombination mit CDK4/6-Inhibitoren ist zur Behandlung von Patientinnen mit ER-positivem, HER2-negativem, lokal fortgeschrittenem oder metastasiertem Mammakarzinom bei ESR1-Mutation ohne Krankheitsprogression unter First-Line-Endokrinetherapie zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-07-15",
+   "name": "Vislyfa",
+   "wirkstoff": "ranibizumab",
+   "gebiet_mesh": "Wet Macular Degeneration;Macular Edema;Diabetes Complications;Retinal Vein Occlusion;Choroidal Neovascularization",
+   "atc": "S01LA04",
+   "inhaber": "Lupin Europe GmbH",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006926",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/vislyfa",
+   "indikation_en": "Vislyfa is indicated in adults for: The treatment of neovascular (wet) age-related macular degeneration (AMD) The treatment of visual impairment due to diabetic macular oedema (DME) The treatment of proliferative diabetic retinopathy (PDR) The treatment of visual impairment due to macular oedema secondary to retinal vein occlusion (branch RVO or central RVO) The treatment of visual impairment due to choroidal neovascularisation (CNV)",
+   "hubs": [
+    "diabetes",
+    "longevity"
+   ],
+   "satz": "Vislyfa (Ranibizumab) ist zur Behandlung der feuchten altersbezogenen Makuladegeneration, diabetischen Makulaödem, proliferativen diabetischen Retinopathie, Makulaödem nach Netzhautvenenokklusion und choroidalen Neovaskularisation bei Erwachsenen zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-07-15",
+   "name": "Ablymico",
+   "wirkstoff": "liraglutide",
+   "gebiet_mesh": "Obesity;Overweight",
+   "atc": "A10BJ02",
+   "inhaber": "STADA Arzneimittel AG",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006620",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/ablymico",
+   "indikation_en": "Treatment of weight management.",
+   "hubs": [
+    "adipositas"
+   ],
+   "satz": "Ablymico (Liraglutid) ist in der EU zur Gewichtsabnahme zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-07-15",
+   "name": "Liraglutide STADA",
+   "wirkstoff": "liraglutide",
+   "gebiet_mesh": "Diabetes Mellitus",
+   "atc": "A10BJ02",
+   "inhaber": "STADA Arzneimittel AG",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006615",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/liraglutide-stada",
+   "indikation_en": "Treatment of adults, adolescents and children aged 10 years and above with insufficiently controlled type 2 diabetes as an adjunct to diet and exercise",
+   "hubs": [
+    "diabetes"
+   ],
+   "satz": "Liraglutide STADA (Liraglutid) ist zur Behandlung von Typ-2-Diabetes mellitus bei unzureichender Kontrolle durch Diät und Bewegung bei Erwachsenen, Jugendlichen und Kindern ab 10 Jahren zugelassen."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-06-25",
+   "name": "Onswik",
+   "wirkstoff": "Insulin efsitora alfa",
+   "gebiet_mesh": "Diabetes Mellitus",
+   "atc": "",
+   "inhaber": "Eli Lilly Nederland B.V.",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006388",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/onswik",
+   "indikation_en": "Treatment of type 2 diabetes mellitus&nbsp;",
+   "hubs": [
+    "diabetes"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Onswik (Insulin efsitora alfa) zur Behandlung des Diabetes mellitus Typ 2."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-06-19",
+   "name": "Cenrifki",
+   "wirkstoff": "tolebrutinib",
+   "gebiet_mesh": "Multiple Sclerosis, Chronic Progressive",
+   "atc": "L04AA62",
+   "inhaber": "Sanofi Winthrop Industrie",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006386",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/cenrifki",
+   "indikation_en": "Cenrifki is indicated for the treatment of adult patients with secondary progressive multiple sclerosis (SPMS) without relapses in the last 2 years.",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Cenrifki (Tolebrutinib) ist zur Behandlung der sekundär progredienten Multiplen Sklerose ohne Schübe in den letzten 2 Jahren zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-06-19",
+   "name": "Rexatilux",
+   "wirkstoff": "ranibizumab",
+   "gebiet_mesh": "Wet Macular Degeneration",
+   "atc": "S01LA04",
+   "inhaber": "Intas Third Party Sales 2005 S.L.",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006634",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/rexatilux",
+   "indikation_en": "Rexatilux is indicated in adults for: - The treatment of neovascular (wet) age-related macular degeneration (AMD) - The treatment of visual impairment due to diabetic macular oedema (DME) - The treatment of proliferative diabetic retinopathy (PDR) - The treatment of visual impairment due to macular oedema secondary to retinal vein occlusion (branch RVO or central RVO) - The treatment of visual impairment due to choroidal neovascularisation (CNV).",
+   "hubs": [
+    "longevity"
+   ],
+   "satz": "Rexatilux (Ranibizumab) ist zur Behandlung der feuchten altersbezogenen Makuladegeneration, der diabetischen Makulaödeme, der proliferativen diabetischen Retinopathie, der durch Netzhautvenenokklusion bedingten Makulaödeme und der choroidalen Neovaskularisation zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-06-19",
+   "name": "Palbociclib Viatris",
+   "wirkstoff": "Palbociclib",
+   "gebiet_mesh": "Breast Neoplasms",
+   "atc": "L01EF01",
+   "inhaber": "Viatris Limited",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006624",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/palbociclib-viatris",
+   "indikation_en": "Palbociclib Viatris is indicated for the treatment of hormone receptor (HR)‑positive, human epidermal growth factor receptor 2 (HER2)‑negative locally advanced or metastatic breast cancer. in combination with an aromatase inhibitor; in combination with fulvestrant in women who have received prior endocrine therapy (see section&nbsp;5.1). In pre‑ or perimenopausal women, the endocrine therapy should be combined with a luteinizing hormone‑releasing hormone (LHRH) agonist.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Palbociclib Viatris (Palbociclib) ist zur Behandlung von Hormonrezeptor-positivem, HER2-negativem lokal fortgeschrittenem oder metastasiertem Mammakarzinom in Kombination mit einem Aromatasehemmer oder Fulvestrant zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-05-29",
+   "name": "Bopediat",
+   "wirkstoff": "furosemide",
+   "gebiet_mesh": "Edema, Cardiac;Edema;Hypertension;Renal Insufficiency, Chronic",
+   "atc": "C03CA01",
+   "inhaber": "Proveca Pharma Limited",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006617",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/bopediat",
+   "indikation_en": "Bopediat is indicated in children from birth to less than 18 years of age for the treatment of oedema of cardiac or renal origin, oedema of hepatic origin, and hypertension in patients with chronic kidney disease.",
+   "hubs": [
+    "kardio",
+    "ncd"
+   ],
+   "satz": "Bopediat (Furosemid) ist zur Behandlung von Ödemen kardialen oder renalen Ursprungs, hepatischen Ödemen und Hypertonie bei chronischer Nierenkrankheit bei Kindern ab Geburt bis unter 18 Jahren zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-05-29",
+   "name": "Imdylltra",
+   "wirkstoff": "tarlatamab",
+   "gebiet_mesh": "Small Cell Lung Carcinoma",
+   "atc": "L01FX33",
+   "inhaber": "Amgen Europe B.V.",
+   "kennzeichen": [
+    "Orphan Drug"
+   ],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006451",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/imdylltra",
+   "indikation_en": "Imdylltra is indicated as monotherapy for the treatment of adult patients with extensive-stage small cell lung cancer (ES-SCLC), who require systemic therapy following disease progression on or after first-line treatment with platinum-based chemotherapy.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Imdylltra (Tarlatamab) ist zur Monotherapie des kleinzelligen Lungenkarzinoms im fortgeschrittenen Stadium bei Erwachsenen nach Progression unter platinbasierter Chemotherapie zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-05-29",
+   "name": "Zepzelca",
+   "wirkstoff": "lurbinectedin",
+   "gebiet_mesh": "Small Cell Lung Carcinoma",
+   "atc": "L01XX69",
+   "inhaber": "Pharma Mar S.A.",
+   "kennzeichen": [
+    "Orphan Drug"
+   ],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006673",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/zepzelca",
+   "indikation_en": "Zepzelca, in combination with atezolizumab, is indicated for the maintenance treatment of adult patients with extensive-stage small cell lung cancer (ES-SCLC) whose disease has not progressed after first-line induction therapy with atezolizumab, carboplatin and etoposide.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Zepzelca (Lurbinectedin) in Kombination mit Atezolizumab ist zur Erhaltungstherapie des kleinzelligen Lungenkarzinoms im Stadium extensive-stage zugelassen, wenn die Erkrankung nach Induktionstherapie nicht progredient ist."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-05-28",
+   "name": "Adstiladrin",
+   "wirkstoff": "nadofaragene firadenovec",
+   "gebiet_mesh": "Non-Muscle Invasive Bladder Neoplasms",
+   "atc": "L01XL10",
+   "inhaber": "Ferring Pharmaceuticals A/S",
+   "kennzeichen": [
+    "bedingte Zulassung"
+   ],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/005856",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/adstiladrin",
+   "indikation_en": "Adstiladrin is indicated as monotherapy for the treatment of adult patients with Bacillus Calmette-Guérin (BCG)-unresponsive non-muscle invasive bladder cancer (NMIBC) with carcinoma in situ (CIS) with or without papillary tumours.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Adstiladrin (Nadofaragene firadenovec) ist zur Behandlung von BCG-refraktärem nicht-muskelinvasivem Blasenkrebs mit Carcinoma in situ indiziert."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-05-06",
+   "name": "Bysumlog",
+   "wirkstoff": "insulin lispro",
+   "gebiet_mesh": "Diabetes Mellitus",
+   "atc": "A10AB04",
+   "inhaber": "Sandoz GmbH",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006158",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/bysumlog",
+   "indikation_en": "For the treatment of adults and children with diabetes mellitus who require insulin for the maintenance of normal glucose homeostasis. Bysumlog is also indicated for the initial stabilisation of diabetes mellitus.",
+   "hubs": [
+    "diabetes"
+   ],
+   "satz": "Bysumlog (Insulin lispro) ist zur Behandlung von Erwachsenen und Kindern mit Diabetes mellitus zugelassen, die Insulin zur Aufrechterhaltung der Glukosehomöostase benötigen, sowie zur initialen Stabilisierung des Diabetes mellitus."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-04-27",
+   "name": "Onerji",
+   "wirkstoff": "levodopa;carbidopa",
+   "gebiet_mesh": "Parkinson Disease",
+   "atc": "N04BA02",
+   "inhaber": "Tanabe Pharma GmbH",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006429",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/onerji",
+   "indikation_en": "Onerji is indicated for the treatment of motor fluctuations in patients with advanced Parkinson's disease which are not sufficiently controlled by oral anti-Parkinson medicinal products.",
+   "hubs": [
+    "longevity"
+   ],
+   "satz": "Onerji (Levodopa/Carbidopa) ist zur Behandlung von Motorfluktuationen bei Patienten mit fortgeschrittenem Parkinson-Syndrom indiziert, die auf orale Antiparkinson-Mittel nicht ausreichend ansprechen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-04-27",
+   "name": "Tuyory",
+   "wirkstoff": "tocilizumab",
+   "gebiet_mesh": "Arthritis, Rheumatoid;Arthritis, Juvenile;Cytokine Release Syndrome;Giant Cell Arteritis;COVID-19 virus infection",
+   "atc": "L04AC07",
+   "inhaber": "Chemical Works of Gedeon Richter Plc. (Gedeon Richter Plc.)",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006416",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/tuyory",
+   "indikation_en": "Rheumatoid arthritis (RA) Tuyory, in combination with methotrexate (MTX), is indicated for:- the treatment of severe, active and progressive RA in adults not previously treated with MTX.- the treatment of moderate to severe active RA in adult patients who have either responded inadequately to, or who were intolerant to, previous therapy with one or more disease- modifying anti-rheumatic drugs (DMARDs) or tumour necrosis factor (TNF) antagonists.In these patients, Tuyory can be given as monotherapy in case of intolerance to MTX or where continued treatment with MTX is inappropriate.Tocilizumab has been shown to reduce the rate of progression of joint damage as measured by X-ray and to improve physical function when given in combination with methotrexate. Coronavirus disease 2019 (COVID-19) Tuyory is indicated for the treatment of COVID-19 in adults who are receiving systemic corticosteroids and require supplemental oxygen or mechanical ventilation. Systemic juvenile idiopathic arthritis (sJIA) Tuyory is indicated for the treatment of active sJIA in patients 1 year of age and older, who have responded inadequately to previous therapy with non-steroidal anti-inflammatory drugs (NSAIDs",
+   "hubs": [
+    "impfen",
+    "ncd"
+   ],
+   "satz": "Tuyory (Tocilizumab) ist zur Behandlung der rheumatoiden Arthritis, der Coronavirus-Erkrankung 2019 und der systemischen juvenilen idiopathischen Arthritis zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-04-27",
+   "name": "Zandoriah",
+   "wirkstoff": "teriparatide",
+   "gebiet_mesh": "Osteoporosis;Osteoporosis, Postmenopausal",
+   "atc": "H05AA02",
+   "inhaber": "CinnaGen Co Unipessoal LDA",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006688",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/zandoriah",
+   "indikation_en": "Teriparatide is indicated in adults. Treatment of osteoporosis in postmenopausal women and in men at increased risk of fracture. In postmenopausal women, a significant reduction in the incidence of vertebral and non-vertebral fractures but not hip fractures has been demonstrated. Treatment of osteoporosis associated with sustained systemic glucocorticoid therapy in women and men at increased risk for fracture.",
+   "hubs": [
+    "longevity"
+   ],
+   "satz": "Zandoriah (Teriparatid) ist zur Behandlung der Osteoporose bei Frauen und Männern mit erhöhtem Frakturrisiko sowie bei Osteoporose unter systemischer Glukokortikoidtherapie zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-04-27",
+   "name": "Dazparda",
+   "wirkstoff": "insulin aspart",
+   "gebiet_mesh": "Diabetes Mellitus",
+   "atc": "A10AB05",
+   "inhaber": "Gan & Lee Pharmaceuticals Europe GmbH",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006187",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/dazparda",
+   "indikation_en": "Dazparda is indicated for treatment of diabetes mellitus in adults, adolescents and children aged 1 year and above.",
+   "hubs": [
+    "diabetes"
+   ],
+   "satz": "Dazparda (Insulin aspart) ist zur Behandlung des Diabetes mellitus bei Erwachsenen, Jugendlichen und Kindern ab 1 Jahr zugelassen."
+  }
+ ]
+}
