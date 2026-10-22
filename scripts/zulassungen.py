@@ -91,6 +91,8 @@ import openpyxl
 HIER = pathlib.Path(__file__).resolve().parent
 WURZEL = HIER.parent
 sys.path.insert(0, str(HIER))
+import antraege_quelle  # noqa: E402
+import antraege_studien  # noqa: E402
 import diga_quelle  # noqa: E402
 import fda_quelle  # noqa: E402
 import zulassungen_themen as themen  # noqa: E402
@@ -459,6 +461,29 @@ def saetze_schreiben(eintraege: list[dict], alt: dict, warnungen: list[str]) -> 
             vorgabe = ("Der Satz muss diesen Stand wiedergeben, etwa: "
                        "'Der CHMP empfiehlt die Zulassung von X zur Behandlung "
                        "von ...'. Schreibe NICHT 'ist zugelassen'.")
+        elif e["stufe"] == "antrag":
+            # **Die hoechste Vorsicht von allen Stufen.** Hier ist noch gar
+            # nichts entschieden: Von den Antraegen in der Medicines-Tabelle
+            # waren am 22.10.2026 268 zurueckgezogen und 65 abgelehnt. Ein
+            # Satz, der auch nur klingt wie eine Zulassung, waere hier am
+            # weitesten von der Wahrheit entfernt.
+            lage = ("Fuer dieses Mittel ist bei der Europaeischen "
+                    "Arzneimittel-Agentur ein Zulassungsantrag GESTELLT und "
+                    "wird geprueft. Es ist NICHT zugelassen, und es ist auch "
+                    "NOCH NICHT empfohlen - der Ausschuss hat noch nicht "
+                    "entschieden. Der Antrag kann zurueckgezogen oder "
+                    "abgelehnt werden.")
+            vorgabe = ("Der Satz muss diesen Stand wiedergeben, etwa: 'Fuer X "
+                       "(Wirkstoff) ist die Zulassung zur Behandlung von ... "
+                       "beantragt; die EMA prueft.' Schreibe NICHT 'ist "
+                       "zugelassen', NICHT 'wird zugelassen' und NICHT, dass "
+                       "eine Empfehlung vorliege. Nenne kein Datum, zu dem "
+                       "mit einer Entscheidung zu rechnen sei - es gibt "
+                       "keines.\n"
+                       "- **Ein Antrag hat noch keinen Handelsnamen.** Die "
+                       "EMA fuehrt ihn unter dem Wirkstoffnamen; 'Mittel' und "
+                       "'Wirkstoff' sind hier dasselbe. Nenne ihn EINMAL, "
+                       "nicht in Klammern noch einmal.")
         elif e["stufe"] == "fda":
             # **Dieselbe Falle wie bei den Gutachten, nur andersherum.** Dort
             # durfte der Satz keine Zulassung behaupten, hier darf er nicht die
@@ -561,6 +586,28 @@ def pruefen(eintraege: list[dict], warnungen: list[str]) -> tuple[int, int]:
                 "nicht angegeben", "fehlen", "liegt mir nicht", "als ki")):
             grund = "liest sich wie eine Rueckfrage des Modells, nicht wie ein Satz"
 
+        if not grund and e["stufe"] == "antrag":
+            # Dieselbe Pruefung wie beim Gutachten, nur eine Stufe strenger:
+            # Dort war die Empfehlung schon ausgesprochen, hier ist noch gar
+            # nichts entschieden. Das Partizip "zugelassen" hat in einem
+            # Antragssatz nichts zu suchen, und die Beantragung muss
+            # dastehen - sonst liest sich der Satz wie eine Meldung ueber ein
+            # fertiges Arzneimittel.
+            behauptet = ("zugelassen" in klein or "empfiehlt" in klein
+                         or "empfohlen" in klein)
+            beantragt = any(w in klein for w in
+                            ("beantragt", "antrag", "prüft", "prueft",
+                             "in prüfung", "in pruefung", "eingereicht"))
+            if behauptet:
+                grund = ("Antrag, aber der Satz behauptet eine Zulassung "
+                         "oder eine Empfehlung")
+            elif not beantragt:
+                grund = "Antrag, aber der Satz sagt nicht, dass er laeuft"
+            # Ein Datum in der Zukunft waere eine Zusage, die niemand geben
+            # kann - die EMA nennt kein Zieldatum.
+            elif re.search(r"\b20(2[6-9]|3\d)\b", satz):
+                grund = "Antrag, aber der Satz nennt ein Datum - es gibt keines"
+
         if not grund and e["stufe"] == "fda":
             # **Der Satz muss die Behoerde nennen.** "Rasonque (Daraxonrasib)
             # ist zur Behandlung des Pankreasadenokarzinoms zugelassen" ist
@@ -618,7 +665,17 @@ def pruefen(eintraege: list[dict], warnungen: list[str]) -> tuple[int, int]:
             # Genommen wird deshalb der erste Wortbestandteil **jedes**
             # Wirkstoffs, und es genuegt, wenn EINER davon im Satz steht: Bei
             # einer Kombination nennt der Satz oft nur den fuehrenden Stoff.
-            teile = re.split(r"[;,/()]+", str(e["wirkstoff"]))
+            # **Bei einem Antrag ist der "Wirkstoff" der Listeneintrag der
+            # EMA**, und der ist nicht immer ein Name: "Lyme borreliosis
+            # vaccine (6-valent, recombinant, adsorbed)" zerfaellt in
+            # "recombinant" und "adsorbed" - Eigenschaften, die in keinem
+            # Satz vorkommen. Am 22.10.2026 ist daran ein einwandfreier Satz
+            # gescheitert. Geprueft wird deshalb nur der Teil vor der
+            # Klammer; was dann kein Wort mehr ist, wird nicht geprueft.
+            roh_wirkstoff = str(e["wirkstoff"])
+            if e["stufe"] == "antrag":
+                roh_wirkstoff = re.sub(r"\(.*?\)", " ", roh_wirkstoff)
+            teile = re.split(r"[;,/()]+", roh_wirkstoff)
             staemme = [t.replace("-", " ").split()[0].lower()
                        for t in teile if t.replace("-", " ").split()]
             staemme = [s for s in staemme if len(s) >= 5]
@@ -679,10 +736,14 @@ def block(eintraege: list[dict], stand: str) -> str:
             zeilen.append(
                 "    {stufe:%s, datum:%s, name:%s, wirkstoff:%s, satz:%s, "
                 "gebiet_mesh:%s, atc:%s, inhaber:%s, kennzeichen:%s, url:%s, "
-                "nummer:%s}," %
+                "studien:%s, usa:%s, usa_name:%s, nummer:%s}," %
                 (js(e["stufe"]), js(e["datum"]), js(e["name"]), js(e["wirkstoff"]),
                  js(e["satz"]), js(e["gebiet_mesh"]), js(e["atc"]), js(e["inhaber"]),
                  json.dumps(e["kennzeichen"], ensure_ascii=False), js(e["url"]),
+                 # Nur die Antragsstufe traegt Studien; bei allen anderen
+                 # steht hier eine leere Liste und kostet drei Zeichen.
+                 json.dumps(e.get("studien") or [], ensure_ascii=False),
+                 js(e.get("usa", "")), js(e.get("usa_name", "")),
                  # Die Nummer ist der einzige verlaessliche Schluessel zum
                  # Entdoppeln in der Rubrik "Alle": Alle DiGA teilen sich
                  # EINE Adresse (das Verzeichnis), ueber die Adresse
@@ -755,6 +816,21 @@ def main() -> int:
           f"{fda_zahlen['fda_mit_hub']} einem Hub zugeordnet; "
           f"{fda_zahlen['fda_ohne_label']} warten auf das Label.")
 
+    # Fuenfte Stufe: Antraege, die bei der EMA in der Pruefung sind - der
+    # frueheste Zeitpunkt, den eine offene Quelle hergibt. Acht bis vierzehn
+    # Monate vor der Zulassung, gegenueber zwei Monaten beim Gutachten.
+    print("\nHole die EMA-Liste der laufenden Antraege ...")
+    antraege, antrag_zahlen = antraege_quelle.holen(warnungen, heute, hol)
+    zahlen.update(antrag_zahlen)
+    eintraege += antraege
+    eintraege.sort(key=lambda e: e["datum"], reverse=True)
+    print(f"  Liste {antrag_zahlen.get('antrag_stand','?')}: "
+          f"{antrag_zahlen['antrag_roh']} Antraege, davon "
+          f"{antrag_zahlen.get('antrag_generisch', 0)} Generika/Biosimilars "
+          f"(keine Nachricht); {antrag_zahlen['antrag_gezeigt']} gezeigt, "
+          f"{antrag_zahlen['antrag_gezeigt'] - antrag_zahlen.get('antrag_ohne_hub', 0)}"
+          " einem Hub zugeordnet.")
+
     zul = [e for e in eintraege if e["stufe"] == "zulassung"]
     gut = [e for e in eintraege if e["stufe"] == "gutachten"]
     print(f"\nStufe 1 - Zulassungen der letzten {FENSTER_TAGE} Tage: "
@@ -776,6 +852,48 @@ def main() -> int:
             alt = json.loads(ZIEL.read_text(encoding="utf-8"))
         except ValueError:
             warnungen.append(f"{ZIEL.name} war nicht lesbar - Saetze werden neu geschrieben")
+
+    # **Welcher Antrag ist in den USA schon zugelassen?** Das ist der
+    # interessanteste Satz, den dieser Radar sagen kann: Nicht "ein Mittel
+    # wird geprueft", sondern "dieses Mittel ist in den USA seit August auf
+    # dem Markt und wird in der EU noch geprueft". Am 22.10.2026 traf das
+    # auf 10 der 57 Antraege zu - und das ist eine Untergrenze, weil die
+    # FDA-Stufe nur 180 Tage zurueckblickt.
+    #
+    # Abgeglichen wird ueber den Wirkstoff, nicht ueber den Namen: Die
+    # Marken unterscheiden sich zwischen den Kontinenten, und ein Antrag hat
+    # ueberhaupt noch keine.
+    def staemme(wert: str) -> set:
+        raus = set()
+        for t in re.split(r"[;,/()]+", str(wert or "").lower()):
+            t = t.replace("-", " ").strip()
+            if not t:
+                continue
+            wort = t.split()[0]
+            if len(wort) >= 6:
+                raus.add(wort)
+                if wort.endswith("e"):
+                    raus.add(wort[:-1])
+        return raus
+
+    fda_eintraege = [e for e in eintraege if str(e["stufe"]).startswith("fda")]
+    schon_usa = 0
+    for e in antraege:
+        s = staemme(e["wirkstoff"])
+        for f in fda_eintraege:
+            if s & staemme(f["wirkstoff"]):
+                e["usa"] = f["datum"]
+                e["usa_name"] = f["name"]
+                schon_usa += 1
+                break
+    zahlen["antrag_schon_usa"] = schon_usa
+    print(f"  davon in den USA bereits zugelassen: {schon_usa}")
+
+    # Die Studien zu den Antraegen - gesucht wird nur, was noch keine hat.
+    gesucht = antraege_studien.anreichern(eintraege, alt, warnungen)
+    mit_studien = sum(1 for e in eintraege if e.get("studien"))
+    print(f"\nStudien zu den Antraegen: {gesucht} neu gesucht, "
+          f"{mit_studien} von {len(antraege)} Antraegen haben welche.")
 
     if not a.roh:
         neu = saetze_schreiben(eintraege, alt, warnungen)

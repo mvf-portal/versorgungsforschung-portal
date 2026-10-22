@@ -48,6 +48,34 @@ FAELLE = [
      + "Sie hilft bei vielerlei Beschwerden. " * 12,
      "viel zu lang, also kein einzelner Satz"),
 
+    # --- Stufe 5: Antrag in Pruefung. Die strengste Stufe, weil hier noch
+    # gar nichts entschieden ist: In der Medicines-Tabelle standen am
+    # 22.10.2026 268 zurueckgezogene und 65 abgelehnte Antraege.
+    (True, "antrag", "fuzuloparib",
+     "Fuzuloparib ist zur Behandlung des metastasierten kastrationsresistenten "
+     "Prostatakarzinoms zugelassen.",
+     "Antrag, aber der Satz behauptet eine Zulassung"),
+    (True, "antrag", "pelabresib",
+     "Der CHMP empfiehlt die Zulassung von Pelabresib bei primaerer Myelofibrose.",
+     "Antrag, aber der Satz behauptet eine Empfehlung"),
+    (True, "antrag", "treprostinil",
+     "Treprostinil wird zur Behandlung der idiopathischen Lungenfibrose "
+     "eingesetzt.",
+     "Antrag, aber der Satz sagt nicht, dass das Verfahren laeuft"),
+    (True, "antrag", "lorecivivint",
+     "Für Lorecivivint ist die Zulassung zur Behandlung der Arthrose "
+     "beantragt; mit einer Entscheidung ist 2027 zu rechnen.",
+     "Antrag, aber der Satz nennt ein Datum - die EMA nennt keines"),
+    (False, "antrag", "fuzuloparib",
+     "Für Fuzuloparib ist die Zulassung zur Behandlung des metastasierten "
+     "kastrationsresistenten Prostatakarzinoms bei Erwachsenen beantragt; "
+     "die EMA prüft.",
+     "richtiger Antragssatz - muss durchgehen"),
+    (False, "antrag", "Lyme borreliosis vaccine (6-valent, recombinant, adsorbed)",
+     "Für den sechsvalenten Lyme-Borreliose-Impfstoff ist die Zulassung zur "
+     "Prävention der Lyme-Borreliose ab fünf Jahren beantragt; die EMA prüft.",
+     "GRENZE: Listenname ist eine Beschreibung, kein INN - muss durchgehen"),
+
     # --- Stufe 4: FDA. Die Falle ist hier die *richtige* Zulassung an der
     # falschen Stelle: Jeder dieser Saetze ist woertlich wahr.
     (True, "fda", "tavapadon",
