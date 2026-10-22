@@ -79,6 +79,7 @@ import openpyxl
 HIER = pathlib.Path(__file__).resolve().parent
 WURZEL = HIER.parent
 sys.path.insert(0, str(HIER))
+import diga_quelle  # noqa: E402
 import zulassungen_themen as themen  # noqa: E402
 
 ZIEL = WURZEL / "zulassungen.json"
@@ -284,6 +285,43 @@ def sammeln(satz: list[dict], heute: dt.date,
     return eintraege, zahlen
 
 
+def digas_sammeln(warnungen: list[str]) -> tuple[list[dict], dict]:
+    """Die dritte Stufe: digitale Gesundheitsanwendungen des BfArM.
+
+    Eigene Quelle, eigenes Modul - aber dieselbe Seite und dieselben Hubs.
+    Eine DiGA wird nicht zugelassen, sondern ins Verzeichnis aufgenommen; der
+    Satz auf der Seite sagt das auch. Ein Modell braucht es dafuer nicht: Die
+    Bekanntmachung nennt Art, Datum und Hersteller, und mehr gibt sie nicht
+    her - was nicht dasteht, laesst sich auch nicht formulieren.
+    """
+    roh, zahlen = diga_quelle.holen(FENSTER_TAGE, warnungen)
+    eintraege = []
+    for d in roh:
+        hubs = themen.hubs_fuer_diga(d["name"])
+        if d["art"] == "streichung":
+            satz = (f"{d['name']} ist aus dem Verzeichnis erstattungsfähiger "
+                    "digitaler Gesundheitsanwendungen gestrichen worden und wird "
+                    "nicht mehr von der gesetzlichen Krankenversicherung erstattet.")
+            stufe = "diga-streichung"
+        else:
+            dauer = ("dauerhaft" if d["art"] == "dauerhaft"
+                     else "vorläufig zur Erprobung")
+            satz = (f"{d['name']} ist {dauer} in das Verzeichnis erstattungsfähiger "
+                    "digitaler Gesundheitsanwendungen aufgenommen worden und damit "
+                    "auf Rezept erstattungsfähig.")
+            stufe = "diga"
+        eintraege.append({
+            "stufe": stufe, "datum": d["iso"], "name": d["name"],
+            "wirkstoff": "", "gebiet_mesh": "", "atc": "",
+            "inhaber": d["hersteller"],
+            "kennzeichen": ["DiGA-ID " + d["diga_id"]],
+            "gutachten": "", "nummer": "DiGA-" + d["diga_id"],
+            "url": "https://diga.bfarm.de/de/verzeichnis",
+            "indikation_en": "", "hubs": hubs, "satz": satz,
+        })
+    return eintraege, zahlen
+
+
 def saetze_schreiben(eintraege: list[dict], alt: dict, warnungen: list[str]) -> int:
     """Ein deutscher Satz je Eintrag - einmal, dann aufbewahrt.
 
@@ -298,9 +336,22 @@ def saetze_schreiben(eintraege: list[dict], alt: dict, warnungen: list[str]) -> 
     """
     bekannt = {e.get("nummer"): e.get("satz", "")
                for e in alt.get("eintraege", []) if e.get("satz")}
-    offen = [e for e in eintraege if not bekannt.get(e["nummer"])]
     for e in eintraege:
-        e["satz"] = bekannt.get(e["nummer"], "")
+        # **Einen vorhandenen Satz nicht ueberschreiben.** Die DiGA bringen
+        # ihren Satz aus der Quelle mit; am 22.10.2026 hat das Modell alle
+        # fuenf davon durch eine Verweigerung ersetzt ("Ich kann diese Anfrage
+        # nicht beantworten, da der Wirkstoff fehlt") - richtig gedacht vom
+        # Modell, denn eine DiGA hat keinen Wirkstoff, aber die Frage haette
+        # ihm nie gestellt werden duerfen.
+        if not e["satz"]:
+            e["satz"] = bekannt.get(e["nummer"], "")
+    # Gefragt wird nur, wo etwas zu uebersetzen ist. Ohne Indikationstext hat
+    # das Modell nichts, woraus es einen Satz bilden koennte - und was es dann
+    # bildet, ist entweder eine Verweigerung oder frei erfunden.
+    offen = [e for e in eintraege if not e["satz"] and e["indikation_en"]]
+    ohne_text = [e for e in eintraege if not e["satz"] and not e["indikation_en"]]
+    for e in ohne_text:
+        warnungen.append(f"{e['name']}: weder Satz noch Indikationstext - bleibt ohne Satz")
     if not offen:
         return 0
 
@@ -394,7 +445,21 @@ def pruefen(eintraege: list[dict], warnungen: list[str]) -> tuple[int, int]:
         klein = satz.lower()
         grund = ""
 
-        if e["stufe"] == "gutachten":
+        # **Eine Verweigerung ist kein Satz.** Am 22.10.2026 standen fuenf
+        # Antworten der Form "Ich kann diese Anfrage nicht beantworten, da der
+        # Wirkstoff fehlt" in der Datei - und kamen durch beide Pruefungen,
+        # weil sie weder eine Zulassung behaupteten noch einen Wirkstoff
+        # nennen mussten (DiGA haben keinen). Ein Modell, das sich weigert,
+        # tut das Richtige; was es dabei schreibt, darf nur nicht auf der
+        # Seite landen.
+        if len(satz) > 400 or "\n" in satz:
+            grund = "kein einzelner Satz (zu lang oder mehrzeilig)"
+        elif any(w in klein for w in (
+                "ich kann", "ich habe", "bitte geben", "bitte ergänzen",
+                "nicht angegeben", "fehlen", "liegt mir nicht", "als ki")):
+            grund = "liest sich wie eine Rueckfrage des Modells, nicht wie ein Satz"
+
+        if not grund and e["stufe"] == "gutachten":
             # "empfiehlt die Zulassung" ist richtig und enthaelt das Substantiv
             # "Zulassung"; das **Partizip** "zugelassen" hat in einem
             # Gutachtensatz dagegen nichts zu suchen - es behauptet den
@@ -471,17 +536,29 @@ def block(eintraege: list[dict], stand: str) -> str:
     liest, soll ihn dort finden, ohne den Adipositas-Hub zu kennen.
     """
     zeilen = [BLOCK_START, f'const ZUL_STAND = "{stand}";', "const ZULASSUNGEN = ["]
-    for slug in themen.REGELN:
+    # Der Digitalisierungs-Hub steht nicht in REGELN - dorthin zeigt kein
+    # MeSH-Begriff, er bekommt seine Eintraege allein ueber die DiGA. Ohne
+    # ihn haetten am 22.10.2026 fuenf DiGA zwar ein Gebiet gehabt, aber keine
+    # Rubrik, in der sie erscheinen: Sie standen nur unter "Alle".
+    gebiete = list(themen.REGELN) + [themen.DIGA_HEIMAT]
+    for slug in gebiete:
         meine = [e for e in eintraege if slug in e["hubs"]]
         zeilen.append("  {slug:%s, name:%s, domain:%s, eintraege:[" %
                       (js(slug), js(themen.name_von(slug)), js(HUB_DOMAIN.get(slug, ""))))
         for e in meine:
             zeilen.append(
                 "    {stufe:%s, datum:%s, name:%s, wirkstoff:%s, satz:%s, "
-                "gebiet_mesh:%s, atc:%s, inhaber:%s, kennzeichen:%s, url:%s}," %
+                "gebiet_mesh:%s, atc:%s, inhaber:%s, kennzeichen:%s, url:%s, "
+                "nummer:%s}," %
                 (js(e["stufe"]), js(e["datum"]), js(e["name"]), js(e["wirkstoff"]),
                  js(e["satz"]), js(e["gebiet_mesh"]), js(e["atc"]), js(e["inhaber"]),
-                 json.dumps(e["kennzeichen"], ensure_ascii=False), js(e["url"])))
+                 json.dumps(e["kennzeichen"], ensure_ascii=False), js(e["url"]),
+                 # Die Nummer ist der einzige verlaessliche Schluessel zum
+                 # Entdoppeln in der Rubrik "Alle": Alle DiGA teilen sich
+                 # EINE Adresse (das Verzeichnis), ueber die Adresse
+                 # entdoppelt wurden aus fuenf Eintraegen stillschweigend
+                 # einer.
+                 js(e["nummer"])))
         zeilen.append("  ]},")
     zeilen += ["];", BLOCK_ENDE]
     return "\n".join(zeilen)
@@ -524,6 +601,18 @@ def main() -> int:
           "Humanarzneimittel.")
 
     eintraege, zahlen = sammeln(satz, heute, warnungen)
+
+    # Dritte Stufe: DiGA. Eigene Quelle, eigenes Modul - aber dieselbe Liste,
+    # damit ein Hub eine Rubrik hat und nicht drei.
+    print("\nHole die DiGA-Bekanntmachungen des BfArM ...")
+    digas, diga_zahlen = digas_sammeln(warnungen)
+    zahlen.update(diga_zahlen)
+    eintraege += digas
+    eintraege.sort(key=lambda e: e["datum"], reverse=True)
+    print(f"  {diga_zahlen['bekanntmachungen_gelesen']} Bekanntmachungen gelesen, "
+          f"{diga_zahlen['diga_roh']} Eintraege, davon {diga_zahlen['diga_gezeigt']} "
+          "im Fenster und berichtenswert.")
+
     zul = [e for e in eintraege if e["stufe"] == "zulassung"]
     gut = [e for e in eintraege if e["stufe"] == "gutachten"]
     print(f"\nStufe 1 - Zulassungen der letzten {FENSTER_TAGE} Tage: "

@@ -33,6 +33,22 @@ FAELLE = [
      "Zokovea ist zur Postexpositionsprophylaxe von COVID-19 zugelassen.",
      "nur der Handelsname, kein Wirkstoff"),
 
+    (True, "diga", "",
+     "Ich kann diese Anfrage nicht beantworten, da die notwendigen Informationen "
+     "fehlen: Der Wirkstoff von \"Una Health\" ist nicht angegeben und die "
+     "Indikation liegt mir nicht vor.",
+     "Rueckfrage des Modells statt eines Satzes - der Fehler vom 22.10.2026"),
+    (True, "diga", "",
+     "Diese digitale Gesundheitsanwendung ist in das Verzeichnis aufgenommen worden. "
+     + "Sie hilft bei vielerlei Beschwerden. " * 12,
+     "viel zu lang, also kein einzelner Satz"),
+
+    (False, "diga", "",
+     "ACTICORE1 ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger "
+     "digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept "
+     "erstattungsfähig.",
+     "richtiger DiGA-Satz ohne Wirkstoff - muss durchgehen"),
+
     (False, "zulassung", "temozolomide",
      "Kizfizo (Temozolomid) ist zur Behandlung des Glioblastoms zugelassen.",
      "deutsche Schreibweise ohne End-e - muss durchgehen"),

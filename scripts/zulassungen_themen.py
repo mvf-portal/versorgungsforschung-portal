@@ -109,5 +109,50 @@ def hubs_fuer(mesh_feld: str) -> list[str]:
     return treffer
 
 
+# --------------------------------------------------------------- DiGA
+# Digitale Gesundheitsanwendungen kommen aus einer anderen Quelle und tragen
+# **kein Anwendungsgebiet**: Die Bekanntmachung des BfArM nennt nur
+# Bezeichnung, DiGA-ID, Datum und Hersteller. Das Verzeichnis selbst kennt die
+# Indikation samt ICD-Schluessel, aber nur hinter einer Schnittstelle, die
+# von aussen mit 401 antwortet.
+#
+# Zugeordnet wird deshalb nach dem **Namen**, und das geht erstaunlich weit:
+# DiGA heissen "Oviva Direkt für Adipositas", "HelloBetter Diabetes",
+# "Pia-App bei Regelschmerzen". Was sich daraus nicht erschliesst, steht
+# trotzdem im Digitalisierungs-Hub - dort gehoert jede DiGA hin, unabhaengig
+# vom Krankheitsbild.
+DIGA_HEIMAT = "ki-gesundheit"
+DIGA_HEIMAT_NAME = "Digitalisierung, KI & Gesundheit"
+
+DIGA_MUSTER = {
+    "diabetes": [r"diabet", r"\bhba1c"],
+    "adipositas": [r"adipositas", r"abnehm", r"gewicht", r"\bovivA?\b"],
+    "mental": [r"depress", r"angst", r"panik", r"schlaf", r"insomn", r"stress",
+               r"burnout", r"sucht", r"alkohol", r"psych", r"vaginismus"],
+    "onkologie": [r"krebs", r"cancer", r"tumor", r"onkolog", r"mamma"],
+    "kardio": [r"herz", r"blutdruck", r"hyperton", r"kardio"],
+    "ncd": [r"schmerz", r"rücken", r"ruecken", r"arthros", r"rheuma", r"copd",
+            r"asthma", r"tinnitus", r"migräne", r"migraene", r"reizdarm",
+            r"multiple sklerose"],
+    "longevity": [r"demen", r"alzheim", r"sturz", r"osteoporos"],
+}
+DIGA_GEBAUT = {slug: [re.compile(m, re.I) for m in muster]
+               for slug, muster in DIGA_MUSTER.items()}
+
+NAMEN_SONST = {DIGA_HEIMAT: DIGA_HEIMAT_NAME}
+
+
+def hubs_fuer_diga(bezeichnung: str) -> list[str]:
+    """Die Hub-Slugs zu einer DiGA - immer der Digitalisierungs-Hub, dazu was
+    der Name hergibt."""
+    treffer = [DIGA_HEIMAT]
+    for slug, muster in DIGA_GEBAUT.items():
+        if any(m.search(bezeichnung or "") for m in muster):
+            treffer.append(slug)
+    return treffer
+
+
 def name_von(slug: str) -> str:
-    return GEBAUT[slug][0] if slug in GEBAUT else slug
+    if slug in GEBAUT:
+        return GEBAUT[slug][0]
+    return NAMEN_SONST.get(slug, slug)

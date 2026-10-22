@@ -5,7 +5,10 @@
  "zahlen": {
   "zulassung": 35,
   "gutachten": 28,
-  "ohne_hub": 20
+  "ohne_hub": 20,
+  "bekanntmachungen_gelesen": 3,
+  "diga_roh": 37,
+  "diga_gezeigt": 5
  },
  "warnungen": [],
  "eintraege": [
@@ -26,7 +29,7 @@
     "diabetes",
     "longevity"
    ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Fovlussea (Ranibizumab) zur Behandlung der neovaskulären altersbezogenen Makuladegeneration und anderer visueller Beeinträchtigungen bei Erwachsenen."
+   "satz": "Der CHMP empfiehlt die Zulassung von Fovlussea (Ranibizumab) zur Behandlung der neovaskularären altersbezogenen Makuladegeneration und weiterer visueller Beeinträchtigungen bei Erwachsenen."
   },
   {
    "stufe": "gutachten",
@@ -85,7 +88,49 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Rasonque (Daraxonrasib) zur Behandlung von metastasierendem Pankreasadenokarzinom bei Erwachsenen nach mindestens einer vorangegangenen systemischen Therapie."
+   "satz": "Der CHMP empfiehlt die Zulassung von Rasonque (Daraxonrasib) zur Behandlung von Patienten mit metastasierendem Pankreasadenokarzinom nach mindestens einer vorangegangenen systemischen Therapie."
+  },
+  {
+   "stufe": "diga-streichung",
+   "datum": "2026-09-28",
+   "name": "Una Health für Diabetes",
+   "wirkstoff": "",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "Una Health GmbH",
+   "kennzeichen": [
+    "DiGA-ID 02286"
+   ],
+   "gutachten": "",
+   "nummer": "DiGA-02286",
+   "url": "https://diga.bfarm.de/de/verzeichnis",
+   "indikation_en": "",
+   "hubs": [
+    "ki-gesundheit",
+    "diabetes"
+   ],
+   "satz": "Una Health für Diabetes ist aus dem Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen gestrichen worden und wird nicht mehr von der gesetzlichen Krankenversicherung erstattet."
+  },
+  {
+   "stufe": "diga",
+   "datum": "2026-09-23",
+   "name": "Pia-App bei Regelschmerzen",
+   "wirkstoff": "",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "Endo Health GmbH",
+   "kennzeichen": [
+    "DiGA-ID 02883"
+   ],
+   "gutachten": "",
+   "nummer": "DiGA-02883",
+   "url": "https://diga.bfarm.de/de/verzeichnis",
+   "indikation_en": "",
+   "hubs": [
+    "ki-gesundheit",
+    "ncd"
+   ],
+   "satz": "Pia-App bei Regelschmerzen ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
    "stufe": "zulassung",
@@ -121,7 +166,7 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Ruxolitinib Viatris (Ruxolitinib-Hemifumarat) ist zur Behandlung der Myelofibrose, Polycythaemia vera und akuten sowie chronischen Graft-versus-Host-Disease zugelassen."
+   "satz": "Ruxolitinib Viatris (Ruxolitinib-Hemifumarat) ist zur Behandlung der Myelofibrose, Polycythaemia vera und akuten sowie chronischen Graft-versus-Host-Disease indiziert."
   },
   {
    "stufe": "zulassung",
@@ -139,7 +184,7 @@
    "hubs": [
     "longevity"
    ],
-   "satz": "Susvimo (Ranibizumab) ist zur Behandlung der neovaskularären altersbezogenen Makuladegeneration bei Erwachsenen mit stabiler Erkrankung nach vorheriger VEGF-Inhibitor-Therapie zugelassen."
+   "satz": "Susvimo (Ranibizumab) ist zur Behandlung der neovaskulären feuchten Makuladegeneration bei Erwachsenen mit stabiler Erkrankung nach vorheriger VEGF-Inhibitor-Therapie zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -157,7 +202,7 @@
    "hubs": [
     "ncd"
    ],
-   "satz": "Icotyde (Icotrokinra-Hydrochlorid) ist zur Behandlung der mittelschweren bis schweren Plaque-Psoriasis bei Erwachsenen und Jugendlichen ab 12 Jahren mit mindestens 40 kg Körpergewicht zugelassen, die für eine systemische Therapie geeignet sind."
+   "satz": "Icotyde (Icotrokinra-hydrochlorid) ist zur Behandlung der mittelschweren bis schweren Plaque-Psoriasis bei Erwachsenen und Jugendlichen ab 12 Jahren mit Körpergewicht von mindestens 40 kg zugelassen, die für eine Systemtherapie in Frage kommen."
   },
   {
    "stufe": "zulassung",
@@ -175,7 +220,7 @@
    "hubs": [
     "impfen"
    ],
-   "satz": "Zokovea (Ensitrelvir) ist zur Postexpositionsprophylaxe von COVID-19 bei Erwachsenen und Jugendlichen ab 12 Jahren zugelassen."
+   "satz": "Zokovea (Ensitrelvir) ist in der EU zur Postexpositionsprophylaxe von COVID-19 bei Erwachsenen und Jugendlichen ab 12 Jahren zugelassen."
   },
   {
    "stufe": "gutachten",
@@ -211,7 +256,7 @@
    "hubs": [
     "ncd"
    ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Inijaq (Tofacitinib) zur Behandlung von rheumatoider Arthritis, Psoriasisarthritis, Spondylitis ankylosans und Colitis ulcerosa sowie juveniler idiopathischer Arthritis bei Kindern ab 2 Jahren."
+   "satz": "Der CHMP empfiehlt die Zulassung von Inijaq (Tofacitinib-Citrat) zur Behandlung von rheumatoider Arthritis, Psoriasis-Arthritis, Spondylitis ankylosans und Colitis ulcerosa sowie juveniler idiopathischer Arthritis ab 2 Jahren."
   },
   {
    "stufe": "gutachten",
@@ -231,7 +276,7 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Lifyorli (Relacorilant) zur Behandlung von platinumresistentem epithelialem Ovarial-, Eileiter- oder primärem Peritonealkarzinom."
+   "satz": "Der CHMP empfiehlt die Zulassung von Lifyorli (Relacorilant) zur Behandlung von Erwachsenen mit platinumresistentem epithelialem Ovarialkarzinom, Eileiterkarzinom oder primärem Peritonealkarzinom."
   },
   {
    "stufe": "gutachten",
@@ -249,7 +294,7 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Ruxolitinib Zentiva (Ruxolitinib-Hemifumarat) zur Behandlung der Myelofibrose, Polycythaemia vera und Graft-versus-Host-Disease bei Erwachsenen und Kindern."
+   "satz": "Der CHMP empfiehlt die Zulassung von Ruxolitinib Zentiva (Ruxolitinib-Hemifumarat) zur Behandlung von Myelofibrose, Polycythaemia vera und Graft-versus-Host-Disease bei Erwachsenen und Kindern."
   },
   {
    "stufe": "gutachten",
@@ -267,7 +312,7 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Sepalna (senaparib) zur Erhaltungstherapie des fortgeschrittenen epithelialen hochgradig serösen Ovarial-, Eileiter- oder primären Peritonealkarzinoms."
+   "satz": "Der CHMP empfiehlt die Zulassung von Sepalna (Senaparib) zur Erhaltungstherapie des fortgeschrittenen epithelialen hochgradig malignen Ovarialkarzinoms, Eileiterkarzinoms oder primären Peritonealkarzinoms."
   },
   {
    "stufe": "gutachten",
@@ -285,7 +330,7 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Gevalka (Ensartinib) zur Behandlung von Erwachsenen mit ALK-positivem fortgeschrittenem nicht-kleinzelligem Lungenkarzinom."
+   "satz": "Der CHMP empfiehlt die Zulassung von Gevalka (Ensartinib-dihydrochlorid) zur Behandlung von Erwachsenen mit ALK-positivem fortgeschrittenem nicht-kleinzelligem Lungenkarzinom."
   },
   {
    "stufe": "gutachten",
@@ -303,7 +348,47 @@
    "hubs": [
     "impfen"
    ],
-   "satz": "Der CHMP empfiehlt die Zulassung von VaxRabeo (inaktiviertes Rabiesvirus, Stamm WISTAR) zur Prä- und Postexpositionsprophylaxe gegen Tollwut."
+   "satz": "Der CHMP empfiehlt die Zulassung von VaxRabeo (Rabies-Virus inaktiviert, Stamm WISTAR) zur Prä- und Postexpositionsprophylaxe gegen Tollwut."
+  },
+  {
+   "stufe": "diga",
+   "datum": "2026-09-16",
+   "name": "ACTICORE1",
+   "wirkstoff": "",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ACTICORE AG",
+   "kennzeichen": [
+    "DiGA-ID 02940"
+   ],
+   "gutachten": "",
+   "nummer": "DiGA-02940",
+   "url": "https://diga.bfarm.de/de/verzeichnis",
+   "indikation_en": "",
+   "hubs": [
+    "ki-gesundheit"
+   ],
+   "satz": "ACTICORE1 ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
+  },
+  {
+   "stufe": "diga",
+   "datum": "2026-09-07",
+   "name": "Frieda Menova",
+   "wirkstoff": "",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "Frieda Health GmbH",
+   "kennzeichen": [
+    "DiGA-ID 02895"
+   ],
+   "gutachten": "",
+   "nummer": "DiGA-02895",
+   "url": "https://diga.bfarm.de/de/verzeichnis",
+   "indikation_en": "",
+   "hubs": [
+    "ki-gesundheit"
+   ],
+   "satz": "Frieda Menova ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
    "stufe": "zulassung",
@@ -321,7 +406,7 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Denosumab Ascend (Denosumab) ist zur Prävention skelettbezogener Ereignisse bei Erwachsenen mit fortgeschrittenen Malignomen und zur Behandlung des Riesenzelltumors der Knochen bei Erwachsenen und skelettal reifen Jugendlichen zugelassen."
+   "satz": "Denosumab Ascend (Denosumab) ist zugelassen zur Prävention skelettbezogener Ereignisse bei Erwachsenen mit fortgeschrittenen Malignomen mit Knochenbefall und zur Behandlung von Riesenzelltumoren des Knochens."
   },
   {
    "stufe": "zulassung",
@@ -339,7 +424,7 @@
    "hubs": [
     "impfen"
    ],
-   "satz": "Aujemflu (Influenza-Virusantigene A/H1N1, A/H3N2, B/Victoria) ist zur Grippe-Prophylaxe bei Erwachsenen ab 50 Jahren zugelassen."
+   "satz": "Aujemflu (Influenza-A(H1N1)-, A(H3N2)- und B(Victoria)-Virus-Antigene) ist zur Prophylaxe der Influenza bei Erwachsenen ab 50 Jahren zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -357,7 +442,27 @@
    "hubs": [
     "longevity"
    ],
-   "satz": "Hopledo (Levodopa/Carbidopa) ist indiziert zur Behandlung von Parkinson-Patienten mit mittelschweren bis schweren Motorfluktuationen, die auf orales Levodopa/DDC-Inhibitor-Regime unzureichend ansprechen."
+   "satz": "Hopledo (Levodopa/Carbidopa) ist zur Behandlung von Parkinson-Patienten mit moderaten bis schweren Motorfluktuationen indiziert, die auf orale Levodopa/DDC-Inhibitor-Therapie nicht ausreichend ansprechen."
+  },
+  {
+   "stufe": "diga",
+   "datum": "2026-08-10",
+   "name": "isi PMS App",
+   "wirkstoff": "",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "Endo Health GmbH",
+   "kennzeichen": [
+    "DiGA-ID 02857"
+   ],
+   "gutachten": "",
+   "nummer": "DiGA-02857",
+   "url": "https://diga.bfarm.de/de/verzeichnis",
+   "indikation_en": "",
+   "hubs": [
+    "ki-gesundheit"
+   ],
+   "satz": "isi PMS App ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
    "stufe": "zulassung",
@@ -375,7 +480,7 @@
    "hubs": [
     "kardio"
    ],
-   "satz": "Colchicine Agepha Pharma (Colchicin) ist zur Sekundärprävention atherothrombotischer Ereignisse bei Erwachsenen mit stabiler koronarer Erkrankung zugelassen."
+   "satz": "Colchicine Agepha Pharma (Colchicin) ist zur Sekundärprävention atherothrombotischer Ereignisse bei Erwachsenen mit seit mindestens 6 Monaten stabiler Koronararterienerkrankung zugelassen."
   },
   {
    "stufe": "gutachten",
@@ -395,7 +500,7 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Qezzaqar (Catequentinib dihydrochlorid) zur Behandlung von Synovialzellsarkom oder Leiomyosarkom."
+   "satz": "Der CHMP empfiehlt die Zulassung von Qezzaqar (Catequentinib-dihydrochlorid) zur Behandlung von Synovialsakom oder Leiomyosarkom."
   },
   {
    "stufe": "gutachten",
@@ -413,7 +518,7 @@
    "hubs": [
     "kardio"
    ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Evlarco (Obicetrapib) zur Behandlung der primären Hypercholesterinämie oder gemischten Dyslipidämie."
+   "satz": "Der CHMP empfiehlt die Zulassung von Evlarco (Obicetrapib/Ezetimib) zur Behandlung der primären Hypercholesterinämie oder gemischten Dyslipidämie."
   },
   {
    "stufe": "gutachten",
@@ -451,7 +556,7 @@
    "hubs": [
     "kardio"
    ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Lyrokaul (Lerodalcibep) zur Behandlung der primären Hypercholesterinämie und gemischten Dyslipidämie als Ergänzung zur Diät."
+   "satz": "Der CHMP empfiehlt die Zulassung von Lyrokaul (Lerodalcibep) zur Behandlung der primären Hypercholesterinämie und gemischten Dyslipidämie als Zusatztherapie zur Diät."
   },
   {
    "stufe": "gutachten",
@@ -487,7 +592,7 @@
    "hubs": [
     "kardio"
    ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Riociguat Accord (Riociguat) zur Behandlung der chronischen thromboembolischen pulmonalen Hypertonie und der pulmonalarteriellen Hypertonie bei Erwachsenen und Kindern ab 6 Jahren."
+   "satz": "Der CHMP empfiehlt die Zulassung von Riociguat Accord (Riociguat) zur Behandlung der chronisch-thromboembolischen pulmonalen Hypertonie und pulmonalarteriellen Hypertonie bei Erwachsenen sowie PAH bei Kindern ab 6 Jahren."
   },
   {
    "stufe": "zulassung",
@@ -505,7 +610,7 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Etcamah (Camizestrant) in Kombination mit CDK4/6-Inhibitoren ist zur Behandlung von Patientinnen mit ER-positivem, HER2-negativem, lokal fortgeschrittenem oder metastasiertem Mammakarzinom bei ESR1-Mutation ohne Krankheitsprogression unter First-Line-Endokrinetherapie zugelassen."
+   "satz": "Etcamah (Camizestrant) in Kombination mit einem CDK4/6-Inhibitor ist für Patientinnen mit ER-positivem, HER2-negativem lokal fortgeschrittenem oder metastasiertem Mammakarzinom und nachgewiesener ESR1-Mutation ohne Krankheitsprogression unter Erstlinien-Endokrinotherapie mit CDK4/6-Inhibitor indiziert."
   },
   {
    "stufe": "zulassung",
@@ -524,7 +629,7 @@
     "diabetes",
     "longevity"
    ],
-   "satz": "Vislyfa (Ranibizumab) ist zur Behandlung der feuchten altersbezogenen Makuladegeneration, diabetischen Makulaödem, proliferativen diabetischen Retinopathie, Makulaödem nach Netzhautvenenokklusion und choroidalen Neovaskularisation bei Erwachsenen zugelassen."
+   "satz": "Vislyfa (Ranibizumab) ist bei Erwachsenen zur Behandlung der feuchten altersbezogenen Makuladegeneration, diabetischen Makulaödem, proliferativen diabetischen Retinopathie, Makulaödem nach Netzhautvenenverschluss und choroidalen Neovaskularisation zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -542,7 +647,7 @@
    "hubs": [
     "adipositas"
    ],
-   "satz": "Ablymico (Liraglutid) ist in der EU zur Gewichtsabnahme zugelassen."
+   "satz": "Ablymico (Liraglutid) ist in der EU zur Behandlung der Gewichtskontrolle zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -560,7 +665,7 @@
    "hubs": [
     "diabetes"
    ],
-   "satz": "Liraglutide STADA (Liraglutid) ist zur Behandlung von Typ-2-Diabetes mellitus bei unzureichender Kontrolle durch Diät und Bewegung bei Erwachsenen, Jugendlichen und Kindern ab 10 Jahren zugelassen."
+   "satz": "Liraglutide STADA (Liraglutide) ist zur Behandlung von Typ-2-Diabetes mellitus bei unzureichender Kontrolle durch Diät und Bewegung bei Erwachsenen, Jugendlichen und Kindern ab 10 Jahren zugelassen."
   },
   {
    "stufe": "gutachten",
@@ -614,7 +719,7 @@
    "hubs": [
     "longevity"
    ],
-   "satz": "Rexatilux (Ranibizumab) ist zur Behandlung der feuchten altersbezogenen Makuladegeneration, der diabetischen Makulaödeme, der proliferativen diabetischen Retinopathie, der durch Netzhautvenenokklusion bedingten Makulaödeme und der choroidalen Neovaskularisation zugelassen."
+   "satz": "Rexatilux (Ranibizumab) ist zur Behandlung der feuchten altersbedingten Makuladegeneration, der diabetischen Makulaödem-bedingten Sehbehinderung, der proliferativen diabetischen Retinopathie, der durch Netzhautvenenokklusion bedingten Makulaödem-Sehbehinderung und der choroidalen Neovaskularisation indiziert."
   },
   {
    "stufe": "zulassung",
@@ -632,7 +737,7 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Palbociclib Viatris (Palbociclib) ist zur Behandlung von Hormonrezeptor-positivem, HER2-negativem lokal fortgeschrittenem oder metastasiertem Mammakarzinom in Kombination mit einem Aromatasehemmer oder Fulvestrant zugelassen."
+   "satz": "Palbociclib Viatris (Palbociclib) ist zur Behandlung von Hormonrezeptor-positivem, HER2-negativem lokal fortgeschrittenem oder metastasiertem Mammakarzinom in Kombination mit einem Aromatasehemmer oder Fulvestrant indiziert."
   },
   {
    "stufe": "zulassung",
@@ -651,7 +756,7 @@
     "kardio",
     "ncd"
    ],
-   "satz": "Bopediat (Furosemid) ist zur Behandlung von Ödemen kardialen oder renalen Ursprungs, hepatischen Ödemen und Hypertonie bei chronischer Nierenkrankheit bei Kindern ab Geburt bis unter 18 Jahren zugelassen."
+   "satz": "Bopediat (Furosemid) ist zur Behandlung von Ödemen kardialen oder renalen Ursprungs, hepatischen Ödemen und Hypertonie bei chronischer Nierenerkrankung bei Kindern ab Geburt zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -671,7 +776,7 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Imdylltra (Tarlatamab) ist zur Monotherapie des kleinzelligen Lungenkarzinoms im fortgeschrittenen Stadium bei Erwachsenen nach Progression unter platinbasierter Chemotherapie zugelassen."
+   "satz": "Imdylltra (Tarlatamab) ist zur Monotherapie des kleinzelligen Lungenkarzinoms im Stadium extensive-stage bei erwachsenen Patienten nach Progress unter oder nach platinbasierter Chemotherapie zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -691,7 +796,7 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Zepzelca (Lurbinectedin) in Kombination mit Atezolizumab ist zur Erhaltungstherapie des kleinzelligen Lungenkarzinoms im Stadium extensive-stage zugelassen, wenn die Erkrankung nach Induktionstherapie nicht progredient ist."
+   "satz": "Zepzelca (Lurbinectedin) in Kombination mit Atezolizumab ist zur Erhaltungstherapie von Patienten mit kleinzelligem Lungenkarzinom im Stadium extensive-stage indiziert, deren Erkrankung nach Erstlinien-Induktionstherapie nicht progredient ist."
   },
   {
    "stufe": "zulassung",
@@ -711,7 +816,7 @@
    "hubs": [
     "onkologie"
    ],
-   "satz": "Adstiladrin (Nadofaragene firadenovec) ist zur Behandlung von BCG-refraktärem nicht-muskelinvasivem Blasenkrebs mit Carcinoma in situ indiziert."
+   "satz": "Adstiladrin (Nadofaragene firadenovec) ist zugelassen zur Behandlung von BCG-refraktärem nicht-muskelinvasivem Blasenkrebs mit Carcinoma in situ."
   },
   {
    "stufe": "zulassung",
@@ -729,7 +834,7 @@
    "hubs": [
     "diabetes"
    ],
-   "satz": "Bysumlog (Insulin lispro) ist zur Behandlung von Erwachsenen und Kindern mit Diabetes mellitus zugelassen, die Insulin zur Aufrechterhaltung der Glukosehomöostase benötigen, sowie zur initialen Stabilisierung des Diabetes mellitus."
+   "satz": "Bysumlog (Insulin lispro) ist zur Behandlung von Diabetes mellitus bei Erwachsenen und Kindern zugelassen, die Insulin zur Aufrechterhaltung der Glukosehomöostase benötigen, sowie zur initialen Stabilisierung des Diabetes mellitus."
   },
   {
    "stufe": "zulassung",
@@ -747,7 +852,7 @@
    "hubs": [
     "longevity"
    ],
-   "satz": "Onerji (Levodopa/Carbidopa) ist zur Behandlung von Motorfluktuationen bei Patienten mit fortgeschrittenem Parkinson-Syndrom indiziert, die auf orale Antiparkinson-Mittel nicht ausreichend ansprechen."
+   "satz": "Onerji (Levodopa/Carbidopa) ist zur Behandlung von Motorfluktuationen bei Patienten mit fortgeschrittenem Parkinson-Syndrom indiziert, die auf orale Antiparkinson-Mittel unzureichend ansprechen."
   },
   {
    "stufe": "zulassung",
@@ -766,7 +871,7 @@
     "impfen",
     "ncd"
    ],
-   "satz": "Tuyory (Tocilizumab) ist zur Behandlung der rheumatoiden Arthritis, der Coronavirus-Erkrankung 2019 und der systemischen juvenilen idiopathischen Arthritis zugelassen."
+   "satz": "Tuyory (Tocilizumab) ist zur Behandlung von rheumatoider Arthritis, COVID-19 bei Patienten unter Kortikosteroid- und Sauerstofftherapie sowie aktiver systemischer juveniler idiopathischer Arthritis zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -784,7 +889,7 @@
    "hubs": [
     "longevity"
    ],
-   "satz": "Zandoriah (Teriparatid) ist zur Behandlung der Osteoporose bei Frauen und Männern mit erhöhtem Frakturrisiko sowie bei Osteoporose unter systemischer Glukokortikoidtherapie zugelassen."
+   "satz": "Zandoriah (Teriparatid) ist zur Behandlung der Osteoporose bei Frauen und Männern mit erhöhtem Frakturrisiko sowie bei glucocorticoidinduzierter Osteoporose zugelassen."
   },
   {
    "stufe": "zulassung",
