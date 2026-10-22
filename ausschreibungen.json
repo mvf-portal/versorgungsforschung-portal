@@ -12,7 +12,7 @@
    "slug": "versorgungsforschung",
    "name": "Versorgungsforschung",
    "domain": "wissen.m-vf.de",
-   "anzahl": 6,
+   "anzahl": 4,
    "ausschreibungen": [
     {
      "titel": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich)",
@@ -24,40 +24,13 @@
      "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
     },
     {
-     "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357524",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
-    },
-    {
-     "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/356690",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities"
-    },
-    {
-     "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
-     "frist": "2027-01-26",
-     "url": "https://www.grants.gov/search-results-detail/360366",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center"
-    },
-    {
-     "titel": "HEAL Initiative: Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)",
-     "frist": "2027-01-26",
-     "url": "https://www.grants.gov/search-results-detail/360048",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers"
+     "titel": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung",
+     "frist": "2026-10-28",
+     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-11-bekanntmachung-secure-processing-environments.html",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
+     "beleg": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
     },
     {
      "titel": "Intervention Research to Improve Native American Health (R34 Clinical Trial Optional)",
@@ -67,6 +40,15 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Intervention Research to Improve Native American Health"
+    },
+    {
+     "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357524",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
     }
    ]
   },
@@ -123,7 +105,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD)"
+     "beleg": "Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD)"
     }
    ]
   },
@@ -145,17 +127,8 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 5,
+   "anzahl": 4,
    "ausschreibungen": [
-    {
-     "titel": "DoW Arthritis Clinical Research Award",
-     "frist": "2026-10-22",
-     "url": "https://www.grants.gov/search-results-detail/362175",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Arthritis Clinical Research Award"
-    },
     {
      "titel": "HEAL Initiative: Whole Joint Health Program (R61/R33 Clinical Trial Required)",
      "frist": "2026-10-30",
@@ -164,6 +137,15 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "HEAL Initiative: Whole Joint Health Program"
+    },
+    {
+     "titel": "DoW Arthritis Clinical Research Award",
+     "frist": "2026-10-22",
+     "url": "https://www.grants.gov/search-results-detail/362175",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Arthritis Clinical Research Award"
     },
     {
      "titel": "DoW Orthopaedic, Clinical Research Award",
@@ -175,22 +157,13 @@
      "beleg": "DoW Orthopaedic, Clinical Research Award"
     },
     {
-     "titel": "Limited Competition for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers (U01 Clinical Trial Required)",
-     "frist": "2026-11-06",
-     "url": "https://www.grants.gov/search-results-detail/360679",
-     "quelle": "grants.gov (HHS-NIH11)",
+     "titel": "Long-term health outcomes of people living with spina bifida",
+     "frist": "2026-10-26",
+     "url": "https://www.grants.gov/search-results-detail/361002",
+     "quelle": "grants.gov (HHS-CDC-NCBDDD)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers"
-    },
-    {
-     "titel": "Single Source for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center (U01 Clinical Trial Required)",
-     "frist": "2026-11-09",
-     "url": "https://www.grants.gov/search-results-detail/360458",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center"
+     "beleg": "Long-term health outcomes of people living with spina bifida"
     }
    ]
   },
@@ -231,6 +204,15 @@
      "beleg": "Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
     },
     {
+     "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
+     "frist": "2027-01-26",
+     "url": "https://www.grants.gov/search-results-detail/360366",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR)"
+    },
+    {
      "titel": "HEAL Initiative: Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)",
      "frist": "2027-01-26",
      "url": "https://www.grants.gov/search-results-detail/360048",
@@ -238,15 +220,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers"
-    },
-    {
-     "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
-     "frist": "2027-01-26",
-     "url": "https://www.grants.gov/search-results-detail/360366",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center"
     }
    ]
   },
@@ -264,15 +237,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
-    },
-    {
-     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
-     "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/360606",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Glioblastoma Therapeutics Network (GTN)"
     },
     {
      "titel": "Cancer Prevention and Control Clinical Trials Grant Program (R01 Clinical Trial Required)",
@@ -299,7 +263,25 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI)"
+     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure"
+    },
+    {
+     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
+     "frist": "2027-01-11",
+     "url": "https://www.grants.gov/search-results-detail/360606",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Glioblastoma Therapeutics Network"
+    },
+    {
+     "titel": "Discovery of the Genetic Basis of Childhood Cancers and of Congenital Anomalies: Gabriella Miller Kids First Pediatric Research Program (X01 Clinical Trial Not Allowed)",
+     "frist": "2027-01-11",
+     "url": "https://www.grants.gov/search-results-detail/361164",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Discovery of the Genetic Basis of Childhood Cancers"
     },
     {
      "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
@@ -308,25 +290,16 @@
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2"
+     "beleg": "DoW Breast Cancer, Breakthrough Award"
     },
     {
-     "titel": "DoW Breast Cancer, Clinical Research Extension Award",
+     "titel": "DoW Rare Cancers Resource and Community Development Award",
      "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/363671",
+     "url": "https://www.grants.gov/search-results-detail/362850",
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
-    },
-    {
-     "titel": "DoW Rare Cancers Idea Development Award",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/362849",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Rare Cancers Idea Development Award"
+     "beleg": "DoW Rare Cancers Resource and Community Development Award"
     }
    ]
   },
@@ -334,7 +307,7 @@
    "slug": "kardio",
    "name": "Kardiologie",
    "domain": "kardio.m-vf.de",
-   "anzahl": 1,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention (UG3/UH3 Clinical Trial Optional)",
@@ -343,7 +316,25 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
+     "beleg": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
+    },
+    {
+     "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R61/R33 Clinical Trial Required)",
+     "frist": "2027-02-03",
+     "url": "https://www.grants.gov/search-results-detail/357543",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
+    },
+    {
+     "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R33 CT Required)",
+     "frist": "2027-02-03",
+     "url": "https://www.grants.gov/search-results-detail/357542",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
     }
    ]
   },
