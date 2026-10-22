@@ -1,0 +1,507 @@
+{
+ "zweck": "Pruefsatz fuer zulassungen_themen.hubs_fuer_text(). Jeder Eintrag traegt den Indikationsabschnitt eines FDA-Beipackzettels und das von Hand gesetzte Soll. 'herkunft' unterscheidet den Arbeitssatz (an ihm sind die Regeln entstanden) vom zurueckgehaltenen Satz (aelteres Fenster, bei der Regelarbeit nicht vorgelegen).",
+ "gemessen_am": "2026-10-22",
+ "quelle": "DailyMed (National Library of Medicine), SPL-Volltext",
+ "faelle": [
+  {
+   "name": "AMBELVIST",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "AMBELVIST is indicated in adult and pediatric patients, including term neonates, for use with magnetic resonance imaging (MRI) to detect and visualize lesions with abnormal vascularity in: the central nervous system (brain, spine, and associated tissues) the body (head and neck, thorax, abdomen, pelvis, and musculoskeletal system) AMBELVIST is a gadolinium-based contrast agent indicated in adult and pediatric patients, including term neonates, for use with magnetic resonance imaging (MRI) to detect and visualize lesions with abnormal vascularity in: the central nervous system (brain, spine, and associated tissues) the body (head and neck, thorax, abdomen, pelvis, and musculoskeletal system) ( 1 ) 2",
+   "soll": [],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "ATEBRIOZ",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "ATEBRIOZ is indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ATEBRIOZ is an activin receptor-like kinase-2 (ALK2) inhibitor indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ( 1 ) 2.",
+   "soll": [],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "BAXFENDY",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "BAXFENDY, in combination with other antihypertensive drugs, is indicated for the treatment of hypertension, to lower blood pressure in adults who are not adequately controlled on other agents. Lowering blood pressure reduces the risk of fatal and nonfatal cardiovascular events, primarily strokes and myocardial infarctions. These benefits have been seen in controlled trials of antihypertensive drugs from a wide variety of pharmacologic classes. There are no controlled trials demonstrating risk reduction of these events with BAXFENDY. Control of high blood pressure should be part of comprehensive cardiovascular risk management, including, as appropriate, lipid control, diabetes management, antithrombotic therapy, smoking cessation, exercise, and limited sodium intake. Many patients will require more than one drug to achieve blood pressure goals. For specific advice on goals and management, see published guidelines, such as those of the American College of Cardiology/American Heart Association (ACC/AHA). Numerous antihypertensive drugs, from a variety of pharmacologic classes and with different mechanisms of action, have been shown in randomized controlled trials to reduce cardiovascular morbidity and mortality, and it can be concluded that it is blood pressure reduction, and not some other pharmacologic property of the drugs, that is largely responsible for those benefits. The largest and most consistent cardiovascular outcome benefit has been a reduction in the risk of stroke, but reductions in myocardial infarction and cardiovascular mortality also have been seen regularly. Elevated systolic or diastolic pressure causes increased cardiovascular risk, and the absolute risk increase per mmHg is greater at higher blood pressures, so that even modest reductions of severe hypertension can provide substantial benefit. Relative risk reduction from blood pressure reduction is similar across populations with varying absolute risk, so the absolute benefit is greater in patients who are at higher risk independent of their hypertension (for example, patients with diabetes or hyperlipidemia), and such patients would be expected to benefit from more aggressive treatment to a lower blood pressure goal. BAXFENDY is an aldosterone synthase inhibitor indicated for the treatment of hypertension in combination with other antihypertensive drugs, to lower blood pressure in adults who are not adequately controlled on other agents. Lowering blood pressure reduces the risk of fatal and nonfatal cardiovascular events, primarily strokes and myocardial infarctions. (1) 2",
+   "soll": [
+    "kardio"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "BEQALZI",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "BEQALZI is indicated for the treatment of adult patients with relapsed or refractory mantle cell lymphoma (MCL) after at least two lines of systemic therapy, including a Bruton's tyrosine kinase (BTK) inhibitor. This indication is approved under accelerated approval based on response rate and durability of response. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s) [see Clinical Studies (14.1) ] . BEQALZI is a BCL-2 inhibitor indicated for the treatment of adult patients with relapsed or refractory mantle cell lymphoma (MCL) after at least two lines of systemic therapy, including a Bruton's tyrosine kinase (BTK) inhibitor. ( 1 ) This indication is approved under accelerated approval based on response rate and durability of response. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). 2",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "DECNUPAZ",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "DECNUPAZ is indicated for the treatment of adult patients with blastic plasmacytoid dendritic cell neoplasm (BPDCN). DECNUPAZ is a CD123-directed antibody and alkylating agent conjugate indicated for the treatment of adult patients with blastic plasmacytoid dendritic cell neoplasm (BPDCN). ( 1 ) 2.",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "ETCAMAH",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "ETCAMAH in combination with a CDK4/6 inhibitor (abemaciclib, palbociclib, or ribociclib) is indicated for the treatment of adult patients with hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative, locally advanced or metastatic breast cancer upon detection of ESR1 mutation during aromatase inhibitor and CDK4/6 inhibitor therapy, based on an FDA-authorized test [see",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "HEPCLUDEX",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "HEPCLUDEX is indicated for the treatment of chronic hepatitis delta virus (HDV) infection in adults without cirrhosis or with compensated cirrhosis. This indication is approved under accelerated approval based on a decrease in HDV RNA and alanine aminotransferase (ALT) normalization [see Clinical Studies (14) ] . An improvement in disease-related clinical outcomes has not been established. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). HEPCLUDEX is a sodium taurocholate co-transporting polypeptide (NTCP)-directed HDV attachment inhibitor indicated for the treatment of chronic HDV infection in adults without cirrhosis or with compensated cirrhosis. This indication is approved under accelerated approval based on participants who achieved a decrease in HDV RNA and alanine aminotransferase (ALT) normalization. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). ( 1 , 14 ) 2",
+   "soll": [
+    "ncd"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "ISEMBYLD",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "ISEMBYLD is indicated for the treatment of spinal muscular atrophy (SMA) in adults and pediatric patients 2 years of age and older who are currently receiving a survival motor neuron 2 (SMN2)-targeted treatment. ISEMBYLD is a recombinant monoclonal antibody targeting proforms of myostatin, indicated for the treatment of spinal muscular atrophy (SMA) in adults and pediatric patients 2 years of age and older who are currently receiving a survival motor neuron 2 (SMN2)-targeted treatment. ( 1 ) 2",
+   "soll": [],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "JIDEYTRO",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "JIDEYTRO is indicated for the treatment of adult patients with locally advanced or metastatic ROS1 -positive non-small cell lung cancer (NSCLC) who received a prior ROS1 kinase inhibitor [see",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "JUVMO",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "JUVMO is indicated for the treatment of Parkinson’s disease (PD) in adults. JUVMO is a non-ergot dopamine agonist indicated for the treatment of Parkinson’s disease in adults. ( 1 ) 2",
+   "soll": [
+    "longevity"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "LIPFENDRA",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "LIPFENDRA ® is indicated as an adjunct to diet and exercise to reduce low-density lipoprotein cholesterol (LDL-C) in adults with hypercholesterolemia, including heterozygous familial hypercholesterolemia (HeFH). Cardiovascular outcomes trials have demonstrated that reducing LDL-C lowers the risk for major adverse cardiovascular events (MACE) in adults at increased risk when treated with statins or monoclonal antibody proprotein convertase subtilisin kexin type 9 (PCSK9) inhibitors as an add-on to statin therapy. LIPFENDRA is a proprotein convertase subtilisin kexin type 9 (PCSK9) inhibitor indicated as an adjunct to diet and exercise to reduce low-density lipoprotein cholesterol (LDL-C) in adults with hypercholesterolemia, including heterozygous familial hypercholesterolemia (HeFH). Cardiovascular outcomes trials have demonstrated that reducing LDL-C lowers the risk for major adverse cardiovascular events (MACE) in adults at increased risk when treated with statins or monoclonal antibody PCSK9 inhibitors as an add-on to statin therapy. ( 1 ) 2",
+   "soll": [
+    "kardio"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "LISRAYA",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "LISRAYA is indicated for the treatment of dermatomyositis in adult patients. LISRAYA is a Janus kinase (JAK) and tyrosine kinase 2 (TYK2) inhibitor indicated for the treatment of dermatomyositis in adult patients. ( 1 ) Limitations of Use LISRAYA is not recommended for use in combination with other JAK inhibitors, other TYK2 inhibitors, or biologic DMARDs. Limitations of Use LISRAYA is not recommended for use in combination with other JAK inhibitors, other TYK2 inhibitors, or biologic DMARDs. 2",
+   "soll": [],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "LUMVOA",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "LUMVOA is indicated for the treatment of thyroid eye disease regardless of thyroid eye disease activity or duration. LUMVOA is an insulin-like growth factor-1 receptor inhibitor indicated for the treatment of thyroid eye disease regardless of thyroid eye disease activity or duration. ( 1 ) 2",
+   "soll": [],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "MIMRYLO",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "MIMRYLO is indicated for the treatment of erythrocytosis in adults with polycythemia vera (PV). MIMRYLO is a hepcidin mimetic indicated for the treatment of erythrocytosis in adults with polycythemia vera (PV). ( 1 ) 2",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "ONSWIK",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "ONSWIK™ is indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus. ONSWIK™ is a long-acting insulin analog indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus. ( 1 ) Limitations of Use: Not recommended for use in patients with type 1 diabetes mellitus due to increased risk of severe hypoglycemia ( 1 ) Limitations of Use ONSWIK is not recommended for use in patients with type 1 diabetes mellitus due to increased risk of severe hypoglycemia. [see Warnings and Precautions ( 5.2 )] . 2",
+   "soll": [
+    "diabetes"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "PASATRU",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "PASATRU is indicated to reduce formation of new heterotopic ossification (HO) lesions and clinician-assessed flare-ups in adults with fibrodysplasia ossificans progressiva (FOP). PASATRU is an activin signaling inhibitor indicated to reduce formation of new heterotopic ossification (HO) lesions and clinician-assessed flare-ups in adults with fibrodysplasia ossificans progressiva (FOP). ( 1 ) 2",
+   "soll": [],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "PIXCLARA",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "PIXCLARA is indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. PIXCLARA is a radioactive diagnostic drug indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. ( 1 ) 2",
+   "soll": [],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "RASONQUE",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "RASONQUE is indicated for the treatment of adult patients with metastatic pancreatic adenocarcinoma who have received at least one prior systemic therapy or who are not candidates for multiagent systemic therapy. RASONQUE is an inhibitor of the RAS GTPase family, indicated for the treatment of adult patients with metastatic pancreatic adenocarcinoma who have received at least one prior systemic therapy or who are not candidates for multiagent systemic therapy. ( 1 ) 2",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "REVTORPYK",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "REVTORPYK is indicated in combination with fulvestrant, with or without palbociclib, for the treatment of adult patients with hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative locally advanced or metastatic breast cancer without a PIK3CA mutation detected following progression on or after treatment with at least one line of endocrine therapy in the metastatic setting [see",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "TRUTAKNA",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "TRUTAKNA is indicated to reduce proteinuria in adults with primary immunoglobulin A nephropathy (IgAN) at risk for disease progression. This indication is approved under accelerated approval based on reduction of proteinuria. It has not been established whether TRUTAKNA slows kidney function decline over the long-term in patients with IgAN. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory clinical trial. TRUTAKNA is a B-lymphocyte stimulator (BLyS)-specific inhibitor and A Proliferation Inducing Ligand (APRIL) blocker indicated to reduce proteinuria in adults with primary immunoglobulin A nephropathy (IgAN) at risk for disease progression. ( 1 ). This indication is approved under accelerated approval based on a reduction of proteinuria. It has not been established whether TRUTAKNA slows kidney function decline over the long-term in patients with IgAN. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory clinical trial. 2",
+   "soll": [
+    "ncd"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "UTEBZI",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "UTEBZI is a penem antibacterial indicated for the treatment of complicated urinary tract infections (cUTI), including pyelonephritis, caused by the following susceptible microorganisms: Escherichia coli, Klebsiella pneumoniae, Enterobacter cloacae species complex, Klebsiella oxytoca , and Enterococcus faecalis in adult patients who have limited or no alternative oral treatment options. ( 1.1 ) Usage to Reduce Development of Drug‑Resistant Bacteria To reduce the development of drug‑resistant bacteria and maintain the effectiveness of UTEBZI and other antibacterial drugs, UTEBZI should be used only to treat or prevent infections that are proven or strongly suspected to be caused by bacteria. ( 1.2 ) 1.1 Complicated Urinary Tract Infection (cUTI), Including Pyelonephritis UTEBZI is indicated for the treatment of complicated urinary tract infections (cUTI), including pyelonephritis, caused by the following susceptible microorganisms: Escherichia coli , Klebsiella pneumoniae , Enterobacter cloacae species complex, Klebsiella oxytoca , and Enterococcus faecalis in adult patients who have limited or no alternative oral treatment options. 1.2 Usage to Reduce Development of Drug-Resistant Bacteria To reduce the development of drug‑resistant bacteria and maintain the effectiveness of UTEBZI and other antibacterial drugs, UTEBZI should be used only to treat or prevent infections that are proven or strongly suspected to be caused by susceptible bacteria. When culture and susceptibility information are available, they should be considered in selecting or modifying antibacterial therapy. In the absence of such data, local epidemiology and susceptibility patterns may contribute to the empiric selection of therapy. 2",
+   "soll": [],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "VEPPANU",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "VEPPANU is indicated for the treatment of adults with estrogen receptor (ER)-positive, human epidermal growth factor receptor 2 (HER2)-negative, estrogen receptor-1 (ESR1) -mutated advanced or metastatic breast cancer, as detected by an FDA-authorized test, with disease progression following at least one line of endocrine therapy. VEPPANU is a heterobifunctional protein degrader indicated for the treatment of adults with estrogen receptor (ER)-positive, human epidermal growth factor receptor 2 (HER2)-negative, estrogen receptor-1 ( ESR1) -mutated advanced or metastatic breast cancer, as detected by an FDA-authorized test, with disease progression following at least one line of endocrine therapy. ( 1 ) 2",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "XOCOVA",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "XOCOVA is indicated for post-exposure prophylaxis of coronavirus disease 2019 (COVID-19) in adults and adolescents 12 years of age and older following contact with an individual who has COVID-19. XOCOVA, a severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) main protease (M pro : also referred to as 3CL pro or nsp5 protease) inhibitor, is indicated for post-exposure prophylaxis of coronavirus disease 2019 (COVID‑19) in adults and adolescents 12 years of age and older following contact with an individual who has COVID-19. ( 1 ) 2",
+   "soll": [
+    "impfen"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "ZANVASTRO",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "ZANVASTRO is indicated for the treatment of Alexander disease in pediatric and adult patients. ZANVASTRO is a glial fibrillary acidic protein (GFAP)-directed antisense oligonucleotide indicated for the treatment of Alexander disease in pediatric and adult patients. ( 1 ) 2",
+   "soll": [],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "ZENBEXUS",
+   "wirkstoff": "",
+   "datum": "",
+   "text": "ZENBEXUS is indicated, in combination with daratumumab and hyaluronidase-fihj and dexamethasone, for the treatment of adult patients with multiple myeloma who have received at least 1 prior line of therapy including a proteasome inhibitor and an immunomodulatory agent. This indication is approved under accelerated approval based on minimal residual disease (MRD)-negative complete response (CR) at any time [see Clinical Studies (14) ] . Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). ZENBEXUS is a cereblon-modulating protein degrader indicated in combination with daratumumab and hyaluronidase-fihj and dexamethasone for the treatment of adult patients with multiple myeloma who have received at least 1 prior line of therapy including a proteasome inhibitor and an immunomodulatory agent. (1) This indication is approved under accelerated approval based on minimal residual disease (MRD)-negative complete response (CR) at any time. Continued approval for this indication may be contingent upon verification and description of clinical benefit in confirmatory trial(s). 2",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "arbeitssatz"
+  },
+  {
+   "name": "ADBRY",
+   "wirkstoff": "TRALOKINUMAB",
+   "datum": "2025-12-17",
+   "text": "ADBRY is indicated for the treatment of moderate-to-severe atopic dermatitis in adults and pediatric patients 12 years of age and older whose disease is not adequately controlled with topical prescription therapies or when those therapies are not advisable. ADBRY can be used with or without topical corticosteroids. ADBRY is an interleukin-13 antagonist indicated for the treatment of moderate-to-severe atopic dermatitis in adults and pediatric patients 12 years of age and older whose disease is not adequately controlled with topical prescription therapies or when those therapies are not advisable. ADBRY can be used with or without topical corticosteroids. ( 1 ) 2",
+   "soll": [
+    "ncd"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "AVLAYAH",
+   "wirkstoff": "TIVIDENOFUSP ALFA-EKNM",
+   "datum": "2026-03-24",
+   "text": "AVLAYAH is indicated for the treatment of neurologic manifestations of Hunter syndrome (Mucopolysaccharidosis type II, MPS II) when initiated in presymptomatic or symptomatic pediatric patients weighing at least 5 kg prior to advanced neurologic impairment. This indication is approved under accelerated approval based on the reduction of cerebrospinal fluid heparan sulfate [see Clinical Studies (14) ] . Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). Limitations of Use AVLAYAH is not recommended for use in combination with other enzyme replacement therapies for the treatment of Hunter syndrome. AVLAYAH is a hydrolytic lysosomal glycosaminoglycan (GAG)-specific enzyme indicated for the treatment of neurologic manifestations of Hunter syndrome (Mucopolysaccharidosis type II, MPS II) when initiated in presymptomatic or symptomatic pediatric patients weighing at least 5 kg prior to advanced neurologic impairment. ( 1 ) This indication is approved under accelerated approval based on reduction of cerebrospinal fluid heparan sulfate observed in patients treated with AVLAYAH. Continued approval for this indication may be contingent upon verification of clinical benefit in a confirmatory trial(s). ( 1 ) Limitations of Use AVLAYAH is not recommended for use in combination with other enzyme replacement therapies. ( 1 ) 2",
+   "soll": [],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "AWIQLI FLEXTOUCH",
+   "wirkstoff": "INSULIN ICODEC",
+   "datum": "2026-03-26",
+   "text": "Awiqli is indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus. Awiqli is a long-acting human insulin analog indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus ( 1 ) 2",
+   "soll": [
+    "diabetes"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "BYSANTI",
+   "wirkstoff": "MILSAPERIDONE",
+   "datum": "2026-02-20",
+   "text": "BYSANTI ™ is indicated for the: Treatment of schizophrenia in adults [see Clinical Studies (14.1) ] . Acute treatment of manic or mixed episodes associated with bipolar I disorder in adults [see Clinical Studies (14.2) ] . BYSANTI is an atypical antipsychotic indicated for: Treatment of schizophrenia in adults. ( 1 , 14.1 ) Acute treatment of manic or mixed episodes associated with bipolar I disorder in adults. ( 1 , 14.2 ) 2",
+   "soll": [
+    "mental"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "CARDAMYST",
+   "wirkstoff": "ETRIPAMIL",
+   "datum": "2025-12-12",
+   "text": "CARDAMYST is indicated for the conversion of acute symptomatic episodes of paroxysmal supraventricular tachycardia (PSVT) to sinus rhythm in adults. CARDAMYST is a calcium channel blocker indicated for the conversion of acute symptomatic episodes of paroxysmal supraventricular tachycardia (PSVT) to sinus rhythm in adults ( 1 ). 2",
+   "soll": [
+    "kardio"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "EXDENSUR",
+   "wirkstoff": "DEPEMOKIMAB-ULAA",
+   "datum": "2025-12-16",
+   "text": "EXDENSUR is indicated for the add‑on maintenance treatment of severe asthma characterized by an eosinophilic phenotype in adult and pediatric patients aged 12 years and older. Limitations of Use EXDENSUR is not indicated for the relief of acute bronchospasm or status asthmaticus [see Warnings and Precautions ( 5.2 )] . EXDENSUR is an interleukin‑5 (IL‑5) antagonist, a monoclonal antibody (humanized immunoglobulin G1 [IgG1] kappa) indicated for add‑on maintenance treatment of severe asthma characterized by an eosinophilic phenotype in adult and pediatric patients aged 12 years and older. ( 1 ) Limitations of Use : Not for relief of acute bronchospasm or status asthmaticus. ( 1 ) 2",
+   "soll": [
+    "ncd"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "FORZINITY",
+   "wirkstoff": "ELAMIPRETIDE HYDROCHLORIDE",
+   "datum": "2025-09-19",
+   "text": "FORZINITY is indicated to improve muscle strength in adult and pediatric patients with Barth syndrome weighing at least 30 kg. This indication is approved under accelerated approval based on an improvement in knee extensor muscle strength, an intermediate clinical endpoint [see Clinical Studies (14) ] . Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial. FORZINITY™ is a mitochondrial cardiolipin binder indicated to improve muscle strength in adult and pediatric patients with Barth syndrome weighing at least 30 kg. ( 1 ) This indication is approved under accelerated approval based on an improvement in knee extensor muscle strength, an intermediate clinical endpoint. ( 14 ) Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). 2",
+   "soll": [],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "FOUNDAYO",
+   "wirkstoff": "ORFORGLIPRON CALCIUM",
+   "datum": "2026-04-01",
+   "text": "FOUNDAYO TM is indicated in combination with a reduced-calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition. FOUNDAYO™ is a GLP-1 receptor agonist indicated in combination with a reduced-calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition. ( 1 ) Limitations of Use Concomitant use with another GLP-1 receptor agonist is not recommended. ( 1 ) Limitations of Use Concomitant use with another GLP-1 receptor agonist is not recommended. 2",
+   "soll": [
+    "adipositas"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "HYRNUO",
+   "wirkstoff": "SEVABERTINIB",
+   "datum": "2025-11-19",
+   "text": "HYRNUO is indicated for the treatment of adult patients with locally advanced or metastatic non-squamous non-small cell lung cancer (NSCLC) whose tumors have HER2 ( ERBB2 ) tyrosine kinase domain (TKD) activating mutations, as detected by an FDA-authorized test [see Dosage and Administration (2.1) ] . This indication is approved under accelerated approval based on objective response rate (ORR) and duration of response (DOR) [see Clinical Studies (14) ] . Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial. HYRNUO is a kinase inhibitor indicated for the treatment of adult patients with locally advanced or metastatic non-squamous non-small cell lung cancer (NSCLC) whose tumors have HER2 ( ERBB2 ) tyrosine kinase domain (TKD) activating mutations, as detected by an FDA-authorized test. ( 1 ) This indication is approved under accelerated approval based on objective response rate (ORR) and duration of response (DOR). Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial. 2",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "ICOTYDE",
+   "wirkstoff": "ICOTROKINRA HYDROCHLORIDE",
+   "datum": "2026-03-17",
+   "text": "ICOTYDE is indicated for the treatment of moderate-to-severe plaque psoriasis in adults and pediatric patients 12 years of age and older who weigh at least 40 kg who are candidates for systemic therapy or phototherapy. ICOTYDE is an interleukin-23 (IL-23) receptor antagonist indicated for the treatment of moderate-to-severe plaque psoriasis in adults and pediatric patients 12 years of age and older who weigh at least 40 kg who are candidates for systemic therapy or phototherapy. ( 1 ) 2",
+   "soll": [
+    "ncd"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "INLURIYO",
+   "wirkstoff": "IMLUNESTRANT TOSYLATE",
+   "datum": "2025-09-25",
+   "text": "INLURIYO is indicated: as monotherapy, for the treatment of adults with estrogen receptor (ER)-positive, human epidermal growth factor receptor 2 (HER2)-negative, estrogen receptor-1 (ESR1 )-mutated advanced or metastatic breast cancer, as detected by an FDA-authorized test, with disease progression following at least one line of endocrine therapy [see Dosage and Administration ( 2.1 )] . in combination with abemaciclib for the treatment of adults with ER-positive, HER2-negative, ESR1 -mutated advanced or metastatic breast cancer, as detected by an FDA-authorized test, with disease progression following at least one line of endocrine therapy [see Dosage and Administration ( 2.1 )] . INLURIYO ® is an estrogen receptor antagonist indicated: as monotherapy for the treatment of adults with ER-positive, HER2-negative, ESR1 -mutated advanced or metastatic breast cancer, as detected by an FDA-authorized test, with disease progression following at least one line of endocrine therapy ( 1 ) in combination with abemaciclib for the treatment of adults with ER-positive, HER2-negative, ESR1 -mutated advanced or metastatic breast cancer, as detected by an FDA-authorized test, with disease progression following at least one line of endocrine therapy ( 1 ) 2",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "JASCAYD",
+   "wirkstoff": "NERANDOMILAST",
+   "datum": "2025-10-07",
+   "text": "JASCAYD is a phosphodiesterase 4 (PDE4) inhibitor indicated for: The treatment of idiopathic pulmonary fibrosis in adult patients. ( 1.1 ) The treatment of progressive pulmonary fibrosis in adult patients. ( 1.2 ) 1.1 Idiopathic Pulmonary Fibrosis JASCAYD is indicated for the treatment of idiopathic pulmonary fibrosis (IPF) in adult patients. 1.2 Progressive Pulmonary Fibrosis JASCAYD is indicated for the treatment of progressive pulmonary fibrosis (PPF) in adult patients. 2",
+   "soll": [
+    "ncd"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "KOMZIFTI",
+   "wirkstoff": "ZIFTOMENIB",
+   "datum": "2025-11-13",
+   "text": "KOMZIFTI is indicated for the treatment of adult patients with relapsed or refractory acute myeloid leukemia (AML) with a susceptible nucleophosmin 1 ( NPM1 ) mutation who have no satisfactory alternative treatment options [see Dosage and Administration ( 2.1 ), Clinical Pharmacology ( 12.1 ), and Clinical Studies ( 14 )] . KOMZIFTI is a menin inhibitor indicated for the treatment of adult patients with relapsed or refractory acute myeloid leukemia (AML) with a susceptible nucleophosmin 1 ( NPM1 ) mutation who have no satisfactory alternative treatment options. ( 1 ) 2",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "KYGEVVI",
+   "wirkstoff": "DOXECITINE; DOXRIBTIMINE",
+   "datum": "2025-11-03",
+   "text": "KYGEVVI is indicated for the treatment of thymidine kinase 2 deficiency (TK2d) in adults and pediatric patients with an age of symptom onset on or before 12 years. KYGEVVI is a combination of doxecitine and doxribtimine, both pyrimidine nucleosides, indicated for the treatment of thymidine kinase 2 deficiency (TK2d) in adults and pediatric patients with an age of symptom onset on or before 12 years. ( 1 ) 2",
+   "soll": [],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "LEROCHOL",
+   "wirkstoff": "LERODALCIBEP-LIGA",
+   "datum": "2025-12-12",
+   "text": "LEROCHOL TM is indicated as an adjunct to diet and exercise to reduce low-density lipoprotein cholesterol (LDL-C) in adults with hypercholesterolemia, including heterozygous familial hypercholesterolemia (HeFH). LEROCHOL is a proprotein convertase subtilisin kexin type 9 (PCSK9) inhibitor indicated as an adjunct to diet and exercise: to reduce low-density lipoprotein cholesterol (LDL-C) in adults with hypercholesterolemia, including heterozygous familial hypercholesterolemia (HeFH). ( 1 ) 2",
+   "soll": [
+    "kardio"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "LIFYORLI (COPACKAGED)",
+   "wirkstoff": "RELACORILANT",
+   "datum": "2026-03-25",
+   "text": "LIFYORLI is indicated in combination with nab-paclitaxel for the treatment of adults with platinum-resistant epithelial ovarian, fallopian tube, or primary peritoneal cancer who have received one to three prior systemic treatment regimens, at least one of which included bevacizumab [see Clinical Studies ( 14 )] . LIFYORLI is a glucocorticoid receptor antagonist indicated in combination with nab-paclitaxel for the treatment of adults with platinum-resistant epithelial ovarian, fallopian tube, or primary peritoneal cancer who have received one to three prior systemic treatment regimens, at least one of which included bevacizumab. ( 1 , 14 ) 2",
+   "soll": [
+    "onkologie"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "LOARGYS",
+   "wirkstoff": "PEGZILARGINASE-NBLN",
+   "datum": "2026-02-23",
+   "text": "LOARGYS is indicated for the treatment of hyperargininemia in adult and pediatric patients 2 years of age and older with Arginase 1 Deficiency (ARG1-D), in conjunction with dietary protein restriction. This indication is approved under accelerated approval based on reduction of plasma arginine [see Clinical Studies ( 14 )] . Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial. LOARGYS is an arginine specific enzyme indicated for the treatment of hyperargininemia in adult and pediatric patients 2 years of age and older with Arginase 1 Deficiency (ARG1-D), in conjunction with dietary protein restriction. ( 1 ) This indication is approved under accelerated approval based on reduction of plasma arginine. ( 14 ) Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial. ( 1 ) 2",
+   "soll": [],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "LYNAVOY",
+   "wirkstoff": "LINERIXIBAT",
+   "datum": "2026-03-17",
+   "text": "LYNAVOY is indicated for the treatment of cholestatic pruritus associated with primary biliary cholangitis (PBC) in adult patients. Limitations of Use Avoid use of LYNAVOY in patients with decompensated cirrhosis or those with prior or active hepatic decompensation events (e.g. variceal hemorrhage, ascites, hepatic encephalopathy) [see Use in Specific Populations (8.7) , Clinical Pharmacology (12.3) ] . LYNAVOY is an ileal bile acid transporter (IBAT) inhibitor indicated for the treatment of cholestatic pruritus associated with primary biliary cholangitis (PBC) in adult patients. ( 1 ) Limitations of Use Avoid use of LYNAVOY in patients with decompensated cirrhosis or those with prior or active hepatic decompensation events (e.g. variceal hemorrhage, ascites, hepatic encephalopathy). ( 1 ) 2",
+   "soll": [
+    "ncd"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "LYNKUET",
+   "wirkstoff": "ELINZANETANT",
+   "datum": "2025-10-24",
+   "text": "LYNKUET is indicated for the treatment of moderate to severe vasomotor symptoms (VMS) due to menopause. LYNKUET is a neurokinin 1 (NK1) and neurokinin 3 (NK3) receptor antagonist indicated for the treatment of moderate to severe vasomotor symptoms due to menopause. ( 1 ) 2",
+   "soll": [],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "MYQORZO",
+   "wirkstoff": "AFICAMTEN",
+   "datum": "2025-12-19",
+   "text": "MYQORZO is indicated for the treatment of adults with symptomatic obstructive hypertrophic cardiomyopathy (oHCM) to improve functional capacity and symptoms. MYQORZO is a cardiac myosin inhibitor indicated for the treatment of adults with symptomatic obstructive hypertrophic cardiomyopathy (oHCM) to improve functional capacity and symptoms. ( 1 ) 2",
+   "soll": [
+    "kardio"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "NEREUS",
+   "wirkstoff": "TRADIPITANT",
+   "datum": "2025-12-30",
+   "text": "NEREUS is indicated for the prevention of vomiting induced by motion in adults. NEREUS is a substance P/neurokinin 1 (NK1) receptor antagonist indicated for the prevention of vomiting induced by motion in adults. ( 1 ) 2",
+   "soll": [],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "NUZOLVENCE",
+   "wirkstoff": "ZOLIFLODACIN",
+   "datum": "2025-12-12",
+   "text": "NUZOLVENCE is a spiropyrimidinetrione bacterial type II topoisomerase inhibitor indicated for the treatment of uncomplicated urogenital gonorrhea due to Neisseria gonorrhoeae in adults and pediatric patients 12 years of age and older, weighing at least 35 kg. ( 1.1 ) Usage to Reduce Development of Drug-Resistant Bacteria To reduce the development of drug-resistant bacteria and maintain the effectiveness of NUZOLVENCE and other antibacterial drugs, NUZOLVENCE should be used only to treat or prevent infections that are proven or strongly suspected to be caused by bacteria. ( 1.2 ) 1.1 Uncomplicated Urogenital Gonorrhea NUZOLVENCE is indicated for the treatment of uncomplicated urogenital gonorrhea due to Neisseria gonorrhoeae in adults and pediatric patients 12 years of age and older, weighing at least 35 kg [see Clinical Studies (14) ]. 1.2 Usage to Reduce Development of Drug-Resistant Bacteria To reduce the development of drug-resistant bacteria and maintain the effectiveness of NUZOLVENCE and other antibacterial drugs, NUZOLVENCE should be used only to treat or prevent infections that are proven or strongly suspected to be caused by susceptible bacteria. When culture and susceptibility information are available, they should be considered in selecting or modifying antibacterial therapy. In the absence of such data, local epidemiology and susceptibility patterns may contribute to the empiric selection of therapy. 2",
+   "soll": [],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "PALSONIFY",
+   "wirkstoff": "PALTUSOTINE HYDROCHLORIDE",
+   "datum": "2025-09-25",
+   "text": "PALSONIFY is indicated for the treatment of adults with acromegaly who had an inadequate response to surgery and/or for whom surgery is not an option. PALSONIFY is a somatostatin receptor agonist indicated for the treatment of adults with acromegaly who had an inadequate response to surgery and/or for whom surgery is not an option ( 1 ). 2",
+   "soll": [],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "REDEMPLO",
+   "wirkstoff": "PLOZASIRAN SODIUM",
+   "datum": "2025-11-18",
+   "text": "REDEMPLO is indicated as an adjunct to diet to reduce triglycerides in adults with familial chylomicronemia syndrome (FCS). REDEMPLO is an apolipoprotein C-III ( apoC-III )-directed small interfering ribonucleic acid (siRNA) indicated as an adjunct to diet to reduce triglycerides in adults with familial chylomicronemia syndrome (FCS). ( 1 ) 2",
+   "soll": [
+    "kardio"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "RHAPSIDO",
+   "wirkstoff": "REMIBRUTINIB",
+   "datum": "2025-09-30",
+   "text": "RHAPSIDO ® is indicated for adult patients who remain symptomatic despite use of H1 antihistamine for the treatment of: chronic spontaneous urticaria. symptomatic dermographism. RHAPSIDO ® is a kinase inhibitor indicated for adult patients who remain symptomatic despite use of H1 antihistamine for the treatment of: chronic spontaneous urticaria. ( 1 ) symptomatic dermographism. ( 1 ) 2",
+   "soll": [
+    "ncd"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "VOYXACT",
+   "wirkstoff": "SIBEPRENLIMAB-SZSI",
+   "datum": "2025-11-25",
+   "text": "VOYXACT is indicated to reduce proteinuria in adults with primary immunoglobulin A nephropathy (IgAN) at risk for disease progression. This indication is approved under accelerated approval based on reduction of proteinuria. It has not been established whether VOYXACT slows kidney function decline over the long-term in patients with IgAN. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory clinical trial. VOYXACT is an A Proliferation Inducing Ligand (APRIL) blocker, indicated to reduce proteinuria in adults with primary immunoglobulin A nephropathy (IgAN) at risk for disease progression. ( 1 ) This indication is approved under accelerated approval based on reduction of proteinuria. It has not been established whether VOYXACT slows kidney function decline over the long-term in patients with IgAN. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory clinical trial. ( 1 ) 2",
+   "soll": [
+    "ncd"
+   ],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "YARTEMLEA",
+   "wirkstoff": "NARSOPLIMAB-WUUG",
+   "datum": "2025-12-23",
+   "text": "YARTEMLEA is indicated for the treatment of adult and pediatric patients 2 years of age and older with hematopoietic stem cell transplant-associated thrombotic microangiopathy (TA-TMA). YARTEMLEA is a MASP-2 inhibitor indicated for the treatment of adult and pediatric patients 2 years of age and older with hematopoietic stem cell transplant-associated thrombotic microangiopathy (TA-TMA). ( 1 ) 2",
+   "soll": [],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "YUVIWEL",
+   "wirkstoff": "NAVEPEGRITIDE",
+   "datum": "2026-02-27",
+   "text": "YUVIWEL ® is indicated to increase linear growth in pediatric patients 2 years of age and older with achondroplasia with open epiphyses. This indication is approved under accelerated approval based on an improvement in annualized growth velocity [see Clinical Studies (14) ]. Continued approval for this indication may be contingent upon verification and description of clinical benefit in confirmatory trial(s). YUVIWEL is a C-type natriuretic peptide (CNP) analog indicated to increase linear growth in pediatric patients 2 years of age and older with achondroplasia with open epiphyses. ( 1 ) This indication is approved under accelerated approval based on an improvement in annualized growth velocity . Continued approval for this indication may be contingent upon verification and description of clinical benefit in confirmatory trial(s). ( 1 ) 2",
+   "soll": [],
+   "herkunft": "zurueckgehalten"
+  },
+  {
+   "name": "ZYCUBO",
+   "wirkstoff": "COPPER HISTIDINATE",
+   "datum": "2026-01-12",
+   "text": "ZYCUBO is indicated for the treatment of Menkes disease in pediatric patients. ZYCUBO is a copper replacement product indicated for the treatment of Menkes disease in pediatric patients. ( 1 ) Limitations of Use ZYCUBO is not indicated for the treatment of Occipital Horn Syndrome. ( 1 ) Limitations of Use ZYCUBO is not indicated for the treatment of Occipital Horn Syndrome. 2",
+   "soll": [],
+   "herkunft": "zurueckgehalten"
+  }
+ ]
+}

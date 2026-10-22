@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Zulassungsradar: neue Arzneimittel der EMA, den Hubs zugeordnet.
+"""Zulassungs- und DiGA-Radar: neue Arzneimittel und DiGA, den Hubs zugeordnet.
 
-Zwei Stufen, beide aus derselben Quelle:
+Vier Stufen aus drei Quellen. Das Handbuch dazu ist
+`portal-vorlage/ZULASSUNGSRADAR.md`.
 
-  **Stufe 1 - Zulassung.** Das Mittel ist in der EU zugelassen.
+  **Stufe 1 - Zulassung (EMA).** Das Mittel ist in der EU zugelassen.
   **Stufe 2 - CHMP-Gutachten.** Der Ausschuss hat empfohlen, die Kommission
   hat noch nicht entschieden. Das ist der *frühere* Zeitpunkt - rund zwei
   Monate vor der Zulassung - und der eigentliche Grund für diesen Radar.
+  **Stufe 3 - DiGA (BfArM).** Aufnahme in oder Streichung aus dem
+  Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen. Eigene
+  Quelle in `diga_quelle.py`, ohne Modell.
+  **Stufe 4 - FDA (USA).** Erstzulassung eines neuen Wirkstoffs in den
+  Vereinigten Staaten, in zwei Klassen - mit und ohne Beipackzettel. Eigene
+  Quelle in `fda_quelle.py`, Zuordnung über `themen.hubs_fuer_text()`.
 
 **Dieses Skript laeuft nur im Versorgungsforschungs-Hub**, wie der
 Ausschreibungsradar: Die Quelle wird einmal geholt, nicht fuenfzehnmal, und es
@@ -24,13 +31,18 @@ und die Adresse der EMA-Seite.
 
     https://www.ema.europa.eu/en/documents/report/medicines-output-medicines-report_en.xlsx
 
-Warum nur diese eine: Das BfArM hat auf seiner gesamten Seite **keinen Feed**
-und keine offene Schnittstelle (geprueft 22.10.2026), und die innovativen
-Arzneimittel laufen ohnehin ueber das zentralisierte EU-Verfahren. openFDA
-waere die zweite Quelle und ist offen, liefert aber zu den neuesten
-Zulassungen **keine Namen**: Am 22.10.2026 trugen nur 11 von 43
-Erstzulassungen der letzten 90 Tage einen Markennamen, und zwar die aelteren.
-Das ist als eigene Stufe vorgemerkt, nicht hier.
+Warum fuer die EU-Stufen nur diese eine: Das BfArM hat auf seiner gesamten
+Seite **keinen Feed** und keine offene Schnittstelle (geprueft 22.10.2026), und
+die innovativen Arzneimittel laufen ohnehin ueber das zentralisierte
+EU-Verfahren.
+
+Die FDA-Stufe kommt aus zwei weiteren offenen Quellen, beschrieben in
+`fda_quelle.py`: openFDA fuer Antrag, Name und Datum, DailyMed fuer den
+Beipackzettel. **Eine frueher hier notierte Behauptung war falsch** - es hiess,
+openFDA liefere zu neuen Zulassungen keine Namen (11 von 43). Gemessen wurde
+dabei das falsche Feld: `openfda.brand_name` ist bei frischen Antraegen leer,
+der Name steht in `products[].brand_name` und war dort am 22.10.2026 in 32 von
+32 Faellen vorhanden.
 
 Zwei Fallen, beide am 22.10.2026 zugeschlagen
 ---------------------------------------------
@@ -80,6 +92,7 @@ HIER = pathlib.Path(__file__).resolve().parent
 WURZEL = HIER.parent
 sys.path.insert(0, str(HIER))
 import diga_quelle  # noqa: E402
+import fda_quelle  # noqa: E402
 import zulassungen_themen as themen  # noqa: E402
 
 ZIEL = WURZEL / "zulassungen.json"
@@ -322,6 +335,68 @@ def digas_sammeln(warnungen: list[str]) -> tuple[list[dict], dict]:
     return eintraege, zahlen
 
 
+def fda_sammeln(warnungen: list[str]) -> tuple[list[dict], dict]:
+    """Die vierte Stufe: Erstzulassungen der FDA, in zwei Klassen.
+
+    **A - mit Beipackzettel** (`stufe` = "fda"). DailyMed fuehrt den
+    Indikationsabschnitt. Daraus laeuft die Hub-Zuordnung mechanisch, ueber
+    dieselben Muster wie bei der EMA, und das Modell schreibt den deutschen
+    Satz - wie bei den EU-Stufen.
+
+    **B - ohne Beipackzettel** (`stufe` = "fda-wartet"). Kein Indikationstext,
+    also **kein Hub und kein Modellaufruf**. Der Eintrag erscheint allein im
+    Sammelordner "Alle", mit dem Vermerk, dass der Beipackzettel folgt. Dafuer
+    bekommt er das Gebiet `ohne-hub`, das die Seite als Durchgang behandelt
+    und nicht als Rubrik zeigt.
+
+    Warum die Trennung: Ohne Anwendungsgebiet hat openFDA nichts, woraus sich
+    ein Hub ableiten liesse - `pharm_class_epc` trug am 22.10.2026 genau
+    einer von 32 Zulassungen. Das Modell koennte aus Handelsname und
+    Wirkstoff raten, und es wuerde oft richtig raten. Aber ein Mittel im
+    falschen Hub faellt niemandem auf, und es gaebe nichts, wogegen der
+    Torwaechter die Zuordnung pruefen koennte. Ein Eintrag ohne Hub ist
+    dagegen sichtbar.
+
+    Der Uebergang von B nach A geschieht von allein: Sobald DailyMed das
+    Label fuehrt, findet der naechste Lauf den Text, ordnet zu und laesst den
+    Satz schreiben. Im zurueckgehaltenen Fenster (181 bis 400 Tage zurueck)
+    hatten 29 von 31 Zulassungen ein Label, im frischen nur 25 von 32 - B ist
+    ein Uebergangszustand, kein Dauerzustand.
+    """
+    roh, zahlen = fda_quelle.holen(FENSTER_TAGE, warnungen)
+    eintraege = []
+    for d in roh:
+        hubs = themen.hubs_fuer_text(d["indikation_en"])
+        wartet = not d["indikation_en"]
+        kennzeichen = [d["antrag"]]
+        if d.get("spl_stand"):
+            kennzeichen.append("Label " + d["spl_stand"])
+        eintraege.append({
+            "stufe": "fda-wartet" if wartet else "fda",
+            "datum": d["iso"],
+            "name": d["name"],
+            "wirkstoff": d["wirkstoff"],
+            "gebiet_mesh": "",
+            "atc": "",
+            "inhaber": d["inhaber"],
+            "kennzeichen": kennzeichen,
+            "gutachten": "",
+            # Die Antragsnummer ist der Schluessel - zum Aufbewahren des
+            # Satzes und zum Entdoppeln in der Rubrik "Alle".
+            "nummer": "FDA-" + d["nummer"],
+            "url": d["url"],
+            "indikation_en": d["indikation_en"],
+            # `ohne-hub` ist kein Hub, sondern der Durchgang zur Rubrik
+            # "Alle". Ohne ihn verschwaende der Eintrag: Die Seite baut
+            # "Alle" aus den Gebietsgruppen, und was in keiner steht, steht
+            # nirgends.
+            "hubs": hubs if hubs else ["ohne-hub"],
+            "satz": "",
+        })
+    zahlen["fda_mit_hub"] = sum(1 for e in eintraege if e["hubs"] != ["ohne-hub"])
+    return eintraege, zahlen
+
+
 def saetze_schreiben(eintraege: list[dict], alt: dict, warnungen: list[str]) -> int:
     """Ein deutscher Satz je Eintrag - einmal, dann aufbewahrt.
 
@@ -349,7 +424,14 @@ def saetze_schreiben(eintraege: list[dict], alt: dict, warnungen: list[str]) -> 
     # das Modell nichts, woraus es einen Satz bilden koennte - und was es dann
     # bildet, ist entweder eine Verweigerung oder frei erfunden.
     offen = [e for e in eintraege if not e["satz"] and e["indikation_en"]]
-    ohne_text = [e for e in eintraege if not e["satz"] and not e["indikation_en"]]
+    # **Nicht gewarnt wird bei der FDA-Klasse B.** Dass dort kein
+    # Indikationstext steht, ist der entworfene Zustand und nicht ein
+    # Vorfall: Das Label ist noch nicht veroeffentlicht. Sieben Warnungen
+    # jede Nacht, die nichts bedeuten, machen die Warnliste unlesbar - und
+    # dann geht die eine unter, die etwas bedeutet.
+    ohne_text = [e for e in eintraege
+                 if not e["satz"] and not e["indikation_en"]
+                 and e["stufe"] != "fda-wartet"]
     for e in ohne_text:
         warnungen.append(f"{e['name']}: weder Satz noch Indikationstext - bleibt ohne Satz")
     if not offen:
@@ -377,13 +459,33 @@ def saetze_schreiben(eintraege: list[dict], alt: dict, warnungen: list[str]) -> 
             vorgabe = ("Der Satz muss diesen Stand wiedergeben, etwa: "
                        "'Der CHMP empfiehlt die Zulassung von X zur Behandlung "
                        "von ...'. Schreibe NICHT 'ist zugelassen'.")
+        elif e["stufe"] == "fda":
+            # **Dieselbe Falle wie bei den Gutachten, nur andersherum.** Dort
+            # durfte der Satz keine Zulassung behaupten, hier darf er nicht die
+            # falsche behaupten. "X ist zur Behandlung von Y zugelassen" liest
+            # ein deutscher Fachleser als europaeische Zulassung - und zieht
+            # daraus Schluesse auf Verfuegbarkeit und Erstattung, die nicht
+            # gelten. Die Behoerde muss im Satz stehen; die Pruefung unten
+            # erzwingt es.
+            lage = ("Die US-Arzneimittelbehoerde FDA hat diesen Wirkstoff "
+                    "erstmals zugelassen. Das ist eine AMERIKANISCHE "
+                    "Zulassung, KEINE europaeische. Ueber den Stand in der EU "
+                    "ist hier nichts bekannt.")
+            vorgabe = ("Der Satz muss die FDA nennen, etwa: 'Die FDA hat X "
+                       "(Wirkstoff) zur Behandlung von ... zugelassen.' "
+                       "Schreibe NICHT bloss 'ist zugelassen' - das liest sich "
+                       "als europaeische Zulassung. Behaupte nichts ueber "
+                       "Verfuegbarkeit oder Erstattung in Deutschland und "
+                       "nichts ueber ein Verfahren bei der EMA.")
         else:
             lage = "Dieses Mittel ist in der EU zugelassen."
             vorgabe = "Der Satz sagt, wogegen das Mittel zugelassen ist und bei wem."
+        quelle = ("Beipackzettel der FDA" if e["stufe"] == "fda"
+                  else "Originaltext der EMA")
         auftrag = (
             f"{lage}\n\n"
             f"Mittel: {e['name']}\nWirkstoff: {e['wirkstoff']}\n"
-            f"Indikation (englisch, Originaltext der EMA): {e['indikation_en']}\n\n"
+            f"Indikation (englisch, {quelle}): {e['indikation_en']}\n\n"
             f"{vorgabe}\n\n"
             "Regeln:\n"
             "- Hoechstens 35 Woerter, ein einziger Satz.\n"
@@ -458,6 +560,30 @@ def pruefen(eintraege: list[dict], warnungen: list[str]) -> tuple[int, int]:
                 "ich kann", "ich habe", "bitte geben", "bitte ergänzen",
                 "nicht angegeben", "fehlen", "liegt mir nicht", "als ki")):
             grund = "liest sich wie eine Rueckfrage des Modells, nicht wie ein Satz"
+
+        if not grund and e["stufe"] == "fda":
+            # **Der Satz muss die Behoerde nennen.** "Rasonque (Daraxonrasib)
+            # ist zur Behandlung des Pankreasadenokarzinoms zugelassen" ist
+            # woertlich wahr und auf dieser Seite dennoch falsch: Ein
+            # deutscher Fachleser liest das als europaeische Zulassung und
+            # schliesst daraus auf Verfuegbarkeit und Erstattung. Der
+            # Unterschied zur EU-Stufe ist der ganze Zweck dieser Stufe -
+            # steht er nicht im Satz, ist der Satz schaedlich.
+            nennt_fda = any(w in klein for w in ("fda", "us-arzneimittel",
+                                                 "us-behörde", "amerikan",
+                                                 "vereinigten staaten", "usa"))
+            # Umgekehrt darf er die EU nicht hereinziehen. Ueber den Stand
+            # bei der EMA weiss diese Stufe nichts - jede Aussage dazu waere
+            # erfunden, und zwar eine, die stimmig klingt.
+            behauptet_eu = any(w in klein for w in (
+                "europäische kommission", "eu-kommission", "chmp", "ema",
+                "in der eu", "in europa", "europaweit", "in deutschland",
+                "erstattungsfähig", "erstattet"))
+            if not nennt_fda:
+                grund = "FDA-Zulassung, aber der Satz nennt die Behoerde nicht"
+            elif behauptet_eu:
+                grund = ("FDA-Zulassung, aber der Satz behauptet etwas ueber "
+                         "die EU oder die Erstattung")
 
         if not grund and e["stufe"] == "gutachten":
             # "empfiehlt die Zulassung" ist richtig und enthaelt das Substantiv
@@ -540,7 +666,11 @@ def block(eintraege: list[dict], stand: str) -> str:
     # MeSH-Begriff, er bekommt seine Eintraege allein ueber die DiGA. Ohne
     # ihn haetten am 22.10.2026 fuenf DiGA zwar ein Gebiet gehabt, aber keine
     # Rubrik, in der sie erscheinen: Sie standen nur unter "Alle".
-    gebiete = list(themen.REGELN) + [themen.DIGA_HEIMAT]
+    # `ohne-hub` muss mit in die Liste, sonst fielen die FDA-Zulassungen ohne
+    # Beipackzettel heraus - die Seite baut die Rubrik "Alle" aus diesen
+    # Gruppen. Sie steht am Ende, weil die Seite sie als Durchgang behandelt
+    # und nicht als Rubrik zeigt; die Reihenfolge der echten Gebiete bleibt.
+    gebiete = list(themen.REGELN) + [themen.DIGA_HEIMAT, "ohne-hub"]
     for slug in gebiete:
         meine = [e for e in eintraege if slug in e["hubs"]]
         zeilen.append("  {slug:%s, name:%s, domain:%s, eintraege:[" %
@@ -613,6 +743,18 @@ def main() -> int:
           f"{diga_zahlen['diga_roh']} Eintraege, davon {diga_zahlen['diga_gezeigt']} "
           "im Fenster und berichtenswert.")
 
+    # Vierte Stufe: FDA. Eigene Quelle, eigenes Modul - und zwei Klassen,
+    # siehe fda_sammeln().
+    print("\nHole die FDA-Erstzulassungen (openFDA + DailyMed) ...")
+    fdas, fda_zahlen = fda_sammeln(warnungen)
+    zahlen.update(fda_zahlen)
+    eintraege += fdas
+    eintraege.sort(key=lambda e: e["datum"], reverse=True)
+    print(f"  {fda_zahlen['fda_roh']} Erstzulassungen, davon "
+          f"{fda_zahlen['fda_mit_label']} mit Beipackzettel und "
+          f"{fda_zahlen['fda_mit_hub']} einem Hub zugeordnet; "
+          f"{fda_zahlen['fda_ohne_label']} warten auf das Label.")
+
     zul = [e for e in eintraege if e["stufe"] == "zulassung"]
     gut = [e for e in eintraege if e["stufe"] == "gutachten"]
     print(f"\nStufe 1 - Zulassungen der letzten {FENSTER_TAGE} Tage: "
@@ -657,7 +799,10 @@ def main() -> int:
     if a.probe or a.roh:
         print("\n--- Vorschau ---")
         for e in eintraege[:12]:
-            marke = "GUTACHTEN" if e["stufe"] == "gutachten" else "ZULASSUNG"
+            marke = {"gutachten": "GUTACHTEN", "fda": "FDA",
+                     "fda-wartet": "FDA (wartet)", "diga": "DiGA",
+                     "diga-streichung": "DiGA gestrichen"}.get(
+                         e["stufe"], "ZULASSUNG")
             kenn = (" [" + ", ".join(e["kennzeichen"]) + "]") if e["kennzeichen"] else ""
             print(f"\n  {e['datum']}  {marke}  {e['name']} ({e['wirkstoff']}){kenn}")
             print(f"    Hubs: {', '.join(themen.name_von(h) for h in e['hubs'])}")

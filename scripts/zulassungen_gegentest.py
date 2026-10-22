@@ -11,12 +11,17 @@ Die beiden Faelle aus dem ersten Lauf vom 22.10.2026 stehen als Nummer 1 und 5
 darin: der Gutachtensatz, der eine Zulassung behauptete, und der deutsche
 Wirkstoffname mit weggefallenem End-e.
 """
+import json
 import pathlib
+import re
 import sys
 
 HIER = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(HIER))
+import zulassungen_themen as themen  # noqa: E402
 from zulassungen import pruefen  # noqa: E402
+
+PRUEFSATZ = HIER / "zulassungen_pruefsatz.json"
 
 FAELLE = [
     # (muss durchfallen?, Stufe, Wirkstoff, Satz, Beschreibung)
@@ -42,6 +47,29 @@ FAELLE = [
      "Diese digitale Gesundheitsanwendung ist in das Verzeichnis aufgenommen worden. "
      + "Sie hilft bei vielerlei Beschwerden. " * 12,
      "viel zu lang, also kein einzelner Satz"),
+
+    # --- Stufe 4: FDA. Die Falle ist hier die *richtige* Zulassung an der
+    # falschen Stelle: Jeder dieser Saetze ist woertlich wahr.
+    (True, "fda", "tavapadon",
+     "Juvmo (Tavapadon) ist zur Behandlung der Parkinson-Krankheit bei "
+     "Erwachsenen zugelassen.",
+     "FDA-Satz nennt die Behoerde nicht - liest sich als EU-Zulassung"),
+    (True, "fda", "daraxonrasib",
+     "Die FDA hat Rasonque (Daraxonrasib) zugelassen; in der EU entscheidet "
+     "der CHMP noch.",
+     "FDA-Satz behauptet etwas ueber den Stand bei der EMA"),
+    (True, "fda", "insulin efsitora alfa-gobe",
+     "Die FDA hat Onswik (Insulin efsitora alfa) zugelassen; das Mittel ist in "
+     "Deutschland erstattungsfähig.",
+     "FDA-Satz behauptet Erstattung in Deutschland"),
+    (False, "fda", "tavapadon",
+     "Die FDA hat Tavapadon (Juvmo) zur Behandlung der Parkinson-Krankheit bei "
+     "Erwachsenen zugelassen.",
+     "richtiger FDA-Satz - muss durchgehen"),
+    (False, "fda", "zilurgisertib fumarate",
+     "Die US-Arzneimittelbehörde FDA hat Zilurgisertib-Fumarat (Atebrioz) zur "
+     "Reduktion heterotoper Ossifikationen zugelassen.",
+     "FDA ausgeschrieben statt als Kuerzel - muss durchgehen"),
 
     (False, "diga", "",
      "ACTICORE1 ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger "
@@ -78,6 +106,97 @@ FAELLE = [
 ]
 
 
+# --------------------------------------------------------------------------
+# Zweiter Teil: die Zuordnung der FDA-Stufe (hubs_fuer_text).
+#
+# Hier ist eine Quote allein kein Beweis. Die Regeln sind am Arbeitssatz
+# entstanden, also muss er stimmen - das sagt nichts. Drei Dinge werden
+# deshalb geprueft:
+#
+#   1. **Der zurueckgehaltene Satz.** 29 Zulassungen aus dem Fenster davor,
+#      die bei der Regelarbeit nicht vorlagen. Am 22.10.2026 ergaben sie
+#      24 von 29 - **ohne** die fuenf Muster, die danach aus genau diesen
+#      Fehlschlaegen nachgetragen wurden (Cholangitis, Lungenfibrose,
+#      Urtikaria, Tachykardie, Chylomikronaemie). Die 29 von 29, die der
+#      Lauf heute zeigt, sind deshalb KEINE zurueckgehaltene Messung mehr.
+#      Wer die Regeln anfasst, moege ein frisches Fenster holen.
+#   2. **Kein falscher Hub.** Das ist die harte Bedingung, nicht die Quote:
+#      Ein fehlender Hub ist sichtbar - der Eintrag steht dann nur unter
+#      "Alle". Eine falsche Zuordnung sieht aus wie eine richtige.
+#   3. **Die absichtlich schlechte Fassung muss schlechter sein.** Ohne die
+#      Beschraenkung auf den Indikationssatz und ohne den Diagnostik-Filter
+#      ergab derselbe Arbeitssatz 19 von 25 mit zwei falschen Zuordnungen.
+#      Bleibt die schlechte Fassung gleich gut, messen die Vorkehrungen
+#      nichts und koennen weg.
+
+# Die schlechte Fassung: alle Muster gegen den GANZEN Abschnitt, ohne
+# Ruecksicht auf Diagnostika. So war der erste Entwurf vom 22.10.2026.
+def _schlecht(text: str) -> list[str]:
+    treffer = []
+    for slug, (_, muster) in themen.GEBAUT.items():
+        if any(m.search(str(text or "")) for m in muster):
+            treffer.append(slug)
+    return treffer
+
+
+def zuordnung_pruefen() -> int:
+    if not PRUEFSATZ.exists():
+        print(f"  ! {PRUEFSATZ.name} fehlt - Zuordnung nicht geprueft.")
+        return 1
+    faelle = json.loads(PRUEFSATZ.read_text(encoding="utf-8"))["faelle"]
+    fehler = 0
+    gesamt_falsch = gesamt_schlecht_falsch = 0
+    for herkunft in ("zurueckgehalten", "arbeitssatz"):
+        meine = [f for f in faelle if f["herkunft"] == herkunft]
+        genau = falsch = fehlend = 0
+        schlecht_genau = schlecht_falsch = 0
+        for f in meine:
+            ist = set(themen.hubs_fuer_text(f["text"]))
+            soll = set(f["soll"])
+            if ist == soll:
+                genau += 1
+            else:
+                print(f"       {f['name'][:18]:<19} ist={','.join(sorted(ist)) or '-':<14}"
+                      f" soll={','.join(sorted(soll)) or '-':<14}")
+            falsch += len(ist - soll)
+            fehlend += len(soll - ist)
+            s_ist = set(_schlecht(f["text"]))
+            schlecht_genau += s_ist == soll
+            schlecht_falsch += len(s_ist - soll)
+
+        print(f"  {herkunft}: {genau} von {len(meine)} genau richtig, "
+              f"{falsch} falsch, {fehlend} fehlend")
+        print(f"       schlechte Fassung: {schlecht_genau} richtig, "
+              f"{schlecht_falsch} falsch")
+
+        gesamt_falsch += falsch
+        gesamt_schlecht_falsch += schlecht_falsch
+
+        # **Die harte Bedingung.** Eine falsche Zuordnung laesst den Gegentest
+        # scheitern, eine fehlende nicht.
+        if falsch:
+            print(f"  FEHL {falsch} falsche Zuordnung(en) - das ist der Fehler, "
+                  "den ein Leser nicht erkennen kann.")
+            fehler += 1
+
+    # **Der Gegentest zum Massstab - ueber den ganzen Pruefsatz, nicht je
+    # Teilmenge.** Am 22.10.2026 war die schlechte Fassung am
+    # zurueckgehaltenen Satz genau gleich gut: Dort kommt kein Diagnostikum
+    # vor und kein Begleitsatz, der eine fremde Krankheit nennt. Die beiden
+    # Vorkehrungen greifen in 54 Faellen bei **zwei** - PIXCLARA (F-18-
+    # Diagnostikum) und BAXFENDY ("diabetes management" im Begleitsatz). Das
+    # ist selten, aber beide Male war es eine FALSCHE Zuordnung, und die ist
+    # der Fehler, den niemand sieht. Wer die Vorkehrungen fuer teuer haelt,
+    # moege sie an diesen zwei Faellen abwaegen, nicht an der Quote.
+    print(f"\n  ueber alle {len(faelle)} Faelle: {gesamt_falsch} falsch, "
+          f"schlechte Fassung {gesamt_schlecht_falsch} falsch")
+    if gesamt_schlecht_falsch <= gesamt_falsch:
+        print("  FEHL die absichtlich schlechte Fassung ist nicht schlechter - "
+              "Indikationssatz-Beschraenkung und Diagnostik-Filter messen nichts.")
+        fehler += 1
+    return fehler
+
+
 def main() -> int:
     fehler = 0
     for i, (soll_durchfallen, stufe, wirkstoff, satz, was) in enumerate(FAELLE, 1):
@@ -96,12 +215,17 @@ def main() -> int:
               + ("durchgefallen" if gefallen else "durchgegangen"))
         if gefallen and warnungen:
             print(f"       Grund: {warnungen[0].split(': ', 1)[1]}")
-    print()
     if fehler:
+        print()
         print(f"{fehler} von {len(FAELLE)} Faellen falsch bewertet - "
               "der Torwaechter prueft nicht, was er pruefen soll.")
         return 1
-    print(f"Alle {len(FAELLE)} Faelle richtig bewertet.")
+    print(f"\nAlle {len(FAELLE)} Torwaechter-Faelle richtig bewertet.")
+
+    print("\n--- Zuordnung der FDA-Stufe ---")
+    if zuordnung_pruefen():
+        return 1
+    print("  Zuordnung in Ordnung: kein falscher Hub, schlechte Fassung schlechter.")
     return 0
 
 

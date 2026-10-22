@@ -5,10 +5,14 @@
  "zahlen": {
   "zulassung": 35,
   "gutachten": 28,
-  "ohne_hub": 20,
+  "ohne_hub": 19,
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
-  "diga_gezeigt": 5
+  "diga_gezeigt": 5,
+  "fda_roh": 32,
+  "fda_mit_label": 25,
+  "fda_ohne_label": 7,
+  "fda_mit_hub": 16
  },
  "warnungen": [],
  "eintraege": [
@@ -91,6 +95,26 @@
    "satz": "Der CHMP empfiehlt die Zulassung von Rasonque (Daraxonrasib) zur Behandlung von Patienten mit metastasierendem Pankreasadenokarzinom nach mindestens einer vorangegangenen systemischen Therapie."
   },
   {
+   "stufe": "fda-wartet",
+   "datum": "2026-10-09",
+   "name": "HOVILPR",
+   "wirkstoff": "PRITELIVIR",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "AICURIS ANTI-INFECTIVE CURES AG",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA221154",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221154",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
    "stufe": "diga-streichung",
    "datum": "2026-09-28",
    "name": "Una Health für Diabetes",
@@ -112,6 +136,68 @@
    "satz": "Una Health für Diabetes ist aus dem Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen gestrichen worden und wird nicht mehr von der gesetzlichen Krankenversicherung erstattet."
   },
   {
+   "stufe": "fda-wartet",
+   "datum": "2026-09-28",
+   "name": "EMCITATE",
+   "wirkstoff": "TIRATRICOL",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "RARE THYROID",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220963",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220963",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-25",
+   "name": "JUVMO",
+   "wirkstoff": "TAVAPADON",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ABBVIE",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 08, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220415",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1ae6df6e-6ca0-420f-bec9-effa7acdd085",
+   "indikation_en": "JUVMO is indicated for the treatment of Parkinson’s disease (PD) in adults. JUVMO is a non-ergot dopamine agonist indicated for the treatment of Parkinson’s disease in adults. ( 1 ) 2",
+   "hubs": [
+    "longevity"
+   ],
+   "satz": "Die FDA hat Tavapadon (JUVMO) zur Behandlung der Parkinson-Krankheit bei Erwachsenen zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-25",
+   "name": "ATEBRIOZ",
+   "wirkstoff": "ZILURGISERTIB FUMARATE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "MIRUM",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 12, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA221198",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f542e4b0-072a-42c6-80c9-5977054971e0",
+   "indikation_en": "ATEBRIOZ is indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ATEBRIOZ is an activin receptor-like kinase-2 (ALK2) inhibitor indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ( 1 ) 2.",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Zilurgisertib-Fumarat (Atebrioz) zur Reduktion neuer heterotoper Ossifikationen bei Fibrodysplasia ossificans progressiva zugelassen."
+  },
+  {
    "stufe": "diga",
    "datum": "2026-09-23",
    "name": "Pia-App bei Regelschmerzen",
@@ -131,6 +217,47 @@
     "ncd"
    ],
    "satz": "Pia-App bei Regelschmerzen ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-09-23",
+   "name": "LYRFIGTU",
+   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ELEVAR",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220425",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-23",
+   "name": "ONSWIK",
+   "wirkstoff": "INSULIN EFSITORA ALFA-GOBE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ELI LILLY AND CO",
+   "kennzeichen": [
+    "BLA",
+    "Label Oct 01, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-BLA761408",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6e02229e-262c-4e25-9240-9e9de4eb7c1d",
+   "indikation_en": "ONSWIK™ is indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus. ONSWIK™ is a long-acting insulin analog indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus. ( 1 ) Limitations of Use: Not recommended for use in patients with type 1 diabetes mellitus due to increased risk of severe hypoglycemia ( 1 ) Limitations of Use ONSWIK is not recommended for use in patients with type 1 diabetes mellitus due to increased risk of severe hypoglycemia. [see Warnings and Precautions ( 5.2 )] . 2",
+   "hubs": [
+    "diabetes"
+   ],
+   "satz": "Die FDA hat Insulin Efsitora alfa-gobe (Onswik) zur Verbesserung der Glykämiekontrolle bei Typ-2-Diabetes zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -371,6 +498,48 @@
    "satz": "ACTICORE1 ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
+   "stufe": "fda",
+   "datum": "2026-09-11",
+   "name": "PIXCLARA",
+   "wirkstoff": "FLORETYROSINE F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "TELIX",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 09, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA218592",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc78b128-3768-4448-b019-61574db05714",
+   "indikation_en": "PIXCLARA is indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. PIXCLARA is a radioactive diagnostic drug indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-11",
+   "name": "ISEMBYLD",
+   "wirkstoff": "APITEGROMAB-MSTN",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "SCHOLAR ROCK INC",
+   "kennzeichen": [
+    "BLA",
+    "Label Sep 17, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-BLA761463",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b1cd8ab8-8a10-48ed-9806-75a44f22b963",
+   "indikation_en": "ISEMBYLD is indicated for the treatment of spinal muscular atrophy (SMA) in adults and pediatric patients 2 years of age and older who are currently receiving a survival motor neuron 2 (SMN2)-targeted treatment. ISEMBYLD is a recombinant monoclonal antibody targeting proforms of myostatin, indicated for the treatment of spinal muscular atrophy (SMA) in adults and pediatric patients 2 years of age and older who are currently receiving a survival motor neuron 2 (SMN2)-targeted treatment. ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Apitegromab-MSTN (ISEMBYLD) zur Behandlung der spinalen Muskelatrophie bei Patienten ab zwei Jahren unter SMN2-gerichteter Therapie zugelassen."
+  },
+  {
    "stufe": "diga",
    "datum": "2026-09-07",
    "name": "Frieda Menova",
@@ -391,6 +560,48 @@
    "satz": "Frieda Menova ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
+   "stufe": "fda",
+   "datum": "2026-09-04",
+   "name": "ETCAMAH",
+   "wirkstoff": "CAMIZESTRANT",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ASTRAZENECA",
+   "kennzeichen": [
+    "NDA",
+    "Label Sep 10, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220359",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c54223d3-f3c7-4186-afa0-429d84805826",
+   "indikation_en": "ETCAMAH in combination with a CDK4/6 inhibitor (abemaciclib, palbociclib, or ribociclib) is indicated for the treatment of adult patients with hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative, locally advanced or metastatic breast cancer upon detection of ESR1 mutation during aromatase inhibitor and CDK4/6 inhibitor therapy, based on an FDA-authorized test [see Dosage and Administration ( 2.1 )] . This indication is approved under accelerated approval based on progression-free survival as measured from detection of ESR1 mutation [see Clinical Studies ( 14 )] . Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). ETCAMAH is an estrogen receptor antagonist indicated: • in combination with a CDK4/6 inhibitor (abemaciclib, palbociclib, or ribociclib) for the treatment of adult patients with hormone receptor (HR) positive, human epidermal growth factor receptor 2 (HER2) negative, locally advanced or metastatic breast cancer upon detection of ESR1 mutation during aromatase inhibitor and CDK4/6 inhibitor therapy, based on an FDA authorized test. ( 1 , 2.1 ) This indication is approved under accelerated approval based on progression-free survival as measured from detection of ESR1 mutation. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). ( 1 ) 2",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Die FDA hat Camizestrant (Etcamah) in Kombination mit CDK4/6-Inhibitoren zur Behandlung von HR-positiven, HER2-negativen lokal fortgeschrittenen oder metastasierten Mammakarzinomen bei ESR1-Mutation zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-03",
+   "name": "ZANVASTRO",
+   "wirkstoff": "ZILGANERSEN SODIUM",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "IONIS PHARMS INC",
+   "kennzeichen": [
+    "NDA",
+    "Label Sep 15, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220210",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=af6ca330-46d3-4ed6-b2af-bd6db3133fd1",
+   "indikation_en": "ZANVASTRO is indicated for the treatment of Alexander disease in pediatric and adult patients. ZANVASTRO is a glial fibrillary acidic protein (GFAP)-directed antisense oligonucleotide indicated for the treatment of Alexander disease in pediatric and adult patients. ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Zilganersen-Natrium (Zanvastro) zur Behandlung der Alexander-Krankheit zugelassen."
+  },
+  {
    "stufe": "zulassung",
    "datum": "2026-08-28",
    "name": "Denosumab Ascend",
@@ -407,6 +618,69 @@
     "onkologie"
    ],
    "satz": "Denosumab Ascend (Denosumab) ist zugelassen zur Prävention skelettbezogener Ereignisse bei Erwachsenen mit fortgeschrittenen Malignomen mit Knochenbefall und zur Behandlung von Riesenzelltumoren des Knochens."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-08-28",
+   "name": "MIMRYLO",
+   "wirkstoff": "RUSFERTIDE ACETATE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "TAKEDA PHARMS AM",
+   "kennzeichen": [
+    "NDA",
+    "Label Sep 03, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220605",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=101aff01-31ed-4841-a8b6-0a5a8503189b",
+   "indikation_en": "MIMRYLO is indicated for the treatment of erythrocytosis in adults with polycythemia vera (PV). MIMRYLO is a hepcidin mimetic indicated for the treatment of erythrocytosis in adults with polycythemia vera (PV). ( 1 ) 2",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Die FDA hat Rusfertide Acetate (MIMRYLO) zur Behandlung der Erythrozytose bei Polycythemia vera zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-08-27",
+   "name": "LISRAYA",
+   "wirkstoff": "BREPOCITINIB TOSYLATE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "PRIOVANT THERAP",
+   "kennzeichen": [
+    "NDA",
+    "Label Sep 02, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220106",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5023a17b-e96a-67d4-e063-6394a90a14a7",
+   "indikation_en": "LISRAYA is indicated for the treatment of dermatomyositis in adult patients. LISRAYA is a Janus kinase (JAK) and tyrosine kinase 2 (TYK2) inhibitor indicated for the treatment of dermatomyositis in adult patients. ( 1 ) Limitations of Use LISRAYA is not recommended for use in combination with other JAK inhibitors, other TYK2 inhibitors, or biologic DMARDs. Limitations of Use LISRAYA is not recommended for use in combination with other JAK inhibitors, other TYK2 inhibitors, or biologic DMARDs. 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Brepocitinib-Tosylat (Lisraya) zur Behandlung der Dermatomyositis bei erwachsenen Patienten zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-08-26",
+   "name": "RASONQUE",
+   "wirkstoff": "DARAXONRASIB",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "REVOLUTION MEDICINES",
+   "kennzeichen": [
+    "NDA",
+    "Label Aug 31, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220910",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13a65923-d072-4dac-8620-8eabbf8c3641",
+   "indikation_en": "RASONQUE is indicated for the treatment of adult patients with metastatic pancreatic adenocarcinoma who have received at least one prior systemic therapy or who are not candidates for multiagent systemic therapy. RASONQUE is an inhibitor of the RAS GTPase family, indicated for the treatment of adult patients with metastatic pancreatic adenocarcinoma who have received at least one prior systemic therapy or who are not candidates for multiagent systemic therapy. ( 1 ) 2",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Die FDA hat Daraxonrasib (Rasonque) zur Behandlung des metastasierten Pankreasadenokarzinoms bei Patienten mit vorheriger Systemtherapie zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -445,6 +719,68 @@
    "satz": "Hopledo (Levodopa/Carbidopa) ist zur Behandlung von Parkinson-Patienten mit moderaten bis schweren Motorfluktuationen indiziert, die auf orale Levodopa/DDC-Inhibitor-Therapie nicht ausreichend ansprechen."
   },
   {
+   "stufe": "fda",
+   "datum": "2026-08-19",
+   "name": "PASATRU",
+   "wirkstoff": "GARETOSMAB-GRTS",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "REGENERON PHARMACEUTICALS, INC",
+   "kennzeichen": [
+    "BLA",
+    "Label Aug 24, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-BLA761508",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0d5cec96-b02b-4f1d-bc66-51e62ce04e3c",
+   "indikation_en": "PASATRU is indicated to reduce formation of new heterotopic ossification (HO) lesions and clinician-assessed flare-ups in adults with fibrodysplasia ossificans progressiva (FOP). PASATRU is an activin signaling inhibitor indicated to reduce formation of new heterotopic ossification (HO) lesions and clinician-assessed flare-ups in adults with fibrodysplasia ossificans progressiva (FOP). ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Garetosmab-grts (PASATRU) zur Reduktion neuer heterotoper Ossifikationen und klinisch bewerteter Schübe bei Fibrodysplasia ossificans progressiva zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-08-13",
+   "name": "TAUKLARIFY",
+   "wirkstoff": "FLORQUINITAU F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "CERVEAU LANTHEUS",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220496",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-08-13",
+   "name": "ZENBEXUS",
+   "wirkstoff": "IBERDOMIDE HYDROCHLORIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "BRISTOL MYERS SQUIBB",
+   "kennzeichen": [
+    "NDA",
+    "Label Aug 19, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA221075",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3663d9cb-3f66-48ae-bf0a-6958bc0888de",
+   "indikation_en": "ZENBEXUS is indicated, in combination with daratumumab and hyaluronidase-fihj and dexamethasone, for the treatment of adult patients with multiple myeloma who have received at least 1 prior line of therapy including a proteasome inhibitor and an immunomodulatory agent. This indication is approved under accelerated approval based on minimal residual disease (MRD)-negative complete response (CR) at any time [see Clinical Studies (14) ] . Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). ZENBEXUS is a cereblon-modulating protein degrader indicated in combination with daratumumab and hyaluronidase-fihj and dexamethasone for the treatment of adult patients with multiple myeloma who have received at least 1 prior line of therapy including a proteasome inhibitor and an immunomodulatory agent. (1) This indication is approved under accelerated approval based on minimal residual disease (MRD)-negative complete response (CR) at any time. Continued approval for this indication may be contingent upon verification and description of clinical benefit in confirmatory trial(s). 2",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Die FDA hat Iberdomide (ZENBEXUS) in Kombination mit Daratumumab und Dexamethason zur Behandlung des multiplen Myeloms zugelassen."
+  },
+  {
    "stufe": "diga",
    "datum": "2026-08-10",
    "name": "isi PMS App",
@@ -465,6 +801,26 @@
    "satz": "isi PMS App ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
+   "stufe": "fda-wartet",
+   "datum": "2026-08-05",
+   "name": "ORZEYFUL",
+   "wirkstoff": "OVEPOREXTON",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "TAKEDA PHARMS USA",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220860",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220860",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
    "stufe": "zulassung",
    "datum": "2026-07-24",
    "name": "Colchicine Agepha Pharma",
@@ -481,6 +837,26 @@
     "kardio"
    ],
    "satz": "Colchicine Agepha Pharma (Colchicin) ist zur Sekundärprävention atherothrombotischer Ereignisse bei Erwachsenen mit seit mindestens 6 Monaten stabiler Koronararterienerkrankung zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-07-24",
+   "name": "SIMTRIYO",
+   "wirkstoff": "CENTANAFADINE HYDROCHLORIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "OTSUKA PHARMACEUTICAL CO LTD",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA218145",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218145",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
   },
   {
    "stufe": "gutachten",
@@ -595,6 +971,27 @@
    "satz": "Der CHMP empfiehlt die Zulassung von Riociguat Accord (Riociguat) zur Behandlung der chronisch-thromboembolischen pulmonalen Hypertonie und pulmonalarteriellen Hypertonie bei Erwachsenen sowie PAH bei Kindern ab 6 Jahren."
   },
   {
+   "stufe": "fda",
+   "datum": "2026-07-22",
+   "name": "JIDEYTRO",
+   "wirkstoff": "ZIDESAMTINIB",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "NUVALENT",
+   "kennzeichen": [
+    "NDA",
+    "Label Jul 31, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220185",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3760e421-b523-4d9b-e063-6394a90ab94b",
+   "indikation_en": "JIDEYTRO is indicated for the treatment of adult patients with locally advanced or metastatic ROS1 -positive non-small cell lung cancer (NSCLC) who received a prior ROS1 kinase inhibitor [see Dosage and Administration ( 2.1 ), Clinical Studies ( 14.1 )] . JIDEYTRO is a kinase inhibitor indicated for the treatment of adult patients with locally advanced or metastatic ROS1 -positive non-small cell lung cancer (NSCLC) who received a prior ROS1 kinase inhibitor.( 1 ) 2",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Die FDA hat Zidesamtinib (JIDEYTRO) zur Behandlung von Erwachsenen mit lokal fortgeschrittenem oder metastasiertem ROS1-positivem Adenokarzinom der Lunge zugelassen, die einen vorangegangenen ROS1-Kinase-Inhibitor erhalten haben."
+  },
+  {
    "stufe": "zulassung",
    "datum": "2026-07-20",
    "name": "Etcamah",
@@ -666,6 +1063,108 @@
     "diabetes"
    ],
    "satz": "Liraglutide STADA (Liraglutide) ist zur Behandlung von Typ-2-Diabetes mellitus bei unzureichender Kontrolle durch Diät und Bewegung bei Erwachsenen, Jugendlichen und Kindern ab 10 Jahren zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-07-15",
+   "name": "Jascayd",
+   "wirkstoff": "nerandomilast",
+   "gebiet_mesh": "Idiopathic Pulmonary Fibrosis",
+   "atc": "L04AA61",
+   "inhaber": "Boehringer Ingelheim International GmbH",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006405",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/jascayd",
+   "indikation_en": "Jascayd is indicated for the treatment of adult patients with Idiopathic Pulmonary Fibrosis (IPF). Jascayd is indicated for the treatment of adult patients with Progressive Pulmonary Fibrosis (PPF).",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Jascayd (Nerandomilast) ist zur Behandlung der idiopathischen Lungenfibrose und progressiven Lungenfibrose bei Erwachsenen zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-07-15",
+   "name": "LIPFENDRA",
+   "wirkstoff": "ENLICITIDE DECANOATE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "MSD",
+   "kennzeichen": [
+    "NDA",
+    "Label Jul 27, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220848",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=100ec543-fbd0-44fc-b740-db9cdff39145",
+   "indikation_en": "LIPFENDRA ® is indicated as an adjunct to diet and exercise to reduce low-density lipoprotein cholesterol (LDL-C) in adults with hypercholesterolemia, including heterozygous familial hypercholesterolemia (HeFH). Cardiovascular outcomes trials have demonstrated that reducing LDL-C lowers the risk for major adverse cardiovascular events (MACE) in adults at increased risk when treated with statins or monoclonal antibody proprotein convertase subtilisin kexin type 9 (PCSK9) inhibitors as an add-on to statin therapy. LIPFENDRA is a proprotein convertase subtilisin kexin type 9 (PCSK9) inhibitor indicated as an adjunct to diet and exercise to reduce low-density lipoprotein cholesterol (LDL-C) in adults with hypercholesterolemia, including heterozygous familial hypercholesterolemia (HeFH). Cardiovascular outcomes trials have demonstrated that reducing LDL-C lowers the risk for major adverse cardiovascular events (MACE) in adults at increased risk when treated with statins or monoclonal antibody PCSK9 inhibitors as an add-on to statin therapy. ( 1 ) 2",
+   "hubs": [
+    "kardio"
+   ],
+   "satz": "Die FDA hat Enlicitide Decanoate (Lipfendra) zur Senkung von LDL-Cholesterin bei Hypercholesterinämie zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-07-14",
+   "name": "REVTORPYK",
+   "wirkstoff": "GEDATOLISIB",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "CELCUITY",
+   "kennzeichen": [
+    "NDA",
+    "Label Sep 30, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA219908",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=959d73ef-831f-4005-956c-210702270bda",
+   "indikation_en": "REVTORPYK is indicated in combination with fulvestrant, with or without palbociclib, for the treatment of adult patients with hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative locally advanced or metastatic breast cancer without a PIK3CA mutation detected following progression on or after treatment with at least one line of endocrine therapy in the metastatic setting [see Dosage and Administration (2.1) and Clinical Studies (14) ] . REVTORPYK is a kinase inhibitor indicated in combination with fulvestrant, with or without palbociclib, for the treatment of adult patients with hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative locally advanced or metastatic breast cancer without a PIK3CA mutation detected following progression on or after treatment with at least one line of endocrine therapy in the metastatic setting. (1) 2",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Die FDA hat Gedatolisib (Revtorpyk) in Kombination mit Fulvestrant zur Behandlung von HR-positiven, HER2-negativen lokal fortgeschrittenen oder metastasierten Mammakarzinomen ohne PIK3CA-Mutation zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-07-07",
+   "name": "TRUTAKNA",
+   "wirkstoff": "ATACICEPT-VYMJ",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "VERA THERAPEUTICS INC.",
+   "kennzeichen": [
+    "BLA",
+    "Label Aug 07, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-BLA761486",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=24aa29f6-ccff-45d3-89af-4d26e525cef8",
+   "indikation_en": "TRUTAKNA is indicated to reduce proteinuria in adults with primary immunoglobulin A nephropathy (IgAN) at risk for disease progression. This indication is approved under accelerated approval based on reduction of proteinuria. It has not been established whether TRUTAKNA slows kidney function decline over the long-term in patients with IgAN. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory clinical trial. TRUTAKNA is a B-lymphocyte stimulator (BLyS)-specific inhibitor and A Proliferation Inducing Ligand (APRIL) blocker indicated to reduce proteinuria in adults with primary immunoglobulin A nephropathy (IgAN) at risk for disease progression. ( 1 ). This indication is approved under accelerated approval based on a reduction of proteinuria. It has not been established whether TRUTAKNA slows kidney function decline over the long-term in patients with IgAN. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory clinical trial. 2",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Die FDA hat Atacicept-VYMJ (Trutakna) zur Verringerung der Proteinurie bei primärer Immunglobulin-A-Nephropathie zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-06-26",
+   "name": "LUMVOA",
+   "wirkstoff": "VELIGROTUG-VVZE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "VIRIDIAN THERAPEUTICS INC",
+   "kennzeichen": [
+    "BLA",
+    "Label Jul 02, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-BLA761530",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=11bc286a-5411-45af-af3f-69ad38efb610",
+   "indikation_en": "LUMVOA is indicated for the treatment of thyroid eye disease regardless of thyroid eye disease activity or duration. LUMVOA is an insulin-like growth factor-1 receptor inhibitor indicated for the treatment of thyroid eye disease regardless of thyroid eye disease activity or duration. ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Veligrotug-vvze (Lumvoa), einen IGF-1-Rezeptor-Inhibitor, zur Behandlung der thyreoidalen Orbitopathie zugelassen."
   },
   {
    "stufe": "gutachten",
@@ -740,6 +1239,48 @@
    "satz": "Palbociclib Viatris (Palbociclib) ist zur Behandlung von Hormonrezeptor-positivem, HER2-negativem lokal fortgeschrittenem oder metastasiertem Mammakarzinom in Kombination mit einem Aromatasehemmer oder Fulvestrant indiziert."
   },
   {
+   "stufe": "fda",
+   "datum": "2026-06-17",
+   "name": "UTEBZI",
+   "wirkstoff": "TEBIPENEM PIVOXIL HYDROBROMIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "GLAXOSMITHKLINE",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 01, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA215960",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f0511453-5f6f-4e3a-b7d0-a5cfde985656",
+   "indikation_en": "UTEBZI is a penem antibacterial indicated for the treatment of complicated urinary tract infections (cUTI), including pyelonephritis, caused by the following susceptible microorganisms: Escherichia coli, Klebsiella pneumoniae, Enterobacter cloacae species complex, Klebsiella oxytoca , and Enterococcus faecalis in adult patients who have limited or no alternative oral treatment options. ( 1.1 ) Usage to Reduce Development of Drug‑Resistant Bacteria To reduce the development of drug‑resistant bacteria and maintain the effectiveness of UTEBZI and other antibacterial drugs, UTEBZI should be used only to treat or prevent infections that are proven or strongly suspected to be caused by bacteria. ( 1.2 ) 1.1 Complicated Urinary Tract Infection (cUTI), Including Pyelonephritis UTEBZI is indicated for the treatment of complicated urinary tract infections (cUTI), including pyelonephritis, caused by the following susceptible microorganisms: Escherichia coli , Klebsiella pneumoniae , Enterobacter cloacae species complex, Klebsiella oxytoca , and Enterococcus faecalis in adult patients who have limited or no alternative oral treatment options. 1.2 Usage to Reduce Development of Drug-Resistant Bacteria To reduce the development of drug‑resistant bacteria and maintain the effectiveness of UTEBZI and other antibacterial drugs, UTEBZI should be used only to treat or prevent infections that are proven or strongly suspected to be caused by susceptible bacteria. When culture and susceptibility information are available, they should be considered in selecting or modifying antibacterial therapy. In the absence of such data, local epidemiology and susceptibility patterns may contribute to the empiric selection of therapy. 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Tebipenem Pivoxil Hydrobromid (UTEBZI) zur oralen Behandlung komplizierter Harnwegsinfektionen einschließlich Pyelonephritis zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-06-12",
+   "name": "AMBELVIST",
+   "wirkstoff": "GADOQUATRANE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "BAYER HEALTHCARE",
+   "kennzeichen": [
+    "NDA",
+    "Label Jun 15, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA219627",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fac80f5d-8d37-4237-bb52-0faef0dd46aa",
+   "indikation_en": "AMBELVIST is indicated in adult and pediatric patients, including term neonates, for use with magnetic resonance imaging (MRI) to detect and visualize lesions with abnormal vascularity in: the central nervous system (brain, spine, and associated tissues) the body (head and neck, thorax, abdomen, pelvis, and musculoskeletal system) AMBELVIST is a gadolinium-based contrast agent indicated in adult and pediatric patients, including term neonates, for use with magnetic resonance imaging (MRI) to detect and visualize lesions with abnormal vascularity in: the central nervous system (brain, spine, and associated tissues) the body (head and neck, thorax, abdomen, pelvis, and musculoskeletal system) ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Gadoquatran (Ambelvist) zur MRT-Kontrastierung von Läsionen mit abnormaler Vaskularisatur im Zentralnervensystem und Körper zugelassen."
+  },
+  {
    "stufe": "zulassung",
    "datum": "2026-05-29",
    "name": "Bopediat",
@@ -799,6 +1340,47 @@
    "satz": "Zepzelca (Lurbinectedin) in Kombination mit Atezolizumab ist zur Erhaltungstherapie von Patienten mit kleinzelligem Lungenkarzinom im Stadium extensive-stage indiziert, deren Erkrankung nach Erstlinien-Induktionstherapie nicht progredient ist."
   },
   {
+   "stufe": "fda",
+   "datum": "2026-05-29",
+   "name": "XOCOVA",
+   "wirkstoff": "ENSITRELVIR",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "SHIONOGI",
+   "kennzeichen": [
+    "NDA",
+    "Label Jul 03, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220442",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=526acf60-abc3-2cc2-e063-6294a90affa6",
+   "indikation_en": "XOCOVA is indicated for post-exposure prophylaxis of coronavirus disease 2019 (COVID-19) in adults and adolescents 12 years of age and older following contact with an individual who has COVID-19. XOCOVA, a severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) main protease (M pro : also referred to as 3CL pro or nsp5 protease) inhibitor, is indicated for post-exposure prophylaxis of coronavirus disease 2019 (COVID‑19) in adults and adolescents 12 years of age and older following contact with an individual who has COVID-19. ( 1 ) 2",
+   "hubs": [
+    "impfen"
+   ],
+   "satz": "Die FDA hat Ensitrelvir (Xocova) zur Postexpositionsprophylaxe von COVID-19 bei Erwachsenen und Jugendlichen ab zwölf Jahren zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-05-29",
+   "name": "CYPSEDO",
+   "wirkstoff": "CIPEPOFOL",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "HAISCO",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220482",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220482",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
    "stufe": "zulassung",
    "datum": "2026-05-28",
    "name": "Adstiladrin",
@@ -819,6 +1401,90 @@
    "satz": "Adstiladrin (Nadofaragene firadenovec) ist zugelassen zur Behandlung von BCG-refraktärem nicht-muskelinvasivem Blasenkrebs mit Carcinoma in situ."
   },
   {
+   "stufe": "fda",
+   "datum": "2026-05-27",
+   "name": "DECNUPAZ",
+   "wirkstoff": "PIVEKIMAB SUNIRINE-PVZY",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ABBVIE INC",
+   "kennzeichen": [
+    "BLA",
+    "Label Jun 01, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-BLA761460",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=508b6ff8-601d-4901-a7a5-816141134054",
+   "indikation_en": "DECNUPAZ is indicated for the treatment of adult patients with blastic plasmacytoid dendritic cell neoplasm (BPDCN). DECNUPAZ is a CD123-directed antibody and alkylating agent conjugate indicated for the treatment of adult patients with blastic plasmacytoid dendritic cell neoplasm (BPDCN). ( 1 ) 2.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Die FDA hat Pivekimab Sunirine-PVZY (Decnupaz) zur Behandlung des blastischen plasmazytoiden dendritischen Zellneoplasmas zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-05-22",
+   "name": "HEPCLUDEX",
+   "wirkstoff": "BULEVIRTIDE-GMOD",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "GILEAD SCIENCES INC",
+   "kennzeichen": [
+    "BLA",
+    "Label May 25, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-BLA761468",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=12391cc2-38c2-4cf5-86d3-2be9370127fc",
+   "indikation_en": "HEPCLUDEX is indicated for the treatment of chronic hepatitis delta virus (HDV) infection in adults without cirrhosis or with compensated cirrhosis. This indication is approved under accelerated approval based on a decrease in HDV RNA and alanine aminotransferase (ALT) normalization [see Clinical Studies (14) ] . An improvement in disease-related clinical outcomes has not been established. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). HEPCLUDEX is a sodium taurocholate co-transporting polypeptide (NTCP)-directed HDV attachment inhibitor indicated for the treatment of chronic HDV infection in adults without cirrhosis or with compensated cirrhosis. This indication is approved under accelerated approval based on participants who achieved a decrease in HDV RNA and alanine aminotransferase (ALT) normalization. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). ( 1 , 14 ) 2",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Die FDA hat Bulevirtide (HEPCLUDEX) zur Behandlung der chronischen Hepatitis-Delta-Virus-Infektion bei Erwachsenen ohne oder mit kompensierter Zirrhose zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-05-15",
+   "name": "BAXFENDY",
+   "wirkstoff": "BAXDROSTAT",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ASTRAZENECA AB",
+   "kennzeichen": [
+    "NDA",
+    "Label Sep 18, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA219878",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b1fc1ee7-facc-4099-b3db-a4c1daeaa4be",
+   "indikation_en": "BAXFENDY, in combination with other antihypertensive drugs, is indicated for the treatment of hypertension, to lower blood pressure in adults who are not adequately controlled on other agents. Lowering blood pressure reduces the risk of fatal and nonfatal cardiovascular events, primarily strokes and myocardial infarctions. These benefits have been seen in controlled trials of antihypertensive drugs from a wide variety of pharmacologic classes. There are no controlled trials demonstrating risk reduction of these events with BAXFENDY. Control of high blood pressure should be part of comprehensive cardiovascular risk management, including, as appropriate, lipid control, diabetes management, antithrombotic therapy, smoking cessation, exercise, and limited sodium intake. Many patients will require more than one drug to achieve blood pressure goals. For specific advice on goals and management, see published guidelines, such as those of the American College of Cardiology/American Heart Association (ACC/AHA). Numerous antihypertensive drugs, from a variety of pharmacologic classes and with different mechanisms of action, have been shown in randomized controlled trials to reduce cardiovascular morbidity and mortality, and it can be concluded that it is blood pressure reduction, and not some other pharmacologic property of the drugs, that is largely responsible for those benefits. The largest and most consistent cardiovascular outcome benefit has been a reduction in the risk of stroke, but reductions in myocardial infarction and cardiovascular mortality also have been seen regularly. Elevated systolic or diastolic pressure causes increased cardiovascular risk, and the absolute risk increase per mmHg is greater at higher blood pressures, so that even modest reductions of severe hypertension can provide substantial benefit. Relative risk reduction from blood pressure reduction is similar across populations with varying absolute risk, so the absolute benefit is greater in patients who are at higher risk independent of their hypertension (for example, patients with diabetes or hyperlipidemia), and such patients would be expected to benefit from more aggressive treatment to a lower blood pressure goal. BAXFENDY is an aldosterone synthase inhibitor indicated for the treatment of hypertension in combination with other antihypertensive drugs, to lower blood pressure in adults who are not adequately controlled on other agents. Lowering blood pressure reduces the risk of fata",
+   "hubs": [
+    "kardio"
+   ],
+   "satz": "Die FDA hat Baxdrostat (Baxfendy) zur Behandlung der Hypertonie in Kombination mit anderen Antihypertensiva zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-05-13",
+   "name": "BEQALZI",
+   "wirkstoff": "SONROTOCLAX",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "BEONE MEDICINES USA",
+   "kennzeichen": [
+    "NDA",
+    "Label Sep 28, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220711",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff684558-e9cb-46de-a8bf-f4d79093df7a",
+   "indikation_en": "BEQALZI is indicated for the treatment of adult patients with relapsed or refractory mantle cell lymphoma (MCL) after at least two lines of systemic therapy, including a Bruton's tyrosine kinase (BTK) inhibitor. This indication is approved under accelerated approval based on response rate and durability of response. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s) [see Clinical Studies (14.1) ] . BEQALZI is a BCL-2 inhibitor indicated for the treatment of adult patients with relapsed or refractory mantle cell lymphoma (MCL) after at least two lines of systemic therapy, including a Bruton's tyrosine kinase (BTK) inhibitor. ( 1 ) This indication is approved under accelerated approval based on response rate and durability of response. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). 2",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Die FDA hat Sonrotoclax (BEQALZI) zur Behandlung von Erwachsenen mit rezidiviertem oder refraktärem Mantelzelllymphom nach mindestens zwei Linien systemischer Therapie zugelassen."
+  },
+  {
    "stufe": "zulassung",
    "datum": "2026-05-06",
    "name": "Bysumlog",
@@ -835,6 +1501,27 @@
     "diabetes"
    ],
    "satz": "Bysumlog (Insulin lispro) ist zur Behandlung von Diabetes mellitus bei Erwachsenen und Kindern zugelassen, die Insulin zur Aufrechterhaltung der Glukosehomöostase benötigen, sowie zur initialen Stabilisierung des Diabetes mellitus."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-05-01",
+   "name": "VEPPANU",
+   "wirkstoff": "VEPDEGESTRANT",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "RIGEL PHARMS",
+   "kennzeichen": [
+    "NDA",
+    "Label Jun 17, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA219835",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=484e21ba-8fe1-4c6d-b923-8ba4cf5b2f20",
+   "indikation_en": "VEPPANU is indicated for the treatment of adults with estrogen receptor (ER)-positive, human epidermal growth factor receptor 2 (HER2)-negative, estrogen receptor-1 (ESR1) -mutated advanced or metastatic breast cancer, as detected by an FDA-authorized test, with disease progression following at least one line of endocrine therapy. VEPPANU is a heterobifunctional protein degrader indicated for the treatment of adults with estrogen receptor (ER)-positive, human epidermal growth factor receptor 2 (HER2)-negative, estrogen receptor-1 ( ESR1) -mutated advanced or metastatic breast cancer, as detected by an FDA-authorized test, with disease progression following at least one line of endocrine therapy. ( 1 ) 2",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Die FDA hat Vepdegestrant (Veppanu) zur Behandlung von ER-positivem, HER2-negativem, ESR1-mutiertem fortgeschrittenem oder metastasiertem Mammakarzinom nach Progression unter Endokrinotherapie zugelassen."
   },
   {
    "stufe": "zulassung",
