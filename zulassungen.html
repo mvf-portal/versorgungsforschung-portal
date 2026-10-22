@@ -155,7 +155,16 @@
     font-size:14.5px; color:var(--ink-soft); background:var(--card-2);
     border:1px dashed var(--line); border-radius:6px; padding:13px 16px; margin:0;
   }
-  .stand{ font-size:13px; color:var(--ink-faint); margin:-6px 0 26px; }
+  /* Der negative obere Abstand stammt von der Radar-Seite, wo diese Zeile
+     unter einer Überschrift steht. Hier steht sie unmittelbar unter dem
+     Kopfbereich und klebte daran. Sie trägt außerdem mehr als dort — die
+     Antwort auf „was ist neu" —, deshalb etwas größer und dunkler als eine
+     bloße Datumszeile. */
+  .stand{
+    font-size:14.5px; color:var(--ink-soft); line-height:1.6;
+    margin:30px 0 30px; max-width:68ch;
+  }
+  .stand b{ color:var(--ink); }
   .quellen{
     font-size:13.5px; color:var(--ink-faint); line-height:1.6; max-width:68ch;
     background:var(--card-2); border:1px solid var(--line-soft);
