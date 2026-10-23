@@ -165,6 +165,9 @@
     margin:30px 0 30px; max-width:68ch;
   }
   .stand b{ color:var(--ink); }
+  /* Der Ausfallhinweis ist die einzige Stelle der Seite, die warnt - und er
+     soll sich von der Frischezahl unterscheiden, die danebensteht. */
+  .stand b.stand-alt{ color:var(--warn); }
   .quellen{
     font-size:13.5px; color:var(--ink-faint); line-height:1.6; max-width:68ch;
     background:var(--card-2); border:1px solid var(--line-soft);
@@ -745,7 +748,7 @@
 
 <script>
 // === ZULASSUNGEN-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const ZUL_STAND = "22.10.2026";
+const ZUL_STAND = "23.10.2026";
 const ZULASSUNGEN = [
   {slug:"onkologie", name:"Onkologie", domain:"onkologie.m-vf.de", eintraege:[
     {stufe:"gutachten", datum:"2026-10-15", name:"Kizfizo", wirkstoff:"temozolomide", satz:"Der CHMP empfiehlt die Zulassung von Kizfizo (Temozolomid) zur Behandlung des Glioblastoma multiforme bei Erwachsenen und maligner Gliome bei Kindern.", gebiet_mesh:"Glioma", atc:"L01AX03", inhaber:"ORPHELIA Pharma", kennzeichen:["Orphan Drug"], url:"https://www.ema.europa.eu/en/medicines/human/EPAR/kizfizo-0", studien:[], usa:"", usa_name:"", nummer:"EMEA/H/C/006892"},
@@ -875,8 +878,8 @@ const ZULASSUNGEN = [
     {stufe:"fda-wartet", datum:"2026-09-28", name:"EMCITATE", wirkstoff:"TIRATRICOL", satz:"", gebiet_mesh:"", atc:"", inhaber:"RARE THYROID", kennzeichen:["NDA"], url:"https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220963", studien:[], usa:"", usa_name:"", nummer:"FDA-NDA220963"},
     {stufe:"fda", datum:"2026-09-25", name:"ATEBRIOZ", wirkstoff:"ZILURGISERTIB FUMARATE", satz:"Die FDA hat Zilurgisertib-Fumarat (Atebrioz) zur Reduktion neuer heterotoper Ossifikationen bei Fibrodysplasia ossificans progressiva zugelassen.", gebiet_mesh:"", atc:"", inhaber:"MIRUM", kennzeichen:["NDA", "Label Oct 12, 2026"], url:"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f542e4b0-072a-42c6-80c9-5977054971e0", studien:[], usa:"", usa_name:"", nummer:"FDA-NDA221198"},
     {stufe:"fda-wartet", datum:"2026-09-23", name:"LYRFIGTU", wirkstoff:"LIRAFUGRATINIB HYDROCHLORIDE", satz:"", gebiet_mesh:"", atc:"", inhaber:"ELEVAR", kennzeichen:["NDA"], url:"https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425", studien:[], usa:"", usa_name:"", nummer:"FDA-NDA220425"},
-    {stufe:"fda", datum:"2026-09-11", name:"PIXCLARA", wirkstoff:"FLORETYROSINE F-18", satz:"Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen.", gebiet_mesh:"", atc:"", inhaber:"TELIX", kennzeichen:["NDA", "Label Oct 09, 2026"], url:"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc78b128-3768-4448-b019-61574db05714", studien:[], usa:"", usa_name:"", nummer:"FDA-NDA218592"},
     {stufe:"fda", datum:"2026-09-11", name:"ISEMBYLD", wirkstoff:"APITEGROMAB-MSTN", satz:"Die FDA hat Apitegromab-MSTN (ISEMBYLD) zur Behandlung der spinalen Muskelatrophie bei Patienten ab zwei Jahren unter SMN2-gerichteter Therapie zugelassen.", gebiet_mesh:"", atc:"", inhaber:"SCHOLAR ROCK INC", kennzeichen:["BLA", "Label Sep 17, 2026"], url:"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b1cd8ab8-8a10-48ed-9806-75a44f22b963", studien:[], usa:"", usa_name:"", nummer:"FDA-BLA761463"},
+    {stufe:"fda", datum:"2026-09-11", name:"PIXCLARA", wirkstoff:"FLORETYROSINE F-18", satz:"Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen.", gebiet_mesh:"", atc:"", inhaber:"TELIX", kennzeichen:["NDA", "Label Oct 09, 2026"], url:"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc78b128-3768-4448-b019-61574db05714", studien:[], usa:"", usa_name:"", nummer:"FDA-NDA218592"},
     {stufe:"fda", datum:"2026-09-03", name:"ZANVASTRO", wirkstoff:"ZILGANERSEN SODIUM", satz:"Die FDA hat Zilganersen-Natrium (Zanvastro) zur Behandlung der Alexander-Krankheit zugelassen.", gebiet_mesh:"", atc:"", inhaber:"IONIS PHARMS INC", kennzeichen:["NDA", "Label Sep 15, 2026"], url:"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=af6ca330-46d3-4ed6-b2af-bd6db3133fd1", studien:[], usa:"", usa_name:"", nummer:"FDA-NDA220210"},
     {stufe:"fda", datum:"2026-08-27", name:"LISRAYA", wirkstoff:"BREPOCITINIB TOSYLATE", satz:"Die FDA hat Brepocitinib-Tosylat (Lisraya) zur Behandlung der Dermatomyositis bei erwachsenen Patienten zugelassen.", gebiet_mesh:"", atc:"", inhaber:"PRIOVANT THERAP", kennzeichen:["NDA", "Label Sep 02, 2026"], url:"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5023a17b-e96a-67d4-e063-6394a90a14a7", studien:[], usa:"", usa_name:"", nummer:"FDA-NDA220106"},
     {stufe:"fda", datum:"2026-08-19", name:"PASATRU", wirkstoff:"GARETOSMAB-GRTS", satz:"Die FDA hat Garetosmab-grts (PASATRU) zur Reduktion neuer heterotoper Ossifikationen und klinisch bewerteter Schübe bei Fibrodysplasia ossificans progressiva zugelassen.", gebiet_mesh:"", atc:"", inhaber:"REGENERON PHARMACEUTICALS, INC", kennzeichen:["BLA", "Label Aug 24, 2026"], url:"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0d5cec96-b02b-4f1d-bc66-51e62ce04e3c", studien:[], usa:"", usa_name:"", nummer:"FDA-BLA761508"},
@@ -1322,8 +1325,31 @@ const ZULASSUNGEN = [
     } else {
       text += ' \u00b7 nichts Neues in den letzten 31 Tagen';
     }
+    // **Die Seite erkennt ihren eigenen Ausfall.** Die beiden Radar-Schritte
+    // im naechtlichen Lauf stehen auf `continue-on-error`, damit ein
+    // Aussetzer der EMA nicht das Studien-Update mitreisst - der Lauf meldet
+    // dann Erfolg, obwohl nichts geschrieben wurde. Am 23.10.2026 fehlte
+    // einen Tag lang `openpyxl`, und niemand hat es bemerkt: Eine Seite mit
+    // den Daten von gestern sieht aus wie eine Seite mit den Daten von
+    // heute. Dieselbe Vorkehrung wie beim Studienblock, der sein SNAP_DATE
+    // gegen die Uhr des Lesers haelt.
+    //
+    // Drei Tage, nicht einer: Der Lauf setzt gelegentlich aus, und eine
+    // Warnung, die jede Woche einmal grundlos erscheint, liest bald niemand
+    // mehr.
+    let alt = '';
+    const teileStand = String(ZUL_STAND || '').split('.');
+    if(teileStand.length === 3){
+      const d = new Date(+teileStand[2], +teileStand[1] - 1, +teileStand[0]);
+      const herTage = Math.floor((heute - d) / 86400000);
+      if(herTage > 3){
+        alt = ' \u00b7 <b class="stand-alt">Der n\u00e4chtliche Abgleich ist seit '
+            + herTage + ' Tagen nicht durchgelaufen \u2014 die Liste kann '
+            + 'unvollst\u00e4ndig sein.</b>';
+      }
+    }
     stand.innerHTML = text + ' \u00b7 Stand ' + (ZUL_STAND || '\u2014')
-      + ' \u00b7 t\u00e4glich gepr\u00fcft';
+      + (alt ? alt : ' \u00b7 t\u00e4glich gepr\u00fcft');
   }
 })();
 </script>

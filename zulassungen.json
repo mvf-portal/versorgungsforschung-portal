@@ -1,5 +1,5 @@
 {
- "stand": "22.10.2026",
+ "stand": "23.10.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
@@ -401,27 +401,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-25",
-   "name": "JUVMO",
-   "wirkstoff": "TAVAPADON",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ABBVIE",
-   "kennzeichen": [
-    "NDA",
-    "Label Oct 08, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220415",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1ae6df6e-6ca0-420f-bec9-effa7acdd085",
-   "indikation_en": "JUVMO is indicated for the treatment of Parkinson’s disease (PD) in adults. JUVMO is a non-ergot dopamine agonist indicated for the treatment of Parkinson’s disease in adults. ( 1 ) 2",
-   "hubs": [
-    "longevity"
-   ],
-   "satz": "Die FDA hat Tavapadon (JUVMO) zur Behandlung der Parkinson-Krankheit bei Erwachsenen zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-25",
    "name": "ATEBRIOZ",
    "wirkstoff": "ZILURGISERTIB FUMARATE",
    "gebiet_mesh": "",
@@ -439,6 +418,27 @@
     "ohne-hub"
    ],
    "satz": "Die FDA hat Zilurgisertib-Fumarat (Atebrioz) zur Reduktion neuer heterotoper Ossifikationen bei Fibrodysplasia ossificans progressiva zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-25",
+   "name": "JUVMO",
+   "wirkstoff": "TAVAPADON",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ABBVIE",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 08, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220415",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1ae6df6e-6ca0-420f-bec9-effa7acdd085",
+   "indikation_en": "JUVMO is indicated for the treatment of Parkinson’s disease (PD) in adults. JUVMO is a non-ergot dopamine agonist indicated for the treatment of Parkinson’s disease in adults. ( 1 ) 2",
+   "hubs": [
+    "longevity"
+   ],
+   "satz": "Die FDA hat Tavapadon (JUVMO) zur Behandlung der Parkinson-Krankheit bei Erwachsenen zugelassen."
   },
   {
    "stufe": "diga",
@@ -462,26 +462,6 @@
    "satz": "Pia-App bei Regelschmerzen ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
-   "stufe": "fda-wartet",
-   "datum": "2026-09-23",
-   "name": "LYRFIGTU",
-   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ELEVAR",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220425",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
-  },
-  {
    "stufe": "fda",
    "datum": "2026-09-23",
    "name": "ONSWIK",
@@ -501,6 +481,26 @@
     "diabetes"
    ],
    "satz": "Die FDA hat Insulin Efsitora alfa-gobe (Onswik) zur Verbesserung der Glykämiekontrolle bei Typ-2-Diabetes zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-09-23",
+   "name": "LYRFIGTU",
+   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ELEVAR",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220425",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
   },
   {
    "stufe": "zulassung",
@@ -790,27 +790,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-11",
-   "name": "PIXCLARA",
-   "wirkstoff": "FLORETYROSINE F-18",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "TELIX",
-   "kennzeichen": [
-    "NDA",
-    "Label Oct 09, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA218592",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc78b128-3768-4448-b019-61574db05714",
-   "indikation_en": "PIXCLARA is indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. PIXCLARA is a radioactive diagnostic drug indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. ( 1 ) 2",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": "Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-11",
    "name": "ISEMBYLD",
    "wirkstoff": "APITEGROMAB-MSTN",
    "gebiet_mesh": "",
@@ -828,6 +807,27 @@
     "ohne-hub"
    ],
    "satz": "Die FDA hat Apitegromab-MSTN (ISEMBYLD) zur Behandlung der spinalen Muskelatrophie bei Patienten ab zwei Jahren unter SMN2-gerichteter Therapie zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-11",
+   "name": "PIXCLARA",
+   "wirkstoff": "FLORETYROSINE F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "TELIX",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 09, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA218592",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc78b128-3768-4448-b019-61574db05714",
+   "indikation_en": "PIXCLARA is indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. PIXCLARA is a radioactive diagnostic drug indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen."
   },
   {
    "stufe": "diga",
@@ -1030,26 +1030,6 @@
    "satz": "Die FDA hat Garetosmab-grts (PASATRU) zur Reduktion neuer heterotoper Ossifikationen und klinisch bewerteter Schübe bei Fibrodysplasia ossificans progressiva zugelassen."
   },
   {
-   "stufe": "fda-wartet",
-   "datum": "2026-08-13",
-   "name": "TAUKLARIFY",
-   "wirkstoff": "FLORQUINITAU F-18",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "CERVEAU LANTHEUS",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220496",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
-  },
-  {
    "stufe": "fda",
    "datum": "2026-08-13",
    "name": "ZENBEXUS",
@@ -1069,6 +1049,26 @@
     "onkologie"
    ],
    "satz": "Die FDA hat Iberdomide (ZENBEXUS) in Kombination mit Daratumumab und Dexamethason zur Behandlung des multiplen Myeloms zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-08-13",
+   "name": "TAUKLARIFY",
+   "wirkstoff": "FLORQUINITAU F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "CERVEAU LANTHEUS",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220496",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
   },
   {
    "stufe": "antrag",
