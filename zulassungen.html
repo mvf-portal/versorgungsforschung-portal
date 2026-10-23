@@ -584,23 +584,34 @@
            hinzufuegt und ihn nicht mitaendert, laesst die Seite ueber sich
            selbst etwas Falsches sagen - am 22.10.2026 stand hier noch
            "zweierlei", als es laengst fuenf Stufen waren. -->
-      <p class="standfirst">Welche Arzneimittel neu auf den Markt kommen — und welche
-      als Nächstes kommen. Diese Seite sortiert fünferlei nach den Themengebieten
-      der Knowledge-Hubs. Aus der täglich ausgewerteten Arzneimitteltabelle der
-      <b>Europäischen Arzneimittel-Agentur</b>: <b>erteilte Zulassungen</b> und
-      <b>Empfehlungen des CHMP</b>, die der Zulassung rund zwei Monate vorausgehen.
-      Aus deren monatlicher Antragsliste die <b>Verfahren, die gerade laufen</b> —
-      acht bis vierzehn Monate vor einer möglichen Zulassung, auf einem Zeitstrahl
-      samt den Studien zum Wirkstoff. Dazu die <b>Erstzulassungen der US-Behörde
-      FDA</b>, die der europäischen oft vorausgehen, und die <b>digitalen
-      Gesundheitsanwendungen</b>, die das BfArM neu in sein Verzeichnis aufnimmt
-      oder daraus streicht.
-      Jeder Eintrag trägt einen deutschen Satz dazu, wogegen das Mittel wirken soll.</p>
+      <p class="standfirst">Vom Antrag bis zur Erstattung: Diese Seite
+      begleitet ein Arzneimittel über das ganze Verfahren — und sortiert
+      jeden Schritt nach den Themengebieten der Knowledge-Hubs.</p>
     </div>
   </div>
 </header>
 
 <main class="wrap">
+
+  <!-- Nutzen und Weg NEBENEINANDER (Entwurf D, 23.10.2026). Nicht
+       uebereinander: Gestapelt waere es zwar beides, aber nicht
+       gleichzeitig - wer den Nutzen liest, haette die Strecke noch nicht
+       gesehen. Nebeneinander ist der Kopf sogar kuerzer als die Strecke
+       allein, weil die Saetze den Platz links davon fuellen. -->
+  <div class="paar">
+    <div class="nutzen">
+      <div><b>Monate früher wissen</b><p>Laufende Zulassungsverfahren acht
+        bis vierzehn Monate vor einer möglichen Zulassung — und was die
+        US-Behörde FDA schon zugelassen hat.</p></div>
+      <div><b>Nur Ihr Fachgebiet</b><p>Jeder Eintrag ist einem Themengebiet
+        zugeordnet. Kein anderes offenes Angebot sortiert Zulassungen nach
+        Diabetes, Onkologie oder Psychischer Gesundheit.</p></div>
+      <div><b>Auf Deutsch, mit Beleg</b><p>Ein Satz je Eintrag, der sagt,
+        wogegen das Mittel wirken soll, und ein Link auf die Quelle — bei den
+        Anträgen dazu die Studien zum Wirkstoff.</p></div>
+    </div>
+    <div id="wegFeld"></div>
+  </div>
 
   <p class="stand" id="stand"></p>
 
@@ -621,7 +632,6 @@
        aufgenommen - das sind zwei Verfahren, zwei Rechtsgrundlagen und zwei
        Fragen. In einer Liste gemischt muss der Leser jede Zeile einzeln
        einordnen; nebeneinander beantwortet die Anordnung es vorweg. -->
-  <p class="legende-zeile">Jeder Eintrag nennt die Behörde und den Stand: <b class="stufe-marke stufe-zulassung">EU zugelassen</b> <b class="stufe-marke stufe-gutachten">EU empfohlen</b> <b class="stufe-marke stufe-fda">FDA zugelassen</b> <b class="stufe-marke stufe-diga">Aufgenommen</b> <b class="stufe-marke stufe-weg">Gestrichen</b> — <a href="#erklaerung">was heißt das?</a></p>
 
   <!-- Der Zeitstrahl steht VOR den Saeulen: Was noch nicht da ist,
        beantwortet eine andere Frage als das, was gerade kam - und es ist
@@ -655,6 +665,18 @@
   <details class="erklaerung" id="erklaerung">
     <summary>Was die Marken bedeuten und woher die Angaben stammen</summary>
     <div class="erklaerung-inhalt">
+            <p class="quellen">Welche Arzneimittel neu auf den Markt kommen — und welche
+      als Nächstes kommen. Diese Seite sortiert fünferlei nach den Themengebieten
+      der Knowledge-Hubs. Aus der täglich ausgewerteten Arzneimitteltabelle der
+      <b>Europäischen Arzneimittel-Agentur</b>: <b>erteilte Zulassungen</b> und
+      <b>Empfehlungen des CHMP</b>, die der Zulassung rund zwei Monate vorausgehen.
+      Aus deren monatlicher Antragsliste die <b>Verfahren, die gerade laufen</b> —
+      acht bis vierzehn Monate vor einer möglichen Zulassung, auf einem Zeitstrahl
+      samt den Studien zum Wirkstoff. Dazu die <b>Erstzulassungen der US-Behörde
+      FDA</b>, die der europäischen oft vorausgehen, und die <b>digitalen
+      Gesundheitsanwendungen</b>, die das BfArM neu in sein Verzeichnis aufnimmt
+      oder daraus streicht.
+      Jeder Eintrag trägt einen deutschen Satz dazu, wogegen das Mittel wirken soll.</p>
       <div class="stufen">
     <p><b class="stufe-marke stufe-zulassung">Zugelassen</b> Die Europäische
       Kommission hat die Zulassung erteilt; das Mittel darf in Verkehr gebracht
@@ -1090,6 +1112,25 @@ const ZULASSUNGEN = [
   const gebiete = ZULASSUNGEN.filter(g => g.slug !== 'ohne-hub'
                                        && (g.eintraege || []).length)
     .map(g => ({slug:g.slug, name:g.name}));
+
+  // ---- Die fuenf Datenstroeme ---------------------------------------
+  // In der Reihenfolge des VERFAHRENS, nicht nach Groesse: Wer wissen will,
+  // was kommt, liest von links; wer wissen will, was da ist, von rechts.
+  // Die Reihenfolge ist selbst eine Aussage.
+  const STROEME = [
+    {id:'antrag',    klasse:'s-antrag',    name:'In Prüfung',
+     vs:'8–14 Monate vorher', pass:e => e.stufe === 'antrag'},
+    {id:'gutachten', klasse:'s-gutachten', name:'CHMP empfohlen',
+     vs:'rund 2 Monate vorher',    pass:e => e.stufe === 'gutachten'},
+    {id:'zulassung', klasse:'s-zulassung', name:'EU zugelassen',
+     vs:'auf dem Markt',           pass:e => e.stufe === 'zulassung'},
+    {id:'fda',       klasse:'s-fda',       name:'FDA zugelassen',
+     vs:'USA',  pass:e => String(e.stufe).indexOf('fda') === 0},
+    {id:'diga',      klasse:'s-diga',      name:'DiGA',
+     vs:'auf Rezept', pass:e => String(e.stufe).indexOf('diga') === 0}
+  ];
+  const strom = id => STROEME.find(s => s.id === id);
+  let gewaehlterStrom = 'alle';
   // **Der Hub waehlt sein Gebiet ueber `?gebiet=` vor.** Die Hinweiskarte in
   // den fuenfzehn Hubs verwies bis zum 22.10.2026 auf `#<slug>` - einen
   // Anker, den der Umbau ersatzlos entfernt hat, weil es die Abschnitte je
@@ -1107,9 +1148,74 @@ const ZULASSUNGEN = [
     }
   } catch(e){ /* alte Browser ohne URLSearchParams: dann eben "alle" */ }
 
-  function passt(e){
+  function imGebiet(e){
     return gewaehlt === 'alle'
       || (e.gebiete || []).some(g => g.slug === gewaehlt);
+  }
+  function imStrom(e){
+    return gewaehlterStrom === 'alle' || strom(gewaehlterStrom).pass(e);
+  }
+  function passt(e){ return imGebiet(e) && imStrom(e); }
+
+  // **Jede Achse zaehlt in der jeweils ANDEREN.** Die Strecke zeigt, was es
+  // im gewaehlten Themengebiet gibt; die Gebietsknoepfe zeigen, was es im
+  // gewaehlten Strom gibt. Zaehlte eine Achse sich selbst mit, stuenden nach
+  // dem ersten Klick ueberall Nullen - und man kaeme aus dem Filter nicht
+  // mehr heraus, ohne zu raten, wo noch etwas ist.
+  function wegZeichnen(){
+    const feld = document.getElementById('wegFeld');
+    if(!feld) return;
+    const n = id => alle.filter(e => imGebiet(e) && strom(id).pass(e)).length;
+    const usa = alle.filter(e => imGebiet(e) && e.stufe === 'antrag'
+                               && e.usa).length;
+
+    const station = id => {
+      const s = strom(id);
+      return '<button type="button" class="station ' + s.klasse
+        + '" data-strom="' + id + '" aria-pressed="'
+        + (gewaehlterStrom === id) + '">'
+        + '<span class="zahl">' + n(id) + '</span>'
+        + '<span class="nm">' + s.name + '</span>'
+        + '<span class="vs">' + s.vs + '</span></button>';
+    };
+    const rand = (id, klasse, text) => {
+      const s = strom(id);
+      return '<button type="button" class="weg-rand ' + klasse + ' '
+        + s.klasse + '" data-strom="' + id + '" aria-pressed="'
+        + (gewaehlterStrom === id) + '">'
+        + '<span class="zahl">' + n(id) + '</span>'
+        + '<span class="tx">' + text + '</span></button>';
+    };
+
+    feld.innerHTML = '<div class="weg">'
+      + rand('fda', 'weg-oben',
+          '<b>In den USA bereits zugelassen.</b> Die FDA entscheidet oft '
+          + 'früher' + (usa ? '; <b>' + usa + '</b> davon stehen in der EU '
+            + 'noch im Verfahren' : '') + '.')
+      + '<div class="weg-zeile">' + station('antrag')
+        + '<div class="pfeil" aria-hidden="true">→</div>'
+        + station('gutachten')
+        + '<div class="pfeil" aria-hidden="true">→</div>'
+        + station('zulassung') + '</div>'
+      + '<div class="weg-achse"><span>Antrag bei der EMA</span>'
+        + '<span>Beschluss der Kommission</span></div>'
+      + rand('diga', 'weg-unten',
+          '<b>Digitale Gesundheitsanwendungen.</b> Kein Arzneimittel, '
+          + 'sondern ein Medizinprodukt im Verzeichnis nach § 139e SGB V '
+          + '— eigenes Verfahren.')
+      + (gewaehlterStrom !== 'alle'
+         ? '<div class="weg-zurueck"><button type="button" data-strom="alle">'
+           + 'alle fünf wieder anzeigen</button></div>' : '')
+      + '</div>';
+
+    feld.querySelectorAll('[data-strom]').forEach(b => b.onclick = () => {
+      // Ein zweiter Klick auf denselben Strom hebt die Wahl auf. Ohne das
+      // muesste der Leser den Rueckweg suchen, den es nur gibt, solange
+      // etwas gewaehlt ist.
+      gewaehlterStrom = (b.dataset.strom === gewaehlterStrom)
+        ? 'alle' : b.dataset.strom;
+      zeichnen();
+    });
   }
 
   // ---- Zeitstrahl der laufenden Antraege ------------------------------
@@ -1247,7 +1353,25 @@ const ZULASSUNGEN = [
   }
 
   function zeichnen(){
+    wegZeichnen();
     const sichtbar = alle.filter(passt);
+    // **Ein Abschnitt, der nichts mehr zeigen kann, verschwindet.** Waehlt
+    // jemand "In Prüfung", stuenden darunter zwei leere Saeulen mit der
+    // Meldung "nichts zu melden" - und das waere falsch: Es ist nichts
+    // AUSGEWAEHLT, nicht nichts da. Umgekehrt beim Zeitstrahl.
+    const saeulen = document.querySelector('.saeulen');
+    if(saeulen){
+      saeulen.hidden = (gewaehlterStrom === 'antrag');
+      // Dasselbe eine Ebene tiefer: Wer "DiGA" waehlt, soll neben den fuenf
+      // DiGA nicht die Meldung "kein Arzneimittel zu melden" lesen. Es ist
+      // nichts AUSGEWAEHLT, nicht nichts da - und ein leerer Abschnitt, der
+      // das nicht unterscheidet, sagt etwas Falsches ueber den Bestand.
+      arznei.hidden = (gewaehlterStrom === 'diga');
+      diga.hidden = ['gutachten', 'zulassung', 'fda'].indexOf(gewaehlterStrom) >= 0;
+      // Allein stehend darf die uebrige Saeule die ganze Breite haben.
+      saeulen.style.gridTemplateColumns =
+        (arznei.hidden || diga.hidden) ? '1fr' : '';
+    }
     // **Ein Antrag steht NUR im Zeitstrahl, nicht in den Saeulen.** Die
     // Saeulen zeigen, was geschehen ist; der Strahl, was bevorsteht. Beides
     // zu mischen hiesse, eine Zulassung und einen Antrag in dieselbe Liste
@@ -1270,6 +1394,8 @@ const ZULASSUNGEN = [
 
     if(chips){
       chips.innerHTML = '';
+      // Gezaehlt wird im gewaehlten Strom - siehe wegZeichnen().
+      const imStromZahl = p => alle.filter(e => imStrom(e) && p(e)).length;
       const machen = (slug, name, zahl) => {
         const b = document.createElement('button');
         b.type = 'button';
@@ -1278,9 +1404,9 @@ const ZULASSUNGEN = [
         b.onclick = () => { gewaehlt = slug; zeichnen(); };
         chips.appendChild(b);
       };
-      machen('alle', 'Alle Gebiete', alle.length);
+      machen('alle', 'Alle Gebiete', imStromZahl(() => true));
       gebiete.forEach(g => machen(g.slug, g.name,
-        alle.filter(e => (e.gebiete || []).some(x => x.slug === g.slug)).length));
+        imStromZahl(e => (e.gebiete || []).some(x => x.slug === g.slug))));
     }
   }
   zeichnen();
@@ -1432,10 +1558,6 @@ const ZULASSUNGEN = [
   /* Eine Zeile statt dreier Kaesten. Sie nennt alle fuenf Marken
      nebeneinander - das ist der Vergleich, den die Legende in drei
      Absaetzen nicht leisten konnte - und verweist fuer das Warum nach unten. */
-  .legende-zeile{ margin:0 0 20px; font-size:13.5px; line-height:2.1;
-    color:var(--ink-soft); }
-  .legende-zeile .stufe-marke{ margin:0 2px; }
-  .legende-zeile a{ color:var(--brand); }
 
   .erklaerung{ margin:34px 0 0; border:1px solid var(--line-soft);
     border-radius:6px; background:var(--card); }
@@ -1534,6 +1656,80 @@ const ZULASSUNGEN = [
        der Studien liegen dann aufeinander. Sie bleiben als Zeitmarke
        sichtbar, gelesen wird die Liste darunter. */
     .bahn-studie{ width:5px; height:5px; }
+  }
+
+  /* --- Nutzen und Weg nebeneinander (Entwurf D, 23.10.2026) --- */
+  .paar{ display:grid; grid-template-columns:minmax(220px,29%) 1fr; gap:22px;
+    align-items:start; margin:0 0 20px; }
+  .nutzen{ display:grid; gap:15px; }
+  .nutzen > div{ border-left:3px solid var(--brand); padding:2px 0 2px 13px; }
+  .nutzen b{ display:block; font-size:15px; margin:0 0 3px;
+    color:var(--brand-deep); }
+  .nutzen p{ margin:0; font-size:13px; line-height:1.5; color:var(--ink-soft); }
+
+  .weg{ background:var(--card); border:1px solid var(--line-soft);
+    border-radius:8px; padding:18px 20px; }
+  .weg-zeile{ display:flex; align-items:stretch; margin:0 0 5px; }
+  .station{ flex:1; text-align:center; padding:11px 7px; border-radius:6px;
+    background:var(--tt); border:1px solid var(--line-soft); cursor:pointer;
+    font:inherit; color:inherit; }
+  .station:hover{ border-color:var(--tf); }
+  .station[aria-pressed="true"]{ border-color:var(--tf); outline:2px solid var(--tf);
+    outline-offset:-1px; }
+  .station .zahl{ display:block; font-size:25px; font-weight:700;
+    color:var(--tf); font-variant-numeric:tabular-nums; line-height:1.1; }
+  .station .nm{ display:block; font-size:12.5px; font-weight:700; margin-top:2px; }
+  .station .vs{ display:block; font-size:11px; color:var(--ink-soft);
+    margin-top:3px; }
+  .pfeil{ display:flex; align-items:center; padding:0 6px; color:var(--line);
+    font-size:19px; }
+  .weg-rand{ display:flex; align-items:center; gap:10px; cursor:pointer;
+    font:inherit; color:inherit; text-align:left; width:100%;
+    padding:9px 11px; border-radius:6px; border:1px solid var(--line-soft);
+    background:var(--tt); }
+  .weg-rand:hover{ border-color:var(--tf); }
+  .weg-rand[aria-pressed="true"]{ border-color:var(--tf);
+    outline:2px solid var(--tf); outline-offset:-1px; }
+  .weg-rand .zahl{ font-size:21px; font-weight:700; color:var(--tf);
+    font-variant-numeric:tabular-nums; }
+  .weg-rand .tx{ font-size:12.5px; color:var(--ink-soft); line-height:1.45; }
+  .weg-rand .tx b{ color:var(--ink); }
+  .weg-oben{ margin:0 0 11px; }
+  .weg-unten{ margin:11px 0 0; }
+  .weg-achse{ display:flex; justify-content:space-between; font-size:11.5px;
+    color:var(--ink-faint); margin:0 2px; }
+  .weg-zurueck{ display:block; margin:11px 0 0; font-size:12.5px;
+    text-align:center; }
+  .weg-zurueck button{ appearance:none; border:0; background:transparent;
+    cursor:pointer; font:inherit; font-size:12.5px; color:var(--brand);
+    text-decoration:underline; padding:0; }
+
+  /* Die fuenf Stromfarben an einer Stelle - dieselben wie die Stufenmarken. */
+  .s-antrag{ --tf:#5B4B8A; --tt:#EDE9F6; }
+  .s-gutachten{ --tf:#8A5608; --tt:#F5EBD9; }
+  .s-zulassung{ --tf:var(--brand); --tt:var(--brand-tint); }
+  .s-fda{ --tf:#4B3E80; --tt:#E8E4F2; }
+  .s-diga{ --tf:#0E5A5E; --tt:#DCEDEC; }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .s-antrag{ --tf:#B3A6E0; --tt:#262040; }
+    :root:not([data-theme="light"]) .s-gutachten{ --tf:#D9A551; --tt:#332612; }
+    :root:not([data-theme="light"]) .s-fda{ --tf:#B3A6E0; --tt:#262040; }
+    :root:not([data-theme="light"]) .s-diga{ --tf:#63BFC0; --tt:#15302F; }
+  }
+  :root[data-theme="dark"] .s-antrag{ --tf:#B3A6E0; --tt:#262040; }
+  :root[data-theme="dark"] .s-gutachten{ --tf:#D9A551; --tt:#332612; }
+  :root[data-theme="dark"] .s-fda{ --tf:#B3A6E0; --tt:#262040; }
+  :root[data-theme="dark"] .s-diga{ --tf:#63BFC0; --tt:#15302F; }
+
+  @media (max-width:900px){
+    .paar{ grid-template-columns:1fr; gap:18px; }
+  }
+  @media (max-width:620px){
+    /* Drei Stationen nebeneinander sind auf dem Telefon je 100 Pixel breit -
+       die Beschriftung bricht dann dreizeilig um. Untereinander. */
+    .weg-zeile{ flex-direction:column; gap:7px; }
+    .pfeil{ transform:rotate(90deg); padding:2px 0; justify-content:center; }
+    .weg-achse{ display:none; }
   }
 
   .filter{ margin:0 0 26px; }
