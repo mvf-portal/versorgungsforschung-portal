@@ -27,7 +27,10 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 from pipeline_quelle import liste_holen, spalte  # noqa: E402
 
-HUBS = pathlib.Path(r"C:\Users\Stegmaier\Documents\Claude-Daten")
+# Sieht absichtlich AUS dem Repo heraus: Geprueft werden die
+# studien-archiv.json aller fuenfzehn Portale, und die liegen als
+# Schwesterordner daneben. Abgeleitet aus dem eigenen Ort.
+HUBS = pathlib.Path(__file__).resolve().parents[3]
 heute = dt.date.today()
 
 # ---------------------------------------------------- die Archive einsammeln

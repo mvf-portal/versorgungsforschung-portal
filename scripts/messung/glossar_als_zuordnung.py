@@ -19,7 +19,11 @@ import re
 import sys
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-WURZEL = pathlib.Path(r"C:\Users\Stegmaier\Documents\Claude-Daten")
+# **Dieses Skript sieht absichtlich AUS dem Repo heraus**: Es vergleicht die
+# Glossare aller fuenfzehn Portale, und die liegen als Schwesterordner
+# daneben. Abgeleitet aus dem eigenen Ort, nicht fest eingetragen - sonst
+# laeuft es nur auf einem Rechner.
+WURZEL = pathlib.Path(__file__).resolve().parents[3]
 
 BLOCK = re.compile(r"// === GLOSSAR-BLOCK-START.*?\nconst GLOSSAR = (\[.*?\]);", re.S)
 
