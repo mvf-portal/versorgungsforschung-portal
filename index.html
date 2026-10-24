@@ -465,6 +465,37 @@
     line-height:1.35; letter-spacing:-.005em; display:inline-block;
   }
   .mt-titel:hover{ color:var(--brand); text-decoration:underline; }
+  /* ---------- Stufe 3a (Entwurf Mariann Stegmaier): eine Spalte, Band ---------- */
+  .lede-zeile{ flex-direction:column; gap:18px; align-items:stretch; }
+  .erstmal{ display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; margin-top:16px; padding:11px 14px;
+    background:var(--brand-tint); border-radius:8px; font-size:14px; }
+  .erstmal[hidden]{ display:none; }
+  .erstmal.oben{ margin:0 0 16px; }
+  .erstmal-frage{ font-weight:700; color:var(--ink); }
+  .erstmal a{ color:var(--brand); font-weight:700; text-decoration:none; }
+  .erstmal a:hover{ text-decoration:underline; }
+  .erstmal-zu{ margin-left:auto; background:none; border:0; font-size:20px; line-height:1; cursor:pointer;
+    color:var(--ink-faint); padding:2px 6px; border-radius:4px; }
+  .erstmal-zu:hover{ color:var(--brand); background:var(--card); }
+  .hints-sponsor p{ margin:10px 0 0; font-size:12px; line-height:1.5; color:var(--ink-faint); }
+  .band{ background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 18px 16px; }
+  .band-kopf{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .band-kopf h2{ margin:0; font-size:17px; display:flex; align-items:center; gap:8px; }
+  .band-nl{ margin-left:auto; background:var(--action); color:var(--on-action); font-weight:700; font-size:13.5px;
+    text-decoration:none; padding:7px 14px; border-radius:6px; }
+  .band-nl:hover{ filter:brightness(1.08); }
+  .band-zu{ background:none; border:1px solid var(--line); border-radius:6px; font:inherit; font-size:12.5px;
+    color:var(--ink-soft); padding:6px 10px; cursor:pointer; }
+  .band-zu:hover{ border-color:var(--brand); color:var(--brand); }
+  .band[data-zu] .band-inhalt{ display:none; }
+  .band-inhalt{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; margin-top:12px; }
+  .band .band-karte{ margin:0; padding:12px 14px; border:1px solid var(--line-soft); border-radius:8px; background:var(--card-2); }
+  .band .band-karte[hidden]{ display:none; }
+  .band .magazin-list li:nth-child(n+4){ display:none; }
+  .band-studien-titel::before{ content:"\1F4C4" !important; }
+  .band-radar-titel::before{ content:"\1F4E2" !important; }
+  .band-radar .radar-hinweis, .band-radar .zulassung-hinweis{ margin:6px 0 0; }
+  .band .ki-pille.ki-klein{ margin:2px 0 4px; }
   /* KI-Kennzeichen, lila wie auf „Über die Knowledge-Hubs" (Entwurf Mariann Stegmaier). */
   .ki-pille{ display:inline-block; font-size:11px; font-weight:700; padding:2px 9px; border-radius:20px;
     background:#EEE8F7; color:#4B2E83; border:1px solid #D5C8EC; white-space:nowrap; }
@@ -1515,7 +1546,7 @@
       <h1 class="serif">Versorgungsforschung
         <span class="sub">Ein Zugang zu allen wichtigen Datenbanken</span>
       </h1>
-      <p class="lede" id="kopfLede">Ein Suchbegriff, alle Datenbanken. Geben Sie bitte unten einen Begriff ein — jede Datenbankkarte öffnet damit direkt die passende Live-Suche in einem neuen Tab. Deutschsprachige und internationale Fachdatenbanken, Evidenzsynthesen, Open-Access-Discovery, Studienregister, Institutionen und Wege zum Volltext an einem Ort. Jeden Tag werden die Suchergebnisse automatisch aktualisiert. Kuratiert von einer KI für die tägliche Recherchearbeit. Ein Service von Monitor Versorgungsforschung.</p>
+      <p class="lede" id="kopfLede">Forschung, Daten und Regeln zur Versorgung in Deutschland. Ein Suchbegriff öffnet die Suche in allen Datenbanken, jeden Morgen kommen neue Studien mit deutscher Zusammenfassung dazu.</p>
       <button class="lede-mehr" id="ledeMehr" type="button" aria-controls="kopfLede" aria-expanded="false" hidden>Weiterlesen</button>
       <!-- Hinweis eines einzelnen Hubs, der nicht weggeklappt werden darf - im Hub
            Psychische Gesundheit die Hilfe in Krisen (Entscheidung des Herausgebers,
@@ -1528,6 +1559,17 @@
       <div class="lede-links">
 
         <div class="panel" id="suche">
+          <!-- Bis Oktober 2026 standen hier acht Erklaerbloecke mit rund 700 Woertern
+               (Suche, Operatoren, Portale, Lizenzen, Glossar). Seit Stufe 2 steht
+               all das auf „Über die Knowledge-Hubs" und „Themen & Quellen"; hier
+               bleibt nur der Weg dorthin (Entwurf Mariann Stegmaier, Hub-Seiten S. 2).
+               Wegklicken speichert nichts - beim naechsten Besuch ist er wieder da. -->
+          <div class="erstmal oben" id="erstmal">
+            <span class="erstmal-frage">Zum ersten Mal hier?</span>
+            <a href="https://knowledge-hubs.m-vf.de/ueber-die-hubs.html#suche">So funktioniert die Suche →</a>
+            <a href="themen-quellen.html">Themen &amp; Quellen dieses Hubs →</a>
+            <button type="button" class="erstmal-zu" aria-label="Hinweis schließen" title="Hinweis schließen">&times;</button>
+          </div>
           <label class="panel-label" for="q">Suchbegriff</label>
           <div class="search-row">
             <div class="search-field">
@@ -1654,17 +1696,7 @@
               </div>
             </div>
           </details>
-          <div class="hints">
-            <p><b>So funktioniert die Suche.</b> Begriff eingeben, <b>Eingabetaste</b> drücken oder auf <b>„In allen Datenbanken suchen"</b> klicken — damit werden alle Kacheln auf Ihren Begriff eingestellt. Ein Klick auf eine Kachel öffnet dann <b>direkt die Trefferliste</b> dieser Datenbank in einem neuen Tab; ein zweites Mal suchen müssen Sie dort nicht. Die Kacheln bleiben eingestellt, Sie können also nacheinander mehrere Datenbanken öffnen, ohne den Begriff erneut einzugeben. Ausnahme sind die als <b>„Portal"</b> gekennzeichneten Anbieter — die erlauben technisch keine verlinkbare Trefferadresse.</p>
-            <p><b>Treffer direkt auf dieser Seite.</b> Der Knopf <b>&bdquo;Treffer direkt anzeigen&ldquo;</b> fragt die Datenbanken unmittelbar ab, die einen direkten Zugriff auf ihre Inhalte erlauben (derzeit <b id="cntMeta"></b>), und zeigt die Fundstellen zusammengef&uuml;hrt hier auf der Seite &mdash; jede mit Angabe der Datenbank, aus der sie stammt. Dubletten werden &uuml;ber die DOI zusammengelegt; erscheint eine Arbeit in mehreren Datenbanken, steht sie einmal in der Liste und tr&auml;gt mehrere Herkunftszeichen. Die Trefferliste zeigt <b>25 Treffer je Blatt</b>. Neben Zeitschriftenaufs&auml;tzen sind angemeldete Studien, Preprints und Repositorien darunter; der Filter <b>Art</b> trennt sie. Wo es eine legale frei zug&auml;ngliche Fassung gibt, steht ein Verweis <b>Volltext</b>. Die Liste l&auml;sst sich als Word, Excel, RIS oder BibTeX herunterladen und damit in Zotero, EndNote oder Citavi weiterverarbeiten. Die &uuml;brigen halten ihre Inhalte f&uuml;r eine solche Abfrage verschlossen; sie bleiben &uuml;ber die Kacheln zu &ouml;ffnen. Dabei erf&auml;hrt der jeweilige Anbieter Ihren Suchbegriff &mdash; N&auml;heres in den <a href="#datenschutz">Datenschutzhinweisen</a>.</p>
-            <p><b>Vollständigkeit.</b> Auch dieses Portal kann nicht sämtliche Artikel „aller Datenbanken" enthalten — das verhindern Lizenz- und Technikgrenzen. Es bündelt stattdessen die maßgeblichen Suchen, sodass eine Recherche systematisch über alle relevanten Datenbanken laufen kann.</p>
-            <!-- === THEMA-HINWEIS-START (themenspezifisch; aus dem Themenprofil) === -->
-    
-            <!-- === THEMA-HINWEIS-ENDE === -->
-            <p><b>Portal vs. Live-Suche.</b> Von den derzeit <b id="cntGesamt"></b> eingebundenen Datenbanken unterstützen <b id="cntLive"></b> die Live-Suche; sie sind entsprechend gekennzeichnet. Weitere <b id="cntPortal"></b> sind als „Portal" markiert: Angebote wie LIVIVO, das DRKS oder die WHO-Plattform ICTRP erlauben technisch keine verlinkbaren Ergebnisadressen. Der Klick führt dort auf die Startseite — der Suchbegriff ist anschließend von Hand einzugeben.</p>
-            <p><b>Suchoperatoren.</b> <b>AND</b>, <b>OR</b> und <b>NOT</b> funktionieren nicht überall gleich — wir haben es einzeln nachgemessen. <span class="boolmark ja">AND/OR ✓</span> heißt: geprüft, die Operatoren wirken (<b id="cntBoolJa"></b> Datenbanken). <span class="boolmark nein">AND/OR ✗</span> heißt: geprüft, sie wirken nicht — die Wörter werden einfach mitgesucht (<b id="cntBoolNein"></b>). <b>Ohne Zeichen ist es ungeprüft</b> (<b id="cntBoolOffen"></b>): Diese Anbieter liefern eine Bot-Sperre oder eine reine JavaScript-Oberfläche, aus der sich kein belastbares Ergebnis ablesen ließ — das heißt ausdrücklich <i>nicht</i>, dass sie es nicht können. Der Filter „Operatoren" zeigt auf Wunsch nur die geprüft tauglichen.</p>
-            <p><b>Deutsch suchen, international finden.</b> Internationale Datenbanken kennen keine deutschen Fachbegriffe — „Primärversorgung" liefert dort fast nichts. Der Hub übersetzt deshalb <b id="cntGlossar"></b> Fachbegriffe automatisch: Deutschsprachige Datenbanken behalten Ihren Begriff, internationale bekommen den Ausdruck, unter dem sie tatsächlich indexieren („Nutzenbewertung" wird zu <i>health technology assessment</i>, nicht zu <i>benefit assessment</i>). Die Ergebnisleiste zeigt die verwendete Fassung; der Schalter unter dem Suchfeld stellt es ab.</p>
-            <p><b>Hinweis zu Lizenzen.</b> Mit <span class="badge lic">Lizenz</span> markierte Datenbanken (z. B. Web of Science, Scopus, Embase, CINAHL) sind kostenpflichtig — der Zugang läuft meist über Ihre Bibliothek/Institution. Der Link führt zur Startseite bzw. zum institutionellen Login.</p>
+          <div class="hints-sponsor">
             <p id="sponsorText" hidden><b>Sponsoren.</b> Unsere Sponsoren ermöglichen mit ihrer finanziellen Unterstützung den Betrieb und das Hosting dieses Services. Sie nehmen dabei keinerlei Einfluss auf Auswahl der Datenbanken, der Ergebnisse oder den dargestellten Inhalt.</p>
             <p id="koopText" hidden><b>Medienpartnerschaft.</b> Dieser Hub wird in einer Medienkooperation präsentiert. Der Medienpartner ermöglicht mit seiner finanziellen Unterstützung den Betrieb und das Hosting dieses Services. Er nimmt dabei keinerlei Einfluss auf Auswahl der Datenbanken, der Ergebnisse oder den dargestellten Inhalt.</p>
           </div>
@@ -1693,11 +1725,26 @@
           Der Medienpartner nimmt darauf keinen Einfluss.</p>
         </div>
       </div>
-      <aside class="lede-nl">
-        <a class="btn-nl" href="newsletter.html">Newsletter abonnieren</a>
-        <span class="nl-mini">Die Studienauswahl jeden Morgen per E-Mail — kostenfrei und jederzeit kündbar.</span>
-        <a class="btn-ueber" href="ueber.html">Themen &amp; Quellen</a>
-        <a class="btn-ueber" href="https://wissen.m-vf.de/ausschreibungen.html#versorgungsforschung" target="_blank" rel="noopener">Ausschreibungsradar <span aria-hidden="true">↗</span></a>
+      <!-- Band „Aktuell im Hub" (Entwurf Mariann Stegmaier, Hub-Seiten S. 3).
+           Bis Oktober 2026 eine schmale Spalte rechts neben der Suche - auf dem
+           Handy rutschte sie hinter die Suche, und Seitenspalten werden als
+           Werbung ueberlesen. Jetzt ein Band unter der Suche, jede Rubrik eine
+           Karte mit hoechstens drei Eintraegen. „Ausblenden" speichert nichts. -->
+      <aside class="band" id="band" aria-labelledby="bandTitel">
+        <div class="band-kopf">
+          <h2 id="bandTitel"><span class="dot"></span>Aktuell im Hub</h2>
+          <a class="band-nl" href="newsletter.html">Newsletter abonnieren</a>
+          <button class="band-zu" id="bandZu" type="button" aria-expanded="true" aria-controls="bandInhalt">Ausblenden</button>
+        </div>
+        <div class="band-inhalt" id="bandInhalt">
+        <section class="band-karte" id="bandStudien" hidden>
+          <div class="magazin-title band-studien-titel">Neue Studien aus PubMed</div>
+          <span class="ki-pille ki-klein">Von KI ausgewählt und zusammengefasst</span>
+          <ul class="magazin-list" id="bandStudienListe"></ul>
+          <a class="magazin-mehr" href="#studien">Alle neuen Studien ↓</a>
+        </section>
+        <section class="band-karte band-radar">
+          <div class="magazin-title band-radar-titel">Ausschreibungen &amp; Zulassungen</div>
         <!-- Hinweis auf den Ausschreibungsradar. Angeregt von einem Nutzer
              der Hubs: Wer zu einem Thema forscht, sucht nicht nur Studien,
              sondern auch Geld. Gesucht wird zentral im Versorgungsforschungs-
@@ -1715,6 +1762,8 @@
              dauerhaft leer. Das ist kein Ausfall, sondern der Zuschnitt:
              Auf diese Themen zeigt keine Arzneimittelzulassung. -->
         <div class="zulassung-hinweis" id="zulassungHinweis" hidden></div>
+          <a class="magazin-mehr" href="https://wissen.m-vf.de/ausschreibungen.html#versorgungsforschung" target="_blank" rel="noopener">Zum Ausschreibungsradar ↗</a>
+        </section>
 
         <!-- Ausgesuchte News. Angeregt vom selben Nutzer wie der
              Ausschreibungsradar: Wer sich fuer ein Thema interessiert, will
@@ -1727,7 +1776,7 @@
              Scrollbereich (826 px hoch, 4.239 px Inhalt), und hinter
              Studienliste und Archivordner faende den Kasten niemand.
              Gefuellt von scripts/newsfeed.py, verborgen bis dahin. -->
-        <section class="magazin" id="magazin" hidden>
+        <section class="magazin band-karte" id="magazin" hidden>
           <div class="magazin-title">Ausgesuchte News zu diesem Themenfeld</div>
           <p class="magazin-sub">Beiträge aus dem Portal von „Monitor
             Versorgungsforschung“ (<a href="https://www.monitor-versorgungsforschung.de/?utm_source=knowledge-hub&amp;utm_medium=referral&amp;utm_campaign=magazin" target="_blank" rel="noopener">www.m-vf.de</a>)</p>
@@ -1741,7 +1790,7 @@
              Hochschulen und Instituten) und presseportal.de, letzteres nur
              als Auffuellung und nur bei Treffer im Titel.
              Gefuellt von scripts/newsfeed.py, verborgen bis dahin. -->
-        <section class="magazin presse" id="presse" hidden>
+        <section class="magazin presse band-karte" id="presse" hidden>
           <div class="magazin-title">Weitere Pressemeldungen zum Thema</div>
           <p class="magazin-sub">Pressemitteilungen Dritter, aus
             <a href="https://idw-online.de/" target="_blank" rel="noopener">idw</a>
@@ -1756,12 +1805,13 @@
              Leserschaft betrifft. Im Versorgungsforschungs-Hub ungefiltert,
              sonst nach dem Thema des Hubs ausgewaehlt.
              Gefuellt von scripts/newsfeed.py, verborgen bis dahin. -->
-        <section class="magazin presse" id="selbst" hidden>
+        <section class="magazin presse band-karte" id="selbst" hidden>
           <div class="magazin-title">Aus der Selbstverwaltung</div>
           <p class="magazin-sub">Beschlüsse und Meldungen des
             <a href="https://www.g-ba.de/" target="_blank" rel="noopener">Gemeinsamen Bundesausschusses</a></p>
           <ul class="magazin-list" id="selbstList"></ul>
         </section>
+        </div>
       </aside>
     </div>
 
@@ -2235,14 +2285,18 @@ CATS.forEach(cat=>{
 document.getElementById('dbCount').textContent = DB.length;
 // Die Zahlen im Hinweis 'Portal vs. Live-Suche' aus DB zaehlen, nicht fest
 // eintragen - sonst veralten sie beim naechsten neuen Eintrag unbemerkt.
-document.getElementById('cntGesamt').textContent = DB.length;
-document.getElementById('cntLive').textContent   = DB.filter(x=>x.t==='live').length;
-document.getElementById('cntPortal').textContent = DB.filter(x=>x.t==='portal').length;
+// Seit Oktober 2026 stehen die Erklaertexte nicht mehr auf der Seite. setzeZahl
+// greift deshalb nur zu, wo es die Stelle gibt - ein harter Zugriff auf ein
+// fehlendes Element haelt das ganze Skript an, und die Seite bliebe leer.
+function setzeZahl(id, wert){ const el = document.getElementById(id); if(el) el.textContent = wert; }
+setzeZahl('cntGesamt', DB.length);
+setzeZahl('cntLive', DB.filter(x=>x.t==='live').length);
+setzeZahl('cntPortal', DB.filter(x=>x.t==='portal').length);
 // Boolesch-Zahlen aus denselben Daten wie die Kennzeichen - nie getrennt pflegen.
 const _live = DB.filter(x=>x.t==='live');
-document.getElementById('cntBoolJa').textContent    = _live.filter(x=>x.b===1).length;
-document.getElementById('cntBoolNein').textContent  = _live.filter(x=>x.b===0).length;
-document.getElementById('cntBoolOffen').textContent = _live.filter(x=>x.b===undefined).length;
+setzeZahl('cntBoolJa', _live.filter(x=>x.b===1).length);
+setzeZahl('cntBoolNein', _live.filter(x=>x.b===0).length);
+setzeZahl('cntBoolOffen', _live.filter(x=>x.b===undefined).length);
 
 // ---- Studien-Frame rendern ----
 document.getElementById('snapDate').textContent = SNAP_DATE;
@@ -2281,6 +2335,28 @@ document.getElementById('snapDate').textContent = SNAP_DATE;
       + 'neuen passenden Studien geliefert. Die Liste ist deshalb unverändert.';
     el.hidden = false;
   }
+})();
+// ---- Band „Aktuell im Hub": die drei neuesten Studien ----
+// Der Titel fuehrt zur Studie in der Spalte weiter unten (#studie-<PMID>), nicht
+// zu PubMed - dort steht die deutsche Zusammenfassung.
+(function(){
+  const liste = document.getElementById('bandStudienListe');
+  if(!liste || !STUDIES.length) return;
+  liste.innerHTML = STUDIES.slice(0, 3).map(s =>
+    '<li><a href="#studie-' + s.pmid + '">' + s.title + '</a>'
+    + '<span class="magazin-datum">' + s.journal + ' · ' + (s.pubdate || s.year) + '</span></li>').join('');
+  document.getElementById('bandStudien').hidden = false;
+})();
+(function(){
+  const band = document.getElementById('band'), knopf = document.getElementById('bandZu');
+  if(band && knopf) knopf.addEventListener('click', function(){
+    const zu = !band.hasAttribute('data-zu');
+    band.toggleAttribute('data-zu', zu);
+    knopf.setAttribute('aria-expanded', zu ? 'false' : 'true');
+    knopf.textContent = zu ? 'Einblenden' : 'Ausblenden';
+  });
+  const erst = document.getElementById('erstmal');
+  if(erst) erst.querySelector('.erstmal-zu').addEventListener('click', function(){ erst.hidden = true; });
 })();
 const studiesList = document.getElementById('studiesList');
 STUDIES.forEach(s=>{
@@ -2933,7 +3009,7 @@ shubLeeren.addEventListener('click', ()=>{ shubFeld.value = ''; shubSuchen(); sh
 const GLOSSAR = [{"de":"Primärversorgung","en":"primary care"},{"de":"Grundversorgung","en":"primary care"},{"de":"hausarztzentrierte Versorgung","en":"general practice centred care"},{"de":"integrierte Versorgung","en":"integrated care"},{"de":"sektorenübergreifende Versorgung","en":"cross-sectoral care"},{"de":"ambulante Versorgung","en":"ambulatory care"},{"de":"stationäre Versorgung","en":"inpatient care"},{"de":"Notfallversorgung","en":"emergency care"},{"de":"Akutversorgung","en":"acute care"},{"de":"Palliativversorgung","en":"palliative care"},{"de":"Hospizversorgung","en":"hospice care"},{"de":"Rehabilitation","en":"rehabilitation"},{"de":"Nachsorge","en":"aftercare"},{"de":"Langzeitpflege","en":"long-term care"},{"de":"häusliche Pflege","en":"home care"},{"de":"Regelversorgung","en":"usual care"},{"de":"Versorgungskette","en":"care pathway"},{"de":"Behandlungspfad","en":"clinical pathway"},{"de":"Überleitung","en":"transitional care"},{"de":"Entlassmanagement","en":"discharge management"},{"de":"Patientenlotse","en":"patient navigator"},{"de":"Fallmanagement","en":"case management"},{"de":"Versorgungsmanagement","en":"care management"},{"de":"Hausarzt","en":"general practitioner"},{"de":"Allgemeinmedizin","en":"general practice"},{"de":"Facharzt","en":"medical specialist"},{"de":"Arztpraxis","en":"medical practice"},{"de":"Medizinisches Versorgungszentrum","en":"outpatient care centre"},{"de":"Krankenhaus","en":"hospital"},{"de":"Universitätsklinikum","en":"university hospital"},{"de":"Pflegeheim","en":"nursing home"},{"de":"Pflegekraft","en":"nurse"},{"de":"Pflegepersonal","en":"nursing staff"},{"de":"Apotheke","en":"pharmacy"},{"de":"Hebamme","en":"midwife"},{"de":"Physiotherapie","en":"physiotherapy"},{"de":"Rettungsdienst","en":"emergency medical services"},{"de":"Krankenkasse","en":"health insurance fund"},{"de":"gesetzliche Krankenversicherung","en":"statutory health insurance"},{"de":"private Krankenversicherung","en":"private health insurance"},{"de":"Angehörige","en":"family caregivers"},{"de":"Selbsthilfegruppe","en":"self-help group"},{"de":"Gesundheitssystem","en":"health system"},{"de":"Gesundheitspolitik","en":"health policy"},{"de":"Gesundheitsökonomie","en":"health economics"},{"de":"Nutzenbewertung","en":"health technology assessment"},{"de":"frühe Nutzenbewertung","en":"early benefit assessment"},{"de":"Erstattung","en":"reimbursement"},{"de":"Vergütung","en":"provider payment"},{"de":"Fallpauschale","en":"diagnosis related group"},{"de":"Zuzahlung","en":"co-payment"},{"de":"Selektivvertrag","en":"selective contracting"},{"de":"Disease-Management-Programm","en":"disease management program"},{"de":"Innovationsfonds","en":"health care innovation fund"},{"de":"Bedarfsplanung","en":"health workforce planning"},{"de":"Mindestmenge","en":"minimum volume standard"},{"de":"Qualitätssicherung","en":"quality assurance"},{"de":"Zertifizierung","en":"accreditation"},{"de":"Leitlinie","en":"clinical practice guideline"},{"de":"Priorisierung","en":"priority setting"},{"de":"Rationierung","en":"rationing"},{"de":"Fachkräftemangel","en":"health workforce shortage"},{"de":"Versorgungsqualität","en":"quality of care"},{"de":"Patientensicherheit","en":"patient safety"},{"de":"Behandlungsfehler","en":"medical error"},{"de":"unerwünschtes Ereignis","en":"adverse event"},{"de":"Überversorgung","en":"overuse of health care"},{"de":"Unterversorgung","en":"underuse of health care"},{"de":"Fehlversorgung","en":"inappropriate care"},{"de":"Lebensqualität","en":"quality of life"},{"de":"Patientenzufriedenheit","en":"patient satisfaction"},{"de":"Krankenhausverweildauer","en":"length of stay"},{"de":"Wiederaufnahme","en":"hospital readmission"},{"de":"Sterblichkeit","en":"mortality"},{"de":"Krankheitslast","en":"burden of disease"},{"de":"Inanspruchnahme","en":"health care utilization"},{"de":"Wartezeit","en":"waiting time"},{"de":"Erreichbarkeit","en":"access to care"},{"de":"Leitlinientreue","en":"guideline adherence"},{"de":"Therapietreue","en":"medication adherence"},{"de":"Arzneimitteltherapiesicherheit","en":"medication safety"},{"de":"Polypharmazie","en":"polypharmacy"},{"de":"Krankenhauskeim","en":"healthcare-associated infection"},{"de":"Kosteneffektivität","en":"cost-effectiveness"},{"de":"Kosten-Nutzen-Analyse","en":"cost-benefit analysis"},{"de":"Gesundheitsausgaben","en":"health expenditure"},{"de":"Versorgungsforschung","en":"health services research"},{"de":"Gesundheitsforschung","en":"health research"},{"de":"Routinedaten","en":"claims data"},{"de":"Abrechnungsdaten","en":"administrative claims data"},{"de":"Sekundärdaten","en":"secondary data analysis"},{"de":"Registerstudie","en":"registry study"},{"de":"Kohortenstudie","en":"cohort study"},{"de":"Fall-Kontroll-Studie","en":"case-control study"},{"de":"Querschnittstudie","en":"cross-sectional study"},{"de":"Längsschnittstudie","en":"longitudinal study"},{"de":"Beobachtungsstudie","en":"observational study"},{"de":"randomisierte kontrollierte Studie","en":"randomized controlled trial"},{"de":"cluster-randomisierte Studie","en":"cluster randomized trial"},{"de":"Interventionsstudie","en":"intervention study"},{"de":"Machbarkeitsstudie","en":"feasibility study"},{"de":"Pilotstudie","en":"pilot study"},{"de":"Prozessevaluation","en":"process evaluation"},{"de":"systematische Übersichtsarbeit","en":"systematic review"},{"de":"Metaanalyse","en":"meta-analysis"},{"de":"Scoping Review","en":"scoping review"},{"de":"qualitative Studie","en":"qualitative study"},{"de":"Befragung","en":"survey"},{"de":"Fokusgruppe","en":"focus group"},{"de":"Delphi-Studie","en":"Delphi study"},{"de":"Mixed-Methods","en":"mixed methods"},{"de":"Implementierungsforschung","en":"implementation research"},{"de":"Wirksamkeit unter Alltagsbedingungen","en":"effectiveness"},{"de":"Evidenzbasierte Medizin","en":"evidence-based medicine"},{"de":"Telemedizin","en":"telemedicine"},{"de":"Videosprechstunde","en":"video consultation"},{"de":"elektronische Patientenakte","en":"electronic health record"},{"de":"digitale Gesundheitsanwendung","en":"digital health application"},{"de":"Gesundheits-App","en":"mobile health application"},{"de":"künstliche Intelligenz","en":"artificial intelligence"},{"de":"maschinelles Lernen","en":"machine learning"},{"de":"Telemonitoring","en":"remote patient monitoring"},{"de":"elektronisches Rezept","en":"electronic prescribing"},{"de":"Entscheidungsunterstützung","en":"clinical decision support"},{"de":"Interoperabilität","en":"interoperability"},{"de":"Datenschutz","en":"data protection"},{"de":"Prävention","en":"prevention"},{"de":"Gesundheitsförderung","en":"health promotion"},{"de":"Früherkennung","en":"screening"},{"de":"Impfung","en":"vaccination"},{"de":"Gesundheitskompetenz","en":"health literacy"},{"de":"soziale Ungleichheit","en":"health inequalities"},{"de":"sozioökonomischer Status","en":"socioeconomic status"},{"de":"ländlicher Raum","en":"rural health"},{"de":"Migration","en":"migrant health"},{"de":"Kindergesundheit","en":"child health"},{"de":"Frauengesundheit","en":"women's health"},{"de":"Alter","en":"aged"},{"de":"Pflegebedürftigkeit","en":"long-term care needs"},{"de":"Pflege","en":"nursing"},{"de":"Pflegequalität","en":"quality of nursing care"},{"de":"Pflegefachkraft","en":"nurse"},{"de":"Multimorbidität","en":"multimorbidity"},{"de":"chronische Erkrankung","en":"chronic disease"},{"de":"seltene Erkrankung","en":"rare disease"},{"de":"Gemeinsame Entscheidungsfindung","en":"shared decision making"},{"de":"Patientenbeteiligung","en":"patient participation"},{"de":"Patientenberichtete Ergebnisse","en":"patient reported outcome measures"},{"de":"Gendermedizin","en":"gender medicine"},{"de":"Herzinsuffizienz","en":"heart failure"},{"de":"Herzinfarkt","en":"myocardial infarction"},{"de":"Bluthochdruck","en":"hypertension"},{"de":"Schlaganfall","en":"stroke"},{"de":"Diabetes","en":"diabetes mellitus"},{"de":"Adipositas","en":"obesity"},{"de":"Krebs","en":"cancer"},{"de":"Brustkrebs","en":"breast cancer"},{"de":"Darmkrebs","en":"colorectal cancer"},{"de":"Demenz","en":"dementia"},{"de":"Depression","en":"depression"},{"de":"psychische Erkrankung","en":"mental disorder"},{"de":"Sucht","en":"substance use disorder"},{"de":"Rückenschmerz","en":"back pain"},{"de":"Schmerz","en":"pain"},{"de":"Asthma","en":"asthma"},{"de":"Nierenerkrankung","en":"kidney disease"},{"de":"Sepsis","en":"sepsis"},{"de":"Sturz","en":"accidental falls"},{"de":"Dekubitus","en":"pressure ulcer"},{"de":"Endometriose","en":"endometriosis"}];
 // === GLOSSAR-BLOCK-ENDE ===
 
-document.getElementById('cntGlossar').textContent = GLOSSAR.length;
+setzeZahl('cntGlossar', GLOSSAR.length);
 
 // Sprungziele Impressum/Datenschutz: Die Texte stecken in <details>. Wird eines
 // direkt angesprungen, muss es aufklappen - sonst landet man auf einer
@@ -3680,7 +3756,7 @@ const goMetaBtn   = document.getElementById('goMeta');
 const metaArtBox  = document.getElementById('metaArt');
 const metaBlaetterEl = document.getElementById('metaBlaetter');
 
-document.getElementById('cntMeta').textContent = MT_QUELLEN.length;
+setzeZahl('cntMeta', MT_QUELLEN.length);
 
 // Ein Treffer kann in allen vier Quellen stehen. Zusammengelegt wird ueber
 // die DOI, ersatzweise ueber die PubMed-Nummer, zuletzt ueber den auf
