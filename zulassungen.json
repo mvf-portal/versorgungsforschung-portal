@@ -1,11 +1,11 @@
 {
- "stand": "24.10.2026",
+ "stand": "25.10.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
-  "zulassung": 35,
+  "zulassung": 30,
   "gutachten": 28,
-  "ohne_hub": 19,
+  "ohne_hub": 18,
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
@@ -2662,79 +2662,6 @@
     "onkologie"
    ],
    "satz": "Die FDA hat Vepdegestrant (Veppanu) zur Behandlung von ER-positivem, HER2-negativem, ESR1-mutiertem fortgeschrittenem oder metastasiertem Mammakarzinom nach Progression unter Endokrinotherapie zugelassen."
-  },
-  {
-   "stufe": "zulassung",
-   "datum": "2026-04-27",
-   "name": "Onerji",
-   "wirkstoff": "levodopa;carbidopa",
-   "gebiet_mesh": "Parkinson Disease",
-   "atc": "N04BA02",
-   "inhaber": "Tanabe Pharma GmbH",
-   "kennzeichen": [],
-   "gutachten": "",
-   "nummer": "EMEA/H/C/006429",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/onerji",
-   "indikation_en": "Onerji is indicated for the treatment of motor fluctuations in patients with advanced Parkinson's disease which are not sufficiently controlled by oral anti-Parkinson medicinal products.",
-   "hubs": [
-    "longevity"
-   ],
-   "satz": "Onerji (Levodopa/Carbidopa) ist zur Behandlung von Motorfluktuationen bei Patienten mit fortgeschrittenem Parkinson-Syndrom indiziert, die auf orale Antiparkinson-Mittel unzureichend ansprechen."
-  },
-  {
-   "stufe": "zulassung",
-   "datum": "2026-04-27",
-   "name": "Tuyory",
-   "wirkstoff": "tocilizumab",
-   "gebiet_mesh": "Arthritis, Rheumatoid;Arthritis, Juvenile;Cytokine Release Syndrome;Giant Cell Arteritis;COVID-19 virus infection",
-   "atc": "L04AC07",
-   "inhaber": "Chemical Works of Gedeon Richter Plc. (Gedeon Richter Plc.)",
-   "kennzeichen": [],
-   "gutachten": "",
-   "nummer": "EMEA/H/C/006416",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/tuyory",
-   "indikation_en": "Rheumatoid arthritis (RA) Tuyory, in combination with methotrexate (MTX), is indicated for:- the treatment of severe, active and progressive RA in adults not previously treated with MTX.- the treatment of moderate to severe active RA in adult patients who have either responded inadequately to, or who were intolerant to, previous therapy with one or more disease- modifying anti-rheumatic drugs (DMARDs) or tumour necrosis factor (TNF) antagonists.In these patients, Tuyory can be given as monotherapy in case of intolerance to MTX or where continued treatment with MTX is inappropriate.Tocilizumab has been shown to reduce the rate of progression of joint damage as measured by X-ray and to improve physical function when given in combination with methotrexate. Coronavirus disease 2019 (COVID-19) Tuyory is indicated for the treatment of COVID-19 in adults who are receiving systemic corticosteroids and require supplemental oxygen or mechanical ventilation. Systemic juvenile idiopathic arthritis (sJIA) Tuyory is indicated for the treatment of active sJIA in patients 1 year of age and older, who have responded inadequately to previous therapy with non-steroidal anti-inflammatory drugs (NSAIDs",
-   "hubs": [
-    "impfen",
-    "ncd"
-   ],
-   "satz": "Tuyory (Tocilizumab) ist zur Behandlung von rheumatoider Arthritis, COVID-19 bei Patienten unter Kortikosteroid- und Sauerstofftherapie sowie aktiver systemischer juveniler idiopathischer Arthritis zugelassen."
-  },
-  {
-   "stufe": "zulassung",
-   "datum": "2026-04-27",
-   "name": "Zandoriah",
-   "wirkstoff": "teriparatide",
-   "gebiet_mesh": "Osteoporosis;Osteoporosis, Postmenopausal",
-   "atc": "H05AA02",
-   "inhaber": "CinnaGen Co Unipessoal LDA",
-   "kennzeichen": [],
-   "gutachten": "",
-   "nummer": "EMEA/H/C/006688",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/zandoriah",
-   "indikation_en": "Teriparatide is indicated in adults. Treatment of osteoporosis in postmenopausal women and in men at increased risk of fracture. In postmenopausal women, a significant reduction in the incidence of vertebral and non-vertebral fractures but not hip fractures has been demonstrated. Treatment of osteoporosis associated with sustained systemic glucocorticoid therapy in women and men at increased risk for fracture.",
-   "hubs": [
-    "longevity"
-   ],
-   "satz": "Zandoriah (Teriparatid) ist zur Behandlung der Osteoporose bei Frauen und Männern mit erhöhtem Frakturrisiko sowie bei glucocorticoidinduzierter Osteoporose zugelassen."
-  },
-  {
-   "stufe": "zulassung",
-   "datum": "2026-04-27",
-   "name": "Dazparda",
-   "wirkstoff": "insulin aspart",
-   "gebiet_mesh": "Diabetes Mellitus",
-   "atc": "A10AB05",
-   "inhaber": "Gan & Lee Pharmaceuticals Europe GmbH",
-   "kennzeichen": [],
-   "gutachten": "",
-   "nummer": "EMEA/H/C/006187",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/dazparda",
-   "indikation_en": "Dazparda is indicated for treatment of diabetes mellitus in adults, adolescents and children aged 1 year and above.",
-   "hubs": [
-    "diabetes"
-   ],
-   "satz": "Dazparda (Insulin aspart) ist zur Behandlung des Diabetes mellitus bei Erwachsenen, Jugendlichen und Kindern ab 1 Jahr zugelassen."
   },
   {
    "stufe": "antrag",
