@@ -45,7 +45,7 @@
      "quelle": "Bund (foerderinfo.bund.de)",
      "land": "DE",
      "beschreibung": "Richtlinie zur Förderung von Pilotprojekten zur Entwicklung und Erprobung von Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung. BAnz vom 11.08.2026.",
-     "beleg": "sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
+     "beleg": "Komponenten und Anforderungen für sichere Verarbeitungsumgebungen (Secure Processing Environments) in der Gesundheitsforschung"
     },
     {
      "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
@@ -90,7 +90,7 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 5,
+   "anzahl": 2,
    "ausschreibungen": [
     {
      "titel": "HEAL Initiative: Whole Joint Health Program (R61/R33 Clinical Trial Required)",
@@ -109,33 +109,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "DoW Orthopaedic, Clinical Research Award"
-    },
-    {
-     "titel": "Limited Competition for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers (U01 Clinical Trial Required)",
-     "frist": "2026-11-06",
-     "url": "https://www.grants.gov/search-results-detail/360679",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers"
-    },
-    {
-     "titel": "Single Source for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center (U01 Clinical Trial Required)",
-     "frist": "2026-11-09",
-     "url": "https://www.grants.gov/search-results-detail/360458",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center"
-    },
-    {
-     "titel": "Long-term health outcomes of people living with spina bifida",
-     "frist": "2026-10-26",
-     "url": "https://www.grants.gov/search-results-detail/361002",
-     "quelle": "grants.gov (HHS-CDC-NCBDDD)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Long-term health outcomes of people living with spina bifida"
     }
    ]
   },
@@ -143,27 +116,8 @@
    "slug": "gender",
    "name": "Geschlechtersensible Medizin",
    "domain": "gender.m-vf.de",
-   "anzahl": 2,
-   "ausschreibungen": [
-    {
-     "titel": "DoW Breast Cancer, Clinical Research Extension Award",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/363671",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
-    },
-    {
-     "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/363670",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2"
-    }
-   ]
+   "anzahl": 0,
+   "ausschreibungen": []
   },
   {
    "slug": "adipositas",
@@ -183,7 +137,7 @@
    "slug": "mental",
    "name": "Psychische Gesundheit",
    "domain": "mental.m-vf.de",
-   "anzahl": 4,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
@@ -192,7 +146,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
+     "beleg": "Access and Quality of Empirically-Supported Practices for Youth Mental Health"
     },
     {
      "titel": "HEAL Initiative: Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)",
@@ -211,15 +165,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center"
-    },
-    {
-     "titel": "Specialized Alcohol Research Centers (P50 Clinical trial Optional)",
-     "frist": "2027-01-27",
-     "url": "https://www.grants.gov/search-results-detail/361216",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Specialized Alcohol Research Centers"
     }
    ]
   },
@@ -248,13 +193,13 @@
      "beleg": "Cancer Prevention and Control Clinical Trials Grant Program"
     },
     {
-     "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
-     "frist": "2027-01-25",
-     "url": "https://www.grants.gov/search-results-detail/360393",
+     "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/356690",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI)"
+     "beleg": "expand cancer screening and preventive services"
     },
     {
      "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
@@ -266,22 +211,22 @@
      "beleg": "Glioblastoma Therapeutics Network (GTN)"
     },
     {
-     "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/356690",
+     "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
+     "frist": "2027-01-25",
+     "url": "https://www.grants.gov/search-results-detail/360393",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "expand cancer screening and preventive services"
+     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI)"
     },
     {
-     "titel": "Secondary Analysis and Integration of Existing Data to Elucidate Cancer Risk and Related Outcomes (R01 Clinical Trial Not Allowed)",
-     "frist": "2026-11-06",
-     "url": "https://www.grants.gov/search-results-detail/357204",
-     "quelle": "grants.gov (HHS-NIH11)",
+     "titel": "DoW Breast Cancer, Clinical Research Extension Award",
+     "frist": "2026-11-18",
+     "url": "https://www.grants.gov/search-results-detail/363671",
+     "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Elucidate Cancer Risk and Related Outcomes"
+     "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
     },
     {
      "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
@@ -293,13 +238,13 @@
      "beleg": "DoW Breast Cancer, Breakthrough Award"
     },
     {
-     "titel": "Advanced Development and Validation of Emerging Technologies for Basic and Clinical Cancer Research (R33 Clinical Trial Not Allowed)",
-     "frist": "2026-11-10",
-     "url": "https://www.grants.gov/search-results-detail/360534",
+     "titel": "Secondary Analysis and Integration of Existing Data to Elucidate Cancer Risk and Related Outcomes (R01 Clinical Trial Not Allowed)",
+     "frist": "2026-11-06",
+     "url": "https://www.grants.gov/search-results-detail/357204",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Basic and Clinical Cancer Research"
+     "beleg": "Secondary Analysis and Integration of Existing Data to Elucidate Cancer Risk and Related Outcomes"
     }
    ]
   },
