@@ -1,5 +1,5 @@
 {
- "stand": "26.10.2026",
+ "stand": "27.10.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
@@ -10,9 +10,9 @@
   "diga_roh": 37,
   "diga_gezeigt": 5,
   "fda_roh": 33,
-  "fda_mit_label": 25,
-  "fda_ohne_label": 8,
-  "fda_mit_hub": 16,
+  "fda_mit_label": 28,
+  "fda_ohne_label": 5,
+  "fda_mit_hub": 17,
   "antrag_roh": 92,
   "antrag_generisch": 35,
   "antrag_gezeigt": 57,
@@ -23,7 +23,7 @@
  "warnungen": [],
  "eintraege": [
   {
-   "stufe": "fda-wartet",
+   "stufe": "fda",
    "datum": "2026-10-20",
    "name": "HIBSAGO",
    "wirkstoff": "BEPIROVIRSEN",
@@ -31,16 +31,17 @@
    "atc": "",
    "inhaber": "GLAXOSMITHKLINE LLC",
    "kennzeichen": [
-    "NDA"
+    "NDA",
+    "Label Oct 26, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA221276",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221276",
-   "indikation_en": "",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2cca7226-d8f9-4917-8d10-83e216acf393",
+   "indikation_en": "HIBSAGO is indicated in combination with nucleos(t)ide analog reverse transcriptase inhibitor (NrtI) therapy for treatment of chronic hepatitis B virus (HBV) infection in adult patients without cirrhosis: • who have been on NrtI therapy for at least 6 months and have suppressed HBV deoxyribonucleic acid (DNA), and • who have HBV surface antigen (HBsAg) levels less than or equal to 3,000 IU/mL as determined by an FDA-authorized test [see Dosage and Administration ( 2.2 )] . HIBSAGO is a hepatitis B virus (HBV) mRNA-directed antisense oligonucleotide (ASO) indicated in combination with nucleos(t)ide analog reverse transcriptase inhibitor (NrtI) therapy for treatment of chronic HBV infection in adult patients without cirrhosis: • who have been on NrtI therapy for at least 6 months and have suppressed HBV deoxyribonucleic acid (DNA), and • who have HBV surface antigen (HBsAg) levels less than or equal to 3,000 IU/mL as determined by an FDA-authorized test. ( 2.2 ) 2",
    "hubs": [
-    "ohne-hub"
+    "ncd"
    ],
-   "satz": ""
+   "satz": "Die FDA hat Bepirovirsen (Hibsago) in Kombination mit Nukleosid(t)id-Analoga zur Behandlung der chronischen Hepatitis-B-Virus-Infektion bei Erwachsenen ohne Zirrhose zugelassen."
   },
   {
    "stufe": "gutachten",
@@ -399,7 +400,7 @@
    "satz": "Una Health für Diabetes ist aus dem Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen gestrichen worden und wird nicht mehr von der gesetzlichen Krankenversicherung erstattet."
   },
   {
-   "stufe": "fda-wartet",
+   "stufe": "fda",
    "datum": "2026-09-28",
    "name": "EMCITATE",
    "wirkstoff": "TIRATRICOL",
@@ -407,16 +408,17 @@
    "atc": "",
    "inhaber": "RARE THYROID",
    "kennzeichen": [
-    "NDA"
+    "NDA",
+    "Label Oct 26, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA220963",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220963",
-   "indikation_en": "",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d9faab-9c60-4abd-b4b9-97ffa778c944",
+   "indikation_en": "EMCITATE is indicated for the treatment of peripheral thyrotoxicosis in adults and pediatric patients with monocarboxylate transporter 8 (MCT8) deficiency (Allan-Herndon-Dudley syndrome). EMCITATE is a thyroid hormone receptor agonist indicated for the treatment of peripheral thyrotoxicosis in adults and pediatric patients with monocarboxylate transporter 8 (MCT8) deficiency (Allan-Herndon-Dudley syndrome). Limitation of Use EMCITATE is not recommended for the treatment of primary hypothyroidism. Limitation of Use EMCITATE is not recommended for the treatment of primary hypothyroidism. 2",
    "hubs": [
     "ohne-hub"
    ],
-   "satz": ""
+   "satz": "Die FDA hat Tiratricol (Emcitate) zur Behandlung der peripheren Thyreotoxikose bei MCT8-Mangel (Allan-Herndon-Dudley-Syndrom) zugelassen."
   },
   {
    "stufe": "fda",
@@ -810,27 +812,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-11",
-   "name": "PIXCLARA",
-   "wirkstoff": "FLORETYROSINE F-18",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "TELIX",
-   "kennzeichen": [
-    "NDA",
-    "Label Oct 09, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA218592",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc78b128-3768-4448-b019-61574db05714",
-   "indikation_en": "PIXCLARA is indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. PIXCLARA is a radioactive diagnostic drug indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. ( 1 ) 2",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": "Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-11",
    "name": "ISEMBYLD",
    "wirkstoff": "APITEGROMAB-MSTN",
    "gebiet_mesh": "",
@@ -848,6 +829,27 @@
     "ohne-hub"
    ],
    "satz": "Die FDA hat Apitegromab-MSTN (ISEMBYLD) zur Behandlung der spinalen Muskelatrophie bei Patienten ab zwei Jahren unter SMN2-gerichteter Therapie zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-11",
+   "name": "PIXCLARA",
+   "wirkstoff": "FLORETYROSINE F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "TELIX",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 09, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA218592",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc78b128-3768-4448-b019-61574db05714",
+   "indikation_en": "PIXCLARA is indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. PIXCLARA is a radioactive diagnostic drug indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen."
   },
   {
    "stufe": "diga",
@@ -1424,7 +1426,7 @@
    "satz": "Colchicine Agepha Pharma (Colchicin) ist zur Sekundärprävention atherothrombotischer Ereignisse bei Erwachsenen mit seit mindestens 6 Monaten stabiler Koronararterienerkrankung zugelassen."
   },
   {
-   "stufe": "fda-wartet",
+   "stufe": "fda",
    "datum": "2026-07-24",
    "name": "SIMTRIYO",
    "wirkstoff": "CENTANAFADINE HYDROCHLORIDE",
@@ -1432,16 +1434,17 @@
    "atc": "",
    "inhaber": "OTSUKA PHARMACEUTICAL CO LTD",
    "kennzeichen": [
-    "NDA"
+    "NDA",
+    "Label Oct 26, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA218145",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218145",
-   "indikation_en": "",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ecfa41cc-c8c8-419b-8da3-ee5b819398c2",
+   "indikation_en": "SIMTRIYO is indicated for the treatment of attention-deficit/hyperactivity disorder (ADHD) in adults and pediatric patients 6 years of age and older weighing at least 20 kg. Limitations of Use The use of SIMTRIYO is not recommended in pediatric patients: Younger than 6 years of age because this pediatric subpopulation had a higher incidence of weight loss than pediatric patients 6 years of age and older [see Use in Specific Populations (8.4) ] . Weighing less than 20 kg because of a lack of data for this subpopulation and the risk of weight loss [see Use in Specific Populations (8.4) ] . SIMTRIYO is a norepinephrine-dopamine-serotonin reuptake inhibitor and central nervous system stimulant indicated for the treatment of ADHD in adults and pediatric patients 6 years of age and older weighing at least 20 kg. ( 1 ) Limitations of Use The use of SIMTRIYO is not recommended in pediatric patients: Younger than 6 years of age because this pediatric subpopulation had a higher incidence of weight loss than pediatric patients 6 years of age and older. ( 8.4 ) Weighing less than 20 kg because of a lack of data for this subpopulation and the risk of weight loss. ( 8.4 ). 2",
    "hubs": [
     "ohne-hub"
    ],
-   "satz": ""
+   "satz": "Die FDA hat Centanafadin-Hydrochlorid (SIMTRIYO) zur Behandlung der Aufmerksamkeitsdefizit-/Hyperaktivitätsstörung bei Erwachsenen und Kindern ab 6 Jahren zugelassen."
   },
   {
    "stufe": "gutachten",
