@@ -832,27 +832,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-11",
-   "name": "PIXCLARA",
-   "wirkstoff": "FLORETYROSINE F-18",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "TELIX",
-   "kennzeichen": [
-    "NDA",
-    "Label Oct 09, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA218592",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc78b128-3768-4448-b019-61574db05714",
-   "indikation_en": "PIXCLARA is indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. PIXCLARA is a radioactive diagnostic drug indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. ( 1 ) 2",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": "Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-11",
    "name": "ISEMBYLD",
    "wirkstoff": "APITEGROMAB-MSTN",
    "gebiet_mesh": "",
@@ -870,6 +849,27 @@
     "ohne-hub"
    ],
    "satz": "Die FDA hat Apitegromab-MSTN (ISEMBYLD) zur Behandlung der spinalen Muskelatrophie bei Patienten ab zwei Jahren unter SMN2-gerichteter Therapie zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-11",
+   "name": "PIXCLARA",
+   "wirkstoff": "FLORETYROSINE F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "TELIX",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 09, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA218592",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc78b128-3768-4448-b019-61574db05714",
+   "indikation_en": "PIXCLARA is indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. PIXCLARA is a radioactive diagnostic drug indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen."
   },
   {
    "stufe": "diga",
