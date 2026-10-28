@@ -1,10 +1,10 @@
 {
- "stand": "27.10.2026",
+ "stand": "28.10.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
-  "zulassung": 30,
-  "gutachten": 28,
+  "zulassung": 31,
+  "gutachten": 27,
   "ohne_hub": 18,
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
@@ -22,6 +22,26 @@
  },
  "warnungen": [],
  "eintraege": [
+  {
+   "stufe": "zulassung",
+   "datum": "2026-10-22",
+   "name": "Lynavoy",
+   "wirkstoff": "Linerixibat",
+   "gebiet_mesh": "Liver Cirrhosis, Biliary;Pruritus",
+   "atc": "A05AX",
+   "inhaber": "GlaxoSmithKline Trading Services Limited",
+   "kennzeichen": [
+    "Orphan Drug"
+   ],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006241",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/lynavoy",
+   "indikation_en": "Lynavoy is indicated for the treatment of cholestatic pruritus in adult patients with primary biliary cholangitis (PBC).",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Lynavoy (Linerixibat) zur Behandlung des cholestatischen Pruritus bei Patienten mit primärer biliärer Cholangitis."
+  },
   {
    "stufe": "fda",
    "datum": "2026-10-20",
@@ -423,27 +443,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-25",
-   "name": "ATEBRIOZ",
-   "wirkstoff": "ZILURGISERTIB FUMARATE",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "MIRUM",
-   "kennzeichen": [
-    "NDA",
-    "Label Oct 12, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA221198",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f542e4b0-072a-42c6-80c9-5977054971e0",
-   "indikation_en": "ATEBRIOZ is indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ATEBRIOZ is an activin receptor-like kinase-2 (ALK2) inhibitor indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ( 1 ) 2.",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": "Die FDA hat Zilurgisertib-Fumarat (Atebrioz) zur Reduktion neuer heterotoper Ossifikationen bei Fibrodysplasia ossificans progressiva zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-25",
    "name": "JUVMO",
    "wirkstoff": "TAVAPADON",
    "gebiet_mesh": "",
@@ -461,6 +460,27 @@
     "longevity"
    ],
    "satz": "Die FDA hat Tavapadon (JUVMO) zur Behandlung der Parkinson-Krankheit bei Erwachsenen zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-25",
+   "name": "ATEBRIOZ",
+   "wirkstoff": "ZILURGISERTIB FUMARATE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "MIRUM",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 12, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA221198",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f542e4b0-072a-42c6-80c9-5977054971e0",
+   "indikation_en": "ATEBRIOZ is indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ATEBRIOZ is an activin receptor-like kinase-2 (ALK2) inhibitor indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ( 1 ) 2.",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Zilurgisertib-Fumarat (Atebrioz) zur Reduktion neuer heterotoper Ossifikationen bei Fibrodysplasia ossificans progressiva zugelassen."
   },
   {
    "stufe": "diga",
@@ -484,6 +504,26 @@
    "satz": "Pia-App bei Regelschmerzen ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
+   "stufe": "fda-wartet",
+   "datum": "2026-09-23",
+   "name": "LYRFIGTU",
+   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ELEVAR",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220425",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
    "stufe": "fda",
    "datum": "2026-09-23",
    "name": "ONSWIK",
@@ -503,26 +543,6 @@
     "diabetes"
    ],
    "satz": "Die FDA hat Insulin Efsitora alfa-gobe (Onswik) zur Verbesserung der Glykämiekontrolle bei Typ-2-Diabetes zugelassen."
-  },
-  {
-   "stufe": "fda-wartet",
-   "datum": "2026-09-23",
-   "name": "LYRFIGTU",
-   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ELEVAR",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220425",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
   },
   {
    "stufe": "zulassung",
@@ -812,27 +832,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-11",
-   "name": "ISEMBYLD",
-   "wirkstoff": "APITEGROMAB-MSTN",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "SCHOLAR ROCK INC",
-   "kennzeichen": [
-    "BLA",
-    "Label Sep 17, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-BLA761463",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b1cd8ab8-8a10-48ed-9806-75a44f22b963",
-   "indikation_en": "ISEMBYLD is indicated for the treatment of spinal muscular atrophy (SMA) in adults and pediatric patients 2 years of age and older who are currently receiving a survival motor neuron 2 (SMN2)-targeted treatment. ISEMBYLD is a recombinant monoclonal antibody targeting proforms of myostatin, indicated for the treatment of spinal muscular atrophy (SMA) in adults and pediatric patients 2 years of age and older who are currently receiving a survival motor neuron 2 (SMN2)-targeted treatment. ( 1 ) 2",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": "Die FDA hat Apitegromab-MSTN (ISEMBYLD) zur Behandlung der spinalen Muskelatrophie bei Patienten ab zwei Jahren unter SMN2-gerichteter Therapie zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-11",
    "name": "PIXCLARA",
    "wirkstoff": "FLORETYROSINE F-18",
    "gebiet_mesh": "",
@@ -850,6 +849,27 @@
     "ohne-hub"
    ],
    "satz": "Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-11",
+   "name": "ISEMBYLD",
+   "wirkstoff": "APITEGROMAB-MSTN",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "SCHOLAR ROCK INC",
+   "kennzeichen": [
+    "BLA",
+    "Label Sep 17, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-BLA761463",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b1cd8ab8-8a10-48ed-9806-75a44f22b963",
+   "indikation_en": "ISEMBYLD is indicated for the treatment of spinal muscular atrophy (SMA) in adults and pediatric patients 2 years of age and older who are currently receiving a survival motor neuron 2 (SMN2)-targeted treatment. ISEMBYLD is a recombinant monoclonal antibody targeting proforms of myostatin, indicated for the treatment of spinal muscular atrophy (SMA) in adults and pediatric patients 2 years of age and older who are currently receiving a survival motor neuron 2 (SMN2)-targeted treatment. ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Apitegromab-MSTN (ISEMBYLD) zur Behandlung der spinalen Muskelatrophie bei Patienten ab zwei Jahren unter SMN2-gerichteter Therapie zugelassen."
   },
   {
    "stufe": "diga",
@@ -1052,6 +1072,26 @@
    "satz": "Die FDA hat Garetosmab-grts (PASATRU) zur Reduktion neuer heterotoper Ossifikationen und klinisch bewerteter Schübe bei Fibrodysplasia ossificans progressiva zugelassen."
   },
   {
+   "stufe": "fda-wartet",
+   "datum": "2026-08-13",
+   "name": "TAUKLARIFY",
+   "wirkstoff": "FLORQUINITAU F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "CERVEAU LANTHEUS",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220496",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
    "stufe": "fda",
    "datum": "2026-08-13",
    "name": "ZENBEXUS",
@@ -1071,26 +1111,6 @@
     "onkologie"
    ],
    "satz": "Die FDA hat Iberdomide (ZENBEXUS) in Kombination mit Daratumumab und Dexamethason zur Behandlung des multiplen Myeloms zugelassen."
-  },
-  {
-   "stufe": "fda-wartet",
-   "datum": "2026-08-13",
-   "name": "TAUKLARIFY",
-   "wirkstoff": "FLORQUINITAU F-18",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "CERVEAU LANTHEUS",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220496",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
   },
   {
    "stufe": "antrag",
@@ -1483,26 +1503,6 @@
     "kardio"
    ],
    "satz": "Der CHMP empfiehlt die Zulassung von Evlarco (Obicetrapib/Ezetimib) zur Behandlung der primären Hypercholesterinämie oder gemischten Dyslipidämie."
-  },
-  {
-   "stufe": "gutachten",
-   "datum": "2026-07-23",
-   "name": "Lynavoy",
-   "wirkstoff": "Linerixibat",
-   "gebiet_mesh": "Liver Cirrhosis, Biliary;Pruritus",
-   "atc": "A05AX",
-   "inhaber": "GlaxoSmithKline Trading Services Limited",
-   "kennzeichen": [
-    "Orphan Drug"
-   ],
-   "gutachten": "Positive",
-   "nummer": "EMEA/H/C/006241",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/lynavoy",
-   "indikation_en": "Treatment of cholestatic pruritus in adult patients with primary biliary cholangitis.",
-   "hubs": [
-    "ncd"
-   ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Lynavoy (Linerixibat) zur Behandlung des cholestatischen Pruritus bei Patienten mit primärer biliärer Cholangitis."
   },
   {
    "stufe": "gutachten",
