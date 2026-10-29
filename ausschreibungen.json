@@ -12,7 +12,7 @@
    "slug": "versorgungsforschung",
    "name": "Versorgungsforschung",
    "domain": "wissen.m-vf.de",
-   "anzahl": 2,
+   "anzahl": 5,
    "ausschreibungen": [
     {
      "titel": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich)",
@@ -24,13 +24,40 @@
      "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
     },
     {
-     "titel": "Förderung interdisziplinärer Verbünde zur Erforschung der Pathomechanismen von postinfektiösen Erkrankungen",
-     "frist": "2027-01-27",
-     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/10/2026-10-20-bekanntmachung-postinfektioese-erkrankungen.html?templateQueryString=Pathomechanismen",
-     "quelle": "Bund (foerderinfo.bund.de)",
-     "land": "DE",
-     "beschreibung": "Richtlinie zur Förderung interdisziplinärer Verbünde zur Erforschung der Pathomechanismen von postinfektiösen Erkrankungen – Nationale Dekade gegen Postinfektiöse Erkrankungen. BAnz vom 20.10.2026.",
-     "beleg": "Erforschung der Pathomechanismen von postinfektiösen Erkrankungen"
+     "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357524",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
+    },
+    {
+     "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/356690",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities"
+    },
+    {
+     "titel": "Intervention Research to Improve Native American Health (R34 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/358373",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Intervention Research to Improve Native American Health"
+    },
+    {
+     "titel": "Personal Health Informatics for Delivering Actionable Insights to Individuals (R01 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357273",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Personal Health Informatics for Delivering Actionable Insights to Individuals"
     }
    ]
   },
@@ -155,17 +182,8 @@
    "slug": "mental",
    "name": "Psychische Gesundheit",
    "domain": "mental.m-vf.de",
-   "anzahl": 4,
+   "anzahl": 3,
    "ausschreibungen": [
-    {
-     "titel": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich)",
-     "frist": "2026-12-31",
-     "url": "https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-neue-versorgungsformen-zum-themenoffenen-bereich-einstufig-kurz-einreichung-laufend-im-jahr-moeglich.66",
-     "quelle": "Innovationsfonds (G-BA)",
-     "land": "DE",
-     "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
-     "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
-    },
     {
      "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
      "frist": "2027-01-07",
@@ -182,7 +200,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery"
+     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center"
     },
     {
      "titel": "HEAL Initiative: Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)",
@@ -191,7 +209,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers"
+     "beleg": "Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)"
     }
    ]
   },
@@ -208,16 +226,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "National Cancer Institute's Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
-    },
-    {
-     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
-     "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/360606",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Glioblastoma Therapeutics Network (GTN)"
+     "beleg": "Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
     },
     {
      "titel": "Cancer Prevention and Control Clinical Trials Grant Program (R01 Clinical Trial Required)",
@@ -235,7 +244,25 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Interventions to expand cancer screening and preventive services to ADVANCE health"
+     "beleg": "expand cancer screening and preventive services"
+    },
+    {
+     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
+     "frist": "2027-01-11",
+     "url": "https://www.grants.gov/search-results-detail/360606",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)"
+    },
+    {
+     "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
+     "frist": "2027-01-25",
+     "url": "https://www.grants.gov/search-results-detail/360393",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI)"
     },
     {
      "titel": "DoW Breast Cancer, Clinical Research Extension Award",
@@ -256,22 +283,13 @@
      "beleg": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2"
     },
     {
-     "titel": "DoW Rare Cancers Resource and Community Development Award",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/362850",
-     "quelle": "grants.gov (DOD-AMRAA)",
+     "titel": "Discovery of the Genetic Basis of Childhood Cancers and of Congenital Anomalies: Gabriella Miller Kids First Pediatric Research Program (X01 Clinical Trial Not Allowed)",
+     "frist": "2027-01-11",
+     "url": "https://www.grants.gov/search-results-detail/361164",
+     "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Rare Cancers Resource and Community Development Award"
-    },
-    {
-     "titel": "DoW Rare Cancers Idea Development Award",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/362849",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Rare Cancers Idea Development Award"
+     "beleg": "Discovery of the Genetic Basis of Childhood Cancers and of Congenital Anomalies"
     }
    ]
   },
@@ -299,15 +317,6 @@
    "anzahl": 2,
    "ausschreibungen": [
     {
-     "titel": "Diabetes Research Centers (P30 Clinical Trial Optional)",
-     "frist": "2027-01-27",
-     "url": "https://www.grants.gov/search-results-detail/359145",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Diabetes Research Centers (P30 Clinical Trial Optional)"
-    },
-    {
      "titel": "Single Source for the Continuation of the Epidemiology of Diabetes Interventions and Complications (EDIC) Study Research Center (Collaborative U01 Clinical Trial Not Allowed)",
      "frist": "2026-11-09",
      "url": "https://www.grants.gov/search-results-detail/361213",
@@ -315,6 +324,15 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Epidemiology of Diabetes Interventions and Complications (EDIC) Study Research Center"
+    },
+    {
+     "titel": "Diabetes Research Centers (P30 Clinical Trial Optional)",
+     "frist": "2027-01-27",
+     "url": "https://www.grants.gov/search-results-detail/359145",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Diabetes Research Centers (P30 Clinical Trial Optional)"
     }
    ]
   }
