@@ -626,6 +626,12 @@
       <span class="filter-kopf">Themengebiet</span>
       <div class="chips" id="gebietChips"></div>
     </div>
+    <!-- Marianns Frage vom 28.10.2026: "Alle Gebiete" ist nicht die Summe
+         der Knoepfe. Das ist gewollt und muss deshalb hier stehen. -->
+    <p class="filter-hinweis">„Alle Gebiete“ ist nicht die Summe der Themengebiete:
+      Ein Eintrag kann zu mehreren Gebieten gehören oder zu keinem, etwa eine
+      FDA-Zulassung ohne Angabe zum Anwendungsgebiet. Solche Einträge stehen nur
+      unter „Alle Gebiete“.</p>
   </div>
 
   <!-- Zwei Spalten, strikt getrennt: links Arzneimittel, rechts DiGA. Ein
@@ -1729,6 +1735,8 @@ const ZULASSUNGEN = [
   }
 
   .filter{ margin:0 0 26px; }
+  .filter-hinweis{ margin:8px 0 0; font-size:12.5px; line-height:1.5;
+    color:var(--ink-faint); max-width:72ch; }
   .filter-zeile{ display:flex; gap:12px; align-items:baseline; flex-wrap:wrap; }
   .filter-kopf{ font-size:12px; font-weight:700; text-transform:uppercase;
     letter-spacing:.06em; color:var(--ink-faint); white-space:nowrap; }
