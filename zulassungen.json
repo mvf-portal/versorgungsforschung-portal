@@ -1,5 +1,5 @@
 {
- "stand": "28.10.2026",
+ "stand": "29.10.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
@@ -9,10 +9,10 @@
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
-  "fda_roh": 33,
-  "fda_mit_label": 28,
+  "fda_roh": 32,
+  "fda_mit_label": 27,
   "fda_ohne_label": 5,
-  "fda_mit_hub": 17,
+  "fda_mit_hub": 16,
   "antrag_roh": 92,
   "antrag_generisch": 35,
   "antrag_gezeigt": 57,
@@ -144,11 +144,11 @@
   {
    "stufe": "fda-wartet",
    "datum": "2026-10-09",
-   "name": "HOVILPR",
-   "wirkstoff": "PRITELIVIR",
+   "name": "HOVILPRI",
+   "wirkstoff": "PRITELIVIR MESYLATE",
    "gebiet_mesh": "",
    "atc": "",
-   "inhaber": "AICURIS ANTI-INFECTIVE CURES AG",
+   "inhaber": "AICURIS ANTI-INFECT",
    "kennzeichen": [
     "NDA"
    ],
@@ -450,7 +450,7 @@
    "inhaber": "ABBVIE",
    "kennzeichen": [
     "NDA",
-    "Label Oct 08, 2026"
+    "Label Oct 28, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA220415",
@@ -832,27 +832,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-11",
-   "name": "ISEMBYLD",
-   "wirkstoff": "APITEGROMAB-MSTN",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "SCHOLAR ROCK INC",
-   "kennzeichen": [
-    "BLA",
-    "Label Sep 17, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-BLA761463",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b1cd8ab8-8a10-48ed-9806-75a44f22b963",
-   "indikation_en": "ISEMBYLD is indicated for the treatment of spinal muscular atrophy (SMA) in adults and pediatric patients 2 years of age and older who are currently receiving a survival motor neuron 2 (SMN2)-targeted treatment. ISEMBYLD is a recombinant monoclonal antibody targeting proforms of myostatin, indicated for the treatment of spinal muscular atrophy (SMA) in adults and pediatric patients 2 years of age and older who are currently receiving a survival motor neuron 2 (SMN2)-targeted treatment. ( 1 ) 2",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": "Die FDA hat Apitegromab-MSTN (ISEMBYLD) zur Behandlung der spinalen Muskelatrophie bei Patienten ab zwei Jahren unter SMN2-gerichteter Therapie zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-11",
    "name": "PIXCLARA",
    "wirkstoff": "FLORETYROSINE F-18",
    "gebiet_mesh": "",
@@ -870,6 +849,27 @@
     "ohne-hub"
    ],
    "satz": "Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-11",
+   "name": "ISEMBYLD",
+   "wirkstoff": "APITEGROMAB-MSTN",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "SCHOLAR ROCK INC",
+   "kennzeichen": [
+    "BLA",
+    "Label Sep 17, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-BLA761463",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b1cd8ab8-8a10-48ed-9806-75a44f22b963",
+   "indikation_en": "ISEMBYLD is indicated for the treatment of spinal muscular atrophy (SMA) in adults and pediatric patients 2 years of age and older who are currently receiving a survival motor neuron 2 (SMN2)-targeted treatment. ISEMBYLD is a recombinant monoclonal antibody targeting proforms of myostatin, indicated for the treatment of spinal muscular atrophy (SMA) in adults and pediatric patients 2 years of age and older who are currently receiving a survival motor neuron 2 (SMN2)-targeted treatment. ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Apitegromab-MSTN (ISEMBYLD) zur Behandlung der spinalen Muskelatrophie bei Patienten ab zwei Jahren unter SMN2-gerichteter Therapie zugelassen."
   },
   {
    "stufe": "diga",
@@ -1017,24 +1017,6 @@
   {
    "stufe": "zulassung",
    "datum": "2026-08-20",
-   "name": "Aujemflu",
-   "wirkstoff": "A/(H1N1)-like virus antigen;A/(H3N2)-like virus antigen;B (Victoria lineage)-like virus antigen",
-   "gebiet_mesh": "Influenza, Human",
-   "atc": "J07BB02",
-   "inhaber": "Seqirus Netherlands B.V.",
-   "kennzeichen": [],
-   "gutachten": "",
-   "nummer": "EMEA/H/C/006692",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/aujemflu",
-   "indikation_en": "Prophylaxis of influenza in adults 50 years of age and older. Aujemflu should be used in accordance with official recommendations.",
-   "hubs": [
-    "impfen"
-   ],
-   "satz": "Aujemflu (Influenza-A(H1N1)-, A(H3N2)- und B(Victoria)-Virus-Antigene) ist zur Prophylaxe der Influenza bei Erwachsenen ab 50 Jahren zugelassen."
-  },
-  {
-   "stufe": "zulassung",
-   "datum": "2026-08-20",
    "name": "Hopledo",
    "wirkstoff": "carbidopa monohydrate;levodopa",
    "gebiet_mesh": "Parkinson Disease",
@@ -1049,6 +1031,24 @@
     "longevity"
    ],
    "satz": "Hopledo (Levodopa/Carbidopa) ist zur Behandlung von Parkinson-Patienten mit moderaten bis schweren Motorfluktuationen indiziert, die auf orale Levodopa/DDC-Inhibitor-Therapie nicht ausreichend ansprechen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-08-20",
+   "name": "Aujemflu",
+   "wirkstoff": "A/(H1N1)-like virus antigen;A/(H3N2)-like virus antigen;B (Victoria lineage)-like virus antigen",
+   "gebiet_mesh": "Influenza, Human",
+   "atc": "J07BB02",
+   "inhaber": "Seqirus Netherlands B.V.",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006692",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/aujemflu",
+   "indikation_en": "Prophylaxis of influenza in adults 50 years of age and older. Aujemflu should be used in accordance with official recommendations.",
+   "hubs": [
+    "impfen"
+   ],
+   "satz": "Aujemflu (Influenza-A(H1N1)-, A(H3N2)- und B(Victoria)-Virus-Antigene) ist zur Prophylaxe der Influenza bei Erwachsenen ab 50 Jahren zugelassen."
   },
   {
    "stufe": "fda",
@@ -2644,27 +2644,6 @@
     "diabetes"
    ],
    "satz": "Bysumlog (Insulin lispro) ist zur Behandlung von Diabetes mellitus bei Erwachsenen und Kindern zugelassen, die Insulin zur Aufrechterhaltung der Glukosehomöostase benötigen, sowie zur initialen Stabilisierung des Diabetes mellitus."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-05-01",
-   "name": "VEPPANU",
-   "wirkstoff": "VEPDEGESTRANT",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "RIGEL PHARMS",
-   "kennzeichen": [
-    "NDA",
-    "Label Jun 17, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA219835",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=484e21ba-8fe1-4c6d-b923-8ba4cf5b2f20",
-   "indikation_en": "VEPPANU is indicated for the treatment of adults with estrogen receptor (ER)-positive, human epidermal growth factor receptor 2 (HER2)-negative, estrogen receptor-1 (ESR1) -mutated advanced or metastatic breast cancer, as detected by an FDA-authorized test, with disease progression following at least one line of endocrine therapy. VEPPANU is a heterobifunctional protein degrader indicated for the treatment of adults with estrogen receptor (ER)-positive, human epidermal growth factor receptor 2 (HER2)-negative, estrogen receptor-1 ( ESR1) -mutated advanced or metastatic breast cancer, as detected by an FDA-authorized test, with disease progression following at least one line of endocrine therapy. ( 1 ) 2",
-   "hubs": [
-    "onkologie"
-   ],
-   "satz": "Die FDA hat Vepdegestrant (Veppanu) zur Behandlung von ER-positivem, HER2-negativem, ESR1-mutiertem fortgeschrittenem oder metastasiertem Mammakarzinom nach Progression unter Endokrinotherapie zugelassen."
   },
   {
    "stufe": "antrag",
