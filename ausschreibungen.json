@@ -12,7 +12,7 @@
    "slug": "versorgungsforschung",
    "name": "Versorgungsforschung",
    "domain": "wissen.m-vf.de",
-   "anzahl": 1,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich)",
@@ -22,6 +22,24 @@
      "land": "DE",
      "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
      "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
+    },
+    {
+     "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357524",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
+    },
+    {
+     "titel": "Public Health Crisis Response Cooperative Agreement",
+     "frist": "2027-02-11",
+     "url": "https://www.grants.gov/search-results-detail/337086",
+     "quelle": "grants.gov (HHS-CDC-OPHPR)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Public Health Crisis Response Cooperative Agreement"
     }
    ]
   },
@@ -60,18 +78,8 @@
    "slug": "longevity",
    "name": "Gesundes Altern & Longevity",
    "domain": "longevity.m-vf.de",
-   "anzahl": 1,
-   "ausschreibungen": [
-    {
-     "titel": "Seamless Early-Stage Clinical Drug Development (Phase 1 to 2a) for Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD) (UG3/UH3 Clinical Trial Required)",
-     "frist": "2026-11-19",
-     "url": "https://www.grants.gov/search-results-detail/357343",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD)"
-    }
-   ]
+   "anzahl": 0,
+   "ausschreibungen": []
   },
   {
    "slug": "healthliteracy",
@@ -91,25 +99,16 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 3,
+   "anzahl": 6,
    "ausschreibungen": [
     {
-     "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
-     "frist": "2027-01-26",
-     "url": "https://www.grants.gov/search-results-detail/360366",
-     "quelle": "grants.gov (HHS-NIH11)",
+     "titel": "DoW Orthopaedic, Clinical Research Award",
+     "frist": "2026-11-18",
+     "url": "https://www.grants.gov/search-results-detail/362524",
+     "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery"
-    },
-    {
-     "titel": "HEAL Initiative: Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)",
-     "frist": "2027-01-26",
-     "url": "https://www.grants.gov/search-results-detail/360048",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Integrative Management of Chronic Pain and OUD for Whole Recovery"
+     "beleg": "DoW Orthopaedic, Clinical Research Award"
     },
     {
      "titel": "Silvio O. Conte Digestive Diseases Research Core Centers (P30-Clinical Trial Optional)",
@@ -118,7 +117,43 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Digestive Diseases Research Core Centers"
+     "beleg": "Silvio O. Conte Digestive Diseases Research Core Centers"
+    },
+    {
+     "titel": "Limited Competition for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers (U01 Clinical Trial Required)",
+     "frist": "2026-11-06",
+     "url": "https://www.grants.gov/search-results-detail/360679",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Clinical Centers"
+    },
+    {
+     "titel": "Single Source for the Continuation of the Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center (U01 Clinical Trial Required)",
+     "frist": "2026-11-09",
+     "url": "https://www.grants.gov/search-results-detail/360458",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Caring for OutPatiEnts after Acute Kidney Injury (COPE-AKI) Scientific and Data Research Center"
+    },
+    {
+     "titel": "Cooperative Research Agreements Related to the World Trade Center Health Program (U01)",
+     "frist": "2026-12-08",
+     "url": "https://www.grants.gov/search-results-detail/356163",
+     "quelle": "grants.gov (HHS-CDC-HHSCDCERA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "World Trade Center Health Program"
+    },
+    {
+     "titel": "Exploratory/Developmental Grants Related to the World Trade Center Health Program (R21)",
+     "frist": "2026-12-08",
+     "url": "https://www.grants.gov/search-results-detail/360753",
+     "quelle": "grants.gov (HHS-CDC-HHSCDCERA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "World Trade Center Health Program"
     }
    ]
   },
@@ -191,16 +226,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
-    },
-    {
-     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
-     "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/360606",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Glioblastoma Therapeutics Network (GTN)"
+     "beleg": "National Cancer Institute's Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
     },
     {
      "titel": "Cancer Prevention and Control Clinical Trials Grant Program (R01 Clinical Trial Required)",
@@ -218,7 +244,16 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "expand cancer screening and preventive services"
+     "beleg": "Interventions to expand cancer screening and preventive services"
+    },
+    {
+     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
+     "frist": "2027-01-11",
+     "url": "https://www.grants.gov/search-results-detail/360606",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)"
     },
     {
      "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
@@ -248,13 +283,13 @@
      "beleg": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2"
     },
     {
-     "titel": "Discovery of the Genetic Basis of Childhood Cancers and of Congenital Anomalies: Gabriella Miller Kids First Pediatric Research Program (X01 Clinical Trial Not Allowed)",
-     "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/361164",
+     "titel": "Secondary Analysis and Integration of Existing Data to Elucidate Cancer Risk and Related Outcomes (R01 Clinical Trial Not Allowed)",
+     "frist": "2026-11-06",
+     "url": "https://www.grants.gov/search-results-detail/357204",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Discovery of the Genetic Basis of Childhood Cancers"
+     "beleg": "Secondary Analysis and Integration of Existing Data to Elucidate Cancer Risk and Related Outcomes"
     }
    ]
   },
@@ -271,7 +306,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
+     "beleg": "Stroke Treatment, Recovery, and Prevention"
     },
     {
      "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R61/R33 Clinical Trial Required)",
@@ -280,7 +315,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
+     "beleg": "Therapeutics and/or Diagnostics for HLBS Disorders"
     },
     {
      "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R33 CT Required)",
@@ -289,7 +324,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
+     "beleg": "Therapeutics and/or Diagnostics for HLBS Disorders"
     }
    ]
   },
@@ -300,9 +335,9 @@
    "anzahl": 2,
    "ausschreibungen": [
     {
-     "titel": "Specialized Alcohol Research Centers (P50 Clinical trial Optional)",
+     "titel": "Diabetes Research Centers (P30 Clinical Trial Optional)",
      "frist": "2027-01-27",
-     "url": "https://www.grants.gov/search-results-detail/361216",
+     "url": "https://www.grants.gov/search-results-detail/359145",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
