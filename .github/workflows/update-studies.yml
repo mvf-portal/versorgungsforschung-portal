@@ -188,6 +188,22 @@ jobs:
         continue-on-error: true
         run: python scripts/gemeinsam/newsfeed.py
 
+      # ---- Dach-Band unter der Suche --------------------------------------
+      # Das Band zeigt dreizehn Zahlen des ganzen Fachs. Zehn davon kommen
+      # aus Bestaenden, die es nur auf Peters Rechner gibt - die stehen
+      # fest, mit sichtbarem Standdatum. Drei kommen aus Dateien DIESES
+      # Repos, die der Lauf oben gerade frisch gemacht hat, und nur die
+      # fuehrt dieser Schritt nach.
+      #
+      # Warum ueberhaupt: Am 02.11.2026 nannte das Band 24 offene
+      # Ausschreibungen und der Kasten darunter 25 - zwei Zahlen fuer
+      # dieselbe Sache auf einer Seite. Muss NACH ausschreibungen.py und
+      # zulassungen.py laufen, sonst fuehrt es den Vortagsstand nach.
+      - name: Dach-Band nachfuehren (nur Versorgungsforschung)
+        id: dachband
+        continue-on-error: true
+        run: python scripts/dachband_nachfuehren.py
+
       # Legt bei Mailchimp einen ENTWURF an und schickt eine Testausgabe zur
       # Entwurf anlegen, pruefen, terminieren. Verschickt wird hier noch nichts:
       # Die Kampagne wird auf TERMIN_UTC gesetzt und laesst sich bis dahin in
@@ -293,7 +309,7 @@ jobs:
       # "Newsletter-Entwurf anlegen" - dort steht, warum er gruen scheitern
       # darf und warum der Lauf es hier trotzdem sagen muss.
       - name: Ausgefallenen Newsletter- oder Radar-Schritt melden
-        if: steps.newsletter.outcome == 'failure' || steps.zulassungen.outcome == 'failure'
+        if: steps.newsletter.outcome == 'failure' || steps.zulassungen.outcome == 'failure' || steps.dachband.outcome == 'failure'
         run: |
           if [ "${{ steps.newsletter.outcome }}" = "failure" ]; then
             echo "::error::Der Newsletter-Schritt ist gescheitert - fuer heute" \
@@ -312,5 +328,18 @@ jobs:
                  "und die Radarseite stehen auf dem Stand des Vortags. Studien," \
                  "Archiv und Feed sind aktualisiert; nachzusehen ist allein der" \
                  "Schritt 'Zulassungsradar aktualisieren'."
+          fi
+          # Dasselbe fuer das Dach-Band. Es bricht absichtlich hart ab, wenn
+          # eine Beschriftung nicht genau einmal vorkommt, statt die Haelfte
+          # nachzufuehren. Faellt es aus, stehen auf der Startseite zwei
+          # verschiedene Zahlen fuer dieselbe Sache - sichtbar, aber nur,
+          # wenn jemand hinsieht.
+          if [ "${{ steps.dachband.outcome }}" = "failure" ]; then
+            echo "::error::Das Dach-Band wurde nicht nachgefuehrt - Literatur," \
+                 "Ausschreibungen und Zulassungsverfahren stehen dort auf dem" \
+                 "Stand des Vortags und koennen den Kaesten weiter unten" \
+                 "widersprechen. Nachzusehen ist der Schritt 'Dach-Band" \
+                 "nachfuehren'. Neu bauen laesst es sich nur lokal mit" \
+                 "vf-landkarte/dachband.py."
           fi
           exit 1
