@@ -1667,11 +1667,11 @@
 <header class="masthead">
   <div class="kopfband">
     <div class="wrap">
-      <p class="kopf-eyebrow">KNOWLEDGE-HUB</p>
+      <p class="kopf-eyebrow">KNOWLEDGE-HUB &middot; DAS FACH</p>
       <h1 class="serif">Versorgungsforschung
-        <span class="sub">Ein Zugang zu allen wichtigen Datenbanken</span>
+        <span class="sub">Das ganze Fach an einer Stelle, nicht eines von fünfzehn Themen</span>
       </h1>
-      <p class="lede" id="kopfLede">Forschung, Daten und Regeln zur Versorgung in Deutschland. Ein Suchbegriff öffnet die Suche in allen Datenbanken, jeden Morgen kommen neue Studien mit deutscher Zusammenfassung dazu.</p>
+      <p class="lede" id="kopfLede">Forschung, Daten und Regeln zur Versorgung in Deutschland. Ein Suchbegriff öffnet die Suche in allen Datenbanken, jeden Morgen kommen neue Studien mit deutscher Zusammenfassung dazu. Dazu Studien, Einrichtungen, Forschende und Förderung des Fachs, zusammengeführt aus dreizehn Beständen.</p>
       <button class="lede-mehr" id="ledeMehr" type="button" aria-controls="kopfLede" aria-expanded="false" hidden>Weiterlesen</button>
       <!-- Hinweis eines einzelnen Hubs, der nicht weggeklappt werden darf - im Hub
            Psychische Gesundheit die Hilfe in Krisen (Entscheidung des Herausgebers,
@@ -1854,6 +1854,88 @@
           Der Medienpartner nimmt darauf keinen Einfluss.</p>
         </div>
       </div>
+<!-- __DACH_BAND_ANFANG__  erzeugt von vf-landkarte/dachband.py  nicht von Hand aendern -->
+<!-- Das Dach-Band fuer wissen.m-vf.de.
+
+     ⚠ NICHT VON HAND AENDERN. Erzeugt von vf-landkarte/fach.py --band
+     und von dort in versorgungsforschung-portal/index.html eingesetzt,
+     zwischen den Marken __DACH_BAND_ANFANG__ und __DACH_BAND_ENDE__.
+
+     Hier steht der feste Text. Die Zahlen setzt fach.py aus
+     daten/fachbestand.json ein, keine steht in dieser Datei.
+
+     Farben kommen aus den Tokens der Seite (--brand, --card, --line),
+     damit heller und dunkler Modus ohne eigenes Zutun stimmen. -->
+
+<style>
+.mvf-dach{background:var(--card-2);border-top:1px solid var(--line-soft);
+  border-bottom:1px solid var(--line-soft);padding:38px 0 42px;margin:0}
+.mvf-dach .mvf-dach-kopf{max-width:60ch}
+.mvf-dach .mvf-dach-auge{font-size:.78rem;font-weight:900;
+  text-transform:uppercase;letter-spacing:.09em;color:var(--accent);
+  margin:0 0 6px}
+.mvf-dach h2{font-size:1.5rem;line-height:1.25;color:var(--brand-deep);
+  margin:0 0 10px}
+.mvf-dach .mvf-dach-lede{color:var(--ink-soft);line-height:1.6;margin:0}
+/* ⚠ KEIN auto-fit HIER. Bei vier Karten ergibt es je nach Breite 3 + 1,
+   und die vierte steht allein in einer leeren Reihe. Feste Stufen:
+   vier nebeneinander, sonst zwei, auf dem Telefon eine. */
+.mvf-dach-karten{display:grid;gap:16px;margin:24px 0 0;
+  grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:1080px){
+  .mvf-dach-karten{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+a.mvf-dach-karte{display:block;text-decoration:none;color:inherit;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:18px 20px 20px;box-shadow:var(--shadow);
+  transition:border-color .12s,transform .12s}
+a.mvf-dach-karte:hover{border-color:var(--brand);transform:translateY(-2px);
+  box-shadow:var(--shadow-hover)}
+.mvf-dach-karte h3{margin:0 0 4px;font-size:1.1rem;color:var(--brand-deep)}
+.mvf-dach-karte .mvf-dach-was{margin:0 0 12px;font-size:.88rem;
+  color:var(--ink-faint);line-height:1.45}
+.mvf-dach-karte ul{list-style:none;margin:0;padding:0}
+.mvf-dach-karte li{display:flex;gap:8px;align-items:baseline;
+  padding:5px 0;border-top:1px solid var(--line-soft);font-size:.92rem}
+.mvf-dach-karte li:first-child{border-top:0}
+.mvf-dach-karte b{color:var(--brand);font-weight:900;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.mvf-dach-karte span{color:var(--ink-soft)}
+.mvf-dach-fuss{margin:20px 0 0;font-size:.85rem;color:var(--ink-faint)}
+.mvf-dach-fuss a{color:var(--brand)}
+@media (max-width:720px){
+  .mvf-dach{padding:28px 0 30px}
+  .mvf-dach h2{font-size:1.3rem}
+  .mvf-dach-karten{grid-template-columns:1fr}
+}
+</style>
+
+<section class="mvf-dach" aria-labelledby="mvf-dach-titel">
+  <div class="wrap">
+    <div class="mvf-dach-kopf">
+      <p class="mvf-dach-auge">Nicht ein Thema, sondern das Fach</p>
+      <h2 id="mvf-dach-titel">Versorgungsforschung ist die Klammer um die
+        anderen vierzehn Hubs</h2>
+      <p class="mvf-dach-lede">Adipositas, Diabetes oder Kardiologie sind
+        Gegenstände <i>in</i> der Versorgungsforschung. Dieser Hub steht
+        deshalb eine Ebene höher: Er führt zusammen, was das Fach ausmacht,
+        und sagt bei jeder Zahl, woher sie kommt.</p>
+    </div>
+
+    <div class="mvf-dach-karten">
+    <a class="mvf-dach-karte" href="https://studien.m-vf.de/rekrutierend.html"><h3>Was gerade läuft</h3><p class="mvf-dach-was">Vorhaben, die noch nicht zu Ende sind.</p><ul><li><b>265</b><span>Studien suchen Teilnehmende</span></li><li><b>710</b><span>registrierte Studien</span></li><li><b>861</b><span>Innovationsfonds-Projekte</span></li></ul></a>
+    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>460</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>5.653</b><span>Studien der 15 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
+    <a class="mvf-dach-karte" href="https://studien.m-vf.de/forschende.html"><h3>Wer es macht</h3><p class="mvf-dach-was">Menschen, Häuser und Geldgeber, und wie sie zusammenhängen.</p><ul><li><b>5.373</b><span>Forschende</span></li><li><b>2.430</b><span>Institutionen</span></li><li><b>484</b><span>Förderer</span></li></ul></a>
+    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>24</b><span>offene Ausschreibungen</span></li><li><b>134</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
+    </div>
+
+    <p class="mvf-dach-fuss">Stand 2. November 2026. Die Zahlen werden in
+      Abständen nachgeführt und stehen hier fest, damit keine davon still
+      veraltet. 17.943 Einträge aus 13 Quellen.</p>
+  </div>
+</section>
+<!-- __DACH_BAND_ENDE__ -->
+
       <!-- Band „Aktuell im Hub" (Entwurf Mariann Stegmaier, Hub-Seiten S. 3).
            Bis Oktober 2026 eine schmale Spalte rechts neben der Suche - auf dem
            Handy rutschte sie hinter die Suche, und Seitenspalten werden als
