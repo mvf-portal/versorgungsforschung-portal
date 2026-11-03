@@ -1931,9 +1931,9 @@ a.mvf-dach-karte:hover{border-color:var(--brand);transform:translateY(-2px);
 
     <div class="mvf-dach-karten">
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/rekrutierend.html"><h3>Was gerade läuft</h3><p class="mvf-dach-was">Vorhaben, die noch nicht zu Ende sind.</p><ul><li><b>265</b><span>Studien suchen Teilnehmende</span></li><li><b>710</b><span>registrierte Studien</span></li><li><b>861</b><span>Innovationsfonds-Projekte</span></li></ul></a>
-    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>479</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>5.653</b><span>Studien der 15 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
+    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>480</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>5.653</b><span>Studien der 15 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/forschende.html"><h3>Wer es macht</h3><p class="mvf-dach-was">Menschen, Häuser und Geldgeber, und wie sie zusammenhängen.</p><ul><li><b>5.373</b><span>Forschende</span></li><li><b>2.430</b><span>Institutionen</span></li><li><b>484</b><span>Förderer</span></li></ul></a>
-    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>22</b><span>offene Ausschreibungen</span></li><li><b>134</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
+    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>22</b><span>offene Ausschreibungen</span></li><li><b>133</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
     </div>
 
     <p class="mvf-dach-fuss">Literatur, Ausschreibungen und
@@ -2252,62 +2252,17 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "2. Nov. 2026, 05:00 Uhr";
+const SNAP_DATE = "3. Nov. 2026, 05:20 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"Med J Aust", year:"2026", pmid:"42960556",
-    author:"Vagholkar S et al.", pubdate:"Nov. 2026",
-    added:"30.10.2026",
-    title:"MyMedicare-Registrierung: Sicht von Praxisteams und Patienten in Australien",
-    sum:"Qualitative Studie mit 45 Praxismitarbeitern und 50 Patienten zu Wahrnehmung und Implementierung des freiwilligen MyMedicare-Registrierungsschemas seit Oktober 2023 in Australien.",
-    result:"Breite Unterstützung für das Konzept, aber limitierte aktuelle Nutzen und erhebliche Implementierungslast für Praxen. Patienten zeigen geringes Verständnis und geringe Registrierungsraten trotz Praktizierenden-Engagement. Administrative Last lenkt von klinischer Arbeit ab.",
-    transfer:"Evaluation früher Implementierungsphase eines Registrierungsschemas; Erkenntnisse für ähnliche Kontinuitäts-Programme in Sozialversicherungssystemen übertragbar."
-  },
-  {
-    journal:"Glob Heart", year:"2026", pmid:"42965135",
-    author:"Win TM et al.", pubdate:"30.10.2026",
-    added:"31.10.2026",
-    title:"Barrieren und Enabler bei Herzinsuffizienz-Leitlinientherapie: qualitative Stakeholder-Studie",
-    sum:"Qualitative Studie mit 38 Gesundheitsprofessionals (Kardiologen, Ärzte, Pflegekräfte, Apotheker) aus sieben öffentlichen Kliniken in Singapur zu Barrieren und Enabler bei Verschreibung und Titration von Quadruple-Therapie.",
-    result:"Hohe Guideline-Awareness, aber variable Therapieinitiation. Barrieren: Gap zwischen Studienevidenz und Realität multimorbider Patienten, Sicherheitsbedenken, klinische Trägheit, Kompetenzgrenzen. Enabler: Nurse-/Pharmacist-led Titrationskliniken mit Spezialistenunterstützung; Leitlinien als gemeinsamer Rahmen für standardisierte Versorgung.",
-    transfer:"Multi-Stakeholder-Perspektive aus entwickeltem Gesundheitssystem; Erkenntnisse zu Implementierungsbarrieren für andere Hocheinkommensländer relevant."
-  },
-  {
-    journal:"Perspect Med Educ", year:"2026", pmid:"42965145",
-    author:"van Oorschot F et al.", pubdate:"30.10.2026",
-    added:"31.10.2026",
-    title:"Professionelle Identitätsbildung durch Reflexion: niederländische Ärzte-Studie",
-    sum:"Interpretativ-phänomenologische Analyse von 15 Interviews mit niederländischen Hausärzten und Altenpflegern über ihre Reflexionserfahrungen während der Weiterbildung und deren Auswirkungen auf aktuelle Praxis.",
-    result:"Supervised Collaborative Reflection (SCR) wird als strukturierter Ansatz internalisiert und integriert. Fünf Auswirkungsbereiche: Verinnerlichung reflektiver Praktiken, Perspektivenbewusstsein, relationale/reflektive Kommunikation, emotionale Entwicklung, Wohlbefinden. Reflektive Praxis bleibt im beruflichen Alltag verankert.",
-    transfer:"Niederlande, vergleichbares Sozialversicherungssystem; Befunde zur reflexiven Professionalisierung für deutschsprachige Weiterbildungskonzepte relevant."
-  },
-  {
-    journal:"J Int Assoc Provid AIDS Care", year:"2026", pmid:"42954249",
-    author:"Howard-Williams EL et al.", pubdate:"29.10.2026",
-    added:"29.10.2026",
-    title:"Barrieren zur HIV-Screening-Umsetzung in der Primärversorgung",
-    sum:"Querschnittserhebung (40 von 406 angesprochenen Primärversorgern in North Carolina) zu Guideline-Awareness, Screening-Praxis und wahrgenommenen Barrieren für universelles HIV-Screening (USPSTF 2019).",
-    result:"21/40 (52,5%) waren guideline-aware; 17/40 (42,5%) bieten Screening regelmäßig an. 34/40 (85%) befürworten Screening, aber 27/40 (67,5%) glauben, Patienten erwarten es nicht; 26/40 (65%) unsicher in Positivergebnis-Management. Hauptbarrieren: erwartete Patientenablehnung, konkurrierende Prioritäten, Zeitmangel, niedriges Risikogefühl. EHR-Reminder als top-Intervention (33/40, 82,5%).",
-    transfer:"US-Daten, aber Fragestellung zu Implementierungsbarrieren struktureller Screening-Empfehlungen systemübergreifend relevant."
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42963772",
-    author:"Gessese RT et al.", pubdate:"29.07.2026",
-    added:"31.10.2026",
-    title:"Public-Private Partnership im Gesundheitssektor: qualitative Evaluierung in Äthiopien",
-    sum:"Qualitative Evaluierung (9 Schlüsselinformanten) zu Design, Beschaffung und früher Implementierung des ersten Health-Sektor-PPP in Äthiopien (Integrated Diagnostic Center nach DBFOT-Modell).",
-    result:"PPP folgt Design-Build-Finance-Operate-Transfer-Modell mit Mischfinanzierung. Fünf Themenbereiche identifiziert: Design/Beschaffung, Finanzierung/Risikoteilung, Service-Delivery, Implementierungschallenges (Regulierungslücken, Kapazitätsmängel, COVID-19), Skalierungspotenzial. Adaptive iterative Prozesse trotz erheblicher Constraints erfolgreich.",
-    transfer:"Ressourcenbeschränktes Setting; Implementierungs-Roadmap für PPP-Entwicklung in Low-Income-Ländern mit Sozialversicherungselementen."
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42963564",
-    author:"Deng Q et al.", pubdate:"29.07.2026",
-    added:"31.10.2026",
-    title:"Konfigurationen von Ressourcen und Capabilities für Krankenhausperformance: China-Studie",
-    sum:"Fuzzy-Set Qualitative Comparative Analysis (fsQCA) von Tertiärspitälern in einer chinesischen Provinz (2017-2018, Cross-sektional + longitudinal) zu RBV-DCT-Integration: welche Ressourcen-/Capability-Kombinationen führen zu High vs. Low Performance.",
-    result:"Keine Einzelbedingung notwendig oder hinreichend. Drei Konfigurationen führen zu High Performance: (1) abundant HR + starke Learning + schwache Integration; (2) abundant HR + starke Perception + Learning; (3) starke Perception/Learning/Integration + limitierte Finanzressourcen. Low Performance primär durch Absence of Learning + schwache Perception/Integration. Äquifinalität bestätigt: Konfigurationseffekte, nicht additive Effekte.",
-    transfer:"China, Daten aus öffentlichem Krankenhaussektor; Organisationsmanagement-Erkenntnisse zu Ressourcenoptimierung in komplexen Gesundheitssystemen."
+    journal:"JMIR Form Res", year:"2026", pmid:"42970788",
+    author:"Poppe A et al.", pubdate:"02.11.2026",
+    added:"02.11.2026",
+    title:"Living-Lab-Ansatz zur Optimierung digitaler Verschreibungsworkflows",
+    sum:"Qualitative Analyse der Co-Design-Prozesse zur Entwicklung eines digitalen Rezeptsystems durch interprofessionelle Zusammenarbeit zwischen Hausärzten, Apothekern und weiteren Akteuren an drei deutschen Standorten.",
+    result:"Neun kulturelle Dimensionen identifiziert: Workflow-Effizienz, technische Implementierung und neue Arbeitsformen. Zentrale Befunde waren Workload-Bedenken, Interoperabilitätsprobleme, Rollen-Abstimmungen sowie erhebliche Divergenzen zwischen Ärzten und Apothekern über erforderliche Datenaustausche für Arzneimittelsicherheitsprüfungen.",
+    transfer:"Deutsche Routinedaten, Living-Lab-Methodik in drei Bundesländern, Sozialversicherungssystem"
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
@@ -2322,7 +2277,7 @@ const RADAR_FRISTEN = [["2026-12-31", "2027-01-07", "2027-01-07", "2027-01-07"],
 // === RADAR-BLOCK-ENDE ===
 
 // === ZULASSUNG-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const ZUL_STAND = "02.11.2026";
+const ZUL_STAND = "03.11.2026";
 const ZUL_EIGENE = 0;
 const ZUL_GUTACHTEN = 0;
 const ZUL_ZULASSUNG = 0;
@@ -2332,7 +2287,7 @@ const ZUL_DIGA = 0;
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "02.11.2026";
+const NEWS_STAND = "03.11.2026";
 const NEWS = [
   {titel:"Was kann Primärversorgung leisten? Zi nimmt einen Faktencheck anhand von Daten und Studien vor", datum:"2026-10-28", url:"https://www.monitor-versorgungsforschung.de/news/was-kann-primaerversorgung-leisten-zi-nimmt-einen-faktencheck-anhand-von-daten-und-studien-vor/"},
   {titel:"Hyperlipidämie bei Kindern: S3-Leitlinie aus Innovationsfonds-Projekt", datum:"2026-10-26", url:"https://www.monitor-versorgungsforschung.de/news/hyperlipidaemie-bei-kindern-s3-leitlinie-aus-innovationsfonds-projekt/"},
