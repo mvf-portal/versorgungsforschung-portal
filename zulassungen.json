@@ -1,5 +1,5 @@
 {
- "stand": "03.11.2026",
+ "stand": "04.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
@@ -1781,21 +1781,20 @@
   {
    "stufe": "zulassung",
    "datum": "2026-07-15",
-   "name": "Vislyfa",
-   "wirkstoff": "ranibizumab",
-   "gebiet_mesh": "Wet Macular Degeneration;Macular Edema;Diabetes Complications;Retinal Vein Occlusion;Choroidal Neovascularization",
-   "atc": "S01LA04",
-   "inhaber": "Lupin Europe GmbH",
+   "name": "Liraglutide STADA",
+   "wirkstoff": "liraglutide",
+   "gebiet_mesh": "Diabetes Mellitus",
+   "atc": "A10BJ02",
+   "inhaber": "STADA Arzneimittel AG",
    "kennzeichen": [],
    "gutachten": "",
-   "nummer": "EMEA/H/C/006926",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/vislyfa",
-   "indikation_en": "Vislyfa is indicated in adults for: The treatment of neovascular (wet) age-related macular degeneration (AMD) The treatment of visual impairment due to diabetic macular oedema (DME) The treatment of proliferative diabetic retinopathy (PDR) The treatment of visual impairment due to macular oedema secondary to retinal vein occlusion (branch RVO or central RVO) The treatment of visual impairment due to choroidal neovascularisation (CNV)",
+   "nummer": "EMEA/H/C/006615",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/liraglutide-stada",
+   "indikation_en": "Treatment of adults, adolescents and children aged 10 years and above with insufficiently controlled type 2 diabetes as an adjunct to diet and exercise",
    "hubs": [
-    "diabetes",
-    "longevity"
+    "diabetes"
    ],
-   "satz": "Vislyfa (Ranibizumab) ist bei Erwachsenen zur Behandlung der feuchten altersbezogenen Makuladegeneration, diabetischen Makulaödem, proliferativen diabetischen Retinopathie, Makulaödem nach Netzhautvenenverschluss und choroidalen Neovaskularisation zugelassen."
+   "satz": "Liraglutide STADA (Liraglutide) ist zur Behandlung von Typ-2-Diabetes mellitus bei unzureichender Kontrolle durch Diät und Bewegung bei Erwachsenen, Jugendlichen und Kindern ab 10 Jahren zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -1818,20 +1817,21 @@
   {
    "stufe": "zulassung",
    "datum": "2026-07-15",
-   "name": "Liraglutide STADA",
-   "wirkstoff": "liraglutide",
-   "gebiet_mesh": "Diabetes Mellitus",
-   "atc": "A10BJ02",
-   "inhaber": "STADA Arzneimittel AG",
+   "name": "Vislyfa",
+   "wirkstoff": "ranibizumab",
+   "gebiet_mesh": "Wet Macular Degeneration;Macular Edema;Diabetes Complications;Retinal Vein Occlusion;Choroidal Neovascularization",
+   "atc": "S01LA04",
+   "inhaber": "Lupin Europe GmbH",
    "kennzeichen": [],
    "gutachten": "",
-   "nummer": "EMEA/H/C/006615",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/liraglutide-stada",
-   "indikation_en": "Treatment of adults, adolescents and children aged 10 years and above with insufficiently controlled type 2 diabetes as an adjunct to diet and exercise",
+   "nummer": "EMEA/H/C/006926",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/vislyfa",
+   "indikation_en": "Vislyfa is indicated in adults for: The treatment of neovascular (wet) age-related macular degeneration (AMD) The treatment of visual impairment due to diabetic macular oedema (DME) The treatment of proliferative diabetic retinopathy (PDR) The treatment of visual impairment due to macular oedema secondary to retinal vein occlusion (branch RVO or central RVO) The treatment of visual impairment due to choroidal neovascularisation (CNV)",
    "hubs": [
-    "diabetes"
+    "diabetes",
+    "longevity"
    ],
-   "satz": "Liraglutide STADA (Liraglutide) ist zur Behandlung von Typ-2-Diabetes mellitus bei unzureichender Kontrolle durch Diät und Bewegung bei Erwachsenen, Jugendlichen und Kindern ab 10 Jahren zugelassen."
+   "satz": "Vislyfa (Ranibizumab) ist bei Erwachsenen zur Behandlung der feuchten altersbezogenen Makuladegeneration, diabetischen Makulaödem, proliferativen diabetischen Retinopathie, Makulaödem nach Netzhautvenenverschluss und choroidalen Neovaskularisation zugelassen."
   },
   {
    "stufe": "zulassung",
