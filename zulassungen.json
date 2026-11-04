@@ -443,27 +443,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-25",
-   "name": "ATEBRIOZ",
-   "wirkstoff": "ZILURGISERTIB FUMARATE",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "MIRUM",
-   "kennzeichen": [
-    "NDA",
-    "Label Oct 12, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA221198",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f542e4b0-072a-42c6-80c9-5977054971e0",
-   "indikation_en": "ATEBRIOZ is indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ATEBRIOZ is an activin receptor-like kinase-2 (ALK2) inhibitor indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ( 1 ) 2.",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": "Die FDA hat Zilurgisertib-Fumarat (Atebrioz) zur Reduktion neuer heterotoper Ossifikationen bei Fibrodysplasia ossificans progressiva zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-25",
    "name": "JUVMO",
    "wirkstoff": "TAVAPADON",
    "gebiet_mesh": "",
@@ -481,6 +460,27 @@
     "longevity"
    ],
    "satz": "Die FDA hat Tavapadon (JUVMO) zur Behandlung der Parkinson-Krankheit bei Erwachsenen zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-25",
+   "name": "ATEBRIOZ",
+   "wirkstoff": "ZILURGISERTIB FUMARATE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "MIRUM",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 12, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA221198",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f542e4b0-072a-42c6-80c9-5977054971e0",
+   "indikation_en": "ATEBRIOZ is indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ATEBRIOZ is an activin receptor-like kinase-2 (ALK2) inhibitor indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ( 1 ) 2.",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Zilurgisertib-Fumarat (Atebrioz) zur Reduktion neuer heterotoper Ossifikationen bei Fibrodysplasia ossificans progressiva zugelassen."
   },
   {
    "stufe": "diga",
@@ -504,6 +504,26 @@
    "satz": "Pia-App bei Regelschmerzen ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
+   "stufe": "fda-wartet",
+   "datum": "2026-09-23",
+   "name": "LYRFIGTU",
+   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ELEVAR",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220425",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
    "stufe": "fda",
    "datum": "2026-09-23",
    "name": "ONSWIK",
@@ -523,26 +543,6 @@
     "diabetes"
    ],
    "satz": "Die FDA hat Insulin Efsitora alfa-gobe (Onswik) zur Verbesserung der Glykämiekontrolle bei Typ-2-Diabetes zugelassen."
-  },
-  {
-   "stufe": "fda-wartet",
-   "datum": "2026-09-23",
-   "name": "LYRFIGTU",
-   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ELEVAR",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220425",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
   },
   {
    "stufe": "zulassung",
@@ -1072,6 +1072,26 @@
    "satz": "Die FDA hat Garetosmab-grts (PASATRU) zur Reduktion neuer heterotoper Ossifikationen und klinisch bewerteter Schübe bei Fibrodysplasia ossificans progressiva zugelassen."
   },
   {
+   "stufe": "fda-wartet",
+   "datum": "2026-08-13",
+   "name": "TAUKLARIFY",
+   "wirkstoff": "FLORQUINITAU F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "CERVEAU LANTHEUS",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220496",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
    "stufe": "fda",
    "datum": "2026-08-13",
    "name": "ZENBEXUS",
@@ -1091,26 +1111,6 @@
     "onkologie"
    ],
    "satz": "Die FDA hat Iberdomide (ZENBEXUS) in Kombination mit Daratumumab und Dexamethason zur Behandlung des multiplen Myeloms zugelassen."
-  },
-  {
-   "stufe": "fda-wartet",
-   "datum": "2026-08-13",
-   "name": "TAUKLARIFY",
-   "wirkstoff": "FLORQUINITAU F-18",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "CERVEAU LANTHEUS",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220496",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
   },
   {
    "stufe": "antrag",
