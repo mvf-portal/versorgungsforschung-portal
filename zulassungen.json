@@ -1,11 +1,11 @@
 {
- "stand": "04.11.2026",
+ "stand": "05.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
   "zulassung": 30,
-  "gutachten": 27,
-  "ohne_hub": 18,
+  "gutachten": 26,
+  "ohne_hub": 17,
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
@@ -961,7 +961,7 @@
    "inhaber": "TAKEDA PHARMS AM",
    "kennzeichen": [
     "NDA",
-    "Label Sep 03, 2026"
+    "Label Nov 04, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA220605",

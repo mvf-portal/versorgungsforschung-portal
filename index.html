@@ -1931,16 +1931,16 @@ a.mvf-dach-karte:hover{border-color:var(--brand);transform:translateY(-2px);
 
     <div class="mvf-dach-karten">
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/rekrutierend.html"><h3>Was gerade läuft</h3><p class="mvf-dach-was">Vorhaben, die noch nicht zu Ende sind.</p><ul><li><b>265</b><span>Studien suchen Teilnehmende</span></li><li><b>710</b><span>registrierte Studien</span></li><li><b>861</b><span>Innovationsfonds-Projekte</span></li></ul></a>
-    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>487</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>5.653</b><span>Studien der 15 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
+    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>493</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>5.653</b><span>Studien der 15 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/forschende.html"><h3>Wer es macht</h3><p class="mvf-dach-was">Menschen, Häuser und Geldgeber, und wie sie zusammenhängen.</p><ul><li><b>5.373</b><span>Forschende</span></li><li><b>2.430</b><span>Institutionen</span></li><li><b>484</b><span>Förderer</span></li></ul></a>
-    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>22</b><span>offene Ausschreibungen</span></li><li><b>133</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
+    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>19</b><span>offene Ausschreibungen</span></li><li><b>133</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
     </div>
 
     <p class="mvf-dach-fuss">Literatur, Ausschreibungen und
       Zulassungsverfahren führt der tägliche Lauf dieses Hubs selbst nach.
       Die übrigen zehn Zahlen stehen fest, Stand 2. November 2026, damit keine
       davon still veraltet. Zusammen
-      <b class="mvf-dach-summe">17.967</b> Einträge aus 13
+      <b class="mvf-dach-summe">17.970</b> Einträge aus 13
       Beständen.</p>
   </div>
 </section>
@@ -2252,86 +2252,77 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "4. Nov. 2026, 05:00 Uhr";
+const SNAP_DATE = "5. Nov. 2026, 15:36 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"J Eval Clin Pract", year:"2026", pmid:"42976194",
-    author:"Chies GAF et al.", pubdate:"Dez. 2026",
+    journal:"Health Econ", year:"2026", pmid:"42982746",
+    author:"Walker B et al.", pubdate:"04.11.2026",
+    added:"04.11.2026",
+    title:"Nicht-traditionelle Rollen und unerfüllte Versorgungsbedarfe in der Primärversorgung",
+    sum:"Vergleich der Effektivität von nicht-traditionellen Leistungserbringern gegenüber Pflegekräften und Ärztinnen/Ärzten in englischen Primary-Care-Praxen bei der Erfüllung von Patientenbedarfen.",
+    result:"Patienten, die nicht-traditionelle Leistungserbringer sahen, hatten eine um 12,6 Prozentpunkte niedrigere Wahrscheinlichkeit, dass ihre Versorgungsbedarfe erfüllt wurden (im Vergleich zu Patienten bei Pflegekräften); dieser Effekt war besonders bei 35- bis 54-Jährigen ausgeprägt.",
+    transfer:"England, Sozialversicherungssystem; begrenzte Übertragbarkeit auf Deutschland wegen anderer Leistungserbringer-Strukturen."
+  },
+  {
+    journal:"Scand J Public Health", year:"2026", pmid:"42979984",
+    author:"Hajek A et al.", pubdate:"04.11.2026",
+    added:"04.11.2026",
+    title:"Einsamkeit am Arbeitsplatz und Inanspruchnahme von Gesundheitsleistungen in Deutschland",
+    sum:"Untersuchung der Assoziation zwischen Einsamkeit am Arbeitsplatz und Inanspruchnahme von Gesundheitsleistungen in einer bevölkerungsrepräsentativen Stichprobe erwerbstätiger Personen.",
+    result:"Arbeitsplatzeinsamkeit war mit signifikant höheren Besuchszahlen bei Hausärztinnen/Hausärzten (aIRR 1,32), Fachärztinnen/Fachärzten (aIRR 1,22) und erhöhten Krankenhauseinweisungen (aOR 1,44) assoziiert, teilweise abhängig von Häufigkeitsgrad der Einsamkeit.",
+    transfer:"Deutsche Routinedaten, bevölkerungsrepräsentativ; direkt übertragbar auf Versorgungsforschung."
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42977986",
+    author:"Lintener H et al.", pubdate:"02.11.2026",
     added:"03.11.2026",
-    title:"Organisatorische Voraussetzungen für Advanced-Access-Systeme in der Primärversorgung",
-    sum:"Qualitative Studie zur Bewertung der organisatorischen Bereitschaft für die Umstellung von traditionellen Terminvergaben auf Advanced Access in Primarversorgungs-Teams in Südbrasilten.",
-    result:"Sechs Bewertungsdomänen identifiziert: Management und Führung, Personalressourcen, Arbeitsprozesse, Kultur und interne Beziehungen, Kommunikation und Gemeinwesen, Arbeitsbelastung und Wohlbefinden. Führungsunterstützung, territoriale Größenordnung und Interprofessionalität ermöglichen nachhaltige Implementierung.",
-    transfer:"Qualitatives Design mit Lektionen für Systemumbauten; UK und Skandinavien vergleichbar"
+    title:"Evaluationshürden bei Hitze-Gesundheitsaktionsplänen: COM-B-Analyse in Deutschland",
+    sum:"Qualitative Analyse von 23 Fachpersonen aus Hitze- und Gesundheitsschutz zu Barrieren und Erleichterungsfaktoren bei der Evaluierung von Hitze-Gesundheitsaktionsplänen in Deutschland.",
+    result:"Evaluation wird in der Praxis selten systematisch durchgeführt, obwohl als wichtig wahrgenommen; zentrale Barrieren sind mangelnde politische Unterstützung, fehlende Evaluierungs-Richtlinien und -Standards, unzureichende Dateninfrastruktur, Personal und Finanzierung; Erleichterungsfaktoren sind klare Mandate und Netzwerkarbeit.",
+    transfer:"Deutsche Daten, öffentliche Verwaltung; direkt relevant für Versorgungsforschung zu Public-Health-Intervention."
   },
   {
-    journal:"Front Health Serv", year:"2026", pmid:"42973769",
-    author:"Mierzwa N et al.", pubdate:"19.10.2026",
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42977955",
+    author:"Andersson O et al.", pubdate:"02.11.2026",
     added:"03.11.2026",
-    title:"Sektorübergreifende psychogeriatrische Rehabilitations in deutschen Pflegeheimen",
-    sum:"Studienprotokoll für eine gestaffelte Cluster-randomisierte Studie zur Implementierung eines multiprofessionellen Rehabilitationsmodells in 12 deutschen Pflegeheimen mit 720 Bewohnern (≥65 Jahre).",
-    result:"Primäre Interventionsziele: Verbesserung der Aktivitäten des täglichen Lebens, Kognition und Lebensqualität durch strukturierte Multidisziplinär-Konferenzen und psychotrope Medikamentenreduktion. Sekundär: Senkung von Hospitalisierungen, Verweildauer und Kosten.",
-    transfer:"Deutsche Versorgungsdaten, gesetzlich Versicherte, Pflegeheimsektor – vollständig übertragbar"
+    title:"Implementation von Sprechventilen in der Intensivmedizin: Erleichterungsfaktoren und Barrieren",
+    sum:"Qualitative Analyse von 19 Interviews mit Intensivmedizinerinnen/Intensivmedizinern, Pflegekräften, Physiotherapeutinnen/Physiotherapeuten und Logopädinnen/Logopäden zu früher Implementierung von Sprechventilen bei tracheotomierten Patientinnen und Patienten.",
+    result:"Erleichterungsfaktoren: geteilte Wertschätzung, professionelles Engagement, strukturierte Implementierung, Managementunterstützung und interprofessionelle Zusammenarbeit; Barrieren: Ressourcenmangel, geringe Patientenzahlen, fehlende umfassende Implementierungsstrategie und Dokumentationslast.",
+    transfer:"Schweden, Skandinavien; mittel übertragbar auf deutschsprachige Intensivmedizin, Fokus auf Prozess-Implementierung universal anwendbar."
   },
   {
-    journal:"Front Public Health", year:"2026", pmid:"42973530",
-    author:"Zhao J et al.", pubdate:"19.10.2026",
+    journal:"Health Policy", year:"2026", pmid:"42981663",
+    author:"Boyer L et al.", pubdate:"27.10.2026",
+    added:"04.11.2026",
+    title:"KI im Gesundheitswesen: Von klinischer Unterstützung zu algorithmischem Management?",
+    sum:"Analyse der Einsatzmöglichkeiten von Künstlicher Intelligenz und deren potenzielle Rolle als Managementinstrument in Gesundheitsorganisationen sowie deren Auswirkungen auf Autonomie und Arbeitsbedingungen.",
+    result:"KI-Systeme können Arbeitsprozesse standardisieren, monitoren und Leistung evaluieren, was Manageriaalisierung erhöhen, professionelle Autonomie reduzieren und Arbeitsverdichtung verstärken kann; dies hängt von Implementierung und Governance ab.",
+    transfer:"Frankreich; konzeptioneller Beitrag zur KI-Governance im Gesundheitswesen, systemunabhängig relevant."
+  },
+  {
+    journal:"Int J Equity Health", year:"2026", pmid:"42977949",
+    author:"Tajdar D et al.", pubdate:"12.10.2026",
     added:"03.11.2026",
-    title:"Notfallrückkehrer in 72 Stunden in der Pädiatrie: China-Daten",
-    sum:"Retrospektive Kohortenstudie von 30.170 Pädiatrie-Besuchen an einem Tertiärzentrum in China zur Vorhersage ungeplanter Rückkehr innerhalb von 72 Stunden.",
-    result:"5,0% (1.507 von 30.170) der Indexpatienten kehrten ungeplant zurück. Gelbe Zone (weniger akut): höheres Rückkehr-Odds-Ratio als rote Zone (OR 2,28; 95% KI 1,34–3,87). Onkologische Diagnosen stärkste Assoziation (OR 6,48; KI 3,54–11,87), besonders in Gelbzone (Interaktions-OR 5,10; p=0,023).",
-    transfer:"China-Daten, Fragestellung aber systemabhängig von Triage-Schichtung"
-  },
-  {
-    journal:"Drug Alcohol Depend", year:"2026", pmid:"42971144",
-    author:"Carriera S et al.", pubdate:"12.10.2026",
-    added:"02.11.2026",
-    title:"Telehealth und Behandlungsretention bei ruralen Veteranen mit Opioidabhängigkeit",
-    sum:"Retrospektive Kohortenanalyse von 10.875 Episoden bei 7.012 ruralen Veteranen zum Einfluss von Telehealth-Nutzung auf Haltequoten bei Buprenorphin-behandlung 2021–2024.",
-    result:"Restricted-mean-Retention-Zeit (RMRT) bei 180 Tagen: 115,1 Tage (KI 112,7–116,2) ohne Telehealth, 148,3 Tage (KI 146,4–149,4) mit 1–50% Telehealth, 143,2 Tage (KI 141,4–144,2) mit &gt;50% Telehealth. Median bis Abbruch: 119 vs. 338 vs. 247 Tage.",
-    transfer:"US-Veteranen, aber Modell der hybriden Versorgung in ländlichen Regionen transferierbar"
-  },
-  {
-    journal:"J Multimorb Comorb", year:"2026", pmid:"42973698",
-    author:"Al Zahidy M et al.", pubdate:"15.09.2026",
-    added:"03.11.2026",
-    title:"Treatment Burden bei kardiometabolischer Multimorbidität in den USA",
-    sum:"Cross-sectional Analyse von 1.551 US-Bürgern ≥51 Jahren zu Unterschieden im Behandlungsaufwand bei verschiedenen Multimorbidität-Kombinationen.",
-    result:"Mittlere Treatment-Burden-Quetscher-Score: 21 (95% KI 19–23). Kardiometabolische Multimorbidität zeigte höchste Last (Mittel 27, KI 23–30); assoziiert mit 4,9-fach erhöhter Wahrscheinlichkeit für nicht tragbar hohe Last (OR 4,9; 95% KI 1,9–12,7).",
-    transfer:"US-Daten, Fragestellung aber systemunabhängig zu Behandlungsbelastung"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42972354",
-    author:"Ressang-Wildschut J et al.", pubdate:"04.08.2026",
-    added:"02.11.2026",
-    title:"Führungsregulierung in der Kinder- und Jugendhilfe: Fallstudie",
-    sum:"Qualitative Mehrfachfallstudie in England, Schottland und Niederlanden zum Vergleich, wie Regulierungsbehörden Führungsqualität inspektierbar machen und Inspektoren diese in der Praxis beurteilen.",
-    result:"Viele Qualitätsindikatoren für Führung erfüllen Value-Driven-Regulation-Kriterien nicht. Indikatoren ohne Beschreibung erwarteten Verhaltens erschweren Bewertung. Inspektoren tendieren zu Compliance-Fokus statt Werteerreichung. Tacit Knowledge kann Assessments bereichern, aber auch untergraben.",
-    transfer:"Niederlande, England, Schottland – komparative Regulierungsforschung übertragbar"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42972327",
-    author:"Kjønø LG et al.", pubdate:"03.08.2026",
-    added:"02.11.2026",
-    title:"Gesundheitsnutzung bei Wirbelsäulenerkrankungen in Norwegen",
-    sum:"Register-basierte Kohortenstudie von 9.316 norwegischen Patienten mit Rückenschmerzen, Nackenschmerzen oder Kombinationen zur Analyse der Adäquanz und Muster der Primär- und Fachversorgung nach Spezialist-Evaluation.",
-    result:"Insgesamt 20–80% folgten Empfehlungen. Patienten mit kombiniertem Rücken- und Nackenschmerz folgen Empfehlungen seltener (39%, KI 35,7–41,8) als reine Rückenschmerzpatienten (45%, KI 43,9–46,4). Höhere Physiotherapie-Nutzung in Gruppe mit kombiniertem Schmerz (6 Prozentpunkte höher in den ersten zwei Jahren).",
-    transfer:"Norwegen, steuerfinanziertes System mit starker Hausarztsteuerung – bedingt transferierbar"
+    title:"Gesundheitszustände und Überweisungsmuster bei obdachlosen Menschen: Langzeitstudie zur Spezialisierten Primärversorgung in Hamburg",
+    sum:"Retrospektive Langzeitanalyse von 5.055 obdachlosen Personen in spezialisierten Primärversorgungszentren mit Fokus auf diagnostische Spektren und Zuweisungsmuster zu Fachambulanz und Krankenhaus.",
+    result:"Psychische und Verhaltensstörungen waren die häufigsten Diagnosen (28,4 %), gefolgt von Substanzgebrauchsstörungen (16,2 %) und Alkoholerkrankungen (11,7 %); 10,9 % der Konsultationen führten zu Überweisungen; spezialisierte Primärversorgung bewältigte 89,1 % der Probleme eigenständig.",
+    transfer:"Deutsche Daten (Hamburg), gesetzlich Versicherte; direkt übertragbar auf spezialisierte Primärversorgung vulnerable Gruppen."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
 
 // Offene Foerderausschreibungen zum Thema — taeglich von scripts/radar_hinweis.py
 // === RADAR-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const RADAR_STAND = "02.11.2026";
+const RADAR_STAND = "05.11.2026";
 const RADAR_URL = "https://wissen.m-vf.de/ausschreibungen.html#versorgungsforschung";
 const RADAR_EIGENES = 0;
 const RADAR_ZUHAUSE = true;
-const RADAR_FRISTEN = [["2026-12-31", "2027-01-07", "2027-01-07", "2027-01-07"], [], ["2027-01-07"], [], [], [], [], ["2026-11-18"], [], [], [], ["2027-01-07", "2027-01-26", "2027-01-26"], ["2027-01-07", "2027-01-07", "2027-01-07", "2027-01-11", "2027-01-25", "2026-11-18", "2026-11-18", "2026-11-06"], ["2026-11-19", "2027-02-03", "2027-02-03"], ["2027-01-27", "2026-11-09"]];
+const RADAR_FRISTEN = [["2026-12-31", "2027-01-07"], [], ["2027-01-07"], [], ["2026-11-19"], [], [], ["2026-11-18"], [], [], [], ["2027-01-07", "2027-01-26", "2027-01-26"], ["2027-01-07", "2027-01-07", "2027-01-07", "2027-01-11", "2027-01-25", "2027-02-11", "2026-11-18", "2026-11-18"], ["2026-11-19"], ["2027-01-27", "2026-11-09"]];
 // === RADAR-BLOCK-ENDE ===
 
 // === ZULASSUNG-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const ZUL_STAND = "04.11.2026";
+const ZUL_STAND = "05.11.2026";
 const ZUL_EIGENE = 0;
 const ZUL_GUTACHTEN = 0;
 const ZUL_ZULASSUNG = 0;
@@ -2341,7 +2332,7 @@ const ZUL_DIGA = 0;
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "04.11.2026";
+const NEWS_STAND = "05.11.2026";
 const NEWS = [
   {titel:"Prävention in der Primärversorgung: DGIMTalk am 9. November", datum:"2026-11-03", url:"https://www.monitor-versorgungsforschung.de/news/praevention-in-der-primaerversorgung-dgimtalk-am-9-november/"},
   {titel:"Hyperlipidämie bei Kindern: S3-Leitlinie aus Innovationsfonds-Projekt", datum:"2026-10-26", url:"https://www.monitor-versorgungsforschung.de/news/hyperlipidaemie-bei-kindern-s3-leitlinie-aus-innovationsfonds-projekt/"},
@@ -2359,8 +2350,8 @@ const PRESSE = [
 // Meldungen des G-BA — taeglich von scripts/newsfeed.py
 // === SELBST-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
 const SELBST = [
-  {titel:"Richtlinie zur datengestützten einrichtungsübergreifenden Qualitätssicherung: Teil 1 – Änderungen zum Erfassungsjahr 2027", datum:"2026-11-03", url:"/beschluesse/7944/", quelle:"G-BA"},
-  {titel:"Beratung gemäß § 137h Absatz 6 SGB V: Inverser Schultergelenksersatz mit Implantation einer maßgefertigten Glenoidgrundplatte bei schweren Glenoid-Knochendefekten", datum:"2026-10-30", url:"/beschluesse/8028/", quelle:"G-BA"},
+  {titel:"Europäische Nutzenbewertung von Arzneimitteln: GBA bezieht ersten JCA-Bericht in nationales Bewertungsverfahren ein", datum:"2026-11-05", url:"/presse/pressemitteilungen-meldungen/1362/", quelle:"G-BA"},
+  {titel:"Richtlinie zur datengestützten einrichtungsübergreifenden Qualitätssicherung: Freigabe des Bundesqualitätsberichtes 2026 zur Veröffentlichung", datum:"2026-11-05", url:"/beschluesse/8096/", quelle:"G-BA"},
 ];
 // === SELBST-BLOCK-ENDE ===
 
