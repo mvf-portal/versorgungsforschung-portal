@@ -1,5 +1,5 @@
 {
- "stand": "05.11.2026",
+ "stand": "06.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
@@ -982,7 +982,7 @@
    "inhaber": "PRIOVANT THERAP",
    "kennzeichen": [
     "NDA",
-    "Label Sep 02, 2026"
+    "Label Nov 05, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA220106",
@@ -2185,12 +2185,12 @@
    "inhaber": "GLAXOSMITHKLINE",
    "kennzeichen": [
     "NDA",
-    "Label Oct 01, 2026"
+    "Label Nov 05, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA215960",
    "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f0511453-5f6f-4e3a-b7d0-a5cfde985656",
-   "indikation_en": "UTEBZI is a penem antibacterial indicated for the treatment of complicated urinary tract infections (cUTI), including pyelonephritis, caused by the following susceptible microorganisms: Escherichia coli, Klebsiella pneumoniae, Enterobacter cloacae species complex, Klebsiella oxytoca , and Enterococcus faecalis in adult patients who have limited or no alternative oral treatment options. ( 1.1 ) Usage to Reduce Development of Drug‑Resistant Bacteria To reduce the development of drug‑resistant bacteria and maintain the effectiveness of UTEBZI and other antibacterial drugs, UTEBZI should be used only to treat or prevent infections that are proven or strongly suspected to be caused by bacteria. ( 1.2 ) 1.1 Complicated Urinary Tract Infection (cUTI), Including Pyelonephritis UTEBZI is indicated for the treatment of complicated urinary tract infections (cUTI), including pyelonephritis, caused by the following susceptible microorganisms: Escherichia coli , Klebsiella pneumoniae , Enterobacter cloacae species complex, Klebsiella oxytoca , and Enterococcus faecalis in adult patients who have limited or no alternative oral treatment options. 1.2 Usage to Reduce Development of Drug-Resistant Bacteria To reduce the development of drug‑resistant bacteria and maintain the effectiveness of UTEBZI and other antibacterial drugs, UTEBZI should be used only to treat or prevent infections that are proven or strongly suspected to be caused by susceptible bacteria. When culture and susceptibility information are available, they should be considered in selecting or modifying antibacterial therapy. In the absence of such data, local epidemiology and susceptibility patterns may contribute to the empiric selection of therapy. 2",
+   "indikation_en": "UTEBZI is a penem antibacterial indicated for the treatment of complicated urinary tract infections (cUTI), including pyelonephritis, caused by the following susceptible microorganisms: Escherichia coli, Klebsiella pneumoniae, Enterobacter cloacae species complex, Klebsiella oxytoca , and Enterococcus faecalis in adult patients who have limited or no alternative oral treatment options. ( 1.1 ) Usage to Reduce Development of Drug ‑ Resistant Bacteria To reduce the development of drug‑resistant bacteria and maintain the effectiveness of UTEBZI and other antibacterial drugs, UTEBZI should be used only to treat or prevent infections that are proven or strongly suspected to be caused by bacteria. ( 1.2 ) 1.1 Complicated Urinary Tract Infection (cUTI), Including Pyelonephritis UTEBZI is indicated for the treatment of complicated urinary tract infections (cUTI), including pyelonephritis, caused by the following susceptible microorganisms: Escherichia coli , Klebsiella pneumoniae , Enterobacter cloacae species complex, Klebsiella oxytoca , and Enterococcus faecalis in adult patients who have limited or no alternative oral treatment options. 1.2 Usage to Reduce Development of Drug-Resistant Bacteria To reduce the development of drug‑resistant bacteria and maintain the effectiveness of UTEBZI and other antibacterial drugs, UTEBZI should be used only to treat or prevent infections that are proven or strongly suspected to be caused by susceptible bacteria. When culture and susceptibility information are available, they should be considered in selecting or modifying antibacterial therapy. In the absence of such data, local epidemiology and susceptibility patterns may contribute to the empiric selection of therapy. 2",
    "hubs": [
     "ohne-hub"
    ],
