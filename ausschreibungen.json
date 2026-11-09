@@ -1,9 +1,9 @@
 {
- "stand": "05.11.2026",
+ "stand": "09.11.2026",
  "quellen": {
   "Innovationsfonds": 1,
   "Bund": 58,
-  "grants.gov": 322,
+  "grants.gov": 325,
   "DFG": 8
  },
  "warnungen": [],
@@ -12,7 +12,7 @@
    "slug": "versorgungsforschung",
    "name": "Versorgungsforschung",
    "domain": "wissen.m-vf.de",
-   "anzahl": 2,
+   "anzahl": 1,
    "ausschreibungen": [
     {
      "titel": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich)",
@@ -22,15 +22,6 @@
      "land": "DE",
      "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
      "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
-    },
-    {
-     "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357524",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
     }
    ]
   },
@@ -69,7 +60,7 @@
    "slug": "longevity",
    "name": "Gesundes Altern & Longevity",
    "domain": "longevity.m-vf.de",
-   "anzahl": 1,
+   "anzahl": 2,
    "ausschreibungen": [
     {
      "titel": "Seamless Early-Stage Clinical Drug Development (Phase 1 to 2a) for Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD) (UG3/UH3 Clinical Trial Required)",
@@ -78,7 +69,16 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD)"
+     "beleg": "Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD)"
+    },
+    {
+     "titel": "NIJ FY 2026 Research on the Abuse, Neglect, and Exploitation of Elderly Individuals",
+     "frist": "2026-11-30",
+     "url": "https://www.grants.gov/search-results-detail/364138",
+     "quelle": "grants.gov (USDOJ-OJP-NIJ)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Research on the Abuse, Neglect, and Exploitation of Elderly Individuals"
     }
    ]
   },
@@ -100,7 +100,7 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 1,
+   "anzahl": 4,
    "ausschreibungen": [
     {
      "titel": "DoW Orthopaedic, Clinical Research Award",
@@ -110,6 +110,33 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "DoW Orthopaedic, Clinical Research Award"
+    },
+    {
+     "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
+     "frist": "2027-01-26",
+     "url": "https://www.grants.gov/search-results-detail/360366",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery"
+    },
+    {
+     "titel": "HEAL Initiative: Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)",
+     "frist": "2027-01-26",
+     "url": "https://www.grants.gov/search-results-detail/360048",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Integrative Management of Chronic Pain and OUD for Whole Recovery"
+    },
+    {
+     "titel": "Silvio O. Conte Digestive Diseases Research Core Centers (P30-Clinical Trial Optional)",
+     "frist": "2027-02-10",
+     "url": "https://www.grants.gov/search-results-detail/360436",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Digestive Diseases Research Core Centers"
     }
    ]
   },
@@ -117,8 +144,18 @@
    "slug": "gender",
    "name": "Geschlechtersensible Medizin",
    "domain": "gender.m-vf.de",
-   "anzahl": 0,
-   "ausschreibungen": []
+   "anzahl": 1,
+   "ausschreibungen": [
+    {
+     "titel": "Women's Initiative for Screening and Health (WISH)",
+     "frist": "2027-01-08",
+     "url": "https://www.grants.gov/search-results-detail/363546",
+     "quelle": "grants.gov (HHS-HRSA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Women's Initiative for Screening and Health (WISH)"
+    }
+   ]
   },
   {
    "slug": "adipositas",
@@ -138,8 +175,17 @@
    "slug": "mental",
    "name": "Psychische Gesundheit",
    "domain": "mental.m-vf.de",
-   "anzahl": 3,
+   "anzahl": 4,
    "ausschreibungen": [
+    {
+     "titel": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich)",
+     "frist": "2026-12-31",
+     "url": "https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-neue-versorgungsformen-zum-themenoffenen-bereich-einstufig-kurz-einreichung-laufend-im-jahr-moeglich.66",
+     "quelle": "Innovationsfonds (G-BA)",
+     "land": "DE",
+     "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
+     "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
+    },
     {
      "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
      "frist": "2027-01-07",
@@ -194,15 +240,6 @@
      "beleg": "Cancer Prevention and Control Clinical Trials Grant Program"
     },
     {
-     "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/356690",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "expand cancer screening and preventive services"
-    },
-    {
      "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
      "frist": "2027-01-11",
      "url": "https://www.grants.gov/search-results-detail/360606",
@@ -221,13 +258,13 @@
      "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI)"
     },
     {
-     "titel": "Limited Competition: Biospecimen Banks to support NCI National Clinical Trials Network Biospecimen Banks (NCTN Biobanks) and the NCI Early-Phase and Experimental Clinical Trials Biospecimen Bank (EET Biobank) (U24 Clinical Trial Not Allowed)",
-     "frist": "2027-02-11",
-     "url": "https://www.grants.gov/search-results-detail/361134",
-     "quelle": "grants.gov (HHS-NIH11)",
+     "titel": "DoW Breast Cancer, Clinical Research Extension Award",
+     "frist": "2026-11-18",
+     "url": "https://www.grants.gov/search-results-detail/363671",
+     "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Biospecimen Banks to support NCI National Clinical Trials Network"
+     "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
     },
     {
      "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
@@ -239,13 +276,22 @@
      "beleg": "DoW Breast Cancer, Breakthrough Award"
     },
     {
-     "titel": "DoW Breast Cancer, Clinical Research Extension Award",
+     "titel": "DoW Rare Cancers Idea Development Award",
      "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/363671",
+     "url": "https://www.grants.gov/search-results-detail/362849",
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
+     "beleg": "DoW Rare Cancers Idea Development Award"
+    },
+    {
+     "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/356690",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Interventions to expand cancer screening and preventive services to ADVANCE health"
     }
    ]
   },
@@ -253,7 +299,7 @@
    "slug": "kardio",
    "name": "Kardiologie",
    "domain": "kardio.m-vf.de",
-   "anzahl": 1,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention (UG3/UH3 Clinical Trial Optional)",
@@ -262,7 +308,25 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
+     "beleg": "Stroke Treatment, Recovery, and Prevention"
+    },
+    {
+     "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R61/R33 Clinical Trial Required)",
+     "frist": "2027-02-03",
+     "url": "https://www.grants.gov/search-results-detail/357543",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Therapeutics and/or Diagnostics for HLBS Disorders"
+    },
+    {
+     "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R33 CT Required)",
+     "frist": "2027-02-03",
+     "url": "https://www.grants.gov/search-results-detail/357542",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Therapeutics and/or Diagnostics for HLBS Disorders"
     }
    ]
   },
@@ -270,17 +334,8 @@
    "slug": "diabetes",
    "name": "Diabetes",
    "domain": "diabetes.m-vf.de",
-   "anzahl": 2,
+   "anzahl": 1,
    "ausschreibungen": [
-    {
-     "titel": "Diabetes Research Centers (P30 Clinical Trial Optional)",
-     "frist": "2027-01-27",
-     "url": "https://www.grants.gov/search-results-detail/359145",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Diabetes Research Centers (P30 Clinical Trial Optional)"
-    },
     {
      "titel": "Single Source for the Continuation of the Epidemiology of Diabetes Interventions and Complications (EDIC) Study Research Center (Collaborative U01 Clinical Trial Not Allowed)",
      "frist": "2026-11-09",

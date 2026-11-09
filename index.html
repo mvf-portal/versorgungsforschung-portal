@@ -1931,16 +1931,16 @@ a.mvf-dach-karte:hover{border-color:var(--brand);transform:translateY(-2px);
 
     <div class="mvf-dach-karten">
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/rekrutierend.html"><h3>Was gerade läuft</h3><p class="mvf-dach-was">Vorhaben, die noch nicht zu Ende sind.</p><ul><li><b>265</b><span>Studien suchen Teilnehmende</span></li><li><b>710</b><span>registrierte Studien</span></li><li><b>861</b><span>Innovationsfonds-Projekte</span></li></ul></a>
-    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>512</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>5.653</b><span>Studien der 15 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
+    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>513</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>5.653</b><span>Studien der 15 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/forschende.html"><h3>Wer es macht</h3><p class="mvf-dach-was">Menschen, Häuser und Geldgeber, und wie sie zusammenhängen.</p><ul><li><b>5.373</b><span>Forschende</span></li><li><b>2.430</b><span>Institutionen</span></li><li><b>484</b><span>Förderer</span></li></ul></a>
-    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>19</b><span>offene Ausschreibungen</span></li><li><b>132</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
+    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>25</b><span>offene Ausschreibungen</span></li><li><b>132</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
     </div>
 
     <p class="mvf-dach-fuss">Literatur, Ausschreibungen und
       Zulassungsverfahren führt der tägliche Lauf dieses Hubs selbst nach.
       Die übrigen zehn Zahlen stehen fest, Stand 2. November 2026, damit keine
       davon still veraltet. Zusammen
-      <b class="mvf-dach-summe">17.988</b> Einträge aus 13
+      <b class="mvf-dach-summe">17.995</b> Einträge aus 13
       Beständen.</p>
   </div>
 </section>
@@ -2252,77 +2252,32 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "8. Nov. 2026, 05:00 Uhr";
+const SNAP_DATE = "9. Nov. 2026, 05:00 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"Acta Derm Venereol", year:"2026", pmid:"42986187",
-    author:"Heratizadeh A et al.", pubdate:"05.11.2026",
-    added:"05.11.2026",
-    title:"Dupilumab-Non-Responder bei atopischer Dermatitis",
-    sum:"Registerstudie (TREATgermany) zur Identifikation und Charakterisierung von Dupilumab-Non-Respondern bei atopischer Dermatitis; 476 Patienten zwischen Juni 2016 und Dezember 2024.",
-    result:"4% (n=19) wurden als Dupilumab-Non-Responder klassifiziert (EASI-Reduktion ≤40% bei 1. Kontrolle, 8–20 Wochen, plus 2. Kontrolle bis Woche 52). 44% (n=209) als stabile Responder (EASI≥75% bei beiden Kontrollen). Non-Responder häufiger männlich, mehr Raucher, höhere arterielle Hypertonie und erhöhter BMI (p&lt;0,05).",
-    transfer:"Deutsche Routinedaten, TREATgermany-Register; direkt auf deutsches System übertragbar"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42977971",
-    author:"Obongo A et al.", pubdate:"31.10.2026",
-    added:"03.11.2026",
-    title:"Barrieren und Förderfaktoren für Gestationsdiabetes-Versorgung",
-    sum:"Qualitative Inhaltsanalyse mit Interviews und Umfragen (8 Gesundheitsarbeiter, 2 Frauen mit GDM, 11 Frauen mit GDM-Anamnese) zu Zugang und Nutzung von Gestationsdiabetes-Versorgung in Kisumu County, Kenia.",
-    result:"Systemische Lücken: hohe Kosten, unzureichende Versicherung, Versorgungsmängel, schlechte Infrastruktur. Barrieren: finanzielle Last, Entfernung, inkonsistente Protokolle, Kommunikationslücken, negative Arzt-Patienten-Beziehungen. Förderfaktoren: Familie/soziale Unterstützung, Schulung und Nachverfolgung durch Fachleute, Selbstmanagement durch Ernährungsberatung.",
-    transfer:"Kenia-Setting, aber qualitative Barrieren/Förderer in der Mütterversorgung teilweise übertragbar"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42989262",
-    author:"Ndejjo R et al.", pubdate:"10.08.2026",
-    added:"05.11.2026",
-    title:"Klimaresilient Gesundheitssysteme bei Extremwetterereignissen",
-    sum:"Qualitative Studie zur Resilienz von Gesundheitssystemen in drei gefährdeten Distrikten Ugandas untersucht Auswirkungen von Extremwetterereignissen und Adaptationsmechanismen.",
-    result:"Landrutsche, Überschwemmungen und Dürren beeinträchtigten alle Bereiche der Gesundheitssysteme; die Systeme reagierten durch Richtlinien, Frühwarnsysteme, Schulungen für Mitarbeiter und Mobilisierung von Mitteln. Schlüsseleinflussfaktoren für Adaptation: klarer Politikrahmen, Koordinationsmechanismen, politischer Wille, verfügbare Ressourcen und robuste Überwachung.",
-    transfer:"Uganda-Studie, qualitative Methode, Systemstabilität unter Krise; Erkenntnisse für ressourcenlimitierte Länder relevant"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42983790",
-    author:"Melville M et al.", pubdate:"08.08.2026",
-    added:"05.11.2026",
-    title:"Unterstützung nach Demenzbasisdiagnose: Zugang und Lücken",
-    sum:"Online-Befragung zu Verfügbarkeit und Umsetzung von post-diagnostischer Unterstützung für Demenzpatienten im UK mit Fokus auf Cognitive Stimulation Therapy (CST).",
-    result:"Von 129 Antworten aus 71 Diensten: 65,5% (55/84) bieten CST an, davon 58,5% (24/41) nur ein Programm gleichzeitig. Wartezeiten variieren stark: Mittelwert 13,7 Wochen, Spanne 2–100 Wochen. Persistent Herausforderungen: Personalkapazität, Finanzierungsmangel, große regionale Variation.",
-    transfer:"UK-Studie, aber Frage zu Post-Diagnose-Versorgungsstrukturen auch für deutsches System relevant"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42983450",
-    author:"Jan CF et al.", pubdate:"08.08.2026",
-    added:"04.11.2026",
-    title:"Ärztliche Einstellungen zu Telemedizin nach COVID-19",
-    sum:"Online-Befragung von 520 Ärzten in Taiwan zu Bewusstsein, Haltungen und praktischen Herausforderungen bei der Bereitstellung von Telemedizin während und nach der COVID-19-Pandemie.",
-    result:"Vor COVID-19: 23,1% (120) nutzen Telemedizin; während Pandemie: 82,3% (428). Positive Haltung stark assoziiert mit Bereitschaft (OR 3,20, 95% KI 2,15–4,78). Vorgesetzte-Einfluss bedeutsam (OR 1,65, 95% KI 1,08–2,51). Kritische Anforderungen: klarere Richtlinien (72,5%), Erstattungsregelungen (65,2%), Haftungsklarheit (40,6%).",
-    transfer:"Taiwan-System unterscheidet sich, aber Erkenntnisse zu Ärzteakzeptanz und Implementierungshürden sind systemübergreifend relevant"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42983518",
-    author:"Nguyen ATB et al.", pubdate:"08.08.2026",
-    added:"05.11.2026",
-    title:"Wahrnehmung von stationärer Versorgungsqualität in Kinderphospital",
-    sum:"Mixed-Methods-Studie zu wahrgenommener Qualität der stationären Versorgung am Hanoi Children's Hospital aus Sicht von Betreuer*innen mittels SERVPERF-Fragebogen (235 Personen) und Interviews (n=20).",
-    result:"Gesamt-Qualitätswahrnehmung hoch: Mittelwert 4,29±0,38 von 5. Dimension Empathie höchste Punktzahl (4,39±0,54), Reaktionsfähigkeit niedrigste (4,23±0,60). Qualitätslücken: unvollständige Infrastruktur, begrenzte Freiflächen, gelegentliche Verzögerungen in Stoßzeiten, Variabilität bei jungem Personal.",
-    transfer:"Vietnam, aber SERVPERF-Dimensionen der Versorgungsqualität gelten auch für deutsche Kontexte"
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42995573",
+    author:"Pistulli F et al.", pubdate:"05.11.2026",
+    added:"07.11.2026",
+    title:"Gesundheitskompetenz albanischer Migranten in Deutschland",
+    sum:"Qualitative Studie zu Hürden bei der Inanspruchnahme von Gesundheitsleistungen durch albanische Zuwanderer anhand von 15 Interviews.",
+    result:"Sprachbarrieren, Bürokratieaufwand und lange Wartezeiten erschwerten Zugang zu Versorgung; trotz hoher Schulbildung und Versicherungschutz persistierten Systembarrieren unabhängig von Sozioökonomie.",
+    transfer:"Deutsche Routinedaten, Versorgungssystem sehr ähnlich strukturiert"
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
 
 // Offene Foerderausschreibungen zum Thema — taeglich von scripts/radar_hinweis.py
 // === RADAR-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const RADAR_STAND = "05.11.2026";
+const RADAR_STAND = "09.11.2026";
 const RADAR_URL = "https://wissen.m-vf.de/ausschreibungen.html#versorgungsforschung";
 const RADAR_EIGENES = 0;
 const RADAR_ZUHAUSE = true;
-const RADAR_FRISTEN = [["2026-12-31", "2027-01-07"], [], ["2027-01-07"], [], ["2026-11-19"], [], [], ["2026-11-18"], [], [], [], ["2027-01-07", "2027-01-26", "2027-01-26"], ["2027-01-07", "2027-01-07", "2027-01-07", "2027-01-11", "2027-01-25", "2027-02-11", "2026-11-18", "2026-11-18"], ["2026-11-19"], ["2027-01-27", "2026-11-09"]];
+const RADAR_FRISTEN = [["2026-12-31"], [], ["2027-01-07"], [], ["2026-11-19", "2026-11-30"], [], [], ["2026-11-18", "2027-01-26", "2027-01-26", "2027-02-10"], ["2027-01-08"], [], [], ["2026-12-31", "2027-01-07", "2027-01-26", "2027-01-26"], ["2027-01-07", "2027-01-07", "2027-01-11", "2027-01-25", "2026-11-18", "2026-11-18", "2026-11-18", "2027-01-07"], ["2026-11-19", "2027-02-03", "2027-02-03"], ["2026-11-09"]];
 // === RADAR-BLOCK-ENDE ===
 
 // === ZULASSUNG-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const ZUL_STAND = "08.11.2026";
+const ZUL_STAND = "09.11.2026";
 const ZUL_EIGENE = 0;
 const ZUL_GUTACHTEN = 0;
 const ZUL_ZULASSUNG = 0;
@@ -2332,7 +2287,7 @@ const ZUL_DIGA = 0;
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "08.11.2026";
+const NEWS_STAND = "09.11.2026";
 const NEWS = [
   {titel:"Prävention in der Primärversorgung: DGIMTalk am 9. November", datum:"2026-11-03", url:"https://www.monitor-versorgungsforschung.de/news/praevention-in-der-primaerversorgung-dgimtalk-am-9-november/"},
   {titel:"Hyperlipidämie bei Kindern: S3-Leitlinie aus Innovationsfonds-Projekt", datum:"2026-10-26", url:"https://www.monitor-versorgungsforschung.de/news/hyperlipidaemie-bei-kindern-s3-leitlinie-aus-innovationsfonds-projekt/"},
