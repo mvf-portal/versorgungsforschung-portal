@@ -21,7 +21,7 @@
      "quelle": "Innovationsfonds (G-BA)",
      "land": "DE",
      "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
-     "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
+     "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz"
     }
    ]
   },
@@ -69,7 +69,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Novel therapeutic Agents for the Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD)"
+     "beleg": "Spectrum of Alzheimer's Disease (AD) and AD-related Dementias (ADRD)"
     }
    ]
   },
@@ -91,7 +91,7 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 2,
+   "anzahl": 1,
    "ausschreibungen": [
     {
      "titel": "DoW Orthopaedic, Clinical Research Award",
@@ -101,15 +101,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "DoW Orthopaedic, Clinical Research Award"
-    },
-    {
-     "titel": "Silvio O. Conte Digestive Diseases Research Core Centers (P30-Clinical Trial Optional)",
-     "frist": "2027-02-10",
-     "url": "https://www.grants.gov/search-results-detail/360436",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Silvio O. Conte Digestive Diseases Research Core Centers"
     }
    ]
   },
@@ -186,22 +177,31 @@
    "anzahl": 8,
    "ausschreibungen": [
     {
-     "titel": "National Cancer Institute's Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis (R01 Clinical Trial Required)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357075",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
-    },
-    {
      "titel": "Cancer Prevention and Control Clinical Trials Grant Program (R01 Clinical Trial Required)",
      "frist": "2027-01-07",
      "url": "https://www.grants.gov/search-results-detail/357074",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Cancer Prevention and Control Clinical Trials Grant Program"
+     "beleg": "Cancer Prevention and Control Clinical Trials Grant Program (R01 Clinical Trial Required)"
+    },
+    {
+     "titel": "National Cancer Institute's Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis (R01 Clinical Trial Required)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357075",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "National Cancer Institute's Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
+    },
+    {
+     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
+     "frist": "2027-01-11",
+     "url": "https://www.grants.gov/search-results-detail/360606",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)"
     },
     {
      "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
@@ -213,24 +213,6 @@
      "beleg": "Interventions to expand cancer screening and preventive services"
     },
     {
-     "titel": "Limited Competition: Biospecimen Banks to support NCI National Clinical Trials Network Biospecimen Banks (NCTN Biobanks) and the NCI Early-Phase and Experimental Clinical Trials Biospecimen Bank (EET Biobank) (U24 Clinical Trial Not Allowed)",
-     "frist": "2027-02-11",
-     "url": "https://www.grants.gov/search-results-detail/361134",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Biospecimen Banks to support NCI National Clinical Trials Network"
-    },
-    {
-     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
-     "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/360606",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Glioblastoma Therapeutics Network (GTN)"
-    },
-    {
      "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
      "frist": "2027-01-25",
      "url": "https://www.grants.gov/search-results-detail/360393",
@@ -238,6 +220,15 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI)"
+    },
+    {
+     "titel": "Limited Competition: Biospecimen Banks to support NCI National Clinical Trials Network Biospecimen Banks (NCTN Biobanks) and the NCI Early-Phase and Experimental Clinical Trials Biospecimen Bank (EET Biobank) (U24 Clinical Trial Not Allowed)",
+     "frist": "2027-02-11",
+     "url": "https://www.grants.gov/search-results-detail/361134",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Biospecimen Banks to support NCI National Clinical Trials Network Biospecimen Banks"
     },
     {
      "titel": "DoW Breast Cancer, Clinical Research Extension Award",
@@ -249,13 +240,13 @@
      "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
     },
     {
-     "titel": "DoW Rare Cancers Idea Development Award",
+     "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
      "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/362849",
+     "url": "https://www.grants.gov/search-results-detail/363670",
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Rare Cancers Idea Development Award"
+     "beleg": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2"
     }
    ]
   },
@@ -263,7 +254,7 @@
    "slug": "kardio",
    "name": "Kardiologie",
    "domain": "kardio.m-vf.de",
-   "anzahl": 1,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention (UG3/UH3 Clinical Trial Optional)",
@@ -272,7 +263,25 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
+     "beleg": "Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
+    },
+    {
+     "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R61/R33 Clinical Trial Required)",
+     "frist": "2027-02-03",
+     "url": "https://www.grants.gov/search-results-detail/357543",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
+    },
+    {
+     "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R33 CT Required)",
+     "frist": "2027-02-03",
+     "url": "https://www.grants.gov/search-results-detail/357542",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
     }
    ]
   },
