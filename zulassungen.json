@@ -13,12 +13,12 @@
   "fda_mit_label": 26,
   "fda_ohne_label": 5,
   "fda_mit_hub": 15,
-  "antrag_roh": 92,
-  "antrag_generisch": 35,
-  "antrag_gezeigt": 57,
-  "antrag_ohne_hub": 26,
-  "antrag_stand": "october 2026",
-  "antrag_schon_usa": 10
+  "antrag_roh": 100,
+  "antrag_generisch": 24,
+  "antrag_gezeigt": 64,
+  "antrag_ohne_hub": 28,
+  "antrag_stand": "november 2026",
+  "antrag_schon_usa": 12
  },
  "warnungen": [],
  "eintraege": [
@@ -163,6 +163,231 @@
   },
   {
    "stufe": "antrag",
+   "datum": "2026-10-07",
+   "name": "Aumolertinib",
+   "wirkstoff": "Aumolertinib",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMA-EMEA/H/C/007167",
+   "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
+   "indikation_en": "Treatment of non-small cell lungcancer in adults",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Für Aumolertinib ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung von kleinzelligem Lungenkarzinom bei Erwachsenen eingereicht; die EMA prüft.",
+   "suchbar": true,
+   "studien": [
+    {
+     "pmid": "42764281",
+     "titel": "Induction and concurrent aumolertinib with radiotherapy for EGFR-mutated stage III NSCLC: results of phase III ADVANCE trial and real-world validation",
+     "datum": "2026-09",
+     "journal": "Signal Transduct Target Ther"
+    },
+    {
+     "pmid": "42341878",
+     "titel": "Brief Report: Aumolertinib as a Switch Therapy in Osimertinib-Intolerant NSCLC-The ACTIVE Trial",
+     "datum": "2026-11",
+     "journal": "J Thorac Oncol"
+    },
+    {
+     "pmid": "42296979",
+     "titel": "Aumolertinib with or without chemotherapy in EGFR-mutated advanced non-small-cell lung cancer (AENEAS2): an open-label, multicentre, randomised, controlled, phase 3 trial",
+     "datum": "2026-07",
+     "journal": "Lancet Oncol"
+    },
+    {
+     "pmid": "41818162",
+     "titel": "Aumolertinib with carboplatin-pemetrexed versus aumolertinib for nonsmall cell lung cancer with EGFR and concomitant tumor suppressor genes (ACROSS2): An open-label, multicenter, randomized phase 3 study",
+     "datum": "2026-03",
+     "journal": "CA Cancer J Clin"
+    }
+   ]
+  },
+  {
+   "stufe": "antrag",
+   "datum": "2026-10-01",
+   "name": "Abatacept",
+   "wirkstoff": "Abatacept",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMA-EMEA/H/C/007032",
+   "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
+   "indikation_en": "Treatment of rheumatoid arthritis in adults, psoriatic arthritis in adults and polyarticular juvenile idiopathic arthritis in children from 6 years old.",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Für Abatacept ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung der rheumatoiden Arthritis und Psoriasis-Arthritis bei Erwachsenen sowie der polyartikulären juvenilen idiopathischen Arthritis bei Kindern ab 6 Jahren eingereicht; die EMA prüft.",
+   "suchbar": true,
+   "studien": [
+    {
+     "pmid": "42504757",
+     "titel": "Characterization of abatacept mediated immunogenicity using domain-specific and neutralizing antibody assays: a biosimilar perspective",
+     "datum": "2026-06",
+     "journal": "Bioanalysis"
+    },
+    {
+     "pmid": "42135532",
+     "titel": "Abatacept versus hydroxychloroquine for prevention of rheumatoid arthritis in individuals with palindromic rheumatism: a randomized open-label trial",
+     "datum": "2026-07",
+     "journal": "Nat Med"
+    },
+    {
+     "pmid": "41881637",
+     "titel": "Certolizumab pegol, abatacept, tocilizumab or active conventional therapy in early rheumatoid arthritis: 48-week patient-reported outcomes from the NORD-STAR trial",
+     "datum": "2026-04",
+     "journal": "Lancet Rheumatol"
+    },
+    {
+     "pmid": "41733109",
+     "titel": "Baseline Interleukin-10 Levels as a Predictive Biomarker for Achieving Clinical Response With Abatacept in Patients Who Were Disease-Modifying Antirheumatic Drug Naive and Anti-Citrullinated Protein Antibody Positive With Early Rheumatoid Arthritis",
+     "datum": "2026-09",
+     "journal": "Arthritis Rheumatol"
+    }
+   ]
+  },
+  {
+   "stufe": "antrag",
+   "datum": "2026-10-01",
+   "name": "Bevacizumab",
+   "wirkstoff": "Bevacizumab",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMA-EMEA/H/C/006958",
+   "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
+   "indikation_en": "Treatment of metastatic cancers in adults.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Für Bevacizumab ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung metastastischer Krebserkrankungen bei Erwachsenen eingereicht; die EMA prüft.",
+   "suchbar": true,
+   "studien": [
+    {
+     "pmid": "43001110",
+     "titel": "Adjunctive Treatment with Subconjunctival and Topical Bevacizumab to Prevent Recurrence after Excision of Primary Pterygium: A Multi-centric Trial",
+     "datum": "2026-07",
+     "journal": "Rom J Ophthalmol"
+    },
+    {
+     "pmid": "42982861",
+     "titel": "FMT combined with atezolizumab-bevacizumab in hepatocellular carcinoma refractory to immunotherapy: an open label, single-arm, phase II pilot study",
+     "datum": "2026-10",
+     "journal": "Nat Commun"
+    },
+    {
+     "pmid": "42967221",
+     "titel": "Liposomal irinotecan and capecitabine plus bevacizumab as second-line therapy in metastatic colorectal cancer: A multicenter, single-arm study",
+     "datum": "2026-11",
+     "journal": "Cancer"
+    },
+    {
+     "pmid": "42736273",
+     "titel": "Sintilimab plus Bevacizumab biosimilar IBI305 and chemotherapy as a first-line treatment in advanced gastric or gastroesophageal junction adenocarcinoma (SBAGA): a single-arm, phase Ib/II study",
+     "datum": "2026-08",
+     "journal": "Nat Commun"
+    }
+   ]
+  },
+  {
+   "stufe": "antrag",
+   "datum": "2026-10-01",
+   "name": "Doxycycline",
+   "wirkstoff": "Doxycycline",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMA-EMEA/H/C/006168",
+   "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
+   "indikation_en": "Prevention of post abdominal surgery incisional infection in adults",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Für Doxycyclin ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Prävention von Wundinfektionen nach abdominalen Operationen bei Erwachsenen eingereicht; die EMA prüft.",
+   "suchbar": true,
+   "studien": [
+    {
+     "pmid": "42669653",
+     "titel": "Impact of patient positioning on the efficacy and safety of doxycycline pleurodesis in malignant pleural effusion: a pilot randomized trial",
+     "datum": "2026-08",
+     "journal": "BMC Pulm Med"
+    },
+    {
+     "pmid": "42618515",
+     "titel": "A double-blind multi-centre randomised placebo-controlled trial of doxycycline in women with recurrent miscarriage and chronic endometritis defined by CD138 positive stromal cells",
+     "datum": "2026-10",
+     "journal": "Hum Reprod"
+    },
+    {
+     "pmid": "42614585",
+     "titel": "Single-dose Ceftriaxone Plus 7-Day Doxycycline Versus Single-dose Benzathine Penicillin G Plus 7-Day Doxycycline in the Treatment of Early Syphilis in People With HIV: a Pilot Randomized Noninferiority Trial",
+     "datum": "2026-08",
+     "journal": "Open Forum Infect Dis"
+    },
+    {
+     "pmid": "42491043",
+     "titel": "Vonoprazan-based dual therapy with amoxicillin or doxycycline versus bismuth-containing quadruple therapy for Helicobacter pylori eradication: a prospective, multicenter, open-label, randomized controlled trial",
+     "datum": "2026-01",
+     "journal": "Front Cell Infect Microbiol"
+    }
+   ]
+  },
+  {
+   "stufe": "antrag",
+   "datum": "2026-10-01",
+   "name": "Furosemide",
+   "wirkstoff": "Furosemide",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMA-EMEA/H/C/007002",
+   "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
+   "indikation_en": "For the management of fluid retention in adult patients.",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Für Furosemid ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung von Flüssigkeitsretention bei erwachsenen Patienten eingereicht; die EMA prüft.",
+   "suchbar": true,
+   "studien": [
+    {
+     "pmid": "42872757",
+     "titel": "Early Discharge Strategy Including Subcutaneous Furosemide in Hospitalized Heart Failure",
+     "datum": "2026-10",
+     "journal": "J Am Coll Cardiol"
+    },
+    {
+     "pmid": "42825900",
+     "titel": "Clinical and Inflammatory Benefits of Nebulized Furosemide with Salbutamol-Ipratropium in COPD Exacerbations: A Randomized Controlled Trial",
+     "datum": "2026-08",
+     "journal": "Iran J Allergy Asthma Immunol"
+    },
+    {
+     "pmid": "42801339",
+     "titel": "Combination therapy with furosemide and metolazone as compared to furosemide alone for treatment of edema in children with nephrotic syndrome: a randomized controlled trial",
+     "datum": "2026-09",
+     "journal": "Eur J Pediatr"
+    },
+    {
+     "pmid": "42419438",
+     "titel": "Comparative effectiveness of torsemide vs furosemide in the management of heart failure patients: Win-ratio reanalysis of the TRANSFORM-HF trial",
+     "datum": "2026-11",
+     "journal": "Am Heart J"
+    }
+   ]
+  },
+  {
+   "stufe": "antrag",
    "datum": "2026-10-01",
    "name": "Fuzuloparib",
    "wirkstoff": "Fuzuloparib",
@@ -173,7 +398,7 @@
    "gutachten": "",
    "nummer": "EMA-EMEA/H/C/006955",
    "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
-   "indikation_en": "Treatment of adult patients with metastatic castration-resistant prostate cancer (mCRPC)",
+   "indikation_en": "Treatment of adult patients with metastatic castration-resistant prostate cancer (mCRPC).",
    "hubs": [
     "onkologie"
    ],
@@ -209,6 +434,50 @@
   {
    "stufe": "antrag",
    "datum": "2026-10-01",
+   "name": "Insulin glargine",
+   "wirkstoff": "Insulin glargine",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMA-EMEA/H/C/007004",
+   "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
+   "indikation_en": "Treatment of diabetes mellitus in adults, adolescents and children aged 2 years and above.",
+   "hubs": [
+    "diabetes"
+   ],
+   "satz": "Für Insulin glargine ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung von Diabetes mellitus bei Erwachsenen, Jugendlichen und Kindern ab 2 Jahren eingereicht; die EMA prüft.",
+   "suchbar": false,
+   "usa": "2026-09-23",
+   "usa_name": "ONSWIK",
+   "studien": []
+  },
+  {
+   "stufe": "antrag",
+   "datum": "2026-10-01",
+   "name": "Insulin glargine",
+   "wirkstoff": "Insulin glargine",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMA-EMEA/H/C/006984",
+   "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
+   "indikation_en": "Treatment of diabetes mellitus in adults, adolescents and children aged 2 years and above.",
+   "hubs": [
+    "diabetes"
+   ],
+   "satz": "Für Insulin glargine ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung von Diabetes mellitus gestellt; die Behörde prüft.",
+   "suchbar": false,
+   "usa": "2026-09-23",
+   "usa_name": "ONSWIK",
+   "studien": []
+  },
+  {
+   "stufe": "antrag",
+   "datum": "2026-10-01",
    "name": "Lirafugratinib",
    "wirkstoff": "Lirafugratinib",
    "gebiet_mesh": "",
@@ -220,7 +489,7 @@
    "gutachten": "",
    "nummer": "EMA-EMEA/H/C/006899",
    "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
-   "indikation_en": "Treatment of adult patients with previously treated, unresectable, locally advanced or metastatic cholangiocarcinoma (CCA)",
+   "indikation_en": "Treatment of adult patients with previously treated, unresectable, locally advanced or metastatic cholangiocarcinoma (CCA).",
    "hubs": [
     "onkologie"
    ],
@@ -249,7 +518,7 @@
    "gutachten": "",
    "nummer": "EMA-EMEA/H/C/007000",
    "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
-   "indikation_en": "Treatment of osteoarthritis of the knee and hip in adults",
+   "indikation_en": "Treatment of osteoarthritis of the knee and hip in adults.",
    "hubs": [
     "ncd"
    ],
@@ -285,6 +554,96 @@
   {
    "stufe": "antrag",
    "datum": "2026-10-01",
+   "name": "Omalizumab",
+   "wirkstoff": "Omalizumab",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMA-EMEA/H/C/006456",
+   "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
+   "indikation_en": "Treatment of allergic asthma in adults, adolescents and children from 6 years old.",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Für Omalizumab ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung von allergischem Asthma bei Erwachsenen, Jugendlichen und Kindern ab 6 Jahren gestellt; die EMA prüft.",
+   "suchbar": true,
+   "studien": [
+    {
+     "pmid": "42687583",
+     "titel": "Pharmacokinetic and Pharmacodynamic Bio-Similarity of ADL-018 to Innovator Omalizumab: A Randomized Study in Healthy Adults",
+     "datum": "2026-09",
+     "journal": "Clin Pharmacol Drug Dev"
+    },
+    {
+     "pmid": "42631594",
+     "titel": "Acupoint Plaster Application Combined with Omalizumab for Severe Allergic Asthma: A Randomized Controlled Trial",
+     "datum": "2026-08",
+     "journal": "J Vis Exp"
+    },
+    {
+     "pmid": "42507431",
+     "titel": "Treatment of Multifood Allergy With Omalizumab or Multiallergen Oral Immunotherapy: A Randomized Clinical Trial",
+     "datum": "2026-10",
+     "journal": "JAMA Pediatr"
+    },
+    {
+     "pmid": "41983924",
+     "titel": "Three years treatment with HDM allergen immunotherapy, omalizumab, or combination therapy in allergic asthma: clinical outcomes and biomarkers",
+     "datum": "2026-10",
+     "journal": "J Asthma"
+    }
+   ]
+  },
+  {
+   "stufe": "antrag",
+   "datum": "2026-10-01",
+   "name": "Palbociclib",
+   "wirkstoff": "Palbociclib",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMA-EMEA/H/C/006935",
+   "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
+   "indikation_en": "Treatment of hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative locally advanced or metastatic breast cancer in adults.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Für Palbociclib ist die Zulassung zur Behandlung des hormönrezeptorpositiven, HER2-negativen lokal fortgeschrittenen oder metastasierten Mammakarzinoms beantragt; die EMA prüft.",
+   "suchbar": true,
+   "studien": [
+    {
+     "pmid": "42456088",
+     "titel": "Palbociclib in Patients With Ovarian Cancer With CDKN2A Alterations: Results From the Targeted Agent and Profiling Utilization Registry Study",
+     "datum": "2026-07",
+     "journal": "JCO Precis Oncol"
+    },
+    {
+     "pmid": "42340618",
+     "titel": "Quality of life with palbociclib plus tamoxifen in hormone receptor-positive, HER2-negative advanced breast cancer: results from PATHWAY, an Asian international, double-blind, randomized phase 3 trial",
+     "datum": "2026-09",
+     "journal": "Breast Cancer"
+    },
+    {
+     "pmid": "42275799",
+     "titel": "First-line ET plus palbociclib versus standard mono-chemotherapy in high-risk HR-positive/HER2-negative metastatic breast cancer and indication for chemotherapy: primary results from the randomized phase IV PADMA study",
+     "datum": "2026-07",
+     "journal": "ESMO Open"
+    },
+    {
+     "pmid": "42202490",
+     "titel": "Safety analyses of the INAVO120 randomised phase III trial of inavolisib or placebo with palbociclib-fulvestrant in patients with PIK3CA-mutated, hormone receptor-positive, HER2-negative, endocrine-resistant advanced breast cancer",
+     "datum": "2026-06",
+     "journal": "ESMO Open"
+    }
+   ]
+  },
+  {
+   "stufe": "antrag",
+   "datum": "2026-10-01",
    "name": "Pelabresib",
    "wirkstoff": "Pelabresib",
    "gebiet_mesh": "",
@@ -296,7 +655,7 @@
    "gutachten": "",
    "nummer": "EMA-EMEA/H/C/006977",
    "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
-   "indikation_en": "Treatment of disease-related splenomegaly or symptoms in adult patients with primary myelofibrosis, post polycythemia vera myelofibrosis or post essential thrombocythaemia myelofibrosis",
+   "indikation_en": "Treatment of disease-related splenomegaly or symptoms in adult patients with primary myelofibrosis, post polycythemia vera myelofibrosis or post essential thrombocythaemia myelofibrosis.",
    "hubs": [
     "onkologie"
    ],
@@ -504,26 +863,6 @@
    "satz": "Pia-App bei Regelschmerzen ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
-   "stufe": "fda-wartet",
-   "datum": "2026-09-23",
-   "name": "LYRFIGTU",
-   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ELEVAR",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220425",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
-  },
-  {
    "stufe": "fda",
    "datum": "2026-09-23",
    "name": "ONSWIK",
@@ -543,6 +882,26 @@
     "diabetes"
    ],
    "satz": "Die FDA hat Insulin Efsitora alfa-gobe (Onswik) zur Verbesserung der Glykämiekontrolle bei Typ-2-Diabetes zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-09-23",
+   "name": "LYRFIGTU",
+   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ELEVAR",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220425",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
   },
   {
    "stufe": "zulassung",
@@ -832,27 +1191,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-11",
-   "name": "PIXCLARA",
-   "wirkstoff": "FLORETYROSINE F-18",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "TELIX",
-   "kennzeichen": [
-    "NDA",
-    "Label Oct 09, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA218592",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc78b128-3768-4448-b019-61574db05714",
-   "indikation_en": "PIXCLARA is indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. PIXCLARA is a radioactive diagnostic drug indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. ( 1 ) 2",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": "Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-11",
    "name": "ISEMBYLD",
    "wirkstoff": "APITEGROMAB-MSTN",
    "gebiet_mesh": "",
@@ -870,6 +1208,27 @@
     "ohne-hub"
    ],
    "satz": "Die FDA hat Apitegromab-MSTN (ISEMBYLD) zur Behandlung der spinalen Muskelatrophie bei Patienten ab zwei Jahren unter SMN2-gerichteter Therapie zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-11",
+   "name": "PIXCLARA",
+   "wirkstoff": "FLORETYROSINE F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "TELIX",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 09, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA218592",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc78b128-3768-4448-b019-61574db05714",
+   "indikation_en": "PIXCLARA is indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. PIXCLARA is a radioactive diagnostic drug indicated for use with positron emission tomography (PET) to differentiate recurrent or progressive glioma from treatment-related change, in conjunction with other diagnostic evaluations, in adults and pediatric patients 1 month of age and older. ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Floretyrosin F-18 (Pixclara) zur PET-Bildgebung zur Differenzierung von rezidivierendem oder progredientem Gliom von therapieassoziierten Veränderungen zugelassen."
   },
   {
    "stufe": "diga",
@@ -3173,52 +3532,6 @@
   {
    "stufe": "antrag",
    "datum": "2026-01-22",
-   "name": "Orforglipron",
-   "wirkstoff": "Orforglipron",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "",
-   "kennzeichen": [],
-   "gutachten": "",
-   "nummer": "EMA-EMEA/H/C/006632",
-   "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
-   "indikation_en": "Treatment of obesity and type 2 diabetes mellitus in adults",
-   "hubs": [
-    "diabetes",
-    "adipositas"
-   ],
-   "satz": "Für Orforglipron ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung von Adipositas und Typ-2-Diabetes-mellitus gestellt; die EMA prüft.",
-   "suchbar": true,
-   "studien": [
-    {
-     "pmid": "42815506",
-     "titel": "Cardiovascular safety of orforglipron versus insulin glargine in adults with type 2 diabetes at increased cardiovascular risk (ACHIEVE-4): a phase 3, event-driven, randomised, open-label, non-inferiority, active comparator trial",
-     "datum": "2026-10",
-     "journal": "Lancet"
-    },
-    {
-     "pmid": "42607698",
-     "titel": "Long-term safety of oral orforglipron in Japanese participants with type 2 diabetes (ACHIEVE-J): a multicentre, randomised, open-label, parallel-group phase 3 trial",
-     "datum": "2026-10",
-     "journal": "Lancet Diabetes Endocrinol"
-    },
-    {
-     "pmid": "42338042",
-     "titel": "Hepatic Safety of Orforglipron in Adults With Obesity or Overweight and/or Type 2 Diabetes: A Pooled Analysis of the Orforglipron Phase 3 Clinical Trials",
-     "datum": "2026-09",
-     "journal": "Diabetes Obes Metab"
-    },
-    {
-     "pmid": "42259339",
-     "titel": "Orforglipron compared with dapagliflozin in adults with type 2 diabetes and inadequate glycaemic control with metformin (ACHIEVE-2): a multicentre, randomised, non-inferiority, open-label, phase 3 trial",
-     "datum": "2026-07",
-     "journal": "Lancet"
-    }
-   ]
-  },
-  {
-   "stufe": "antrag",
-   "datum": "2026-01-22",
    "name": "Sonrotoclax",
    "wirkstoff": "Sonrotoclax",
    "gebiet_mesh": "",
@@ -3435,41 +3748,6 @@
    "satz": "Für Zopapogene imadenovec ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung der respiratorischen Papillomatose bei Erwachsenen eingereicht.",
    "suchbar": false,
    "studien": []
-  },
-  {
-   "stufe": "antrag",
-   "datum": "2025-10-30",
-   "name": "Navepegritide",
-   "wirkstoff": "Navepegritide",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "",
-   "kennzeichen": [
-    "Orphan Drug"
-   ],
-   "gutachten": "",
-   "nummer": "EMA-EMEA/H/C/006627",
-   "url": "https://www.ema.europa.eu/en/medicines/medicines-human-use-under-evaluation",
-   "indikation_en": "Treatment of achondroplasia in children",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": "Für Navepegritide ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung von Achondroplasie bei Kindern eingereicht; die EMA prüft.",
-   "suchbar": true,
-   "studien": [
-    {
-     "pmid": "42144862",
-     "titel": "Navepegritide combined with lonapegsomatropin for the treatment of children with achondroplasia: 52-week results from the phase 2 COACH trial",
-     "datum": "2026-06",
-     "journal": "Eur J Endocrinol"
-    },
-    {
-     "pmid": "41247754",
-     "titel": "Once-Weekly Navepegritide in Children With Achondroplasia: The APPROACH Randomized Clinical Trial",
-     "datum": "2026-01",
-     "journal": "JAMA Pediatr"
-    }
-   ]
   },
   {
    "stufe": "antrag",
