@@ -1,41 +1,35 @@
 {
  "hub": "Knowledge-Hub Versorgungsforschung",
  "domain": "wissen.m-vf.de",
- "datum": "2026-11-09",
+ "datum": "2026-11-10",
  "stand": "terminiert",
- "titel": "MVF Studien-Newsletter 09.11.2026",
- "betreff": "Neueste Studien - Versorgungsforschung – 7. November 2026 bis 9. November 2026",
- "anzahl": 13,
+ "titel": "MVF Studien-Newsletter 10.11.2026",
+ "betreff": "Neueste Studien - Versorgungsforschung – 10. November 2026",
+ "anzahl": 7,
  "pmids": [
-  "42995573",
-  "42989262",
-  "42986187",
-  "42983790",
-  "42983518",
-  "42983450",
-  "42977971",
-  "42993248",
-  "42992415",
-  "42989345",
-  "42989311",
-  "42989295",
-  "42989234"
+  "43002436",
+  "43001651",
+  "43000371",
+  "43000307",
+  "42995564",
+  "42989216",
+  "42983444"
  ],
- "kampagne": "https://us6.admin.mailchimp.com/campaigns/edit?id=9099779",
- "termin_utc": "2026-11-09T09:00:00+00:00",
- "empfaenger": 49,
- "listengroesse": 5866,
+ "kampagne": "https://us6.admin.mailchimp.com/campaigns/edit?id=9099791",
+ "termin_utc": "2026-11-10T09:00:00+00:00",
+ "empfaenger": 48,
+ "listengroesse": 5858,
  "beanstandungen": [],
  "aussortiert": [],
  "pool": {
   "geholt": 220,
-  "bekannt": 66,
-  "pool": 50,
-  "gewaehlt": 1,
-  "neu": 1
+  "bekannt": 68,
+  "pool": 54,
+  "gewaehlt": 7,
+  "neu": 7
  },
  "rubriken": {
   "radar": "d457e2a2be20e613",
-  "news": "2f29a7a1d88c0d74"
+  "news": "200aa74d2492d08d"
  }
 }

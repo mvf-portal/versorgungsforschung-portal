@@ -1,5 +1,5 @@
 {
- "stand": "09.11.2026",
+ "stand": "10.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
@@ -9,16 +9,16 @@
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
-  "fda_roh": 32,
-  "fda_mit_label": 27,
+  "fda_roh": 31,
+  "fda_mit_label": 26,
   "fda_ohne_label": 5,
-  "fda_mit_hub": 16,
+  "fda_mit_hub": 15,
   "antrag_roh": 92,
   "antrag_generisch": 35,
   "antrag_gezeigt": 57,
   "antrag_ohne_hub": 26,
   "antrag_stand": "october 2026",
-  "antrag_schon_usa": 11
+  "antrag_schon_usa": 10
  },
  "warnungen": [],
  "eintraege": [
@@ -1761,6 +1761,24 @@
   {
    "stufe": "zulassung",
    "datum": "2026-07-15",
+   "name": "Jascayd",
+   "wirkstoff": "nerandomilast",
+   "gebiet_mesh": "Idiopathic Pulmonary Fibrosis",
+   "atc": "L04AA61",
+   "inhaber": "Boehringer Ingelheim International GmbH",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006405",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/jascayd",
+   "indikation_en": "Jascayd is indicated for the treatment of adult patients with Idiopathic Pulmonary Fibrosis (IPF). Jascayd is indicated for the treatment of adult patients with Progressive Pulmonary Fibrosis (PPF).",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Jascayd (Nerandomilast) ist zur Behandlung der idiopathischen Lungenfibrose und progressiven Lungenfibrose bei Erwachsenen zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-07-15",
    "name": "Liraglutide STADA",
    "wirkstoff": "liraglutide",
    "gebiet_mesh": "Diabetes Mellitus",
@@ -1812,24 +1830,6 @@
     "longevity"
    ],
    "satz": "Vislyfa (Ranibizumab) ist bei Erwachsenen zur Behandlung der feuchten altersbezogenen Makuladegeneration, diabetischen Makulaödem, proliferativen diabetischen Retinopathie, Makulaödem nach Netzhautvenenverschluss und choroidalen Neovaskularisation zugelassen."
-  },
-  {
-   "stufe": "zulassung",
-   "datum": "2026-07-15",
-   "name": "Jascayd",
-   "wirkstoff": "nerandomilast",
-   "gebiet_mesh": "Idiopathic Pulmonary Fibrosis",
-   "atc": "L04AA61",
-   "inhaber": "Boehringer Ingelheim International GmbH",
-   "kennzeichen": [],
-   "gutachten": "",
-   "nummer": "EMEA/H/C/006405",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/jascayd",
-   "indikation_en": "Jascayd is indicated for the treatment of adult patients with Idiopathic Pulmonary Fibrosis (IPF). Jascayd is indicated for the treatment of adult patients with Progressive Pulmonary Fibrosis (PPF).",
-   "hubs": [
-    "ncd"
-   ],
-   "satz": "Jascayd (Nerandomilast) ist zur Behandlung der idiopathischen Lungenfibrose und progressiven Lungenfibrose bei Erwachsenen zugelassen."
   },
   {
    "stufe": "fda",
@@ -2587,27 +2587,6 @@
    "satz": "Die FDA hat Baxdrostat (Baxfendy) zur Behandlung der Hypertonie in Kombination mit anderen Antihypertensiva zugelassen."
   },
   {
-   "stufe": "fda",
-   "datum": "2026-05-13",
-   "name": "BEQALZI",
-   "wirkstoff": "SONROTOCLAX",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "BEONE MEDICINES USA",
-   "kennzeichen": [
-    "NDA",
-    "Label Sep 28, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220711",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff684558-e9cb-46de-a8bf-f4d79093df7a",
-   "indikation_en": "BEQALZI is indicated for the treatment of adult patients with relapsed or refractory mantle cell lymphoma (MCL) after at least two lines of systemic therapy, including a Bruton's tyrosine kinase (BTK) inhibitor. This indication is approved under accelerated approval based on response rate and durability of response. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s) [see Clinical Studies (14.1) ] . BEQALZI is a BCL-2 inhibitor indicated for the treatment of adult patients with relapsed or refractory mantle cell lymphoma (MCL) after at least two lines of systemic therapy, including a Bruton's tyrosine kinase (BTK) inhibitor. ( 1 ) This indication is approved under accelerated approval based on response rate and durability of response. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). 2",
-   "hubs": [
-    "onkologie"
-   ],
-   "satz": "Die FDA hat Sonrotoclax (BEQALZI) zur Behandlung von Erwachsenen mit rezidiviertem oder refraktärem Mantelzelllymphom nach mindestens zwei Linien systemischer Therapie zugelassen."
-  },
-  {
    "stufe": "antrag",
    "datum": "2026-03-26",
    "name": "Aceclidine",
@@ -3255,8 +3234,6 @@
    ],
    "satz": "Für Sonrotoclax ist die Zulassung zur Behandlung von erwachsenen Patienten mit rezidiviertem oder refraktärem Mantelzelllymphom beantragt; die EMA prüft.",
    "suchbar": true,
-   "usa": "2026-05-13",
-   "usa_name": "BEQALZI",
    "studien": [
     {
      "pmid": "42385124",

@@ -1931,16 +1931,16 @@ a.mvf-dach-karte:hover{border-color:var(--brand);transform:translateY(-2px);
 
     <div class="mvf-dach-karten">
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/rekrutierend.html"><h3>Was gerade läuft</h3><p class="mvf-dach-was">Vorhaben, die noch nicht zu Ende sind.</p><ul><li><b>265</b><span>Studien suchen Teilnehmende</span></li><li><b>710</b><span>registrierte Studien</span></li><li><b>861</b><span>Innovationsfonds-Projekte</span></li></ul></a>
-    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>513</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>5.653</b><span>Studien der 15 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
+    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>520</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>5.653</b><span>Studien der 15 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/forschende.html"><h3>Wer es macht</h3><p class="mvf-dach-was">Menschen, Häuser und Geldgeber, und wie sie zusammenhängen.</p><ul><li><b>5.373</b><span>Forschende</span></li><li><b>2.430</b><span>Institutionen</span></li><li><b>484</b><span>Förderer</span></li></ul></a>
-    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>21</b><span>offene Ausschreibungen</span></li><li><b>132</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
+    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>21</b><span>offene Ausschreibungen</span></li><li><b>131</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
     </div>
 
     <p class="mvf-dach-fuss">Literatur, Ausschreibungen und
       Zulassungsverfahren führt der tägliche Lauf dieses Hubs selbst nach.
       Die übrigen zehn Zahlen stehen fest, Stand 2. November 2026, damit keine
       davon still veraltet. Zusammen
-      <b class="mvf-dach-summe">17.991</b> Einträge aus 13
+      <b class="mvf-dach-summe">17.997</b> Einträge aus 13
       Beständen.</p>
   </div>
 </section>
@@ -2252,17 +2252,71 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "9. Nov. 2026, 05:00 Uhr";
+const SNAP_DATE = "10. Nov. 2026, 05:00 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"42995573",
-    author:"Pistulli F et al.", pubdate:"05.11.2026",
+    journal:"JAMA Intern Med", year:"2026", pmid:"43002436",
+    author:"Mafi JN et al.", pubdate:"09.11.2026",
+    added:"09.11.2026",
+    title:"Niedriger Nutzen: Statewide Initiative zur Reduktion von Low-Value Care",
+    sum:"Eine statewide Qualitätsverbesserungsinitiative in Virginia mit ärztlicher Führung, Fortbildung und Peer-Vergleichs-Scorecards reduzierte die Häufigkeit von Low-Value Services bei 17.223 Klinikern.",
+    result:"Die Intervention war assoziiert mit 10,4% Reduktion der Patienten, die Low-Value Services erhielten (absolute Reduktion -1,1 Prozentpunkte, 95%-KI -2,1 bis -0,1; p=0,04). Keine signifikanten Unterschiede bei unerwünschten Ereignissen oder Ausgaben für diese Services.",
+    transfer:"US-Daten; Fragestellung zur Qualitätsverbesserung aber systemunabhängig"
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42995564",
+    author:"Nilsing-Strid E et al.", pubdate:"06.11.2026",
     added:"07.11.2026",
-    title:"Gesundheitskompetenz albanischer Migranten in Deutschland",
-    sum:"Qualitative Studie zu Hürden bei der Inanspruchnahme von Gesundheitsleistungen durch albanische Zuwanderer anhand von 15 Interviews.",
-    result:"Sprachbarrieren, Bürokratieaufwand und lange Wartezeiten erschwerten Zugang zu Versorgung; trotz hoher Schulbildung und Versicherungschutz persistierten Systembarrieren unabhängig von Sozioökonomie.",
-    transfer:"Deutsche Routinedaten, Versorgungssystem sehr ähnlich strukturiert"
+    title:"Sichere Patientenbewegung: Implementierung und Stakeholder-Perspektiven",
+    sum:"Eine qualitative Studie analysierte die Erfahrungen von 25 Stakeholdern mit der Implementierung einer multifaktoriellen Intervention für sichere Patientenbewegung in schwedischen Gesundheitseinrichtungen.",
+    result:"Fünf Schlüsseldeterminanten wurden identifiziert: Innovation, innere Settings, Individuen, Implementierungsprozess und Outcomes. Änderungen in Sicherheitskultur, Arbeitsroutinen und Gerätenutzung zeigten erfolgreiche Implementierung. Interdependenz zwischen Leadership, Facilitation und Partizipation war zentral.",
+    transfer:"Schweden, vergleichbares System; Implementierungsprinzipien systemunabhängig"
+  },
+  {
+    journal:"J Clin Gastroenterol", year:"2026", pmid:"43001651",
+    author:"Kosjerina T et al.", pubdate:"05.11.2026",
+    added:"09.11.2026",
+    title:"Koloskopie-Komplikationen bei IBD: Norwegen",
+    sum:"Eine prospektive Studie erfasste Komplikationen nach Koloskopie und Chromoendoskopie bei IBD-Patienten und Nicht-IBD-Patienten 7 und 30 Tage nach dem Eingriff.",
+    result:"Von 444 interviewten Patienten berichteten 271 (62%) Nebenwirkungen ohne Hospitalisierung. 22 Patienten (5%) wurden innerhalb von 30 Tagen hospitalisiert. Männer (aOR 0,63) und Patienten mit Chromoendoskopie (aOR 0,31) hatten weniger unerwünschte Ereignisse. Butylscopolamin war assoziiert mit Notfall-Hospitalisierung (aOR 4,70).",
+    transfer:"Norwegen, vergleichbares Gesundheitssystem mit guter Dokumentation"
+  },
+  {
+    journal:"BMC Palliat Care", year:"2026", pmid:"42983444",
+    author:"Neugebauer T et al.", pubdate:"04.11.2026",
+    added:"04.11.2026",
+    title:"Partizipative Forschung in Onkologie und Palliativmedizin: was ermöglicht Sinnhaftigkeit",
+    sum:"Eine retrospektive qualitative Evaluierung von zwei participatory research Projekten in Onkologie und Palliativmedizin identifizierte Faktoren für sinnvolle Partizipation von Patienten, Angehörigen und Fachkräften.",
+    result:"Drei übergeordnete Themen: (1) Frühe Beteiligung, transparente Kommunikation, sichtbare Nutzung von Beiträgen; (2) Herausforderungen – wechselnde Kapazitäten, wissenschaftliche Komplexität, Barriereabstruktion; (3) Wahrgenommene Impacts – stärkeres Vertrauen, bessere Relevanz und Nutzbarkeit. Flexible Strukturen ermöglichten sustain Partizipation.",
+    transfer:"Deutschland, qualitative Faktoren für Patient Involvement in Forschung"
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43000371",
+    author:"Özdemir B et al.", pubdate:"10.08.2026",
+    added:"08.11.2026",
+    title:"Burnout im Gesundheitswesen: Emotionale Anforderungen und Rumination",
+    sum:"Eine Querschnittstudie untersuchte bei 408 Fachkräften in der Türkei die Beziehungen zwischen Arbeitsanforderungen, Rumination und Burnout mittels Pfadanalyse.",
+    result:"Arbeitsbelastung war direkt mit Burnout assoziiert (p&lt;0,001), ohne indirekten Effekt über Rumination. Emotionale Anforderungen und emotionale Dissonanz zeigten signifikante indirekte Assoziationen mit Burnout über Rumination.",
+    transfer:"Qualitative Dimensionen von Burnout-Prozessen, methodisch auf Deutschland übertragbar"
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43000307",
+    author:"Bekele A et al.", pubdate:"10.08.2026",
+    added:"08.11.2026",
+    title:"Zufriedenheit mit pädiatrischer Versorgung: Äthiopien",
+    sum:"Eine Querschnittstudie erfasste Elternzufriedenheit mit stationärer pädiatrischer Versorgung bei 413 Eltern in Äthiopien mittels EMPATHIC-Skala.",
+    result:"Zufriedenheitsrate 61,5% (95%-KI 56,6–66,0%). Signifikant assoziiert: Alter des Kindes 2–6 Jahre (aOR 1,67), Besuch pädiatrische Notfallabteilung (aOR 0,31), schlechter Gesundheitsstatus (aOR 0,48), moderate soziale Unterstützung (aOR 2,06), fürsorgliches Verhalten (aOR 6,62).",
+    transfer:"Low-Income-Country; Ergebnismessung durch standardisierte PROM aber begrenzt übertragbar"
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"42989216",
+    author:"Gardner K et al.", pubdate:"08.08.2026",
+    added:"05.11.2026",
+    title:"Hospital in the Home für indigene Bevölkerung: Implementierungserfahrungen",
+    sum:"Eine qualitative Studie evaluierte die Implementierung eines gemeinschaftskontrollierten Hospital-in-the-Home-Modells für Aboriginals und Torres Strait Islander in Queensland mit Normalisation Process Theory.",
+    result:"Starke konzeptuelle Kohärenz und Partnerverpflichtung wurden berichtet (hohe cognitive participation). Nur 4 Aufnahmen in 2 Jahren. Barriereabstraktion zwischen Systemen, komplexe GP-Akkreditierung, nicht-interoperable IT-Systeme und unklare Governance behinderten collective action und reflexive monitoring.",
+    transfer:"Australien; Lektionen zu Systemintegration auf deutsches Sozialversicherungssystem übertragbar"
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
@@ -2277,7 +2331,7 @@ const RADAR_FRISTEN = [["2026-12-31"], [], ["2027-01-07"], [], ["2026-11-19"], [
 // === RADAR-BLOCK-ENDE ===
 
 // === ZULASSUNG-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const ZUL_STAND = "09.11.2026";
+const ZUL_STAND = "10.11.2026";
 const ZUL_EIGENE = 0;
 const ZUL_GUTACHTEN = 0;
 const ZUL_ZULASSUNG = 0;
@@ -2287,7 +2341,7 @@ const ZUL_DIGA = 0;
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "09.11.2026";
+const NEWS_STAND = "10.11.2026";
 const NEWS = [
   {titel:"Zehn Jahre Innovationsfonds: AOK macht Vorschläge für einen verbesserten Transfer neuer Versorgungsformen", datum:"2026-11-09", url:"https://www.monitor-versorgungsforschung.de/news/zehn-jahre-innovationsfonds-aok-macht-vorschlaege-fuer-einen-verbesserten-transfer-neuer-versorgungsformen/"},
   {titel:"Prävention in der Primärversorgung: DGIMTalk am 9. November", datum:"2026-11-03", url:"https://www.monitor-versorgungsforschung.de/news/praevention-in-der-primaerversorgung-dgimtalk-am-9-november/"},
