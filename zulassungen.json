@@ -1,5 +1,5 @@
 {
- "stand": "10.11.2026",
+ "stand": "11.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
@@ -802,27 +802,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-25",
-   "name": "JUVMO",
-   "wirkstoff": "TAVAPADON",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ABBVIE",
-   "kennzeichen": [
-    "NDA",
-    "Label Oct 28, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220415",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1ae6df6e-6ca0-420f-bec9-effa7acdd085",
-   "indikation_en": "JUVMO is indicated for the treatment of Parkinson’s disease (PD) in adults. JUVMO is a non-ergot dopamine agonist indicated for the treatment of Parkinson’s disease in adults. ( 1 ) 2",
-   "hubs": [
-    "longevity"
-   ],
-   "satz": "Die FDA hat Tavapadon (JUVMO) zur Behandlung der Parkinson-Krankheit bei Erwachsenen zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-25",
    "name": "ATEBRIOZ",
    "wirkstoff": "ZILURGISERTIB FUMARATE",
    "gebiet_mesh": "",
@@ -840,6 +819,27 @@
     "ohne-hub"
    ],
    "satz": "Die FDA hat Zilurgisertib-Fumarat (Atebrioz) zur Reduktion neuer heterotoper Ossifikationen bei Fibrodysplasia ossificans progressiva zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-25",
+   "name": "JUVMO",
+   "wirkstoff": "TAVAPADON",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ABBVIE",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 28, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220415",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1ae6df6e-6ca0-420f-bec9-effa7acdd085",
+   "indikation_en": "JUVMO is indicated for the treatment of Parkinson’s disease (PD) in adults. JUVMO is a non-ergot dopamine agonist indicated for the treatment of Parkinson’s disease in adults. ( 1 ) 2",
+   "hubs": [
+    "longevity"
+   ],
+   "satz": "Die FDA hat Tavapadon (JUVMO) zur Behandlung der Parkinson-Krankheit bei Erwachsenen zugelassen."
   },
   {
    "stufe": "diga",
@@ -1431,26 +1431,6 @@
    "satz": "Die FDA hat Garetosmab-grts (PASATRU) zur Reduktion neuer heterotoper Ossifikationen und klinisch bewerteter Schübe bei Fibrodysplasia ossificans progressiva zugelassen."
   },
   {
-   "stufe": "fda-wartet",
-   "datum": "2026-08-13",
-   "name": "TAUKLARIFY",
-   "wirkstoff": "FLORQUINITAU F-18",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "CERVEAU LANTHEUS",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220496",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
-  },
-  {
    "stufe": "fda",
    "datum": "2026-08-13",
    "name": "ZENBEXUS",
@@ -1470,6 +1450,26 @@
     "onkologie"
    ],
    "satz": "Die FDA hat Iberdomide (ZENBEXUS) in Kombination mit Daratumumab und Dexamethason zur Behandlung des multiplen Myeloms zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-08-13",
+   "name": "TAUKLARIFY",
+   "wirkstoff": "FLORQUINITAU F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "CERVEAU LANTHEUS",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220496",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
   },
   {
    "stufe": "antrag",
@@ -2295,6 +2295,24 @@
   {
    "stufe": "zulassung",
    "datum": "2026-06-19",
+   "name": "Palbociclib Viatris",
+   "wirkstoff": "Palbociclib",
+   "gebiet_mesh": "Breast Neoplasms",
+   "atc": "L01EF01",
+   "inhaber": "Viatris Limited",
+   "kennzeichen": [],
+   "gutachten": "",
+   "nummer": "EMEA/H/C/006624",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/palbociclib-viatris",
+   "indikation_en": "Palbociclib Viatris is indicated for the treatment of hormone receptor (HR)‑positive, human epidermal growth factor receptor 2 (HER2)‑negative locally advanced or metastatic breast cancer. in combination with an aromatase inhibitor; in combination with fulvestrant in women who have received prior endocrine therapy (see section&nbsp;5.1). In pre‑ or perimenopausal women, the endocrine therapy should be combined with a luteinizing hormone‑releasing hormone (LHRH) agonist.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Palbociclib Viatris (Palbociclib) ist zur Behandlung von Hormonrezeptor-positivem, HER2-negativem lokal fortgeschrittenem oder metastasiertem Mammakarzinom in Kombination mit einem Aromatasehemmer oder Fulvestrant indiziert."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-06-19",
    "name": "Cenrifki",
    "wirkstoff": "tolebrutinib",
    "gebiet_mesh": "Multiple Sclerosis, Chronic Progressive",
@@ -2327,24 +2345,6 @@
     "longevity"
    ],
    "satz": "Rexatilux (Ranibizumab) ist zur Behandlung der feuchten altersbedingten Makuladegeneration, der diabetischen Makulaödem-bedingten Sehbehinderung, der proliferativen diabetischen Retinopathie, der durch Netzhautvenenokklusion bedingten Makulaödem-Sehbehinderung und der choroidalen Neovaskularisation indiziert."
-  },
-  {
-   "stufe": "zulassung",
-   "datum": "2026-06-19",
-   "name": "Palbociclib Viatris",
-   "wirkstoff": "Palbociclib",
-   "gebiet_mesh": "Breast Neoplasms",
-   "atc": "L01EF01",
-   "inhaber": "Viatris Limited",
-   "kennzeichen": [],
-   "gutachten": "",
-   "nummer": "EMEA/H/C/006624",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/palbociclib-viatris",
-   "indikation_en": "Palbociclib Viatris is indicated for the treatment of hormone receptor (HR)‑positive, human epidermal growth factor receptor 2 (HER2)‑negative locally advanced or metastatic breast cancer. in combination with an aromatase inhibitor; in combination with fulvestrant in women who have received prior endocrine therapy (see section&nbsp;5.1). In pre‑ or perimenopausal women, the endocrine therapy should be combined with a luteinizing hormone‑releasing hormone (LHRH) agonist.",
-   "hubs": [
-    "onkologie"
-   ],
-   "satz": "Palbociclib Viatris (Palbociclib) ist zur Behandlung von Hormonrezeptor-positivem, HER2-negativem lokal fortgeschrittenem oder metastasiertem Mammakarzinom in Kombination mit einem Aromatasehemmer oder Fulvestrant indiziert."
   },
   {
    "stufe": "antrag",
