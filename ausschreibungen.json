@@ -42,13 +42,13 @@
      "beleg": "Public Health Crisis Response Cooperative Agreement"
     },
     {
-     "titel": "Title X Family Planning Services Grants",
-     "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/361754",
-     "quelle": "grants.gov (HHS-OPHS)",
+     "titel": "Advancing Global Health",
+     "frist": "2027-02-14",
+     "url": "https://www.grants.gov/search-results-detail/363912",
+     "quelle": "grants.gov (DOS-GHSD)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Title X Family Planning Services Grants"
+     "beleg": "Advancing Global Health"
     }
    ]
   },
@@ -108,7 +108,7 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 2,
+   "anzahl": 1,
    "ausschreibungen": [
     {
      "titel": "DoW Orthopaedic, Clinical Research Award",
@@ -118,15 +118,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "DoW Orthopaedic, Clinical Research Award"
-    },
-    {
-     "titel": "Silvio O. Conte Digestive Diseases Research Core Centers (P30-Clinical Trial Optional)",
-     "frist": "2027-02-10",
-     "url": "https://www.grants.gov/search-results-detail/360436",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Silvio O. Conte Digestive Diseases Research Core Centers"
     }
    ]
   },
@@ -134,7 +125,7 @@
    "slug": "gender",
    "name": "Geschlechtersensible Medizin",
    "domain": "gender.m-vf.de",
-   "anzahl": 3,
+   "anzahl": 1,
    "ausschreibungen": [
     {
      "titel": "Women's Initiative for Screening and Health (WISH)",
@@ -144,24 +135,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Women's Initiative for Screening and Health (WISH)"
-    },
-    {
-     "titel": "DoW Breast Cancer, Clinical Research Extension Award",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/363671",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Clinical Research Extension Award"
-    },
-    {
-     "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/363670",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2"
     }
    ]
   },
@@ -195,22 +168,22 @@
      "beleg": "Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
     },
     {
-     "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
-     "frist": "2027-01-26",
-     "url": "https://www.grants.gov/search-results-detail/360366",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery"
-    },
-    {
      "titel": "HEAL Initiative: Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)",
      "frist": "2027-01-26",
      "url": "https://www.grants.gov/search-results-detail/360048",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Integrative Management of Chronic Pain and OUD for Whole Recovery"
+     "beleg": "Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers"
+    },
+    {
+     "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
+     "frist": "2027-01-26",
+     "url": "https://www.grants.gov/search-results-detail/360366",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center"
     }
    ]
   },
@@ -220,15 +193,6 @@
    "domain": "onkologie.m-vf.de",
    "anzahl": 8,
    "ausschreibungen": [
-    {
-     "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
-     "frist": "2027-01-25",
-     "url": "https://www.grants.gov/search-results-detail/360393",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI)"
-    },
     {
      "titel": "National Cancer Institute's Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis (R01 Clinical Trial Required)",
      "frist": "2027-01-07",
@@ -254,25 +218,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Interventions to expand cancer screening and preventive services"
-    },
-    {
-     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
-     "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/360606",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Glioblastoma Therapeutics Network (GTN)"
-    },
-    {
-     "titel": "Limited Competition: Biospecimen Banks to support NCI National Clinical Trials Network Biospecimen Banks (NCTN Biobanks) and the NCI Early-Phase and Experimental Clinical Trials Biospecimen Bank (EET Biobank) (U24 Clinical Trial Not Allowed)",
-     "frist": "2027-02-11",
-     "url": "https://www.grants.gov/search-results-detail/361134",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "NCI National Clinical Trials Network Biospecimen Banks"
+     "beleg": "expand cancer screening and preventive services"
     },
     {
      "titel": "DoW Breast Cancer, Clinical Research Extension Award",
@@ -290,7 +236,34 @@
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2"
+     "beleg": "DoW Breast Cancer, Breakthrough Award"
+    },
+    {
+     "titel": "DoW Rare Cancers Resource and Community Development Award",
+     "frist": "2026-11-18",
+     "url": "https://www.grants.gov/search-results-detail/362850",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Rare Cancers Resource and Community Development Award"
+    },
+    {
+     "titel": "DoW Rare Cancers Idea Development Award",
+     "frist": "2026-11-18",
+     "url": "https://www.grants.gov/search-results-detail/362849",
+     "quelle": "grants.gov (DOD-AMRAA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "DoW Rare Cancers Idea Development Award"
+    },
+    {
+     "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
+     "frist": "2027-01-25",
+     "url": "https://www.grants.gov/search-results-detail/360393",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI)"
     }
    ]
   },
@@ -310,22 +283,13 @@
      "beleg": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
     },
     {
-     "titel": "Continuation of the Cardiovascular Repository for-Type 1 Diabetes (CARE-T1D) Consortium U01 (Open Competition)- Research (U01, Clinical Trial Not Allowed)",
-     "frist": "2027-03-10",
-     "url": "https://www.grants.gov/search-results-detail/360626",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Continuation of the Cardiovascular Repository for-Type 1 Diabetes (CARE-T1D) Consortium"
-    },
-    {
      "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R61/R33 Clinical Trial Required)",
      "frist": "2027-02-03",
      "url": "https://www.grants.gov/search-results-detail/357543",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
+     "beleg": "Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
     },
     {
      "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R33 CT Required)",
@@ -334,7 +298,16 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
+     "beleg": "Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
+    },
+    {
+     "titel": "Continuation of the Cardiovascular Repository for-Type 1 Diabetes (CARE-T1D) Consortium U01 (Open Competition)- Research (U01, Clinical Trial Not Allowed)",
+     "frist": "2027-03-10",
+     "url": "https://www.grants.gov/search-results-detail/360626",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Cardiovascular Repository for-Type 1 Diabetes (CARE-T1D) Consortium"
     }
    ]
   },
