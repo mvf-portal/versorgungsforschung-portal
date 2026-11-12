@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Die sechzehn Themengebiete des Ausschreibungsradars - an einer Stelle.
+"""Die siebzehn Themengebiete des Ausschreibungsradars - an einer Stelle.
 
 Entscheidung des Herausgebers vom 28.08.2026: Der Radar laeuft **einmal
 zentral** im Versorgungsforschungs-Hub und ist dort nach Themengebieten
@@ -69,7 +69,7 @@ FEEDS = [
     "bekanntmachungen-internationales",
 ]
 
-# Die sechzehn Themengebiete in der Reihenfolge der Hub-Reihe.
+# Die siebzehn Themengebiete in der Reihenfolge der Hub-Reihe.
 #   slug   - Anker auf der zentralen Seite und Kennung in ausschreibungen.json.
 #            MUSS dem SLUG in der portal.json des Hubs entsprechen: Daran
 #            findet scripts/radar_hinweis.py sein Gebiet wieder. Zwei heissen
@@ -325,6 +325,32 @@ NICHT einschlägig sind Ernährungsforschung ohne Diabetesbezug, einzelne
 Nährstoffe und Nahrungsergänzung, Lebensmitteltechnologie und
 Agrarforschung.""",
     },    {
+        # Hinzugekommen am 12.11.2026 mit dem siebzehnten Hub. Regel aus
+        # themen/muskel.json abgeleitet (kriterium_a, ausschluss, Quoten 4
+        # und 5), vom Herausgeber am 12.11.2026 bestaetigt.
+        "slug": "muskel",
+        "name": "Muskuloskelettale Erkrankungen",
+        "domain": "muskel.m-vf.de",
+        "suche": ["musculoskeletal research", "rheumatology care"],
+        "regel": """Einschlägig ist eine Ausschreibung, wenn sie Forschung zu
+Erkrankungen des Bewegungsapparats fördert - Arthrose, rheumatoide Arthritis,
+Spondyloarthritiden, Kollagenosen und Vaskulitiden, Gicht, Osteoporose und
+Frakturrisiko, Rückenschmerz und Wirbelsäulenerkrankungen, Fibromyalgie - sowie
+zur Versorgung damit: Endoprothetik und ihre Qualitätssicherung,
+Rehabilitation, Teilhabe, Rückkehr in den Beruf, Schmerzversorgung;
+einschließlich translationaler Projekte mit erkennbarem Bezug zum Menschen.
+
+Die rheumatische Augenbeteiligung (Uveitis, Skleritis, Sjögren-Auge) gehört in
+beide Gebiete und ist hier NICHT ausgeschlossen - dieselbe Teilung wie im Hub:
+Steht die rheumatische Grunderkrankung im Mittelpunkt, gehört die
+Ausschreibung hierher; steht das Auge im Mittelpunkt, zur Augenheilkunde.
+
+NICHT einschlägig sind reine Zell- und Tiermodelle ohne Anwendungsbezug,
+tiermedizinische Orthopädie, rheumatisches Fieber und rheumatische
+Herzkrankheit (das ist Kardiologie), Implantat- und Materialentwicklung ohne
+klinische Fragestellung sowie Sportwissenschaft ohne Krankheitsbezug.""",
+    },
+    {
         # Hinzugekommen am 12.11.2026 mit dem sechzehnten Hub. Die Regel ist
         # aus themen/auge.json abgeleitet (kriterium_a, ausschluss, Quote 4)
         # und steht bis zur Bestaetigung durch den Herausgeber unter Vorbehalt.
@@ -354,6 +380,6 @@ optische Mess- und Gerätetechnik ohne klinische Fragestellung.""",
     },
 ]
 
-# Alle Suchbegriffe der sechzehn Gebiete, entdoppelt und in fester Reihenfolge:
-# Der Pool wird einmal geholt und danach sechzehnmal befragt.
+# Alle Suchbegriffe der siebzehn Gebiete, entdoppelt und in fester Reihenfolge:
+# Der Pool wird einmal geholt und danach siebzehnmal befragt.
 SUCHE = list(dict.fromkeys(b for t in THEMEN for b in t["suche"]))
