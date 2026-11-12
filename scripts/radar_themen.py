@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Die fuenfzehn Themengebiete des Ausschreibungsradars - an einer Stelle.
+"""Die sechzehn Themengebiete des Ausschreibungsradars - an einer Stelle.
 
 Entscheidung des Herausgebers vom 28.08.2026: Der Radar laeuft **einmal
 zentral** im Versorgungsforschungs-Hub und ist dort nach Themengebieten
@@ -69,7 +69,7 @@ FEEDS = [
     "bekanntmachungen-internationales",
 ]
 
-# Die fuenfzehn Themengebiete in der Reihenfolge der Hub-Reihe.
+# Die sechzehn Themengebiete in der Reihenfolge der Hub-Reihe.
 #   slug   - Anker auf der zentralen Seite und Kennung in ausschreibungen.json.
 #            MUSS dem SLUG in der portal.json des Hubs entsprechen: Daran
 #            findet scripts/radar_hinweis.py sein Gebiet wieder. Zwei heissen
@@ -324,9 +324,36 @@ Krankheiten": Dort schluckt ein allgemeines Gebiet ein spezielles, hier
 NICHT einschlägig sind Ernährungsforschung ohne Diabetesbezug, einzelne
 Nährstoffe und Nahrungsergänzung, Lebensmitteltechnologie und
 Agrarforschung.""",
+    },    {
+        # Hinzugekommen am 12.11.2026 mit dem sechzehnten Hub. Die Regel ist
+        # aus themen/auge.json abgeleitet (kriterium_a, ausschluss, Quote 4)
+        # und steht bis zur Bestaetigung durch den Herausgeber unter Vorbehalt.
+        "slug": "auge",
+        "name": "Augenheilkunde",
+        "domain": "auge.m-vf.de",
+        "suche": ["ophthalmology research", "vision care"],
+        "regel": """Einschlägig ist eine Ausschreibung, wenn sie Forschung zu
+Augenerkrankungen und zur augenärztlichen Versorgung fördert - Glaukom,
+Katarakt, altersbedingte Makuladegeneration und übrige Netzhauterkrankungen,
+Hornhaut und trockenes Auge, Uveitis, Schielen und Amblyopie, Fehlsichtigkeit
+und Myopie bei Kindern, Augenverletzungen, dazu Früherkennung, intravitreale
+Therapie, operative Verfahren sowie Rehabilitation und Teilhabe bei
+Sehbehinderung; einschließlich translationaler Projekte mit erkennbarem Bezug
+zum Menschen.
+
+Die diabetische Retinopathie gehört in beide Gebiete und ist hier NICHT
+ausgeschlossen - dieselbe Teilung wie im Hub: Steht das Auge im Mittelpunkt
+(Screening, intravitreale Therapie, Verlauf der Sehschärfe), gehört die
+Ausschreibung hierher; steht die Stoffwechseleinstellung im Mittelpunkt, zu
+Diabetes.
+
+NICHT einschlägig sind reine Zell- und Tiermodelle ohne Anwendungsbezug,
+tiermedizinische Augenheilkunde, Bilderkennung und maschinelles Lernen als
+eigentlicher Gegenstand (die gehören zu Digitalisierung und KI) sowie
+optische Mess- und Gerätetechnik ohne klinische Fragestellung.""",
     },
 ]
 
-# Alle Suchbegriffe der fuenfzehn Gebiete, entdoppelt und in fester Reihenfolge:
-# Der Pool wird einmal geholt und danach fuenfzehnmal befragt.
+# Alle Suchbegriffe der sechzehn Gebiete, entdoppelt und in fester Reihenfolge:
+# Der Pool wird einmal geholt und danach sechzehnmal befragt.
 SUCHE = list(dict.fromkeys(b for t in THEMEN for b in t["suche"]))
