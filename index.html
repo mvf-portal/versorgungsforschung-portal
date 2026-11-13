@@ -2231,11 +2231,15 @@ const CATS = [
   {id:"deutsch", h:28, num:"01", name:"Deutschsprachige Datenbanken & Institutionen"},
   {id:"biblio", h:190, num:"02", name:"Bibliografische Datenbanken (international)"},
   {id:"evidenz", h:262, num:"03", name:"Systematische Reviews & Evidenzsynthesen"},
-  {id:"openaccess", h:150, num:"04", name:"Open Access & Discovery"},
-  {id:"volltext", h:100, num:"05", name:"Volltext-Datenbanken"},
-  {id:"register", h:212, num:"06", name:"Studien- & Reviewregister"},
-  {id:"policy", h:338, num:"07", name:"Health Services Research & Gesundheitspolitik"},
-  {id:"preprint", h:46, num:"08", name:"Preprints & Graue Literatur"},
+  {id:"primaer", h:196, num:"04", name:"Primärversorgung & Hausarztmedizin",
+   hinweis:"Primärversorgung ist in Deutschland keine eigene Säule, sondern verteilt sich auf hausärztliche Praxen, die Bedarfsplanung und einzelne Modelle wie die PORT-Zentren. Gemessen am 13.11.2026 ist das Thema zu 33 Prozent von den übrigen Hubs abgedeckt und trägt deshalb keinen eigenen Hub. Diese Quellen führen zu den Zahlen, den Verträgen und den Gutachten."},
+  {id:"resilienz", h:24, num:"05", name:"Krisenfestigkeit der Versorgung",
+   hinweis:"Wie hält ein Gesundheitssystem einer Krise stand und arbeitet danach weiter? Gemessen am 13.11.2026 bringt das Thema 5,5 Arbeiten am Tag hervor und überschneidet sich zu 30 Prozent mit den laufenden Hubs - zu wenig und zu verflochten für einen eigenen Hub. Diese Quellen führen zu den Rahmenwerken, den Länderberichten und der Vorsorgeplanung."},
+  {id:"openaccess", h:150, num:"06", name:"Open Access & Discovery"},
+  {id:"volltext", h:100, num:"07", name:"Volltext-Datenbanken"},
+  {id:"register", h:212, num:"08", name:"Studien- & Reviewregister"},
+  {id:"policy", h:338, num:"09", name:"Health Services Research & Gesundheitspolitik"},
+  {id:"preprint", h:46, num:"10", name:"Preprints & Graue Literatur"},
 ];
 // === CATS-BLOCK-ENDE ===
 
@@ -2314,6 +2318,22 @@ const DB = [
   {c:"preprint", n:"OSF", d:"Open Science Framework — Preprints, Daten & Projektmaterialien.", t:"live", u:"https://osf.io/search/?q=%s"},
   {c:"preprint", n:"SSRN", d:"Social Science Research Network mit Health-Economics/Policy-Reihen.", t:"portal", u:"https://www.ssrn.com/index.cfm/en/"},
   {c:"preprint", n:"OpenGrey / Graue Literatur", d:"Berichte, Dissertationen & Konferenzbeiträge — via BASE & Google Scholar erschließbar.", t:"live", u:"https://www.base-search.net/Search/Results?lookfor=%s&type=all&filter[]=f_dctypenorm%3A%224%22"},
+  // Primärversorgung & Hausarztmedizin
+  {c:"primaer", n:"DEGAM", de:1, d:"Deutsche Gesellschaft für Allgemeinmedizin und Familienmedizin: S3-Leitlinien, Positionen zur hausärztlichen Versorgung, Nachwuchsfragen.", t:"live", u:"https://www.degam.de/?s=%s"},
+  {c:"primaer", n:"Hausärztinnen- und Hausärzteverband", de:1, d:"Berufsverband: Hausarztzentrierte Versorgung nach § 73b SGB V, Verträge, Zahlen zur Niederlassung und zum Nachwuchs.", t:"portal", u:"https://www.hausaerzteverband.de/"},
+  {c:"primaer", n:"Kassenärztliche Bundesvereinigung (KBV)", de:1, d:"Vertragsärztliche Versorgung: Bedarfsplanung, Arztzahlen, Honorar, Daten zur ambulanten Versorgung in den Regionen.", t:"live", u:"https://www.kbv.de/suche?q=%s"},
+  {c:"primaer", n:"Zentralinstitut für die kassenärztliche Versorgung (Zi)", de:1, d:"Versorgungsatlanten und Abrechnungsanalysen: Praxisdichte, Erreichbarkeit, regionale Unterschiede in der Primärversorgung.", t:"portal", u:"https://www.zi.de/"},
+  {c:"primaer", n:"Sachverständigenrat Gesundheit und Pflege", de:1, d:"Die Gutachten, die Primärversorgung, Steuerung und Sektorengrenzen in Deutschland immer wieder neu vermessen haben.", t:"portal", u:"https://www.svr-gesundheit.de/gutachten/"},
+  {c:"primaer", n:"Robert Bosch Stiftung – Gesundheit", de:1, d:"Trägerin der PORT-Gesundheitszentren: Modelle lokaler Primärversorgung mit Team, Evaluationen und Praxisberichte.", t:"live", u:"https://www.bosch-stiftung.de/de/suche?search=%s"},
+  {c:"primaer", n:"WONCA Europe", d:"Europäischer Dachverband der Allgemeinmedizin: die europäische Definition der Allgemeinmedizin, Positionen, Kongress.", t:"portal", u:"https://www.woncaeurope.org/"},
+  {c:"primaer", n:"WHO – Primary health care", d:"Die Erklärung von Astana, Messrahmen und Länderdaten zur Primärversorgung weltweit.", t:"live", u:"https://www.who.int/home/search?indexCatalogue=genericsearchindex1&searchQuery=%s"},
+  // Krisenfestigkeit der Versorgung
+  {c:"resilienz", n:"European Observatory on Health Systems and Policies", d:"Die Länderberichte und die Arbeiten zur Krisenfestigkeit von Gesundheitssystemen, einschließlich der Lehren aus der Pandemie.", t:"portal", u:"https://eurohealthobservatory.who.int/publications"},
+  {c:"resilienz", n:"WHO – Health systems resilience", d:"Rahmenwerke und Länderarbeiten dazu, wie ein Gesundheitssystem einer Krise standhält und danach weiterarbeitet.", t:"live", u:"https://www.who.int/home/search?indexCatalogue=genericsearchindex1&searchQuery=%s"},
+  {c:"resilienz", n:"ECDC", d:"Europäisches Zentrum für Prävention und Kontrolle von Krankheiten: Lagebilder, Vorsorgeplanung, Bewertungen der Reaktionsfähigkeit.", t:"live", u:"https://www.ecdc.europa.eu/en/search?s=%s"},
+  {c:"resilienz", n:"Robert Koch-Institut", de:1, d:"Pandemievorsorge, Lageberichte, Surveillance und die Auswertungen zur Belastbarkeit der Versorgung in Krisenlagen.", t:"live", u:"https://www.rki.de/SiteGlobals/Forms/Suche/Expertensuche/Servicesuche_Formular.html?templateQueryString=%s"},
+  {c:"resilienz", n:"Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK)", de:1, d:"Krankenhausalarmplanung, Katastrophenmedizin, kritische Infrastrukturen im Gesundheitswesen.", t:"live", u:"https://www.bbk.bund.de/SiteGlobals/Forms/Suche/Servicesuche_Formular.html?templateQueryString=%s"},
+  {c:"resilienz", n:"OECD – Health at a Glance", d:"Der Vergleichsband mit dem Kapitel zur Krisenfestigkeit: Personalreserven, Bettenkapazität, Vorsorge im Ländervergleich.", t:"portal", u:"https://www.oecd.org/en/publications/health-at-a-glance-europe_1f276171-en.html"},
 ];
 // === DB-BLOCK-ENDE ===
 
@@ -2430,6 +2450,7 @@ const CHIPS = [
   "patient-reported outcomes",
   "integrierte Versorgung",
   "sektorenübergreifende Versorgung",
+  "Resilienz",
 ];
 // === CHIPS-BLOCK-ENDE ===
 
