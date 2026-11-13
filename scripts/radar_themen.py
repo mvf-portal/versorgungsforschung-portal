@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Die siebzehn Themengebiete des Ausschreibungsradars - an einer Stelle.
+"""Die fuenfzehn Themengebiete des Ausschreibungsradars - an einer Stelle.
 
 Entscheidung des Herausgebers vom 28.08.2026: Der Radar laeuft **einmal
 zentral** im Versorgungsforschungs-Hub und ist dort nach Themengebieten
@@ -69,7 +69,7 @@ FEEDS = [
     "bekanntmachungen-internationales",
 ]
 
-# Die siebzehn Themengebiete in der Reihenfolge der Hub-Reihe.
+# Die fuenfzehn Themengebiete in der Reihenfolge der Hub-Reihe.
 #   slug   - Anker auf der zentralen Seite und Kennung in ausschreibungen.json.
 #            MUSS dem SLUG in der portal.json des Hubs entsprechen: Daran
 #            findet scripts/radar_hinweis.py sein Gebiet wieder. Zwei heissen
@@ -324,7 +324,8 @@ Krankheiten": Dort schluckt ein allgemeines Gebiet ein spezielles, hier
 NICHT einschlägig sind Ernährungsforschung ohne Diabetesbezug, einzelne
 Nährstoffe und Nahrungsergänzung, Lebensmitteltechnologie und
 Agrarforschung.""",
-    },    {
+    },
+    {
         # Hinzugekommen am 12.11.2026 mit dem siebzehnten Hub. Regel aus
         # themen/muskel.json abgeleitet (kriterium_a, ausschluss, Quoten 4
         # und 5), vom Herausgeber am 12.11.2026 bestaetigt.
@@ -353,7 +354,7 @@ klinische Fragestellung sowie Sportwissenschaft ohne Krankheitsbezug.""",
     {
         # Hinzugekommen am 12.11.2026 mit dem sechzehnten Hub. Die Regel ist
         # aus themen/auge.json abgeleitet (kriterium_a, ausschluss, Quote 4)
-        # und steht bis zur Bestaetigung durch den Herausgeber unter Vorbehalt.
+        # und vom Herausgeber am 12.11.2026 bestaetigt.
         "slug": "auge",
         "name": "Augenheilkunde",
         "domain": "auge.m-vf.de",
@@ -378,8 +379,86 @@ tiermedizinische Augenheilkunde, Bilderkennung und maschinelles Lernen als
 eigentlicher Gegenstand (die gehören zu Digitalisierung und KI) sowie
 optische Mess- und Gerätetechnik ohne klinische Fragestellung.""",
     },
+    {
+        # Hinzugekommen am 13.11.2026 mit dem achtzehnten Hub. Regel aus
+        # themen/kinder.json abgeleitet (kriterium_a, ausschluss, Quoten).
+        "slug": "kinder",
+        "name": "Kinder- und Jugendmedizin",
+        "domain": "kinder.m-vf.de",
+        "suche": ["child health research", "pediatric care"],
+        "regel": """Einschlägig ist eine Ausschreibung, wenn sie Forschung zur
+Gesundheit von Kindern und Jugendlichen oder zu ihrer Versorgung fördert -
+Neonatologie und Frühgeborenenversorgung, chronische Erkrankungen im
+Kindesalter, Vorsorgeuntersuchungen, Entwicklung und Entwicklungsstörungen,
+Kinderschutz, Jugendgesundheit, der Übergang in die Erwachsenenmedizin sowie
+die kinderärztliche und kinderklinische Versorgung; einschließlich
+translationaler Projekte mit erkennbarem Bezug zum Menschen.
+
+Die seelische Gesundheit junger Menschen gehört in beide Gebiete und ist hier
+NICHT ausgeschlossen - dieselbe Teilung wie im Hub: Steht die Entwicklung oder
+die pädiatrische Versorgung im Mittelpunkt, gehört die Ausschreibung hierher;
+steht die psychische Erkrankung im Mittelpunkt, zu Psychische Gesundheit.
+
+NICHT einschlägig sind Schulforschung und Pädagogik ohne Gesundheitsbezug,
+Geburtshilfe mit Blick allein auf die Mutter, reine Zell- und Tiermodelle ohne
+Anwendungsbezug sowie Kinderarzneimittelentwicklung ohne klinische
+Fragestellung.""",
+    },
+    {
+        # Hinzugekommen am 13.11.2026 mit dem neunzehnten Hub. Regel aus
+        # themen/neuro.json abgeleitet (kriterium_a, ausschluss, Quoten 4 und 5).
+        "slug": "neuro",
+        "name": "Neurologie",
+        "domain": "neuro.m-vf.de",
+        "suche": ["neurology research", "stroke care"],
+        "regel": """Einschlägig ist eine Ausschreibung, wenn sie Forschung zu
+neurologischen Erkrankungen oder zu ihrer Versorgung fördert - Schlaganfall
+von der Stroke Unit bis zur Nachsorge, Demenzen, Parkinson und andere
+Bewegungsstörungen, Multiple Sklerose, Epilepsie, Kopfschmerz und Migräne,
+ALS, Schädel-Hirn-Trauma, dazu neurologische Rehabilitation und Teilhabe;
+einschließlich translationaler Projekte mit erkennbarem Bezug zum Menschen.
+
+Die Demenzversorgung gehört in beide Gebiete und ist hier NICHT ausgeschlossen
+- dieselbe Teilung wie im Hub: Steht die neurologische Erkrankung im
+Mittelpunkt, gehört die Ausschreibung hierher; steht die Pflege und Betreuung
+im Mittelpunkt, zu Pflege und Langzeitversorgung.
+
+NICHT einschlägig sind reine Neurowissenschaft ohne Krankheitsbezug (die
+Grundlagenforschung ist hier besonders groß), psychiatrische Fragestellungen
+ohne neurologisches Korrelat (die gehören zu Psychische Gesundheit),
+Bildauswertung des Gehirns als eigentlicher Gegenstand (Digitalisierung und
+KI) sowie Geräte- und Sensorentwicklung ohne klinische Fragestellung.""",
+    },
+    {
+        # Hinzugekommen am 13.11.2026 mit dem zwanzigsten Hub. Regel aus
+        # themen/genom.json abgeleitet (kriterium_a, ausschluss, Quoten 3 und 4).
+        "slug": "genom",
+        "name": "Genommedizin & Seltene Erkrankungen",
+        "domain": "genom.m-vf.de",
+        "suche": ["genomic medicine", "rare disease research"],
+        "regel": """Einschlägig ist eine Ausschreibung, wenn sie Forschung zur
+genetischen Diagnostik, zur personalisierten Therapie oder zur Versorgung bei
+Seltenen Erkrankungen fördert - Genom- und Exomsequenzierung, genetische
+Beratung, Pharmakogenetik, Neugeborenen- und Anlageträgerscreening, genetisch
+begründete Pränatal- und Präimplantationsdiagnostik, Gentherapie, Biobanken,
+Genomdatenschutz, Zentrumsstruktur und Diagnosewege bei Seltenen Erkrankungen;
+einschließlich translationaler Projekte mit erkennbarem Bezug zum Menschen.
+
+Die Präzisionsonkologie gehört in beide Gebiete und ist hier NICHT
+ausgeschlossen - dieselbe Teilung wie im Hub: Steht das genetische Verfahren im
+Mittelpunkt, gehört die Ausschreibung hierher; steht die Tumortherapie im
+Mittelpunkt, zu Onkologie.
+
+NICHT einschlägig sind Impfstoffe, auch solche mit viralem Vektor oder mRNA
+(die gehören zu Impfen und Prävention) - ein viraler Vektor ist dieselbe
+Technik, einmal zur Immunisierung und einmal zum Gentransfer, und die
+Abgrenzung entscheidet der Zweck, nicht das Werkzeug. Ebenfalls nicht
+einschlägig sind Pflanzen- und Tierzüchtung, bioinformatische Methodenarbeiten
+ohne klinische Fragestellung sowie Sequenziertechnik ohne
+Versorgungsbezug.""",
+    },
 ]
 
-# Alle Suchbegriffe der siebzehn Gebiete, entdoppelt und in fester Reihenfolge:
-# Der Pool wird einmal geholt und danach siebzehnmal befragt.
+# Alle Suchbegriffe der achtzehn Gebiete, entdoppelt und in fester Reihenfolge:
+# Der Pool wird einmal geholt und danach achtzehnmal befragt.
 SUCHE = list(dict.fromkeys(b for t in THEMEN for b in t["suche"]))
