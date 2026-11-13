@@ -802,27 +802,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-25",
-   "name": "JUVMO",
-   "wirkstoff": "TAVAPADON",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ABBVIE",
-   "kennzeichen": [
-    "NDA",
-    "Label Oct 28, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220415",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1ae6df6e-6ca0-420f-bec9-effa7acdd085",
-   "indikation_en": "JUVMO is indicated for the treatment of Parkinson’s disease (PD) in adults. JUVMO is a non-ergot dopamine agonist indicated for the treatment of Parkinson’s disease in adults. ( 1 ) 2",
-   "hubs": [
-    "longevity"
-   ],
-   "satz": "Die FDA hat Tavapadon (JUVMO) zur Behandlung der Parkinson-Krankheit bei Erwachsenen zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-25",
    "name": "ATEBRIOZ",
    "wirkstoff": "ZILURGISERTIB FUMARATE",
    "gebiet_mesh": "",
@@ -840,6 +819,27 @@
     "ohne-hub"
    ],
    "satz": "Die FDA hat Zilurgisertib-Fumarat (Atebrioz) zur Reduktion neuer heterotoper Ossifikationen bei Fibrodysplasia ossificans progressiva zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-25",
+   "name": "JUVMO",
+   "wirkstoff": "TAVAPADON",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ABBVIE",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 28, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220415",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1ae6df6e-6ca0-420f-bec9-effa7acdd085",
+   "indikation_en": "JUVMO is indicated for the treatment of Parkinson’s disease (PD) in adults. JUVMO is a non-ergot dopamine agonist indicated for the treatment of Parkinson’s disease in adults. ( 1 ) 2",
+   "hubs": [
+    "longevity"
+   ],
+   "satz": "Die FDA hat Tavapadon (JUVMO) zur Behandlung der Parkinson-Krankheit bei Erwachsenen zugelassen."
   },
   {
    "stufe": "diga",
@@ -863,26 +863,6 @@
    "satz": "Pia-App bei Regelschmerzen ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
-   "stufe": "fda-wartet",
-   "datum": "2026-09-23",
-   "name": "LYRFIGTU",
-   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ELEVAR",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220425",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
-  },
-  {
    "stufe": "fda",
    "datum": "2026-09-23",
    "name": "ONSWIK",
@@ -902,6 +882,26 @@
     "diabetes"
    ],
    "satz": "Die FDA hat Insulin Efsitora alfa-gobe (Onswik) zur Verbesserung der Glykämiekontrolle bei Typ-2-Diabetes zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-09-23",
+   "name": "LYRFIGTU",
+   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ELEVAR",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220425",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
   },
   {
    "stufe": "zulassung",
@@ -2616,6 +2616,26 @@
    "satz": "Zepzelca (Lurbinectedin) in Kombination mit Atezolizumab ist zur Erhaltungstherapie von Patienten mit kleinzelligem Lungenkarzinom im Stadium extensive-stage indiziert, deren Erkrankung nach Erstlinien-Induktionstherapie nicht progredient ist."
   },
   {
+   "stufe": "fda-wartet",
+   "datum": "2026-05-29",
+   "name": "CYPSEDO",
+   "wirkstoff": "CIPEPOFOL",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "HAISCO",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220482",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220482",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
    "stufe": "fda",
    "datum": "2026-05-29",
    "name": "XOCOVA",
@@ -2635,26 +2655,6 @@
     "impfen"
    ],
    "satz": "Die FDA hat Ensitrelvir (Xocova) zur Postexpositionsprophylaxe von COVID-19 bei Erwachsenen und Jugendlichen ab zwölf Jahren zugelassen."
-  },
-  {
-   "stufe": "fda-wartet",
-   "datum": "2026-05-29",
-   "name": "CYPSEDO",
-   "wirkstoff": "CIPEPOFOL",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "HAISCO",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220482",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220482",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
   },
   {
    "stufe": "zulassung",
