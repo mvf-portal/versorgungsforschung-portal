@@ -1,11 +1,11 @@
 {
- "stand": "13.11.2026",
+ "stand": "14.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
-  "zulassung": 30,
-  "gutachten": 25,
-  "ohne_hub": 17,
+  "zulassung": 31,
+  "gutachten": 30,
+  "ohne_hub": 16,
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
@@ -22,6 +22,150 @@
  },
  "warnungen": [],
  "eintraege": [
+  {
+   "stufe": "zulassung",
+   "datum": "2026-11-12",
+   "name": "Ruxolitinib Zentiva",
+   "wirkstoff": "ruxolitinib hemifumarate",
+   "gebiet_mesh": "Primary Myelofibrosis;Polycythemia Vera;Graft vs Host Disease",
+   "atc": "L01EJ01",
+   "inhaber": "Zentiva k.s.",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006791",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/ruxolitinib-zentiva",
+   "indikation_en": "Myelofibrosis (MF) Ruxolitinib Zentiva is indicated for the treatment of disease-related splenomegaly or symptoms in adult patients with primary myelofibrosis (also known as chronic idiopathic myelofibrosis), post polycythaemia vera myelofibrosis or post essential thrombocythaemia myelofibrosis. Polycythaemia vera (PV) Ruxolitinib Zentiva is indicated for the treatment of adult patients with polycythaemia vera who are resistant to or intolerant of hydroxyurea. Graft versus host disease (GvHD) &nbsp;Acute GvHD Ruxolitinib Zentiva is indicated for the treatment of adults and paediatric patients aged 28 days and older with acute graft versus host disease who have inadequate response to corticosteroids or other systemic therapies (see section 5.1). Chronic GvHD Ruxolitinib Zentiva is indicated for the treatment of adults and paediatric patients aged 6 months and older with chronic graft versus host disease who have inadequate response to corticosteroids or other systemic therapies (see section 5.1).",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Ruxolitinib Zentiva (Ruxolitinib-Hemifumarat) zur Behandlung von Myelofibrose, Polycythaemia vera und Graft-versus-Host-Disease bei Erwachsenen und Kindern."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-11-12",
+   "name": "Aumseqa",
+   "wirkstoff": "aumolertinib",
+   "gebiet_mesh": "Carcinoma, Non-Small-Cell Lung",
+   "atc": "L01EB11",
+   "inhaber": "SFL Pharmaceuticals Deutschland GmbH",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/007167",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/aumseqa",
+   "indikation_en": "Treatment of non-small cell lung cancer in adults.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Aumseqa (Aumolertinib) zur Behandlung des nicht-kleinzelligen Lungenkarzinoms bei Erwachsenen."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-11-12",
+   "name": "Baxfendy",
+   "wirkstoff": "baxdrostat",
+   "gebiet_mesh": "Hypertension",
+   "atc": "C02K",
+   "inhaber": "AstraZeneca AB",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006597",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/baxfendy",
+   "indikation_en": "Treatment of hypertension in adults.",
+   "hubs": [
+    "kardio"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Baxfendy (Baxdrostat) zur Behandlung der Hypertonie bei Erwachsenen."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-11-12",
+   "name": "Donrafylix",
+   "wirkstoff": "insulin aspart",
+   "gebiet_mesh": "Diabetes Mellitus",
+   "atc": "A10AB05",
+   "inhaber": "Kuraci",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006864",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/donrafylix",
+   "indikation_en": "Treatment of diabetes mellitus from 1 year of age.",
+   "hubs": [
+    "diabetes"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Donrafylix (Insulin aspart) zur Behandlung des Diabetes mellitus ab einem Alter von 1 Jahr."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-11-12",
+   "name": "Fondaparinux sodium Evumed",
+   "wirkstoff": "fondaparinux sodium",
+   "gebiet_mesh": "Venous Thrombosis;Pulmonary Embolism;Myocardial Infarction;Angina, Unstable",
+   "atc": "B01AX05",
+   "inhaber": "Evumed Limited",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006824",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/fondaparinux-sodium-evumed",
+   "indikation_en": "Prevention of venous thromboembolic events (VTE), treatment of deep vein thrombosis (DVT), treatment of pulmonary embolism, treatment of unstable angina and myocardial infarction in adults",
+   "hubs": [
+    "kardio"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Fondaparinux sodium Evumed (Fondaparinux-Natrium) zur Prävention venöser Thromboembolien, Behandlung von Venenthrombosen und Lungenembolien sowie zur Behandlung instabiler Angina pectoris und Myokardinfarkt."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-11-12",
+   "name": "Garzulys",
+   "wirkstoff": "insulin aspart",
+   "gebiet_mesh": "Diabetes Mellitus",
+   "atc": "A10AB05",
+   "inhaber": "Sciencepharma Sp. z o.o",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006677",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/garzulys",
+   "indikation_en": "Treatment of diabetes mellitus from 1 year of age.",
+   "hubs": [
+    "diabetes"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Garzulys (Insulin aspart) zur Behandlung des Diabetes mellitus ab einem Alter von 1 Jahr."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-11-12",
+   "name": "Ruxolitinib Krka",
+   "wirkstoff": "ruxolitinib hydrochloride",
+   "gebiet_mesh": "Primary Myelofibrosis;Polycythemia Vera;Graft vs Host Disease",
+   "atc": "L01EJ01",
+   "inhaber": "KRKA tovarna zdravil d.d. Novo mesto",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006793",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/ruxolitinib-krka",
+   "indikation_en": "Treatment of myelofibrosis (MF) and polycythaemia vera (PV) in adults, and treatment of Graft versus host disease (GvHD) in adults and children.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Ruxolitinib Krka (Ruxolitinib-hydrochlorid) zur Behandlung von Myelofibrose und Polycythaemia vera bei Erwachsenen sowie chronischer Graft-versus-Host-Disease bei Erwachsenen und Kindern."
+  },
+  {
+   "stufe": "gutachten",
+   "datum": "2026-11-12",
+   "name": "Zybrivo",
+   "wirkstoff": "sintilimab",
+   "gebiet_mesh": "Carcinoma, Non-Small-Cell Lung",
+   "atc": "L01F",
+   "inhaber": "Fortvita Biologics (Ireland) Limited",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006743",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/zybrivo",
+   "indikation_en": "Treatment of non-squamous non-small cell lung cancer in adults.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Zybrivo (Sintilimab) zur Behandlung des nicht-plattenepithelialen nicht-kleinzelligen Lungenkarzinoms bei Erwachsenen."
+  },
   {
    "stufe": "zulassung",
    "datum": "2026-10-22",
@@ -863,6 +1007,26 @@
    "satz": "Pia-App bei Regelschmerzen ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
+   "stufe": "fda-wartet",
+   "datum": "2026-09-23",
+   "name": "LYRFIGTU",
+   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ELEVAR",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220425",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
    "stufe": "fda",
    "datum": "2026-09-23",
    "name": "ONSWIK",
@@ -882,26 +1046,6 @@
     "diabetes"
    ],
    "satz": "Die FDA hat Insulin Efsitora alfa-gobe (Onswik) zur Verbesserung der Glykämiekontrolle bei Typ-2-Diabetes zugelassen."
-  },
-  {
-   "stufe": "fda-wartet",
-   "datum": "2026-09-23",
-   "name": "LYRFIGTU",
-   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ELEVAR",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220425",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
   },
   {
    "stufe": "zulassung",
@@ -1048,24 +1192,6 @@
     "onkologie"
    ],
    "satz": "Der CHMP empfiehlt die Zulassung von Lifyorli (Relacorilant) zur Behandlung von Erwachsenen mit platinumresistentem epithelialem Ovarialkarzinom, Eileiterkarzinom oder primärem Peritonealkarzinom."
-  },
-  {
-   "stufe": "gutachten",
-   "datum": "2026-09-17",
-   "name": "Ruxolitinib Zentiva",
-   "wirkstoff": "ruxolitinib hemifumarate",
-   "gebiet_mesh": "Primary Myelofibrosis;Polycythemia Vera;Graft vs Host Disease",
-   "atc": "L01EJ01",
-   "inhaber": "Zentiva k.s.",
-   "kennzeichen": [],
-   "gutachten": "Positive",
-   "nummer": "EMEA/H/C/006791",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/ruxolitinib-zentiva",
-   "indikation_en": "Treatment of myelofibrosis (MF) in adults, treatment of polycythaemia vera (PV) in adults and treatment of Graft versus host disease (GvHD) in adults and children",
-   "hubs": [
-    "onkologie"
-   ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Ruxolitinib Zentiva (Ruxolitinib-Hemifumarat) zur Behandlung von Myelofibrose, Polycythaemia vera und Graft-versus-Host-Disease bei Erwachsenen und Kindern."
   },
   {
    "stufe": "gutachten",
@@ -2616,26 +2742,6 @@
    "satz": "Zepzelca (Lurbinectedin) in Kombination mit Atezolizumab ist zur Erhaltungstherapie von Patienten mit kleinzelligem Lungenkarzinom im Stadium extensive-stage indiziert, deren Erkrankung nach Erstlinien-Induktionstherapie nicht progredient ist."
   },
   {
-   "stufe": "fda-wartet",
-   "datum": "2026-05-29",
-   "name": "CYPSEDO",
-   "wirkstoff": "CIPEPOFOL",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "HAISCO",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220482",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220482",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
-  },
-  {
    "stufe": "fda",
    "datum": "2026-05-29",
    "name": "XOCOVA",
@@ -2655,6 +2761,26 @@
     "impfen"
    ],
    "satz": "Die FDA hat Ensitrelvir (Xocova) zur Postexpositionsprophylaxe von COVID-19 bei Erwachsenen und Jugendlichen ab zwölf Jahren zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-05-29",
+   "name": "CYPSEDO",
+   "wirkstoff": "CIPEPOFOL",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "HAISCO",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220482",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220482",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
   },
   {
    "stufe": "zulassung",
