@@ -21,7 +21,7 @@
      "quelle": "Innovationsfonds (G-BA)",
      "land": "DE",
      "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
-     "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz"
+     "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
     }
    ]
   },
@@ -81,7 +81,7 @@
    "slug": "ncd",
    "name": "Nicht übertragbare Krankheiten",
    "domain": "ncd.m-vf.de",
-   "anzahl": 2,
+   "anzahl": 5,
    "ausschreibungen": [
     {
      "titel": "DoW Orthopaedic, Clinical Research Award",
@@ -100,6 +100,33 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "DoW Orthopaedic, Applied Research Award"
+    },
+    {
+     "titel": "Cooperative Research Agreements Related to the World Trade Center Health Program (U01)",
+     "frist": "2026-12-08",
+     "url": "https://www.grants.gov/search-results-detail/356163",
+     "quelle": "grants.gov (HHS-CDC-HHSCDCERA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Cooperative Research Agreements Related to the World Trade Center Health Program (U01)"
+    },
+    {
+     "titel": "Exploratory/Developmental Grants Related to the World Trade Center Health Program (R21)",
+     "frist": "2026-12-08",
+     "url": "https://www.grants.gov/search-results-detail/360753",
+     "quelle": "grants.gov (HHS-CDC-HHSCDCERA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Exploratory/Developmental Grants Related to the World Trade Center Health Program (R21)"
+    },
+    {
+     "titel": "Förderung interdisziplinärer Verbünde zur Erforschung der Pathomechanismen von postinfektiösen Erkrankungen",
+     "frist": "2027-01-27",
+     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/10/2026-10-20-bekanntmachung-postinfektioese-erkrankungen.html?templateQueryString=Pathomechanismen",
+     "quelle": "Bund (foerderinfo.bund.de)",
+     "land": "DE",
+     "beschreibung": "Richtlinie zur Förderung interdisziplinärer Verbünde zur Erforschung der Pathomechanismen von postinfektiösen Erkrankungen – Nationale Dekade gegen Postinfektiöse Erkrankungen. BAnz vom 20.10.2026.",
+     "beleg": "Förderung interdisziplinärer Verbünde zur Erforschung der Pathomechanismen von postinfektiösen Erkrankungen"
     }
    ]
   },
@@ -107,18 +134,8 @@
    "slug": "gender",
    "name": "Geschlechtersensible Medizin",
    "domain": "gender.m-vf.de",
-   "anzahl": 1,
-   "ausschreibungen": [
-    {
-     "titel": "Women's Initiative for Screening and Health (WISH)",
-     "frist": "2027-01-08",
-     "url": "https://www.grants.gov/search-results-detail/363546",
-     "quelle": "grants.gov (HHS-HRSA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Women's Initiative for Screening and Health (WISH)"
-    }
-   ]
+   "anzahl": 0,
+   "ausschreibungen": []
   },
   {
    "slug": "adipositas",
@@ -138,7 +155,7 @@
    "slug": "mental",
    "name": "Psychische Gesundheit",
    "domain": "mental.m-vf.de",
-   "anzahl": 4,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
@@ -147,25 +164,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
-    },
-    {
-     "titel": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich)",
-     "frist": "2026-12-31",
-     "url": "https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-neue-versorgungsformen-zum-themenoffenen-bereich-einstufig-kurz-einreichung-laufend-im-jahr-moeglich.66",
-     "quelle": "Innovationsfonds (G-BA)",
-     "land": "DE",
-     "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
-     "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
-    },
-    {
-     "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
-     "frist": "2027-01-26",
-     "url": "https://www.grants.gov/search-results-detail/360366",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery"
+     "beleg": "Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
     },
     {
      "titel": "HEAL Initiative: Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)",
@@ -175,6 +174,15 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers"
+    },
+    {
+     "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
+     "frist": "2027-01-26",
+     "url": "https://www.grants.gov/search-results-detail/360366",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center"
     }
    ]
   },
@@ -194,15 +202,6 @@
      "beleg": "Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
     },
     {
-     "titel": "Cancer Prevention and Control Clinical Trials Grant Program (R01 Clinical Trial Required)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357074",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Cancer Prevention and Control Clinical Trials Grant Program"
-    },
-    {
      "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
      "frist": "2027-01-11",
      "url": "https://www.grants.gov/search-results-detail/360606",
@@ -212,13 +211,22 @@
      "beleg": "Glioblastoma Therapeutics Network (GTN)"
     },
     {
-     "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
-     "frist": "2027-01-25",
-     "url": "https://www.grants.gov/search-results-detail/360393",
+     "titel": "Cancer Prevention and Control Clinical Trials Grant Program (R01 Clinical Trial Required)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357074",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI)"
+     "beleg": "Cancer Prevention and Control Clinical Trials Grant Program"
+    },
+    {
+     "titel": "Interventions to expand cancer screening and preventive services to ADVANCE health in populations that experience health disparities (R01, Clinical Trial Required)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/356690",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "expand cancer screening and preventive services"
     },
     {
      "titel": "DoW Breast Cancer, Clinical Research Extension Award",
@@ -230,13 +238,22 @@
      "beleg": "Breast Cancer, Clinical Research Extension Award"
     },
     {
-     "titel": "DoW Breast Cancer, Breakthrough Award Levels 1 and 2",
+     "titel": "DoW Rare Cancers Idea Development Award",
      "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/363670",
+     "url": "https://www.grants.gov/search-results-detail/362849",
      "quelle": "grants.gov (DOD-AMRAA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Breast Cancer, Breakthrough Award Levels 1 and 2"
+     "beleg": "Rare Cancers Idea Development Award"
+    },
+    {
+     "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
+     "frist": "2027-01-25",
+     "url": "https://www.grants.gov/search-results-detail/360393",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure"
     },
     {
      "titel": "DoW Rare Cancers Resource and Community Development Award",
@@ -246,15 +263,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Rare Cancers Resource and Community Development Award"
-    },
-    {
-     "titel": "DoW Rare Cancers Idea Development Award",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/362849",
-     "quelle": "grants.gov (DOD-AMRAA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Rare Cancers Idea Development Award"
     }
    ]
   },
@@ -262,7 +270,7 @@
    "slug": "kardio",
    "name": "Kardiologie",
    "domain": "kardio.m-vf.de",
-   "anzahl": 1,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention (UG3/UH3 Clinical Trial Optional)",
@@ -271,7 +279,25 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
+     "beleg": "NIH StrokeNet Clinical Trials and Biomarker Studies for Stroke Treatment, Recovery, and Prevention"
+    },
+    {
+     "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R61/R33 Clinical Trial Required)",
+     "frist": "2027-02-03",
+     "url": "https://www.grants.gov/search-results-detail/357543",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
+    },
+    {
+     "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R33 CT Required)",
+     "frist": "2027-02-03",
+     "url": "https://www.grants.gov/search-results-detail/357542",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
     }
    ]
   },
@@ -279,18 +305,8 @@
    "slug": "diabetes",
    "name": "Diabetes",
    "domain": "diabetes.m-vf.de",
-   "anzahl": 1,
-   "ausschreibungen": [
-    {
-     "titel": "Diabetes Research Centers (P30 Clinical Trial Optional)",
-     "frist": "2027-01-27",
-     "url": "https://www.grants.gov/search-results-detail/359145",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Diabetes Research Centers (P30 Clinical Trial Optional)"
-    }
-   ]
+   "anzahl": 0,
+   "ausschreibungen": []
   },
   {
    "slug": "muskel",
@@ -329,43 +345,16 @@
    "slug": "kinder",
    "name": "Kinder- und Jugendmedizin",
    "domain": "kinder.m-vf.de",
-   "anzahl": 6,
+   "anzahl": 3,
    "ausschreibungen": [
     {
-     "titel": "Discovery of the Genetic Basis of Childhood Cancers and of Congenital Anomalies: Gabriella Miller Kids First Pediatric Research Program (X01 Clinical Trial Not Allowed)",
-     "frist": "2027-01-11",
-     "url": "https://www.grants.gov/search-results-detail/361164",
+     "titel": "Maximizing the Scientific Value of Data Generated by the Environmental Influences on Child Health Outcomes (ECHO) Program: Ruth L. Kirschstein National Research Service Award (NRSA) Individual Postdoctoral Fellowship (F32)",
+     "frist": "2026-12-02",
+     "url": "https://www.grants.gov/search-results-detail/359150",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Discovery of the Genetic Basis of Childhood Cancers and of Congenital Anomalies: Gabriella Miller Kids First Pediatric Research Program"
-    },
-    {
-     "titel": "Single Source: Continued Development of the Gabriella Miller Kids First Pediatric Data Resource Center (U2C Clinical Trial Not Allowed)",
-     "frist": "2027-01-08",
-     "url": "https://www.grants.gov/search-results-detail/358959",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Gabriella Miller Kids First Pediatric Data Resource Center"
-    },
-    {
-     "titel": "Genomic Data Generation Center for the Gabriella Miller Kids First Pediatric Research Program (U24 Clinical Trial Not Allowed)",
-     "frist": "2027-01-08",
-     "url": "https://www.grants.gov/search-results-detail/358954",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Genomic Data Generation Center for the Gabriella Miller Kids First Pediatric Research Program"
-    },
-    {
-     "titel": "Gabriella Miller Kids First Training and Outreach Core (U24 Clinical Trial Not Allowed)",
-     "frist": "2027-01-08",
-     "url": "https://www.grants.gov/search-results-detail/358960",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Gabriella Miller Kids First Training and Outreach Core"
+     "beleg": "Environmental Influences on Child Health Outcomes (ECHO) Program"
     },
     {
      "titel": "Prevention and Intervention Approaches for Fetal Alcohol Spectrum Disorders (R61/R33 Clinical Trial Optional)",
@@ -417,7 +406,7 @@
    "slug": "genom",
    "name": "Genommedizin & Seltene Erkrankungen",
    "domain": "genom.m-vf.de",
-   "anzahl": 8,
+   "anzahl": 3,
    "ausschreibungen": [
     {
      "titel": "Discovery of the Genetic Basis of Childhood Cancers and of Congenital Anomalies: Gabriella Miller Kids First Pediatric Research Program (X01 Clinical Trial Not Allowed)",
@@ -427,15 +416,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Discovery of the Genetic Basis of Childhood Cancers and of Congenital Anomalies: Gabriella Miller Kids First Pediatric Research Program"
-    },
-    {
-     "titel": "Supporting Talented Early Career Researchers in Genomics (R01 Clinical Trial Optional)",
-     "frist": "2027-02-26",
-     "url": "https://www.grants.gov/search-results-detail/357744",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Supporting Talented Early Career Researchers in Genomics (R01 Clinical Trial Optional)"
     },
     {
      "titel": "Genomic Data Generation Center for the Gabriella Miller Kids First Pediatric Research Program (U24 Clinical Trial Not Allowed)",
@@ -454,42 +434,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Continued Development of the Gabriella Miller Kids First Pediatric Data Resource Center"
-    },
-    {
-     "titel": "Gabriella Miller Kids First Training and Outreach Core (U24 Clinical Trial Not Allowed)",
-     "frist": "2027-01-08",
-     "url": "https://www.grants.gov/search-results-detail/358960",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Gabriella Miller Kids First Training and Outreach Core"
-    },
-    {
-     "titel": "Ethical, Legal and Social Implications (ELSI) Small Research Grant (R03 Clinical Trial Optional)",
-     "frist": "2026-11-16",
-     "url": "https://www.grants.gov/search-results-detail/358179",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Ethical, Legal and Social Implications (ELSI) Small Research Grant"
-    },
-    {
-     "titel": "Ethical, Legal and Social Implications (ELSI) Exploratory/Developmental Research Grant (R21 Clinical Trial Optional)",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/358176",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Ethical, Legal and Social Implications (ELSI) Exploratory/Developmental Research Grant"
-    },
-    {
-     "titel": "Ethical, Legal and Social Implications (ELSI) Research (R01 Clinical Trial Optional)",
-     "frist": "2026-11-18",
-     "url": "https://www.grants.gov/search-results-detail/358181",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Ethical, Legal and Social Implications (ELSI) Research (R01 Clinical Trial Optional)"
     }
    ]
   }
