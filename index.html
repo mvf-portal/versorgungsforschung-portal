@@ -2002,16 +2002,16 @@ a.mvf-dach-karte:hover{border-color:var(--brand);transform:translateY(-2px);
 
     <div class="mvf-dach-karten">
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/rekrutierend.html"><h3>Was gerade läuft</h3><p class="mvf-dach-was">Vorhaben, die noch nicht zu Ende sind.</p><ul><li><b>265</b><span>Studien suchen Teilnehmende</span></li><li><b>710</b><span>registrierte Studien</span></li><li><b>861</b><span>Innovationsfonds-Projekte</span></li></ul></a>
-    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>550</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>6.877</b><span>Studien der 20 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
+    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>557</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>6.877</b><span>Studien der 20 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/forschende.html"><h3>Wer es macht</h3><p class="mvf-dach-was">Menschen, Häuser und Geldgeber, und wie sie zusammenhängen.</p><ul><li><b>5.373</b><span>Forschende</span></li><li><b>2.430</b><span>Institutionen</span></li><li><b>484</b><span>Förderer</span></li></ul></a>
-    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>24</b><span>offene Ausschreibungen</span></li><li><b>144</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
+    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>38</b><span>offene Ausschreibungen</span></li><li><b>144</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
     </div>
 
     <p class="mvf-dach-fuss">Literatur, Ausschreibungen und
       Zulassungsverfahren führt der tägliche Lauf dieses Hubs selbst nach.
       Die übrigen zehn Zahlen stehen fest, Stand 2. November 2026, damit keine
       davon still veraltet. Zusammen
-      <b class="mvf-dach-summe">19.267</b> Einträge aus 13
+      <b class="mvf-dach-summe">19.288</b> Einträge aus 13
       Beständen.</p>
   </div>
 </section>
@@ -2344,77 +2344,86 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "15. Nov. 2026, 05:00 Uhr";
+const SNAP_DATE = "16. Nov. 2026, 05:00 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"Health Serv Res", year:"2026", pmid:"43025900",
-    author:"Im H et al.", pubdate:"Dez. 2026",
-    added:"13.11.2026",
-    title:"Kostenbezogene Verzögerungen in der Gesundheitsversorgung bei Geflüchteten",
-    sum:"Pooled Cross-Sectional-Analyse (2020–2022) mit 4.333 Haushaltsangehörigen von Geflüchteten in den USA zur Identifikation von Determinanten kostenbezogener Versorgungsverzögerungen.",
-    result:"Prävalenz kostenbezogener Verzögerungen: 17,8%. Nicht-kostenbezogene Barrieren (+12,7 Prozentpunkte) und Diskriminierung (+9,4 Prozentpunkte) waren stärker assoziiert als Kosten allein. Jeder zusätzliche versicherter Monat senkte Verzögerungsrisiko um 1,1 Prozentpunkte. Kontinuierliche Versicherung und Navigationsunterstützung sind zentral.",
-    transfer:"US-Daten – Fragestellung zu Zugangsbarrieren und Versicherungsstatus systemunabhängig relevant"
-  },
-  {
-    journal:"BMC Public Health", year:"2026", pmid:"43026538",
-    author:"Brinkmann M et al.", pubdate:"13.11.2026",
-    added:"13.11.2026",
-    title:"Präferenzen für Sigmoidoskopie in der Darmkrebsvorsorge (Deutschland)",
-    sum:"Discrete-Choice-Experiment mit 666 gesetzlich Versicherten (50, 55, 60 Jahre) in Niedersachsen zur Akzeptanz von Sigmoidoskopie als zusätzliche Screening-Option.",
-    result:"22,5% der Frauen und 13,4% der Männer bevorzugten Sigmoidoskopie. Bei Angebot zusätzlich zur Standardvorsorge nahmen Kolonoskopie und Stuhltest leicht ab, Gesamtpartizipation stieg non-signifikant um 5,8% (Frauen) und 3,1% (Männer). Das erweiterte Angebot könnte Screening-Teilnahme marginal erhöhen.",
-    transfer:"Deutsche Versicherte, gesetzliche Krankenversicherung, Niedersachsen"
-  },
-  {
-    journal:"J Adv Nurs", year:"2026", pmid:"43025449",
-    author:"Wuschke J et al.", pubdate:"13.11.2026",
-    added:"13.11.2026",
-    title:"Pflegarbeitsaufwand bei Post-Stroke-Delirium",
-    sum:"Prospektive Fall-Kontroll-Studie mit 90 Schlaganfallpatienten (45 mit Delirium) zur Quantifizierung des Pflege-Workload mittels Leistungserfassung in der Pflege.",
-    result:"Patienten mit Post-Stroke-Delirium benötigten signifikant mehr Pflege-Zeit, besonders für Mobilisierung, Hygiene, Ankleiden, Transport und Überwachung. Delirium ist ein wichtiger Determinant der Pflegepersonalressourcen und erfordert frühe Erkennung und gezielte Interventionen.",
-    transfer:"Routine-Daten Schweiz, deutschsprachiger Kontext, vergleichbar mit Deutschland"
-  },
-  {
-    journal:"JCO Oncol Pract", year:"2026", pmid:"43024835",
-    author:"Knowles R et al.", pubdate:"13.11.2026",
-    added:"13.11.2026",
-    title:"Kliniker-Kompetenzen für Self-Management-Unterstützung in der Onkologie",
-    sum:"Modifizierte Delphi-Studie mit 27 Klinikern und 14 Betroffenen zur Konsensfindung über Mindest-Kompetenzen von Onkologen für effektive Patient-Self-Management-Unterstützung.",
-    result:"18 von 48 Kriterien erreichten Konsens als Mindest-Kompetenzen: person-zentrierte Kommunikation, ganzheitliche Bedarfseinschätzung, motivationales Coaching, Verhaltensänderungs-Coaching, Monitoring von Outcomes und Qualitätsverbesserung. Diese Kompetenzen können Patientenergebnisse und Ressourcennutzung optimieren.",
-    transfer:"Multnationales Expertenkonsens, onkologische Versorgung international übertragbar"
-  },
-  {
-    journal:"Healthcare (Basel)", year:"2026", pmid:"43028735",
-    author:"Reimann M et al.", pubdate:"02.11.2026",
+    journal:"BMC Med Educ", year:"2026", pmid:"43034204",
+    author:"Dreher AC et al.", pubdate:"14.11.2026",
     added:"14.11.2026",
-    title:"Risikofaktoren für Arbeitsunfähigkeit durch Muskelskelettstörungen bei Pflegekräften",
-    sum:"Querschnittstudie mit 501 deutschen Pflegekräften zur Identifikation von Risikofaktoren für Langzeiterkrankung oder reduzierte Arbeitsfähigkeit aufgrund von Muskelskelettstörungen.",
-    result:"36% der Teilnehmer waren einem hohen Risiko ausgesetzt. Signifikante Risikofaktoren: Alter 50–59 Jahre (OR 2,8; p=0,001), Schichtarbeit (OR 1,6; p=0,026), unzureichende Ergonomie-Hilfsmittel (OR 1,8; p=0,004), schlechte ergonomische Praktiken (OR 2,5; p=0,033). Diese hohe Prävalenz unterstreicht Interventionsbedarf.",
-    transfer:"Deutsche Routinedaten von gesetzlich versicherten Pflegekräften (BGW)"
+    title:"KI-Nutzung in ärztlicher Entscheidungsfindung: Ansichten von Hausarzt-Assistenten",
+    sum:"Qualitative Studie mit 17 deutschen Hausarzt-Assistenten zu Erfahrungen mit Large Language Models in klinischer Entscheidungsfindung.",
+    result:"Kernaussage: KI wird als Entscheidungs-Unterstützung wahrgenommen, aber Risiken der Über-Abhängigkeit und Deskilling identifiziert. Alle Teilnehmenden berichten fehlende strukturierte KI-Ausbildung und fordern Integration in Facharzt-Weiterbildung.",
+    transfer:"Deutschland: direkte Studienherkunft, Hausarztausbildung im deutschen System."
   },
   {
-    journal:"Healthcare (Basel)", year:"2026", pmid:"43028688",
-    author:"Nassi M et al.", pubdate:"28.10.2026",
+    journal:"BMC Public Health", year:"2026", pmid:"43034154",
+    author:"Kulike S et al.", pubdate:"14.11.2026",
     added:"14.11.2026",
-    title:"Auswirkungen der COVID-19-Pandemie auf Primärversorgung in Griechenland",
-    sum:"Retrospektive Längsschnittstudie mit Panel-Daten von 461–653 öffentlichen Primärversorgungseinrichtungen in Griechenland (2015–2024).",
-    result:"Notfallbesuche erholten sich bis 2024 (IRR 0,989; 95%-KI 0,927–1,054), regelmäßige Besuche blieben aber dauerhaft reduziert (2024 IRR 0,787; 95%-KI 0,749–0,826), etwa 21% unter dem Niveau von 2019. Die anhaltend niedrigere geplante Versorgungsaktivität deutet auf strukturelle Anpassungen hin.",
-    transfer:"Südeuropäisches Sozialversicherungssystem, nationale Routinedaten"
+    title:"Unterkünfte für Geflüchtete und psychische Belastung in Ostdeutschland",
+    sum:"Querschnitt-Befragung von 16 Geflüchteten-Lagern in drei Bundesländern zu Zusammenhang zwischen Wohnqualität und emotionaler Belastung (RHS-13-Screening).",
+    result:"79% der Teilnehmenden zeigen emotionale Belastung (RHS-13 ≥11), 48% schwere Symptome (≥25). Sicherheit, Beleuchtung, Autonomie und Gefühle von Langeweile/Eingesperrtheit signifikant mit Belastung assoziiert (p&lt;0,05). Überfüllung und häufige Verlegungen nicht signifikant nach Multivariate-Anpassung.",
+    transfer:"Deutschland (Ostdeutschland): Feldforschung in Bundes-Flüchtlingslagern."
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43034173",
+    author:"Kreutzberg A et al.", pubdate:"12.11.2026",
+    added:"14.11.2026",
+    title:"PopGrouper: Morbidität-Klassifikation aus deutschen Routinedaten validiert",
+    sum:"Interne Validierung des PopGrouper, eines neuen Klassifikationssystems zur Morbidität-Erfassung anhand administrativer Daten von &gt;8 Millionen gesetzlich Versicherten.",
+    result:"PopGrouper erklärte 35,8% der Variation in Gesamt-Gesundheitskosten (vs. 11,5% für Alter-Geschlecht, 18,6% für Elixhauser). Diskrimination für Mortalität exzellent (c-Statistik 0,884), für Hospitalisierung akzeptabel (0,714). Größte Verbesserung bei Kostenprädiktion.",
+    transfer:"Deutsche Routinedaten, gesetzlich Versicherte, BARMER-Daten mit 10% Bevölkerungsabdeckung."
+  },
+  {
+    journal:"Health Policy Open", year:"2026", pmid:"43034583",
+    author:"Hundersmarck S et al.", pubdate:"23.10.2026",
+    added:"15.11.2026",
+    title:"Regionale Gesundheitssystem-Partnerschaften in der Praxis",
+    sum:"Querschnittsstudie zu 172 regionalen Cross-Sector-Partnerships (CSP) in den Niederlanden, die Gesundheitssystem-Transformation durch Kooperation mehrerer Sektoren umsetzen.",
+    result:"Zwei CSP-Konfigurationen identifiziert: breitorientierte Partnerschaften (größer, präventionsfokussiert, mehrere Netzwerke koordinierend) und kleinere, zielgerichtete CSP. Beide zeigen ähnliche Defizite bei Verantwortungsstrukturen, Finanzierung und Datenverfügbarkeit. Vertrauen und Führung waren relativ gut etabliert.",
+    transfer:"Niederlande: vergleichbares Sozialversicherungssystem, direkte Übertragbarkeit auf Deutschland."
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43034155",
+    author:"Ziegler S et al.", pubdate:"05.10.2026",
+    added:"14.11.2026",
+    title:"Finanzielle Schutzwirkung von Krankenversicherung für Frauen über Müttergesundheit hinaus",
+    sum:"Querschnittsanalyse zur Wirkung des indischen Versicherungsprogramms RSBY (Rashtriya Swasthya Bima Yojana) auf Inanspruchnahme und finanzielle Belastung von Frauen.",
+    result:"Versicherungs-Enrolment reduzierte Out-of-Pocket-Ausgaben für Frauen bei stationärer Nicht-Müttergesundheit (Koeffizient -0,25; p=0,087). Hospitalisierung stieg mit Versicherung nicht signifikant (Frauen 4%, Männer 3,23%; p&lt;0,001 für Geschlechtsunterschied). Potenzial für finanzielle Schutzwirkung jenseits Müttergesundheit.",
+    transfer:"Indien, aber Fragestellung zum Finanzierungsmodell und Versicherungsschutz mit Systemparallelen zu Sozialversicherungen."
+  },
+  {
+    journal:"Antimicrob Steward Healthc Epidemiol", year:"2026", pmid:"43032460",
+    author:"Singh NR et al.", pubdate:"05.10.2026",
+    added:"14.11.2026",
+    title:"Audit-and-Feedback senkt IV-zu-oral Antibiotika-Switch-Zeit in Onkologie",
+    sum:"Kohortenstudie zur Wirkung von prospektivem AMS-Audit-and-Feedback auf Timeliness des IV-zu-oral-Switch bei onkologischen Stationärpatienten.",
+    result:"AMS-Audit-Feedback erhöhte rechtzeitigen Switch innerhalb 24h signifikant (72,5% vs. 40,8%; p&lt;0,001). Empfehlungen wurden zu 73,3% akzeptiert. Kein Unterschied in Verweildauer, Readmission, ICU oder Mortalität. Nursing-Zeit für Antibiotika-Gabe reduziert.",
+    transfer:"Australien (quaternärer Krebszentrum), aber AMS-Stewardship-Fragestellung systemunabhängig relevant."
+  },
+  {
+    journal:"J Am Board Fam Med", year:"2026", pmid:"43025887",
+    author:"Dania A et al.", pubdate:"Okt. 2026",
+    added:"13.11.2026",
+    title:"Globale Forschungs-Prioritäten für Primärversorgung aus internationaler PBRN-Konsensus",
+    sum:"Qualitative Synthese aus internationaler Fachkonferenz: 28 Teilnehmende aus Nordamerika, Europa und Australasien identifizierten Forschungs-Prioritäten für Practice-Based Research Networks in der Primärversorgung.",
+    result:"Kernaussagen: Enduring core priorities (chronische Erkrankungen, Multimorbidität, Versorgungskoordination) dominieren über krisenbezogene Fragen. Thematische Cluster zeigen globale Relevanz bei fragmentierter Umsetzung. Timeliness, Feasibility across systems und Alignment mit PBRN-Stärken betont.",
+    transfer:"International (Europa, Nordamerika, Australasien), WONCA/NAPCRG-Konsensus mit hoher Übertragbarkeit auf deutsches Hausarzt-System."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
 
 // Offene Foerderausschreibungen zum Thema — taeglich von scripts/radar_hinweis.py
 // === RADAR-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const RADAR_STAND = "12.11.2026";
+const RADAR_STAND = "16.11.2026";
 const RADAR_URL = "https://wissen.m-vf.de/ausschreibungen.html#versorgungsforschung";
 const RADAR_EIGENES = 0;
 const RADAR_ZUHAUSE = true;
-const RADAR_FRISTEN = [["2026-12-31", "2026-12-11", "2027-02-11", "2027-02-14"], [], ["2027-01-07"], [], [], [], [], ["2026-11-18"], ["2027-01-08"], [], [], ["2027-01-07", "2027-01-26", "2027-01-26"], ["2027-01-07", "2027-01-07", "2027-01-07", "2026-11-18", "2026-11-18", "2026-11-18", "2026-11-18", "2027-01-25"], ["2026-11-19", "2027-02-03", "2027-02-03", "2027-03-10"], ["2027-01-27", "2027-03-10"]];
+const RADAR_FRISTEN = [["2026-12-31", "2026-12-07", "2026-12-11", "2027-01-11"], [], ["2027-01-07"], [], [], [], [], [], [], [], [], ["2026-12-31", "2027-01-07", "2027-01-26", "2027-01-26"], ["2027-01-07", "2027-01-07", "2027-01-07", "2027-02-11", "2026-11-18", "2026-11-18", "2026-11-18", "2026-11-18"], ["2026-11-19", "2027-02-03", "2027-02-03", "2027-03-10"], ["2027-01-27", "2027-03-10"], ["2026-11-18", "2026-11-18"], [], ["2026-12-02", "2027-01-11", "2026-11-17", "2027-01-07", "2027-01-08", "2027-01-08", "2027-01-08"], ["2026-11-19", "2026-11-19"], ["2027-01-11", "2027-01-08", "2027-01-08", "2027-01-08"]];
 // === RADAR-BLOCK-ENDE ===
 
 // === ZULASSUNG-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const ZUL_STAND = "15.11.2026";
+const ZUL_STAND = "16.11.2026";
 const ZUL_EIGENE = 0;
 const ZUL_GUTACHTEN = 0;
 const ZUL_ZULASSUNG = 0;
@@ -2424,7 +2433,7 @@ const ZUL_DIGA = 0;
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "15.11.2026";
+const NEWS_STAND = "16.11.2026";
 const NEWS = [
   {titel:"Digitalisierung: Etablierter Standard in den Praxen – andere Sektoren im Rückstand", datum:"2026-11-10", url:"https://www.monitor-versorgungsforschung.de/news/digitalisierung-etablierter-standard-in-den-praxen-andere-sektoren-im-rueckstand/"},
   {titel:"Zehn Jahre Innovationsfonds: AOK macht Vorschläge für einen verbesserten Transfer neuer Versorgungsformen", datum:"2026-11-09", url:"https://www.monitor-versorgungsforschung.de/news/zehn-jahre-innovationsfonds-aok-macht-vorschlaege-fuer-einen-verbesserten-transfer-neuer-versorgungsformen/"},
