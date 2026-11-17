@@ -1,27 +1,47 @@
 {
- "stand": "16.11.2026",
+ "stand": "17.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
-  "zulassung": 31,
-  "gutachten": 30,
+  "zulassung": 32,
+  "gutachten": 29,
   "ohne_hub": 16,
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
-  "fda_roh": 30,
-  "fda_mit_label": 25,
-  "fda_ohne_label": 5,
-  "fda_mit_hub": 14,
+  "fda_roh": 33,
+  "fda_mit_label": 26,
+  "fda_ohne_label": 7,
+  "fda_mit_hub": 15,
   "antrag_roh": 100,
   "antrag_generisch": 24,
   "antrag_gezeigt": 64,
   "antrag_ohne_hub": 28,
   "antrag_stand": "november 2026",
-  "antrag_schon_usa": 11
+  "antrag_schon_usa": 13
  },
  "warnungen": [],
  "eintraege": [
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-11-13",
+   "name": "KLYGEFA",
+   "wirkstoff": "GEFURULIMAB",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ALEXION PHARM",
+   "kennzeichen": [
+    "BLA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-BLA761488",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761488",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
   {
    "stufe": "zulassung",
    "datum": "2026-11-12",
@@ -165,6 +185,47 @@
     "onkologie"
    ],
    "satz": "Der CHMP empfiehlt die Zulassung von Zybrivo (Sintilimab) zur Behandlung des nicht-plattenepithelialen nicht-kleinzelligen Lungenkarzinoms bei Erwachsenen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-11-10",
+   "name": "PIMJETMI",
+   "wirkstoff": "PIMICOTINIB",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "EMD SERONO",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220414",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220414",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-11-09",
+   "name": "SUNHARBO",
+   "wirkstoff": "ASUNDEXIAN",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "BAYER HEALTHCARE",
+   "kennzeichen": [
+    "NDA",
+    "Label Nov 13, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA221291",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f48aee87-69a8-45a6-afa5-0917807efb70",
+   "indikation_en": "Sunharbo is indicated in combination with antiplatelet therapy to reduce the risk of stroke in adults with recent non-cardioembolic ischemic stroke (NIH Stroke Scale ≤15) or high-risk transient ischemic attack (TIA). SUNHARBO is a factor XIa inhibitor indicated in combination with antiplatelet therapy to reduce the risk of stroke in adults with recent non-cardioembolic ischemic stroke (NIH Stroke Scale ≤15) or high-risk transient ischemic attack (TIA). 2",
+   "hubs": [
+    "kardio"
+   ],
+   "satz": "Die FDA hat Asundexian (Sunharbo) zur Schlaganfallprophylaxe nach nicht-kardioembolischem ischämischem Schlaganfall oder transitorisch-ischämischer Attacke in Kombination mit Thrombozytenaggregationshemmern zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -1007,26 +1068,6 @@
    "satz": "Pia-App bei Regelschmerzen ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
-   "stufe": "fda-wartet",
-   "datum": "2026-09-23",
-   "name": "LYRFIGTU",
-   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ELEVAR",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220425",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
-  },
-  {
    "stufe": "fda",
    "datum": "2026-09-23",
    "name": "ONSWIK",
@@ -1046,6 +1087,26 @@
     "diabetes"
    ],
    "satz": "Die FDA hat Insulin Efsitora alfa-gobe (Onswik) zur Verbesserung der Glykämiekontrolle bei Typ-2-Diabetes zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-09-23",
+   "name": "LYRFIGTU",
+   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ELEVAR",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220425",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
   },
   {
    "stufe": "zulassung",
@@ -1557,26 +1618,6 @@
    "satz": "Die FDA hat Garetosmab-grts (PASATRU) zur Reduktion neuer heterotoper Ossifikationen und klinisch bewerteter Schübe bei Fibrodysplasia ossificans progressiva zugelassen."
   },
   {
-   "stufe": "fda-wartet",
-   "datum": "2026-08-13",
-   "name": "TAUKLARIFY",
-   "wirkstoff": "FLORQUINITAU F-18",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "CERVEAU LANTHEUS",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220496",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
-  },
-  {
    "stufe": "fda",
    "datum": "2026-08-13",
    "name": "ZENBEXUS",
@@ -1596,6 +1637,26 @@
     "onkologie"
    ],
    "satz": "Die FDA hat Iberdomide (ZENBEXUS) in Kombination mit Daratumumab und Dexamethason zur Behandlung des multiplen Myeloms zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-08-13",
+   "name": "TAUKLARIFY",
+   "wirkstoff": "FLORQUINITAU F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "CERVEAU LANTHEUS",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220496",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
   },
   {
    "stufe": "antrag",
@@ -2862,6 +2923,8 @@
    ],
    "satz": "Für Asundexian ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Prävention ischämischer Schlaganfälle gestellt; die EMA prüft.",
    "suchbar": true,
+   "usa": "2026-11-09",
+   "usa_name": "SUNHARBO",
    "studien": [
     {
      "pmid": "41985132",
@@ -3821,6 +3884,8 @@
    ],
    "satz": "Für Pimicotinib ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung des Tenosynovial-Riesenzelltumors bei Erwachsenen und Jugendlichen ab 12 Jahren gestellt; die EMA prüft.",
    "suchbar": true,
+   "usa": "2026-11-10",
+   "usa_name": "PIMJETMI",
    "studien": [
     {
      "pmid": "41796601",
