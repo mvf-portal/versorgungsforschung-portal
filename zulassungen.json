@@ -1,11 +1,11 @@
 {
- "stand": "17.11.2026",
+ "stand": "18.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
-  "zulassung": 32,
-  "gutachten": 29,
-  "ohne_hub": 16,
+  "zulassung": 33,
+  "gutachten": 27,
+  "ohne_hub": 15,
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
@@ -41,6 +41,24 @@
     "ohne-hub"
    ],
    "satz": ""
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-11-12",
+   "name": "Inijaq",
+   "wirkstoff": "tofacitinib citrate",
+   "gebiet_mesh": "Arthritis, Rheumatoid;Colitis, Ulcerative;Arthritis, Juvenile;Arthritis, Psoriatic;Spondylitis, Ankylosing",
+   "atc": "L04AF01",
+   "inhaber": "Gedeon Richter Plc.",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006698",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/inijaq",
+   "indikation_en": "Rheumatoid arthritis&nbsp; Tofacitinib in combination with methotrexate (MTX) is indicated for the treatment of moderate to severe active rheumatoid arthritis (RA) in adult patients who have responded inadequately to, or who are intolerant to one or more disease-modifying antirheumatic drugs (DMARDs).&nbsp; Tofacitinib can be given as monotherapy in case of intolerance to MTX or when treatment with MTX is inappropriate.&nbsp;&nbsp; Psoriatic arthritis&nbsp; Tofacitinib in combination with MTX is indicated for the treatment of active psoriatic arthritis (PsA) in adult patients who have had an inadequate response or who have been intolerant to a prior disease-modifying antirheumatic drug (DMARD) therapy.&nbsp;&nbsp; Ankylosing spondylitis&nbsp; Tofacitinib is indicated for the treatment of adult patients with active ankylosing spondylitis (AS) who have responded inadequately to conventional therapy.&nbsp;&nbsp; Ulcerative colitis&nbsp; Tofacitinib is indicated for the treatment of adult patients with moderately to severely active ulcerative colitis (UC) who have had an inadequate response, lost response, or were intolerant to either conventional therapy or a biologic agent.&nbsp;&nbs",
+   "hubs": [
+    "ncd"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Inijaq (Tofacitinib-Citrat) zur Behandlung von rheumatoider Arthritis, Psoriasis-Arthritis, Spondylitis ankylosans und Colitis ulcerosa sowie juveniler idiopathischer Arthritis ab 2 Jahren."
   },
   {
    "stufe": "zulassung",
@@ -251,10 +269,10 @@
    "stufe": "fda",
    "datum": "2026-10-20",
    "name": "HIBSAGO",
-   "wirkstoff": "BEPIROVIRSEN",
+   "wirkstoff": "BEPIROVIRSEN SODIUM",
    "gebiet_mesh": "",
    "atc": "",
-   "inhaber": "GLAXOSMITHKLINE LLC",
+   "inhaber": "GLAXOSMITHKLINE",
    "kennzeichen": [
     "NDA",
     "Label Oct 26, 2026"
@@ -664,24 +682,6 @@
     "ncd"
    ],
    "satz": "Der CHMP empfiehlt die Zulassung von Adcomfo (Omalizumab) zur Behandlung von Asthma, chronischer Rhinosinusitis mit Nasenpolypen und chronischer spontaner Urtikaria."
-  },
-  {
-   "stufe": "gutachten",
-   "datum": "2026-09-17",
-   "name": "Inijaq",
-   "wirkstoff": "tofacitinib citrate",
-   "gebiet_mesh": "Arthritis, Rheumatoid;Colitis, Ulcerative;Arthritis, Juvenile;Arthritis, Psoriatic;Spondylitis, Ankylosing",
-   "atc": "L04AF01",
-   "inhaber": "Gedeon Richter Plc.",
-   "kennzeichen": [],
-   "gutachten": "Positive",
-   "nummer": "EMEA/H/C/006698",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/inijaq",
-   "indikation_en": "Treatment of rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, and ulcerative colitis in adults, and juvenile idiopathic arthritis (JIA) in children from 2 years old",
-   "hubs": [
-    "ncd"
-   ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Inijaq (Tofacitinib-Citrat) zur Behandlung von rheumatoider Arthritis, Psoriasis-Arthritis, Spondylitis ankylosans und Colitis ulcerosa sowie juveniler idiopathischer Arthritis ab 2 Jahren."
   },
   {
    "stufe": "gutachten",
@@ -1447,7 +1447,7 @@
    "wirkstoff": "CENTANAFADINE HYDROCHLORIDE",
    "gebiet_mesh": "",
    "atc": "",
-   "inhaber": "OTSUKA PHARMACEUTICAL CO LTD",
+   "inhaber": "OTSUKA",
    "kennzeichen": [
     "NDA",
     "Label Oct 26, 2026"
