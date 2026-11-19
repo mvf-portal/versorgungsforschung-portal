@@ -2018,16 +2018,16 @@ a.mvf-dach-karte:hover{border-color:var(--brand);transform:translateY(-2px);
 
     <div class="mvf-dach-karten">
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/rekrutierend.html"><h3>Was gerade läuft</h3><p class="mvf-dach-was">Vorhaben, die noch nicht zu Ende sind.</p><ul><li><b>265</b><span>Studien suchen Teilnehmende</span></li><li><b>710</b><span>registrierte Studien</span></li><li><b>861</b><span>Innovationsfonds-Projekte</span></li></ul></a>
-    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>570</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>6.877</b><span>Studien der 20 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
+    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>576</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>6.877</b><span>Studien der 20 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/forschende.html"><h3>Wer es macht</h3><p class="mvf-dach-was">Menschen, Häuser und Geldgeber, und wie sie zusammenhängen.</p><ul><li><b>5.373</b><span>Forschende</span></li><li><b>2.430</b><span>Institutionen</span></li><li><b>484</b><span>Förderer</span></li></ul></a>
-    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>29</b><span>offene Ausschreibungen</span></li><li><b>146</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
+    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>32</b><span>offene Ausschreibungen</span></li><li><b>145</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
     </div>
 
     <p class="mvf-dach-fuss">Literatur, Ausschreibungen und
       Zulassungsverfahren führt der tägliche Lauf dieses Hubs selbst nach.
       Die übrigen zehn Zahlen stehen fest, Stand 2. November 2026, damit keine
       davon still veraltet. Zusammen
-      <b class="mvf-dach-summe">19.294</b> Einträge aus 13
+      <b class="mvf-dach-summe">19.302</b> Einträge aus 13
       Beständen.</p>
   </div>
 </section>
@@ -2360,86 +2360,77 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "18. Nov. 2026, 05:00 Uhr";
+const SNAP_DATE = "19. Nov. 2026, 05:00 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"Aust Health Rev", year:"2026", pmid:"43039365",
-    author:"Shang K et al.", pubdate:"03.12.2026",
+    journal:"NEJM Catal Innov Care Deliv", year:"2026", pmid:"43049314",
+    author:"Day CS et al.", pubdate:"18.11.2026",
+    added:"18.11.2026",
+    title:"Value-Messung in der Spezialversorgung: Kosteneffektivität bei Knieendoprothesen",
+    sum:"Die Studie entwickelt ein Modell zur Messung von Wertvariation in der Spezialversorgung durch Integration von Gesundheitssystemkosten mit spezialisierten Patient-Reported Outcomes.",
+    result:"Bei 623 primären Knieendoprothesen zeigten sich bis zu sechsfach unterschiedliche Kosten pro Einheit patientenberichteter Verbesserung (Knee Injury and Osteoarthritis Outcome Score for Joint Replacement), während die klinischen Ergebnisse deutlich weniger variierten. Höhere Implantatskosten waren nicht mit besseren Patientenergebnissen assoziiert.",
+    transfer:"US-Daten; Methode ist systemunabhängig und auf deutsches DRG-System übertragbar."
+  },
+  {
+    journal:"Health Aff Sch", year:"2026", pmid:"43048699",
+    author:"Ritter AZ et al.", pubdate:"17.11.2026",
+    added:"18.11.2026",
+    title:"Versorgung von Opioidabhängigen in Pflegeheimen: Expertenpanel-Empfehlungen",
+    sum:"Ein Expertenpanel identifizierte über zwei Fokusgruppen (10 Teilnehmende) Prioritäten für politische Maßnahmen zur Verbesserung der OUD-Versorgung in Pflegeheimen.",
+    result:"Experten empfahlen: Einrichtung von Versorgungsstandards, Kombination von Bildung mit finanziellen Anreizen, Vereinfachung des Methadon-Zugangs, stärkere Zusammenarbeit bei Übergängen zwischen Krankenhäusern und Pflegeheimen sowie Integration von Patientenperspektiven in die Versorgungsplanung.",
+    transfer:"US-Setting, Fokusgruppen-Ergebnisse aber für deutsches System relevant (Übergänge, Medikamentenzugang)."
+  },
+  {
+    journal:"Health Serv Insights", year:"2026", pmid:"43048458",
+    author:"Kain N et al.", pubdate:"10.10.2026",
+    added:"18.11.2026",
+    title:"Patientenperspektiven auf Qualität und Beschwerdeverfahren: ländlich-urbane Unterschiede",
+    sum:"Eine qualitative Studie mit 32 Teilnehmenden aus vier virtuellen Fokusgruppen (Alberta, Kanada) untersuchte Unterschiede in Wahrnehmung von Versorgungsqualität und Nutzung von Beschwerdeverfahren zwischen ländlichen und urbanen Gemeinden.",
+    result:"Alle Teilnehmenden betonten respektvolle Kommunikation und Kontinuität als Kernelemente guter Pflege. Ländliche Teilnehmende beschrieben Arztnangel und Reisebelastung; urbane berichteten von Fragmentierung. Beschwerdeverfahren wurden wenig genutzt, bedingt durch hohe Hemmschwellen, Verfahrensunverständnis und in ländlichen Gebieten zusätzlich Vertrauensfragen und Angst vor Versorgungsverlust.",
+    transfer:"Kanada mit hausarztgesteuertem System; ländlich-urbane Disparitäten übertragbar."
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43040327",
+    author:"Kössi A et al.", pubdate:"21.08.2026",
     added:"16.11.2026",
-    title:"COPD-Versorgungsstandards in Australien: massive Adhärenzlücken identifiziert",
-    sum:"Retrospektive Auditierung von 313 COPD-Exazerbations-Aufnahmen gegen 2024-er COPD-Versorgungsstandard in einem nicht-tertiären Krankenhaus.",
-    result:"Kritische Unterversorgung mit nicht-invasiver Beatmung: 35 % entwickelten hyperkapnische Azidose, aber nur 21 % erhielten NIV. Weitere Mängel: Spirometrie-Dokumentation 15 %, Reha-Überweisung 5 %, schriftliche Aktionspläne &lt;1 %, Rauchentwöhnung 0 %, Steroid-Dauer &gt;5 Tage in 42 %. Leitlinien-konforme Antibiotika nur in 16 %.",
-    transfer:"Australien; Versorgungsaudit zeigt systemische Implementierungslücken, umsetzbar auf Gesundheitssysteme mit ähnlichen Standards"
+    title:"Generische Substitution von Asthma- und COPD-Inhalatoren in Apotheken",
+    sum:"Eine qualitative Studie mit 20 Apothekern in Finnland untersuchte deren Erfahrungen mit der Implementierung der generischen Substitution von Inhalatoren.",
+    result:"Apotheker betrachteten die generische Substitution als selbstverständlich, da dies Jahrzehnte für andere Medikamente Praxis ist. Patienten reagierten ähnlich wie bei anderen Generika. Die Patientenberatung zur Inhalationstechnik war unkompliziert wegen geringer technischer Unterschiede. Kooperation mit Gesundheitswesen war minimal; Apotheker fühlten sich gut informiert trotz begrenzter zusätzlicher Schulung.",
+    transfer:"Finnland, vergleichbares Sozialversicherungssystem mit gesetzlichen Krankenkassen und Apothekensektor wie Deutschland."
   },
   {
-    journal:"Health Serv Res", year:"2026", pmid:"43042697",
-    author:"Lake DT et al.", pubdate:"Dez. 2026",
-    added:"17.11.2026",
-    title:"Erhöhte Primärversorgungsvergütung und Pflegequalität: keine Verbesserungen messbar",
-    sum:"Unterschied-in-Differenzen-Analyse zur Frage, ob erhöhte Medicaid-Vergütung die Versorgungsqualität für Dually-Eligible-Patienten mit Demenz in Pflegeheimen verbessert.",
-    result:"Die Erhöhung der Vergütung war nicht mit signifikanten Veränderungen bei Hausarztbesuchen, sieben Qualitätsmaßstäben, Verweildauer oder Gesamtausgaben assoziiert (aOR für alle Outcomes nicht signifikant). Strukturelle Barrieren zwischen Abrechnungsstellen und Klinikern sowie regulatorische Mindestbesuchsquoten limitierten die Responsivität gegenüber Vergütungsänderungen.",
-    transfer:"US-Daten; Frage ist systemunabhängig für Fee-for-Service-Systeme relevant"
-  },
-  {
-    journal:"J Commun Healthc", year:"2026", pmid:"43042674",
-    author:"Papakosta-Gaki E et al.", pubdate:"17.11.2026",
-    added:"17.11.2026",
-    title:"Primärversorgungsfachleute in Griechenland: Konzepte von Bedarfseinschätzung",
-    sum:"Qualitative Fokusgruppen mit 31 Primärversorgungsfachleuten zur Wahrnehmung von Gesundheitsbedarfen in der Community.",
-    result:"Gesundheitsbedarfe werden als dynamisch, sozial konstruiert und häufig unartikuliert wahrgenommen (Themen: interpretative Arbeit von Frontline-Fachleuten, ethische Komplexität verschwiegenen Leidens, Fragmentierung zwischen primärer und tertiärer Versorgung, Rollenambiguität). Trotz struktureller Grenzen wurde qualifizierte Unterstützung für Community-Partizipation ausgedrückt.",
-    transfer:"Südeuropa; Erkenntnisse zu Partizipation und Vertrauensfragen relevant für vergleichbare Systeme"
-  },
-  {
-    journal:"BMC Med Inform Decis Mak", year:"2026", pmid:"43040355",
-    author:"Tay YX et al.", pubdate:"21.08.2026",
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43040343",
+    author:"Kim E et al.", pubdate:"21.08.2026",
     added:"16.11.2026",
-    title:"CDSS in der Radiologie: implementierungswissenschaftlicher Ansatz keine Verbesserung der Angemessenheit",
-    sum:"Kontrollierte Vorher-Nachher-Studie eines Clinical-Decision-Support-Systems für Wirbelsäulenaufnahmen mit implementierungswissenschaftlichen Prinzipien in Singapur.",
-    result:"CDSS-Adoption 47,8 % (11/23 Ärzte). Keine statistisch signifikanten Veränderungen in Angemessenheitsraten zwischen Kontroll- und Interventionsgruppe. Patientenalter war stark mit Angemessenheit assoziiert (aOR pro Jahr = 1,08; 95 % KI 1,07–1,09). Implementierungslücken und -schwächen begrenzt en CDSS-Potenzial.",
-    transfer:"Singapur; Implementierungshürden und Organisationsbarrieren relevant für vergleichbare Gesundheitssysteme"
+    title:"Endometriumkarzinom bei Frauen mit Behinderung: Zugangsverschiedenheiten",
+    sum:"Eine nationale retrospektive Kohortenstudie verglich Behandlungszugang und Überleben bei Frauen mit und ohne Behinderung nach Endometriumkarzinom-Diagnose (Datenbank N=3.356).",
+    result:"Frauen mit Behinderung erhielten weniger Chemotherapie; bei schwerer Behinderung auch signifikant weniger Chirurgie. Nach Adjustierung: 44 % höheres Mortalitätsrisiko bei Frauen mit Behinderung vs. ohne (aHR 1,44, 95% KI 1,20-1,73); höchstes Risiko bei milder körperlich-kognitiver Behinderung (aHR 1,54, 95% KI 1,21-1,96).",
+    transfer:"Südkorea mit nationaler Datenbank; Frage der Versorgungsgerechtigkeit systemunabhängig relevant."
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"43040534",
-    author:"Mohd Kasim F et al.", pubdate:"20.08.2026",
+    journal:"BMC Pulm Med", year:"2026", pmid:"43040287",
+    author:"Luckett T et al.", pubdate:"20.08.2026",
     added:"16.11.2026",
-    title:"Pharmamarkt in Malaysia: Stakeholder-Perspektiven auf Wettbewerb",
-    sum:"Qualitative Interviews mit 26 Stakeholdern (18 öffentlicher Sektor, 8 Pharmaindustrie) zur Wahrnehmung von Wettbewerbsdynamiken in der öffentlichen Arzneimittelversorgung.",
-    result:"Wettbewerbslandschaft wird beeinflusst durch Produktvermarktbarkeit, Preisstrategie, intra-class und Therapeut-Konkurrenz, Marktmacht, regulatorische Rahmenbedingungen und Effizienz. Regierungen könnten von Politiken profitieren, die gesunden Wettbewerb optimieren und dabei Nachhaltigkeit und Firmenverhältnis sichern.",
-    transfer:"Malaysia; Erkenntnisse zu Procurement-Politiken übertragbar auf Gesundheitssysteme mit reguliertem Arzneimittelmarkt"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"43040363",
-    author:"Bayrak E et al.", pubdate:"20.08.2026",
-    added:"16.11.2026",
-    title:"YouTube-Videos zu ambulanter parenteraler Antibiotikathe rapie: mangelhafte Qualität",
-    sum:"Bewertung von 107 YouTube-Videos zu OPAT anhand GQS, mDISCERN und JAMA-Transparenzkriterien.",
-    result:"90,7 % (97/107) der Videos wurden als niedrig qualitativ eingestuft, nur 2 (1,9 %) als hochwertig. Median mDISCERN-Score = 0 (schlechte Zuverlässigkeit). Akademische und institutionelle Herkunft zeigten kein Qualitätsplus; Sicherheitsthemen (Nebenwirkungen 5,6 %, Katheter-Komplikationen 3,7 %) unterrepräsentiert.",
-    transfer:"USA; Frage zu Patienten-Informationsqualität systemunabhängig relevant"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"43040345",
-    author:"Olapeju B et al.", pubdate:"20.08.2026",
-    added:"16.11.2026",
-    title:"Burnout und Personalfluktuation im US-Militärgesundheitsdienst",
-    sum:"Fragebogenerhebung bei Militärärzten (2023) zur Assoziation von Burnout mit Kündigungsgedanken und Verbleibsintention im Dienst.",
-    result:"73 % der burnout-Patienten (vs. 42 % ohne Burnout) äußerten Gedanken zum Jobwechsel; 72 % (vs. 41 %) waren unlikely to remain after service term. Offen genannte Barrieren: Überarbeitskultur, fehlende Infrastruktur und technische Ressourcen, reduzierte Kompensation, mangelnde Führungsunterstützung.",
-    transfer:"US-Militärsystem; Erkenntnisse zu Burnout-Mechanismen und Retention relevant für resource-constrained Settings"
+    title:"Dyspnoe-Interventionsservice: Ko-Design und Machbarkeitsstudie",
+    sum:"Eine Mixed-Methods-Machbarkeitsstudie evaluierte einen von Patienten und Klinikern ko-entworfenen, aufsuchenden Atemnotsupport-Service über 22 Monate mit PDSA-Zyklen.",
+    result:"140 Patienten absolvierten ABIS (4 % der Zielpopulation). 90 % berichteten Verbesserung der Alltagsaktivitäten, 70 % der Atemnot-Spitzenwerte, 68 % des Handlungsgefühls. 21 % meldeten Ambulanzanrufe verhindert. Mediankosten: AUD 1.576,86 pro Patient. 79 % der Angehörigen berichteten mehr Sicherheit im Umgang. GP-Beteiligung blieb limitiert (47 % Spezialist-Überweisungen).",
+    transfer:"Australien mit hausarztgesteuertem System; Ko-Design und Versorgungsmodell übertragbar auf Deutschland."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
 
 // Offene Foerderausschreibungen zum Thema — taeglich von scripts/radar_hinweis.py
 // === RADAR-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const RADAR_STAND = "16.11.2026";
+const RADAR_STAND = "19.11.2026";
 const RADAR_URL = "https://wissen.m-vf.de/ausschreibungen.html#versorgungsforschung";
 const RADAR_EIGENES = 0;
 const RADAR_ZUHAUSE = true;
-const RADAR_FRISTEN = [["2026-12-31"], [], ["2027-01-07"], [], [], [], [], ["2026-11-18", "2026-11-18"], [], [], [], ["2027-01-07", "2027-01-26", "2027-01-26"], ["2027-01-07", "2027-01-07", "2027-01-11", "2027-01-25", "2026-11-18", "2026-11-18", "2026-11-18", "2026-11-18"], [], [], ["2026-11-18", "2026-11-18"], [], ["2026-11-17", "2027-01-07"], ["2026-11-19", "2026-11-19"], ["2027-01-11", "2027-01-08", "2027-01-08", "2027-01-08", "2026-11-18", "2026-11-18", "2026-11-16", "2027-02-26"]];
+const RADAR_FRISTEN = [["2026-12-31", "2026-12-07", "2027-01-08"], [], ["2027-01-07", "2027-02-11"], [], [], ["2027-01-08"], [], [], ["2027-01-08"], [], [], ["2027-01-07", "2027-01-26", "2027-01-26"], ["2027-01-11", "2027-01-07", "2027-01-07", "2027-01-07", "2027-01-25", "2027-02-11", "2027-01-07", "2027-01-11"], ["2026-11-19", "2027-03-10", "2027-02-03", "2027-02-03"], ["2027-01-27"], [], [], ["2026-12-14", "2026-12-02", "2027-01-07"], ["2026-11-19", "2026-11-19"], ["2027-01-11", "2027-01-08", "2027-01-08", "2027-01-08"]];
 // === RADAR-BLOCK-ENDE ===
 
 // === ZULASSUNG-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const ZUL_STAND = "18.11.2026";
+const ZUL_STAND = "19.11.2026";
 const ZUL_EIGENE = 0;
 const ZUL_GUTACHTEN = 0;
 const ZUL_ZULASSUNG = 0;
@@ -2449,7 +2440,7 @@ const ZUL_DIGA = 0;
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "18.11.2026";
+const NEWS_STAND = "19.11.2026";
 const NEWS = [
   {titel:"Primärversorgung innerhalb planetarer Grenzen: Positionspapier der DEGAM", datum:"2026-11-16", url:"https://www.monitor-versorgungsforschung.de/news/primaerversorgung-innerhalb-planetarer-grenzen-positionspapier-der-degam/"},
   {titel:"Zehn Jahre Innovationsfonds: AOK macht Vorschläge für einen verbesserten Transfer neuer Versorgungsformen", datum:"2026-11-09", url:"https://www.monitor-versorgungsforschung.de/news/zehn-jahre-innovationsfonds-aok-macht-vorschlaege-fuer-einen-verbesserten-transfer-neuer-versorgungsformen/"},

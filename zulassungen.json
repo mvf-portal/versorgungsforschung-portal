@@ -1,5 +1,5 @@
 {
- "stand": "18.11.2026",
+ "stand": "19.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
@@ -9,10 +9,10 @@
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
-  "fda_roh": 33,
-  "fda_mit_label": 26,
-  "fda_ohne_label": 7,
-  "fda_mit_hub": 15,
+  "fda_roh": 32,
+  "fda_mit_label": 27,
+  "fda_ohne_label": 5,
+  "fda_mit_hub": 16,
   "antrag_roh": 100,
   "antrag_generisch": 28,
   "antrag_gezeigt": 63,
@@ -205,7 +205,7 @@
    "satz": "Der CHMP empfiehlt die Zulassung von Zybrivo (Sintilimab) zur Behandlung des nicht-plattenepithelialen nicht-kleinzelligen Lungenkarzinoms bei Erwachsenen."
   },
   {
-   "stufe": "fda-wartet",
+   "stufe": "fda",
    "datum": "2026-11-10",
    "name": "PIMJETMI",
    "wirkstoff": "PIMICOTINIB",
@@ -213,16 +213,17 @@
    "atc": "",
    "inhaber": "EMD SERONO",
    "kennzeichen": [
-    "NDA"
+    "NDA",
+    "Label Nov 18, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA220414",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220414",
-   "indikation_en": "",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=17b6ec50-69c8-4849-802d-cf0a6e425373",
+   "indikation_en": "PIMJETMI is indicated for the treatment of adult patients with symptomatic tenosynovial giant cell tumor (TGCT) for which surgical resection may cause worsening functional limitations or severe morbidity. PIMJETMI is a kinase inhibitor indicated for the treatment of adult patients with symptomatic tenosynovial giant cell tumor (TGCT) for which surgical resection may cause worsening functional limitation or severe morbidity. ( 1 ) 2",
    "hubs": [
-    "ohne-hub"
+    "onkologie"
    ],
-   "satz": ""
+   "satz": "Die FDA hat Pimicotinib (Pimjetmi) zur Behandlung symptomatischer Tenosynovialriesenzelltumoren zugelassen, wenn eine chirurgische Resektion funktionelle Einschränkungen verschärfen würde."
   },
   {
    "stufe": "fda",
@@ -1403,7 +1404,7 @@
    "satz": "isi PMS App ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
-   "stufe": "fda-wartet",
+   "stufe": "fda",
    "datum": "2026-08-05",
    "name": "ORZEYFUL",
    "wirkstoff": "OVEPOREXTON",
@@ -1411,16 +1412,17 @@
    "atc": "",
    "inhaber": "TAKEDA PHARMS USA",
    "kennzeichen": [
-    "NDA"
+    "NDA",
+    "Label Nov 18, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA220860",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220860",
-   "indikation_en": "",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=136fdf62-c925-4b1f-b625-efb71b4bff16",
+   "indikation_en": "ORZEYFUL TM is indicated for the treatment of narcolepsy type 1 (narcolepsy with cataplexy) in adult patients. ORZEYFUL is an orexin receptor 2 (OX2R) agonist indicated for the treatment of narcolepsy type 1 (narcolepsy with cataplexy) in adult patients. ( 1 ) 2",
    "hubs": [
-    "ohne-hub"
+    "mental"
    ],
-   "satz": ""
+   "satz": "Die FDA hat Oveporexton (Orzeyful) zur Behandlung der Narkolepsie Typ 1 mit Kataplexie bei Erwachsenen zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -2332,27 +2334,6 @@
     "onkologie"
    ],
    "satz": "Die FDA hat Pivekimab Sunirine-PVZY (Decnupaz) zur Behandlung des blastischen plasmazytoiden dendritischen Zellneoplasmas zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-05-22",
-   "name": "HEPCLUDEX",
-   "wirkstoff": "BULEVIRTIDE-GMOD",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "GILEAD SCIENCES INC",
-   "kennzeichen": [
-    "BLA",
-    "Label May 25, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-BLA761468",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=12391cc2-38c2-4cf5-86d3-2be9370127fc",
-   "indikation_en": "HEPCLUDEX is indicated for the treatment of chronic hepatitis delta virus (HDV) infection in adults without cirrhosis or with compensated cirrhosis. This indication is approved under accelerated approval based on a decrease in HDV RNA and alanine aminotransferase (ALT) normalization [see Clinical Studies (14) ] . An improvement in disease-related clinical outcomes has not been established. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). HEPCLUDEX is a sodium taurocholate co-transporting polypeptide (NTCP)-directed HDV attachment inhibitor indicated for the treatment of chronic HDV infection in adults without cirrhosis or with compensated cirrhosis. This indication is approved under accelerated approval based on participants who achieved a decrease in HDV RNA and alanine aminotransferase (ALT) normalization. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial(s). ( 1 , 14 ) 2",
-   "hubs": [
-    "ncd"
-   ],
-   "satz": "Die FDA hat Bulevirtide (HEPCLUDEX) zur Behandlung der chronischen Hepatitis-Delta-Virus-Infektion bei Erwachsenen ohne oder mit kompensierter Zirrhose zugelassen."
   },
   {
    "stufe": "antrag",
