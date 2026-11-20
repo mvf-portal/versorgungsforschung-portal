@@ -1,10 +1,10 @@
 {
- "stand": "19.11.2026",
+ "stand": "20.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
-  "zulassung": 33,
-  "gutachten": 27,
+  "zulassung": 34,
+  "gutachten": 26,
   "ohne_hub": 15,
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
@@ -61,6 +61,24 @@
     "ohne-hub"
    ],
    "satz": ""
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-11-12",
+   "name": "Sepalna",
+   "wirkstoff": "senaparib",
+   "gebiet_mesh": "Fallopian Tube Neoplasms;Peritoneal Neoplasms;Carcinoma, Ovarian Epithelial",
+   "atc": "L01XK07",
+   "inhaber": "",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006708",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/sepalna",
+   "indikation_en": "Sepalna is indicated as monotherapy for the maintenance treatment of adult patients with advanced (FIGO Stages III and IV) epithelial high-grade ovarian, fallopian tube or primary peritoneal cancer who are in response (complete or partial) following completion of first-line platinum-based chemotherapy.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Sepalna (Senaparib) zur Erhaltungstherapie des fortgeschrittenen epithelialen hochgradig malignen Ovarialkarzinoms, Eileiterkarzinoms oder primären Peritonealkarzinoms."
   },
   {
    "stufe": "zulassung",
@@ -1229,24 +1247,6 @@
     "onkologie"
    ],
    "satz": "Der CHMP empfiehlt die Zulassung von Lifyorli (Relacorilant) zur Behandlung von Erwachsenen mit platinumresistentem epithelialem Ovarialkarzinom, Eileiterkarzinom oder primärem Peritonealkarzinom."
-  },
-  {
-   "stufe": "gutachten",
-   "datum": "2026-09-17",
-   "name": "Sepalna",
-   "wirkstoff": "senaparib",
-   "gebiet_mesh": "Fallopian Tube Neoplasms;Peritoneal Neoplasms;Carcinoma, Ovarian Epithelial",
-   "atc": "L01XK07",
-   "inhaber": "",
-   "kennzeichen": [],
-   "gutachten": "Positive",
-   "nummer": "EMEA/H/C/006708",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/sepalna",
-   "indikation_en": "Maintenance treatment of advanced epithelial high-grade ovarian, fallopian tube or primary peritoneal cancer",
-   "hubs": [
-    "onkologie"
-   ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Sepalna (Senaparib) zur Erhaltungstherapie des fortgeschrittenen epithelialen hochgradig malignen Ovarialkarzinoms, Eileiterkarzinoms oder primären Peritonealkarzinoms."
   },
   {
    "stufe": "gutachten",
