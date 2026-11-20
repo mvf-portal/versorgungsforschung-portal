@@ -9,9 +9,9 @@
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
-  "fda_roh": 33,
+  "fda_roh": 35,
   "fda_mit_label": 27,
-  "fda_ohne_label": 6,
+  "fda_ohne_label": 8,
   "fda_mit_hub": 16,
   "antrag_roh": 100,
   "antrag_generisch": 28,
@@ -22,6 +22,46 @@
  },
  "warnungen": [],
  "eintraege": [
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-11-17",
+   "name": "NELKARMI",
+   "wirkstoff": "NELADALKIB",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "NUVALENT",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220936",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220936",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-11-17",
+   "name": "LEMBAZ",
+   "wirkstoff": "ADRABETADEX",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "MANDOS LLC",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220996",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220996",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
   {
    "stufe": "fda-wartet",
    "datum": "2026-11-16",
@@ -46,7 +86,7 @@
    "stufe": "fda-wartet",
    "datum": "2026-11-13",
    "name": "KLYGEFA",
-   "wirkstoff": "GEFURULIMAB",
+   "wirkstoff": "GEFURULIMAB-GAKS",
    "gebiet_mesh": "",
    "atc": "",
    "inhaber": "ALEXION PHARM",
