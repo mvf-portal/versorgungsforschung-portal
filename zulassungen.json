@@ -1,5 +1,5 @@
 {
- "stand": "20.11.2026",
+ "stand": "21.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
@@ -9,19 +9,59 @@
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
-  "fda_roh": 35,
+  "fda_roh": 37,
   "fda_mit_label": 27,
-  "fda_ohne_label": 8,
+  "fda_ohne_label": 10,
   "fda_mit_hub": 16,
   "antrag_roh": 100,
   "antrag_generisch": 28,
   "antrag_gezeigt": 63,
   "antrag_ohne_hub": 28,
   "antrag_stand": "november 2026",
-  "antrag_schon_usa": 13
+  "antrag_schon_usa": 15
  },
  "warnungen": [],
  "eintraege": [
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-11-18",
+   "name": "INFILBRAY",
+   "wirkstoff": "VENGLUSTAT",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "GENZYME CORP A SANOFI CO",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA221144",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221144",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-11-18",
+   "name": "LIVSAYIS",
+   "wirkstoff": "CEMDISIRAN",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "REGENERON PHARMACEUTICALS",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA221251",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221251",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
   {
    "stufe": "fda-wartet",
    "datum": "2026-11-17",
@@ -2568,6 +2608,8 @@
    ],
    "satz": "Für Cemdisiran ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung der generalisierten Myasthenia gravis bei Erwachsenen in Prüfung.",
    "suchbar": true,
+   "usa": "2026-11-18",
+   "usa_name": "LIVSAYIS",
    "studien": [
     {
      "pmid": "42030965",
@@ -3082,6 +3124,8 @@
    ],
    "satz": "Für Venglustat ist bei der Europäischen Arzneimittel-Agentur ein Zulassungsantrag zur Behandlung der Gaucher-Erkrankung Typ 3 bei Erwachsenen und Kindern eingereicht; die EMA prüft.",
    "suchbar": true,
+   "usa": "2026-11-18",
+   "usa_name": "INFILBRAY",
    "studien": [
     {
      "pmid": "41246852",
