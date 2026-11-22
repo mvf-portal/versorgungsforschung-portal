@@ -710,8 +710,8 @@
       <span><small>Knowledge-Hub</small><b>Versorgungsforschung</b></span>
     </a>
     <div class="ort-links">
-      <a href="#suche">Suche</a>
-      <a href="#main">Datenbanken</a>
+      <a href="./#suche">Suche</a>
+      <a href="./#main">Datenbanken</a>
       <a href="neue-studien.html">Neue Studien</a>
       <a href="ueber.html">Themen &amp; Quellen</a>
     </div>
@@ -726,8 +726,8 @@
   <section>
     <h3>Dieser Hub</h3>
     <ul>
-      <li><a href="#suche">Suche <span aria-hidden="true">›</span></a></li>
-      <li><a href="#main">Datenbanken <span aria-hidden="true">›</span></a></li>
+      <li><a href="./#suche">Suche <span aria-hidden="true">›</span></a></li>
+      <li><a href="./#main">Datenbanken <span aria-hidden="true">›</span></a></li>
       <li><a href="neue-studien.html">Neue Studien <span aria-hidden="true">›</span></a></li>
       <li><a href="ueber.html">Themen &amp; Quellen <span aria-hidden="true">›</span></a></li>
     </ul>
@@ -924,7 +924,16 @@
   <nav class="nf-links" aria-label="Rechtliches">
     <a href="https://knowledge-hubs.m-vf.de/impressum.html">Impressum</a>
     <a href="https://knowledge-hubs.m-vf.de/datenschutz.html">Datenschutz</a>
-    <span class="nf-mail">Kontakt: <a href="mailto:info@m-vf.de">info@m-vf.de</a></span>
+    <!-- Zwei Wege statt einem, auf Anweisung des Herausgebers vom 12.11.2026:
+         „Kontakt und email bitte trennen in Kontaktformular / eMail-senden".
+         Das Formular liegt bei der Innofonds-Sitzung unter
+         innofonds.m-vf.de/kontakt/ und ist fuer ALLE Angebote der Reihe
+         gedacht, nicht nur fuer das Radar; es erkennt den Hub an der
+         Herkunftsadresse, ein schlichter Link genuegt also.
+         Die Adresse bleibt daneben SICHTBAR stehen - siehe oben: Ein blosser
+         mailto-Link tut nichts, wenn kein Mailprogramm eingerichtet ist. -->
+    <a href="https://innofonds.m-vf.de/kontakt/">Kontaktformular</a>
+    <span class="nf-mail">E-Mail senden: <a href="mailto:info@m-vf.de">info@m-vf.de</a></span>
   </nav>
 </div>
   </div>
@@ -1047,7 +1056,30 @@ const REIHE = [
   { hub:"diabetes",        titel:"Diabetes",
     url:"https://diabetes.m-vf.de", domain:"diabetes.m-vf.de", bereit:true,
     was:"Neue Arbeiten aus den Kernzeitschriften der Diabetologie - Typ 1 und "
-      + "Typ 2, Folgeerkrankungen, Technik und Versorgung." }
+      + "Typ 2, Folgeerkrankungen, Technik und Versorgung." },
+  { hub:"auge",            titel:"Augenheilkunde",
+    url:"https://auge.m-vf.de", domain:"auge.m-vf.de", bereit:true,
+    was:"Neue Arbeiten zur Augenheilkunde - Glaukom, Katarakt, Netzhaut, "
+      + "Hornhaut und die Versorgung bei Sehverlust." },
+  { hub:"muskel",          titel:"Muskuloskelettale Erkrankungen",
+    url:"https://muskel.m-vf.de", domain:"muskel.m-vf.de", bereit:true,
+    was:"Neue Arbeiten zu Arthrose, Rheuma, Osteoporose, Rückenschmerz und "
+      + "Endoprothetik - von der Grundlagenforschung bis zur Versorgung." },
+  { hub:"kinder",          titel:"Kinder- und Jugendmedizin",
+    url:"https://kinder.m-vf.de", domain:"kinder.m-vf.de", bereit:true,
+    was:"Neue Arbeiten zur Gesundheit von Kindern und Jugendlichen - von der "
+      + "Frühgeborenenversorgung bis zur Transition in die "
+      + "Erwachsenenmedizin." },
+  { hub:"neuro",           titel:"Neurologie",
+    url:"https://neuro.m-vf.de", domain:"neuro.m-vf.de", bereit:true,
+    was:"Neue Arbeiten zu Schlaganfall, Demenz, Parkinson, Multipler "
+      + "Sklerose, Epilepsie und Kopfschmerz - von der Akutversorgung bis zur "
+      + "Nachsorge." },
+  { hub:"genom",           titel:"Genommedizin &amp; Seltene Erkrankungen",
+    url:"https://genom.m-vf.de", domain:"genom.m-vf.de", bereit:true,
+    was:"Neue Arbeiten zu genetischer Diagnostik, Pharmakogenetik, "
+      + "Gentherapie und Seltenen Erkrankungen - von der Variantenbewertung "
+      + "bis zur Erstattungsfrage." }
 ];
 
 // Faellt der Endpunkt aus, bleibt Mailchimps eigene Anmeldeseite. Sie traegt
