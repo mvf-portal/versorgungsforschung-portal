@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- erzeugt von hub-scripts/studienseiten.py -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://wissen.m-vf.de/</loc><lastmod>2026-11-21</lastmod></url>
-<url><loc>https://wissen.m-vf.de/studie/</loc><lastmod>2026-11-21</lastmod></url>
+<url><loc>https://wissen.m-vf.de/</loc><lastmod>2026-11-22</lastmod></url>
+<url><loc>https://wissen.m-vf.de/studie/</loc><lastmod>2026-11-22</lastmod></url>
 <url><loc>https://wissen.m-vf.de/ausschreibungen.html</loc></url>
 <url><loc>https://wissen.m-vf.de/neue-studien.html</loc></url>
 <url><loc>https://wissen.m-vf.de/newsletter.html</loc></url>
 <url><loc>https://wissen.m-vf.de/themen-quellen.html</loc></url>
 <url><loc>https://wissen.m-vf.de/zulassungen.html</loc></url>
+<url><loc>https://wissen.m-vf.de/studie/43065060/</loc><lastmod>2026-11-22</lastmod></url>
+<url><loc>https://wissen.m-vf.de/studie/43065055/</loc><lastmod>2026-11-22</lastmod></url>
+<url><loc>https://wissen.m-vf.de/studie/43065045/</loc><lastmod>2026-11-22</lastmod></url>
+<url><loc>https://wissen.m-vf.de/studie/43065013/</loc><lastmod>2026-11-22</lastmod></url>
+<url><loc>https://wissen.m-vf.de/studie/43065012/</loc><lastmod>2026-11-22</lastmod></url>
+<url><loc>https://wissen.m-vf.de/studie/43064903/</loc><lastmod>2026-11-22</lastmod></url>
 <url><loc>https://wissen.m-vf.de/studie/43063370/</loc><lastmod>2026-11-21</lastmod></url>
 <url><loc>https://wissen.m-vf.de/studie/43058740/</loc><lastmod>2026-11-21</lastmod></url>
 <url><loc>https://wissen.m-vf.de/studie/43058488/</loc><lastmod>2026-11-21</lastmod></url>

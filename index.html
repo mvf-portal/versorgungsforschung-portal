@@ -2018,7 +2018,7 @@ a.mvf-dach-karte:hover{border-color:var(--brand);transform:translateY(-2px);
 
     <div class="mvf-dach-karten">
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/rekrutierend.html"><h3>Was gerade läuft</h3><p class="mvf-dach-was">Vorhaben, die noch nicht zu Ende sind.</p><ul><li><b>265</b><span>Studien suchen Teilnehmende</span></li><li><b>710</b><span>registrierte Studien</span></li><li><b>861</b><span>Innovationsfonds-Projekte</span></li></ul></a>
-    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>588</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>6.877</b><span>Studien der 20 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
+    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>594</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>6.877</b><span>Studien der 20 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/forschende.html"><h3>Wer es macht</h3><p class="mvf-dach-was">Menschen, Häuser und Geldgeber, und wie sie zusammenhängen.</p><ul><li><b>5.373</b><span>Forschende</span></li><li><b>2.430</b><span>Institutionen</span></li><li><b>484</b><span>Förderer</span></li></ul></a>
     <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>39</b><span>offene Ausschreibungen</span></li><li><b>150</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
     </div>
@@ -2027,7 +2027,7 @@ a.mvf-dach-karte:hover{border-color:var(--brand);transform:translateY(-2px);
       Zulassungsverfahren führt der tägliche Lauf dieses Hubs selbst nach.
       Die übrigen zehn Zahlen stehen fest, Stand 2. November 2026, damit keine
       davon still veraltet. Zusammen
-      <b class="mvf-dach-summe">19.326</b> Einträge aus 13
+      <b class="mvf-dach-summe">19.332</b> Einträge aus 13
       Beständen.</p>
   </div>
 </section>
@@ -2360,62 +2360,62 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "21. Nov. 2026, 05:00 Uhr";
+const SNAP_DATE = "22. Nov. 2026, 05:00 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"J Clin Oncol", year:"2026", pmid:"43063370",
-    author:"Bøhn SH et al.", pubdate:"20.11.2026",
+    journal:"Eur J Health Econ", year:"2026", pmid:"43064903",
+    author:"Licker LV et al.", pubdate:"21.11.2026",
     added:"20.11.2026",
-    title:"Multidisziplinäre Intervention lindert Müdigkeit bei Lymphom-Überlebenden",
-    sum:"RCT mit 150 Lymphom-Überlebenden mit persistenter Müdigkeit, die 12 Wochen lang Patient Education, körperliche Übung, kognitive Verhaltenstherapie und Ernährungsberatung erhielten versus Routineversorgung.",
-    result:"Intervention führte zu signifikant niedrigerem Gesamtfatigue-Score nach 3 Monaten (Differenz -3,5; 95% KI -5,4 bis -1,6; p &lt; 0,001), mit Persistenz nach 6 Monaten (Differenz -2,4), aber nicht nach 9 Monaten. Verbesserungen in physischer Funktionsfähigkeit (3,8 Punkte), Rollenüber (9,2 Punkte) und Lebensqualität (9,5 Punkte).",
-    transfer:"Nordische Routinedaten, vergleichbar mit deutschem Versorgungssystem"
+    title:"Ökonomische Evaluation von Nurse-led Care bei chronisch-entzündlichen Erkrankungen",
+    sum:"RCT mit 602 Patienten an 56 deutschen Fachpraxen zur Kosteneffektivität delegierter Nurse-led Konsultationen versus Regelversorgung bei Rheuma-, Gastro- und Dermatologie-Erkrankungen.",
+    result:"Mittlere Gesamtkosten nach 12 Monaten: 12.061€ (Intervention) vs. 13.601€ (Kontrolle), nicht signifikant (p=0,286); vergleichbare QALY-Gewinne (0,80 vs. 0,78). Intervention dominant in 87,2% der Bootstrap-Replikationen; 94% Wahrscheinlichkeit für Kosteneffektivität bei Willingness-to-pay €50.000/QALY.",
+    transfer:"Deutsche Routinedaten, gesetzlich Versicherte, Fachpraxen."
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"43058740",
-    author:"Bauernfeind L et al.", pubdate:"18.11.2026",
-    added:"19.11.2026",
-    title:"Elternerfahrungen bei Perinatalverlust: Dynamischer Prozess statt Einzelereignis",
-    sum:"Qualitative Studie mit 12 Eltern (9 Mütter, 3 Väter), die Narrativ-Interviews zu ihren Erfahrungen bei intrauterinem oder perinatelem Kindsverlust durchliefen.",
-    result:"Zwei ineinander verwobene Dimensionen identifiziert: Fünf-Phasen-Trajektorie (suspensevolle Unsicherheit → Normkollaps → Entscheidungsbelastung → Systemverankerung/Verlassenheit → unmögliche Elternschaft) sowie vier übergreifende Themen (Kontextfaktoren, Vorbereitung/Anpassung, Verarbeitungs-/Trauerbedarf, innere Konflikte).",
-    transfer:"Deutsche Studie, gesetzliche Versorgungsstrukturen"
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43065060",
+    author:"Bigool M et al.", pubdate:"25.08.2026",
+    added:"20.11.2026",
+    title:"Gebührenfreie Mutterschaftsversorgung und Säuglingssterblichkeit in Ghana",
+    sum:"Unterschied-in-Unterschiede-Analyse der Auswirkungen einer 2003–2005 eingeführten Politik zur Abschaffung von Entbindungsgebühren in vier ghanaischen Regionen auf die Neu- und Säuglingssterblichkeit.",
+    result:"Die Politik war mit einer Reduktion der Neugeborenen- und Säuglingssterblichkeit um 3,3 bzw. 3,6 Prozentpunkte in den Interventionsregionen assoziiert. Dies demonstriert den Nutzen von Gebührenelimination für neonatale Outcomes.",
+    transfer:"Entwicklungs- und Schwellenländer; begrenzte Übertragbarkeit auf deutsches System mit anderen Zugangsstrukturen."
   },
   {
-    journal:"Rheumatology (Oxford)", year:"2026", pmid:"43053290",
-    author:"Knudsen LR et al.", pubdate:"18.11.2026",
-    added:"19.11.2026",
-    title:"Digitale Patientenschulung bei RA: kosteneffektiv, aber geringe Effektgrößen",
-    sum:"RCT mit 175 neu diagnostizierten RA-Patienten randomisiert zu digitaler oder persönlicher Patientenedukation mit 12-Monats-Follow-up und ökonomischer Bewertung aus Societalperspektive.",
-    result:"Digitale PE führte zu niedrigeren Gesundheitskosten (€9.322 vs €9.886), minimale QALY-Gewinne (0,013 Differenz). Intervention war dominant mit ICER von -€43.692/QALY (adjustiert) bzw. -€24.056/QALY (roh). In Bootstrap-Analysen 47,3% (adjustiert) und 52,7% (roh) im Südosten-Quadranten (niedrigere Kosten, bessere Outcomes). Wahrscheinlichkeit Kosteneffektivität 71,5% bei €22.665/QALY-Schwelle.",
-    transfer:"Nordische (dänisch-norwegische) Daten, vergleichbare Sozialversicherungsstruktur"
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43065055",
+    author:"Liu Y et al.", pubdate:"25.08.2026",
+    added:"20.11.2026",
+    title:"Patientenbedarf in Internet-Kliniken – Textclusteranalyse",
+    sum:"Text-Mining-Studie zu Online-Konsultationen einer Internet-Klinik mit Maschinenlern-Modellen zur Identifikation von Nachfrage-Mustern bei Patienten.",
+    result:"TW-K-Framework (TF-IDF-Word2Vec + K-means++) zeigte stabile Clustering-Ergebnisse (Silhouette-Coefficient 0,575±0,007). Patientenanfragen konzentrierten sich auf Zugangs-, Termin-, Untersuchungs-, Zahlungs- und Nachsorge-Fragen; zeitliche Schwankungen mit stabiler relativer Verteilung über Studienzeitraum.",
+    transfer:"China; begrenzt – andere digitale Infrastruktur und Versorgungsstrukturen."
   },
   {
-    journal:"BMC Emerg Med", year:"2026", pmid:"43058488",
-    author:"Schirmer A et al.", pubdate:"17.11.2026",
-    added:"19.11.2026",
-    title:"Notfallversorgung von Patienten mit Migrationshintergrund: Sprachbarrieren und Diskriminierung",
-    sum:"Systematischer Mixed-Methods Review mit 37 Studien aus Hocheinkommensländern zu Versorgungserfahrungen von Patienten mit Migrationshintergrund in der Notaufnahme.",
-    result:"Drei Hauptthemen: (1) Zufriedenheit variabel, oft niedriger in bestimmten Bereichen trotz hoher Gesamtzufriedenheit; (2) Sprachbarrieren beeinträchtigen Verständnis, Autonomie und Partizipation erheblich, inkonsistente ad-hoc-Dolmetschnutzung; (3) viele berichten Diskriminierungs- oder unfaire Behandlungserfahrungen verknüpft mit Rasse, Ethnizität, Sprache oder Migrationsstatus in strukturellen Kontexten.",
-    transfer:"Internationale Evidenz, Barrieren aber systemunabhängig relevant"
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43065045",
+    author:"Qiu W et al.", pubdate:"25.08.2026",
+    added:"20.11.2026",
+    title:"Delphi-AHP-Rahmen zur Bewertung medizinischer Kooperationen",
+    sum:"Entwicklung eines strukturierten Evaluierungsrahmens durch Delphi-Konsultation (15 Experten) und Analytischer Hierarchieprozess (AHP) zur Leistungsbewertung von Fachkolaborationen; Machbarkeit an Routinedaten getestet.",
+    result:"Finales Rahmenwerk mit 6 Domänen und 15 Indikatoren. Experten-Autoritätskoeffizient 0,76; alle Konsistenzprüfungen erfüllt (CR&lt;0,1). Daten zu Doppelrichtungs-Überweisungen, Fallzahlen, Bettenauslastung konnten aus Routinedaten gewonnen werden; deskriptive Zunahmen in allen Metriken während Studienzeitraum.",
+    transfer:"China (Peking); Methode aber systemunabhängig und auf deutsches Versorgungssystem übertragbar."
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"43053045",
-    author:"Kim JH et al.", pubdate:"16.10.2026",
-    added:"19.11.2026",
-    title:"Fachperspektiven auf digitale Versorgung für Menschen mit Behinderungen",
-    sum:"Qualitative Studie mit 20 Fachpersonen aus 5 Disziplinen (Medizin, Pflege, Psychologie, Rehabilitation, Sozialwesen, Technologie) zu ihren Rollenwahrnehmungen und Kooperationsmöglichkeiten bei digitaler Versorgung für Menschen mit Behinderungen.",
-    result:"Breite Übereinstimmung über Informationsinhalte und Lieferorte (Gesundheitszentren, Behindertenversorgungszentren). Divergenz über Datenhaltung und Zugang (von öffentlich nur bis privat). Zentraler Konflikt: behinderungsspezifisches Design vs. Integration in Breitensysteme. Positionen folgen disziplinären Perspektiven und Arbeitsumfeld.",
-    transfer:"Südkoreanische Studie, Perspektivenkonvergenz aber systemunabhängig relevant"
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43065012",
+    author:"Henderson-Lee Wah D et al.", pubdate:"25.08.2026",
+    added:"20.11.2026",
+    title:"Co-Design einer Mobile-Health-App für Herzstillstand-Überlebende",
+    sum:"Qualitative Interpretive-Descriptive-Studie mit Fokusgruppen (9 Überlebende, 5 Angehörige) und Fachinterviews zur Identifikation von Versorgungsbedarfen und Schmerzenspunkten für digitale Interventionen im ersten Überlebensjahr.",
+    result:"Zwei Hauptthemen: (1) ‚Navigieren auf unbekanntem Terrain ohne Karte' – fehlendes Verständnis von Nachakutversorgung; (2) ‚Einfluss der Zeit und Evolution der Bedürfnisse' – Bedarf ändert sich über Monate. Konkrete Pain-Points identifiziert für Digital-Health-Integration zur Verbesserung der Genesungserfahrung.",
+    transfer:"Kanada; Fragestellung zu Patientenperspektive und Versorgungsbedarf aber systemunabhängig."
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"43053052",
-    author:"Fang N et al.", pubdate:"21.08.2026",
-    added:"19.11.2026",
-    title:"Öffentliche Werte bei Arzneimittel-Priorisierung in Chinas Basisversicherung",
-    sum:"Qualitative Studie mit 17 Teilnehmern aus 4 chinesischen Städten zu öffentlichen Werten und Begründungen für Priorisierungskriterien beim BMI-Arzneimittelersatz.",
-    result:"Stark betont: Nutzen für breite Bevölkerungsgruppen, schwere Erkrankungen (definiert durch Lethalität/Dringlichkeit), hohe Behandlungskosten und finanzielle Verarmungsrisiken, therapeutische Wirksamkeit als Basisbedarf, kurative Potenziale als Supplementum. Vulnerable Gruppen (Niedrigeinkommen, ländliche Bewohner) werden Priorität gegeben. Kindermedikamente bevorzugt wegen zukünftiger Lebensperspektiven.",
-    transfer:"Nur bedingt übertragbar: anderes Versicherungssystem, Vergleich mit europäischen Nutzungsbewertungen möglich"
+    journal:"BMC Palliat Care", year:"2026", pmid:"43065013",
+    author:"May S et al.", pubdate:"19.08.2026",
+    added:"20.11.2026",
+    title:"Nutzung von Kommunikationstechnologie in Palliativversorgung in Brandenburg",
+    sum:"Querschnittsuntersuchung von 162 Fachpersonen (Ärzte, Pflegekräfte, andere) in Palliativeinrichtungen zu Mustern der Kommunikationstechnik-Nutzung in sechs Kommunikationssituationen.",
+    result:"Telefon am häufigsten (59,8%), gefolgt von E-Mail (21,2%), Fax (12,3%), Messenger (9,4%), Dokumentationssoftware (6,5%), Videokonferenz (1,3%). Ärzte höchste Nutzungsintensität (23,3%), Pflegekräfte 17,3%, andere 12,9%. Signifikante Unterschiede zwischen Gruppen bei Rezepttransmission an Apotheken (Telefon V=0,509, Fax V=0,477; Ärzte 83,1% vs. 47,2% vs. 27,3%).",
+    transfer:"Deutsche Daten aus Brandenburg, Palliativversorgung, Versorgungsforschung."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
@@ -2430,7 +2430,7 @@ const RADAR_FRISTEN = [["2026-12-31"], [], ["2027-01-07", "2027-02-11"], [], [],
 // === RADAR-BLOCK-ENDE ===
 
 // === ZULASSUNG-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const ZUL_STAND = "21.11.2026";
+const ZUL_STAND = "22.11.2026";
 const ZUL_EIGENE = 0;
 const ZUL_GUTACHTEN = 0;
 const ZUL_ZULASSUNG = 0;
@@ -2440,7 +2440,7 @@ const ZUL_DIGA = 0;
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "21.11.2026";
+const NEWS_STAND = "22.11.2026";
 const NEWS = [
   {titel:"Leitlinien: Weitere Kürzungen beim Innovationsfonds gefährden evidenzbasierte Gesundheitsversorgung", datum:"2026-11-20", url:"https://www.monitor-versorgungsforschung.de/news/leitlinien-weitere-kuerzungen-beim-innovationsfonds-gefaehrden-evidenzbasierte-gesundheitsversorgung/"},
   {titel:"Primärversorgung innerhalb planetarer Grenzen: Positionspapier der DEGAM", datum:"2026-11-16", url:"https://www.monitor-versorgungsforschung.de/news/primaerversorgung-innerhalb-planetarer-grenzen-positionspapier-der-degam/"},
