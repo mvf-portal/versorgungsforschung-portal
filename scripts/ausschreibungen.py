@@ -132,6 +132,12 @@ POOL_MAX = 200
 VERSUCHE = 3
 PAUSE = 3
 
+# Antworten, bei denen eine Wiederholung sinnvoll ist: Die Gegenseite sagt
+# damit "gerade nicht", nicht "nein". 429 heisst zu schnell, 500 bis 504
+# heissen kaputt oder ueberlastet. Alles andere, vor allem 403 und 404, ist
+# eine Entscheidung und keine Stoerung - die wiederholt man nicht.
+WIEDERHOLBAR = {429, 500, 502, 503, 504}
+
 
 def hol(url: str, daten: bytes | None = None, kopf: dict | None = None) -> bytes:
     req = urllib.request.Request(url, data=daten,
@@ -143,12 +149,26 @@ def hol(url: str, daten: bytes | None = None, kopf: dict | None = None) -> bytes
                 return r.read()
         except (urllib.error.URLError, TimeoutError) as fehler:
             # Ein abgelehnter Zugriff (403, 404) wird nicht besser, wenn man
-            # ihn wiederholt - nur abgerissene Verbindungen und Zeitueberlaeufe.
-            if isinstance(fehler, urllib.error.HTTPError):
+            # ihn wiederholt - nur abgerissene Verbindungen, Zeitueberlaeufe
+            # UND die Stoerungen der Gegenseite.
+            #
+            # Bis zum 22.11.2026 flog hier JEDER HTTPError sofort durch. Die
+            # Begruendung stimmte fuer 403 und 404 und war fuer 502 genau
+            # verkehrt: Am Donnerstag, dem 19.11.2026, scheiterten vierzehn
+            # Suchen bei grants.gov an "502 Bad Gateway", keine einzige wurde
+            # wiederholt, und ZEHN VON ZWANZIG THEMENGEBIETEN standen danach
+            # ohne eine einzige Ausschreibung da. Auf den Hub-Seiten sah das
+            # nicht nach Stoerung aus, sondern nach "es gibt gerade nichts".
+            # Am 22.11. antwortete dieselbe Adresse wieder in 1,5 Sekunden.
+            if (isinstance(fehler, urllib.error.HTTPError)
+                    and fehler.code not in WIEDERHOLBAR):
                 raise
             letzter = fehler
             if versuch < VERSUCHE - 1:
-                time.sleep(PAUSE)
+                # Wachsende Pause: Eine Gegenseite, die gerade ueberlastet
+                # ist, braucht mehr als drei Sekunden. Drei Versuche kosten
+                # so hoechstens neun Sekunden je Suche.
+                time.sleep(PAUSE * (versuch + 1))
     raise letzter if letzter else RuntimeError(f"{url} nicht erreichbar")
 
 
