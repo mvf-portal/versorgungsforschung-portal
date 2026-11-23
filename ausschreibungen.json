@@ -2,7 +2,7 @@
  "stand": "23.11.2026",
  "quellen": {
   "Innovationsfonds": 1,
-  "Bund": 53,
+  "Bund": 54,
   "grants.gov": 349,
   "DFG": 7
  },
@@ -12,7 +12,7 @@
    "slug": "versorgungsforschung",
    "name": "Versorgungsforschung",
    "domain": "wissen.m-vf.de",
-   "anzahl": 2,
+   "anzahl": 4,
    "ausschreibungen": [
     {
      "titel": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich)",
@@ -21,7 +21,7 @@
      "quelle": "Innovationsfonds (G-BA)",
      "land": "DE",
      "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
-     "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz"
+     "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
     },
     {
      "titel": "Deutsches Zentrum für Kinder- und Jugendgesundheit – Ausbauphase",
@@ -30,7 +30,25 @@
      "quelle": "Bund (foerderinfo.bund.de)",
      "land": "DE",
      "beschreibung": "Richtlinie zur Förderung einer Ausbauphase für das künftige Deutsche Zentrum für Kinder- und Jugendgesundheit (DZKJ). BAnz vom 16.11.2026. Das BMFTR beabsichtigt im Rahmenprogramm Gesundheitsforschung, aufbauend auf der Richtlinie zur Förderung der Konzeptentwicklung zum Aufbau eines Deutschen Zentrums für Kinder- und Jugendgesundheit, die sieben ausgewählten Standorte für eine Ausbauphase des Deutschen Zentrums für Kinder- und Jugendgesundheit weiter zu fördern.",
-     "beleg": "Richtlinie zur Förderung einer Ausbauphase für das künftige Deutsche Zentrum für Kinder- und Jugendgesundheit (DZKJ)"
+     "beleg": "Deutsches Zentrum für Kinder- und Jugendgesundheit – Ausbauphase"
+    },
+    {
+     "titel": "Women's Initiative for Screening and Health (WISH)",
+     "frist": "2027-01-08",
+     "url": "https://www.grants.gov/search-results-detail/363546",
+     "quelle": "grants.gov (HHS-HRSA)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Women's Initiative for Screening and Health (WISH)"
+    },
+    {
+     "titel": "Advancing Global Health",
+     "frist": "2027-02-14",
+     "url": "https://www.grants.gov/search-results-detail/363912",
+     "quelle": "grants.gov (DOS-GHSD)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Advancing Global Health"
     }
    ]
   },
@@ -47,7 +65,7 @@
      "quelle": "grants.gov (EPA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Addressing Uncertainties in the Evidence for Health Effects of Lower Air Pollution Exposures"
+     "beleg": "Health Effects of Lower Air Pollution Exposures"
     }
    ]
   },
@@ -88,18 +106,8 @@
    "slug": "longevity",
    "name": "Gesundes Altern & Longevity",
    "domain": "longevity.m-vf.de",
-   "anzahl": 1,
-   "ausschreibungen": [
-    {
-     "titel": "NIJ FY 2026 Research on the Abuse, Neglect, and Exploitation of Elderly Individuals",
-     "frist": "2026-11-30",
-     "url": "https://www.grants.gov/search-results-detail/364138",
-     "quelle": "grants.gov (USDOJ-OJP-NIJ)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Research on the Abuse, Neglect, and Exploitation of Elderly Individuals"
-    }
-   ]
+   "anzahl": 0,
+   "ausschreibungen": []
   },
   {
    "slug": "healthliteracy",
@@ -147,17 +155,8 @@
    "slug": "mental",
    "name": "Psychische Gesundheit",
    "domain": "mental.m-vf.de",
-   "anzahl": 4,
+   "anzahl": 3,
    "ausschreibungen": [
-    {
-     "titel": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich)",
-     "frist": "2026-12-31",
-     "url": "https://innovationsfonds.g-ba.de/foerderbekanntmachungen/foerderbekanntmachung-neue-versorgungsformen-zum-themenoffenen-bereich-einstufig-kurz-einreichung-laufend-im-jahr-moeglich.66",
-     "quelle": "Innovationsfonds (G-BA)",
-     "land": "DE",
-     "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
-     "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
-    },
     {
      "titel": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health (R01 Clinical Trial Optional)",
      "frist": "2027-01-07",
@@ -165,7 +164,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
+     "beleg": "Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
     },
     {
      "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
@@ -174,7 +173,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery"
+     "beleg": "Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center"
     },
     {
      "titel": "HEAL Initiative: Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)",
@@ -200,7 +199,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "National Cancer Institute's Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
+     "beleg": "Investigator-Initiated Early Phase Clinical Trials for Cancer Treatment and Diagnosis"
     },
     {
      "titel": "Cancer Prevention and Control Clinical Trials Grant Program (R01 Clinical Trial Required)",
@@ -230,13 +229,31 @@
      "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI)"
     },
     {
+     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
+     "frist": "2027-01-11",
+     "url": "https://www.grants.gov/search-results-detail/360606",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Glioblastoma Therapeutics Network (GTN)"
+    },
+    {
      "titel": "Limited Competition: Biospecimen Banks to support NCI National Clinical Trials Network Biospecimen Banks (NCTN Biobanks) and the NCI Early-Phase and Experimental Clinical Trials Biospecimen Bank (EET Biobank) (U24 Clinical Trial Not Allowed)",
      "frist": "2027-02-11",
      "url": "https://www.grants.gov/search-results-detail/361134",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Biospecimen Banks to support NCI National Clinical Trials Network Biospecimen Banks"
+     "beleg": "NCI National Clinical Trials Network Biospecimen Banks"
+    },
+    {
+     "titel": "Population Approaches to Reducing Alcohol-related Cancer Risk (R01 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357021",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Reducing Alcohol-related Cancer Risk"
     },
     {
      "titel": "Mechanisms that Impact Cancer Risk with Use of Incretin Mimetics (R01 Clinical Trial Optional)",
@@ -246,24 +263,6 @@
      "land": "US",
      "beschreibung": "",
      "beleg": "Mechanisms that Impact Cancer Risk with Use of Incretin Mimetics"
-    },
-    {
-     "titel": "Mechanisms that Impact Cancer Risk with Use of Incretin Mimetics (R21 Clinical Trial Not Allowed)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357203",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Mechanisms that Impact Cancer Risk with Use of Incretin Mimetics"
-    },
-    {
-     "titel": "Population Approaches to Reducing Alcohol-related Cancer Risk (R01 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357021",
-     "quelle": "grants.gov (HHS-NIH11)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Population Approaches to Reducing Alcohol-related Cancer Risk"
     }
    ]
   },
@@ -271,8 +270,17 @@
    "slug": "kardio",
    "name": "Kardiologie",
    "domain": "kardio.m-vf.de",
-   "anzahl": 2,
+   "anzahl": 3,
    "ausschreibungen": [
+    {
+     "titel": "Continuation of the Cardiovascular Repository for-Type 1 Diabetes (CARE-T1D) Consortium U01 (Open Competition)- Research (U01, Clinical Trial Not Allowed)",
+     "frist": "2027-03-10",
+     "url": "https://www.grants.gov/search-results-detail/360626",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Cardiovascular Repository for-Type 1 Diabetes (CARE-T1D) Consortium"
+    },
     {
      "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R61/R33 Clinical Trial Required)",
      "frist": "2027-02-03",
@@ -280,7 +288,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "HLBS Disorders"
+     "beleg": "Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
     },
     {
      "titel": "NHLBI Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders (R33 CT Required)",
@@ -289,7 +297,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "HLBS Disorders"
+     "beleg": "Early Phase Clinical Trials for Therapeutics and/or Diagnostics for HLBS Disorders"
     }
    ]
   },
@@ -337,7 +345,7 @@
    "slug": "kinder",
    "name": "Kinder- und Jugendmedizin",
    "domain": "kinder.m-vf.de",
-   "anzahl": 3,
+   "anzahl": 7,
    "ausschreibungen": [
     {
      "titel": "Deutsches Zentrum für Kinder- und Jugendgesundheit – Ausbauphase",
@@ -346,7 +354,43 @@
      "quelle": "Bund (foerderinfo.bund.de)",
      "land": "DE",
      "beschreibung": "Richtlinie zur Förderung einer Ausbauphase für das künftige Deutsche Zentrum für Kinder- und Jugendgesundheit (DZKJ). BAnz vom 16.11.2026. Das BMFTR beabsichtigt im Rahmenprogramm Gesundheitsforschung, aufbauend auf der Richtlinie zur Förderung der Konzeptentwicklung zum Aufbau eines Deutschen Zentrums für Kinder- und Jugendgesundheit, die sieben ausgewählten Standorte für eine Ausbauphase des Deutschen Zentrums für Kinder- und Jugendgesundheit weiter zu fördern.",
-     "beleg": "Deutsches Zentrum für Kinder- und Jugendgesundheit – Ausbauphase"
+     "beleg": "Deutsches Zentrum für Kinder- und Jugendgesundheit"
+    },
+    {
+     "titel": "Discovery of the Genetic Basis of Childhood Cancers and of Congenital Anomalies: Gabriella Miller Kids First Pediatric Research Program (X01 Clinical Trial Not Allowed)",
+     "frist": "2027-01-11",
+     "url": "https://www.grants.gov/search-results-detail/361164",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Discovery of the Genetic Basis of Childhood Cancers and of Congenital Anomalies: Gabriella Miller Kids First Pediatric Research Program"
+    },
+    {
+     "titel": "Genomic Data Generation Center for the Gabriella Miller Kids First Pediatric Research Program (U24 Clinical Trial Not Allowed)",
+     "frist": "2027-01-08",
+     "url": "https://www.grants.gov/search-results-detail/358954",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Genomic Data Generation Center for the Gabriella Miller Kids First Pediatric Research Program"
+    },
+    {
+     "titel": "Single Source: Continued Development of the Gabriella Miller Kids First Pediatric Data Resource Center (U2C Clinical Trial Not Allowed)",
+     "frist": "2027-01-08",
+     "url": "https://www.grants.gov/search-results-detail/358959",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Gabriella Miller Kids First Pediatric Data Resource Center"
+    },
+    {
+     "titel": "Gabriella Miller Kids First Training and Outreach Core (U24 Clinical Trial Not Allowed)",
+     "frist": "2027-01-08",
+     "url": "https://www.grants.gov/search-results-detail/358960",
+     "quelle": "grants.gov (HHS-NIH11)",
+     "land": "US",
+     "beschreibung": "",
+     "beleg": "Gabriella Miller Kids First Training and Outreach Core"
     },
     {
      "titel": "Maximizing the Scientific Value of Data Generated by the Environmental Influences on Child Health Outcomes (ECHO) Program: Ruth L. Kirschstein National Research Service Award (NRSA) Individual Postdoctoral Fellowship (F32)",
@@ -364,7 +408,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Prevention and Intervention Approaches for Fetal Alcohol Spectrum Disorders"
+     "beleg": "Fetal Alcohol Spectrum Disorders"
     }
    ]
   },
