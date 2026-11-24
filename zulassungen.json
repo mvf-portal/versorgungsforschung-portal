@@ -10,9 +10,9 @@
   "diga_roh": 37,
   "diga_gezeigt": 5,
   "fda_roh": 36,
-  "fda_mit_label": 26,
-  "fda_ohne_label": 10,
-  "fda_mit_hub": 15,
+  "fda_mit_label": 32,
+  "fda_ohne_label": 4,
+  "fda_mit_hub": 17,
   "antrag_roh": 100,
   "antrag_generisch": 28,
   "antrag_gezeigt": 63,
@@ -20,10 +20,12 @@
   "antrag_stand": "november 2026",
   "antrag_schon_usa": 15
  },
- "warnungen": [],
+ "warnungen": [
+  "LEMBAZ: FDA-Zulassung, aber der Satz behauptet etwas ueber die EU oder die Erstattung - Satz entfernt"
+ ],
  "eintraege": [
   {
-   "stufe": "fda-wartet",
+   "stufe": "fda",
    "datum": "2026-11-18",
    "name": "INFILBRAY",
    "wirkstoff": "VENGLUSTAT",
@@ -31,19 +33,20 @@
    "atc": "",
    "inhaber": "GENZYME CORP A SANOFI CO",
    "kennzeichen": [
-    "NDA"
+    "NDA",
+    "Label Nov 23, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA221144",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221144",
-   "indikation_en": "",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=46d0c64b-2eb5-4f3c-b7c2-aaff221b5e8e",
+   "indikation_en": "INFILBRAY is indicated for the treatment of neurological manifestations of Type 3 Gaucher disease (GD3) in adults and pediatric patients weighing at least 15 kg. INFILBRAY is a glucosylceramide synthase inhibitor indicated for the treatment of neurological manifestations of Type 3 Gaucher disease (GD3) in adults and pediatric patients weighing at least 15 kg. ( 1 ) 2",
    "hubs": [
     "ohne-hub"
    ],
-   "satz": ""
+   "satz": "Die FDA hat Venglustat (Infilbray) zur Behandlung neurologischer Manifestationen der Gaucher-Erkrankung Typ 3 zugelassen."
   },
   {
-   "stufe": "fda-wartet",
+   "stufe": "fda",
    "datum": "2026-11-18",
    "name": "LIVSAYIS",
    "wirkstoff": "CEMDISIRAN",
@@ -51,19 +54,20 @@
    "atc": "",
    "inhaber": "REGENERON PHARMACEUTICALS",
    "kennzeichen": [
-    "NDA"
+    "NDA",
+    "Label Nov 23, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA221251",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221251",
-   "indikation_en": "",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=122beaf9-5add-45ae-9a2e-457af1a7dddf",
+   "indikation_en": "LIVSAYIS is indicated for the treatment of generalized myasthenia gravis (gMG) in adult patients who are anti-acetylcholine receptor (AChR) antibody-positive. LIVSAYIS is a complement C5-directed small interfering RNA indicated for the treatment of generalized myasthenia gravis (gMG) in adult patients who are anti-acetylcholine receptor (AChR) antibody positive. ( 1 ) 2",
    "hubs": [
     "ohne-hub"
    ],
-   "satz": ""
+   "satz": "Die FDA hat Cemdisiran (Livsayis) zur Behandlung der generalisierten Myasthenia gravis bei Erwachsenen mit Anti-Acetylcholinrezeptor-Antikörpern zugelassen."
   },
   {
-   "stufe": "fda-wartet",
+   "stufe": "fda",
    "datum": "2026-11-17",
    "name": "NELKARMI",
    "wirkstoff": "NELADALKIB",
@@ -71,19 +75,20 @@
    "atc": "",
    "inhaber": "NUVALENT",
    "kennzeichen": [
-    "NDA"
+    "NDA",
+    "Label Nov 23, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA220936",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220936",
-   "indikation_en": "",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cbfdd79a-13c5-42f4-b8a2-4586f5b32c7b",
+   "indikation_en": "NELKARMI ™ (neladalkib) is indicated for the treatment of adult patients with locally advanced or metastatic ALK-positive non-small cell lung cancer (NSCLC) who have previously received the following therapy in the unresectable locally advanced or metastatic setting: 1 prior ALK TKI consisting of alectinib; or 2 or more prior ALK TKIs and platinum-based chemotherapy This indication is approved under accelerated approval based on tumor response rate and duration of response [see Clinical Studies ( 14.1 )] . Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial. NELKARMI is a kinase inhibitor indicated for the treatment of adult patients with locally advanced or metastatic ALK-positive non-small cell lung cancer (NSCLC) who have previously received the following therapy in the unresectable locally advanced or metastatic setting: 1 prior ALK TKI consisting of alectinib; or 2 or more prior ALK TKIs and platinum-based chemotherapy This indication is approved under accelerated approval based on tumor response rate and duration of response. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial. ( 1 ) 2",
    "hubs": [
-    "ohne-hub"
+    "onkologie"
    ],
-   "satz": ""
+   "satz": "Die FDA hat Neladalkib (Nelkarmi) zur Behandlung von ALK-positivem, lokal fortgeschrittenem oder metastasiertem nicht-kleinzelligen Lungenkarzinom nach vorheriger ALK-TKI-Therapie zugelassen."
   },
   {
-   "stufe": "fda-wartet",
+   "stufe": "fda",
    "datum": "2026-11-17",
    "name": "LEMBAZ",
    "wirkstoff": "ADRABETADEX",
@@ -91,19 +96,20 @@
    "atc": "",
    "inhaber": "MANDOS LLC",
    "kennzeichen": [
-    "NDA"
+    "NDA",
+    "Label Nov 23, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA220996",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220996",
-   "indikation_en": "",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff86030c-1e66-41b7-8b1f-d1397e94d81c",
+   "indikation_en": "LEMBAZ™ is indicated to reduce the risk of mortality in adult and pediatric patients, who weigh 7 kg or greater, with Niemann-Pick disease type C (NPC) with neurological manifestations that started at less than 6 years of age. LEMBAZ is indicated to reduce the risk of mortality in adult and pediatric patients, who weigh 7 kg or greater, with Niemann-Pick disease type C (NPC) with neurological manifestations that started at less than 6 years of age. ( 1 ) 2",
    "hubs": [
     "ohne-hub"
    ],
    "satz": ""
   },
   {
-   "stufe": "fda-wartet",
+   "stufe": "fda",
    "datum": "2026-11-16",
    "name": "WILSERDLY",
    "wirkstoff": "GIREDESTRAN",
@@ -111,19 +117,20 @@
    "atc": "",
    "inhaber": "GENENTECH INC",
    "kennzeichen": [
-    "NDA"
+    "NDA",
+    "Label Nov 23, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA220791",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220791",
-   "indikation_en": "",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2ff7bdd3-dd8b-43e5-b249-15b5483e4658",
+   "indikation_en": "WILSERDLY, in combination with everolimus, is indicated for the treatment of adults with estrogen receptor-positive (ER+), human epidermal growth factor receptor 2-negative (HER2-), ESR1 -mutated locally advanced or metastatic breast cancer, as detected by an FDA-authorized test, whose disease has recurred during or after completion of endocrine-based adjuvant therapy, or has progressed on at least one endocrine-based regimen in the metastatic setting. WILSERDLY is an estrogen receptor antagonist indicated in combination with everolimus for the treatment of adults with ER-positive, HER2-negative, ESR1 -mutated locally advanced or metastatic breast cancer, as detected by an FDA-authorized test, whose disease has recurred during or after completion of endocrine-based adjuvant therapy, or has progressed on at least one endocrine-based regimen in the metastatic setting. ( 1 , 14 ) 2",
    "hubs": [
-    "ohne-hub"
+    "onkologie"
    ],
-   "satz": ""
+   "satz": "Die FDA hat Giredestran (Wilserdly) in Kombination mit Everolimus zur Behandlung von Erwachsenen mit ESR1-mutiertem, hormonrezeptorpositivem, HER2-negativem lokal fortgeschrittenem oder metastasiertem Mammakarzinom zugelassen."
   },
   {
-   "stufe": "fda-wartet",
+   "stufe": "fda",
    "datum": "2026-11-13",
    "name": "KLYGEFA",
    "wirkstoff": "GEFURULIMAB-GAKS",
@@ -131,16 +138,17 @@
    "atc": "",
    "inhaber": "ALEXION PHARM",
    "kennzeichen": [
-    "BLA"
+    "BLA",
+    "Label Nov 23, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-BLA761488",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=761488",
-   "indikation_en": "",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=97c5f200-b851-4d03-ad33-1ecd15089f0f",
+   "indikation_en": "KLYGEFA is indicated for the treatment of generalized myasthenia gravis (gMG) in adult patients who are anti-acetylcholine receptor (AChR) antibody positive. KLYGEFA is a complement inhibitor indicated for the treatment of generalized myasthenia gravis (gMG) in adult patients who are anti-acetylcholine receptor (AChR) antibody positive. ( 1 ) 2",
    "hubs": [
     "ohne-hub"
    ],
-   "satz": ""
+   "satz": "Die FDA hat Gefurulimab-gaks (Klygefa) zur Behandlung der generalisierten Myasthenia gravis bei Erwachsenen mit Anti-Acetylcholinrezeptor-Antikörpern zugelassen."
   },
   {
    "stufe": "zulassung",
@@ -332,7 +340,7 @@
    "inhaber": "EMD SERONO",
    "kennzeichen": [
     "NDA",
-    "Label Nov 18, 2026"
+    "Label Nov 23, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA220414",
@@ -1605,7 +1613,7 @@
    "inhaber": "REVOLUTION MEDICINES",
    "kennzeichen": [
     "NDA",
-    "Label Aug 31, 2026"
+    "Label Nov 23, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA220910",
