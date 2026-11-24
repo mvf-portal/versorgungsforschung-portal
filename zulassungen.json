@@ -1,5 +1,5 @@
 {
- "stand": "23.11.2026",
+ "stand": "24.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
@@ -9,10 +9,10 @@
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
-  "fda_roh": 37,
-  "fda_mit_label": 27,
+  "fda_roh": 36,
+  "fda_mit_label": 26,
   "fda_ohne_label": 10,
-  "fda_mit_hub": 16,
+  "fda_mit_hub": 15,
   "antrag_roh": 100,
   "antrag_generisch": 28,
   "antrag_gezeigt": 63,
@@ -2921,27 +2921,6 @@
     "onkologie"
    ],
    "satz": "Adstiladrin (Nadofaragene firadenovec) ist zugelassen zur Behandlung von BCG-refraktärem nicht-muskelinvasivem Blasenkrebs mit Carcinoma in situ."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-05-27",
-   "name": "DECNUPAZ",
-   "wirkstoff": "PIVEKIMAB SUNIRINE-PVZY",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ABBVIE INC",
-   "kennzeichen": [
-    "BLA",
-    "Label Jun 01, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-BLA761460",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=508b6ff8-601d-4901-a7a5-816141134054",
-   "indikation_en": "DECNUPAZ is indicated for the treatment of adult patients with blastic plasmacytoid dendritic cell neoplasm (BPDCN). DECNUPAZ is a CD123-directed antibody and alkylating agent conjugate indicated for the treatment of adult patients with blastic plasmacytoid dendritic cell neoplasm (BPDCN). ( 1 ) 2.",
-   "hubs": [
-    "onkologie"
-   ],
-   "satz": "Die FDA hat Pivekimab Sunirine-PVZY (Decnupaz) zur Behandlung des blastischen plasmazytoiden dendritischen Zellneoplasmas zugelassen."
   },
   {
    "stufe": "antrag",
