@@ -399,7 +399,8 @@ def fda_sammeln(warnungen: list[str]) -> tuple[list[dict], dict]:
     return eintraege, zahlen
 
 
-def saetze_schreiben(eintraege: list[dict], alt: dict, warnungen: list[str]) -> int:
+def saetze_schreiben(eintraege: list[dict], alt: dict, warnungen: list[str],
+                     ausfaelle: list[str]) -> int:
     """Ein deutscher Satz je Eintrag - einmal, dann aufbewahrt.
 
     Der Indikationstext der EMA ist englisch und oft zehn Zeilen lang. Ein
@@ -441,7 +442,7 @@ def saetze_schreiben(eintraege: list[dict], alt: dict, warnungen: list[str]) -> 
 
     schluessel = os.environ.get("ANTHROPIC_API_KEY", "").strip()
     if not schluessel:
-        warnungen.append("ANTHROPIC_API_KEY nicht gesetzt - Eintraege ohne deutschen Satz")
+        ausfaelle.append("ANTHROPIC_API_KEY nicht gesetzt - kein Eintrag bekommt einen deutschen Satz")
         return 0
     import anthropic
     client = anthropic.Anthropic(api_key=schluessel)
@@ -783,6 +784,19 @@ def main() -> int:
 
     heute = dt.date.today()
     warnungen: list[str] = []
+    # Zwei Listen, weil es zwei verschiedene Dinge sind. Eine WARNUNG sagt,
+    # dass der Torwaechter gearbeitet hat oder eine Quelle etwas Seltsames
+    # lieferte - geschrieben wurde trotzdem alles. Ein AUSFALL sagt, dass
+    # etwas NICHT geschrieben wurde. Nur der zweite Fall faerbt den Lauf rot.
+    #
+    # Am 24.11.2026 war das eines: Der Torwaechter entfernte einen Satz
+    # (LEMBAZ, FDA-Zulassung mit einer Behauptung ueber die EU), das Skript
+    # gab 1 zurueck, und das Werk meldete per Mail, Daten und Seite stuenden
+    # auf dem Stand des Vortags. Beides war laengst geschrieben. Ein
+    # Fehlalarm aus genau dem Mechanismus, der stille Ausfaelle sichtbar
+    # machen soll, ist der teuerste: Wer ihn zweimal wegwischt, uebersieht
+    # den dritten.
+    ausfaelle: list[str] = []
 
     print(f"Hole die EMA-Tabelle ({EMA_URL.rsplit('/', 1)[1]}) ...")
     roh = hol(EMA_URL)
@@ -896,7 +910,7 @@ def main() -> int:
           f"{mit_studien} von {len(antraege)} Antraegen haben welche.")
 
     if not a.roh:
-        neu = saetze_schreiben(eintraege, alt, warnungen)
+        neu = saetze_schreiben(eintraege, alt, warnungen, ausfaelle)
         print(f"\nDeutsche Saetze: {neu} neu geschrieben, "
               f"{sum(1 for e in eintraege if e['satz']) - neu} uebernommen.")
         raus, geprueft = pruefen(eintraege, warnungen)
@@ -912,7 +926,7 @@ def main() -> int:
                   "oder an der Quelle.")
             for w in warnungen:
                 print("  ! " + w)
-            return 1
+            return 1          # echter Ausfall: hier wird nichts geschrieben
 
     if a.probe or a.roh:
         print("\n--- Vorschau ---")
@@ -928,10 +942,12 @@ def main() -> int:
 
     for w in warnungen:
         print("  ! " + w)
+    for x in ausfaelle:
+        print("  AUSFALL " + x)
 
     if a.probe or a.roh:
         print("\nProbelauf - nichts geschrieben.")
-        return 0
+        return 1 if ausfaelle else 0
 
     ZIEL.write_text(json.dumps({
         "stand": heute.strftime("%d.%m.%Y"),
@@ -945,7 +961,11 @@ def main() -> int:
 
     if seite_schreiben(eintraege, heute.strftime("%d.%m.%Y"), warnungen):
         print(f"{SEITE.name}: Block ersetzt.")
-    return 1 if warnungen else 0
+    else:
+        # seite_schreiben hat den Grund schon in die Warnungen geschrieben.
+        ausfaelle.append(f"{SEITE.name}: Block NICHT geschrieben")
+        print(f"  AUSFALL {SEITE.name}: Block NICHT geschrieben")
+    return 1 if ausfaelle else 0
 
 
 if __name__ == "__main__":
