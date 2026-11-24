@@ -85,7 +85,7 @@ Einrichtung und Kampagnenvorlage: `NEWSLETTER-MAILCHIMP.md` und `newsletter/mail
 
 ### Studien aktualisieren
 
-**Automatisch, täglich** — das ist der aktive Weg: `.github/workflows/update-studies.yml` läuft um 03:00 UTC — das sind 05:00 Uhr deutscher Sommerzeit, 04:00 Uhr Winterzeit — (und per *Run workflow* manuell), ruft `scripts/update_studies.py` auf → PubMed → Claude-API (`claude-haiku-4-5`, Secret `ANTHROPIC_API_KEY`) → Marker-Block ersetzen → commit & push. Einrichtung dokumentiert in `EINRICHTUNG-GITHUB-ACTIONS.md`.
+**Automatisch, täglich** — das ist der aktive Weg: `.github/workflows/update-studies.yml` wird um **04:20 UTC vom MVF-Server geweckt** (Dirigent im Repo `knowledge-hubs`), nicht von einem GitHub-Zeitplan. **Seit dem 24.11.2026 hat das Werk gar keinen Zeitplan mehr:** Gemessen über 180 Zeitplan-Läufe startete kein einziger vor 09:00 UTC, also keiner vor dem Versand um 10:00 Ortszeit — früheste Startzeit 09:58, späteste 16:09. Ein Lauf nach dem Versand rettet keine Ausgabe, er wiederholt nur die Arbeit des Morgens. Das Netz ist die Laufwache um 06:00 UTC, die fehlende Läufe nachstößt. Von Hand geht es weiter per *Run workflow*. Der Lauf ruft `scripts/update_studies.py` auf → PubMed → Claude-API (`claude-haiku-4-5`, Secret `ANTHROPIC_API_KEY`) → Marker-Block ersetzen → commit & push. Einrichtung dokumentiert in `EINRICHTUNG-GITHUB-ACTIONS.md`.
 
 **Manuell auf Zuruf** — der Slash-Command **`/studien-update`** (`~/.claude/commands/studien-update.md`): Claude recherchiert und formuliert selbst im Chat, ohne API-Key. Nützlich für Sonderfälle (anderer Suchbegriff, Zwischenstand), ersetzt aber nicht die Automatik.
 
