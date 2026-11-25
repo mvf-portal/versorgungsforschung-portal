@@ -1,10 +1,10 @@
 {
- "stand": "24.11.2026",
+ "stand": "25.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
   "zulassung": 34,
-  "gutachten": 26,
+  "gutachten": 25,
   "ohne_hub": 15,
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
@@ -149,6 +149,24 @@
     "ohne-hub"
    ],
    "satz": "Die FDA hat Gefurulimab-gaks (Klygefa) zur Behandlung der generalisierten Myasthenia gravis bei Erwachsenen mit Anti-Acetylcholinrezeptor-Antikörpern zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-11-12",
+   "name": "VaxRabeo",
+   "wirkstoff": "Rabies virus (inactivated) strain WISTAR (PM/WI 38-1503-3M)",
+   "gebiet_mesh": "Rabies",
+   "atc": "J07BG01",
+   "inhaber": "Sanofi Winthrop Industrie",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006602",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/vaxrabeo",
+   "indikation_en": "VaxRabeo is indicated for pre-exposure and post-exposure prophylaxis against rabies in individuals of all age groups.VaxRabeo should be used in accordance with official recommendations.",
+   "hubs": [
+    "impfen"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von VaxRabeo (Rabies-Virus inaktiviert, Stamm WISTAR) zur Prä- und Postexpositionsprophylaxe gegen Tollwut."
   },
   {
    "stufe": "zulassung",
@@ -1353,24 +1371,6 @@
     "onkologie"
    ],
    "satz": "Der CHMP empfiehlt die Zulassung von Gevalka (Ensartinib-dihydrochlorid) zur Behandlung von Erwachsenen mit ALK-positivem fortgeschrittenem nicht-kleinzelligem Lungenkarzinom."
-  },
-  {
-   "stufe": "gutachten",
-   "datum": "2026-09-17",
-   "name": "VaxRabeo",
-   "wirkstoff": "Rabies virus (inactivated) strain WISTAR (PM/WI 38-1503-3M)",
-   "gebiet_mesh": "Rabies",
-   "atc": "J07BG01",
-   "inhaber": "Sanofi Winthrop Industrie",
-   "kennzeichen": [],
-   "gutachten": "Positive",
-   "nummer": "EMEA/H/C/006602",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/vaxrabeo",
-   "indikation_en": "Pre-exposure and post-exposure prophylaxis against rabies in all age groups",
-   "hubs": [
-    "impfen"
-   ],
-   "satz": "Der CHMP empfiehlt die Zulassung von VaxRabeo (Rabies-Virus inaktiviert, Stamm WISTAR) zur Prä- und Postexpositionsprophylaxe gegen Tollwut."
   },
   {
    "stufe": "diga",
@@ -2909,26 +2909,6 @@
     "ohne-hub"
    ],
    "satz": ""
-  },
-  {
-   "stufe": "zulassung",
-   "datum": "2026-05-28",
-   "name": "Adstiladrin",
-   "wirkstoff": "nadofaragene firadenovec",
-   "gebiet_mesh": "Non-Muscle Invasive Bladder Neoplasms",
-   "atc": "L01XL10",
-   "inhaber": "Ferring Pharmaceuticals A/S",
-   "kennzeichen": [
-    "bedingte Zulassung"
-   ],
-   "gutachten": "",
-   "nummer": "EMEA/H/C/005856",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/adstiladrin",
-   "indikation_en": "Adstiladrin is indicated as monotherapy for the treatment of adult patients with Bacillus Calmette-Guérin (BCG)-unresponsive non-muscle invasive bladder cancer (NMIBC) with carcinoma in situ (CIS) with or without papillary tumours.",
-   "hubs": [
-    "onkologie"
-   ],
-   "satz": "Adstiladrin (Nadofaragene firadenovec) ist zugelassen zur Behandlung von BCG-refraktärem nicht-muskelinvasivem Blasenkrebs mit Carcinoma in situ."
   },
   {
    "stufe": "antrag",
