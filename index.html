@@ -2170,16 +2170,16 @@ a.mvf-dach-karte:hover{border-color:var(--brand);transform:translateY(-2px);
 
     <div class="mvf-dach-karten">
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/rekrutierend.html"><h3>Was gerade läuft</h3><p class="mvf-dach-was">Vorhaben, die noch nicht zu Ende sind.</p><ul><li><b>265</b><span>Studien suchen Teilnehmende</span></li><li><b>710</b><span>registrierte Studien</span></li><li><b>861</b><span>Innovationsfonds-Projekte</span></li></ul></a>
-    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>612</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>6.877</b><span>Studien der 20 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
+    <a class="mvf-dach-karte" href="neue-studien.html"><h3>Was veröffentlicht ist</h3><p class="mvf-dach-was">Von der Arbeit von heute Morgen bis zum Jahrgang 2008.</p><ul><li><b>619</b><span>neue Arbeiten, täglich</span></li><li><b>936</b><span>Beiträge in MVF</span></li><li><b>6.877</b><span>Studien der 20 Hubs</span></li><li><b>600</b><span>Abstracts des DKVF</span></li></ul></a>
     <a class="mvf-dach-karte" href="https://studien.m-vf.de/forschende.html"><h3>Wer es macht</h3><p class="mvf-dach-was">Menschen, Häuser und Geldgeber, und wie sie zusammenhängen.</p><ul><li><b>5.373</b><span>Forschende</span></li><li><b>2.430</b><span>Institutionen</span></li><li><b>484</b><span>Förderer</span></li></ul></a>
-    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>32</b><span>offene Ausschreibungen</span></li><li><b>148</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
+    <a class="mvf-dach-karte" href="ausschreibungen.html"><h3>Was als Nächstes kommt</h3><p class="mvf-dach-was">Geld, Zulassungen und der Nachwuchs.</p><ul><li><b>26</b><span>offene Ausschreibungen</span></li><li><b>143</b><span>Zulassungsverfahren</span></li><li><b>13</b><span>Abschlussarbeiten</span></li></ul></a>
     </div>
 
     <p class="mvf-dach-fuss">Literatur, Ausschreibungen und
       Zulassungsverfahren führt der tägliche Lauf dieses Hubs selbst nach.
       Die übrigen zehn Zahlen stehen fest, Stand 2. November 2026, damit keine
       davon still veraltet. Zusammen
-      <b class="mvf-dach-summe">19.341</b> Einträge aus 13
+      <b class="mvf-dach-summe">19.337</b> Einträge aus 13
       Beständen.</p>
   </div>
 </section>
@@ -2512,77 +2512,86 @@ const DB = [
 
 // Momentaufnahme neuester Studien (PubMed, nach Datum sortiert) — deutsche Zusammenfassungen
 // === STUDIES-BLOCK-START (taeglich 06:00 Uhr von GitHub Actions ersetzt) ===
-const SNAP_DATE = "25. Nov. 2026, 05:00 Uhr";
+const SNAP_DATE = "26. Nov. 2026, 05:00 Uhr";
 const SNAP_STATUS = "neu";
 const STUDIES = [
   {
-    journal:"J Health Monit", year:"2026", pmid:"43075122",
-    author:"Buchmann M et al.", pubdate:"18.11.2026",
+    journal:"BMC Palliat Care", year:"2026", pmid:"43073878",
+    author:"Dawoud A et al.", pubdate:"24.11.2026",
+    added:"23.11.2026",
+    title:"Palliativversorgung und End-of-Life-Präferenzen in der arabisch-muslimischen Bevölkerung Deutschlands",
+    sum:"Querschnittsstudie zu Bewusstsein, Präferenzen und erlebter Diskriminierung bei arabisch-muslimischen Personen in Deutschland.",
+    result:"517 Teilnehmer (Mittelalter 39 Jahre, 49,7% weiblich). Nur 33% kannten Palliativversorgung, 45% Hospize. Aber 78% würden Komfortzentriertheit gegenüber Lebensverlängerung bevorzugen. 75% wünschten Familieneinbindung, 80% starben gerne zu Hause. 47% berichteten erlebte Diskriminierung. Vertrauen in deutsche Gesundheitsdienste niedrig (60% unsicher).",
+    transfer:"Deutschland; direkt anwendbar für deutsche Versorgung von Migranten."
+  },
+  {
+    journal:"BMJ Ment Health", year:"2026", pmid:"43045144",
+    author:"Blease C et al.", pubdate:"17.11.2026",
+    added:"17.11.2026",
+    title:"Generative KI in der Psychotherapie: Internationale Fachperspektiven",
+    sum:"Qualitative Analyse von Reaktionen von Psychotherapeuten auf generative KI-Anwendungen in der psychotherapeutischen Praxis.",
+    result:"354 von 766 Fachleuten lieferten aussagekräftige Freitextantworten (46,2%). Vier Themes: (1) Primat der therapeutischen Beziehung; KI kann Relationalität nicht replizieren. (2) Bedingte Utility für Dokumentation, Psychoedukation, Schriftverkehr, aber Vorbehalte zu direkter Therapeutenarbeit. (3) Schadensrisiken (Vertraulichkeit, Abhängigkeit, Deskilling). (4) Trainings- und Governance-Defizite weit verbreitet.",
+    transfer:"Internationale Stichprobe; Fachperspektiven zu KI-Risiken systemunabhängig relevant."
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43079542",
+    author:"Kiggundu JB et al.", pubdate:"01.09.2026",
+    added:"25.11.2026",
+    title:"Wissens- und Praxislücken bei integrierter HIV-Hypertonie-Versorgung in Uganda",
+    sum:"Formative Studie zu Hindernissen und Chancen für die Integration von HIV- und Hypertonie-Behandlung in Primärversorgungskliniken in Uganda.",
+    result:"89 Gesundheitspersonen (62% weiblich) berichteten fehlende Schulungen zu Hypertonie, begrenzte Zugang zu Behandlungsprotokollen und mangelhafte Blutdruckgeräte. Trotzdem waren 78% bereit, die Versorgung zu integrieren. Wichtige Barrieren: unzureichende Medikamente, fehlende Reporting-Tools und begrenzte Supervision.",
+    transfer:"Uganda; Formative Studie mit klaren Implementierungsempfehlungen übertragbar."
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43079505",
+    author:"McCauley R et al.", pubdate:"01.09.2026",
+    added:"25.11.2026",
+    title:"Co-Design-Intervention zur Verbesserung der Datenqualität in Krankenhausentlassungsberichten",
+    sum:"Entwicklung und Pilotierung einer Schulungsintervention zur Verbesserung der Dokumentation von vermeidbaren Nebenereignissen in administrative Datenbanken.",
+    result:"75 Codierer und Ärzte (Umfrage) sowie 10 Ärzte (Pilot) beteiligt. Vor der Intervention berichteten alle Pilot-Teilnehmer niedriges Selbstvertrauen in die Dokumentation; nach Intervention zeigten alle erhöhtes Selbstvertrauen und hohe Akzeptanz der Ressourcen.",
+    transfer:"Irland (HIPE-System); Methoden zu Data-Quality grundsätzlich systemübergreifend anwendbar."
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43079540",
+    author:"Acheson LS et al.", pubdate:"01.09.2026",
+    added:"25.11.2026",
+    title:"Stigma als Barriere: Vorzeitige Selbstentlassungen von Menschen mit Injektionsstoffgebrauch",
+    sum:"Qualitative Studie zu Stigma-Erfahrungen und deren Rolle bei vorzeitigen Krankenhausentlassungen.",
+    result:"5 Patienten und 8 Kliniker interviewt. Drei Themen zu interpersonellem Stigma (Wahrnehmung von Drug-Seeking, Schmerzmanagement, Pflegeerfahrung) und drei zu strukturellem Stigma (Doppelstandards, Spitalskultur, Zugangsbarrieren). Patienten attribuierten Entlassungen eher Stigma; Kliniker deuteten auf Drogenkonsum als Grund.",
+    transfer:"Australien; qualitative Erkenntnisse zu Stigma-Abbau systemübergreifend relevant."
+  },
+  {
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43079455",
+    author:"Ali JM et al.", pubdate:"01.09.2026",
     added:"24.11.2026",
-    title:"Versorgungsqualität für chronische Erkrankungen in Deutschland: Selbstbewertung deutet Verbesserungspotenzial",
-    sum:"Befragung von über 10.000 erwachsenen Patienten mit chronischen Erkrankungen in Deutschland zur wahrgenommenen Qualität ihrer medizinischen Versorgung mittels PACIC-S11-Fragebogen.",
-    result:"Durchschnittliche Versorgungsqualität wurde als fair bewertet (Mittelwert: 2,67 auf Skala 1–5). Zufriedenheit mit Organisationsaspekten war höchst (3,61), Ermutigung zur Selbstmanagement-Schulung mit 1,76 am niedrigsten. Jüngere Menschen, Frauen, Personen mit höherer Bildung und gesetzlich Versicherte bewerteten die Qualität niedriger.",
-    transfer:"Deutsche Routinedaten, gesetzlich Versicherte, direkt anwendbar für Versorgungsforschung"
+    title:"Faktoren für und gegen Produktivität von Gesundheitspersonen in Äthiopien",
+    sum:"Phänomenologische Studie zu erlebten Barrieren und Förderfaktoren der Arbeitsproduktivität.",
+    result:"30 Gesundheitspersonen und Manager aus 10 Krankenhäusern interviewt. Fünf Themenbereiche identifiziert: Kapazitätsaufbau, Motivation, Performance-Management, Arbeitsumfeld, Absentismus. Förderer: Fortbildung, Mentoring, nicht-finanzielle Anreize. Barrieren: Ressourcenmangel, schlechte Infrastruktur, fehlende transparente Beförderungssysteme.",
+    transfer:"Äthiopien; Erkenntnisse zu Workforce-Produktivität in Ressourcen-limitierten Systemen."
   },
   {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"43074005",
-    author:"Ismail KI et al.", pubdate:"28.08.2026",
-    added:"23.11.2026",
-    title:"Gestaltung expliziter Leistungspakete in Sozialversicherungssystemen: Multiperspektivischer Partizipationsansatz",
-    sum:"Qualitative Studie mit 84 Stakeholdern zur Entwicklung eines nationalen Leistungspakets in Malaysia mittels Policy-Delphi und deliberativer Methoden.",
-    result:"Sieben interdependente Handlungsfelder identifiziert (Governance, Finanzierung, HTA-Integration, Phasenablauf, Equity, Scope, legale Verankerung) und neun Prioritätskriterien (klinische Effektivität, Kosteneffektivität, Sicherheit, Budgetimpact, Machbarkeit, strategische Ausrichtung, Equity, Krankheitslast, soziale Akzeptanz).",
-    transfer:"Niedriges bis mittleres Einkommen, aber methodisch für Sozialversicherungen übertragbar"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"43073956",
-    author:"Murai S et al.", pubdate:"27.08.2026",
-    added:"23.11.2026",
-    title:"Kollegiale Lernplattformen für Qualitätsverbesserung in ressourcenbegrenzten Systemen",
-    sum:"Deskriptive Fallstudie zur Implementierung von vier national koordinierten Foren für Qualitätsverbesserung in Laos über vier Jahre mit 65–234 Teilnehmern und Analyse von 97 Institutionen.",
-    result:"Partizipation stieg von 7,7 % auf 52,1 % Eigenfinanzierung. 89,0 % würden das Forum Kollegen empfehlen. Problemlösungsansätze dominierten (gegenüber Prävention), 19,5 % blieben in Situationsanalyse stecken. Lokale Eigenverantwortung, multilevel leadership und kulturell angepasste Lernumgebungen sind essentiell.",
-    transfer:"Niedriges bis mittleres Einkommen, aber Prinzipien für dezentralisierte Systeme übertragbar"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"43073999",
-    author:"Woodrow N et al.", pubdate:"26.08.2026",
-    added:"23.11.2026",
-    title:"Barrieren und Förderfaktoren für Eltern-Säuglings-Beziehungsinterventionen im NHS",
-    sum:"Qualitative Studie mit 9 Fachkräften und 14 Eltern zur Identifikation von Hemmnissen und Förderaspekten bei Implementierung und Inanspruchnahme einer Beziehungsintervention in England.",
-    result:"Vier zentrale Themen: (1) Gesundheitsbesucher berichten mangelndes Detailwissen zum Angebot, (2) begrenzte Kapazität für vertrauensaufbau, (3) Sensibilisierungsdefizite bei Beziehungsproblemen, (4) Eltern berichten sehr positive Erfahrungen bei Inanspruchnahme. Erfolgreiche Vermittlung erfordert klare Botschaften und flexible, tailored Unterstützung.",
-    transfer:"Großbritannien, aber Versorgungsstrukturen und Fachkräfte-Perspektiven gut übertragbar"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"43073873",
-    author:"Oliveira BDD et al.", pubdate:"26.08.2026",
-    added:"23.11.2026",
-    title:"Verbesserung der Patientenflusskette durch Lean-Management der Bettenverwaltung",
-    sum:"Action-Research-Studie in einem portugiesischen Krankenhaus zu governance-orientiertem Lean-Bed-Management mit Before-After-Vergleich über 8 Monate.",
-    result:"Verbesserungen ohne Bettenkapazitätserweiterung troach 4,3 % Steigerung der Notaufnahme-Zugänge: Zeit bis Aufnahme um 19,4 % reduziert (808,5→652 min), Boarding-Zeit um 46,0 % (348→188 min), Bettenumschlag um 16,7 % (515→429 min), Entlassungen bis 12:00 Uhr um 50 % erhöht (10%→15 %).",
-    transfer:"Portugal, aber Prinzipien für deutsches Krankenhaus-Management übertragbar"
-  },
-  {
-    journal:"BMC Health Serv Res", year:"2026", pmid:"43073888",
-    author:"von Hafe F et al.", pubdate:"26.08.2026",
-    added:"23.11.2026",
-    title:"Messgrößen für Case-Management bei ED-Vielnutzern: Unterschiedliche Stakeholder-Prioritäten",
-    sum:"Qualitative action-research-Studie mit Stakeholdern zur Festlegung von Evaluationsindikatoren für Case-Management von Notaufnahmen-Vielnutzern mit partizipativem Ansatz und ökonomischer Analyse.",
-    result:"22 Indikatoren identifiziert (9 Prozess, 13 Outcome). Prioritäten divergierten: Vorstand priorisierte Fallzahl, ED-Leitung Interventionsdauer und ED-Besuche, Management Reassessment-Häufigkeit. Nur 9 von 22 mittels Routinedaten messbar. ED-Besuche sanken um 54,5 % (€71.622 Kostenersparnis vs. €58.469 Lieferkosten, Ratio 1,22).",
-    transfer:"Portugal, Methodik und Multi-Stakeholder-Ansatz für deutsches System übertragbar"
+    journal:"BMC Health Serv Res", year:"2026", pmid:"43079451",
+    author:"Yin Y et al.", pubdate:"31.08.2026",
+    added:"24.11.2026",
+    title:"Systemisches Design im Gesundheitswesen: Systematische Übersichtsarbeit und Rahmenwerk",
+    sum:"Metasynthese von 32 Reviews über Systemdesign-Methoden in Gesundheitswesen und ihre Effektivität auf Patienten-, Service- und Systemebene.",
+    result:"User-centered Design und Co-Design am wirksamsten für Patientenlevel; Systems Thinking für Organisationsebene erforderlich. 1127 Primärstudien in 32 Reviews zeigen: Service Design und Quality Improvement häufigste Anwendungen. Erhebliche Lücken bei Outcomes-Standardisierung und Low-Resource-Settings.",
+    transfer:"Internationale Evidenz; methodische Rahmenarbeit systemunabhängig relevant."
   },
 ];
 // === STUDIES-BLOCK-ENDE ===
 
 // Offene Foerderausschreibungen zum Thema — taeglich von scripts/radar_hinweis.py
 // === RADAR-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const RADAR_STAND = "23.11.2026";
+const RADAR_STAND = "26.11.2026";
 const RADAR_URL = "https://wissen.m-vf.de/ausschreibungen.html#versorgungsforschung";
 const RADAR_EIGENES = 0;
 const RADAR_ZUHAUSE = true;
-const RADAR_FRISTEN = [["2026-12-31", "2027-01-08"], ["2027-01-20"], ["2027-01-07", "2027-02-11"], [], [], [], [], [], ["2027-01-08"], [], [], ["2026-12-31", "2027-01-07", "2027-01-26", "2027-01-26", "2027-01-27"], ["2027-01-07", "2027-01-07", "2027-01-07", "2027-01-25", "2027-01-11", "2027-01-11", "2027-01-07", "2027-02-11"], ["2027-03-10"], ["2027-01-27", "2027-03-10"], [], [], ["2026-12-14", "2027-01-11", "2027-01-08", "2027-01-08", "2027-01-08", "2026-12-02"], [], ["2027-01-11", "2027-01-08", "2027-01-08", "2027-01-08"]];
+const RADAR_FRISTEN = [["2026-12-31", "2026-12-14", "2026-12-11"], ["2027-01-20"], ["2027-01-07", "2027-02-11"], [], [], [], [], [], [], [], [], ["2026-12-31", "2027-01-07", "2027-01-26", "2027-01-26", "2027-05-07"], ["2027-01-07", "2027-01-07", "2027-01-07", "2027-01-25", "2027-01-07", "2027-01-07", "2027-01-07", "2027-02-11"], [], [], [], [], ["2026-12-14", "2026-12-02", "2027-01-07"], [], ["2027-01-11", "2027-01-08", "2027-01-08", "2027-01-08"]];
 // === RADAR-BLOCK-ENDE ===
 
 // === ZULASSUNG-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const ZUL_STAND = "25.11.2026";
+const ZUL_STAND = "26.11.2026";
 const ZUL_EIGENE = 0;
 const ZUL_GUTACHTEN = 0;
 const ZUL_ZULASSUNG = 0;
@@ -2592,7 +2601,7 @@ const ZUL_DIGA = 0;
 
 // Beitraege aus dem MVF-Archiv zum Thema — taeglich von scripts/newsfeed.py
 // === NEWS-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
-const NEWS_STAND = "25.11.2026";
+const NEWS_STAND = "26.11.2026";
 const NEWS = [
   {titel:"Leitlinien: Weitere Kürzungen beim Innovationsfonds gefährden evidenzbasierte Gesundheitsversorgung", datum:"2026-11-20", url:"https://www.monitor-versorgungsforschung.de/news/leitlinien-weitere-kuerzungen-beim-innovationsfonds-gefaehrden-evidenzbasierte-gesundheitsversorgung/"},
   {titel:"Primärversorgung innerhalb planetarer Grenzen: Positionspapier der DEGAM", datum:"2026-11-16", url:"https://www.monitor-versorgungsforschung.de/news/primaerversorgung-innerhalb-planetarer-grenzen-positionspapier-der-degam/"},
@@ -2609,8 +2618,8 @@ const PRESSE = [
 // Meldungen des G-BA — taeglich von scripts/newsfeed.py
 // === SELBST-BLOCK-START (taeglich von GitHub Actions ersetzt) ===
 const SELBST = [
-  {titel:"Einleitung eines Beratungsverfahrens: Anpassung der Arbeitsunfähigkeits-Richtlinie zur Teilarbeitsunfähigkeit aufgrund des GKV-Beitragssatzstabilisierungsgesetzes", datum:"2026-11-24", url:"/beschluesse/8146/", quelle:"G-BA"},
-  {titel:"Richtlinie zur datengestützten einrichtungsübergreifenden Qualitätssicherung: Teil 1 – Änderungen zum Erfassungsjahr 2027", datum:"2026-11-24", url:"/beschluesse/7944/", quelle:"G-BA"},
+  {titel:"Bekanntmachung anlässlich einer Informationsübermittlung gemäß § 137h SGB V: Vollimplantierbares Cochlea-Implantat bei sensorineuralem schwergradigen bis an Taubheit grenzenden Hörverlust – Aufforderung zur Meldung weiterer betroffener Medizinproduktehersteller", datum:"2026-11-25", url:"/beschluesse/8147/", quelle:"G-BA"},
+  {titel:"Jugendgesundheitsuntersuchungs-Richtlinie: Dokumentation der Jugendgesundheitsuntersuchung nach § 26 SGB V sowie eine Neufassung der Richtlinie", datum:"2026-11-25", url:"/beschluesse/7983/", quelle:"G-BA"},
 ];
 // === SELBST-BLOCK-ENDE ===
 

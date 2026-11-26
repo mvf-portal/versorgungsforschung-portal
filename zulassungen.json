@@ -1,18 +1,18 @@
 {
- "stand": "25.11.2026",
+ "stand": "26.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
-  "zulassung": 34,
-  "gutachten": 25,
+  "zulassung": 33,
+  "gutachten": 23,
   "ohne_hub": 15,
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
-  "fda_roh": 36,
-  "fda_mit_label": 32,
-  "fda_ohne_label": 4,
-  "fda_mit_hub": 17,
+  "fda_roh": 34,
+  "fda_mit_label": 31,
+  "fda_ohne_label": 3,
+  "fda_mit_hub": 16,
   "antrag_roh": 100,
   "antrag_generisch": 28,
   "antrag_gezeigt": 63,
@@ -107,6 +107,27 @@
     "ohne-hub"
    ],
    "satz": ""
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-11-16",
+   "name": "Rasonque",
+   "wirkstoff": "daraxonrasib",
+   "gebiet_mesh": "Pancreatic Neoplasms",
+   "atc": "L01XX",
+   "inhaber": "Revolution Medicines Netherlands B.V.",
+   "kennzeichen": [
+    "Orphan Drug",
+    "beschleunigt"
+   ],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/007122",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/rasonque",
+   "indikation_en": "Rasonque as monotherapy is indicated for the treatment of adult patients with metastatic pancreatic adenocarcinoma who have received at least one prior systemic therapy.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Der CHMP empfiehlt die Zulassung von Rasonque (Daraxonrasib) zur Behandlung von Patienten mit metastasierendem Pankreasadenokarzinom nach mindestens einer vorangegangenen systemischen Therapie."
   },
   {
    "stufe": "fda",
@@ -488,26 +509,6 @@
     "onkologie"
    ],
    "satz": "Der CHMP empfiehlt die Zulassung von Kizfizo (Temozolomid) zur Behandlung des Glioblastoma multiforme bei Erwachsenen und maligner Gliome bei Kindern."
-  },
-  {
-   "stufe": "gutachten",
-   "datum": "2026-10-15",
-   "name": "Rasonque",
-   "wirkstoff": "daraxonrasib",
-   "gebiet_mesh": "Pancreatic Neoplasms",
-   "atc": "L01XX",
-   "inhaber": "Revolution Medicines Netherlands B.V.",
-   "kennzeichen": [
-    "Orphan Drug"
-   ],
-   "gutachten": "Positive",
-   "nummer": "EMEA/H/C/007122",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/rasonque",
-   "indikation_en": "Treatment of adult patients with metastatic pancreatic adenocarcinoma who have received at least one prior systemic therapy.",
-   "hubs": [
-    "onkologie"
-   ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Rasonque (Daraxonrasib) zur Behandlung von Patienten mit metastasierendem Pankreasadenokarzinom nach mindestens einer vorangegangenen systemischen Therapie."
   },
   {
    "stufe": "fda-wartet",
@@ -1125,27 +1126,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-25",
-   "name": "ATEBRIOZ",
-   "wirkstoff": "ZILURGISERTIB FUMARATE",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "MIRUM",
-   "kennzeichen": [
-    "NDA",
-    "Label Oct 12, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA221198",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f542e4b0-072a-42c6-80c9-5977054971e0",
-   "indikation_en": "ATEBRIOZ is indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ATEBRIOZ is an activin receptor-like kinase-2 (ALK2) inhibitor indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ( 1 ) 2.",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": "Die FDA hat Zilurgisertib-Fumarat (Atebrioz) zur Reduktion neuer heterotoper Ossifikationen bei Fibrodysplasia ossificans progressiva zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-25",
    "name": "JUVMO",
    "wirkstoff": "TAVAPADON",
    "gebiet_mesh": "",
@@ -1163,6 +1143,27 @@
     "longevity"
    ],
    "satz": "Die FDA hat Tavapadon (JUVMO) zur Behandlung der Parkinson-Krankheit bei Erwachsenen zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-25",
+   "name": "ATEBRIOZ",
+   "wirkstoff": "ZILURGISERTIB FUMARATE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "MIRUM",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 12, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA221198",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f542e4b0-072a-42c6-80c9-5977054971e0",
+   "indikation_en": "ATEBRIOZ is indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ATEBRIOZ is an activin receptor-like kinase-2 (ALK2) inhibitor indicated to reduce the volume of total new heterotopic ossification (HO) in adults and pediatric patients aged 12 years and older with fibrodysplasia ossificans progressiva (FOP). ( 1 ) 2.",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Zilurgisertib-Fumarat (Atebrioz) zur Reduktion neuer heterotoper Ossifikationen bei Fibrodysplasia ossificans progressiva zugelassen."
   },
   {
    "stufe": "diga",
@@ -1186,6 +1187,26 @@
    "satz": "Pia-App bei Regelschmerzen ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
+   "stufe": "fda-wartet",
+   "datum": "2026-09-23",
+   "name": "LYRFIGTU",
+   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ELEVAR",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220425",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
    "stufe": "fda",
    "datum": "2026-09-23",
    "name": "ONSWIK",
@@ -1207,24 +1228,22 @@
    "satz": "Die FDA hat Insulin Efsitora alfa-gobe (Onswik) zur Verbesserung der Glykämiekontrolle bei Typ-2-Diabetes zugelassen."
   },
   {
-   "stufe": "fda-wartet",
-   "datum": "2026-09-23",
-   "name": "LYRFIGTU",
-   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ELEVAR",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220425",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
-   "indikation_en": "",
+   "stufe": "zulassung",
+   "datum": "2026-09-18",
+   "name": "Lyrokaul",
+   "wirkstoff": "Lerodalcibep",
+   "gebiet_mesh": "Hypercholesterolemia;Dyslipidemias",
+   "atc": "C10AX19",
+   "inhaber": "LIB Therapeutics B.V.",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006694",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/lyrokaul",
+   "indikation_en": "Lyrokaul is indicated in adults with primary hypercholesterolaemia (heterozygous familial (HeFH) and non-familial) or mixed dyslipidaemia as an adjunct to diet: in combination with a statin or statin with other lipid-lowering therapies in patients unable to reach low-density lipoprotein cholesterol (LDL-C) goals with the maximum tolerated dose of a statin, or alone or in combination with other lipid-lowering therapies in patients who are statin intolerant or for whom a statin is contraindicated.",
    "hubs": [
-    "ohne-hub"
+    "kardio"
    ],
-   "satz": ""
+   "satz": "Der CHMP empfiehlt die Zulassung von Lyrokaul (Lerodalcibep) zur Behandlung der primären Hypercholesterinämie und gemischten Dyslipidämie als Zusatztherapie zur Diät."
   },
   {
    "stufe": "zulassung",
@@ -1682,6 +1701,26 @@
    "satz": "Die FDA hat Garetosmab-grts (PASATRU) zur Reduktion neuer heterotoper Ossifikationen und klinisch bewerteter Schübe bei Fibrodysplasia ossificans progressiva zugelassen."
   },
   {
+   "stufe": "fda-wartet",
+   "datum": "2026-08-13",
+   "name": "TAUKLARIFY",
+   "wirkstoff": "FLORQUINITAU F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "CERVEAU LANTHEUS",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220496",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
    "stufe": "fda",
    "datum": "2026-08-13",
    "name": "ZENBEXUS",
@@ -1701,26 +1740,6 @@
     "onkologie"
    ],
    "satz": "Die FDA hat Iberdomide (ZENBEXUS) in Kombination mit Daratumumab und Dexamethason zur Behandlung des multiplen Myeloms zugelassen."
-  },
-  {
-   "stufe": "fda-wartet",
-   "datum": "2026-08-13",
-   "name": "TAUKLARIFY",
-   "wirkstoff": "FLORQUINITAU F-18",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "CERVEAU LANTHEUS",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220496",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
   },
   {
    "stufe": "antrag",
@@ -2094,24 +2113,6 @@
     "kardio"
    ],
    "satz": "Der CHMP empfiehlt die Zulassung von Evlarco (Obicetrapib/Ezetimib) zur Behandlung der primären Hypercholesterinämie oder gemischten Dyslipidämie."
-  },
-  {
-   "stufe": "gutachten",
-   "datum": "2026-07-23",
-   "name": "Lyrokaul",
-   "wirkstoff": "Lerodalcibep",
-   "gebiet_mesh": "Hypercholesterolemia;Dyslipidemias",
-   "atc": "C10AX",
-   "inhaber": "LIB Therapeutics B.V.",
-   "kennzeichen": [],
-   "gutachten": "Positive",
-   "nummer": "EMEA/H/C/006694",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/lyrokaul",
-   "indikation_en": "It is indicated in adults with primary hypercholesterolaemia (heterozygous familial (HeFH) and non-familial) or mixed dyslipidaemia as an adjunct to diet.",
-   "hubs": [
-    "kardio"
-   ],
-   "satz": "Der CHMP empfiehlt die Zulassung von Lyrokaul (Lerodalcibep) zur Behandlung der primären Hypercholesterinämie und gemischten Dyslipidämie als Zusatztherapie zur Diät."
   },
   {
    "stufe": "gutachten",
@@ -2809,106 +2810,6 @@
     "ohne-hub"
    ],
    "satz": "Die FDA hat Gadoquatran (Ambelvist) zur MRT-Kontrastierung von Läsionen mit abnormaler Vaskularisatur im Zentralnervensystem und Körper zugelassen."
-  },
-  {
-   "stufe": "zulassung",
-   "datum": "2026-05-29",
-   "name": "Bopediat",
-   "wirkstoff": "furosemide",
-   "gebiet_mesh": "Edema, Cardiac;Edema;Hypertension;Renal Insufficiency, Chronic",
-   "atc": "C03CA01",
-   "inhaber": "Proveca Pharma Limited",
-   "kennzeichen": [],
-   "gutachten": "",
-   "nummer": "EMEA/H/C/006617",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/bopediat",
-   "indikation_en": "Bopediat is indicated in children from birth to less than 18 years of age for the treatment of oedema of cardiac or renal origin, oedema of hepatic origin, and hypertension in patients with chronic kidney disease.",
-   "hubs": [
-    "kardio",
-    "ncd"
-   ],
-   "satz": "Bopediat (Furosemid) ist zur Behandlung von Ödemen kardialen oder renalen Ursprungs, hepatischen Ödemen und Hypertonie bei chronischer Nierenerkrankung bei Kindern ab Geburt zugelassen."
-  },
-  {
-   "stufe": "zulassung",
-   "datum": "2026-05-29",
-   "name": "Imdylltra",
-   "wirkstoff": "tarlatamab",
-   "gebiet_mesh": "Small Cell Lung Carcinoma",
-   "atc": "L01FX33",
-   "inhaber": "Amgen Europe B.V.",
-   "kennzeichen": [
-    "Orphan Drug"
-   ],
-   "gutachten": "",
-   "nummer": "EMEA/H/C/006451",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/imdylltra",
-   "indikation_en": "Imdylltra is indicated as monotherapy for the treatment of adult patients with extensive-stage small cell lung cancer (ES-SCLC), who require systemic therapy following disease progression on or after first-line treatment with platinum-based chemotherapy.",
-   "hubs": [
-    "onkologie"
-   ],
-   "satz": "Imdylltra (Tarlatamab) ist zur Monotherapie des kleinzelligen Lungenkarzinoms im Stadium extensive-stage bei erwachsenen Patienten nach Progress unter oder nach platinbasierter Chemotherapie zugelassen."
-  },
-  {
-   "stufe": "zulassung",
-   "datum": "2026-05-29",
-   "name": "Zepzelca",
-   "wirkstoff": "lurbinectedin",
-   "gebiet_mesh": "Small Cell Lung Carcinoma",
-   "atc": "L01XX69",
-   "inhaber": "Pharma Mar S.A.",
-   "kennzeichen": [
-    "Orphan Drug"
-   ],
-   "gutachten": "",
-   "nummer": "EMEA/H/C/006673",
-   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/zepzelca",
-   "indikation_en": "Zepzelca, in combination with atezolizumab, is indicated for the maintenance treatment of adult patients with extensive-stage small cell lung cancer (ES-SCLC) whose disease has not progressed after first-line induction therapy with atezolizumab, carboplatin and etoposide.",
-   "hubs": [
-    "onkologie"
-   ],
-   "satz": "Zepzelca (Lurbinectedin) in Kombination mit Atezolizumab ist zur Erhaltungstherapie von Patienten mit kleinzelligem Lungenkarzinom im Stadium extensive-stage indiziert, deren Erkrankung nach Erstlinien-Induktionstherapie nicht progredient ist."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-05-29",
-   "name": "XOCOVA",
-   "wirkstoff": "ENSITRELVIR",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "SHIONOGI",
-   "kennzeichen": [
-    "NDA",
-    "Label Jul 03, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220442",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=526acf60-abc3-2cc2-e063-6294a90affa6",
-   "indikation_en": "XOCOVA is indicated for post-exposure prophylaxis of coronavirus disease 2019 (COVID-19) in adults and adolescents 12 years of age and older following contact with an individual who has COVID-19. XOCOVA, a severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) main protease (M pro : also referred to as 3CL pro or nsp5 protease) inhibitor, is indicated for post-exposure prophylaxis of coronavirus disease 2019 (COVID‑19) in adults and adolescents 12 years of age and older following contact with an individual who has COVID-19. ( 1 ) 2",
-   "hubs": [
-    "impfen"
-   ],
-   "satz": "Die FDA hat Ensitrelvir (Xocova) zur Postexpositionsprophylaxe von COVID-19 bei Erwachsenen und Jugendlichen ab zwölf Jahren zugelassen."
-  },
-  {
-   "stufe": "fda-wartet",
-   "datum": "2026-05-29",
-   "name": "CYPSEDO",
-   "wirkstoff": "CIPEPOFOL",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "HAISCO",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220482",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220482",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
   },
   {
    "stufe": "antrag",
