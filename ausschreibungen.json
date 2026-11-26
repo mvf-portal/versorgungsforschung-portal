@@ -12,7 +12,7 @@
    "slug": "versorgungsforschung",
    "name": "Versorgungsforschung",
    "domain": "wissen.m-vf.de",
-   "anzahl": 3,
+   "anzahl": 1,
    "ausschreibungen": [
     {
      "titel": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich)",
@@ -22,24 +22,6 @@
      "land": "DE",
      "beschreibung": " Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich – einstufig kurz (Einreichung laufend im Jahr möglich) Veröffentlicht am 23.01.2026 | Einreichungsfrist 31.12.2026 23:59 In Bewertung Auf die hier gelisteten Förderbekanntmachungen ist eine Bewerbung nicht mehr möglich. Die eingegangenen Anträge befinden sich in der Bewertung. ",
      "beleg": "Förderbekanntmachung neue Versorgungsformen zum themenoffenen Bereich"
-    },
-    {
-     "titel": "Deutsches Zentrum für Kinder- und Jugendgesundheit – Ausbauphase",
-     "frist": "2026-12-14",
-     "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/11/2026-11-16-bekanntmachung-dzkj.html",
-     "quelle": "Bund (foerderinfo.bund.de)",
-     "land": "DE",
-     "beschreibung": "Richtlinie zur Förderung einer Ausbauphase für das künftige Deutsche Zentrum für Kinder- und Jugendgesundheit (DZKJ). BAnz vom 16.11.2026. Das BMFTR beabsichtigt im Rahmenprogramm Gesundheitsforschung, aufbauend auf der Richtlinie zur Förderung der Konzeptentwicklung zum Aufbau eines Deutschen Zentrums für Kinder- und Jugendgesundheit, die sieben ausgewählten Standorte für eine Ausbauphase des Deutschen Zentrums für Kinder- und Jugendgesundheit weiter zu fördern.",
-     "beleg": "Deutsches Zentrum für Kinder- und Jugendgesundheit – Ausbauphase"
-    },
-    {
-     "titel": "Teaching Health Center Graduate Medical Education (THCGME) Program",
-     "frist": "2026-12-11",
-     "url": "https://www.grants.gov/search-results-detail/363111",
-     "quelle": "grants.gov (HHS-HRSA)",
-     "land": "US",
-     "beschreibung": "",
-     "beleg": "Teaching Health Center Graduate Medical Education (THCGME) Program"
     }
    ]
   },
@@ -56,7 +38,7 @@
      "quelle": "grants.gov (EPA)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Health Effects of Lower Air Pollution Exposures"
+     "beleg": "Addressing Uncertainties in the Evidence for Health Effects of Lower Air Pollution Exposures"
     }
    ]
   },
@@ -82,7 +64,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "NLM Institutional Grants for Research Training in Biomedical Informatics, Data Science, and AI"
+     "beleg": "Institutional Grants for Research Training in Biomedical Informatics, Data Science, and AI"
     }
    ]
   },
@@ -164,7 +146,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Accelerating Solutions to Improve Access and Quality of Empirically-Supported Practices for Youth Mental Health"
+     "beleg": "Access and Quality of Empirically-Supported Practices for Youth Mental Health"
     },
     {
      "titel": "HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)",
@@ -226,7 +208,7 @@
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Interventions to expand cancer screening and preventive services"
+     "beleg": "expand cancer screening and preventive services"
     },
     {
      "titel": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI) (U54 Clinical Trial Optional)",
@@ -238,22 +220,22 @@
      "beleg": "Cancer Advancement through Partnerships in Research and Infrastructure (CAPRI)"
     },
     {
-     "titel": "Mechanisms that Impact Cancer Risk with Use of Incretin Mimetics (R01 Clinical Trial Optional)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357202",
+     "titel": "Glioblastoma Therapeutics Network (GTN) (U19 Clinical Trial Required)",
+     "frist": "2027-01-11",
+     "url": "https://www.grants.gov/search-results-detail/360606",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Mechanisms that Impact Cancer Risk with Use of Incretin Mimetics (R01"
+     "beleg": "Glioblastoma Therapeutics Network (GTN)"
     },
     {
-     "titel": "Mechanisms that Impact Cancer Risk with Use of Incretin Mimetics (R21 Clinical Trial Not Allowed)",
-     "frist": "2027-01-07",
-     "url": "https://www.grants.gov/search-results-detail/357203",
+     "titel": "Limited Competition: Biospecimen Banks to support NCI National Clinical Trials Network Biospecimen Banks (NCTN Biobanks) and the NCI Early-Phase and Experimental Clinical Trials Biospecimen Bank (EET Biobank) (U24 Clinical Trial Not Allowed)",
+     "frist": "2027-02-11",
+     "url": "https://www.grants.gov/search-results-detail/361134",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "Mechanisms that Impact Cancer Risk with Use of Incretin Mimetics (R21"
+     "beleg": "Biospecimen Banks to support NCI National Clinical Trials Network"
     },
     {
      "titel": "Population Approaches to Reducing Alcohol-related Cancer Risk (R01 Clinical Trial Optional)",
@@ -265,13 +247,13 @@
      "beleg": "Population Approaches to Reducing Alcohol-related Cancer Risk"
     },
     {
-     "titel": "Limited Competition: Biospecimen Banks to support NCI National Clinical Trials Network Biospecimen Banks (NCTN Biobanks) and the NCI Early-Phase and Experimental Clinical Trials Biospecimen Bank (EET Biobank) (U24 Clinical Trial Not Allowed)",
-     "frist": "2027-02-11",
-     "url": "https://www.grants.gov/search-results-detail/361134",
+     "titel": "Mechanisms that Impact Cancer Risk with Use of Incretin Mimetics (R01 Clinical Trial Optional)",
+     "frist": "2027-01-07",
+     "url": "https://www.grants.gov/search-results-detail/357202",
      "quelle": "grants.gov (HHS-NIH11)",
      "land": "US",
      "beschreibung": "",
-     "beleg": "NCI National Clinical Trials Network Biospecimen Banks (NCTN Biobanks) and the NCI Early-Phase and Experimental Clinical Trials Biospecimen Bank"
+     "beleg": "Mechanisms that Impact Cancer Risk with Use of Incretin Mimetics"
     }
    ]
   },
