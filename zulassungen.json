@@ -1,9 +1,9 @@
 {
- "stand": "26.11.2026",
+ "stand": "27.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
-  "zulassung": 33,
+  "zulassung": 34,
   "gutachten": 23,
   "ohne_hub": 15,
   "bekanntmachungen_gelesen": 3,
@@ -149,6 +149,24 @@
     "onkologie"
    ],
    "satz": "Die FDA hat Giredestran (Wilserdly) in Kombination mit Everolimus zur Behandlung von Erwachsenen mit ESR1-mutiertem, hormonrezeptorpositivem, HER2-negativem lokal fortgeschrittenem oder metastasiertem Mammakarzinom zugelassen."
+  },
+  {
+   "stufe": "zulassung",
+   "datum": "2026-11-13",
+   "name": "Pebrilzo",
+   "wirkstoff": "pertuzumab",
+   "gebiet_mesh": "Breast Neoplasms",
+   "atc": "L01FD02",
+   "inhaber": "Biocon Biologics Ireland Limited",
+   "kennzeichen": [],
+   "gutachten": "Positive",
+   "nummer": "EMEA/H/C/006844",
+   "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/pebrilzo",
+   "indikation_en": "Early breast cancerPebrilzo is indicated for use in combination with trastuzumab and chemotherapy in: the neoadjuvant treatment of adult patients with HER2-positive, locally advanced, inflammatory, or early stage breast cancer at high risk of recurrence the adjuvant treatment of adult patients with HER2-positive early breast cancer at high risk of recurrence Metastatic breast cancerPebrilzo is indicated for use in combination with trastuzumab and docetaxel in adult patients with HER2-positive metastatic or locally recurrent unresectable breast cancer, who have not received previous anti-HER2 therapy or chemotherapy for their metastatic disease.",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Pebrilzo (Pertuzumab) ist zur Kombinationsbehandlung HER2-positiver Mammakarzinome indiziert: neoadjuvant und adjuvant bei frühen Stadien mit Rezidivrisiko sowie bei metastasierten oder lokal rezidivierenden Formen."
   },
   {
    "stufe": "fda",
@@ -1701,26 +1719,6 @@
    "satz": "Die FDA hat Garetosmab-grts (PASATRU) zur Reduktion neuer heterotoper Ossifikationen und klinisch bewerteter Schübe bei Fibrodysplasia ossificans progressiva zugelassen."
   },
   {
-   "stufe": "fda-wartet",
-   "datum": "2026-08-13",
-   "name": "TAUKLARIFY",
-   "wirkstoff": "FLORQUINITAU F-18",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "CERVEAU LANTHEUS",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220496",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
-  },
-  {
    "stufe": "fda",
    "datum": "2026-08-13",
    "name": "ZENBEXUS",
@@ -1740,6 +1738,26 @@
     "onkologie"
    ],
    "satz": "Die FDA hat Iberdomide (ZENBEXUS) in Kombination mit Daratumumab und Dexamethason zur Behandlung des multiplen Myeloms zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-08-13",
+   "name": "TAUKLARIFY",
+   "wirkstoff": "FLORQUINITAU F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "CERVEAU LANTHEUS",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220496",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
   },
   {
    "stufe": "antrag",
