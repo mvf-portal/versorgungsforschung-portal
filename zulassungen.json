@@ -1,5 +1,5 @@
 {
- "stand": "27.11.2026",
+ "stand": "28.11.2026",
  "quelle": "European Medicines Agency",
  "fenster_tage": 180,
  "zahlen": {
@@ -9,10 +9,10 @@
   "bekanntmachungen_gelesen": 3,
   "diga_roh": 37,
   "diga_gezeigt": 5,
-  "fda_roh": 34,
-  "fda_mit_label": 31,
-  "fda_ohne_label": 3,
-  "fda_mit_hub": 16,
+  "fda_roh": 37,
+  "fda_mit_label": 33,
+  "fda_ohne_label": 4,
+  "fda_mit_hub": 17,
   "antrag_roh": 100,
   "antrag_generisch": 28,
   "antrag_gezeigt": 63,
@@ -24,6 +24,68 @@
   "LEMBAZ: FDA-Zulassung, aber der Satz behauptet etwas ueber die EU oder die Erstattung - Satz entfernt"
  ],
  "eintraege": [
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-11-24",
+   "name": "EKITNA",
+   "wirkstoff": "BEZUCLASTINIB",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "COGENT BIOSCIENCES INC",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA221283",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=221283",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-11-23",
+   "name": "WELGEMDA",
+   "wirkstoff": "RIBITOL",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ML BIO SOLUTIONS INC",
+   "kennzeichen": [
+    "NDA",
+    "Label Nov 27, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220905",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=50260739-5e9d-4a53-b245-6ca348d49fbf",
+   "indikation_en": "WELGEMDA is indicated for the treatment of limb-girdle muscular dystrophy type 2I/R9 (LGMD2I/R9) in adult and pediatric patients weighing at least 30 kg. WELGEMDA is indicated for the treatment of limb-girdle muscular dystrophy type 2I/R9 (LGMD2I/R9) in adult and pediatric patients weighing at least 30 kg. ( 1 ) 2",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": "Die FDA hat Ribitol (Welgemda) zur Behandlung der Muskeldystrophie Typ LGMD2I/R9 (Gliedergürtel-Muskeldystrophie) bei Patienten ab 30 kg Körpergewicht zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-11-23",
+   "name": "WILSERDLY",
+   "wirkstoff": "GIREDESTRANT",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "GENENTECH INC",
+   "kennzeichen": [
+    "NDA",
+    "Label Nov 23, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA221325",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2ff7bdd3-dd8b-43e5-b249-15b5483e4658",
+   "indikation_en": "WILSERDLY, in combination with everolimus, is indicated for the treatment of adults with estrogen receptor-positive (ER+), human epidermal growth factor receptor 2-negative (HER2-), ESR1 -mutated locally advanced or metastatic breast cancer, as detected by an FDA-authorized test, whose disease has recurred during or after completion of endocrine-based adjuvant therapy, or has progressed on at least one endocrine-based regimen in the metastatic setting. WILSERDLY is an estrogen receptor antagonist indicated in combination with everolimus for the treatment of adults with ER-positive, HER2-negative, ESR1 -mutated locally advanced or metastatic breast cancer, as detected by an FDA-authorized test, whose disease has recurred during or after completion of endocrine-based adjuvant therapy, or has progressed on at least one endocrine-based regimen in the metastatic setting. ( 1 , 14 ) 2",
+   "hubs": [
+    "onkologie"
+   ],
+   "satz": "Die FDA hat Giredestrant (Wilserdly) in Kombination mit Everolimus zur Behandlung von Erwachsenen mit ESR1-mutiertem, hormonrezeptorpositivem, HER2-negativem lokal fortgeschrittenem oder metastasiertem Mammakarzinom zugelassen."
+  },
   {
    "stufe": "fda",
    "datum": "2026-11-18",
@@ -397,7 +459,7 @@
    "inhaber": "EMD SERONO",
    "kennzeichen": [
     "NDA",
-    "Label Nov 23, 2026"
+    "Label Nov 27, 2026"
    ],
    "gutachten": "",
    "nummer": "FDA-NDA220414",
@@ -1144,27 +1206,6 @@
   {
    "stufe": "fda",
    "datum": "2026-09-25",
-   "name": "JUVMO",
-   "wirkstoff": "TAVAPADON",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ABBVIE",
-   "kennzeichen": [
-    "NDA",
-    "Label Oct 28, 2026"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220415",
-   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1ae6df6e-6ca0-420f-bec9-effa7acdd085",
-   "indikation_en": "JUVMO is indicated for the treatment of Parkinson’s disease (PD) in adults. JUVMO is a non-ergot dopamine agonist indicated for the treatment of Parkinson’s disease in adults. ( 1 ) 2",
-   "hubs": [
-    "longevity"
-   ],
-   "satz": "Die FDA hat Tavapadon (JUVMO) zur Behandlung der Parkinson-Krankheit bei Erwachsenen zugelassen."
-  },
-  {
-   "stufe": "fda",
-   "datum": "2026-09-25",
    "name": "ATEBRIOZ",
    "wirkstoff": "ZILURGISERTIB FUMARATE",
    "gebiet_mesh": "",
@@ -1182,6 +1223,27 @@
     "ohne-hub"
    ],
    "satz": "Die FDA hat Zilurgisertib-Fumarat (Atebrioz) zur Reduktion neuer heterotoper Ossifikationen bei Fibrodysplasia ossificans progressiva zugelassen."
+  },
+  {
+   "stufe": "fda",
+   "datum": "2026-09-25",
+   "name": "JUVMO",
+   "wirkstoff": "TAVAPADON",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ABBVIE",
+   "kennzeichen": [
+    "NDA",
+    "Label Oct 28, 2026"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220415",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1ae6df6e-6ca0-420f-bec9-effa7acdd085",
+   "indikation_en": "JUVMO is indicated for the treatment of Parkinson’s disease (PD) in adults. JUVMO is a non-ergot dopamine agonist indicated for the treatment of Parkinson’s disease in adults. ( 1 ) 2",
+   "hubs": [
+    "longevity"
+   ],
+   "satz": "Die FDA hat Tavapadon (JUVMO) zur Behandlung der Parkinson-Krankheit bei Erwachsenen zugelassen."
   },
   {
    "stufe": "diga",
@@ -1205,26 +1267,6 @@
    "satz": "Pia-App bei Regelschmerzen ist vorläufig zur Erprobung in das Verzeichnis erstattungsfähiger digitaler Gesundheitsanwendungen aufgenommen worden und damit auf Rezept erstattungsfähig."
   },
   {
-   "stufe": "fda-wartet",
-   "datum": "2026-09-23",
-   "name": "LYRFIGTU",
-   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "ELEVAR",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220425",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
-  },
-  {
    "stufe": "fda",
    "datum": "2026-09-23",
    "name": "ONSWIK",
@@ -1244,6 +1286,26 @@
     "diabetes"
    ],
    "satz": "Die FDA hat Insulin Efsitora alfa-gobe (Onswik) zur Verbesserung der Glykämiekontrolle bei Typ-2-Diabetes zugelassen."
+  },
+  {
+   "stufe": "fda-wartet",
+   "datum": "2026-09-23",
+   "name": "LYRFIGTU",
+   "wirkstoff": "LIRAFUGRATINIB HYDROCHLORIDE",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "ELEVAR",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220425",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220425",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
   },
   {
    "stufe": "zulassung",
@@ -1719,6 +1781,26 @@
    "satz": "Die FDA hat Garetosmab-grts (PASATRU) zur Reduktion neuer heterotoper Ossifikationen und klinisch bewerteter Schübe bei Fibrodysplasia ossificans progressiva zugelassen."
   },
   {
+   "stufe": "fda-wartet",
+   "datum": "2026-08-13",
+   "name": "TAUKLARIFY",
+   "wirkstoff": "FLORQUINITAU F-18",
+   "gebiet_mesh": "",
+   "atc": "",
+   "inhaber": "CERVEAU LANTHEUS",
+   "kennzeichen": [
+    "NDA"
+   ],
+   "gutachten": "",
+   "nummer": "FDA-NDA220496",
+   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
+   "indikation_en": "",
+   "hubs": [
+    "ohne-hub"
+   ],
+   "satz": ""
+  },
+  {
    "stufe": "fda",
    "datum": "2026-08-13",
    "name": "ZENBEXUS",
@@ -1738,26 +1820,6 @@
     "onkologie"
    ],
    "satz": "Die FDA hat Iberdomide (ZENBEXUS) in Kombination mit Daratumumab und Dexamethason zur Behandlung des multiplen Myeloms zugelassen."
-  },
-  {
-   "stufe": "fda-wartet",
-   "datum": "2026-08-13",
-   "name": "TAUKLARIFY",
-   "wirkstoff": "FLORQUINITAU F-18",
-   "gebiet_mesh": "",
-   "atc": "",
-   "inhaber": "CERVEAU LANTHEUS",
-   "kennzeichen": [
-    "NDA"
-   ],
-   "gutachten": "",
-   "nummer": "FDA-NDA220496",
-   "url": "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220496",
-   "indikation_en": "",
-   "hubs": [
-    "ohne-hub"
-   ],
-   "satz": ""
   },
   {
    "stufe": "antrag",
